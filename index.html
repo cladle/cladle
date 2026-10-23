@@ -379,7 +379,7 @@ function dailyNo(day) { const e = D.meta.selection?.dailyEpoch || "2026-10-21"; 
 // ---- ゲーム状態 ----
 let G = null, mode = "daily";
 function newGame(m) {
-  mode = m;
+  mode = m; $("#flash").hidden = true;  // 前のモードの「新しい手がかりはありません」などを残さない
   if (m === "daily") {
     if (due(D)) { location.reload(); return; }  // 開いたまま次の版の日になった
     const day = todayJST(), saved = store.get("dk-daily");
