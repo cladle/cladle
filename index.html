@@ -139,6 +139,8 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .result .score b { font-family: var(--f-mono); font-size: 1.6rem; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums }
 .result.won .score b { color: var(--accent) }
 .btn.share-btn { width: 100%; min-height: 48px; font-size: 1rem; background: var(--accent); color: var(--surface) }
+.share-row { display: flex; gap: 8px }
+.share-row .xpost { flex: none; display: inline-flex; align-items: center; min-height: 48px; text-decoration: none; white-space: nowrap }
 .result .sub { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line) }
 .result .sub h3 { margin: 0; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline }
 .result .sub p { margin: 0; font-size: .9rem }
@@ -441,7 +443,7 @@ setInterval(() => {
 }, 1000);
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
-const TRACK = { "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+const TRACK = { "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
 function track(ev) { try { window.goatcounter?.count?.({ path: ev, title: TRACK[ev] || ev, event: true }); } catch (e) {} }
 if (new URLSearchParams(location.search).get("from") === "share") {
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
@@ -676,7 +678,7 @@ function resultHTML() {
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
     <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}</div>
-    <button class="btn share-btn" id="copy">結果を共有</button>
+    <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     ${namesHTML(t)}
@@ -921,6 +923,7 @@ function wire() {
     if (b) { e.preventDefault(); openSheet(b.dataset.id); return; }
     const hb = e.target.closest(".hintbtn"); if (hb) { useHint(+hb.dataset.hint); return; }
     if (e.target.id === "copy") copyShare();
+    if (e.target.id === "xpost") track(mode + "-share-x");
     if (e.target.id === "again") { store.set("dk-free", null); newGame("free"); }
     if (e.target.id === "goFree") setView("free");
     if (e.target.id === "toZukan") revealInZukan(G.target);
