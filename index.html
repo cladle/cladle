@@ -441,8 +441,12 @@ setInterval(() => {
 }, 1000);
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
-const TRACK = { "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+const TRACK = { "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
 function track(ev) { try { window.goatcounter?.count?.({ path: ev, title: TRACK[ev] || ev, event: true }); } catch (e) {} }
+if (new URLSearchParams(location.search).get("from") === "share") {
+  try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+  let n = 0; const t = setInterval(() => { if (window.goatcounter?.count || ++n > 20) { clearInterval(t); track("share-visit"); } }, 500);
+}
 function guess(id) {
   if (G.done || G.guesses.includes(id)) return;
   const before = deepest();
@@ -719,7 +723,7 @@ function shareText() {
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/`;
+  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share`;
 }
 
 // ---- 補完 ----
@@ -825,7 +829,7 @@ function aboutHTML() {
     <li>上の情報源のデータを丸ごと収録してはいません。名前は照合した結果を一つずつ記載しています。</li>
     <li>写真は使っていません。「調べる」のリンク先は各サイトの内容です。</li>
     <li>文字は Google Fonts（SIL Open Font License）を使っています。</li>
-    <li>Cloudflare Web Analytics で訪問数を、GoatCounter でプレイの開始・正解の回数を数えています（どちらも Cookie は使わず、答えや入力した名前は送りません）。成績はこの端末のブラウザにだけ保存され、送信されません。</li></ul></section>`;
+    <li>Cloudflare Web Analytics で訪問数を、GoatCounter でプレイの開始・正解・共有の回数を数えています（どちらも Cookie は使わず、答えや入力した名前は送りません）。成績はこの端末のブラウザにだけ保存され、送信されません。</li></ul></section>`;
 }
 
 
@@ -929,8 +933,8 @@ function wire() {
 }
 async function copyShare() {
   const t = shareText(), b = $("#copy");
-  if (navigator.share && matchMedia("(pointer: coarse)").matches) { try { await navigator.share({ text: t }); return; } catch (e) { if (e.name === "AbortError") return; } }
-  try { await navigator.clipboard.writeText(t); b.textContent = "コピーしました"; setTimeout(() => b.textContent = "結果を共有", 2000); }
+  if (navigator.share && matchMedia("(pointer: coarse)").matches) { try { await navigator.share({ text: t }); track(mode + "-share"); return; } catch (e) { if (e.name === "AbortError") return; } }
+  try { await navigator.clipboard.writeText(t); track(mode + "-share"); b.textContent = "コピーしました"; setTimeout(() => b.textContent = "結果を共有", 2000); }
   catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
