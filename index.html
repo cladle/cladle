@@ -100,6 +100,10 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .cgsvg .nd.on circle { fill: var(--accent) }
 .cgsvg .nd.stop circle { fill: var(--accent); stroke: var(--accent-soft); stroke-width: 6; paint-order: stroke }
 .cgsvg .nl { font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; cursor: pointer }
+.tip { margin: 6px 0 0; font-size: .8rem; color: var(--accent) }
+.crumb > div { gap: 6px 4px !important; align-items: center !important }
+.crumb .clade-mini { border: 1px solid var(--line); border-radius: 999px; background: var(--surface); padding: 2px 10px; text-decoration: none; font-size: .8rem; min-height: 28px }
+.crumb .clade-mini.here { border-color: var(--accent); background: var(--accent-soft) }
 .cgsvg .nl.on { fill: var(--ink) }
 .cgsvg .nl.stop { fill: var(--accent); font-size: 13px; font-weight: 700 }
 .cgsvg .svgnode { cursor: pointer }
@@ -130,6 +134,46 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 
 .result { margin-top: 18px; padding: 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); display: grid; gap: 10px }
 .result h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; margin: 0; text-wrap: balance }
+.result { scroll-margin-top: calc(var(--hdr, 96px) + 8px) }
+.result .score { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: -2px 0 0; color: var(--muted); font-size: .85rem }
+.result .score b { font-family: var(--f-mono); font-size: 1.6rem; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums }
+.result.won .score b { color: var(--accent) }
+.btn.share-btn { width: 100%; min-height: 48px; font-size: 1rem; background: var(--accent); color: var(--surface) }
+.result .sub { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line) }
+.result .sub h3 { margin: 0; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline }
+.result .sub p { margin: 0; font-size: .9rem }
+.result .kin { display: flex; flex-wrap: wrap; gap: 6px }
+.result .kin .twig.me { border-color: var(--accent); color: var(--accent); font-weight: 700 }
+.result .kin-more { background: none; border: 0; padding: 4px 0; color: var(--accent); cursor: pointer; font: inherit; font-size: .85rem; text-decoration: underline; text-underline-offset: 3px }
+.think { margin: 0; font-size: .85rem; padding: 8px 10px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0 }
+.think:empty { display: none }
+.steps { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; counter-reset: st }
+.steps li { display: grid; grid-template-columns: 2em 1fr; gap: 0 10px; counter-increment: st }
+.steps li::before { content: counter(st); grid-row: span 2; width: 2em; height: 2em; border-radius: 50%; background: var(--accent); color: var(--surface); display: grid; place-items: center; font-family: var(--f-mono); font-weight: 500 }
+.steps b { font-size: .95rem }
+.steps span { font-size: .85rem; color: var(--muted) }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); font-size: .8rem; color: var(--muted) }
+.legend span { display: inline-flex; align-items: center; gap: 6px }
+.legend i { display: inline-block }
+.lg-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.lg-on { width: 22px; height: 3px; background: var(--accent) }
+.lg-goal { width: 22px; border-top: 2px dashed var(--hot) }
+.legend b { color: var(--hot); font-family: var(--f-display); font-weight: 400 }
+.legend u { text-decoration-style: dotted }
+.doc-more { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-size: .9rem }
+.doc-more summary { cursor: pointer; font-weight: 700 }
+.doc-more ul { margin: 8px 0 0; padding-left: 1.2em }
+@media (prefers-reduced-motion: no-preference) {
+  .result.celebrate { animation: rise .6s ease-out both }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px) } }
+  .cgsvg .ln.grow { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw .55s ease-in-out forwards }
+  .cgsvg.win .ln.grow { animation-duration: .6s }
+  @keyframes draw { to { stroke-dashoffset: 0 } }
+  .cgsvg .ln.goal.fade, .cgsvg .tq.fade, .cgsvg .tl.fade, .cgsvg .nl.fade, .cgsvg .nd.fade { animation: fadein .35s ease-out both }
+  @keyframes fadein { from { opacity: 0 } }
+  .cgsvg.win .tl.hit { transform-box: fill-box; transform-origin: left center; animation: pop .6s ease-out both }
+  @keyframes pop { 0% { opacity: 0; transform: scale(.6) } 70% { transform: scale(1.15) } 100% { opacity: 1; transform: scale(1) } }
+}
 .result .fact { margin: 0 }
 .share { font-family: var(--f-mono); font-size: .8rem; white-space: pre-wrap; background: var(--bg); border-radius: 8px; padding: 10px; margin: 0; user-select: all }
 .row { display: flex; gap: 8px; flex-wrap: wrap }
@@ -242,6 +286,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
       <div class="demo-head"><span class="eyebrow">例題</span><span id="demoStep" class="demo-step"></span></div>
       <div class="demo-input" id="demoInput" aria-hidden="true"><span id="demoTyped"></span><i class="caret"></i></div>
       <p class="demo-cap" id="demoCap"></p>
+      <p class="think" id="demoThink"></p>
       <div id="demoBoard"></div>
       <div class="row"><button class="btn ghost" id="demoPrev">前へ</button><button class="btn ghost" id="demoNext">次へ</button><button class="btn" id="demoReplay">最初から再生</button></div>
     </section>
@@ -328,6 +373,7 @@ function newGame(m) {
     G = saved && !saved.done && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
   }
   if (!G.done && G.guesses.length >= MAX) G.done = true;  // 上限を下げる前の記録
+  lastEdges = null; openGrow = G.guesses.length > 0;  // 開いたときは今の木を根元から手早く伸ばす
   G.fresh = null;
   if (m === "daily" && G.done && !STATS.days[G.day]) save();  // 成績を付ける前に解いた日の分
   render();
@@ -381,15 +427,17 @@ function guess(id) {
   const before = deepest();
   G.guesses.push(id);
   const L = lca(id, G.target);
-  if (id === G.target) { G.done = G.won = true; flash(`正解！ ${N[id].ja} でした。`); }
+  growId = id;
+  if (id === G.target) { G.done = G.won = true; celebrate = true; $("#flash").hidden = true; }
   else {
     const gained = N[L].depth > N[before].depth;
-    flash(`${N[id].ja} と正解の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
+    flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
     G.fresh = gained ? L : null;
     if (G.guesses.length >= MAX) { G.done = true; }
   }
   save(); render();
 }
+let celebrate = false, growId = null, lastEdges = null, openGrow = false, animUntil = 0;  // 正解した直後の演出、推測した直後に伸ばす枝、前回描いた枝
 function deepest() { return deepestOf(G.target, G.guesses, G.reveal); }
 // ---- ヒント（推測回数は減らない）----
 // ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
@@ -423,7 +471,7 @@ function hintsHTML() {
   const n = G.guesses.length, out = [];
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
   else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
-  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 正解は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : `<p class="hint">💡 正解の豆知識：${esc(maskFact(G.target))}</p>`);
+  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
   else if (n >= HINT2) out.push(`<button class="btn ghost hintbtn" data-hint="2">💡 ヒント2</button>`);
   return out.join("");
 }
@@ -436,10 +484,19 @@ function render() {
   $("#guess").disabled = G.done;
   if (!G.guesses.length) $("#flash").hidden = true;
 
-  const h = treeHTML(G.target, G.guesses, G.done, G.fresh, $("#board").clientWidth, { reveal: G.reveal, dim: G.h1 && !G.done });
+  const h = treeHTML(G.target, G.guesses, G.done, G.fresh, $("#board").clientWidth, { reveal: G.reveal, dim: G.h1 && !G.done, win: celebrate, grow: celebrate || openGrow ? { id: G.target, prev: new Set(), all: true, fast: openGrow && !celebrate } : growId && lastEdges ? { id: growId, prev: lastEdges } : null });
+  lastEdges = treeHTML.edges; growId = null; openGrow = false; animUntil = Date.now() + treeHTML.animEnd * 1000;
   $("#board").innerHTML = h;
   $("#hints").innerHTML = hintsHTML(); $("#hints").hidden = !$("#hints").innerHTML;
   $("#result").innerHTML = G.done ? resultHTML() : "";
+  if (celebrate) {
+    celebrate = false;
+    const r = $("#result .result"), still = matchMedia("(prefers-reduced-motion: reduce)").matches, wait = still ? 0 : treeHTML.animEnd + .3;
+    if (r) { r.classList.add("celebrate"); r.style.animationDelay = wait + "s"; }
+    const msg = `正解！ ${N[G.target].ja} でした。`;
+    if (still) flash(msg); else setTimeout(() => { if (G.won) flash(msg); }, (wait - .3) * 1000);
+    setTimeout(() => r?.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" }), wait * 1000 + 500);
+  }
 }
 function deepestOf(target, guesses, reveal) {
   let best = reveal && path(target).includes(reveal) ? reveal : D.root;
@@ -469,7 +526,7 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     const ch = below(x);
     if (!done && x === known) ch.push(Q);
     T[x] = { id: x, d, ch };
-    for (const c of ch) c === Q ? (T[Q] = { id: Q, d: d + 1, ch: [] }) : build(c, d + 1);
+    for (const c of ch) c === Q ? (T[Q] = { id: Q, d: d + 1, ch: [], pid: x }) : build(c, d + 1);
   };
   build(D.root, 0);
   const nLeaves = id => T[id].ch.length ? T[id].ch.reduce((a, c) => a + nLeaves(c), 0) : 1;
@@ -506,22 +563,44 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
   place(T[D.root]);
   const H = top + (row - 1) * ROW + 24;
   let lines = "", nodes = "", texts = "";
+  // 伸ばす枝：前回の図に無かった枝のうち、推測した動物へ続くものと、新しくできた分かれ目から出るもの。
+  // 伸ばす枝より先にある枝も一緒に伸ばし直す（途中で浮いて見えないように）。正解時は木全体を根から伸ばす
+  const G2 = opt.grow, edges = new Set(), DUR = G2?.fast ? .22 : opt.win ? .5 : .55, STEP = DUR;  // 枝は一本ずつ順に（前の枝が届いてから次が伸びる）
+  const onGrow = id => !!G2 && (id === G2.id || T[id].ch.some(onGrow));
+  const animE = new Map(), late = new Map();  // 枝 → 伸び始める時刻、点 → 枝が届く時刻
+  if (G2) {
+    const prevNodes = new Set(); for (const e of G2.prev) e.split(">").forEach(x => prevNodes.add(x));
+    const mark = (id, inh) => { for (const c of T[id].ch) {
+      const key = id + ">" + c, a = G2.all || inh || (!G2.prev.has(key) && (c === Q || onGrow(c) || !prevNodes.has(id)));
+      if (a) animE.set(key, T[id].d); mark(c, a); } };
+    mark(D.root, false);
+    const base = Math.min(...animE.values());
+    for (const [k, d] of animE) { const t = (d - base) * STEP; animE.set(k, t); late.set(k.split(">")[1], t + DUR); }
+  }
+  const animEnd = Math.max(0, ...late.values());
+  // 点・名前は枝が届いてから出す
+  const lateStyle = id => late.has(id) ? ` style="animation-delay:${late.get(id).toFixed(2)}s"` : "";
   const cand = [];
   for (const n of Object.values(T)) {
     for (const c of n.ch) {
       const k = T[c], cls = c === Q ? "ln goal" : on(c) ? "ln on" : "ln";
-      lines += `<path class="${cls}" d="M${n.x},${n.y} V${k.y} H${k.x - 4}"/>`;
+      const key = n.id + ">" + c; edges.add(key);
+      const t0 = animE.get(key), ga = t0 == null ? "" : `${c === Q ? "" : ' pathLength="1"'} style="animation-delay:${t0.toFixed(2)}s"`;
+      lines += `<path class="${cls}${ga ? (c === Q ? " fade" : " grow") : ""}"${ga} d="M${n.x},${n.y} V${k.y} H${k.x - 4}"/>`;
     }
   }
   for (const n of Object.values(T)) {
     if (n.id === Q) {
-      nodes += `<text class="tq" x="${n.x}" y="${n.y + 5}">？</text>`;
+      const fa = lateStyle(Q);
+      nodes += `<text class="tq${fa ? " fade" : ""}"${fa} x="${n.x}" y="${n.y + 5}">？</text>`;
     } else if (!n.ch.length) {
       const hit = n.id === target;
-      nodes += `<text class="svgnode tl${hit ? " hit" : ""}" data-id="${n.id}" role="button" tabindex="0" x="${n.x}" y="${n.y + 5}">${num[n.id] ? `<tspan class="n">${num[n.id]} </tspan>` : ""}${esc(fit(n.id))}</text>`;
+      const fa = lateStyle(n.id);
+      nodes += `<text class="svgnode tl${hit ? " hit" : ""}${fa && !(opt.win && hit) ? " fade" : ""}"${fa} data-id="${n.id}" role="button" tabindex="0" x="${n.x}" y="${n.y + 5}">${num[n.id] ? `<tspan class="n">${num[n.id]} </tspan>` : ""}${esc(fit(n.id))}</text>`;
     } else {
       const st = n.id === known && !done, cls = ["svgnode", "nd", on(n.id) ? "on" : "", st ? "stop" : "", n.id === fresh ? "new" : ""].join(" ");
-      nodes += `<g class="${cls}" data-id="${n.id}" role="button" tabindex="0"><circle cx="${n.x}" cy="${n.y}" r="${st ? 6 : 3.5}"/></g>`;
+      const la = lateStyle(n.id);
+      nodes += `<g class="${cls}${la ? " fade" : ""}"${la} data-id="${n.id}" role="button" tabindex="0"><circle cx="${n.x}" cy="${n.y}" r="${st ? 6 : 3.5}"/></g>`;
       cand.push({ n, st, prio: st || n.id === D.root ? 0 : on(n.id) ? 1 : 2 });
     }
   }
@@ -545,10 +624,13 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
       || (st || n.id === D.root ? spots.find(sp => !hits(sp.r, placed)) || spots[0] : null);
     if (!sp) continue;
     placed.push(sp.r);
-    texts += `<text class="nl${on(n.id) ? " on" : ""}${st ? " stop" : ""}" x="${sp.x}" y="${sp.y + 4}" data-id="${n.id}">${esc(N[n.id].ja)}</text>`;
+    const la = lateStyle(n.id);
+    texts += `<text class="nl${on(n.id) ? " on" : ""}${st ? " stop" : ""}${la ? " fade" : ""}"${la} x="${sp.x}" y="${sp.y + 4}" data-id="${n.id}">${esc(N[n.id].ja)}</text>`;
   }
-  const crumb = `<div class="crumb"><span class="eyebrow">${done ? "正解までの系統" : "ここまでわかった系統"}</span><div>${path(known).map(x => `<button class="clade-mini${x === known ? " here" : ""}" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}</div></div>`;
-  return `<div class="cgwrap"><svg class="cgsvg${opt.dim ? " dim" : ""}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="系統樹">${lines}${nodes}${texts}</svg></div>${guesses.length && !done ? crumb : ""}`;
+  treeHTML.edges = edges; treeHTML.animEnd = animEnd;
+  const tip = !store.get("dk-tip") && !opt.demo ? `<p class="tip">下の名前や図の名前を押すと、その仲間の説明が見られます。</p>` : "";
+  const crumb = `${tip}<div class="crumb"><span class="eyebrow">${done ? "答えの動物までの系統" : "答えの動物が入っている分類群"}</span><div>${path(known).map(x => `<button class="clade-mini${x === known ? " here" : ""}" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}</div></div>`;
+  return `<div class="cgwrap"><svg class="cgsvg${opt.dim ? " dim" : ""}${opt.win ? " win" : ""}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="系統樹">${lines}${nodes}${texts}</svg></div>${guesses.length && !done ? crumb : ""}`;
 }
 function cladeBtn(n) {
   const v = n.verify ? `<span class="badge-v">要確認</span>` : "";
@@ -557,17 +639,36 @@ function cladeBtn(n) {
 }
 function resultHTML() {
   const t = N[G.target];
-  const head = G.won ? `${G.guesses.length} 回目で正解：${esc(t.ja)}` : `答えは ${esc(t.ja)} でした`;
-  return `<section class="result"><h2>${head}</h2>
+  const head = G.won ? `正解！ ${esc(t.ja)}` : `答えは ${esc(t.ja)} でした`;
+  const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
+  return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
+    <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}</div>
+    <button class="btn share-btn" id="copy">結果を共有</button>
+    <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     <p class="fact">${esc(t.fact)}</p>
     <div class="lookup">調べる：${lookupLinks(t)}</div>
     <div class="fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
-    <pre class="share" id="shareText">${esc(shareText())}</pre>
-    <div class="row"><button class="btn" id="copy">結果をコピー</button>
-    <button class="btn ghost" id="toZukan">図鑑でこの動物を見る</button>
+    ${kinHTML(t)}
+    <div class="row"><button class="btn ghost" id="toZukan">図鑑でこの動物を見る</button>
     ${mode === "free" ? `<button class="btn ghost" id="again">次の問題</button>` : `<button class="btn ghost" id="goFree">フリープレイへ</button>`}</div>
     ${mode === "daily" ? statsHTML() : ""}</section>`;
+}
+// 近い仲間：正解のすぐ上で、ほかの収録種がいる節目を紹介する
+function kinHTML(t) {
+  let a = t.parent;
+  while (N[a].parent && N[a].count < 2) a = N[a].parent;
+  const n = N[a], all = [];
+  const walk = id => N[id].kind === "species" ? all.push(id) : N[id].kids.forEach(walk);
+  walk(a);
+  const others = all.filter(id => id !== t.id), MAXK = all.length <= 16 ? 16 : 12;
+  const name = /^[ぁ-んァ-ヶー一-龠]/.test(n.ja) ? n.ja : `${n.ja}（${n.rank}）`;
+  return `<div class="sub"><span class="eyebrow">近い仲間</span>
+    <h3><span>${esc(n.ja)}</span><span class="sci" style="font-weight:400;color:var(--muted);font-size:.85rem">${esc(n.sci)}</span><span class="rank">${esc(n.rank)}</span></h3>
+    <p>${esc(n.desc)}</p>
+    <p style="font-size:.85rem;color:var(--muted)">${esc(name)}には、ほかに次の動物が収録されています。</p>
+    <div class="kin">${others.slice(0, MAXK).map(id => `<button class="twig${G.guesses.includes(id) ? " me" : ""}" data-id="${id}">${esc(N[id].ja)}</button>`).join("")}</div>
+    ${others.length > MAXK ? `<button class="kin-more" data-zk="${a}">ほか ${others.length - MAXK} 種を図鑑で見る</button>` : ""}</div>`;
 }
 // 写真は載せず（権利と同定の問題）、外部の図鑑・検索へのリンクにする
 function lookupLinks(t) {
@@ -622,6 +723,7 @@ function choose(id) { $("#guess").value = ""; $("#sugg").hidden = true; if (G.gu
 // ---- 詳細シート ----
 function openSheet(id) {
   const n = N[id], isSp = n.kind === "species";
+  if (!isSp && !store.get("dk-tip")) { store.set("dk-tip", 1); document.querySelectorAll(".tip").forEach(e => e.remove()); }
   const hide = isSp && id === G?.target && !G.done && view !== "zukan";
   let h = `<h3><span>${esc(n.ja)}</span><span class="sci" style="font-weight:400;font-size:1rem">${esc(n.sci)}</span></h3>
     <div class="row"><span class="rank">${isSp ? "種" : esc(n.rank)}</span>${n.verify ? `<span class="badge-v">要確認</span>` : ""}${n.jaStatus === "provisional" ? `<span class="badge-v">和名なし・仮表記</span>` : ""}</div>`;
@@ -696,14 +798,30 @@ function aboutHTML() {
 
 
 // ---- 遊び方（例題の自動再生）----
-const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "monshirocho", "kabutomushi"] };
-let demoI = 0, demoTimer = null;
+const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "monshirocho", "kabutomushi"],
+  // 各段階で「次に何を入れるか」の考え方
+  think: [
+    "💭 まずは遠い動物で、大きく分けよう。",
+    "💭 ヒトの仲間ではない。反対側の枝のタコはどうだ？",
+    "💭 タコでもない。種の多い節足動物、カニはどうだ？",
+    "💭 カニでもない。同じ汎甲殻類の昆虫、チョウは？",
+    "💭 さなぎになる昆虫まで来た。甲虫のカブトムシだ！",
+    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] };
+let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
-  return `<section><h2>ルール</h2><ul>
-    <li>動物の名前を入れて、候補から選びます。ひらがな・カタカナ・学名・別名のどれでも探せます。</li>
-    <li>推測するたびに、その動物と正解の「最も近い共通祖先」がわかり、系統樹に枝が加わります。緑の点が今わかっている所で、点線の先の「？」が正解です。</li>
-    <li>推測は最大 ${MAX} 回です。${HINT1} 回目のあとにヒント1（残りの候補の数）、${HINT2} 回目のあとにヒント2（正解に一歩近い節目）が使えます。ヒントを使っても回数は減りません。「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
-    <li>節目の名前をタップすると、和名・学名・階級・説明が出ます。<span class="poly">多分岐</span>は系統関係が議論中で、あえて分岐の順を決めていない節目です。</li></ul></section>`;
+  return `<section><h2>遊び方は3つだけ</h2><ol class="steps">
+    <li><b>動物を入れる</b><span>答えの動物との共通の祖先がわかり、系統樹に枝が増えます。</span></li>
+    <li><b>緑の点の中を探す</b><span>答えの動物は緑の点より先にいます。その中の、まだ試していない仲間を入れます。</span></li>
+    <li><b>${MAX} 回以内に当てる</b><span>${HINT1} 回目と ${HINT2} 回目のあとにヒントが使えます。</span></li></ol>
+    <div class="legend"><span><i class="lg-dot"></i>答えの動物がいる範囲</span><span><i class="lg-on"></i>答えへの道</span><span><i class="lg-goal"></i><b>？</b> 答えの動物</span><span>名前を押すと説明</span></div></section>
+  <details class="doc-more"><summary>くわしいルール</summary><ul>
+    <li>名前はひらがな・カタカナ・学名・別名のどれでも探せます。</li>
+    <li>左端が動物全体の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
+    <li>「新しい手がかりはありません」は、緑の点より外側の動物を入れたということです。</li>
+    <li>ヒント1は残りの候補の数、ヒント2は一歩先の節目です。ヒントを使っても回数は減りません。</li>
+    <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
+    <li>系統樹の節目（分類群）は、すべてクレード（ある祖先とその子孫すべてからなる単系統群）です。魚類や爬虫類のような、子孫の一部を除いたまとまりは使っていません。</li>
+    <li><span class="poly">多分岐</span>は系統関係が議論中で、分岐の順を決めていない節目です。</li></ul></details>`;
 }
 function demoShow(i, typing) {
   const t = DEMO.target, gs = DEMO.guesses.filter(g => N[g]), n = gs.length;
@@ -712,11 +830,14 @@ function demoShow(i, typing) {
   $("#demoStep").textContent = demoI ? `${demoI} 回目` : "スタート";
   const before = deepestOf(t, done.slice(0, -1)), now = deepestOf(t, done);
   let cap;
-  if (!demoI) cap = `正解は伏せられています（この例では ${N[t].ja}）。まず思いついた動物を入れてみます。`;
+  if (!demoI) cap = `答えの動物は伏せられています（この例では ${N[t].ja}）。まず思いついた動物を入れてみます。`;
   else if (last === t) cap = `「${N[t].ja}」で正解。${demoI} 回でたどり着きました。`;
-  else cap = `「${N[last].ja}」と正解の共通祖先は「${N[lca(last, t)].ja}」。` + (N[now].depth > N[before].depth ? "正解はこの節目の中にあると絞れました。" : "新しい手がかりはありません。");
+  else cap = `「${N[last].ja}」と答えの動物の共通祖先は「${N[lca(last, t)].ja}」。` + (N[now].depth > N[before].depth ? "答えの動物はこの節目の中にいると絞れました。" : "新しい手がかりはありません。");
   $("#demoCap").textContent = cap;
-  $("#demoBoard").innerHTML = treeHTML(t, done, last === t, now !== before ? now : null, $("#demoBoard").clientWidth);
+  $("#demoThink").textContent = DEMO.think[demoI] || "";
+  const fwd = demoI === demoPrevI + 1 && demoEdges;
+  $("#demoBoard").innerHTML = treeHTML(t, done, last === t, now !== before ? now : null, $("#demoBoard").clientWidth, { demo: true, win: fwd && last === t, grow: fwd ? { id: last, prev: last === t ? new Set() : demoEdges } : null });
+  demoEdges = treeHTML.edges; demoPrevI = demoI;
   $("#demoPrev").disabled = demoI === 0; $("#demoNext").disabled = demoI === n;
   const next = gs[demoI];
   const typed = $("#demoTyped");
@@ -775,7 +896,8 @@ function wire() {
 }
 async function copyShare() {
   const t = shareText(), b = $("#copy");
-  try { await navigator.clipboard.writeText(t); b.textContent = "コピーしました"; }
+  if (navigator.share && matchMedia("(pointer: coarse)").matches) { try { await navigator.share({ text: t }); return; } catch (e) { if (e.name === "AbortError") return; } }
+  try { await navigator.clipboard.writeText(t); b.textContent = "コピーしました"; setTimeout(() => b.textContent = "結果を共有", 2000); }
   catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
