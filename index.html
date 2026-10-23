@@ -139,6 +139,11 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .result .score b { font-family: var(--f-mono); font-size: 1.6rem; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums }
 .result.won .score b { color: var(--accent) }
 .btn.share-btn { width: 100%; min-height: 48px; font-size: 1rem; background: var(--accent); color: var(--surface) }
+.btn.ch-btn { width: 100%; min-height: 44px }
+.versus { display: grid; gap: 6px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px }
+.versus > b { font-size: 1.1rem }
+.vs-row { display: grid; grid-template-columns: 4em 6em 1fr; gap: 8px; align-items: start; font-size: .9rem }
+.vs-marks { line-height: 1.3; letter-spacing: .05em }
 .result .sub { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line) }
 .result .sub h3 { margin: 0; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline }
 .result .sub p { margin: 0; font-size: .9rem }
@@ -362,8 +367,16 @@ function dailyNo(day) { const e = D.meta.selection?.dailyEpoch || "2026-10-21"; 
 
 // ---- ゲーム状態 ----
 let G = null, mode = "daily";
-function newGame(m) {
+function newGame(m, code) {
+  if (m === "challenge") {
+    const c = chDecode(code), saved = store.get("dk-ch");
+    if (!c || N[c.t]?.kind !== "species" || c.t === undefined) { newGame("free"); flash("この挑戦状は開けませんでした（リンクが途中で切れているか、収録種が変わった可能性があります）。", true); return; }
+    mode = m;
+    G = saved && saved.code === code ? saved : { code, ch: c, target: c.t, guesses: [], done: false, won: false };
+    return start();
+  }
   mode = m;
+  if (location.hash.startsWith("#c=")) history.replaceState(null, "", location.pathname + location.search);
   if (m === "daily") {
     const day = todayJST(), saved = store.get("dk-daily");
     const target = pick(mulberry(hash("metazoa-ja:" + day + ":" + D.meta.datasetVersion)));
@@ -372,14 +385,17 @@ function newGame(m) {
     const saved = store.get("dk-free");
     G = saved && !saved.done && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
   }
+  start();
+}
+function start() {
   if (!G.done && G.guesses.length >= MAX) G.done = true;  // 上限を下げる前の記録
   lastEdges = null; openGrow = G.guesses.length > 0;  // 開いたときは今の木を根元から手早く伸ばす
   G.fresh = null;
-  if (m === "daily" && G.done && !STATS.days[G.day]) save();  // 成績を付ける前に解いた日の分
+  if (mode === "daily" && G.done && !STATS.days[G.day]) save();  // 成績を付ける前に解いた日の分
   render();
 }
 function save() {
-  store.set(mode === "daily" ? "dk-daily" : "dk-free", { ...G, fresh: null });
+  store.set({ daily: "dk-daily", free: "dk-free", challenge: "dk-ch" }[mode], { ...G, fresh: null });
   if (mode !== "daily") return;
   if (G.done) STATS.days[G.day] = { w: G.won ? 1 : 0, n: G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0) };
   saveStats();
@@ -478,7 +494,7 @@ function hintsHTML() {
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
 
 function render() {
-  $("#modeLabel").textContent = mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : "フリープレイ";
+  $("#modeLabel").textContent = mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : mode === "challenge" ? "挑戦状" : "フリープレイ";
   $("#left").textContent = MAX - G.guesses.length;
   $("#meter").innerHTML = Array.from({ length: MAX }, (_, i) => `<i class="${i < G.guesses.length ? "used" : ""}"></i>`).join("");
   $("#guess").disabled = G.done;
@@ -487,7 +503,7 @@ function render() {
   const h = treeHTML(G.target, G.guesses, G.done, G.fresh, $("#board").clientWidth, { reveal: G.reveal, dim: G.h1 && !G.done, win: celebrate, grow: celebrate || openGrow ? { id: G.target, prev: new Set(), all: true, fast: openGrow && !celebrate } : growId && lastEdges ? { id: growId, prev: lastEdges } : null });
   lastEdges = treeHTML.edges; growId = null; openGrow = false; animUntil = Date.now() + treeHTML.animEnd * 1000;
   $("#board").innerHTML = h;
-  $("#hints").innerHTML = hintsHTML(); $("#hints").hidden = !$("#hints").innerHTML;
+  $("#hints").innerHTML = (mode === "challenge" && !G.done ? `<p class="hint">📮 挑戦状：相手は${chWho(G.ch)}。同じ動物を当ててください。</p>` : "") + hintsHTML(); $("#hints").hidden = !$("#hints").innerHTML;
   $("#result").innerHTML = G.done ? resultHTML() : "";
   if (celebrate) {
     celebrate = false;
@@ -643,7 +659,9 @@ function resultHTML() {
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
     <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}</div>
+    ${mode === "challenge" ? chVersusHTML() : ""}
     <button class="btn share-btn" id="copy">結果を共有</button>
+    ${mode === "daily" ? "" : `<button class="btn ghost ch-btn" id="sendCh">この問題で挑戦状を送る</button>`}
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     <p class="fact">${esc(t.fact)}</p>
@@ -678,18 +696,57 @@ function lookupLinks(t) {
     ["画像検索", `https://www.google.com/search?tbm=isch&q=${q(t.ja + " " + t.sci)}`]]
     .filter(Boolean).map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${l}</a>`).join("");
 }
-function shareText() {
+const MARKS = ["⬜", "🟨", "🟧", "🟩", "🎯"];
+function markLevels() {
   const td = N[G.target].depth;
-  const marks = G.guesses.map(g => {
-    if (g === G.target) return "🎯";
+  return G.guesses.map(g => {
+    if (g === G.target) return 4;
     const r = N[lca(g, G.target)].depth / (td - 1);
-    return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
+    return r >= 1 ? 3 : r >= .66 ? 2 : r >= .33 ? 1 : 0;
   });
-  const title = mode === "daily" ? `Cladle #${dailyNo(G.day)}` : "Cladle（フリー）";
-  const lines = [];
+}
+function markLines(lv) {
+  const marks = lv.map(i => MARKS[i] || "⬜"), lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
+  return lines;
+}
+function shareText() {
+  const title = mode === "daily" ? `Cladle #${dailyNo(G.day)}` : mode === "challenge" ? "Cladle（挑戦状）" : "Cladle（フリー）";
+  const lines = markLines(markLevels());
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/`;
+}
+
+// ---- 挑戦状：フリーの問題と自分の結果をリンクに入れて送る ----
+// 答えがリンクからそのまま読めないよう、軽く混ぜてから base64url にする（暗号ではない）
+const CH_KEY = "cladle-ch";
+function chMix(b) { return b.map((v, i) => v ^ CH_KEY.charCodeAt(i % CH_KEY.length) ^ (i * 37 & 255)); }
+function chEncode(o) {
+  const b = chMix(new TextEncoder().encode(JSON.stringify(o)));
+  return btoa(String.fromCharCode(...b)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function chDecode(s) {
+  try { const bin = atob(String(s).replace(/-/g, "+").replace(/_/g, "/"));
+    return JSON.parse(new TextDecoder().decode(chMix(Uint8Array.from(bin, c => c.charCodeAt(0))))); }
+  catch (e) { return null; }
+}
+function chWho(c) { return c.w ? ` ${c.n} 回で正解しました${c.h ? `（💡×${c.h}）` : ""}` : `当てられませんでした（${c.n} 回）`; }
+function chText() {
+  const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
+  const code = chEncode({ t: G.target, n: G.guesses.length, w: G.won ? 1 : 0, h: hints, m: markLevels().join("") });
+  const me = G.won ? `${G.guesses.length} 回で正解${hints ? `（💡×${hints}）` : ""}しました` : "当てられませんでした";
+  return `Cladle 挑戦状\nわたしは${me}。同じ動物を何回で当てられる？\n${markLines(markLevels()).join("\n")}\nhttps://cladle.github.io/cladle/#c=${code}`;
+}
+// 勝ち負け：正解した方が勝ち。どちらも正解なら回数が少ない方、同じならヒントが少ない方
+function chVersusHTML() {
+  const c = G.ch, mh = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
+  const me = G.won ? [1, -G.guesses.length, -mh] : [0, 0, 0], you = c.w ? [1, -c.n, -(c.h || 0)] : [0, 0, 0];
+  const d = me.map((v, i) => v - you[i]).find(v => v) || 0;
+  const verdict = d > 0 ? "あなたの勝ち！" : d < 0 ? "相手の勝ち" : "引き分け";
+  const marks = markLines(String(c.m || "").split("").map(Number)).join("<br>");
+  return `<div class="versus"><span class="eyebrow">挑戦状の結果</span><b>${verdict}</b>
+    <div class="vs-row"><span>相手</span><span>${c.w ? `${c.n} 回${c.h ? `・💡${c.h}` : ""}` : "×"}</span><span class="vs-marks">${marks}</span></div>
+    <div class="vs-row"><span>あなた</span><span>${G.won ? `${G.guesses.length} 回${mh ? `・💡${mh}` : ""}` : "×"}</span><span class="vs-marks">${markLines(markLevels()).join("<br>")}</span></div></div>`;
 }
 
 // ---- 補完 ----
@@ -820,6 +877,7 @@ function howtoHTML() {
     <li>「新しい手がかりはありません」は、緑の点より外側の動物を入れたということです。</li>
     <li>ヒント1は残りの候補の数、ヒント2は一歩先の節目です。ヒントを使っても回数は減りません。</li>
     <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
+    <li>フリーの問題を解いたら「この問題で挑戦状を送る」で、同じ動物を友だちに出せます。届いたリンクを開くと、相手の回数と比べられます。</li>
     <li>系統樹の節目（分類群）は、すべてクレード（ある祖先とその子孫すべてからなる単系統群）です。魚類や爬虫類のような、子孫の一部を除いたまとまりは使っていません。</li>
     <li><span class="poly">多分岐</span>は系統関係が議論中で、分岐の順を決めていない節目です。</li></ul></details>`;
 }
@@ -853,15 +911,18 @@ function demoPlay() { demoStop(); demoShow(0, !matchMedia("(prefers-reduced-moti
 
 // ---- 画面切り替え ----
 let view = "daily";
-function setView(v) {
+function setView(v, keep) {
   view = v;
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
   $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto";
   demoStop(); if (v === "howto") demoPlay();
-  if (v === "daily" || v === "free") { if (mode !== v || !G) newGame(v); }
+  if ((v === "daily" || v === "free") && !keep) { if (mode !== v || !G) newGame(v); }
   window.scrollTo(0, 0);
 }
 
+function openChallenge(code) {
+  newGame("challenge", code); setView("free", true);
+}
 function wire() {
   document.querySelectorAll("nav button").forEach(b => b.onclick = () => setView(b.dataset.v));
   const inp = $("#guess");
@@ -883,7 +944,8 @@ function wire() {
     const b = e.target.closest(".clade, .twig, .clade-mini, .svgnode, .nl, .zk [data-id]:is(button)");
     if (b) { e.preventDefault(); openSheet(b.dataset.id); return; }
     const hb = e.target.closest(".hintbtn"); if (hb) { useHint(+hb.dataset.hint); return; }
-    if (e.target.id === "copy") copyShare();
+    if (e.target.id === "copy") copyShare(shareText(), e.target, "結果を共有");
+    if (e.target.id === "sendCh") copyShare(chText(), e.target, "この問題で挑戦状を送る");
     if (e.target.id === "again") { store.set("dk-free", null); newGame("free"); }
     if (e.target.id === "goFree") setView("free");
     if (e.target.id === "toZukan") revealInZukan(G.target);
@@ -894,11 +956,10 @@ function wire() {
   const setHdr = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
   setHdr(); addEventListener("resize", setHdr);
 }
-async function copyShare() {
-  const t = shareText(), b = $("#copy");
+async function copyShare(t, b, label) {
   if (navigator.share && matchMedia("(pointer: coarse)").matches) { try { await navigator.share({ text: t }); return; } catch (e) { if (e.name === "AbortError") return; } }
-  try { await navigator.clipboard.writeText(t); b.textContent = "コピーしました"; setTimeout(() => b.textContent = "結果を共有", 2000); }
-  catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
+  try { await navigator.clipboard.writeText(t); b.textContent = "コピーしました"; setTimeout(() => b.textContent = label, 2000); }
+  catch (e) { if (b.id !== "copy") { $("#shareText").textContent = t; b.textContent = "上の文を選択しました（長押しでコピー）"; } const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
 fetch("data.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
@@ -910,7 +971,9 @@ fetch("data.json").then(r => { if (!r.ok) throw new Error(r.status); return r.js
   $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
   $("#demoReplay").onclick = demoPlay;
   const h = location.hash.slice(1);
-  setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
+  if (h.startsWith("c=")) openChallenge(h.slice(2));
+  else setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
+  addEventListener("hashchange", () => { if (location.hash.startsWith("#c=")) openChallenge(location.hash.slice(3)); });
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });
