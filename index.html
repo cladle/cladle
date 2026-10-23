@@ -560,7 +560,7 @@ function resultHTML() {
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     <p class="fact">${esc(t.fact)}</p>
     <div class="lookup">調べる：${lookupLinks(t)}</div>
-    <div class="fullpath"><span class="eyebrow">動物界からの系統</span><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
+    <div class="fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="row"><button class="btn" id="copy">結果をコピー</button>
     <button class="btn ghost" id="toZukan">図鑑でこの動物を見る</button>
