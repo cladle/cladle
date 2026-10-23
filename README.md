@@ -2,6 +2,6 @@
 
 和名で遊ぶ、動物の系統あてゲームです。推測した動物と正解の「最も近い共通祖先」をたどって、今日の動物を当てます。
 
-- 遊ぶ：https://woodgiraffelv30.github.io/cladle/
+- 遊ぶ：https://cladle.github.io/cladle/
 - `index.html` がゲーム本体、`data.json` が収録データ（33門・413種）です。
 - 成績はお使いのブラウザに保存されます。

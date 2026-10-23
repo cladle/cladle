@@ -587,7 +587,7 @@ function shareText() {
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://woodgiraffelv30.github.io/cladle/`;
+  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/`;
 }
 
 // ---- 補完 ----
@@ -674,7 +674,7 @@ function aboutHTML() {
   const nv = SP.filter(s => s.verify).length;
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>このゲームについて</h2><ul>
-    <li>試作版です。名前や系統に誤りがあるかもしれません。お気づきの点は ${a("https://github.com/woodgiraffeLV30/cladle/issues", "GitHub の Issues")} へお寄せください。</li>
+    <li>試作版です。名前や系統に誤りがあるかもしれません。お気づきの点は ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li>
     <li>ゲームの形は ${a("https://metazooa.com/", "Metazooa")}（Trainwreck Labs）に着想を得ています。</li>
     <li>ゲームとデータの作成には AI（Claude）を使っています。</li>
     <li>収録：${D.clades.filter(c => c.rank === "門").length} 門・${SP.length} 種（うち「要確認」${nv} 種）。系統は分子系統の論文を参考にし、位置が議論中のグループは多分岐で示しています。</li></ul></section>
