@@ -71,8 +71,10 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .hint { font-size: .8rem; color: var(--muted); margin: 6px 2px 0 }
 .flash { margin: 10px 0 0; padding: 8px 12px; border-radius: 8px; background: var(--accent-soft); font-size: .9rem }
 .flash.err { background: var(--hot-soft) }
-.lookup { font-size: .85rem; color: var(--muted); margin: 6px 0 10px; display: flex; gap: 4px 12px; flex-wrap: wrap }
-.lookup a { color: var(--accent) }
+.lookup { font-size: .85rem; color: var(--muted); margin: 6px 0 10px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center }
+.lookup a { display: inline-flex; align-items: center; gap: 4px; min-height: 34px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-size: .8rem }
+.lookup a::after { content: "↗"; color: var(--muted); font-size: .75rem }
+.lookup a:hover { border-color: var(--accent); color: var(--accent) }
 .stats { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line) }
 .stats .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; margin: 8px 0 12px }
 .stats .nums div { font-size: .8rem; color: var(--muted) }
