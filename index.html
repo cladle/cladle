@@ -247,6 +247,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 }
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e383927b507249e59edc6030a3203a50"}'></script><!-- End Cloudflare Web Analytics -->
+<script data-goatcounter="https://cladle.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -422,10 +423,14 @@ setInterval(() => {
   if (mode === "daily" && G?.day && G.day !== todayJST() && (view === "daily")) newGame("daily");  // 日付が変わったら次の問題へ
 }, 1000);
 
+// プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
+const TRACK = { "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+function track(ev) { try { window.goatcounter?.count?.({ path: ev, title: TRACK[ev] || ev, event: true }); } catch (e) {} }
 function guess(id) {
   if (G.done || G.guesses.includes(id)) return;
   const before = deepest();
   G.guesses.push(id);
+  if (G.guesses.length === 1) track(mode + "-start");
   const L = lca(id, G.target);
   growId = id;
   if (id === G.target) { G.done = G.won = true; celebrate = true; $("#flash").hidden = true; }
@@ -435,6 +440,7 @@ function guess(id) {
     G.fresh = gained ? L : null;
     if (G.guesses.length >= MAX) { G.done = true; }
   }
+  if (G.done) track(mode + (G.won ? "-win" : "-lose"));
   save(); render();
 }
 let celebrate = false, growId = null, lastEdges = null, openGrow = false, animUntil = 0;  // 正解した直後の演出、推測した直後に伸ばす枝、前回描いた枝
@@ -793,7 +799,7 @@ function aboutHTML() {
     <li>上の情報源のデータを丸ごと収録してはいません。名前は照合した結果を一つずつ記載しています。</li>
     <li>写真は使っていません。「調べる」のリンク先は各サイトの内容です。</li>
     <li>文字は Google Fonts（SIL Open Font License）を使っています。</li>
-    <li>Cloudflare Web Analytics で訪問数を数えています（Cookie は使いません）。成績はこの端末のブラウザにだけ保存され、送信されません。</li></ul></section>`;
+    <li>Cloudflare Web Analytics で訪問数を、GoatCounter でプレイの開始・正解の回数を数えています（どちらも Cookie は使わず、答えや入力した名前は送りません）。成績はこの端末のブラウザにだけ保存され、送信されません。</li></ul></section>`;
 }
 
 
