@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cladle（クレードル）</title>
+<meta name="description" content="和名で遊ぶ動物の系統あてゲーム">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=BIZ+UDPGothic:wght@400;700&family=Source+Serif+4:ital,wght@1,400;1,600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* 一列のアプリ。上に入力、下に左の中央を根とする系統樹。 */
+:root {
+  --bg: #e9efec;
+  --surface: #fbfdfc;
+  --ink: #12211d;
+  --muted: #586a64;
+  --line: #c3d0cb;
+  --accent: #0d6f61;
+  --accent-soft: #d3e9e3;
+  --hot: #c84a1f;
+  --hot-soft: #f7dfd3;
+  --warn: #8a6100;
+  --warn-soft: #f6ebc9;
+  --f-display: "Dela Gothic One", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --f-body: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --f-sci: "Source Serif 4", "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1614; --surface: #16211e; --ink: #e2ebe7; --muted: #91a49d; --line: #2c3c37;
+  --accent: #4fc2ad; --accent-soft: #173a33; --hot: #ff8a5e; --hot-soft: #42251a;
+  --warn: #e5bb55; --warn-soft: #3a3016; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1614; --surface: #16211e; --ink: #e2ebe7; --muted: #91a49d; --line: #2c3c37;
+  --accent: #4fc2ad; --accent-soft: #173a33; --hot: #ff8a5e; --hot-soft: #42251a;
+  --warn: #e5bb55; --warn-soft: #3a3016; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg) }
+.wrap { max-width: 560px; margin: 0 auto }
+.sci { font-family: var(--f-sci); font-style: italic }
+button { font: inherit; color: inherit }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 14px 8px }
+.brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: 1.55rem; letter-spacing: .02em; margin: 0; line-height: 1.2 }
+h1 .yomi { font-family: var(--f-body); font-size: .7rem; letter-spacing: .08em; color: var(--muted); margin-left: 8px; vertical-align: middle }
+.brand small { color: var(--muted); font-size: .8rem }
+nav { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px }
+nav button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 5px 10px; font-size: .8rem; white-space: nowrap; cursor: pointer }
+nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+
+.status { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 12px 0 8px; font-size: .85rem; color: var(--muted) }
+.status b { font-family: var(--f-mono); color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums }
+.meter { display: flex; gap: 2px; flex: 1; max-width: 220px }
+.meter i { flex: 1; height: 6px; border-radius: 1px; background: var(--line) }
+.meter i.used { background: var(--accent) }
+
+.inputbox { position: relative }
+#guess { width: 100%; font: inherit; font-size: 1.05rem; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 10px; background: var(--surface); color: var(--ink) }
+#guess:disabled { opacity: .5 }
+.sugg { list-style: none; margin: 4px 0 0; padding: 4px; position: absolute; left: 0; right: 0; z-index: 4; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgb(0 0 0 / .15); max-height: 50vh; overflow-y: auto }
+.sugg li { padding: 8px 10px; border-radius: 6px; cursor: pointer; display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline }
+.sugg li[aria-selected="true"], .sugg li:hover { background: var(--accent-soft) }
+.sugg .sci, .sugg .via { color: var(--muted); font-size: .85rem }
+.sugg .used { opacity: .45 }
+.hint { font-size: .8rem; color: var(--muted); margin: 6px 2px 0 }
+.flash { margin: 10px 0 0; padding: 8px 12px; border-radius: 8px; background: var(--accent-soft); font-size: .9rem }
+.flash.err { background: var(--hot-soft) }
+.lookup { font-size: .85rem; color: var(--muted); margin: 6px 0 10px; display: flex; gap: 4px 12px; flex-wrap: wrap }
+.lookup a { color: var(--accent) }
+.stats { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line) }
+.stats .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; margin: 8px 0 12px }
+.stats .nums div { font-size: .8rem; color: var(--muted) }
+.stats .nums b { display: block; font-size: 1.4rem; color: var(--ink); font-family: var(--f-mono) }
+.stats .nums small { display: block; font-size: .7rem }
+.stats .dist { display: grid; gap: 3px }
+.stats .bar { display: grid; grid-template-columns: 1.6em 1fr; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: .75rem; color: var(--muted) }
+.stats .bar i { font-style: normal; display: block; background: var(--line); color: var(--ink); text-align: right; padding: 1px 6px; border-radius: 3px; min-width: 1.6em; box-sizing: border-box }
+.stats .bar i.me { background: var(--accent); color: var(--bg) }
+.stats .cd { margin-top: 12px; text-align: center; font-size: .9rem }
+.stats .cd b { font-family: var(--f-mono); font-size: 1.1rem }
+.hints { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; align-items: center }
+.hints .hint { margin: 0; flex-basis: 100%; font-size: .9rem; padding: 8px 12px; border-radius: 8px; background: var(--warn-soft, var(--accent-soft)) }
+.cgsvg.dim .ln:not(.on):not(.goal), .cgsvg.dim .tl:not(.hit), .cgsvg.dim .nd:not(.on), .cgsvg.dim .nl:not(.on) { opacity: .3 }
+
+/* 系統樹（SVG）：左の中央が根。正解へ続く枝は太く濃く、他は細く薄く。「？」へは点線 */
+.cgwrap { margin-top: 18px; overflow-x: auto }
+.cgsvg { display: block; max-width: none; font-family: var(--f-body) }
+.cgsvg .ln { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-linecap: round }
+.cgsvg .ln.on { stroke: var(--accent); stroke-width: 3 }
+.cgsvg .ln.goal { stroke: var(--hot); stroke-width: 2; stroke-dasharray: 4 4 }
+.cgsvg .nd circle { fill: var(--muted) }
+.cgsvg .nd.on circle { fill: var(--accent) }
+.cgsvg .nd.stop circle { fill: var(--accent); stroke: var(--accent-soft); stroke-width: 6; paint-order: stroke }
+.cgsvg .nl { font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; cursor: pointer }
+.cgsvg .nl.on { fill: var(--ink) }
+.cgsvg .nl.stop { fill: var(--accent); font-size: 13px; font-weight: 700 }
+.cgsvg .svgnode { cursor: pointer }
+.cgsvg .tl { font-size: 14px; fill: var(--ink) }
+.cgsvg .tl .n { font-family: var(--f-mono); font-size: 10px; fill: var(--muted) }
+.cgsvg .tl.hit { fill: var(--hot); font-weight: 700 }
+.cgsvg .tq { font-family: var(--f-display); font-size: 18px; fill: var(--hot) }
+.cgsvg :focus-visible { outline: 2px solid var(--accent) }
+.crumb { display: grid; gap: 4px; font-size: .85rem; margin-top: 10px }
+.crumb > div { display: flex; flex-wrap: wrap; gap: 2px 4px; align-items: baseline }
+.crumb .sep, .fullpath .sep { color: var(--line) }
+.clade-mini.here { color: var(--accent); font-weight: 700; text-decoration: none }
+.twig.hit { background: var(--hot); border-color: var(--hot); color: var(--surface); font-weight: 700 }
+.twig.hit .n { color: inherit }
+.fullpath { display: grid; gap: 4px; font-size: .85rem }
+.fullpath > div { display: flex; flex-wrap: wrap; gap: 2px 4px; align-items: baseline }
+.clade-mini { background: none; border: 0; padding: 0; color: var(--muted); cursor: pointer; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px }
+.fullpath .sep { color: var(--line) }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; color: var(--muted) }
+.clade { background: none; border: 0; padding: 0; text-align: left; cursor: pointer; display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline }
+.clade .ja { font-weight: 700 }
+.clade .sci { color: var(--muted); font-size: .85rem }
+.rank { font-size: .7rem; letter-spacing: .06em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; font-style: normal; font-family: var(--f-body) }
+.poly { color: var(--warn); font-size: .7rem; border: 1px solid currentColor; border-radius: 4px; padding: 0 5px }
+.twig { position: relative; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 3px 11px 3px 9px; font-size: .88rem; cursor: pointer }
+.twig .n { font-family: var(--f-mono); font-size: .7rem; color: var(--muted); margin-right: 5px }
+.empty { color: var(--muted); font-size: .9rem; margin-top: 18px; padding: 14px; border: 1px dashed var(--line); border-radius: 10px }
+
+.result { margin-top: 18px; padding: 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); display: grid; gap: 10px }
+.result h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; margin: 0; text-wrap: balance }
+.result .fact { margin: 0 }
+.share { font-family: var(--f-mono); font-size: .8rem; white-space: pre-wrap; background: var(--bg); border-radius: 8px; padding: 10px; margin: 0; user-select: all }
+.row { display: flex; gap: 8px; flex-wrap: wrap }
+.btn { border: 0; border-radius: 8px; padding: 9px 14px; background: var(--ink); color: var(--bg); cursor: pointer; font-weight: 700 }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 400 }
+
+.badge-v { display: inline-block; font-size: .7rem; color: var(--warn); background: var(--warn-soft); border-radius: 4px; padding: 0 5px; font-weight: 700 }
+
+/* 図鑑 */
+.zukan-tools { display: flex; gap: 8px; margin: 14px 0 8px; flex-wrap: wrap; align-items: center; position: sticky; top: var(--hdr, 96px); z-index: 4; background: var(--bg); padding-block: 6px }
+.zk .hit { scroll-margin-top: calc(var(--hdr, 96px) + 64px) }
+.zukan-tools input { flex: 1; min-width: 0; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink) }
+.zk { margin: 0 0 24px }
+.zk-crumb { display: flex; flex-wrap: wrap; gap: 2px 4px; align-items: baseline; font-size: .8rem; color: var(--muted); margin: 4px 0 10px }
+.zk-crumb button { background: none; border: 0; padding: 2px 0; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line) }
+.zk-head { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px }
+.zk-head h2 { margin: 0; font-size: 1.25rem; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline }
+.zk-head .sci { color: var(--muted); font-size: .9rem; font-weight: 400 }
+.zk-head .meta { display: flex; gap: 6px; align-items: center; margin: 6px 0; font-size: .8rem; color: var(--muted) }
+.zk-head p { margin: 0; font-size: .9rem }
+.zk-head .note { margin-top: 8px }
+.zk-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line) }
+.zk-list li { border-bottom: 1px solid var(--line) }
+.zk-list button { display: grid; grid-template-columns: 1fr auto; gap: 0 8px; width: 100%; background: none; border: 0; padding: 10px 4px; text-align: left; cursor: pointer; color: var(--ink); font: inherit }
+.zk-list .ja { font-weight: 700 }
+.zk-list .sp .ja { font-weight: 400 }
+.zk-list .sci { grid-column: 1; color: var(--muted); font-size: .8rem }
+.zk-list .side { grid-column: 2; grid-row: 1 / span 2; align-self: center; display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: .75rem; font-family: var(--f-mono) }
+.zk-list .cl .side::after { content: "›"; font-size: 1.2rem; font-family: var(--f-body) }
+.zk-list .where { grid-column: 1; color: var(--muted); font-size: .75rem }
+.zk-list .hit { background: var(--warn-soft) }
+.zk-sec { font-size: .75rem; color: var(--muted); margin: 14px 0 4px; letter-spacing: .05em }
+
+/* 説明 */
+.doc { margin-top: 14px; display: grid; gap: 14px }
+.doc section { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px }
+.doc h2 { font-size: 1rem; margin: 0 0 6px }
+.doc p, .doc ul { margin: 6px 0 0; font-size: .9rem }
+.doc ul { padding-left: 1.2em }
+.doc dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: .85rem; margin: 6px 0 0 }
+.doc dt { color: var(--muted) }
+.doc dd { margin: 0; min-width: 0 }
+
+/* 詳細シート */
+.scrim { position: fixed; inset: 0; background: rgb(0 0 0 / .4); z-index: 20 }
+.sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 21; background: var(--surface); border-radius: 16px 16px 0 0; max-height: 80vh; overflow-y: auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); padding-top: 16px; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)) }
+.sheet .in { max-width: 560px; margin: 0 auto; display: grid; gap: 8px }
+.sheet h3 { margin: 0; font-size: 1.3rem; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline }
+.sheet .note { font-size: .85rem; padding: 8px 10px; border-radius: 8px }
+.sheet .note.poly-n { background: var(--warn-soft) }
+.sheet .note.v-n { background: var(--warn-soft); color: var(--ink) }
+.sheet .path { font-size: .8rem; color: var(--muted) }
+.sheet .close { justify-self: end }
+/* 遊び方 */
+.demo { margin-top: 14px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); display: grid; gap: 10px }
+.demo-head { display: flex; justify-content: space-between; align-items: baseline }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; color: var(--muted) }
+.demo-step { font-family: var(--f-mono); font-size: .8rem; color: var(--accent) }
+.demo-input { border: 2px solid var(--ink); border-radius: 10px; padding: 10px 14px; min-height: 2.9em; font-size: 1.05rem; background: var(--bg) }
+.demo-input .caret { display: inline-block; width: 2px; height: 1.1em; background: var(--ink); vertical-align: -0.15em; margin-left: 1px }
+@media (prefers-reduced-motion: no-preference) { .demo-input .caret { animation: blink 1s steps(1) infinite } @keyframes blink { 50% { opacity: 0 } } }
+.demo-cap { margin: 0; font-size: .9rem; min-height: 3em }
+.demo .cgwrap { margin-top: 4px }
+#howtoDoc { margin-top: 14px }
+@media (prefers-reduced-motion: no-preference) {
+  .cgsvg .nd.stop circle { animation: ring 2.4s ease-in-out infinite }
+  @keyframes ring { 50% { stroke-width: 10 } }
+  @keyframes grow { from { opacity: 0; transform: translateY(-6px) } }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand"><h1>Cladle<span class="yomi">クレードル</span></h1></div>
+    <nav role="tablist">
+      <button role="tab" id="tab-daily" data-v="daily" aria-selected="true">今日の動物</button>
+      <button role="tab" id="tab-free" data-v="free" aria-selected="false">フリー</button>
+      <button role="tab" id="tab-zukan" data-v="zukan" aria-selected="false">図鑑</button>
+      <button role="tab" id="tab-howto" data-v="howto" aria-selected="false">遊び方</button>
+      <button role="tab" id="tab-about" data-v="about" aria-selected="false">データ</button>
+    </nav>
+  </header>
+
+  <main id="game">
+    <div class="status"><span id="modeLabel">今日の動物</span><span class="meter" id="meter"></span><span>残り <b id="left">15</b></span></div>
+    <div class="inputbox">
+      <input id="guess" name="dk-animal" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="動物を入力（ひらがな・カタカナ・学名）" aria-label="動物を入力" role="combobox" aria-expanded="false" aria-controls="sugg">
+      <ul class="sugg" id="sugg" role="listbox" hidden></ul>
+    </div>
+    <div id="flash" class="flash" hidden></div>
+    <div id="hints" class="hints" hidden></div>
+    <div id="board"></div>
+    <div id="result"></div>
+  </main>
+
+  <main id="zukan" hidden>
+    <div class="zukan-tools">
+      <input id="zkq" name="dk-zukan" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="図鑑を検索（和名・学名）" aria-label="図鑑を検索">
+    </div>
+    <div class="zk" id="zk"></div>
+  </main>
+
+  <main id="howto" hidden>
+    <section class="demo" aria-label="遊び方の例">
+      <div class="demo-head"><span class="eyebrow">例題</span><span id="demoStep" class="demo-step"></span></div>
+      <div class="demo-input" id="demoInput" aria-hidden="true"><span id="demoTyped"></span><i class="caret"></i></div>
+      <p class="demo-cap" id="demoCap"></p>
+      <div id="demoBoard"></div>
+      <div class="row"><button class="btn ghost" id="demoPrev">前へ</button><button class="btn ghost" id="demoNext">次へ</button><button class="btn" id="demoReplay">最初から再生</button></div>
+    </section>
+    <div class="doc" id="howtoDoc"></div>
+  </main>
+
+  <main id="about" hidden>
+    <div class="doc" id="doc"></div>
+  </main>
+
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" hidden><div class="in" id="sheetIn"></div></div>
+
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)) } catch (e) { return null } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) {} }
+};
+
+let D, N = {}, SP = [], BUCKETS = [], MAX = 15;
+const HINT1 = 10, HINT2 = 13;  // この回数の推測のあとにヒントが押せる
+
+// ---- 文字の正規化（カタカナ→ひらがな、全角半角、空白・中黒を除去）----
+function norm(s) {
+  return String(s).normalize("NFKC").toLowerCase()
+    .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
+    .replace(/[\s・･\-‐.]/g, "");
+}
+
+function build(data) {
+  D = data; MAX = data.meta.selection?.maxGuesses || 15;
+  for (const c of data.clades) N[c.id] = { ...c, kind: "clade", kids: [] };
+  for (const s of data.species) { N[s.id] = { ...s, kind: "species", kids: [] }; SP.push(N[s.id]); }
+  for (const n of Object.values(N)) if (n.parent) N[n.parent].kids.push(n.id);
+  const walk = (id, d) => { const n = N[id]; n.depth = d; n.count = n.kind === "species" ? 1 : 0;
+    for (const k of n.kids) { walk(k, d + 1); n.count += N[k].count; } };
+  const root = data.clades.find(c => !c.parent).id; walk(root, 0); D.root = root;
+  for (const s of SP) {
+    s.phylum = path(s.id).find(id => N[id].rank === "門");
+    makeKeys(s);
+  }
+  // 出題：まず枠（主要な門ごと＋その他の門）を等確率で選び、枠の中は門ごとに重みをつけて選ぶ
+  const sel = data.meta.selection || {}, named = sel.buckets || [];
+  const byB = {};
+  for (const s of SP) {
+    if (s.answerable === false) continue;
+    const b = named.includes(s.phylum) ? s.phylum : "_other";
+    ((byB[b] ||= {})[s.phylum] ||= []).push(s.id);
+  }
+  BUCKETS = Object.values(byB).map(ph => Object.values(ph).map(ids => ({ ids, w: sel.phylumWeight === "equal" ? 1 : Math.sqrt(ids.length) })));
+}
+function makeKeys(s) { s.keys = [[s.ja, "ja"], [s.sci, "sci"], ...s.aliases.map(a => [a, "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
+function path(id) { const a = []; while (id) { a.unshift(id); id = N[id].parent; } return a; }
+function lca(a, b) { const pa = new Set(path(a)); let x = b; while (!pa.has(x)) x = N[x].parent; return x; }
+
+// ---- 出題：枠を等確率 → 枠内で門を重みつき → 門内は一様 ----
+function pick(rand) {
+  const B = BUCKETS[Math.floor(rand() * BUCKETS.length)];
+  const tot = B.reduce((s, x) => s + x.w, 0); let r = rand() * tot;
+  for (const x of B) { r -= x.w; if (r <= 0) return x.ids[Math.floor(rand() * x.ids.length)]; }
+  return B[B.length - 1].ids[0];
+}
+function mulberry(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a);
+  t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function hash(s) { let h = 2166136261; for (const c of s) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+function todayJST() { return new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10); }
+function dailyNo(day) { const e = D.meta.selection?.dailyEpoch || "2026-10-21"; return Math.round((Date.parse(day) - Date.parse(e)) / 864e5) + 1; }
+
+// ---- ゲーム状態 ----
+let G = null, mode = "daily";
+function newGame(m) {
+  mode = m;
+  if (m === "daily") {
+    const day = todayJST(), saved = store.get("dk-daily");
+    const target = pick(mulberry(hash("metazoa-ja:" + day + ":" + D.meta.datasetVersion)));
+    G = saved && saved.day === day && saved.target === target ? saved : { day, target, guesses: [], done: false, won: false };
+  } else {
+    const saved = store.get("dk-free");
+    G = saved && !saved.done && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
+  }
+  if (!G.done && G.guesses.length >= MAX) G.done = true;  // 上限を下げる前の記録
+  G.fresh = null;
+  if (m === "daily" && G.done && !STATS.days[G.day]) save();  // 成績を付ける前に解いた日の分
+  render();
+}
+function save() {
+  store.set(mode === "daily" ? "dk-daily" : "dk-free", { ...G, fresh: null });
+  if (mode !== "daily") return;
+  if (G.done) STATS.days[G.day] = { w: G.won ? 1 : 0, n: G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0) };
+  saveStats();
+}
+// ---- 成績（今日の動物だけ数える）----
+// このブラウザに保存する（別の端末とは共有されない）
+let STATS = { days: {} };
+mergeStats(store.get("dk-stats"));
+function mergeStats(x) { if (x && x.days) for (const [d, r] of Object.entries(x.days)) if (!STATS.days[d]) STATS.days[d] = r; }
+function saveStats() {
+  store.set("dk-stats", STATS);
+}
+function prevDay(d) { return new Date(Date.parse(d) - 864e5).toISOString().slice(0, 10); }
+function statsSummary() {
+  const days = STATS.days, keys = Object.keys(days).sort(), played = keys.length, wins = keys.filter(k => days[k].w).length;
+  const dist = Array(MAX + 1).fill(0); let lost = 0;
+  for (const k of keys) days[k].w ? dist[Math.min(days[k].n, MAX)]++ : lost++;
+  let cur = 0, d = todayJST(); if (!days[d]) d = prevDay(d);
+  while (days[d]?.w) { cur++; d = prevDay(d); }
+  let best = 0, run = 0, prev = null;
+  for (const k of keys) { run = !days[k].w ? 0 : prev === prevDay(k) ? run + 1 : 1; best = Math.max(best, run); prev = k; }
+  return { played, wins, rate: played ? Math.round(wins / played * 100) : 0, cur, best, dist, lost };
+}
+function statsHTML() {
+  const t = statsSummary(), today = STATS.days[todayJST()], top = Math.max(1, ...t.dist, t.lost);
+  const bar = (label, v, mine) => `<div class="bar"><span>${label}</span><i style="width:${Math.max(6, v / top * 100)}%" class="${mine ? "me" : ""}">${v}</i></div>`;
+  return `<div class="stats"><span class="eyebrow">今日の動物の成績</span>
+    <div class="nums"><div><b>${t.played}</b><small>プレイ</small></div><div><b>${t.rate}%</b><small>正解率</small></div><div><b>${t.cur}</b><small>連続正解</small></div><div><b>${t.best}</b><small>最長連続</small></div></div>
+    <div class="dist">${t.dist.map((v, i) => i ? bar(i, v, today?.w && today.n === i) : "").join("")}${bar("×", t.lost, today && !today.w)}</div>
+    <div class="cd">次の問題まで <b id="countdown">${countdown()}</b></div></div>`;
+}
+function countdown() {
+  const now = Date.now() + 9 * 3600e3, left = 864e5 - now % 864e5;
+  const h = Math.floor(left / 3600e3), m = Math.floor(left / 60e3) % 60, sec = Math.floor(left / 1e3) % 60;
+  return `${h}:${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
+}
+setInterval(() => {
+  const c = document.getElementById("countdown"); if (!c) return;
+  c.textContent = countdown();
+  if (mode === "daily" && G?.day && G.day !== todayJST() && (view === "daily")) newGame("daily");  // 日付が変わったら次の問題へ
+}, 1000);
+
+function guess(id) {
+  if (G.done || G.guesses.includes(id)) return;
+  const before = deepest();
+  G.guesses.push(id);
+  const L = lca(id, G.target);
+  if (id === G.target) { G.done = G.won = true; flash(`正解！ ${N[id].ja} でした。`); }
+  else {
+    const gained = N[L].depth > N[before].depth;
+    flash(`${N[id].ja} と正解の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
+    G.fresh = gained ? L : null;
+    if (G.guesses.length >= MAX) { G.done = true; }
+  }
+  save(); render();
+}
+function deepest() { return deepestOf(G.target, G.guesses, G.reveal); }
+// ---- ヒント（推測回数は減らない）----
+// ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
+// ヒント2: 正解への経路で、今わかっている節目より1段深い節目を教える
+function candidates() {
+  const k = deepest(), out = [];
+  for (const s of SP) {
+    if (s.answerable === false || G.guesses.includes(s.id) || !path(s.id).includes(k)) continue;
+    if (G.guesses.every(g => lca(g, s.id) === lca(g, G.target))) out.push(s.id);
+  }
+  return out;
+}
+function useHint(n) {
+  if (G.done) return;
+  if (n === 1 && G.guesses.length >= HINT1) G.h1 = true;
+  if (n === 2 && G.guesses.length >= HINT2) {
+    const p = path(G.target), next = p[p.indexOf(deepest()) + 1];
+    if (next && next !== G.target) G.reveal = next;
+    G.h2 = true;
+  }
+  save(); render();
+}
+// 豆知識から正解の名前（和名・別名・学名）を伏せる
+function maskFact(id) {
+  const s = N[id]; let t = s.fact || "";
+  for (const w of [s.ja, ...(s.aliases || []), s.sci, s.sci.split(" ")[0]].filter(w => w && w.length > 1).sort((a, b) => b.length - a.length)) t = t.split(w).join("〇〇");
+  return t;
+}
+function hintsHTML() {
+  if (G.done) return "";
+  const n = G.guesses.length, out = [];
+  if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
+  else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
+  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 正解は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : `<p class="hint">💡 正解の豆知識：${esc(maskFact(G.target))}</p>`);
+  else if (n >= HINT2) out.push(`<button class="btn ghost hintbtn" data-hint="2">💡 ヒント2</button>`);
+  return out.join("");
+}
+function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
+
+function render() {
+  $("#modeLabel").textContent = mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : "フリープレイ";
+  $("#left").textContent = MAX - G.guesses.length;
+  $("#meter").innerHTML = Array.from({ length: MAX }, (_, i) => `<i class="${i < G.guesses.length ? "used" : ""}"></i>`).join("");
+  $("#guess").disabled = G.done;
+  if (!G.guesses.length) $("#flash").hidden = true;
+
+  const h = treeHTML(G.target, G.guesses, G.done, G.fresh, $("#board").clientWidth, { reveal: G.reveal, dim: G.h1 && !G.done });
+  $("#board").innerHTML = h;
+  $("#hints").innerHTML = hintsHTML(); $("#hints").hidden = !$("#hints").innerHTML;
+  $("#result").innerHTML = G.done ? resultHTML() : "";
+}
+function deepestOf(target, guesses, reveal) {
+  let best = reveal && path(target).includes(reveal) ? reveal : D.root;
+  for (const g of guesses) { const L = g === target ? target : lca(g, target); if (N[L].depth > N[best].depth) best = L; }
+  return best;
+}
+// 推測した動物と「？」（正解）を葉にした系統樹（左の中央が根、右に葉が並ぶ）。
+// 枝分かれしない途中の節目は省き、分岐点だけを残す。
+function treeHTML(target, guesses, done, fresh, width, opt = {}) {
+  const W = Math.max(280, width || 358);
+  const known = done ? target : deepestOf(target, guesses, opt.reveal);
+  const tips = new Set(guesses.filter(g => g !== target || done));
+  if (done) tips.add(target);
+  const U = new Set(path(known));
+  for (const g of tips) for (const x of path(g)) U.add(x);
+  const onPath = new Set(path(known));
+  const kids = {};
+  for (const x of U) if (N[x].parent) (kids[N[x].parent] ||= []).push(x);
+  const Q = "?goal";
+  const keep = x => x === D.root || tips.has(x) || x === known || (kids[x] || []).length + (!done && x === known ? 1 : 0) >= 2;
+  const below = x => (kids[x] || []).flatMap(c => keep(c) ? [c] : below(c));
+  const num = {}; guesses.forEach((g, i) => num[g] = i + 1);
+  // 圧縮した木を作る
+  const T = {};
+  const on = id => id === Q || onPath.has(id) || id === target;
+  const build = (x, d) => {
+    const ch = below(x);
+    if (!done && x === known) ch.push(Q);
+    T[x] = { id: x, d, ch };
+    for (const c of ch) c === Q ? (T[Q] = { id: Q, d: d + 1, ch: [] }) : build(c, d + 1);
+  };
+  build(D.root, 0);
+  const nLeaves = id => T[id].ch.length ? T[id].ch.reduce((a, c) => a + nLeaves(c), 0) : 1;
+  // 正解へ続く枝をまっすぐ中央に通し、ほかの枝は上下に振り分ける
+  let up = 0, down = 0;
+  const arrange = id => {
+    const n = T[id], main = n.ch.find(on);
+    if (!main) return;
+    const above = [], belowS = [];
+    for (const c of n.ch) if (c !== main) { if (up <= down) { above.push(c); up += nLeaves(c); } else { belowS.push(c); down += nLeaves(c); } }
+    n.ch = [...above.reverse(), main, ...belowS];
+    arrange(main);
+  };
+  arrange(D.root);
+  const leaves = Object.values(T).filter(n => !n.ch.length);
+  const maxD = Math.max(...Object.values(T).filter(n => n.ch.length).map(n => n.d), 0);
+  // 葉の名前の幅を実際に測り、入りきらない分だけ省略する
+  const ctx = (treeHTML.cv ||= document.createElement("canvas")).getContext("2d");
+  ctx.font = `14px ${getComputedStyle(document.body).fontFamily}`;
+  const tipText = id => id === Q ? "？" : (num[id] ? num[id] + " " : "") + N[id].ja;
+  const maxLabel = W * 0.42;
+  const fit = id => { let t = id === Q ? "？" : N[id].ja; while (t.length > 2 && ctx.measureText((num[id] ? num[id] + " " : "") + t).width > maxLabel) t = t.slice(0, -1); return t === N[id]?.ja || id === Q ? t : t.slice(0, -1) + "…"; };
+  const labelW = Math.min(maxLabel, Math.max(...leaves.map(n => ctx.measureText(tipText(n.id)).width), 20)) + 12;
+  const left = 6, tipX = W - labelW, dx = Math.max(14, (tipX - left - 6) / Math.max(maxD + 1, 1));
+  const ROW = 34, top = 18;
+  // 葉は上から順に並べ、節目は子の真ん中に置く（根は左の中央に来る）
+  let row = 0;
+  const place = n => {
+    if (!n.ch.length) { n.y = top + row++ * ROW; n.x = tipX; return; }
+    n.ch.forEach(c => place(T[c]));
+    const ys = n.ch.map(c => T[c].y);
+    n.y = (Math.min(...ys) + Math.max(...ys)) / 2; n.x = left + n.d * dx;
+  };
+  place(T[D.root]);
+  const H = top + (row - 1) * ROW + 24;
+  let lines = "", nodes = "", texts = "";
+  const cand = [];
+  for (const n of Object.values(T)) {
+    for (const c of n.ch) {
+      const k = T[c], cls = c === Q ? "ln goal" : on(c) ? "ln on" : "ln";
+      lines += `<path class="${cls}" d="M${n.x},${n.y} V${k.y} H${k.x - 4}"/>`;
+    }
+  }
+  for (const n of Object.values(T)) {
+    if (n.id === Q) {
+      nodes += `<text class="tq" x="${n.x}" y="${n.y + 5}">？</text>`;
+    } else if (!n.ch.length) {
+      const hit = n.id === target;
+      nodes += `<text class="svgnode tl${hit ? " hit" : ""}" data-id="${n.id}" role="button" tabindex="0" x="${n.x}" y="${n.y + 5}">${num[n.id] ? `<tspan class="n">${num[n.id]} </tspan>` : ""}${esc(fit(n.id))}</text>`;
+    } else {
+      const st = n.id === known && !done, cls = ["svgnode", "nd", on(n.id) ? "on" : "", st ? "stop" : "", n.id === fresh ? "new" : ""].join(" ");
+      nodes += `<g class="${cls}" data-id="${n.id}" role="button" tabindex="0"><circle cx="${n.x}" cy="${n.y}" r="${st ? 6 : 3.5}"/></g>`;
+      cand.push({ n, st, prio: st || n.id === D.root ? 0 : on(n.id) ? 1 : 2 });
+    }
+  }
+  // 節目の名前は線や他の名前と重ならない場所にだけ書く（現在地と根を先に、次に正解側の深い順）。書けなかった名前はタップか下の一覧で見られる
+  const seg = [];
+  for (const n of Object.values(T)) for (const c of n.ch) {
+    const k = T[c];
+    seg.push({ x1: n.x - 2, x2: n.x + 2, y1: Math.min(n.y, k.y), y2: Math.max(n.y, k.y) }, { x1: n.x, x2: k.x, y1: k.y - 2, y2: k.y + 2 });
+  }
+  const placed = [];
+  const hits = (r, list) => list.some(q => r.x1 < q.x2 && q.x1 < r.x2 && r.y1 < q.y2 && q.y1 < r.y2);
+  cand.sort((a, b) => a.prio - b.prio || b.n.d - a.n.d);
+  for (const { n, st } of cand) {
+    ctx.font = `${st ? "700 13px" : "11px"} ${getComputedStyle(document.body).fontFamily}`;
+    const w = ctx.measureText(N[n.id].ja).width, g = st ? 9 : 5;
+    // 右・枝の上（左寄せ）・右上・右下の順に試す
+    const spots = [[n.x + g, 0], [n.x - 3 - w, -9], [n.x + 3, -11], [n.x + 3, 14]]
+      .map(([x, dy]) => ({ x, y: n.y + dy, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 } }))
+      .filter(sp => sp.r.x1 >= 0 && sp.r.x2 <= tipX - 2);
+    const sp = spots.find(sp => !hits(sp.r, placed) && !hits(sp.r, seg))
+      || (st || n.id === D.root ? spots.find(sp => !hits(sp.r, placed)) || spots[0] : null);
+    if (!sp) continue;
+    placed.push(sp.r);
+    texts += `<text class="nl${on(n.id) ? " on" : ""}${st ? " stop" : ""}" x="${sp.x}" y="${sp.y + 4}" data-id="${n.id}">${esc(N[n.id].ja)}</text>`;
+  }
+  const crumb = `<div class="crumb"><span class="eyebrow">${done ? "正解までの系統" : "ここまでわかった系統"}</span><div>${path(known).map(x => `<button class="clade-mini${x === known ? " here" : ""}" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}</div></div>`;
+  return `<div class="cgwrap"><svg class="cgsvg${opt.dim ? " dim" : ""}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="系統樹">${lines}${nodes}${texts}</svg></div>${guesses.length && !done ? crumb : ""}`;
+}
+function cladeBtn(n) {
+  const v = n.verify ? `<span class="badge-v">要確認</span>` : "";
+  const p = n.polytomy ? `<span class="poly">多分岐</span>` : "";
+  return `<button class="clade" data-id="${n.id}"><span class="ja">${esc(n.ja)}</span><span class="sci">${esc(n.sci)}</span>${n.rank ? `<span class="rank">${esc(n.rank)}</span>` : ""}${p}${v}</button>`;
+}
+function resultHTML() {
+  const t = N[G.target];
+  const head = G.won ? `${G.guesses.length} 回目で正解：${esc(t.ja)}` : `答えは ${esc(t.ja)} でした`;
+  return `<section class="result"><h2>${head}</h2>
+    <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
+    <p class="fact">${esc(t.fact)}</p>
+    <div class="lookup">調べる：${lookupLinks(t)}</div>
+    <div class="fullpath"><span class="eyebrow">動物界からの系統</span><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
+    <pre class="share" id="shareText">${esc(shareText())}</pre>
+    <div class="row"><button class="btn" id="copy">結果をコピー</button>
+    <button class="btn ghost" id="toZukan">図鑑でこの動物を見る</button>
+    ${mode === "free" ? `<button class="btn ghost" id="again">次の問題</button>` : `<button class="btn ghost" id="goFree">フリープレイへ</button>`}</div>
+    ${mode === "daily" ? statsHTML() : ""}</section>`;
+}
+// 写真は載せず（権利と同定の問題）、外部の図鑑・検索へのリンクにする
+function lookupLinks(t) {
+  const q = encodeURIComponent;
+  return [["Wikipedia", `https://ja.wikipedia.org/w/index.php?search=${q(t.ja)}`],
+    t.gbif && ["GBIF", `https://www.gbif.org/species/${t.gbif}`],
+    ["画像検索", `https://www.google.com/search?tbm=isch&q=${q(t.ja + " " + t.sci)}`]]
+    .filter(Boolean).map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${l}</a>`).join("");
+}
+function shareText() {
+  const td = N[G.target].depth;
+  const marks = G.guesses.map(g => {
+    if (g === G.target) return "🎯";
+    const r = N[lca(g, G.target)].depth / (td - 1);
+    return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
+  });
+  const title = mode === "daily" ? `Cladle #${dailyNo(G.day)}` : "Cladle（フリー）";
+  const lines = [];
+  for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
+  const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
+  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}`;
+}
+
+// ---- 補完 ----
+let sel = -1, cur = [];
+function suggest(q) {
+  const n = norm(q); if (!n) return [];
+  const out = [];
+  for (const s of SP) {
+    let best = null;
+    for (const k of s.keys) {
+      const i = k.n.indexOf(n); if (i < 0) continue;
+      const score = (i === 0 ? 0 : 10) + (k.k === "ja" ? 0 : k.k === "alias" ? 1 : 2) + k.n.length / 100;
+      if (!best || score < best.score) best = { s, k, score };
+    }
+    if (best) out.push(best);
+  }
+  return out.sort((a, b) => a.score - b.score).slice(0, 8);
+}
+function showSugg() {
+  const u = $("#sugg"); cur = suggest($("#guess").value); sel = cur.length ? 0 : -1;
+  if (!cur.length) { u.hidden = true; $("#guess").setAttribute("aria-expanded", "false"); return; }
+  u.innerHTML = cur.map((r, i) => {
+    const used = G.guesses.includes(r.s.id);
+    const via = r.k.k === "alias" ? `<span class="via">（${esc(r.k.t)}）</span>` : "";
+    return `<li role="option" id="o${i}" data-id="${r.s.id}" aria-selected="${i === sel}" class="${used ? "used" : ""}"><span>${esc(r.s.ja)}</span>${via}<span class="sci">${esc(r.s.sci)}</span>${used ? `<span class="via">推測済み</span>` : ""}</li>`;
+  }).join("");
+  u.hidden = false; $("#guess").setAttribute("aria-expanded", "true");
+}
+function choose(id) { $("#guess").value = ""; $("#sugg").hidden = true; if (G.guesses.includes(id)) { flash(`${N[id].ja} はもう推測しました。`, true); return; } guess(id); $("#guess").focus(); }
+
+// ---- 詳細シート ----
+function openSheet(id) {
+  const n = N[id], isSp = n.kind === "species";
+  const hide = isSp && id === G?.target && !G.done && view !== "zukan";
+  let h = `<h3><span>${esc(n.ja)}</span><span class="sci" style="font-weight:400;font-size:1rem">${esc(n.sci)}</span></h3>
+    <div class="row"><span class="rank">${isSp ? "種" : esc(n.rank)}</span>${n.verify ? `<span class="badge-v">要確認</span>` : ""}${n.jaStatus === "provisional" ? `<span class="badge-v">和名なし・仮表記</span>` : ""}</div>`;
+  if (!hide) h += `<p style="margin:0">${esc(isSp ? n.fact : n.desc)}</p>`;
+  if (!isSp && view === "zukan") h += `<div class="path">収録 ${n.count} 種</div>`;
+  if (n.polytomy) h += `<div class="note poly-n"><b>多分岐の理由：</b>${esc(n.polytomy)}</div>`;
+  if (n.verify) h += `<div class="note v-n"><b>要確認：</b>${esc(Object.entries(n.verify).map(([k, v]) => ({ ja: "和名", sci: "学名", placement: "位置" }[k] || k) + "：" + v).join("／"))}</div>`;
+  if (isSp && n.aliases.length) h += `<div class="path">別名・検索語：${esc(n.aliases.join("、"))}</div>`;
+  if (isSp && !hide) h += `<div class="lookup">調べる：${lookupLinks(n)}</div>`;
+  h += `<div class="path">${path(n.parent || id).map(x => esc(N[x].ja)).join(" › ")}</div>`;
+  h += `<button class="btn ghost close" id="closeSheet">閉じる</button>`;
+  $("#sheetIn").innerHTML = h; $("#sheet").hidden = $("#scrim").hidden = false; $("#closeSheet").focus();
+}
+function closeSheet() { $("#sheet").hidden = $("#scrim").hidden = true; }
+
+// ---- 図鑑 ----
+let ZK = null, ZKQ = "", ZKHIT = null;
+function zkRow(id) {
+  const n = N[id], sp = n.kind === "species";
+  return sp
+    ? `<li class="sp${id === ZKHIT ? " hit" : ""}" data-sp="${id}"><button data-id="${id}"><span class="ja">${esc(n.ja)}</span><span class="side">${n.verify ? `<span class="badge-v">要確認</span>` : ""}</span><span class="sci">${esc(n.sci)}</span></button></li>`
+    : `<li class="cl"><button data-zk="${id}"><span class="ja">${esc(n.ja)}</span><span class="side"><span class="rank">${esc(n.rank)}</span>${n.count}</span><span class="sci">${esc(n.sci)}</span></button></li>`;
+}
+function renderZukan() {
+  const box = $("#zk"); if (!box || !D) return;
+  if (ZKQ) {  // 検索中は一致したものを平らに並べる
+    const q = norm(ZKQ), hits = Object.values(N).filter(x => [x.ja, x.sci, ...(x.aliases || []), ...(x.groups || [])].some(t => norm(t).includes(q)));
+    hits.sort((a, b) => (a.kind === "species") - (b.kind === "species") || norm(a.ja).indexOf(q) - norm(b.ja).indexOf(q));
+    box.innerHTML = hits.length ? `<div class="zk-sec">${hits.length} 件</div><ul class="zk-list">${hits.slice(0, 80).map(x => zkRow(x.id).replace("</button>", `<span class="where">${esc(path(x.parent || x.id).slice(-3, x.parent ? undefined : -1).map(y => N[y].ja).join(" › "))}</span></button>`)).join("")}</ul>` : `<p class="zk-sec">見つかりませんでした。</p>`;
+    return;
+  }
+  const id = ZK || D.root, n = N[id];
+  const kids = [...n.kids].sort((a, b) => (N[a].kind === "species") - (N[b].kind === "species"));
+  const cl = kids.filter(k => N[k].kind !== "species"), sp = kids.filter(k => N[k].kind === "species");
+  box.innerHTML = `<nav class="zk-crumb" aria-label="系統の道筋">${path(id).slice(0, -1).map(x => `<button data-zk="${x}">${esc(N[x].ja)}</button><span>›</span>`).join("")}</nav>
+    <div class="zk-head"><h2>${esc(n.ja)}<span class="sci">${esc(n.sci)}</span></h2>
+      <div class="meta"><span class="rank">${esc(n.rank)}</span>${n.polytomy ? `<span class="poly">多分岐</span>` : ""}${n.verify ? `<span class="badge-v">要確認</span>` : ""}<span>収録 ${n.count} 種</span></div>
+      <p>${esc(n.desc)}</p>${n.polytomy ? `<div class="note poly-n"><b>多分岐の理由：</b>${esc(n.polytomy)}</div>` : ""}</div>
+    ${cl.length ? `<div class="zk-sec">下位のグループ</div><ul class="zk-list">${cl.map(zkRow).join("")}</ul>` : ""}
+    ${sp.length ? `<div class="zk-sec">種</div><ul class="zk-list">${sp.map(zkRow).join("")}</ul>` : ""}`;
+}
+function zukanGo(id) { ZK = id; ZKHIT = null; ZKQ = ""; $("#zkq").value = ""; renderZukan(); $("#zk").scrollIntoView({ block: "start" }); scrollTo({ top: 0 }); }
+function revealInZukan(id) {
+  setView("zukan");
+  ZK = N[id].parent; ZKQ = ""; ZKHIT = id; $("#zkq").value = ""; renderZukan();
+  document.querySelector(`#zk li[data-sp="${id}"]`)?.scrollIntoView({ block: "center" });
+}
+
+// ---- 説明 ----
+function aboutHTML() {
+  const m = D.meta, nv = SP.filter(s => s.verify).length, np = SP.filter(s => s.jaStatus === "provisional").length;
+  return `  <section><h2>系統の考え方</h2><p>${esc(m.taxonomy.phylogenyNotes)}</p>
+    <p>単系統でない次のまとまりは節目に使いません：${esc(m.taxonomy.nonMonophyleticGroupsExcluded.join("、"))}。</p></section>
+  <section><h2>出題の選び方</h2><p>まず「脊索・節足・軟体・環形・刺胞・棘皮・扁形・線形・その他の門」の9つの枠から等確率で1つ選びます。次に枠の中で門を選び（収録種数の平方根で重みづけ）、その門から1種を選びます。種の少ない門はまとめて1枠なので、出題の約1割です。</p></section>
+  <section><h2>データ</h2><dl>
+    <dt>データ版</dt><dd>${esc(m.datasetVersion)}（スキーマ v${m.schemaVersion}）</dd>
+    <dt>基準日</dt><dd>${esc(m.referenceDate)}</dd>
+    <dt>収録</dt><dd>${D.clades.filter(c => c.rank === "門").length} 門・${D.clades.length} 節目・${SP.length} 種</dd>
+    <dt>要確認</dt><dd>${nv} 種（うち和名なし・学名の音写 ${np} 種）</dd>
+    <dt>骨格</dt><dd>${esc(m.taxonomy.backbone)}</dd>
+    <dt>命名</dt><dd>${esc(m.taxonomy.nomenclature)}</dd>
+    <dt>和名の典拠</dt><dd>${esc(m.japaneseNameSources.join("／"))}</dd>
+    <dt>状態</dt><dd>${esc(m.status)}</dd>
+    <dt>ライセンス</dt><dd>${esc(m.licenseNotes)}</dd></dl></section>`;
+}
+
+
+// ---- 遊び方（例題の自動再生）----
+const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "monshirocho", "kabutomushi"] };
+let demoI = 0, demoTimer = null;
+function howtoHTML() {
+  return `<section><h2>ルール</h2><ul>
+    <li>動物の名前を入れて、候補から選びます。ひらがな・カタカナ・学名・別名のどれでも探せます。</li>
+    <li>推測するたびに、その動物と正解の「最も近い共通祖先」がわかり、系統樹に枝が加わります。緑の点が今わかっている所で、点線の先の「？」が正解です。</li>
+    <li>推測は最大 ${MAX} 回です。${HINT1} 回目のあとにヒント1（残りの候補の数）、${HINT2} 回目のあとにヒント2（正解に一歩近い節目）が使えます。ヒントを使っても回数は減りません。「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
+    <li>節目の名前をタップすると、和名・学名・階級・説明が出ます。<span class="poly">多分岐</span>は系統関係が議論中で、あえて分岐の順を決めていない節目です。</li></ul></section>`;
+}
+function demoShow(i, typing) {
+  const t = DEMO.target, gs = DEMO.guesses.filter(g => N[g]), n = gs.length;
+  demoI = Math.max(0, Math.min(i, n));
+  const done = gs.slice(0, demoI), last = done[done.length - 1];
+  $("#demoStep").textContent = demoI ? `${demoI} 回目` : "スタート";
+  const before = deepestOf(t, done.slice(0, -1)), now = deepestOf(t, done);
+  let cap;
+  if (!demoI) cap = `正解は伏せられています（この例では ${N[t].ja}）。まず思いついた動物を入れてみます。`;
+  else if (last === t) cap = `「${N[t].ja}」で正解。${demoI} 回でたどり着きました。`;
+  else cap = `「${N[last].ja}」と正解の共通祖先は「${N[lca(last, t)].ja}」。` + (N[now].depth > N[before].depth ? "正解はこの節目の中にあると絞れました。" : "新しい手がかりはありません。");
+  $("#demoCap").textContent = cap;
+  $("#demoBoard").innerHTML = treeHTML(t, done, last === t, now !== before ? now : null, $("#demoBoard").clientWidth);
+  $("#demoPrev").disabled = demoI === 0; $("#demoNext").disabled = demoI === n;
+  const next = gs[demoI];
+  const typed = $("#demoTyped");
+  if (typing && next) {
+    const word = N[next].ja.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+    let k = 0; typed.textContent = "";
+    const step = () => { if (view !== "howto") return; typed.textContent = word.slice(0, ++k); if (k < word.length) demoTimer = setTimeout(step, 140); else demoTimer = setTimeout(() => demoShow(demoI + 1, true), 900); };
+    demoTimer = setTimeout(step, 1400);
+  } else typed.textContent = next ? "" : "";
+}
+function demoStop() { clearTimeout(demoTimer); demoTimer = null; }
+function demoPlay() { demoStop(); demoShow(0, !matchMedia("(prefers-reduced-motion: reduce)").matches); }
+
+// ---- 画面切り替え ----
+let view = "daily";
+function setView(v) {
+  view = v;
+  document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
+  $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto";
+  demoStop(); if (v === "howto") demoPlay();
+  if (v === "daily" || v === "free") { if (mode !== v || !G) newGame(v); }
+  window.scrollTo(0, 0);
+}
+
+function wire() {
+  document.querySelectorAll("nav button").forEach(b => b.onclick = () => setView(b.dataset.v));
+  const inp = $("#guess");
+  inp.addEventListener("input", showSugg);
+  inp.addEventListener("keydown", e => {
+    const u = $("#sugg");
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { if (!cur.length) return; e.preventDefault();
+      sel = (sel + (e.key === "ArrowDown" ? 1 : -1) + cur.length) % cur.length;
+      u.querySelectorAll("li").forEach((li, i) => li.setAttribute("aria-selected", i === sel));
+      inp.setAttribute("aria-activedescendant", "o" + sel); }
+    else if (e.key === "Enter") { if (!e.isComposing && sel >= 0 && cur[sel]) { e.preventDefault(); choose(cur[sel].s.id); } }
+    else if (e.key === "Escape") u.hidden = true;
+  });
+  $("#sugg").addEventListener("mousedown", e => e.preventDefault());
+  $("#sugg").addEventListener("click", e => { const li = e.target.closest("li"); if (li) choose(li.dataset.id); });
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".inputbox")) $("#sugg").hidden = true;
+    const z = e.target.closest("[data-zk]"); if (z) { zukanGo(z.dataset.zk); return; }
+    const b = e.target.closest(".clade, .twig, .clade-mini, .svgnode, .nl, .zk [data-id]:is(button)");
+    if (b) { e.preventDefault(); openSheet(b.dataset.id); return; }
+    const hb = e.target.closest(".hintbtn"); if (hb) { useHint(+hb.dataset.hint); return; }
+    if (e.target.id === "copy") copyShare();
+    if (e.target.id === "again") { store.set("dk-free", null); newGame("free"); }
+    if (e.target.id === "goFree") setView("free");
+    if (e.target.id === "toZukan") revealInZukan(G.target);
+    if (e.target.id === "closeSheet" || e.target.id === "scrim") closeSheet();
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
+  let zkT; $("#zkq").addEventListener("input", e => { clearTimeout(zkT); zkT = setTimeout(() => { ZKQ = e.target.value.trim(); renderZukan(); }, 200); });
+  const setHdr = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
+  setHdr(); addEventListener("resize", setHdr);
+}
+async function copyShare() {
+  const t = shareText(), b = $("#copy");
+  try { await navigator.clipboard.writeText(t); b.textContent = "コピーしました"; }
+  catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
+}
+
+fetch("data.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
+  build(data); wire();
+  renderZukan();
+  $("#doc").innerHTML = aboutHTML();
+  $("#howtoDoc").innerHTML = howtoHTML();
+  $("#demoPrev").onclick = () => { demoStop(); demoShow(demoI - 1, false); };
+  $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
+  $("#demoReplay").onclick = demoPlay;
+  const h = location.hash.slice(1);
+  setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
+}).catch(err => {
+  $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
+});
+</script>
+</body>
+</html>
