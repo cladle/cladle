@@ -381,6 +381,7 @@ let G = null, mode = "daily";
 function newGame(m) {
   mode = m;
   if (m === "daily") {
+    if (due(D)) { location.reload(); return; }  // 開いたまま次の版の日になった
     const day = todayJST(), saved = store.get("dk-daily");
     const target = pick(mulberry(hash("metazoa-ja:" + day + ":" + D.meta.datasetVersion)));
     G = saved && saved.day === day && saved.target === target ? saved : { day, target, guesses: [], done: false, won: false };
@@ -930,7 +931,18 @@ async function copyShare() {
   catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
-fetch("data.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
+// 予約：data.json の meta.next = { from: "YYYY-MM-DD", file } があれば、その日からは次の版のファイルを使う
+// （前もって置いておけば、日付が変わった時点でそろって切り替わる）
+const due = data => data.meta.next && data.meta.next.from <= todayJST();
+async function loadData() {
+  let f = "data.json", data;
+  for (let i = 0; i < 5; i++) {
+    const r = await fetch(f); if (!r.ok) throw new Error(r.status);
+    data = await r.json(); if (!due(data)) break; f = data.meta.next.file;
+  }
+  return data;
+}
+loadData().then(data => {
   build(data); wire();
   renderZukan();
   $("#doc").innerHTML = aboutHTML();
