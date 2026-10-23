@@ -748,7 +748,9 @@ function showSugg() {
   }).join("");
   u.hidden = false; $("#guess").setAttribute("aria-expanded", "true");
 }
-function choose(id) { $("#guess").value = ""; $("#sugg").hidden = true; if (G.guesses.includes(id)) { flash(`${N[id].ja} はもう推測しました。`, true); return; } guess(id); $("#guess").focus(); }
+function choose(id) { $("#guess").value = ""; $("#sugg").hidden = true; if (G.guesses.includes(id)) { flash(`${N[id].ja} はもう推測しました。`, true); return; } guess(id);
+  // スマホではキーボードを閉じて、伸びた枝が隠れないようにする（PCは続けて打てるよう入力欄に戻す）
+  matchMedia("(pointer: coarse)").matches ? $("#guess").blur() : $("#guess").focus(); }
 
 // ---- 詳細シート ----
 function openSheet(id) {
