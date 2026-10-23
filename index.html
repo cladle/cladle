@@ -172,6 +172,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .doc dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: .85rem; margin: 6px 0 0 }
 .doc dt { color: var(--muted) }
 .doc dd { margin: 0; min-width: 0 }
+.doc a { color: var(--accent) }
 
 /* 詳細シート */
 .scrim { position: fixed; inset: 0; background: rgb(0 0 0 / .4); z-index: 20 }
@@ -670,20 +671,25 @@ function revealInZukan(id) {
 
 // ---- 説明 ----
 function aboutHTML() {
-  const m = D.meta, nv = SP.filter(s => s.verify).length, np = SP.filter(s => s.jaStatus === "provisional").length;
-  return `  <section><h2>系統の考え方</h2><p>${esc(m.taxonomy.phylogenyNotes)}</p>
-    <p>単系統でない次のまとまりは節目に使いません：${esc(m.taxonomy.nonMonophyleticGroupsExcluded.join("、"))}。</p></section>
-  <section><h2>出題の選び方</h2><p>まず「脊索・節足・軟体・環形・刺胞・棘皮・扁形・線形・その他の門」の9つの枠から等確率で1つ選びます。次に枠の中で門を選び（収録種数の平方根で重みづけ）、その門から1種を選びます。種の少ない門はまとめて1枠なので、出題の約1割です。</p></section>
-  <section><h2>データ</h2><dl>
-    <dt>データ版</dt><dd>${esc(m.datasetVersion)}（スキーマ v${m.schemaVersion}）</dd>
-    <dt>基準日</dt><dd>${esc(m.referenceDate)}</dd>
-    <dt>収録</dt><dd>${D.clades.filter(c => c.rank === "門").length} 門・${D.clades.length} 節目・${SP.length} 種</dd>
-    <dt>要確認</dt><dd>${nv} 種（うち和名なし・学名の音写 ${np} 種）</dd>
-    <dt>骨格</dt><dd>${esc(m.taxonomy.backbone)}</dd>
-    <dt>命名</dt><dd>${esc(m.taxonomy.nomenclature)}</dd>
-    <dt>和名の典拠</dt><dd>${esc(m.japaneseNameSources.join("／"))}</dd>
-    <dt>状態</dt><dd>${esc(m.status)}</dd>
-    <dt>ライセンス</dt><dd>${esc(m.licenseNotes)}</dd></dl></section>`;
+  const nv = SP.filter(s => s.verify).length;
+  const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+  return `  <section><h2>このゲームについて</h2><ul>
+    <li>試作版です。名前や系統に誤りがあるかもしれません。お気づきの点は ${a("https://github.com/woodgiraffeLV30/cladle/issues", "GitHub の Issues")} へお寄せください。</li>
+    <li>ゲームの形は ${a("https://metazooa.com/", "Metazooa")}（Trainwreck Labs）に着想を得ています。</li>
+    <li>ゲームとデータの作成には AI（Claude）を使っています。</li>
+    <li>収録：${D.clades.filter(c => c.rank === "門").length} 門・${SP.length} 種（うち「要確認」${nv} 種）。系統は分子系統の論文を参考にし、位置が議論中のグループは多分岐で示しています。</li></ul></section>
+  <section><h2>出典</h2><ul>
+    <li>学名：GBIF Secretariat. GBIF Backbone Taxonomy. ${a("https://doi.org/10.15468/39omei", "doi:10.15468/39omei")}（CC BY 4.0）</li>
+    <li>学名：Catalogue of Life Checklist. Catalogue of Life Foundation, Amsterdam. ${a("https://www.catalogueoflife.org/", "catalogueoflife.org")}（CC BY 4.0、2026-10-22 参照）</li>
+    <li>学名：WoRMS Editorial Board (2026). World Register of Marine Species. ${a("https://doi.org/10.14284/170", "doi:10.14284/170")}（CC BY 4.0）</li>
+    <li>魚類の標準和名・学名：本村浩之．2026．日本産魚類全種目録．これまでに記録された日本産魚類全種の現在の標準和名と学名．Online ver. 42．${a("https://www.museum.kagoshima-u.ac.jp/staff/motomura/jaf.html", "鹿児島大学総合研究博物館")}</li>
+    <li>和名の照合：${a("https://www.wikidata.org/", "Wikidata")}（CC0）、${a("https://www.inaturalist.org/", "iNaturalist")}、GBIF</li>
+    <li>系統：${a("https://tree.opentreeoflife.org/", "Open Tree of Life")}、${a("https://www.ncbi.nlm.nih.gov/taxonomy", "NCBI Taxonomy")}、各系統解析の論文</li>
+    <li>節目の和名：遠藤広光（高知大学）動物分類体系／長谷川政美『すべての生き物をめぐる100の系統樹』／藤田敏彦（2010）『動物の系統分類と進化』／町田龍一郎ほか 科研費報告（25440201）／吉澤和徳（2016）昆蟲（ニューシリーズ）19(3)。文献で確かめられない節目は学名で表記しています。</li></ul></section>
+  <section><h2>ライセンス・注記</h2><ul>
+    <li>上の情報源のデータを丸ごと収録してはいません。名前は照合した結果を一つずつ記載しています。</li>
+    <li>写真は使っていません。「調べる」のリンク先は各サイトの内容です。</li>
+    <li>文字は Google Fonts（SIL Open Font License）を使っています。</li></ul></section>`;
 }
 
 
