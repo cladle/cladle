@@ -6,7 +6,7 @@
   "referenceDate": "2026-10-22",
   "taxonomy": {
    "backbone": "NCBI Taxonomy / Open Tree of Life の構成を参考に手作業で編集",
-   "nomenclature": "学名は GBIF Backbone Taxonomy・Catalogue of Life・WoRMS で照合（2026-10-22）。日本産の魚類は本村浩之（2026）日本産魚類全種目録 Online ver. 42 に合わせた（2026-10-23）",
+   "nomenclature": "学名は GBIF Backbone Taxonomy・Catalogue of Life・WoRMS で照合（2026-10-22）。日本産の魚類は本村浩之（2026）日本産魚類全種目録 Online ver. 42 に合わせた（2026-10-23）。種の範囲（種か亜種か）は分類群ごとの世界の種リストに合わせた（2026-10-24）：哺乳類 Mammal Diversity Database 2.1、鳥類 IOC World Bird List 15.2、爬虫類 The Reptile Database 2026-06。",
    "phylogenyNotes": "主要分岐は分子系統（系統ゲノム解析）に基づく。動物の根元、ParaHoxozoa内、左右相称動物の根元、毛顎動物、二胚動物・直泳動物などの位置は議論中のため多分岐で表現。",
    "nonMonophyleticGroupsExcluded": [
     "魚類",
@@ -47,6 +47,10 @@
     "4": 0.7
    },
    "bucketWeight": "sqrt"
+  },
+  "next": {
+   "from": "2026-10-26",
+   "file": "data-0.3.3.json"
   }
  },
  "clades": [
@@ -5181,7 +5185,7 @@
    ],
    "fact": "8年周期で大発生し、線路に集まって列車を止めたことから名づけられた。",
    "verify": {
-    "ja": "キシャヤスデは亜種の和名で、種全体の和名はオビババヤスデとする資料が多い"
+    "ja": "MilliBase は亜種を分けず、キシャヤスデ（armigera）は P. laminata の異名とする。種の和名をオビババヤスデとする資料（GBIF・Wikidata・iNaturalist）もあるが、学術的な典拠は未確認"
    },
    "tier": 3,
    "groups": [
