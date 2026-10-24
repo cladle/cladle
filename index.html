@@ -107,6 +107,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .cgsvg .nl.on { fill: var(--ink) }
 .cgsvg .nl.stop { fill: var(--accent); font-size: 13px; font-weight: 700 }
 .cgsvg .svgnode { cursor: pointer }
+.cgsvg .tipdot { fill: var(--accent); stroke: var(--bg); stroke-width: 2; pointer-events: none }
 .cgsvg .tl { font-size: 14px; fill: var(--ink) }
 .cgsvg .tl .n { font-family: var(--f-mono); font-size: 10px; fill: var(--muted) }
 .cgsvg .tl.hit { fill: var(--hot); font-weight: 700 }
@@ -465,6 +466,20 @@ function guess(id) {
   }
   if (G.done) track(mode + (G.won ? "-win" : "-lose"));
   save(); render();
+  if (!G.won) cueTo(id, L);
+}
+// 推測した動物と、答えの動物との分かれ目が画面に入るように、系統樹の方へ動かす（見る場所の案内）
+// スマホはキーボードが閉じて画面の高さが戻るのを少し待つ。もう見えていれば動かさない
+function cueTo(id, L) {
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  setTimeout(() => {
+    const a = $(`#board text.tl[data-id="${id}"]`), b = $(`#board .nd[data-id="${L}"]`) || a;
+    if (!a) return;
+    const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+    const top = Math.min(ra.top, rb.top), bot = Math.max(ra.bottom, rb.bottom), vh = visualViewport?.height || innerHeight;
+    if (top >= 70 && bot <= vh - 30) return;
+    scrollBy({ top: (top + bot) / 2 - vh / 2, behavior: still ? "auto" : "smooth" });
+  }, matchMedia("(pointer: coarse)").matches ? 300 : 0);
 }
 let celebrate = false, growId = null, lastEdges = null, openGrow = false, animUntil = 0;  // 正解した直後の演出、推測した直後に伸ばす枝、前回描いた枝
 function deepest() { return deepestOf(G.target, G.guesses, G.reveal); }
@@ -659,7 +674,22 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
   treeHTML.edges = edges; treeHTML.animEnd = animEnd;
   const tip = !store.get("dk-tip") && !opt.demo ? `<p class="tip">下の名前や図の名前を押すと、その仲間の説明が見られます。</p>` : "";
   const crumb = `${tip}<div class="crumb"><span class="eyebrow">${done ? "答えの動物までの系統" : "答えの動物が入っている分類群"}</span><div>${path(known).map(x => `<button class="clade-mini${x === known ? " here" : ""}" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}</div></div>`;
-  return `<div class="cgwrap"><svg class="cgsvg${opt.dim ? " dim" : ""}${opt.win ? " win" : ""}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="系統樹">${lines}${nodes}${texts}</svg></div>${guesses.length && !done ? crumb : ""}`;
+  // 推測したときは、伸びる枝の先に小さな点を付けて、分かれ目から推測した動物まで進める（見る場所の案内）
+  let tipDot = "";
+  if (G2 && !G2.all && !opt.win && T[G2.id] && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const par = {}; for (const n of Object.values(T)) for (const c of n.ch) par[c] = n.id;
+    const chain = []; for (let id = G2.id; id; id = par[id]) chain.unshift(id);
+    const seg = []; for (let i = 1; i < chain.length; i++) { const k = chain[i - 1] + ">" + chain[i]; if (animE.has(k)) seg.push([T[chain[i - 1]], T[chain[i]], animE.get(k)]); }
+    if (seg.length) {
+      const t0 = seg[0][2], dur = seg.length * DUR, lens = seg.map(([a, c]) => Math.abs(c.y - a.y) + Math.abs(c.x - 4 - a.x)), tot = lens.reduce((x, y) => x + y, 0) || 1;
+      let acc = 0; const kp = [0, ...lens.map(l => (acc += l) / tot)].map(x => Math.min(1, x).toFixed(4)).join(";"), kt = seg.map((_, i) => (i / seg.length).toFixed(4)).concat("1").join(";");
+      const d = `M${seg[0][0].x},${seg[0][0].y} ` + seg.map(([a, c]) => `V${c.y} H${c.x - 4}`).join(" ");
+      tipDot = `<circle class="tipdot" r="4" opacity="0"><set attributeName="opacity" to="1" begin="${t0.toFixed(2)}s"/>`
+        + `<animateMotion path="${d}" begin="${t0.toFixed(2)}s" dur="${dur.toFixed(2)}s" fill="freeze" calcMode="spline" keyPoints="${kp}" keyTimes="${kt}" keySplines="${seg.map(() => ".42 0 .58 1").join(";")}"/>`
+        + `<animate attributeName="opacity" from="1" to="0" begin="${(t0 + dur).toFixed(2)}s" dur=".35s" fill="freeze"/></circle>`;
+    }
+  }
+  return `<div class="cgwrap"><svg class="cgsvg${opt.dim ? " dim" : ""}${opt.win ? " win" : ""}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="系統樹">${lines}${nodes}${texts}${tipDot}</svg></div>${guesses.length && !done ? crumb : ""}`;
 }
 // 別名（和名）・旧学名・そのほかの検索語
 function namesHTML(n) {
