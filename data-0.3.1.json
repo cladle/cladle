@@ -2516,7 +2516,7 @@
    "aliases": [
     "メダカ"
    ],
-   "fact": "日本のメダカは2種に分けられ、本種は本州の太平洋側以南に分布する。",
+   "fact": "日本のメダカは2種に分けられ、本種は本州の日本海側北部（キタノメダカの分布域）を除く本州から琉球列島にかけて分布する。",
    "tier": 1,
    "gbif": 2368377
   },
@@ -3942,7 +3942,7 @@
    "sci": "Corallium japonicum",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "宝石サンゴの代表。深い海で年に数ミリしか太らない。",
+   "fact": "宝石サンゴの代表。深い海にすみ、成長が非常に遅い。",
    "tier": 2,
    "groups": [
     "宝石サンゴ",
@@ -4777,7 +4777,7 @@
    "sci": "Falco peregrinus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "急降下では時速300 km近くに達する。タカに似るが、オウムやスズメに近い。",
+   "fact": "急降下では時速300 kmを超えるともいわれる。タカに似るが、オウムやスズメに近い。",
    "tier": 1,
    "gbif": 2481047
   },
@@ -5322,7 +5322,7 @@
    "sci": "Architeuthis dux",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "全長10 mを超える深海のイカ。2012年に小笠原沖で初めて生きた姿が撮影された。",
+   "fact": "全長10 mを超える深海のイカ。2004年に小笠原沖で初めて野生の生きた姿が撮影され、2012年には深海を泳ぐ姿が動画に収められた。",
    "tier": 1,
    "groups": [
     "イカ"
@@ -6197,7 +6197,7 @@
    "sci": "Oryzias sakaizumii",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "日本海側に分布するメダカ。2012年にミナミメダカと別種とされた。",
+   "fact": "本州の日本海側（青森県から兵庫県）に分布するメダカ。ミナミメダカとは別種として記載された。",
    "tier": 3,
    "gbif": 7193255
   },
@@ -6385,7 +6385,7 @@
    "sci": "Gorilla gorilla",
    "jaStatus": "common",
    "aliases": [],
-   "fact": "最大の霊長類。",
+   "fact": "最大級の霊長類。",
    "tier": 1,
    "gbif": 2436441
   },
@@ -6615,7 +6615,7 @@
    "sci": "Panthera leo",
    "jaStatus": "common",
    "aliases": [],
-   "fact": "群れで暮らす唯一のネコ科動物。",
+   "fact": "ネコ科では珍しく、群れで暮らす。",
    "tier": 1,
    "gbif": 5219404
   },
@@ -8047,7 +8047,7 @@
    "sci": "Parahucho perryi",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "日本最大の淡水魚。北海道にすむ。",
+   "fact": "日本最大級の淡水魚。北海道にすむ。",
    "tier": 2
   },
   {
@@ -8609,7 +8609,7 @@
    "sci": "Galloisiana nipponensis",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "翅のない原始的な昆虫。1915年に日本で発見され、ガロアムシ目のもとになった。",
+   "fact": "翅のない原始的な昆虫。寒い山地の石の下などにすむ。1924年に日光の中禅寺湖付近の標本から記載された。",
    "tier": 3
   },
   {
@@ -8881,7 +8881,7 @@
    "sci": "Tetranchyroderma dendricum",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "海岸の砂粒のすき間にすむ腹毛動物。1937年に日本から記載された。",
+   "fact": "海岸の砂粒のすき間にすむ腹毛動物。1937年に広島付近から記載された。",
    "tier": 4,
    "groups": [
     "イタチムシ"
