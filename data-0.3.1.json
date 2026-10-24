@@ -3009,15 +3009,16 @@
   {
    "id": "celegans",
    "parent": "rhabditida",
-   "ja": "シー・エレガンス",
+   "ja": "C. エレガンス",
    "sci": "Caenorhabditis elegans",
    "jaStatus": "common",
    "aliases": [
+    "シー・エレガンス",
     "エレガンス"
    ],
    "fact": "全細胞の系譜が分かっているモデル生物。",
    "verify": {
-    "ja": "標準和名ではなく通称"
+    "ja": "標準和名なし。日本語の文献で使われる表記「C. エレガンス」を表示名にする（2026-10-24 shun決定）"
    },
    "tier": 2,
    "groups": [
