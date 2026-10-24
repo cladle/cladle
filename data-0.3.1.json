@@ -3009,15 +3009,16 @@
   {
    "id": "celegans",
    "parent": "rhabditida",
-   "ja": "シー・エレガンス",
+   "ja": "C. エレガンス",
    "sci": "Caenorhabditis elegans",
    "jaStatus": "common",
    "aliases": [
+    "シー・エレガンス",
     "エレガンス"
    ],
    "fact": "全細胞の系譜が分かっているモデル生物。",
    "verify": {
-    "ja": "標準和名ではなく通称"
+    "ja": "標準和名はない。日本語の文献で使われる表記「C. エレガンス」で示す"
    },
    "tier": 2,
    "groups": [
@@ -3514,11 +3515,12 @@
    "ja": "ナミウズムシ",
    "sci": "Dugesia japonica",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "プラナリア"
+   ],
    "fact": "体を切っても各断片から全身が再生する。",
    "tier": 2,
    "groups": [
-    "プラナリア",
     "ウズムシ"
    ],
    "gbif": 5892108
@@ -3530,7 +3532,8 @@
    "sci": "Dibothriocephalus nihonkaiensis",
    "jaStatus": "standard",
    "aliases": [
-    "ニホンカイレットウジョウチュウ"
+    "ニホンカイレットウジョウチュウ",
+    "サナダムシ"
    ],
    "fact": "サクラマスなどの生食で感染する。数mに達するサナダムシ。",
    "verify": {
@@ -3538,7 +3541,6 @@
    },
    "tier": 3,
    "groups": [
-    "サナダムシ",
     "条虫"
    ],
    "gbif": 9419736
@@ -7442,7 +7444,8 @@
    "sci": "Taenia saginata",
    "jaStatus": "standard",
    "aliases": [
-    "ムコウジョウチュウ"
+    "ムコウジョウチュウ",
+    "サナダムシ"
    ],
    "fact": "牛肉の生食で感染するサナダムシ。",
    "tier": 3,
@@ -7455,7 +7458,8 @@
    "sci": "Taenia solium",
    "jaStatus": "standard",
    "aliases": [
-    "ユウコウジョウチュウ"
+    "ユウコウジョウチュウ",
+    "サナダムシ"
    ],
    "fact": "豚肉の生食で感染する。頭部に鉤をもつ。",
    "tier": 3,
@@ -8468,13 +8472,15 @@
   {
    "id": "lobster",
    "parent": "astacidea",
-   "ja": "アメリカンロブスター",
+   "ja": "アメリカウミザリガニ",
    "sci": "Homarus americanus",
-   "jaStatus": "common",
+   "jaStatus": "standard",
    "aliases": [
+    "アメリカンロブスター",
+    "オマールエビ",
     "ロブスター"
    ],
-   "fact": "北米大西洋岸の大型のエビ。",
+   "fact": "北米大西洋岸の大型のエビ。アメリカンロブスターとも呼ばれ、オマールエビの名で売られる。",
    "tier": 2
   },
   {
