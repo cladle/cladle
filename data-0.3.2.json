@@ -5103,12 +5103,12 @@
    "id": "shijuukara",
    "parent": "passeriformes",
    "ja": "シジュウカラ",
-   "sci": "Parus minor",
+   "sci": "Parus cinereus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "鳴き声を組み合わせて「文」のように使うことが研究で示された。",
+   "fact": "鳴き声を組み合わせて「文」のように使うことが研究で示された。日本のものを別種 Parus minor とする扱いもあったが、IOC世界鳥類リスト（15.2版）と日本鳥類目録改訂第8版は P. cinereus の亜種とする。",
    "tier": 2,
-   "gbif": 5844847
+   "gbif": 6101070
   },
   {
    "id": "ashidakagumo",
