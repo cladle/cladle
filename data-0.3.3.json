@@ -8768,13 +8768,15 @@
   {
    "id": "lobster",
    "parent": "astacidea",
-   "ja": "アメリカンロブスター",
+   "ja": "アメリカウミザリガニ",
    "sci": "Homarus americanus",
-   "jaStatus": "common",
+   "jaStatus": "standard",
    "aliases": [
+    "アメリカンロブスター",
+    "オマールエビ",
     "ロブスター"
    ],
-   "fact": "北米大西洋岸の大型のエビ。",
+   "fact": "北米大西洋岸の大型のエビ。アメリカンロブスターとも呼ばれ、オマールエビの名で売られる。",
    "tier": 2
   },
   {
