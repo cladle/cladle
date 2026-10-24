@@ -363,7 +363,7 @@ function build(data) {
   // 枠の選び方：既定は等確率。"sqrt" なら枠内の重みの合計の平方根に比例させる
   BW = BUCKETS.map(B => sel.bucketWeight === "sqrt" ? Math.sqrt(B.reduce((a, x) => a + (x.st ?? x.ids.length), 0)) : 1);
 }
-function makeKeys(s) { s.keys = [[s.ja, "ja"], [s.sci, "sci"], ...(s.sciSynonyms || []).map(a => [a, "syn"]), ...s.aliases.map(a => [a, "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
+function makeKeys(s) { s.keys = [[s.ja, "ja"], [s.sci, "sci"], ...(s.sciSynonyms || []).map(a => [a, "syn"]), ...s.aliases.map(a => [a, (s.subspeciesAliases || []).includes(a) ? "subsp" : "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
 function path(id) { const a = []; while (id) { a.unshift(id); id = N[id].parent; } return a; }
 function lca(a, b) { const pa = new Set(path(a)); let x = b; while (!pa.has(x)) x = N[x].parent; return x; }
 
@@ -796,7 +796,7 @@ function suggest(q) {
     let best = null;
     for (const k of s.keys) {
       const i = k.n.indexOf(n); if (i < 0) continue;
-      const score = (i === 0 ? 0 : 10) + (k.k === "ja" ? 0 : k.k === "alias" ? 1 : 2) + k.n.length / 100;
+      const score = (i === 0 ? 0 : 10) + (k.k === "ja" ? 0 : k.k === "alias" || k.k === "subsp" ? 1 : 2) + k.n.length / 100;
       if (!best || score < best.score) best = { s, k, score };
     }
     if (best) out.push(best);
@@ -809,7 +809,9 @@ function showSugg() {
   u.innerHTML = cur.map((r, i) => {
     const used = G.guesses.includes(r.s.id);
     const via = r.k.k === "alias" ? `<span class="via">（${esc(r.k.t)}）</span>` : r.k.k === "syn" ? `<span class="via">（旧学名 <i>${esc(r.k.t)}</i>）</span>` : "";
-    return `<li role="option" id="o${i}" data-id="${r.s.id}" aria-selected="${i === sel}" class="${used ? "used" : ""}"><span>${esc(r.s.ja)}</span>${via}<span class="sci">${esc(r.s.sci)}</span>${used ? `<span class="via">推測済み</span>` : ""}</li>`;
+    // 亜種名で当たったときは「亜種名（種名の亜種）」と出し、選ぶと種の推測になる
+    const name = r.k.k === "subsp" ? `<span>${esc(r.k.t)}</span><span class="via">（${esc(r.s.ja)}の亜種）</span>` : `<span>${esc(r.s.ja)}</span>${via}`;
+    return `<li role="option" id="o${i}" data-id="${r.s.id}" aria-selected="${i === sel}" class="${used ? "used" : ""}">${name}<span class="sci">${esc(r.s.sci)}</span>${used ? `<span class="via">推測済み</span>` : ""}</li>`;
   }).join("");
   u.hidden = false; $("#guess").setAttribute("aria-expanded", "true");
 }
