@@ -86,6 +86,10 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .stats .bar i.me { background: var(--accent); color: var(--bg) }
 .stats .cd { margin-top: 12px; text-align: center; font-size: .9rem }
 .stats .cd b { font-family: var(--f-mono); font-size: 1.1rem }
+.actions { display: flex; justify-content: flex-end; gap: 8px; margin: 10px 0 0 }
+.actions:empty { display: none }
+.actions .btn { min-height: 44px; font-size: .85rem }
+.actions .btn.armed { border-color: var(--hot); color: var(--hot) }
 .hints { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; align-items: center }
 .hints .hint { margin: 0; flex-basis: 100%; font-size: .9rem; padding: 8px 12px; border-radius: 8px; background: var(--warn-soft, var(--accent-soft)) }
 .cgsvg.dim .ln:not(.on):not(.goal), .cgsvg.dim .tl:not(.hit), .cgsvg.dim .nd:not(.on), .cgsvg.dim .nl:not(.on) { opacity: .3 }
@@ -110,6 +114,8 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .cgsvg .tipdot { fill: var(--accent); stroke: var(--bg); stroke-width: 2; pointer-events: none }
 .cgsvg .tl { font-size: 14px; fill: var(--ink) }
 .cgsvg .tl .n { font-family: var(--f-mono); font-size: 10px; fill: var(--muted) }
+.cgsvg .tl.last { font-weight: 700 }
+.cgsvg .tl.last .n { fill: var(--ink) }
 .cgsvg .tl.hit { fill: var(--hot); font-weight: 700 }
 .cgsvg .tq { font-family: var(--f-display); font-size: 18px; fill: var(--hot) }
 .cgsvg :focus-visible { outline: 2px solid var(--accent) }
@@ -275,6 +281,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
     </div>
     <div id="flash" class="flash" hidden></div>
     <div id="hints" class="hints" hidden></div>
+    <div id="actions" class="actions"></div>
     <div id="board"></div>
     <div id="result"></div>
   </main>
@@ -390,7 +397,7 @@ function newGame(m) {
     G = saved && saved.day === day && saved.target === target ? saved : { day, target, guesses: [], done: false, won: false };
   } else {
     const saved = store.get("dk-free");
-    G = saved && !saved.done && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
+    G = saved && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
   }
   G.guesses = G.guesses.filter(id => N[id]); if (G.reveal && !N[G.reveal]) delete G.reveal;  // データから外れた種・節目
   if (!G.done && G.guesses.length >= MAX) G.done = true;  // 上限を下げる前の記録
@@ -444,7 +451,7 @@ setInterval(() => {
 }, 1000);
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
-const TRACK = { "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+const TRACK = { "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
 function track(ev) { try { window.goatcounter?.count?.({ path: ev, title: TRACK[ev] || ev, event: true }); } catch (e) {} }
 if (new URLSearchParams(location.search).get("from") === "share") {
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
@@ -510,6 +517,26 @@ function maskFact(id) {
   for (const w of [s.ja, ...(s.aliases || []), s.sci, s.sci.split(" ")[0], ...(s.sciSynonyms || []).flatMap(x => [x, x.split(" ")[0]])].filter(w => w && w.length > 1).sort((a, b) => b.length - a.length)) t = t.split(w).join("〇〇");
   return t;
 }
+// 降参・別の問題（押し間違いで消えないよう、2回押して決める）
+function actionsHTML() {
+  if (G.done) return mode === "free" ? `<button class="btn" data-act="next">次の問題</button>` : "";
+  return (mode === "free" ? `<button class="btn ghost" data-act="reset">別の問題にする</button>` : "")
+    + (G.guesses.length ? `<button class="btn ghost" data-act="giveup">降参する</button>` : "");
+}
+const ACT = { reset: ["別の問題にする", "もう一度押すと別の問題へ"], giveup: ["降参する", "もう一度押すと降参"] };
+function act(b) {
+  const k = b.dataset.act;
+  if (k === "next") { store.set("dk-free", null); newGame("free"); return; }
+  if (!b.classList.contains("armed")) {
+    b.classList.add("armed"); b.textContent = ACT[k][1];
+    setTimeout(() => { if (b.isConnected) { b.classList.remove("armed"); b.textContent = ACT[k][0]; } }, 3000);
+    return;
+  }
+  if (k === "reset") { store.set("dk-free", null); newGame("free"); return; }
+  if (G.done) return;
+  G.done = true; G.won = false; G.gaveUp = true; track(mode + "-giveup"); G.fresh = null; $("#flash").hidden = true;
+  save(); render();
+}
 function hintsHTML() {
   if (G.done) return "";
   const n = G.guesses.length, out = [];
@@ -532,6 +559,7 @@ function render() {
   lastEdges = treeHTML.edges; growId = null; openGrow = false; animUntil = Date.now() + treeHTML.animEnd * 1000;
   $("#board").innerHTML = h;
   $("#hints").innerHTML = hintsHTML(); $("#hints").hidden = !$("#hints").innerHTML;
+  $("#actions").innerHTML = actionsHTML();
   $("#result").innerHTML = G.done ? resultHTML() : "";
   if (celebrate) {
     celebrate = false;
@@ -640,7 +668,8 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     } else if (!n.ch.length) {
       const hit = n.id === target;
       const fa = lateStyle(n.id);
-      nodes += `<text class="svgnode tl${hit ? " hit" : ""}${fa && !(opt.win && hit) ? " fade" : ""}"${fa} data-id="${n.id}" role="button" tabindex="0" x="${n.x}" y="${n.y + 5}">${num[n.id] ? `<tspan class="n">${num[n.id]} </tspan>` : ""}${esc(fit(n.id))}</text>`;
+      const last = !done && num[n.id] === guesses.length;  // 直前に推測した動物は太字で示す
+      nodes += `<text class="svgnode tl${hit ? " hit" : ""}${last ? " last" : ""}${fa && !(opt.win && hit) ? " fade" : ""}"${fa} data-id="${n.id}" role="button" tabindex="0" x="${n.x}" y="${n.y + 5}">${num[n.id] ? `<tspan class="n">${num[n.id]} </tspan>` : ""}${esc(fit(n.id))}</text>`;
     } else {
       const st = n.id === known && !done, cls = ["svgnode", "nd", on(n.id) ? "on" : "", st ? "stop" : "", n.id === fresh ? "new" : ""].join(" ");
       const la = lateStyle(n.id);
@@ -704,7 +733,7 @@ function cladeBtn(n) {
 }
 function resultHTML() {
   const t = N[G.target];
-  const head = G.won ? `正解！ ${esc(t.ja)}` : `答えは ${esc(t.ja)} でした`;
+  const head = G.won ? `正解！ ${esc(t.ja)}` : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
     <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}</div>
@@ -950,6 +979,7 @@ function wire() {
     const b = e.target.closest(".clade, .twig, .clade-mini, .svgnode, .nl, .zk [data-id]:is(button)");
     if (b) { e.preventDefault(); openSheet(b.dataset.id); return; }
     const hb = e.target.closest(".hintbtn"); if (hb) { useHint(+hb.dataset.hint); return; }
+    const ab = e.target.closest("[data-act]"); if (ab) { act(ab); return; }
     if (e.target.id === "copy") copyShare();
     if (e.target.id === "xpost") track(mode + "-share-x");
     if (e.target.id === "again") { store.set("dk-free", null); newGame("free"); }
