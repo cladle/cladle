@@ -53,6 +53,10 @@ h1 .yomi { font-family: var(--f-body); font-size: .7rem; letter-spacing: .08em; 
 nav { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px }
 nav button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 5px 10px; font-size: .8rem; white-space: nowrap; cursor: pointer }
 nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+.level { margin-left: auto; align-self: center; border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 4px 10px; font-size: .78rem; cursor: pointer; white-space: nowrap; min-height: 32px }
+.level[aria-pressed="true"] { background: var(--hot); border-color: var(--hot); color: var(--surface); font-weight: 700 }
+.level-note { font-size: .8rem; color: var(--muted); margin: 8px 0 0 }
+.level-note b { color: var(--hot) }
 
 .status { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 12px 0 8px; font-size: .85rem; color: var(--muted) }
 .status b { font-family: var(--f-mono); color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums }
@@ -263,7 +267,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 
 <div class="wrap">
   <header>
-    <div class="brand"><h1>Cladle<span class="yomi">クレードル</span></h1></div>
+    <div class="brand"><h1>Cladle<span class="yomi">クレードル</span></h1><button class="level" id="level" aria-pressed="false" title="ゲキムズモード（1万種以上から出題）">ゲキムズ（試作）</button></div>
     <nav role="tablist">
       <button role="tab" id="tab-daily" data-v="daily" aria-selected="true">今日の動物</button>
       <button role="tab" id="tab-free" data-v="free" aria-selected="false">フリー</button>
@@ -274,6 +278,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
   </header>
 
   <main id="game">
+    <p class="level-note" id="levelNote" hidden></p>
     <div class="status"><span id="modeLabel">今日の動物</span><span class="meter" id="meter"></span><span>残り <b id="left">15</b></span></div>
     <div class="inputbox">
       <input id="guess" name="dk-animal" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="動物を入力（ひらがな・カタカナ・学名）" aria-label="動物を入力" role="combobox" aria-expanded="false" aria-controls="sugg">
@@ -324,6 +329,11 @@ const store = {
 };
 
 let D, N = {}, SP = [], BUCKETS = [], BW = [], MAX = 15;
+// ゲキムズ：別のデータ（data-hard.json）に切り替える。成績・途中の問題はモードごとに別に保存する
+let LEVEL = "normal";
+const DATA = {};
+const KEY = k => LEVEL === "hard" ? k.replace("dk-", "dk-hard-") : k;
+const HARD = () => LEVEL === "hard";
 const HINT1 = 10, HINT2 = 13;  // この回数の推測のあとにヒントが押せる
 
 // ---- 文字の正規化（カタカナ→ひらがな、全角半角、空白・中黒を除去）----
@@ -341,16 +351,19 @@ function build(data) {
   const walk = (id, d) => { const n = N[id]; n.depth = d; n.count = n.kind === "species" ? 1 : 0;
     for (const k of n.kids) { walk(k, d + 1); n.count += N[k].count; } };
   const root = data.clades.find(c => !c.parent).id; walk(root, 0); D.root = root;
+  // 出題：まず枠（主要な門ごと＋その他の門）を等確率で選び、枠の中は門ごとに重みをつけて選ぶ
+  // ゲキムズは枠を綱などの大きなまとまり、枠の中を目（bucketRank）で分ける
+  const sel = data.meta.selection || {}, named = sel.buckets || [], rank = sel.bucketRank || "門";
   for (const s of SP) {
-    s.phylum = path(s.id).find(id => N[id].rank === "門");
+    const p = path(s.id);
+    s.phylum = p.find(id => N[id].rank === rank);
+    s.bucket = named.find(b => p.includes(b)) || "_other";
     makeKeys(s);
   }
-  // 出題：まず枠（主要な門ごと＋その他の門）を等確率で選び、枠の中は門ごとに重みをつけて選ぶ
-  const sel = data.meta.selection || {}, named = sel.buckets || [];
   const byB = {};
   for (const s of SP) {
     if (s.answerable === false) continue;
-    const b = named.includes(s.phylum) ? s.phylum : "_other";
+    const b = s.bucket;
     ((byB[b] ||= {})[s.phylum] ||= []).push(s.id);
   }
   // 門の中では、知名度の低い種（tier が大きい種）を段階的に出にくくする
@@ -392,11 +405,11 @@ function newGame(m) {
   mode = m; $("#flash").hidden = true;  // 前のモードの「新しい手がかりはありません」などを残さない
   if (m === "daily") {
     if (due(D)) { location.reload(); return; }  // 開いたまま次の版の日になった
-    const day = todayJST(), saved = store.get("dk-daily");
+    const day = todayJST(), saved = store.get(KEY("dk-daily"));
     const target = pick(mulberry(hash("metazoa-ja:" + day + ":" + D.meta.datasetVersion)));
     G = saved && saved.day === day && saved.target === target ? saved : { day, target, guesses: [], done: false, won: false };
   } else {
-    const saved = store.get("dk-free");
+    const saved = store.get(KEY("dk-free"));
     G = saved && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
   }
   G.guesses = G.guesses.filter(id => N[id]); if (G.reveal && !N[G.reveal]) delete G.reveal;  // データから外れた種・節目
@@ -407,18 +420,18 @@ function newGame(m) {
   render();
 }
 function save() {
-  store.set(mode === "daily" ? "dk-daily" : "dk-free", { ...G, fresh: null });
+  store.set(KEY(mode === "daily" ? "dk-daily" : "dk-free"), { ...G, fresh: null });
   if (mode !== "daily") return;
-  if (G.done) STATS.days[G.day] = { w: G.won ? 1 : 0, n: G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0) };
+  if (G.done) STATS.days[G.day] = { w: G.won ? 1 : 0, n: G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.won && G.exact === false ? { g: 1 } : {}) };
   saveStats();
 }
 // ---- 成績（今日の動物だけ数える）----
 // このブラウザに保存する（別の端末とは共有されない）
 let STATS = { days: {} };
-mergeStats(store.get("dk-stats"));
+mergeStats(store.get(KEY("dk-stats")));
 function mergeStats(x) { if (x && x.days) for (const [d, r] of Object.entries(x.days)) if (!STATS.days[d]) STATS.days[d] = r; }
 function saveStats() {
-  store.set("dk-stats", STATS);
+  store.set(KEY("dk-stats"), STATS);
 }
 function prevDay(d) { return new Date(Date.parse(d) - 864e5).toISOString().slice(0, 10); }
 function statsSummary() {
@@ -452,7 +465,7 @@ setInterval(() => {
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
 const TRACK = { "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
-function track(ev) { try { window.goatcounter?.count?.({ path: ev, title: TRACK[ev] || ev, event: true }); } catch (e) {} }
+function track(ev) { const h = typeof HARD === "function" && HARD() && ev !== "share-visit"; try { window.goatcounter?.count?.({ path: (h ? "hard-" : "") + ev, title: (h ? "ゲキムズ " : "") + (TRACK[ev] || ev), event: true }); } catch (e) {} }
 if (new URLSearchParams(location.search).get("from") === "share") {
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
   let n = 0; const t = setInterval(() => { if (window.goatcounter?.count || ++n > 20) { clearInterval(t); track("share-visit"); } }, 500);
@@ -464,7 +477,7 @@ function guess(id) {
   if (G.guesses.length === 1) track(mode + "-start");
   const L = lca(id, G.target);
   growId = id;
-  if (id === G.target) { G.done = G.won = true; celebrate = true; $("#flash").hidden = true; }
+  if (id === G.target || sameClear(id, G.target)) { G.done = G.won = true; G.exact = id === G.target; celebrate = true; $("#flash").hidden = true; }
   else {
     const gained = N[L].depth > N[before].depth;
     flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
@@ -490,6 +503,9 @@ function cueTo(id, L) {
 }
 let celebrate = false, growId = null, lastEdges = null, openGrow = false, animUntil = 0;  // 正解した直後の演出、推測した直後に伸ばす枝、前回描いた枝
 function deepest() { return deepestOf(G.target, G.guesses, G.reveal); }
+// ゲキムズ：答えと同じ属の種を入れたらクリア（種まで同じならぴったり正解）
+function sameClear(a, b) { const r = D.meta.selection?.clearRank; return !!r && N[a].parent === N[b].parent && N[N[b].parent].rank === r; }
+const exactWin = () => G.won && G.exact !== false;
 // ---- ヒント（推測回数は減らない）----
 // ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
 // ヒント2: 正解への経路で、今わかっている節目より1段深い節目を教える
@@ -526,13 +542,13 @@ function actionsHTML() {
 const ACT = { reset: ["別の問題にする", "もう一度押すと別の問題へ"], giveup: ["降参する", "もう一度押すと降参"] };
 function act(b) {
   const k = b.dataset.act;
-  if (k === "next") { store.set("dk-free", null); newGame("free"); return; }
+  if (k === "next") { store.set(KEY("dk-free"), null); newGame("free"); return; }
   if (!b.classList.contains("armed")) {
     b.classList.add("armed"); b.textContent = ACT[k][1];
     setTimeout(() => { if (b.isConnected) { b.classList.remove("armed"); b.textContent = ACT[k][0]; } }, 3000);
     return;
   }
-  if (k === "reset") { store.set("dk-free", null); newGame("free"); return; }
+  if (k === "reset") { store.set(KEY("dk-free"), null); newGame("free"); return; }
   if (G.done) return;
   G.done = true; G.won = false; G.gaveUp = true; track(mode + "-giveup"); G.fresh = null; $("#flash").hidden = true;
   save(); render();
@@ -549,7 +565,7 @@ function hintsHTML() {
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
 
 function render() {
-  $("#modeLabel").textContent = mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : "フリープレイ";
+  $("#modeLabel").textContent = (HARD() ? "ゲキムズ " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : "フリープレイ");
   $("#left").textContent = MAX - G.guesses.length;
   $("#meter").innerHTML = Array.from({ length: MAX }, (_, i) => `<i class="${i < G.guesses.length ? "used" : ""}"></i>`).join("");
   $("#guess").disabled = G.done;
@@ -565,7 +581,7 @@ function render() {
     celebrate = false;
     const r = $("#result .result"), still = matchMedia("(prefers-reduced-motion: reduce)").matches, wait = still ? 0 : treeHTML.animEnd + .3;
     if (r) { r.classList.add("celebrate"); r.style.animationDelay = wait + "s"; }
-    const msg = `正解！ ${N[G.target].ja} でした。`;
+    const msg = exactWin() ? `正解！ ${N[G.target].ja} でした。` : `属まで正解！ 答えは ${N[G.target].ja} でした。`;
     if (still) flash(msg); else setTimeout(() => { if (G.won) flash(msg); }, (wait - .3) * 1000);
     setTimeout(() => r?.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" }), wait * 1000 + 500);
   }
@@ -733,15 +749,15 @@ function cladeBtn(n) {
 }
 function resultHTML() {
   const t = N[G.target];
-  const head = G.won ? `正解！ ${esc(t.ja)}` : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
+  const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)}`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}</div>
+    <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${exactWin() ? "🎯 種までぴったり" : `✅ ${esc(N[G.guesses[G.guesses.length - 1]].ja)} で属が一致`}</span>` : ""}</div>
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     ${namesHTML(t)}
-    <p class="fact">${esc(t.fact)}</p>
+    ${t.fact ? `<p class="fact">${esc(t.fact)}</p>` : ""}
     <div class="lookup">調べる：${lookupLinks(t)}</div>
     <div class="fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
     ${kinHTML(t)}
@@ -777,14 +793,15 @@ function shareText() {
   const td = N[G.target].depth;
   const marks = G.guesses.map(g => {
     if (g === G.target) return "🎯";
+    if (G.won && sameClear(g, G.target)) return "✅";
     const r = N[lca(g, G.target)].depth / (td - 1);
     return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
   });
-  const title = mode === "daily" ? `Cladle #${dailyNo(G.day)}` : "Cladle（フリー）";
+  const title = (HARD() ? "Cladle ゲキムズ" : "Cladle") + (mode === "daily" ? ` #${dailyNo(G.day)}` : "（フリー）");
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share`;
+  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share${typeof HARD === "function" && HARD() ? "#hard" : ""}`;
 }
 
 // ---- 補完 ----
@@ -828,6 +845,7 @@ function openSheet(id) {
     <div class="row"><span class="rank">${isSp ? "種" : esc(n.rank)}</span>${n.verify ? `<span class="badge-v">要確認</span>` : ""}${n.jaStatus === "provisional" ? `<span class="badge-v">和名なし・仮表記</span>` : ""}</div>`;
   if (!hide) h += `<p style="margin:0">${esc(isSp ? n.fact : n.desc)}</p>`;
   if (!isSp && view === "zukan") h += `<div class="path">収録 ${n.count} 種</div>`;
+  if (!hide && isSp && !n.fact && HARD()) h += `<p style="margin:0;color:var(--muted);font-size:.85rem">${esc(N[n.parent].ja)}（${esc(N[n.parent].rank)}） › ${esc(path(n.id).map(x => N[x]).filter(x => x.rank === "科")[0]?.ja || "")}</p>`;
   if (n.polytomy) h += `<div class="note poly-n"><b>多分岐の理由：</b>${esc(n.polytomy)}</div>`;
   if (n.verify) h += `<div class="note v-n"><b>要確認：</b>${esc(Object.entries(n.verify).map(([k, v]) => ({ ja: "和名", sci: "学名", placement: "位置" }[k] || k) + "：" + v).join("／"))}</div>`;
   if (isSp) h += namesHTML(n);
@@ -872,7 +890,25 @@ function revealInZukan(id) {
 }
 
 // ---- 説明 ----
+function hardAboutHTML() {
+  const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`, k = D.meta.counts || {}, f = n => (n || 0).toLocaleString();
+  return `  <section><h2>ゲキムズモードについて</h2><ul>
+    <li>試作版です。ふつうモードの ${f(k.main)} 種に、標準和名のある日本産の魚類・爬虫類・両生類 ${f(k.fishherp)} 種と、Catalogue of Life に日本語名がある無脊椎動物 ${f(k.col)} 種を加えています（重なる種は一つにまとめています）。</li>
+    <li>Catalogue of Life 由来の和名は、ほとんどが BISMaL（海洋生物多様性情報システム）からのものです。ワラジムシ類とタナイス類は研究者の種リストと、学名と科は WoRMS と照合して直しました。そのほかの和名は BISMaL だけが出典で、iNaturalist などと食い違うものには「要確認」の印を付けています。コガネムシ上科の昆虫は、日本産昆虫目録とは照合できておらず、和名の出典は記録の論文です。</li>
+    <li>系統は、ふつうモードの節目を骨組みにし、その下に目録・リスト・Catalogue of Life の分類（目・科・属など）をつなげています。側系統群とされる群（多毛綱、甲殻亜門、トカゲ亜目など）は節目にしていません。どこに入るか決めていない群は、上の節目の下にまとめて置いています。</li>
+    <li>和名のない属や科は学名で表示しています。</li>
+    <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
+  <section><h2>出典</h2><ul>
+    <li>魚類：本村浩之．2026．日本産魚類全種目録．これまでに記録された日本産魚類全種の現在の標準和名と学名．Online ver. 42（2026-08-27）．${a("https://www.museum.kagoshima-u.ac.jp/staff/motomura/jaf.html", "鹿児島大学総合研究博物館")}</li>
+    <li>爬虫類・両生類：日本爬虫両棲類学会 (2026) 日本産爬虫両生類標準和名リスト（2026年7月2日版）. ${a("https://herpetology.jp/wamei/", "https://herpetology.jp/wamei/")} (2026年10月24日アクセス)</li>
+    <li>無脊椎動物の日本語名・分類：Catalogue of Life Checklist（ChecklistBank 3LR、2026-10-14 版）. ${a("https://www.catalogueoflife.org/", "catalogueoflife.org")}（CC BY 4.0）。日本語名の多くは Japan Agency for Marine-Earth Science and Technology (2009) Biological Information System for Marine Life (BISMaL) による</li>
+    <li>無脊椎動物の照合：日本甲殻類学会ワラジムシ亜目研究グループ 日本産ワラジムシ亜目種リスト（${a("https://www.warajimushi.com/", "warajimushi.com")}）／角井敬知 日本近海産タナイス目リスト／WoRMS Editorial Board, World Register of Marine Species（${a("https://www.marinespecies.org/", "marinespecies.org")}、2026-10-24 参照）</li>
+    ${(D.meta.japaneseNameSources || []).filter(x => x.startsWith("コガネムシ上科")).map(x => `<li>${esc(x)}</li>`).join("")}
+    <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
+    <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>`;
+}
 function aboutHTML() {
+  if (HARD()) return hardAboutHTML();
   const nv = SP.filter(s => s.verify).length;
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>このゲームについて</h2><ul>
@@ -906,7 +942,7 @@ const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "
     "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] };
 let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
-  return `<section><h2>遊び方は3つだけ</h2><ol class="steps">
+  return (HARD() ? hardHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
     <li><b>動物を入れる</b><span>答えの動物との共通の祖先がわかり、系統樹に枝が増えます。</span></li>
     <li><b>緑の点の中を探す</b><span>答えの動物は緑の点より先にいます。その中の、まだ試していない仲間を入れます。</span></li>
     <li><b>${MAX} 回以内に当てる</b><span>${HINT1} 回目と ${HINT2} 回目のあとにヒントが使えます。</span></li></ol>
@@ -919,6 +955,15 @@ function howtoHTML() {
     <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
     <li>系統樹の節目（分類群）は、すべてクレード（ある祖先とその子孫すべてからなる単系統群）です。魚類や爬虫類のような、子孫の一部を除いたまとまりは使っていません。</li>
     <li><span class="poly">多分岐</span>は系統関係が議論中で、分岐の順を決めていない節目です。</li></ul></details>`;
+}
+function hardHowto() {
+  const s = D.meta.selection;
+  return `<section class="hard-rule"><h2>ゲキムズモード（試作）</h2><ul>
+    <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
+    <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）。種までぴったりなら 🎯 です。</li>
+    <li>推測は ${MAX} 回まで。ヒントは ふつうモードと同じです。</li>
+    <li>答えは門ごとに偏りを抑えて選び、よく知られた種ほど出やすくしています。</li>
+    <li>和名のない属や科は学名で表示します。</li></ul></section>`;
 }
 function demoShow(i, typing) {
   const t = DEMO.target, gs = DEMO.guesses.filter(g => N[g]), n = gs.length;
@@ -955,7 +1000,7 @@ function setView(v) {
   view = v;
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
   $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto";
-  demoStop(); if (v === "howto") demoPlay();
+  demoStop(); $(".demo").hidden = HARD(); if (v === "howto" && !HARD()) demoPlay();
   if (v === "daily" || v === "free") { if (mode !== v || !G) newGame(v); }
   window.scrollTo(0, 0);
 }
@@ -984,7 +1029,7 @@ function wire() {
     const ab = e.target.closest("[data-act]"); if (ab) { act(ab); return; }
     if (e.target.id === "copy") copyShare();
     if (e.target.id === "xpost") track(mode + "-share-x");
-    if (e.target.id === "again") { store.set("dk-free", null); newGame("free"); }
+    if (e.target.id === "again") { store.set(KEY("dk-free"), null); newGame("free"); }
     if (e.target.id === "goFree") setView("free");
     if (e.target.id === "toZukan") revealInZukan(G.target);
     if (e.target.id === "closeSheet" || e.target.id === "scrim") closeSheet();
@@ -1001,26 +1046,52 @@ async function copyShare() {
   catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
+async function setLevel(lv) {
+  if (lv === LEVEL || !DATA.normal) return;
+  const b = $("#level"); b.disabled = true;
+  try { DATA[lv] ||= await loadData(lv === "hard" ? "data-hard.json" : "data.json"); }
+  catch (e) { flash(`ゲキムズのデータを読み込めませんでした（${e.message}）`, true); b.disabled = false; return; }
+  b.disabled = false;
+  LEVEL = lv; store.set("dk-level", lv);
+  N = {}; SP = [];
+  build(DATA[lv]); applyLevel();
+  STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats")));
+  G = null; ZK = null; ZKQ = ""; ZKHIT = null; $("#zkq").value = ""; renderZukan();
+  setView(view === "about" || view === "howto" || view === "zukan" ? view : view === "free" ? "free" : "daily");
+}
+function applyLevel() {
+  const h = HARD();
+  $("#level").setAttribute("aria-pressed", h);
+  document.documentElement.classList.toggle("hard", h);
+  $("#levelNote").hidden = !h;
+  if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属を当てればクリア。`;
+  $("#doc").innerHTML = aboutHTML();
+  $("#howtoDoc").innerHTML = howtoHTML();
+}
 // 予約：data.json の meta.next = { from: "YYYY-MM-DD", file } があれば、その日からは次の版のファイルを使う
 // （前もって置いておけば、日付が変わった時点でそろって切り替わる）
 const due = data => data.meta.next && data.meta.next.from <= todayJST();
-async function loadData() {
-  let f = "data.json", data;
+async function loadData(f = "data.json") {
+  let data;
   for (let i = 0; i < 5; i++) {
     const r = await fetch(f); if (!r.ok) throw new Error(r.status);
     data = await r.json(); if (!due(data)) break; f = data.meta.next.file;
   }
   return data;
 }
-loadData().then(data => {
-  build(data); wire();
+loadData().then(async data => {
+  DATA.normal = data;
+  const want = /^#?hard/.test(location.hash) ? "hard" : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
+  if (want === "hard") try { DATA.hard = await loadData("data-hard.json"); LEVEL = "hard"; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
+  build(DATA[LEVEL]); wire(); applyLevel();
+  $("#level").onclick = () => setLevel(HARD() ? "normal" : "hard");
   renderZukan();
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
   $("#demoPrev").onclick = () => { demoStop(); demoShow(demoI - 1, false); };
   $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
   $("#demoReplay").onclick = demoPlay;
-  const h = location.hash.slice(1);
+  const h = location.hash.slice(1).replace(/^hard\/?/, "");
   setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
