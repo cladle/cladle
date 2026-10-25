@@ -950,9 +950,11 @@ function revealInZukan(id) {
 function hardAboutHTML() {
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`, k = D.meta.counts || {}, f = n => (n || 0).toLocaleString();
   return `  <section><h2>ゲキムズモードについて</h2><ul>
-    <li>試作版です。ふつうモードの ${f(k.main)} 種に、標準和名のある日本産の魚類・爬虫類・両生類 ${f(k.fishherp)} 種と、${k.worms ? `Catalogue of Life と WoRMS に日本語名がある無脊椎動物 ${f(k.col + k.worms + (k.extra || 0))}` : `Catalogue of Life に日本語名がある無脊椎動物 ${f(k.col)}`} 種を加えています（重なる種は一つにまとめています）。</li>
+    <li>試作版です。ふつうモードの ${f(k.main)} 種に、標準和名のある日本産の魚類・爬虫類・両生類 ${f(k.fishherp)} 種と、${k.worms ? `Catalogue of Life と WoRMS に日本語名がある無脊椎動物 ${f(k.col + k.worms + (k.extra || 0))}` : `Catalogue of Life に日本語名がある無脊椎動物 ${f(k.col)}`} 種${k.land ? `、陸の昆虫・クモ・鳥・哺乳類と陸や淡水の貝 ${f(k.land)} 種` : ""}を加えています（重なる種は一つにまとめています）。</li>
     <li>Catalogue of Life 由来の和名は、ほとんどが BISMaL（海洋生物多様性情報システム）からのものです。ワラジムシ類とタナイス類は研究者の種リストと、学名と科は WoRMS と照合して直しました。そのほかの和名は BISMaL だけが出典で、iNaturalist などと食い違うものには「要確認」の印を付けています。コガネムシ上科の昆虫は、日本産昆虫目録とは照合できておらず、和名の出典は記録の論文です。</li>${k.worms ? `
     <li>Catalogue of Life に日本語名の無いエビ・ヤドカリ類などは、WoRMS の日本語名（同じく BISMaL 由来）から足しました。Catalogue of Life と和名が食い違うものと、一つの和名に学名が複数あるものは入れていません。</li>` : ""}
+${k.land ? `
+    <li>陸の生き物は、環境省の「種の多様性調査 対象種一覧」（昆虫のトンボ・チョウ・セミと水生半翅類・ガ・甲虫、陸と淡水の貝、鳥、哺乳類）と Japan Spider Catalog（クモ）から足しました。学名は Catalogue of Life に合わせ、鳥と哺乳類は日本鳥類目録改訂第8版・世界哺乳類標準和名リストにある種だけを、そのリストの和名で入れています。環境省の一覧は1997年のもので、iNaturalist と和名が食い違うものには「要確認」の印を付けています。</li>` : ""}
     <li>系統は、ふつうモードの節目を骨組みにし、その下に目録・リスト・Catalogue of Life${k.worms ? "・WoRMS" : ""} の分類（目・科・属など）をつなげています。側系統群とされる群（多毛綱、甲殻亜門、トカゲ亜目など）は節目にしていません。どこに入るか決めていない群は、上の節目の下にまとめて置いています。</li>
     <li>和名のない属や科は学名で表示しています。</li>
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
@@ -961,7 +963,11 @@ function hardAboutHTML() {
     <li>爬虫類・両生類：日本爬虫両棲類学会 (2026) 日本産爬虫両生類標準和名リスト（2026年7月2日版）. ${a("https://herpetology.jp/wamei/", "https://herpetology.jp/wamei/")} (2026年10月24日アクセス)</li>
     <li>無脊椎動物の日本語名・分類：Catalogue of Life Checklist（ChecklistBank 3LR、2026-10-14 版）. ${a("https://www.catalogueoflife.org/", "catalogueoflife.org")}（CC BY 4.0）。日本語名の多くは Japan Agency for Marine-Earth Science and Technology (2009) Biological Information System for Marine Life (BISMaL) による</li>
     ${k.worms ? `<li>無脊椎動物の日本語名・分類（追加分）：WoRMS Editorial Board. World Register of Marine Species（ChecklistBank 2011）. ${a("https://www.marinespecies.org/", "marinespecies.org")}（CC BY 4.0、2026-10-25 参照）。日本語名は BISMaL による</li>` : ""}
-    <li>無脊椎動物の照合：日本甲殻類学会ワラジムシ亜目研究グループ 日本産ワラジムシ亜目種リスト（${a("https://www.warajimushi.com/", "warajimushi.com")}）／角井敬知 日本近海産タナイス目リスト／WoRMS Editorial Board, World Register of Marine Species（${a("https://www.marinespecies.org/", "marinespecies.org")}、2026-10-24 参照）</li>
+${k.land ? `<li>陸の昆虫・貝・鳥・哺乳類の対象種：環境省自然環境局生物多様性センター「種の多様性調査（動物分布調査）対象種一覧」（${a("https://www.biodic.go.jp/", "biodic.go.jp")}、公共データ利用規約 第1.0版）を加工して作成（学名を Catalogue of Life に合わせ、和名の一部を学会のリストに合わせた）</li>
+    <li>クモ：Japan Spider Catalog. (2026). Japan Spider Catalog（種リスト 2026-10-24 生成分）. ${a("https://japan-spider-catalog.pages.dev/", "https://japan-spider-catalog.pages.dev/")} (accessed 2026-10-25). 日本産クモ類目録（谷川 2026）に準拠。Cladle が加工して作成</li>
+    <li>鳥類：日本鳥学会（2024）日本鳥類目録 改訂第8版（和名・学名リスト 2023-09-30 公開版）</li>
+    <li>哺乳類：川田伸一郎ほか（2021）世界哺乳類標準和名リスト 2021年度版．${a("https://www.mammalogy.jp/list/index.html", "日本哺乳類学会")}</li>
+    ` : ""}<li>無脊椎動物の照合：日本甲殻類学会ワラジムシ亜目研究グループ 日本産ワラジムシ亜目種リスト（${a("https://www.warajimushi.com/", "warajimushi.com")}）／角井敬知 日本近海産タナイス目リスト／WoRMS Editorial Board, World Register of Marine Species（${a("https://www.marinespecies.org/", "marinespecies.org")}、2026-10-24 参照）</li>
     ${(D.meta.japaneseNameSources || []).filter(x => x.startsWith("コガネムシ上科")).map(x => `<li>${esc(x)}</li>`).join("")}
     <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
     <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>`;
@@ -1019,7 +1025,7 @@ function howtoHTML() {
 function hardHowto() {
   const s = D.meta.selection;
   return `<section class="hard-rule"><h2>ゲキムズモード（試作）</h2><ul>
-    <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
+    <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物${(D.meta.counts || {}).land ? "、陸の昆虫・クモ・鳥・貝" : ""}などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
     <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）です。答えの種名はまだ出ないので、続けて種まで当てると 🎯、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
     <li>推測は ${MAX} 回まで。属でクリアしたあとは、それとは別に<b>種探しが ${HUNT} 回</b>あり、その属にあと何種いるかも出ます。</li>
     <li>ヒント1は ふつうモードと同じです。ヒント2は科より下の節目は開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
