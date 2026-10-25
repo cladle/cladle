@@ -469,7 +469,8 @@ setInterval(() => {
 }, 1000);
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
-const TRACK = { "daily-genus": "今日の動物：属でクリア", "free-genus": "フリー：属でクリア", "daily-genusend": "今日の動物：属どまりで終了", "free-genusend": "フリー：属どまりで終了", "daily-reveal": "今日の動物：答えを見る", "free-reveal": "フリー：答えを見る", "daily-hint1": "今日の動物：ヒント1", "daily-hint2": "今日の動物：ヒント2", "free-hint1": "フリー：ヒント1", "free-hint2": "フリー：ヒント2", "free-reset": "フリー：別の問題にする", "level-hard": "ゲキムズに切り替え", "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+const TRACK = { "tab-daily": "タブ：今日の動物", "tab-free": "タブ：フリー", "tab-zukan": "タブ：図鑑", "tab-howto": "タブ：遊び方", "tab-about": "タブ：データ", "zukan-search": "図鑑：検索", "zukan-from-result": "図鑑：結果から開く", "sheet-clade": "詳細：分類群を開く", "sheet-species": "詳細：種を開く", "lookup-wikipedia": "調べる：Wikipedia", "lookup-gbif": "調べる：GBIF", "lookup-image": "調べる：画像検索", "daily-genus": "今日の動物：属でクリア", "free-genus": "フリー：属でクリア", "daily-genusend": "今日の動物：属どまりで終了", "free-genusend": "フリー：属どまりで終了", "daily-reveal": "今日の動物：答えを見る", "free-reveal": "フリー：答えを見る", "daily-hint1": "今日の動物：ヒント1", "daily-hint2": "今日の動物：ヒント2", "free-hint1": "フリー：ヒント1", "free-hint2": "フリー：ヒント2", "free-reset": "フリー：別の問題にする", "level-hard": "ゲキムズに切り替え", "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+let zkSearched = false;
 function track(ev) { const h = typeof HARD === "function" && HARD() && ev !== "share-visit"; try { window.goatcounter?.count?.({ path: (h ? "hard-" : "") + ev, title: (h ? "ゲキムズ " : "") + (TRACK[ev] || ev), event: true }); } catch (e) {} }
 if (new URLSearchParams(location.search).get("from") === "share") {
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
@@ -1039,7 +1040,7 @@ function setView(v) {
 }
 
 function wire() {
-  document.querySelectorAll("nav button").forEach(b => b.onclick = () => setView(b.dataset.v));
+  document.querySelectorAll("nav button").forEach(b => b.onclick = () => { if (b.dataset.v !== view) { track("tab-" + b.dataset.v); zkSearched = false; } setView(b.dataset.v); });
   const inp = $("#guess");
   inp.addEventListener("input", showSugg);
   inp.addEventListener("keydown", e => {
@@ -1057,18 +1058,19 @@ function wire() {
     if (!e.target.closest(".inputbox")) $("#sugg").hidden = true;
     const z = e.target.closest("[data-zk]"); if (z) { zukanGo(z.dataset.zk); return; }
     const b = e.target.closest(".clade, .twig, .clade-mini, .svgnode, .nl, .zk [data-id]:is(button)");
-    if (b) { e.preventDefault(); openSheet(b.dataset.id); return; }
+    if (b) { e.preventDefault(); track(N[b.dataset.id]?.kind === "species" ? "sheet-species" : "sheet-clade"); openSheet(b.dataset.id); return; }
+    const lk = e.target.closest(".lookup a"); if (lk) track("lookup-" + ({ Wikipedia: "wikipedia", GBIF: "gbif" }[lk.textContent] || "image"));
     const hb = e.target.closest(".hintbtn"); if (hb) { useHint(+hb.dataset.hint); return; }
     const ab = e.target.closest("[data-act]"); if (ab) { act(ab); return; }
     if (e.target.id === "copy") copyShare();
     if (e.target.id === "xpost") track(mode + "-share-x");
     if (e.target.id === "again") { store.set(KEY("dk-free"), null); newGame("free"); }
     if (e.target.id === "goFree") setView("free");
-    if (e.target.id === "toZukan") revealInZukan(G.target);
+    if (e.target.id === "toZukan") { track("zukan-from-result"); revealInZukan(G.target); }
     if (e.target.id === "closeSheet" || e.target.id === "scrim") closeSheet();
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
-  let zkT; $("#zkq").addEventListener("input", e => { clearTimeout(zkT); zkT = setTimeout(() => { ZKQ = e.target.value.trim(); renderZukan(); }, 200); });
+  let zkT; $("#zkq").addEventListener("input", e => { clearTimeout(zkT); zkT = setTimeout(() => { ZKQ = e.target.value.trim(); renderZukan(); if (ZKQ && !zkSearched) { zkSearched = true; track("zukan-search"); } }, 200); });
   const setHdr = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
   setHdr(); addEventListener("resize", setHdr);
 }
