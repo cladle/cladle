@@ -47,6 +47,10 @@
     "4": 0.7
    },
    "bucketWeight": "sqrt"
+  },
+  "next": {
+   "from": "2026-10-28",
+   "file": "data-0.3.6.json"
   }
  },
  "clades": [
