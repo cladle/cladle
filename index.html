@@ -72,6 +72,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .sugg li[aria-selected="true"], .sugg li:hover { background: var(--accent-soft) }
 .sugg .sci, .sugg .via { color: var(--muted); font-size: .85rem }
 .sugg .used { opacity: .45 }
+.sugg li.more { cursor: default; color: var(--muted); font-size: .85rem; background: none }
 .hint { font-size: .8rem; color: var(--muted); margin: 6px 2px 0 }
 .flash { margin: 10px 0 0; padding: 8px 12px; border-radius: 8px; background: var(--accent-soft); font-size: .9rem }
 .flash.err { background: var(--hot-soft) }
@@ -279,7 +280,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 
   <main id="game">
     <p class="level-note" id="levelNote" hidden></p>
-    <div class="status"><span id="modeLabel">今日の動物</span><span class="meter" id="meter"></span><span>残り <b id="left">15</b></span></div>
+    <div class="status"><span id="modeLabel">今日の動物</span><span class="meter" id="meter"></span><span><span id="leftLabel">残り</span> <b id="left">15</b></span></div>
     <div class="inputbox">
       <input id="guess" name="dk-animal" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="動物を入力（ひらがな・カタカナ・学名）" aria-label="動物を入力" role="combobox" aria-expanded="false" aria-controls="sugg">
       <ul class="sugg" id="sugg" role="listbox" hidden></ul>
@@ -335,6 +336,8 @@ const DATA = {};
 const KEY = k => LEVEL === "hard" ? k.replace("dk-", "dk-hard-") : k;
 const HARD = () => LEVEL === "hard";
 const HINT1 = 10, HINT2 = 13;  // この回数の推測のあとにヒントが押せる
+const HUNT = 8;  // ゲキムズ：属でクリアしたあとの種探しの回数（残り回数とは別）
+const limit = () => G.gAt ? G.gAt + HUNT : MAX;
 
 // ---- 文字の正規化（カタカナ→ひらがな、全角半角、空白・中黒を除去）----
 function norm(s) {
@@ -413,7 +416,7 @@ function newGame(m) {
     G = saved && N[saved.target] ? saved : { target: pick(Math.random), guesses: [], done: false, won: false };
   }
   G.guesses = G.guesses.filter(id => N[id]); if (G.reveal && !N[G.reveal]) delete G.reveal;  // データから外れた種・節目
-  if (!G.done && G.guesses.length >= MAX) G.done = true;  // 上限を下げる前の記録
+  if (!G.done && G.guesses.length >= limit()) { G.done = true; if (G.gAt) { G.won = true; G.exact = false; } }  // 上限を下げる前の記録
   lastEdges = null; openGrow = G.guesses.length > 0;  // 開いたときは今の木を根元から手早く伸ばす
   G.fresh = null;
   if (m === "daily" && G.done && !STATS.days[G.day]) save();  // 成績を付ける前に解いた日の分
@@ -422,7 +425,7 @@ function newGame(m) {
 function save() {
   store.set(KEY(mode === "daily" ? "dk-daily" : "dk-free"), { ...G, fresh: null });
   if (mode !== "daily") return;
-  if (G.done || G.gAt) STATS.days[G.day] = { w: G.won || G.gAt ? 1 : 0, n: G.gAt || G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.gAt && !G.exact ? { g: 1 } : {}), ...(G.gAt && G.exact ? { s: G.guesses.length } : {}) };
+  if (G.done || G.gAt) STATS.days[G.day] = { w: G.won || G.gAt ? 1 : 0, n: G.gAt || G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.gAt && !G.exact ? { g: 1 } : {}), ...(G.gAt && G.exact ? { s: G.guesses.length - G.gAt } : {}) };
   saveStats();
 }
 // ---- 成績（今日の動物だけ数える）----
@@ -481,11 +484,10 @@ function guess(id) {
   else {
     const gained = N[L].depth > N[before].depth;
     // ゲキムズ：属が当たったらクリア（種名は伏せたまま。続けて種を当てるか、答えを見るかを選べる）
-    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。続けて種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
+    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。ここから種探し ${HUNT} 回で種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
     else flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
     if (G.gAt !== G.guesses.length) G.fresh = gained ? L : null;
-    if (G.gAt && G.guesses.length >= MAX) { G.won = true; G.exact = false; }
-    if (G.guesses.length >= MAX) { G.done = true; }
+    if (G.guesses.length >= limit()) { G.done = true; if (G.gAt) { G.won = true; G.exact = false; } }
   }
   if (G.done) track(mode + (!G.won ? "-lose" : G.exact === false ? "-genusend" : "-win"));  // ゲキムズで属を当てたまま上限まで使ったら属どまり
   save(); render();
@@ -527,10 +529,16 @@ function useHint(n) {
   if (n === 2 && G.guesses.length >= HINT2) {
     if (!G.h2) track(mode + "-hint2");
     const p = path(G.target), next = p[p.indexOf(deepest()) + 1];
-    if (next && next !== G.target) G.reveal = next;
+    if (next && next !== G.target && !(HARD() && N[next].rank === "属")) G.reveal = next;
     G.h2 = true;
   }
   save(); render();
+}
+// ゲキムズのヒント2（属を開かないとき）：和名の文字数と、ほかの種とも共通する終わり方（「…ウロコムシ」など）
+function jaClue(id) {
+  const ja = N[id].ja; let suf = "";
+  for (let k = ja.length - 2; k >= 2 && !suf; k--) { const t = ja.slice(-k); if (SP.filter(s => s.id !== id && s.ja.endsWith(t)).length >= 3) suf = t; }
+  return `和名は ${ja.length} 文字` + (suf ? `で、「…${suf}」で終わります。` : `で、「${ja[0]}…」で始まります。`);
 }
 // 豆知識から正解の名前（和名・別名・学名）を伏せる
 function maskFact(id) {
@@ -562,10 +570,11 @@ function act(b) {
 function hintsHTML() {
   if (G.done) return "";
   const n = G.guesses.length, out = [];
-  if (G.gAt) out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。残りの回数で種まで当てると 🎯。</p>`);
+  if (G.gAt) { const k = SP.filter(s => s.parent === N[G.target].parent && !G.guesses.includes(s.id)).length;
+    out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
   else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
-  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
+  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : HARD() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
   else if (n >= HINT2) out.push(`<button class="btn ghost hintbtn" data-hint="2">💡 ヒント2</button>`);
   return out.join("");
 }
@@ -573,8 +582,10 @@ function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className =
 
 function render() {
   $("#modeLabel").textContent = (HARD() ? "ゲキムズ " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : "フリープレイ");
-  $("#left").textContent = MAX - G.guesses.length;
-  $("#meter").innerHTML = Array.from({ length: MAX }, (_, i) => `<i class="${i < G.guesses.length ? "used" : ""}"></i>`).join("");
+  const hunt = G.gAt && !G.done, base = hunt ? G.gAt : 0;
+  $("#leftLabel").textContent = hunt ? "種探し 残り" : "残り";
+  $("#left").textContent = hunt ? limit() - G.guesses.length : MAX - Math.min(G.guesses.length, MAX);
+  $("#meter").innerHTML = Array.from({ length: hunt ? HUNT : MAX }, (_, i) => `<i class="${i < G.guesses.length - base ? "used" : ""}"></i>`).join("");
   $("#guess").disabled = G.done;
   if (!G.guesses.length) $("#flash").hidden = true;
 
@@ -759,7 +770,7 @@ function resultHTML() {
   const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? `🎯 種は ${G.guesses.length} 回` : ""}</span>` : ""}</div>
+    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}</div>
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
@@ -808,11 +819,11 @@ function shareText() {
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${G.gAt && exactWin() ? `  🎯${G.guesses.length}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share${typeof HARD === "function" && HARD() ? "#hard" : ""}`;
+  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share${typeof HARD === "function" && HARD() ? "#hard" : ""}`;
 }
 
 // ---- 補完 ----
-let sel = -1, cur = [];
+let sel = -1, cur = [], suggMore = 0;
 function suggest(q) {
   const n = norm(q); if (!n) return [];
   const out = [];
@@ -825,7 +836,8 @@ function suggest(q) {
     }
     if (best) out.push(best);
   }
-  return out.sort((a, b) => a.score - b.score).slice(0, 8);
+  const cap = HARD() ? 20 : 8; suggMore = out.length - cap;
+  return out.sort((a, b) => a.score - b.score).slice(0, cap);
 }
 function showSugg() {
   const u = $("#sugg"); cur = suggest($("#guess").value); sel = cur.length ? 0 : -1;
@@ -836,7 +848,7 @@ function showSugg() {
     // 亜種名で当たったときは「亜種名（種名の亜種）」と出し、選ぶと種の推測になる
     const name = r.k.k === "subsp" ? `<span>${esc(r.k.t)}</span><span class="via">（${esc(r.s.ja)}の亜種）</span>` : `<span>${esc(r.s.ja)}</span>${via}`;
     return `<li role="option" id="o${i}" data-id="${r.s.id}" aria-selected="${i === sel}" class="${used ? "used" : ""}">${name}<span class="sci">${esc(r.s.sci)}</span>${used ? `<span class="via">推測済み</span>` : ""}</li>`;
-  }).join("");
+  }).join("") + (HARD() && suggMore > 0 ? `<li class="more" aria-disabled="true">ほか ${suggMore.toLocaleString()} 種（もう少し打つと絞れます）</li>` : "");
   u.hidden = false; $("#guess").setAttribute("aria-expanded", "true");
 }
 function choose(id) { $("#guess").value = ""; $("#sugg").hidden = true; if (G.guesses.includes(id)) { flash(`${N[id].ja} はもう推測しました。`, true); return; } guess(id);
@@ -900,15 +912,17 @@ function revealInZukan(id) {
 function hardAboutHTML() {
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`, k = D.meta.counts || {}, f = n => (n || 0).toLocaleString();
   return `  <section><h2>ゲキムズモードについて</h2><ul>
-    <li>試作版です。ふつうモードの ${f(k.main)} 種に、標準和名のある日本産の魚類・爬虫類・両生類 ${f(k.fishherp)} 種と、Catalogue of Life に日本語名がある無脊椎動物 ${f(k.col)} 種を加えています（重なる種は一つにまとめています）。</li>
-    <li>Catalogue of Life 由来の和名は、ほとんどが BISMaL（海洋生物多様性情報システム）からのものです。ワラジムシ類とタナイス類は研究者の種リストと、学名と科は WoRMS と照合して直しました。そのほかの和名は BISMaL だけが出典で、iNaturalist などと食い違うものには「要確認」の印を付けています。コガネムシ上科の昆虫は、日本産昆虫目録とは照合できておらず、和名の出典は記録の論文です。</li>
-    <li>系統は、ふつうモードの節目を骨組みにし、その下に目録・リスト・Catalogue of Life の分類（目・科・属など）をつなげています。側系統群とされる群（多毛綱、甲殻亜門、トカゲ亜目など）は節目にしていません。どこに入るか決めていない群は、上の節目の下にまとめて置いています。</li>
+    <li>試作版です。ふつうモードの ${f(k.main)} 種に、標準和名のある日本産の魚類・爬虫類・両生類 ${f(k.fishherp)} 種と、${k.worms ? `Catalogue of Life と WoRMS に日本語名がある無脊椎動物 ${f(k.col + k.worms + (k.extra || 0))}` : `Catalogue of Life に日本語名がある無脊椎動物 ${f(k.col)}`} 種を加えています（重なる種は一つにまとめています）。</li>
+    <li>Catalogue of Life 由来の和名は、ほとんどが BISMaL（海洋生物多様性情報システム）からのものです。ワラジムシ類とタナイス類は研究者の種リストと、学名と科は WoRMS と照合して直しました。そのほかの和名は BISMaL だけが出典で、iNaturalist などと食い違うものには「要確認」の印を付けています。コガネムシ上科の昆虫は、日本産昆虫目録とは照合できておらず、和名の出典は記録の論文です。</li>${k.worms ? `
+    <li>Catalogue of Life に日本語名の無いエビ・ヤドカリ類などは、WoRMS の日本語名（同じく BISMaL 由来）から足しました。Catalogue of Life と和名が食い違うものと、一つの和名に学名が複数あるものは入れていません。</li>` : ""}
+    <li>系統は、ふつうモードの節目を骨組みにし、その下に目録・リスト・Catalogue of Life${k.worms ? "・WoRMS" : ""} の分類（目・科・属など）をつなげています。側系統群とされる群（多毛綱、甲殻亜門、トカゲ亜目など）は節目にしていません。どこに入るか決めていない群は、上の節目の下にまとめて置いています。</li>
     <li>和名のない属や科は学名で表示しています。</li>
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
   <section><h2>出典</h2><ul>
     <li>魚類：本村浩之．2026．日本産魚類全種目録．これまでに記録された日本産魚類全種の現在の標準和名と学名．Online ver. 42（2026-08-27）．${a("https://www.museum.kagoshima-u.ac.jp/staff/motomura/jaf.html", "鹿児島大学総合研究博物館")}</li>
     <li>爬虫類・両生類：日本爬虫両棲類学会 (2026) 日本産爬虫両生類標準和名リスト（2026年7月2日版）. ${a("https://herpetology.jp/wamei/", "https://herpetology.jp/wamei/")} (2026年10月24日アクセス)</li>
     <li>無脊椎動物の日本語名・分類：Catalogue of Life Checklist（ChecklistBank 3LR、2026-10-14 版）. ${a("https://www.catalogueoflife.org/", "catalogueoflife.org")}（CC BY 4.0）。日本語名の多くは Japan Agency for Marine-Earth Science and Technology (2009) Biological Information System for Marine Life (BISMaL) による</li>
+    ${k.worms ? `<li>無脊椎動物の日本語名・分類（追加分）：WoRMS Editorial Board. World Register of Marine Species（ChecklistBank 2011）. ${a("https://www.marinespecies.org/", "marinespecies.org")}（CC BY 4.0、2026-10-25 参照）。日本語名は BISMaL による</li>` : ""}
     <li>無脊椎動物の照合：日本甲殻類学会ワラジムシ亜目研究グループ 日本産ワラジムシ亜目種リスト（${a("https://www.warajimushi.com/", "warajimushi.com")}）／角井敬知 日本近海産タナイス目リスト／WoRMS Editorial Board, World Register of Marine Species（${a("https://www.marinespecies.org/", "marinespecies.org")}、2026-10-24 参照）</li>
     ${(D.meta.japaneseNameSources || []).filter(x => x.startsWith("コガネムシ上科")).map(x => `<li>${esc(x)}</li>`).join("")}
     <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
@@ -968,7 +982,8 @@ function hardHowto() {
   return `<section class="hard-rule"><h2>ゲキムズモード（試作）</h2><ul>
     <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
     <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）です。答えの種名はまだ出ないので、続けて種まで当てると 🎯、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
-    <li>推測は ${MAX} 回まで。ヒントは ふつうモードと同じです。</li>
+    <li>推測は ${MAX} 回まで。属でクリアしたあとは、それとは別に<b>種探しが ${HUNT} 回</b>あり、その属にあと何種いるかも出ます。</li>
+    <li>ヒント1は ふつうモードと同じです。ヒント2は科より下の節目は開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
     <li>答えは門ごとに偏りを抑えて選び、よく知られた種ほど出やすくしています。</li>
     <li>和名のない属や科は学名で表示します。</li></ul></section>`;
 }
@@ -1026,7 +1041,7 @@ function wire() {
     else if (e.key === "Escape") u.hidden = true;
   });
   $("#sugg").addEventListener("mousedown", e => e.preventDefault());
-  $("#sugg").addEventListener("click", e => { const li = e.target.closest("li"); if (li) choose(li.dataset.id); });
+  $("#sugg").addEventListener("click", e => { const li = e.target.closest("li"); if (li?.dataset.id) choose(li.dataset.id); });
   document.addEventListener("click", e => {
     if (!e.target.closest(".inputbox")) $("#sugg").hidden = true;
     const z = e.target.closest("[data-zk]"); if (z) { zukanGo(z.dataset.zk); return; }
