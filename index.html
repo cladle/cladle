@@ -464,7 +464,7 @@ setInterval(() => {
 }, 1000);
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
-const TRACK = { "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+const TRACK = { "daily-genus": "今日の動物：属でクリア", "free-genus": "フリー：属でクリア", "daily-genusend": "今日の動物：属どまりで終了", "free-genusend": "フリー：属どまりで終了", "daily-reveal": "今日の動物：答えを見る", "free-reveal": "フリー：答えを見る", "daily-hint1": "今日の動物：ヒント1", "daily-hint2": "今日の動物：ヒント2", "free-hint1": "フリー：ヒント1", "free-hint2": "フリー：ヒント2", "free-reset": "フリー：別の問題にする", "level-hard": "ゲキムズに切り替え", "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
 function track(ev) { const h = typeof HARD === "function" && HARD() && ev !== "share-visit"; try { window.goatcounter?.count?.({ path: (h ? "hard-" : "") + ev, title: (h ? "ゲキムズ " : "") + (TRACK[ev] || ev), event: true }); } catch (e) {} }
 if (new URLSearchParams(location.search).get("from") === "share") {
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
@@ -481,13 +481,13 @@ function guess(id) {
   else {
     const gained = N[L].depth > N[before].depth;
     // ゲキムズ：属が当たったらクリア（種名は伏せたまま。続けて種を当てるか、答えを見るかを選べる）
-    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; flash(`同じ属です！ ${G.gAt} 回でクリア。続けて種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
+    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。続けて種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
     else flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
     if (G.gAt !== G.guesses.length) G.fresh = gained ? L : null;
     if (G.gAt && G.guesses.length >= MAX) { G.won = true; G.exact = false; }
     if (G.guesses.length >= MAX) { G.done = true; }
   }
-  if (G.done) track(mode + (G.won ? "-win" : "-lose"));
+  if (G.done) track(mode + (!G.won ? "-lose" : G.exact === false ? "-genusend" : "-win"));  // ゲキムズで属を当てたまま上限まで使ったら属どまり
   save(); render();
   if (!G.won) cueTo(id, L);
 }
@@ -523,8 +523,9 @@ function candidates() {
 }
 function useHint(n) {
   if (G.done) return;
-  if (n === 1 && G.guesses.length >= HINT1) G.h1 = true;
+  if (n === 1 && G.guesses.length >= HINT1 && !G.h1) { G.h1 = true; track(mode + "-hint1"); }
   if (n === 2 && G.guesses.length >= HINT2) {
+    if (!G.h2) track(mode + "-hint2");
     const p = path(G.target), next = p[p.indexOf(deepest()) + 1];
     if (next && next !== G.target) G.reveal = next;
     G.h2 = true;
@@ -552,9 +553,9 @@ function act(b) {
     setTimeout(() => { if (b.isConnected) { b.classList.remove("armed"); b.textContent = ACT[k][0]; } }, 3000);
     return;
   }
-  if (k === "reset") { store.set(KEY("dk-free"), null); newGame("free"); return; }
+  if (k === "reset") { track(mode + "-reset"); store.set(KEY("dk-free"), null); newGame("free"); return; }
   if (G.done) return;
-  if (k === "reveal") { G.done = G.won = true; G.exact = false; G.fresh = null; $("#flash").hidden = true; save(); render(); return; }
+  if (k === "reveal") { track(mode + "-reveal"); G.done = G.won = true; G.exact = false; G.fresh = null; $("#flash").hidden = true; save(); render(); return; }
   G.done = true; G.won = false; G.gaveUp = true; track(mode + "-giveup"); G.fresh = null; $("#flash").hidden = true;
   save(); render();
 }
@@ -1058,6 +1059,7 @@ async function setLevel(lv) {
   try { DATA[lv] ||= await loadData(lv === "hard" ? "data-hard.json" : "data.json"); }
   catch (e) { flash(`ゲキムズのデータを読み込めませんでした（${e.message}）`, true); b.disabled = false; return; }
   b.disabled = false;
+  if (lv === "hard") track("level-hard");  // 切り替える前に送る（ゲキムズの印が付かないように）
   LEVEL = lv; store.set("dk-level", lv);
   N = {}; SP = [];
   build(DATA[lv]); applyLevel();
