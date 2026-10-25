@@ -115,6 +115,8 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .crumb .clade-mini.here { border-color: var(--accent); background: var(--accent-soft) }
 .cgsvg .nl.on { fill: var(--ink) }
 .cgsvg .nl.stop { fill: var(--accent); font-size: 13px; font-weight: 700 }
+.cgsvg .nl .kin { font-size: 9.5px; font-weight: 400; fill: var(--muted) }
+.kin-n { color: var(--muted); font-size: .85rem; margin: 2px 0 6px }
 .cgsvg .svgnode { cursor: pointer }
 .cgsvg .tipdot { fill: var(--accent); stroke: var(--bg); stroke-width: 2; pointer-events: none }
 .cgsvg .tl { font-size: 14px; fill: var(--ink) }
@@ -722,17 +724,19 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
   cand.sort((a, b) => a.prio - b.prio || b.n.d - a.n.d);
   for (const { n, st } of cand) {
     ctx.font = `${st ? "700 13px" : "11px"} ${getComputedStyle(document.body).fontFamily}`;
-    const w = ctx.measureText(N[n.id].ja).width, g = st ? 9 : 5;
+    const kin = kinLabel(n.id);
+    let w = ctx.measureText(N[n.id].ja).width; const g = st ? 9 : 5, kh = kin ? 11 : 0;
+    if (kin) { ctx.font = `10px ${getComputedStyle(document.body).fontFamily}`; w = Math.max(w, ctx.measureText(kin).width); }
     // 右・枝の上（左寄せ）・右上・右下の順に試す
     const spots = [[n.x + g, 0], [n.x - 3 - w, -9], [n.x + 3, -11], [n.x + 3, 14]]
-      .map(([x, dy]) => ({ x, y: n.y + dy, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 } }))
+      .map(([x, dy]) => ({ x, y: n.y + dy, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 + kh } }))
       .filter(sp => sp.r.x1 >= 0 && sp.r.x2 <= tipX - 2);
     const sp = spots.find(sp => !hits(sp.r, placed) && !hits(sp.r, seg))
       || (st || n.id === D.root ? spots.find(sp => !hits(sp.r, placed)) || spots[0] : null);
     if (!sp) continue;
     placed.push(sp.r);
     const la = lateStyle(n.id);
-    texts += `<text class="nl${on(n.id) ? " on" : ""}${st ? " stop" : ""}${la ? " fade" : ""}"${la} x="${sp.x}" y="${sp.y + 4}" data-id="${n.id}">${esc(N[n.id].ja)}</text>`;
+    texts += `<text class="nl${on(n.id) ? " on" : ""}${st ? " stop" : ""}${la ? " fade" : ""}"${la} x="${sp.x}" y="${sp.y + 4}" data-id="${n.id}">${esc(N[n.id].ja)}${kin ? `<tspan class="kin" x="${sp.x}" dy="11">${esc(kin)}</tspan>` : ""}</text>`;
   }
   treeHTML.edges = edges; treeHTML.animEnd = animEnd;
   const tip = !store.get("dk-tip") && !opt.demo ? `<p class="tip">下の名前や図の名前を押すと、その仲間の説明が見られます。</p>` : "";
@@ -753,6 +757,12 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     }
   }
   return `<div class="cgwrap"><svg class="cgsvg${opt.dim ? " dim" : ""}${opt.win ? " win" : ""}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="系統樹">${lines}${nodes}${texts}${tipDot}</svg></div>${guesses.length && !done ? crumb : ""}`;
+}
+// 英字（学名）のままの分類群に、一番近い和名の門・綱・目を添える（例：腹足綱の中の目）。和名が定着していない群は自作の読みを付けない方針のため
+function kinLabel(id) {
+  const n = N[id]; if (!n || n.kind === "species" || !/^[A-Za-z][A-Za-z .\-]*$/.test(n.ja)) return "";
+  let p = n.parent; while (p && !(["門", "綱", "目"].includes(N[p].rank) && !/^[A-Za-z]/.test(N[p].ja))) p = N[p].parent;
+  return p ? `${N[p].ja}の中の${n.rank === "クレード" ? "まとまり" : n.rank}` : "";
 }
 // 別名（和名）・旧学名・そのほかの検索語
 function namesHTML(n) {
@@ -862,6 +872,7 @@ function openSheet(id) {
   const hide = isSp && id === G?.target && !G.done && view !== "zukan";
   let h = `<h3><span>${esc(n.ja)}</span><span class="sci" style="font-weight:400;font-size:1rem">${esc(n.sci)}</span></h3>
     <div class="row"><span class="rank">${isSp ? "種" : esc(n.rank)}</span>${n.verify ? `<span class="badge-v">要確認</span>` : ""}${n.jaStatus === "provisional" ? `<span class="badge-v">和名なし・仮表記</span>` : ""}</div>`;
+  if (!isSp && kinLabel(id)) h += `<div class="kin-n">${esc(kinLabel(id))}（定着した和名が無いため学名で表示）</div>`;
   if (!hide) h += `<p style="margin:0">${esc(isSp ? n.fact : n.desc)}</p>`;
   if (!isSp && view === "zukan") h += `<div class="path">収録 ${n.count} 種</div>`;
   if (!hide && isSp && !n.fact && HARD()) h += `<p style="margin:0;color:var(--muted);font-size:.85rem">${esc(N[n.parent].ja)}（${esc(N[n.parent].rank)}） › ${esc(path(n.id).map(x => N[x]).filter(x => x.rank === "科")[0]?.ja || "")}</p>`;
@@ -897,7 +908,7 @@ function renderZukan() {
   box.innerHTML = `<nav class="zk-crumb" aria-label="系統の道筋">${path(id).slice(0, -1).map(x => `<button data-zk="${x}">${esc(N[x].ja)}</button><span>›</span>`).join("")}</nav>
     <div class="zk-head"><h2>${esc(n.ja)}<span class="sci">${esc(n.sci)}</span></h2>
       <div class="meta"><span class="rank">${esc(n.rank)}</span>${n.polytomy ? `<span class="poly">多分岐</span>` : ""}${n.verify ? `<span class="badge-v">要確認</span>` : ""}<span>収録 ${n.count} 種</span></div>
-      <p>${esc(n.desc)}</p>${n.polytomy ? `<div class="note poly-n"><b>多分岐の理由：</b>${esc(n.polytomy)}</div>` : ""}</div>
+      ${kinLabel(id) ? `<div class="kin-n">${esc(kinLabel(id))}（定着した和名が無いため学名で表示）</div>` : ""}<p>${esc(n.desc)}</p>${n.polytomy ? `<div class="note poly-n"><b>多分岐の理由：</b>${esc(n.polytomy)}</div>` : ""}</div>
     ${cl.length ? `<div class="zk-sec">下位のグループ</div><ul class="zk-list">${cl.map(zkRow).join("")}</ul>` : ""}
     ${sp.length ? `<div class="zk-sec">種</div><ul class="zk-list">${sp.map(zkRow).join("")}</ul>` : ""}`;
 }
