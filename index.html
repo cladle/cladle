@@ -150,6 +150,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .result h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; margin: 0; text-wrap: balance }
 .result { scroll-margin-top: calc(var(--hdr, 96px) + 8px) }
 .result .score { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: -2px 0 0; color: var(--muted); font-size: .85rem }
+.result .score .from { flex-basis: 100% }
 .result .score b { font-family: var(--f-mono); font-size: 1.6rem; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums }
 .result.won .score b { color: var(--accent) }
 .btn.share-btn { width: 100%; min-height: 48px; font-size: 1rem; background: var(--accent); color: var(--surface) }
@@ -191,7 +192,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
   @keyframes pop { 0% { opacity: 0; transform: scale(.6) } 70% { transform: scale(1.15) } 100% { opacity: 1; transform: scale(1) } }
 }
 .result .fact { margin: 0 }
-.share { font-family: var(--f-mono); font-size: .8rem; white-space: pre-wrap; background: var(--bg); border-radius: 8px; padding: 10px; margin: 0; user-select: all }
+.share { font-family: var(--f-mono); font-size: .8rem; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); border-radius: 8px; padding: 10px; margin: 0; user-select: all }
 .row { display: flex; gap: 8px; flex-wrap: wrap }
 .btn { border: 0; border-radius: 8px; padding: 9px 14px; background: var(--ink); color: var(--bg); cursor: pointer; font-weight: 700 }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 400 }
@@ -406,9 +407,15 @@ function dailyNo(day) { const e = D.meta.selection?.dailyEpoch || "2026-10-21"; 
 
 // ---- ゲーム状態 ----
 let G = null, mode = "daily";
-function newGame(m) {
+function newGame(m, code) {
+  const c = m === "shared" ? shareDecode(code) : null;
+  if (m === "shared" && N[c?.t]?.kind !== "species") { newGame("free"); flash("この共有リンクの動物は、今のデータでは開けませんでした（リンクが途中で切れているか、収録種が変わった可能性があります）。", true); return; }
+  if (m !== "shared" && G?.code && /^#(hard\/)?p=/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search + (HARD() ? "#hard" : ""));  // 共有された問題から離れたらリンクの印を消す
   mode = m; $("#flash").hidden = true;  // 前のモードの「新しい手がかりはありません」などを残さない
-  if (m === "daily") {
+  if (m === "shared") {
+    const saved = store.get(KEY("dk-shared"));
+    G = saved && saved.code === code ? saved : { code, from: c, target: c.t, guesses: [], done: false, won: false };
+  } else if (m === "daily") {
     if (due(D)) { location.reload(); return; }  // 開いたまま次の版の日になった
     const day = todayJST(), saved = store.get(KEY("dk-daily"));
     const target = pick(mulberry(hash("metazoa-ja:" + day + ":" + D.meta.datasetVersion)));
@@ -425,7 +432,7 @@ function newGame(m) {
   render();
 }
 function save() {
-  store.set(KEY(mode === "daily" ? "dk-daily" : "dk-free"), { ...G, fresh: null });
+  store.set(KEY({ daily: "dk-daily", free: "dk-free", shared: "dk-shared" }[mode]), { ...G, fresh: null });
   if (mode !== "daily") return;
   if (G.done || G.gAt) STATS.days[G.day] = { w: G.won || G.gAt ? 1 : 0, n: G.gAt || G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.gAt && !G.exact ? { g: 1 } : {}), ...(G.gAt && G.exact ? { s: G.guesses.length - G.gAt } : {}) };
   saveStats();
@@ -469,7 +476,7 @@ setInterval(() => {
 }, 1000);
 
 // プレイ回数を数える（GoatCounter の出来事として送る。読み込めていなければ何もしない）
-const TRACK = { "tab-daily": "タブ：今日の動物", "tab-free": "タブ：フリー", "tab-zukan": "タブ：図鑑", "tab-howto": "タブ：遊び方", "tab-about": "タブ：データ", "zukan-search": "図鑑：検索", "zukan-from-result": "図鑑：結果から開く", "sheet-clade": "詳細：分類群を開く", "sheet-species": "詳細：種を開く", "lookup-wikipedia": "調べる：Wikipedia", "lookup-gbif": "調べる：GBIF", "lookup-image": "調べる：画像検索", "daily-genus": "今日の動物：属でクリア", "free-genus": "フリー：属でクリア", "daily-genusend": "今日の動物：属どまりで終了", "free-genusend": "フリー：属どまりで終了", "daily-reveal": "今日の動物：答えを見る", "free-reveal": "フリー：答えを見る", "daily-hint1": "今日の動物：ヒント1", "daily-hint2": "今日の動物：ヒント2", "free-hint1": "フリー：ヒント1", "free-hint2": "フリー：ヒント2", "free-reset": "フリー：別の問題にする", "level-hard": "ゲキムズに切り替え", "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
+const TRACK = { "tab-daily": "タブ：今日の動物", "tab-free": "タブ：フリー", "tab-zukan": "タブ：図鑑", "tab-howto": "タブ：遊び方", "tab-about": "タブ：データ", "zukan-search": "図鑑：検索", "zukan-from-result": "図鑑：結果から開く", "sheet-clade": "詳細：分類群を開く", "sheet-species": "詳細：種を開く", "lookup-wikipedia": "調べる：Wikipedia", "lookup-gbif": "調べる：GBIF", "lookup-image": "調べる：画像検索", "daily-genus": "今日の動物：属でクリア", "free-genus": "フリー：属でクリア", "daily-genusend": "今日の動物：属どまりで終了", "free-genusend": "フリー：属どまりで終了", "daily-reveal": "今日の動物：答えを見る", "free-reveal": "フリー：答えを見る", "daily-hint1": "今日の動物：ヒント1", "daily-hint2": "今日の動物：ヒント2", "free-hint1": "フリー：ヒント1", "free-hint2": "フリー：ヒント2", "free-reset": "フリー：別の問題にする", "level-hard": "ゲキムズに切り替え", "daily-share-x": "今日の動物：Xでポスト", "free-share-x": "フリー：Xでポスト", "shared-start": "共有された問題：開始", "shared-win": "共有された問題：正解", "shared-lose": "共有された問題：終了（不正解）", "shared-giveup": "共有された問題：降参", "shared-share": "共有された問題：共有", "shared-share-x": "共有された問題：Xでポスト", "shared-genus": "共有された問題：属でクリア", "daily-share": "今日の動物：共有", "free-share": "フリー：共有", "share-visit": "共有から来た人", "daily-giveup": "今日の動物：降参", "free-giveup": "フリー：降参", "daily-start": "今日の動物：開始", "daily-win": "今日の動物：正解", "daily-lose": "今日の動物：終了（不正解）", "free-start": "フリー：開始", "free-win": "フリー：正解", "free-lose": "フリー：終了（不正解）" };
 let zkSearched = false;
 function track(ev) { const h = typeof HARD === "function" && HARD() && ev !== "share-visit"; try { window.goatcounter?.count?.({ path: (h ? "hard-" : "") + ev, title: (h ? "ゲキムズ " : "") + (TRACK[ev] || ev), event: true }); } catch (e) {} }
 if (new URLSearchParams(location.search).get("from") === "share") {
@@ -573,6 +580,7 @@ function act(b) {
 function hintsHTML() {
   if (G.done) return "";
   const n = G.guesses.length, out = [];
+  if (mode === "shared" && !n) out.push(`<p class="hint">📮 共有された動物です。解き終わると、共有した人の回数が見られます。</p>`);
   if (G.gAt) { const k = SP.filter(s => s.parent === N[G.target].parent && !G.guesses.includes(s.id)).length;
     out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
@@ -584,7 +592,7 @@ function hintsHTML() {
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
 
 function render() {
-  $("#modeLabel").textContent = (HARD() ? "ゲキムズ " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : "フリープレイ");
+  $("#modeLabel").textContent = (HARD() ? "ゲキムズ " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : mode === "shared" ? "共有された問題" : "フリープレイ");
   const hunt = G.gAt && !G.done, base = hunt ? G.gAt : 0;
   $("#leftLabel").textContent = hunt ? "種探し 残り" : "残り";
   $("#left").textContent = hunt ? limit() - G.guesses.length : MAX - Math.min(G.guesses.length, MAX);
@@ -781,7 +789,7 @@ function resultHTML() {
   const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}</div>
+    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
@@ -826,12 +834,30 @@ function shareText() {
     const r = N[lca(g, G.target)].depth / (td - 1);
     return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
   });
-  const title = (HARD() ? "Cladle ゲキムズ" : "Cladle") + (mode === "daily" ? ` #${dailyNo(G.day)}` : "（フリー）");
+  const title = (HARD() ? "Cladle ゲキムズ" : "Cladle") + (mode === "daily" ? ` #${dailyNo(G.day)}` : mode === "shared" ? "（共有された問題）" : "（フリー）");
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share${typeof HARD === "function" && HARD() ? "#hard" : ""}`;
+  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (HARD() ? "#hard" : "") : ""}${playLine()}`;
 }
+// ---- 共有された問題：同じ動物で遊べるリンク ----
+const SHARE_KEY = "cladle-share";
+function shareMix(b) { return b.map((v, i) => v ^ SHARE_KEY.charCodeAt(i % SHARE_KEY.length) ^ (i * 37 & 255)); }
+function shareEncode(o) { return btoa(String.fromCharCode(...shareMix(new TextEncoder().encode(JSON.stringify(o))))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
+function shareDecode(c) {
+  try { return JSON.parse(new TextDecoder().decode(shareMix(Uint8Array.from(atob(String(c).replace(/-/g, "+").replace(/_/g, "/")), x => x.charCodeAt(0))))); }
+  catch (e) { return null; }
+}
+function playLine() {
+  if (mode === "daily") return "";
+  const c = shareEncode({ t: G.target, w: G.won ? 1 : 0, n: G.won ? clearN() : G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(HARD() && exactWin() ? { x: G.gAt ? G.guesses.length - G.gAt : 0 } : {}), ...(G.gaveUp ? { g: 1 } : {}) });
+  return `\nこの動物で遊ぶ → https://cladle.github.io/cladle/?from=share#${HARD() ? "hard/" : ""}p=${c}`;
+}
+function sharedFrom(c) {
+  if (!c.w) return c.g ? "降参" : "当てられず";
+  return `${c.n} 回${c.x != null ? `（🎯${c.x ? `種探し ${c.x} 回` : "種まで"}）` : ""}${c.h ? `・💡${c.h}` : ""}`;
+}
+function openShared(code) { setView("free"); newGame("shared", code); }
 
 // ---- 補完 ----
 let sel = -1, cur = [], suggMore = 0;
@@ -1128,7 +1154,9 @@ loadData().then(async data => {
   $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
   $("#demoReplay").onclick = demoPlay;
   const h = location.hash.slice(1).replace(/^hard\/?/, "");
-  setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
+  if (h.startsWith("p=")) openShared(h.slice(2));
+  else setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
+  addEventListener("hashchange", () => { const m = location.hash.match(/^#(hard\/)?p=(.+)$/); if (m && !!m[1] === HARD()) openShared(m[2]); });
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });
