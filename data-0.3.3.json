@@ -6654,10 +6654,17 @@
    "ja": "シリケンイモリ",
    "sci": "Cynops ensicauda",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "アマミシリケンイモリ",
+    "オキナワシリケンイモリ"
+   ],
    "fact": "奄美・沖縄のイモリ。尾が剣のように平たい。",
    "tier": 3,
-   "gbif": 2431863
+   "gbif": 2431863,
+   "subspeciesAliases": [
+    "アマミシリケンイモリ",
+    "オキナワシリケンイモリ"
+   ]
   },
   {
    "id": "axolotl",
