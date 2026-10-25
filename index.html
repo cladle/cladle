@@ -422,7 +422,7 @@ function newGame(m) {
 function save() {
   store.set(KEY(mode === "daily" ? "dk-daily" : "dk-free"), { ...G, fresh: null });
   if (mode !== "daily") return;
-  if (G.done) STATS.days[G.day] = { w: G.won ? 1 : 0, n: G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.won && G.exact === false ? { g: 1 } : {}) };
+  if (G.done || G.gAt) STATS.days[G.day] = { w: G.won || G.gAt ? 1 : 0, n: G.gAt || G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.gAt && !G.exact ? { g: 1 } : {}), ...(G.gAt && G.exact ? { s: G.guesses.length } : {}) };
   saveStats();
 }
 // ---- 成績（今日の動物だけ数える）----
@@ -477,11 +477,14 @@ function guess(id) {
   if (G.guesses.length === 1) track(mode + "-start");
   const L = lca(id, G.target);
   growId = id;
-  if (id === G.target || sameClear(id, G.target)) { G.done = G.won = true; G.exact = id === G.target; celebrate = true; $("#flash").hidden = true; }
+  if (id === G.target) { G.done = G.won = true; G.exact = true; celebrate = true; $("#flash").hidden = true; }
   else {
     const gained = N[L].depth > N[before].depth;
-    flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
-    G.fresh = gained ? L : null;
+    // ゲキムズ：属が当たったらクリア（種名は伏せたまま。続けて種を当てるか、答えを見るかを選べる）
+    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; flash(`同じ属です！ ${G.gAt} 回でクリア。続けて種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
+    else flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
+    if (G.gAt !== G.guesses.length) G.fresh = gained ? L : null;
+    if (G.gAt && G.guesses.length >= MAX) { G.won = true; G.exact = false; }
     if (G.guesses.length >= MAX) { G.done = true; }
   }
   if (G.done) track(mode + (G.won ? "-win" : "-lose"));
@@ -506,6 +509,7 @@ function deepest() { return deepestOf(G.target, G.guesses, G.reveal); }
 // ゲキムズ：答えと同じ属の種を入れたらクリア（種まで同じならぴったり正解）
 function sameClear(a, b) { const r = D.meta.selection?.clearRank; return !!r && N[a].parent === N[b].parent && N[N[b].parent].rank === r; }
 const exactWin = () => G.won && G.exact !== false;
+const clearN = () => G.gAt || G.guesses.length;  // クリアした回数（ゲキムズは属が当たった回）
 // ---- ヒント（推測回数は減らない）----
 // ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
 // ヒント2: 正解への経路で、今わかっている節目より1段深い節目を教える
@@ -537,9 +541,9 @@ function maskFact(id) {
 function actionsHTML() {
   if (G.done) return mode === "free" ? `<button class="btn" data-act="next">次の問題</button>` : "";
   return (mode === "free" ? `<button class="btn ghost" data-act="reset">別の問題にする</button>` : "")
-    + (G.guesses.length ? `<button class="btn ghost" data-act="giveup">降参する</button>` : "");
+    + (G.gAt ? `<button class="btn ghost" data-act="reveal">答えを見る</button>` : G.guesses.length ? `<button class="btn ghost" data-act="giveup">降参する</button>` : "");
 }
-const ACT = { reset: ["別の問題にする", "もう一度押すと別の問題へ"], giveup: ["降参する", "もう一度押すと降参"] };
+const ACT = { reset: ["別の問題にする", "もう一度押すと別の問題へ"], giveup: ["降参する", "もう一度押すと降参"], reveal: ["答えを見る", "もう一度押すと答えを表示"] };
 function act(b) {
   const k = b.dataset.act;
   if (k === "next") { store.set(KEY("dk-free"), null); newGame("free"); return; }
@@ -550,12 +554,14 @@ function act(b) {
   }
   if (k === "reset") { store.set(KEY("dk-free"), null); newGame("free"); return; }
   if (G.done) return;
+  if (k === "reveal") { G.done = G.won = true; G.exact = false; G.fresh = null; $("#flash").hidden = true; save(); render(); return; }
   G.done = true; G.won = false; G.gaveUp = true; track(mode + "-giveup"); G.fresh = null; $("#flash").hidden = true;
   save(); render();
 }
 function hintsHTML() {
   if (G.done) return "";
   const n = G.guesses.length, out = [];
+  if (G.gAt) out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。残りの回数で種まで当てると 🎯。</p>`);
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
   else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
   if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
@@ -749,10 +755,10 @@ function cladeBtn(n) {
 }
 function resultHTML() {
   const t = N[G.target];
-  const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)}`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
+  const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="score"><span><b>${G.won ? G.guesses.length : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${exactWin() ? "🎯 種までぴったり" : `✅ ${esc(N[G.guesses[G.guesses.length - 1]].ja)} で属が一致`}</span>` : ""}</div>
+    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? `🎯 種は ${G.guesses.length} 回` : ""}</span>` : ""}</div>
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
@@ -793,7 +799,7 @@ function shareText() {
   const td = N[G.target].depth;
   const marks = G.guesses.map(g => {
     if (g === G.target) return "🎯";
-    if (G.won && sameClear(g, G.target)) return "✅";
+    if (sameClear(g, G.target)) return "✅";
     const r = N[lca(g, G.target)].depth / (td - 1);
     return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
   });
@@ -801,7 +807,7 @@ function shareText() {
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? G.guesses.length : "×"}/${MAX}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share${typeof HARD === "function" && HARD() ? "#hard" : ""}`;
+  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${G.gAt && exactWin() ? `  🎯${G.guesses.length}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}\nhttps://cladle.github.io/cladle/?from=share${typeof HARD === "function" && HARD() ? "#hard" : ""}`;
 }
 
 // ---- 補完 ----
@@ -960,7 +966,7 @@ function hardHowto() {
   const s = D.meta.selection;
   return `<section class="hard-rule"><h2>ゲキムズモード（試作）</h2><ul>
     <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
-    <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）。種までぴったりなら 🎯 です。</li>
+    <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）です。答えの種名はまだ出ないので、続けて種まで当てると 🎯、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
     <li>推測は ${MAX} 回まで。ヒントは ふつうモードと同じです。</li>
     <li>答えは門ごとに偏りを抑えて選び、よく知られた種ほど出やすくしています。</li>
     <li>和名のない属や科は学名で表示します。</li></ul></section>`;
@@ -1064,7 +1070,7 @@ function applyLevel() {
   $("#level").setAttribute("aria-pressed", h);
   document.documentElement.classList.toggle("hard", h);
   $("#levelNote").hidden = !h;
-  if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属を当てればクリア。`;
+  if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
