@@ -1715,4 +1715,20 @@ edit("deuterostomia", ja="新口動物（後口動物）")
 edit("protostomia", ja="旧口動物（前口動物）",
      polytomy="毛顎動物は旧口動物の中の位置が定まっていない（顎口動物などと近いとする解析もある）ため、ここでは三分岐で示す。")
 edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・有顎動物など。")
-META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）
+# 足りない門を戻す（作者の指定、2026-10-27「必死に探して」）。和名は Web・GBIF・iNaturalist・Wikidata で探し直したもの。
+# 3種とも学術的な和名の出典は未確認なので verify を付ける。顎口動物・直泳動物は和名のある種が見つからない。
+C("loricifera", "scalidophora", "胴甲動物門", "Loricifera", "門", "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。")
+R("shinkaishiwakouramushi", "loricifera", "シンカイシワコウラムシ", "Pliciloricus hadalis",
+  "伊豆・小笠原海溝の水深8,260 mの海底から1988年に記載された胴甲動物。日本から初めて記載された胴甲動物。",
+  ["コウラムシ"], v={"ja": "和名の出典は日本語版ウィキペディアのみ（学術的な出典は未確認）"})
+C("micrognathozoa", "gnathifera", "微顎動物門", "Micrognathozoa", "門", "2000年に記載された門。複雑なあごをもつ0.1 mmほどの淡水の動物。")
+R("koagomushi", "micrognathozoa", "コアゴムシ", "Limnognathia maerski",
+  "グリーンランドのディスコ島の冷たい湧き水で1994年に見つかり、2000年に記載された微小な動物。この種のために微顎動物門が設けられた。",
+  v={"ja": "和名の出典は GBIF（Catalogue of Life）と iNaturalist（学術的な出典は未確認）"})
+C("cycliophora", "lophotrochozoa", "有輪動物門", "Cycliophora", "門", "1995年に記載された門。アカザエビ類の口器に付着してくらす。")
+R("pandoramushi", "cycliophora", "パンドラムシ", "Symbion pandora",
+  "ヨーロッパアカザエビの口のまわりの毛に付着してくらす、1 mmに満たない動物。1995年に記載され、この種のために有輪動物門が設けられた。",
+  v={"ja": "和名の出典は日本語版ウィキペディアと大学の研究室の発信（学術的な出典は未確認）"})
+for _id in ("shinkaishiwakouramushi", "koagomushi", "pandoramushi"):
+    _find(_id)["tier"] = 4
+META["datasetVersion"] = "0.3.11"  # 足りない門の3種（胴甲・微顎・有輪）を戻す。前の版 0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）

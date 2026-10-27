@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.10",
+  "datasetVersion": "0.3.11",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
@@ -2458,6 +2458,30 @@
    "sci": "Onychophora",
    "rank": "門",
    "desc": "カギムシ。粘液を発射して獲物を捕らえる。南半球と熱帯に分布。"
+  },
+  {
+   "id": "loricifera",
+   "parent": "scalidophora",
+   "ja": "胴甲動物門",
+   "sci": "Loricifera",
+   "rank": "門",
+   "desc": "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。"
+  },
+  {
+   "id": "micrognathozoa",
+   "parent": "gnathifera",
+   "ja": "微顎動物門",
+   "sci": "Micrognathozoa",
+   "rank": "門",
+   "desc": "2000年に記載された門。複雑なあごをもつ0.1 mmほどの淡水の動物。"
+  },
+  {
+   "id": "cycliophora",
+   "parent": "lophotrochozoa",
+   "ja": "有輪動物門",
+   "sci": "Cycliophora",
+   "rank": "門",
+   "desc": "1995年に記載された門。アカザエビ類の口器に付着してくらす。"
   }
  ],
  "species": [
@@ -11593,6 +11617,48 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "ウミクワガタの仲間。幼生は魚の血を吸い、成体の雄はクワガタのような大あごをもち、複数の雌を囲うハーレムをつくる。",
+   "tier": 4
+  },
+  {
+   "id": "shinkaishiwakouramushi",
+   "parent": "loricifera",
+   "ja": "シンカイシワコウラムシ",
+   "sci": "Pliciloricus hadalis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "伊豆・小笠原海溝の水深8,260 mの海底から1988年に記載された胴甲動物。日本から初めて記載された胴甲動物。",
+   "verify": {
+    "ja": "和名の出典は日本語版ウィキペディアのみ（学術的な出典は未確認）"
+   },
+   "tier": 4,
+   "groups": [
+    "コウラムシ"
+   ]
+  },
+  {
+   "id": "koagomushi",
+   "parent": "micrognathozoa",
+   "ja": "コアゴムシ",
+   "sci": "Limnognathia maerski",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "グリーンランドのディスコ島の冷たい湧き水で1994年に見つかり、2000年に記載された微小な動物。この種のために微顎動物門が設けられた。",
+   "verify": {
+    "ja": "和名の出典は GBIF（Catalogue of Life）と iNaturalist（学術的な出典は未確認）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "pandoramushi",
+   "parent": "cycliophora",
+   "ja": "パンドラムシ",
+   "sci": "Symbion pandora",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ヨーロッパアカザエビの口のまわりの毛に付着してくらす、1 mmに満たない動物。1995年に記載され、この種のために有輪動物門が設けられた。",
+   "verify": {
+    "ja": "和名の出典は日本語版ウィキペディアと大学の研究室の発信（学術的な出典は未確認）"
+   },
    "tier": 4
   }
  ]
