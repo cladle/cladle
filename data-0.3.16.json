@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.15",
+  "datasetVersion": "0.3.16",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
@@ -6824,7 +6824,8 @@
    "jaStatus": "standard",
    "aliases": [
     "ウーパールーパー",
-    "アホロートル"
+    "アホロートル",
+    "メキシコサラマンダー"
    ],
    "fact": "幼生の姿のまま成熟する。ウーパールーパーの名で知られる。再生研究に使われ、2018年に読まれたゲノムは約320億塩基対とヒトの10倍以上ある。",
    "tier": 1,
@@ -6836,9 +6837,14 @@
    "ja": "ニシゴリラ",
    "sci": "Gorilla gorilla",
    "jaStatus": "common",
-   "aliases": [],
+   "aliases": [
+    "ニシローランドゴリラ"
+   ],
    "fact": "最大級の霊長類。",
    "tier": 1,
+   "subspeciesAliases": [
+    "ニシローランドゴリラ"
+   ],
    "gbif": 2436441
   },
   {
@@ -7097,12 +7103,17 @@
    "ja": "キリン",
    "sci": "Giraffa camelopardalis",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "アミメキリン"
+   ],
    "fact": "首の骨の数はヒトと同じ7個。",
    "verify": {
     "sci": "複数種に分ける提案がある"
    },
    "tier": 1,
+   "subspeciesAliases": [
+    "アミメキリン"
+   ],
    "gbif": 2441205
   },
   {
@@ -11408,7 +11419,7 @@
    "sci": "Glaucus atlanticus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。",
+   "fact": "海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。英語では blue dragon（青いドラゴン）と呼ばれる。",
    "tier": 3
   },
   {
@@ -12731,6 +12742,245 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "体じゅうにとげが生えた小さなハムシ。トゲハムシの仲間は昔「トゲトゲ」と呼ばれ、とげのない「トゲナシトゲトゲ」、その中でとげのある「トゲアリトゲナシトゲトゲ」という呼び名も生まれた。",
+   "tier": 3
+  },
+  {
+   "id": "meerkat",
+   "parent": "feliformia",
+   "ja": "ミーアキャット",
+   "sci": "Suricata suricatta",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ南部の乾いた土地で群れをつくって暮らすマングースの仲間。見張り役が後ろ足で立って周りを警戒する。",
+   "tier": 1
+  },
+  {
+   "id": "mitsuobiarumajiro",
+   "parent": "xenarthra",
+   "ja": "ミツオビアルマジロ",
+   "sci": "Tolypeutes tricinctus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ブラジルにすむアルマジロ。危険を感じると体をボールのように丸めて身を守る。",
+   "tier": 3
+  },
+  {
+   "id": "erimakitokage",
+   "parent": "squamata",
+   "ja": "エリマキトカゲ",
+   "sci": "Chlamydosaurus kingii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリアなどにすむトカゲ。驚くと首のまわりのえりを大きく広げ、後ろ足で立って走る。",
+   "tier": 1
+  },
+  {
+   "id": "jacksonchameleon",
+   "parent": "squamata",
+   "ja": "ジャクソンカメレオン",
+   "sci": "Trioceros jacksonii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雄の頭に3本の角があるカメレオン。東アフリカの山地にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "okikurage",
+   "parent": "scyphozoa",
+   "ja": "オキクラゲ",
+   "sci": "Pelagia noctiluca",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "沖合を漂う紫がかったクラゲ。刺されると強く痛む。刺激を受けると光る。",
+   "tier": 3
+  },
+  {
+   "id": "boa",
+   "parent": "serpentes",
+   "ja": "ボアコンストリクター",
+   "sci": "Boa constrictor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中南米にすむ大型のヘビ。毒はなく、獲物に巻きついて締めつけて捕らえる。",
+   "tier": 2
+  },
+  {
+   "id": "darumawashi",
+   "parent": "accipitridae",
+   "ja": "ダルマワシ",
+   "sci": "Terathopius ecaudatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカの草原にすむワシ。尾がとても短く、赤い顔をしている。",
+   "tier": 4
+  },
+  {
+   "id": "ajiazou",
+   "parent": "afrotheria",
+   "ja": "アジアゾウ",
+   "sci": "Elephas maximus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "インドや東南アジアにすむゾウ。アフリカのゾウより耳が小さい。",
+   "tier": 1
+  },
+  {
+   "id": "yotsuyubiharinezumi",
+   "parent": "eulipotyphla",
+   "ja": "ヨツユビハリネズミ",
+   "sci": "Atelerix albiventris",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカにすむハリネズミ。ペットとして飼われるハリネズミの多くはこの種がもと。",
+   "tier": 2
+  },
+  {
+   "id": "nishiindomanatee",
+   "parent": "afrotheria",
+   "ja": "ニシインドマナティー",
+   "sci": "Trichechus manatus",
+   "jaStatus": "standard",
+   "aliases": [
+    "アメリカマナティー"
+   ],
+   "fact": "アメリカ南部やカリブ海の暖かい浅い海や川にすむ、海草などを食べる哺乳類。ゾウに近い仲間。",
+   "tier": 2
+  },
+  {
+   "id": "fukuromomonga",
+   "parent": "marsupialia",
+   "ja": "フクロモモンガ",
+   "sci": "Petaurus breviceps",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリアなどにすむ有袋類。前足と後ろ足の間の膜を広げて木から木へ滑空する。",
+   "tier": 2
+  },
+  {
+   "id": "musasabi",
+   "parent": "rodentia",
+   "ja": "ムササビ",
+   "sci": "Petaurista leucogenys",
+   "jaStatus": "standard",
+   "aliases": [
+    "ホオジロムササビ"
+   ],
+   "fact": "日本の森にすむ大型のリスの仲間。夜に、前足と後ろ足の間の膜を広げて木から木へ滑空する。",
+   "tier": 1
+  },
+  {
+   "id": "alpaca",
+   "parent": "artiodactyla",
+   "ja": "アルパカ",
+   "sci": "Vicugna pacos",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカのアンデスで、毛をとるために家畜化されたラクダの仲間。",
+   "verify": {
+    "ja": "家畜のため世界哺乳類標準和名リストには無く、和名は Wikidata のみ"
+   },
+   "tier": 1
+  },
+  {
+   "id": "americawashimimizuku",
+   "parent": "strigiformes",
+   "ja": "アメリカワシミミズク",
+   "sci": "Bubo virginianus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南北アメリカに広くすむ大型のフクロウ。頭に耳のような羽角がある。",
+   "tier": 3
+  },
+  {
+   "id": "hashibirokou",
+   "parent": "pelecaniformes",
+   "ja": "ハシビロコウ",
+   "sci": "Balaeniceps rex",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカの湿地にすむ大きな鳥。木靴のような太いくちばしで、肺魚などを捕らえる。何時間もじっと動かないことで知られる。",
+   "tier": 1
+  },
+  {
+   "id": "minamiamericaottosei",
+   "parent": "pinnipedia",
+   "ja": "ミナミアメリカオットセイ",
+   "sci": "Arctocephalus australis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカの海岸にすむオットセイ。",
+   "tier": 3
+  },
+  {
+   "id": "kobitokaba",
+   "parent": "whippomorpha",
+   "ja": "コビトカバ",
+   "sci": "Choeropsis liberiensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "西アフリカの森にすむ小型のカバ。体重はカバの10分の1ほど。",
+   "tier": 2
+  },
+  {
+   "id": "kotsumekawauso",
+   "parent": "mustelidae",
+   "ja": "コツメカワウソ",
+   "sci": "Aonyx cinereus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアなどにすむ小型のカワウソ。爪が小さく、器用な前足で貝やカニを探して食べる。",
+   "tier": 1
+  },
+  {
+   "id": "chinanago",
+   "parent": "anguilliformes",
+   "ja": "チンアナゴ",
+   "sci": "Heteroconger hassi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂に穴を掘って体の後ろ半分を埋め、海中に体を伸ばして流れてくるプランクトンを食べる。群れで暮らす。",
+   "tier": 1
+  },
+  {
+   "id": "akameamagaeru",
+   "parent": "anura",
+   "ja": "アカメアマガエル",
+   "sci": "Agalychnis callidryas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中米の森にすむ、赤い目と緑の体のアマガエル。",
+   "tier": 2
+  },
+  {
+   "id": "rurikongouinko",
+   "parent": "psittaciformes",
+   "ja": "ルリコンゴウインコ",
+   "sci": "Ara ararauna",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中が青、お腹が黄色の大型のインコ。南アメリカの森にすむ。",
+   "tier": 2
+  },
+  {
+   "id": "kongouinko",
+   "parent": "psittaciformes",
+   "ja": "コンゴウインコ",
+   "sci": "Ara macao",
+   "jaStatus": "standard",
+   "aliases": [
+    "アカコンゴウインコ"
+   ],
+   "fact": "赤・黄・青の羽をもつ大型のインコ。中南米の森にすむ。",
+   "tier": 2
+  },
+  {
+   "id": "nihonusagikoumori",
+   "parent": "chiroptera",
+   "ja": "ニホンウサギコウモリ",
+   "sci": "Plecotus sacrimontis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ウサギのように長い耳をもつ日本のコウモリ。森にすみ、木のうろなどをねぐらにする。",
    "tier": 3
   }
  ]

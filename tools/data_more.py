@@ -1857,4 +1857,35 @@ R("katabirotogehamushi", "coleoptera", "カタビロトゲハムシ", "Dactylisp
 for _id, _t in {"onidarumaokoze": 3, "ubazame": 2, "shirowani": 3, "umitengu": 4, "mongarakawahagi": 3, "toraeutsubo": 3, "chouchouuo": 2, "honsomewakebera": 3, "onikamasu": 3, "yamatomeribe": 4, "hadakazoukurage": 4, "kochouumiushi": 4, "tsumetagai": 3, "kinchakugani": 3, "tainoe": 3, "sakasakurage": 3, "amigasakurage": 4, "nichirinhitode": 4, "yumenamako": 4, "manhattanboya": 4, "oosarupa": 4, "goisagi": 3, "harimogura": 2, "hadakadebanezumi": 2, "minamikoarikui": 3, "aiai": 2, "tsuchibuta": 3, "ogurop": 2, "himearumajiro": 4, "mimisenzankou": 3, "hebikuiwashi": 3, "wanigame": 2, "amefukuragaeru": 3, "leafyseadragon": 3, "miideragomimushi": 3, "douganebuibui": 3, "samuraiari": 3, "mansonjuuketsukyuuchuu": 4, "silverarowana": 3, "tsunozemi": 3, "tamamushi": 2, "hanmyou": 2, "maimaikaburi": 3, "kokuwagata": 2, "koganemushi": 2, "oosenchikogane": 3, "ruriboshikamikiri": 3, "shirosujikamikiri": 3, "nijuuyahoshitentou": 3, "himekurootoshibumi": 4, "oohiratashidemushi": 4, "sabikikori": 4, "kimunekumabachi": 2, "satojigabachi": 4, "namihanaabu": 3, "kiriujigaganbo": 3, "onbubatta": 2, "kubikirigisu": 3, "kutsuwamushi": 2, "matsumushi": 2, "aomatsumushi": 3, "niiniizemi": 2, "kuroageha": 2, "tsumagurohyoumon": 2, "ruritateha": 2, "oogomadara": 2, "benishijimi": 2, "ichimonjiseseri": 3, "oosukashiba": 3, "oomizuao": 3, "yamatoshijimi_b": 2, "katabirotogehamushi": 3}.items():
     _find(_id)["tier"] = _t
 
-META["datasetVersion"] = "0.3.15"  # へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
+# 作者の指定（2026-10-27）。哺乳類は世界哺乳類標準和名リスト2021年度版の和名、ほかは check/picks25/。
+_find("kirin").setdefault("subspeciesAliases", []).append("アミメキリン"); _find("kirin")["aliases"].append("アミメキリン")
+_find("gorilla").setdefault("subspeciesAliases", []).append("ニシローランドゴリラ"); _find("gorilla")["aliases"].append("ニシローランドゴリラ")
+_find("axolotl")["aliases"].append("メキシコサラマンダー")
+edit("aominoumiushi", fact="海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。英語では blue dragon（青いドラゴン）と呼ばれる。")
+R("meerkat", "feliformia", "ミーアキャット", "Suricata suricatta", "アフリカ南部の乾いた土地で群れをつくって暮らすマングースの仲間。見張り役が後ろ足で立って周りを警戒する。")
+R("mitsuobiarumajiro", "xenarthra", "ミツオビアルマジロ", "Tolypeutes tricinctus", "ブラジルにすむアルマジロ。危険を感じると体をボールのように丸めて身を守る。")
+R("erimakitokage", "squamata", "エリマキトカゲ", "Chlamydosaurus kingii", "オーストラリアなどにすむトカゲ。驚くと首のまわりのえりを大きく広げ、後ろ足で立って走る。")
+R("jacksonchameleon", "squamata", "ジャクソンカメレオン", "Trioceros jacksonii", "雄の頭に3本の角があるカメレオン。東アフリカの山地にすむ。")
+R("okikurage", "scyphozoa", "オキクラゲ", "Pelagia noctiluca", "沖合を漂う紫がかったクラゲ。刺されると強く痛む。刺激を受けると光る。")
+R("boa", "serpentes", "ボアコンストリクター", "Boa constrictor", "中南米にすむ大型のヘビ。毒はなく、獲物に巻きついて締めつけて捕らえる。")
+R("darumawashi", "accipitridae", "ダルマワシ", "Terathopius ecaudatus", "アフリカの草原にすむワシ。尾がとても短く、赤い顔をしている。")
+R("ajiazou", "afrotheria", "アジアゾウ", "Elephas maximus", "インドや東南アジアにすむゾウ。アフリカのゾウより耳が小さい。")
+R("yotsuyubiharinezumi", "eulipotyphla", "ヨツユビハリネズミ", "Atelerix albiventris", "アフリカにすむハリネズミ。ペットとして飼われるハリネズミの多くはこの種がもと。")
+R("nishiindomanatee", "afrotheria", "ニシインドマナティー", "Trichechus manatus", "アメリカ南部やカリブ海の暖かい浅い海や川にすむ、海草などを食べる哺乳類。ゾウに近い仲間。", ["アメリカマナティー"])
+R("fukuromomonga", "marsupialia", "フクロモモンガ", "Petaurus breviceps", "オーストラリアなどにすむ有袋類。前足と後ろ足の間の膜を広げて木から木へ滑空する。")
+R("musasabi", "rodentia", "ムササビ", "Petaurista leucogenys", "日本の森にすむ大型のリスの仲間。夜に、前足と後ろ足の間の膜を広げて木から木へ滑空する。", ["ホオジロムササビ"])
+R("alpaca", "artiodactyla", "アルパカ", "Vicugna pacos", "南アメリカのアンデスで、毛をとるために家畜化されたラクダの仲間。", v={"ja": "家畜のため世界哺乳類標準和名リストには無く、和名は Wikidata のみ"})
+R("americawashimimizuku", "strigiformes", "アメリカワシミミズク", "Bubo virginianus", "南北アメリカに広くすむ大型のフクロウ。頭に耳のような羽角がある。")
+R("hashibirokou", "pelecaniformes", "ハシビロコウ", "Balaeniceps rex", "アフリカの湿地にすむ大きな鳥。木靴のような太いくちばしで、肺魚などを捕らえる。何時間もじっと動かないことで知られる。")
+R("minamiamericaottosei", "pinnipedia", "ミナミアメリカオットセイ", "Arctocephalus australis", "南アメリカの海岸にすむオットセイ。")
+R("kobitokaba", "whippomorpha", "コビトカバ", "Choeropsis liberiensis", "西アフリカの森にすむ小型のカバ。体重はカバの10分の1ほど。")
+R("kotsumekawauso", "mustelidae", "コツメカワウソ", "Aonyx cinereus", "東南アジアなどにすむ小型のカワウソ。爪が小さく、器用な前足で貝やカニを探して食べる。")
+R("chinanago", "anguilliformes", "チンアナゴ", "Heteroconger hassi", "砂に穴を掘って体の後ろ半分を埋め、海中に体を伸ばして流れてくるプランクトンを食べる。群れで暮らす。")
+R("akameamagaeru", "anura", "アカメアマガエル", "Agalychnis callidryas", "中米の森にすむ、赤い目と緑の体のアマガエル。")
+R("rurikongouinko", "psittaciformes", "ルリコンゴウインコ", "Ara ararauna", "背中が青、お腹が黄色の大型のインコ。南アメリカの森にすむ。")
+R("kongouinko", "psittaciformes", "コンゴウインコ", "Ara macao", "赤・黄・青の羽をもつ大型のインコ。中南米の森にすむ。", ["アカコンゴウインコ"])
+R("nihonusagikoumori", "chiroptera", "ニホンウサギコウモリ", "Plecotus sacrimontis", "ウサギのように長い耳をもつ日本のコウモリ。森にすみ、木のうろなどをねぐらにする。")
+for _id, _t in {"meerkat": 1, "mitsuobiarumajiro": 3, "erimakitokage": 1, "jacksonchameleon": 3, "okikurage": 3, "boa": 2, "darumawashi": 4, "ajiazou": 1, "yotsuyubiharinezumi": 2, "nishiindomanatee": 2, "fukuromomonga": 2, "musasabi": 1, "alpaca": 1, "americawashimimizuku": 3, "hashibirokou": 1, "minamiamericaottosei": 3, "kobitokaba": 2, "kotsumekawauso": 1, "chinanago": 1, "akameamagaeru": 2, "rurikongouinko": 2, "kongouinko": 2, "nihonusagikoumori": 3}.items():
+    _find(_id)["tier"] = _t
+
+META["datasetVersion"] = "0.3.16"  # 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
