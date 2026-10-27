@@ -46,17 +46,17 @@ function render() {
   $("#result").innerHTML = G.done ? resultHTML() : "";
   if (celebrate) {
     celebrate = false;
-    const r = $("#result .result"), still = matchMedia("(prefers-reduced-motion: reduce)").matches, wait = still ? 0 : treeHTML.animEnd + .3;
+    const r = $("#result .result"), still = matchMedia("(prefers-reduced-motion: reduce)").matches, wait = still ? 0 : treeHTML.animEnd + .6;  // 答えの名前が跳ね終わってから「正解！」と結果を出す
     if (r) { r.classList.add("celebrate"); r.style.animationDelay = wait + "s"; }
     const msg = exactWin() ? `正解！ ${N[G.target].ja} でした。` : `属まで正解！ 答えは ${N[G.target].ja} でした。`;
-    if (still) flash(msg); else setTimeout(() => { if (G.won) flash(msg); }, (wait - .3) * 1000);
+    if (still) flash(msg); else setTimeout(() => { if (G.won) flash(msg); }, wait * 1000);
     // 枝が根元から答えの種まで伸びるのを見られるよう、答えの種を画面の真ん中に持ってくる（スマホはキーボードが閉じるのを待つ）
     setTimeout(() => {
       const a = $(`#board text.tl[data-id="${G.target}"]`); if (!a) return;
       const ra = a.getBoundingClientRect(), vh = visualViewport?.height || innerHeight, hb = $("header").getBoundingClientRect().bottom;
       scrollBy({ top: (ra.top + ra.bottom) / 2 - (hb + vh) / 2, behavior: still ? "auto" : "smooth" });  // 上のタブの下から画面の下までの真ん中
     }, matchMedia("(pointer: coarse)").matches ? 300 : 0);
-    setTimeout(() => r?.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" }), wait * 1000 + 500);
+    setTimeout(() => r?.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" }), wait * 1000 + (still ? 500 : 1200));
   }
 }
 function deepestOf(target, guesses, reveal) {
@@ -126,9 +126,9 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
   let lines = "", nodes = "", texts = "";
   // 伸ばす枝：前回の図に無かった枝のうち、推測した動物へ続くものと、新しくできた分かれ目から出るもの。
   // 伸ばす枝より先にある枝も一緒に伸ばし直す（途中で浮いて見えないように）。正解時は木全体を根から伸ばす
-  const G2 = opt.grow, edges = new Set(), DUR = G2?.fast ? .22 : opt.win ? .5 : .55, STEP = DUR;  // 枝は一本ずつ順に（前の枝が届いてから次が伸びる）
+  const G2 = opt.grow, edges = new Set(), DUR = G2?.fast ? .22 : opt.win ? .5 : .55;  // 枝は一本ずつ順に（前の枝が届いてから次が伸びる）
   const onGrow = id => !!G2 && (id === G2.id || T[id].ch.some(onGrow));
-  const animE = new Map(), late = new Map();  // 枝 → 伸び始める時刻、点 → 枝が届く時刻
+  const animE = new Map(), late = new Map(), dur = new Map();  // 枝 → 伸び始める時刻、点 → 枝が届く時刻
   if (G2) {
     const prevNodes = new Set(); for (const e of G2.prev) e.split(">").forEach(x => prevNodes.add(x));
     const mark = (id, inh) => { for (const c of T[id].ch) {
@@ -136,7 +136,9 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
       if (a) animE.set(key, T[id].d); mark(c, a); } };
     mark(D.root, false);
     const base = Math.min(...animE.values());
-    for (const [k, d] of animE) { const t = (d - base) * STEP; animE.set(k, t); late.set(k.split(">")[1], t + DUR); }
+    // 正解時は根元から答えへ向かって、だんだん速く伸ばす
+    const sp = i => opt.win ? DUR * Math.max(.3, Math.pow(.86, i)) : DUR, at = i => { let t = 0; for (let j = 0; j < i; j++) t += sp(j); return t; };
+    for (const [k, d] of animE) { const i = d - base, t = at(i); animE.set(k, t); late.set(k.split(">")[1], t + sp(i)); dur.set(k, sp(i)); }
   }
   const animEnd = Math.max(0, ...late.values());
   // 点・名前は枝が届いてから出す
@@ -146,7 +148,7 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     for (const c of n.ch) {
       const k = T[c], cls = c === Q ? "ln goal" : on(c) ? "ln on" : "ln";
       const key = n.id + ">" + c; edges.add(key);
-      const t0 = animE.get(key), ga = t0 == null ? "" : `${c === Q ? "" : ' pathLength="1"'} style="animation-delay:${t0.toFixed(2)}s"`;
+      const t0 = animE.get(key), ga = t0 == null ? "" : `${c === Q ? "" : ' pathLength="1"'} style="animation-delay:${t0.toFixed(2)}s${opt.win ? `;animation-duration:${dur.get(key).toFixed(2)}s` : ""}"`;
       lines += `<path class="${cls}${ga ? (c === Q ? " fade" : " grow") : ""}"${ga} d="M${n.x},${n.y} V${k.y} H${k.x - 4}"/>`;
     }
   }
