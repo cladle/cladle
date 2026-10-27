@@ -46,6 +46,8 @@ function wire() {
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
   let zkT; $("#zkq").addEventListener("input", e => { clearTimeout(zkT); zkT = setTimeout(() => { ZKQ = e.target.value.trim(); renderZukan(); if (ZKQ && !zkSearched) { zkSearched = true; track("zukan-search"); } }, 200); });
+  // 残り回数の行が上のタブの裏に隠れたら、固定した入力欄の右端に残り回数を出す
+  new IntersectionObserver(([e]) => $(".inputbox").classList.toggle("hidleft", !e.isIntersecting && e.boundingClientRect.top < innerHeight / 2), { rootMargin: `-${$("header").offsetHeight}px 0px 0px 0px` }).observe($(".status"));
   const setHdr = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
   setHdr(); addEventListener("resize", setHdr);
 }
