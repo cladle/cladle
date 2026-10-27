@@ -2450,6 +2450,14 @@
    "sci": "Nematomorpha",
    "rank": "門",
    "desc": "幼生は昆虫などに寄生し、成体は水中で暮らす。"
+  },
+  {
+   "id": "onychophora",
+   "parent": "panarthropoda",
+   "ja": "有爪動物門",
+   "sci": "Onychophora",
+   "rank": "門",
+   "desc": "カギムシ。粘液を発射して獲物を捕らえる。南半球と熱帯に分布。"
   }
  ],
  "species": [
@@ -11387,6 +11395,186 @@
     "オオヒシクイ"
    ],
    "tier": 4
+  },
+  {
+   "id": "sunaisoginchaku",
+   "parent": "actiniaria",
+   "ja": "スナイソギンチャク",
+   "sci": "Dofleinia armata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂泥底にすむ大型のイソギンチャク。刺されると強く痛み、ひどく腫れることがある。",
+   "tier": 4
+  },
+  {
+   "id": "greenhydra",
+   "parent": "hydrozoa",
+   "ja": "グリーンヒドラ",
+   "sci": "Hydra viridissima",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "淡水にすむヒドラ。体の細胞の中に緑藻（クロレラの仲間）をすまわせていて、緑色に見える。",
+   "verify": {
+    "ja": "和名の出典は iNaturalist と教育・研究の資料"
+   },
+   "tier": 3
+  },
+  {
+   "id": "shirogaya",
+   "parent": "hydrozoa",
+   "ja": "シロガヤ",
+   "sci": "Aglaophenia whiteleggei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鳥の羽のような形の群体をつくるヒドロ虫。触れると刺されて痛む。",
+   "tier": 4
+  },
+  {
+   "id": "togarisarupa",
+   "parent": "tunicata",
+   "ja": "トガリサルパ",
+   "sci": "Salpa fusiformis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海を漂う透明な樽形のホヤの仲間（サルパ）。1匹で暮らす世代と、鎖のようにつながる世代を交互に繰り返す。",
+   "tier": 3
+  },
+  {
+   "id": "ootarumawashi",
+   "parent": "malacostraca",
+   "ja": "オオタルマワシ",
+   "sci": "Phronima sedentaria",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明なヨコエビの仲間。サルパなどの体をくり抜いて樽を作り、その中で子を育てる。",
+   "tier": 4
+  },
+  {
+   "id": "mukademeribe",
+   "parent": "heterobranchia",
+   "ja": "ムカデメリベ",
+   "sci": "Melibe viridis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "頭の大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。",
+   "tier": 4
+  },
+  {
+   "id": "udefuritsunozayaumiushi",
+   "parent": "heterobranchia",
+   "ja": "ウデフリツノザヤウミウシ",
+   "sci": "Thecacera pacifica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黄色い体に青や橙の模様がある小さなウミウシ。その姿から「ピカチュウウミウシ」の愛称で呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "tamanomidorigai",
+   "parent": "heterobranchia",
+   "ja": "タマノミドリガイ",
+   "sci": "Edenttellina limax",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "巻貝の仲間なのに、二枚貝のような2枚の殻をもつ。緑色で、海藻の上で暮らす。",
+   "verify": {
+    "ja": "和名の出典は iNaturalist のみ"
+   },
+   "tier": 4
+  },
+  {
+   "id": "gaikotsupandahoya",
+   "parent": "tunicata",
+   "ja": "ガイコツパンダホヤ",
+   "sci": "Clavelina ossipandae",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "沖縄の久米島で見つかり、2024年に新種として記載されたホヤ。パンダの顔のような黒い模様と骨のような白い筋があり、パンダボヤとも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "ultramanboya",
+   "parent": "tunicata",
+   "ja": "ウルトラマンボヤ",
+   "sci": "Pycnoclavella diminuta",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小さな群体をつくるホヤ。一つ一つの個体の模様がウルトラマンの顔に似ていることから呼ばれる。",
+   "verify": {
+    "ja": "和名は仮称（CoL・iNaturalist）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "sukumiringogai",
+   "parent": "caenogastropoda",
+   "ja": "スクミリンゴガイ",
+   "sci": "Pomacea canaliculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南米原産の淡水の巻貝。食用に持ち込まれて野生化し、水田のイネを食べる害貝になった。ジャンボタニシとも呼ばれるが、タニシの仲間ではない。",
+   "tier": 2
+  },
+  {
+   "id": "monhanashako",
+   "parent": "malacostraca",
+   "ja": "モンハナシャコ",
+   "sci": "Odontodactylus scyllarus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "色鮮やかなシャコ。こん棒のような捕脚で、貝殻を割るほど強く打ちつける。",
+   "tier": 2
+  },
+  {
+   "id": "onimuchouuzumushi",
+   "parent": "xenacoelomorpha",
+   "ja": "オニムチョウウズムシ",
+   "sci": "Amphiscolops oni",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "2022年に新種として記載された小さな無腸類。背中に鬼の角のような長い突起がある。",
+   "verify": {
+    "ja": "和名の出典は記載した研究者の発表（筑波大学、2022）と iNaturalist"
+   },
+   "tier": 4
+  },
+  {
+   "id": "kingghidorahsyllis",
+   "parent": "phyllodocida",
+   "ja": "キングギドラシリス",
+   "sci": "Ramisyllis kingghidorahi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "2022年に佐渡島の個体から新種として記載されたゴカイの仲間。体の後ろが何度も枝分かれし、海綿の中で暮らす。",
+   "verify": {
+    "ja": "和名の出典は記載した研究者の発表（2022）と Wikidata"
+   },
+   "tier": 3
+  },
+  {
+   "id": "sappa",
+   "parent": "clupeiformes",
+   "ja": "サッパ",
+   "sci": "Sardinella zunasi",
+   "jaStatus": "standard",
+   "aliases": [
+    "ママカリ"
+   ],
+   "fact": "内湾にすむニシンの仲間。岡山県などでは「ママカリ」と呼ばれ、酢漬けにして食べる。",
+   "tier": 3
+  },
+  {
+   "id": "totorokagimushi",
+   "parent": "onychophora",
+   "ja": "トトロカギムシ",
+   "sci": "Eoperipatus totoro",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ベトナムで見つかり、2013年に新種として記載されたカギムシ。学名は映画『となりのトトロ』にちなむ。",
+   "verify": {
+    "ja": "学術的な和名は確認できず、報道で使われた呼び名"
+   },
+   "tier": 3
   }
  ]
 }

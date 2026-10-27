@@ -1672,4 +1672,34 @@ O("hishikui", "anseriformes", "ヒシクイ", "Anser fabalis", "冬に日本へ�
 _find("hishikui")["subspeciesAliases"] = ["オオヒシクイ"]
 for _id, _t in {"umifukurou": 4, "gogoshimayumushi": 4, "aominoumiushi": 3, "ishidatami": 3, "hishigani": 4, "hishikui": 4}.items():
     _find(_id)["tier"] = _t
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（check/hard_inv/result.json）と check/picks20/。
+# 群の名前で指定されたものは代表の種を選んだ（サルパ→トガリサルパ、タルマワシ→オオタルマワシ、カギムシ→トトロカギムシ）。
+C("onychophora", "panarthropoda", "有爪動物門", "Onychophora", "門", "カギムシ。粘液を発射して獲物を捕らえる。南半球と熱帯に分布。")
+R("sunaisoginchaku", "actiniaria", "スナイソギンチャク", "Dofleinia armata", "砂泥底にすむ大型のイソギンチャク。刺されると強く痛み、ひどく腫れることがある。")
+R("greenhydra", "hydrozoa", "グリーンヒドラ", "Hydra viridissima", "淡水にすむヒドラ。体の細胞の中に緑藻（クロレラの仲間）をすまわせていて、緑色に見える。",
+  v={"ja": "和名の出典は iNaturalist と教育・研究の資料"})
+R("shirogaya", "hydrozoa", "シロガヤ", "Aglaophenia whiteleggei", "鳥の羽のような形の群体をつくるヒドロ虫。触れると刺されて痛む。")
+R("togarisarupa", "tunicata", "トガリサルパ", "Salpa fusiformis", "海を漂う透明な樽形のホヤの仲間（サルパ）。1匹で暮らす世代と、鎖のようにつながる世代を交互に繰り返す。")
+R("ootarumawashi", "malacostraca", "オオタルマワシ", "Phronima sedentaria", "透明なヨコエビの仲間。サルパなどの体をくり抜いて樽を作り、その中で子を育てる。")
+R("mukademeribe", "heterobranchia", "ムカデメリベ", "Melibe viridis", "頭の大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。")
+R("udefuritsunozayaumiushi", "heterobranchia", "ウデフリツノザヤウミウシ", "Thecacera pacifica", "黄色い体に青や橙の模様がある小さなウミウシ。その姿から「ピカチュウウミウシ」の愛称で呼ばれる。")
+R("tamanomidorigai", "heterobranchia", "タマノミドリガイ", "Edenttellina limax", "巻貝の仲間なのに、二枚貝のような2枚の殻をもつ。緑色で、海藻の上で暮らす。",
+  v={"ja": "和名の出典は iNaturalist のみ"})
+R("gaikotsupandahoya", "tunicata", "ガイコツパンダホヤ", "Clavelina ossipandae", "沖縄の久米島で見つかり、2024年に新種として記載されたホヤ。パンダの顔のような黒い模様と骨のような白い筋があり、パンダボヤとも呼ばれる。")
+R("ultramanboya", "tunicata", "ウルトラマンボヤ", "Pycnoclavella diminuta", "小さな群体をつくるホヤ。一つ一つの個体の模様がウルトラマンの顔に似ていることから呼ばれる。",
+  v={"ja": "和名は仮称（CoL・iNaturalist）"})
+R("sukumiringogai", "caenogastropoda", "スクミリンゴガイ", "Pomacea canaliculata", "南米原産の淡水の巻貝。食用に持ち込まれて野生化し、水田のイネを食べる害貝になった。ジャンボタニシとも呼ばれるが、タニシの仲間ではない。")
+R("monhanashako", "malacostraca", "モンハナシャコ", "Odontodactylus scyllarus", "色鮮やかなシャコ。こん棒のような捕脚で、貝殻を割るほど強く打ちつける。")
+R("onimuchouuzumushi", "xenacoelomorpha", "オニムチョウウズムシ", "Amphiscolops oni", "2022年に新種として記載された小さな無腸類。背中に鬼の角のような長い突起がある。",
+  v={"ja": "和名の出典は記載した研究者の発表（筑波大学、2022）と iNaturalist"})
+R("kingghidorahsyllis", "phyllodocida", "キングギドラシリス", "Ramisyllis kingghidorahi", "2022年に佐渡島の個体から新種として記載されたゴカイの仲間。体の後ろが何度も枝分かれし、海綿の中で暮らす。",
+  v={"ja": "和名の出典は記載した研究者の発表（2022）と Wikidata"})
+R("sappa", "clupeiformes", "サッパ", "Sardinella zunasi", "内湾にすむニシンの仲間。岡山県などでは「ママカリ」と呼ばれ、酢漬けにして食べる。", ["ママカリ"])
+R("totorokagimushi", "onychophora", "トトロカギムシ", "Eoperipatus totoro", "ベトナムで見つかり、2013年に新種として記載されたカギムシ。学名は映画『となりのトトロ』にちなむ。",
+  v={"ja": "学術的な和名は確認できず、報道で使われた呼び名"})
+for _id, _t in {"sunaisoginchaku": 4, "greenhydra": 3, "shirogaya": 4, "togarisarupa": 3, "ootarumawashi": 4, "mukademeribe": 4,
+                "udefuritsunozayaumiushi": 3, "tamanomidorigai": 4, "gaikotsupandahoya": 3, "ultramanboya": 3,
+                "sukumiringogai": 2, "monhanashako": 2, "onimuchouuzumushi": 4, "kingghidorahsyllis": 3, "sappa": 3,
+                "totorokagimushi": 3}.items():
+    _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）
