@@ -20,11 +20,12 @@
 | `js/share.js` | 共有された問題のリンク |
 | `js/input.js` | 入力の補完候補 |
 | `js/zukan.js` | 詳細シートと図鑑 |
-| `js/texts.js` | データ欄・遊び方の文章 |
-| `js/howto.js` | 遊び方の例題の再生 |
+| `js/texts.js` | データ欄の文章 |
+| `js/howto.js` | 遊び方の文章と、例題の再生 |
 | `js/main.js` | 画面の切り替えと起動、データの読み込み |
 | `data*.json` | 収録データ（生成物。手で直さない） |
 | `tools/build_data.py`, `tools/data_more.py` | 収録データの正本。ここから `data-<版>.json` を作る |
+| `tools/hard/` | ゲキムズのデータの作り方（`tools/hard/README.md`） |
 | `tools/check.py` | 公開前の確認（送るたびに GitHub が自動で動かす） |
 | `docs/SCHEMA.md`, `docs/SOURCES.md` | データの形式と、名前の出典 |
 
@@ -35,7 +36,7 @@ JavaScript は上の表の順に読み込まれます。後のファイルは、
 ### 画面の文章・見た目・動き
 
 1. GitHub でこのリポジトリを開き、キーボードの `.`（ピリオド）を押す。ブラウザの中でエディタが開く。
-2. 直したいファイルを開いて書き換える（データ欄の文章なら `js/texts.js`、色なら `css/style.css`）。
+2. 直したいファイルを開いて書き換える（データ欄の文章なら `js/texts.js`、遊び方なら `js/howto.js`、色なら `css/style.css`）。
 3. 左の「ソース管理」から、何を直したかを一言書いてコミットする。
 
 ### 収録種と、種・節目の説明

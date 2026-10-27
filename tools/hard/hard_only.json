@@ -1,0 +1,11 @@
+[
+  {"ja": "カノコイセエビ", "sci": "Panulirus longipes", "aliases": [], "fact": "", "tier": 4,
+   "source": "check/decapoda/consensus.tsv（学名は GBIF・CoL・WoRMS、和名は CoL・Wikidata・iNaturalist で一致、2026-10-25）",
+   "place": ["Palinuridae", "Achelata", "Decapoda"]},
+  {"ja": "ミナミテナガエビ", "sci": "Macrobrachium formosense", "aliases": [], "fact": "", "tier": 4,
+   "source": "check/decapoda/consensus.tsv（同上）",
+   "place": ["Palaemonidae", "Caridea", "Decapoda"]},
+  {"ja": "ヨシエビ", "sci": "Metapenaeus ensis", "aliases": [], "fact": "", "tier": 4,
+   "source": "check/decapoda/consensus.tsv（同上）",
+   "place": ["Penaeidae", "Dendrobranchiata", "Decapoda"]}
+]

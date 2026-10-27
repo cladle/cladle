@@ -1,0 +1,117 @@
+id	sci	ja	action	new	keep_alias	verify_key	verify_text
+c6pxdc	Ligia yamanishii	オナガフナムシ	ja	アシナガフナムシ	オナガフナムシ		日本産ワラジムシ亜目種リスト（日本甲殻類学会ワラジムシ亜目研究グループ）に合わせて和名を「オナガフナムシ」から改めた
+cgrtp	Armadilloniscus notojimensis	ノトチョウチンワラジムシ	ja	ノトチョウチンハマワラジムシ	ノトチョウチンワラジムシ		日本産ワラジムシ亜目種リスト（日本甲殻類学会ワラジムシ亜目研究グループ）に合わせて和名を「ノトチョウチンワラジムシ」から改めた
+c6rzkg	Nipponovalgus yonakuniensis	ョナクニヒラタハナムグリ	ja	ヨナクニヒラタハナムグリ			先頭の「ョ」は写し間違い（同じ記録のローマ字 yonakuni と種小名 yonakuniensis で確認）
+ccqz8	Amemiyaia pacifica	アメミヤイア・パキフィカ	drop				和名が学名の音写のため（和名のない種は収録しない方針）
+c4nsws	Pseudoceros memoralis	プセウドケロス・メモラリス	drop				和名が学名の音写のため（和名のない種は収録しない方針）
+czvp6	Cryptocelis amakusaensis	クリプトケリス・アマクサエンシス	drop				和名が学名の音写のため（和名のない種は収録しない方針）
+ckwdf	Bathocyroe longigula	ナガノドチョウクラゲモドキ	dedup	ノドナガチョウクラゲモドキ	ナガノドチョウクラゲモドキ	ja	同じ種に「ナガノドチョウクラゲモドキ」と「ノドナガチョウクラゲモドキ」の2つの和名がある（BISMaL）。どちらが標準か要確認
+c669mr	Amakusanthura aokii	アオキヒゲナガウミナナフシ	sci	Apanthuretta aokii	Amakusanthura aokii		WoRMS（2026-10-24参照）で Amakusanthura aokii は superseded combination、有効名は Apanthuretta aokii。属が変わるので属の節目も付け替える
+c3wgjh	Lutraria sieboldii	ヒラカモジガイ	sci	Lutraria sieboldtii	Lutraria sieboldii		WoRMS（2026-10-24参照）で Lutraria sieboldii は junior objective synonym、有効名は Lutraria sieboldtii
+cf86h	Apanthura fusei	フセウミナナフシ	sci	Amakusanthura fusei	Apanthura fusei		WoRMS（2026-10-24参照）で Apanthura fusei は superseded combination、有効名は Amakusanthura fusei。属が変わるので属の節目も付け替える
+cf87k	Apanthura trioculata	ミツメウミナナフシ	sci	Apanthurella trioculata	Apanthura trioculata		WoRMS（2026-10-24参照）で Apanthura trioculata は superseded combination、有効名は Apanthurella trioculata。属が変わるので属の節目も付け替える
+c4t6mm	Rissoina striata	メオニチョウジガイ	sci	Moerchiella striata	Rissoina striata		WoRMS（2026-10-24参照）で Rissoina striata は unaccepted、有効名は Moerchiella striata。属が変わるので属の節目も付け替える
+c4hz4b	Pinnixa rathbuni	ラスバンマメガニ	sci	Scleroplax rathbuni	Pinnixa rathbuni		WoRMS（2026-10-24参照）で Pinnixa rathbuni は superseded combination、有効名は Scleroplax rathbuni。属が変わるので属の節目も付け替える
+c48xln	Oenopota sagamiana	サガミマンジ	sci	Truncastoma sagamiana	Oenopota sagamiana		WoRMS（2026-10-24参照）で Oenopota sagamiana は superseded combination、有効名は Truncastoma sagamiana。属が変わるので属の節目も付け替える
+c4hz4n	Pinnixa tumida	シロナマコガニ	sci	Scleroplax tumida	Pinnixa tumida		WoRMS（2026-10-24参照）で Pinnixa tumida は superseded combination、有効名は Scleroplax tumida。属が変わるので属の節目も付け替える
+c77h39	Phymorhynchus buccinoides	ツブナリシャジク	sci	Truncastoma buccinoides	Phymorhynchus buccinoides		WoRMS（2026-10-24参照）で Phymorhynchus buccinoides は superseded combination、有効名は Truncastoma buccinoides。属が変わるので属の節目も付け替える
+c4hz2t	Pinnixa banzu	バンズマメガニ	sci	Scleroplax banzu	Pinnixa banzu		WoRMS（2026-10-24参照）で Pinnixa banzu は superseded combination、有効名は Scleroplax banzu。属が変わるので属の節目も付け替える
+c47xvn	Notoplax hilgendorfi	ウスコケヒザラガイ	family	Acanthochitonidae	Cryptoconchidae	placement	科は WoRMS（2026-10-24参照）の Acanthochitonidae に従った（Catalogue of Life では Cryptoconchidae）
+c3ttgj	Leptoplax doederleini	ウスベニヒザラガイ	family	Acanthochitonidae	Cryptoconchidae	placement	科は WoRMS（2026-10-24参照）の Acanthochitonidae に従った（Catalogue of Life では Cryptoconchidae）
+c3ttgg	Leptoplax coarctata	ヒメベニヒザラガイ	family	Acanthochitonidae	Cryptoconchidae	placement	科は WoRMS（2026-10-24参照）の Acanthochitonidae に従った（Catalogue of Life では Cryptoconchidae）
+cz5hr	Craspedochiton laqueatus	フチドリヒザラガイ	family	Acanthochitonidae	Cryptoconchidae	placement	科は WoRMS（2026-10-24参照）の Acanthochitonidae に従った（Catalogue of Life では Cryptoconchidae）
+cz5hv	Craspedochiton pyramidalis	ミツカドヒザラガイ	family	Acanthochitonidae	Cryptoconchidae	placement	科は WoRMS（2026-10-24参照）の Acanthochitonidae に従った（Catalogue of Life では Cryptoconchidae）
+c47xv7	Notoplax conica	ヒトデヒザラガイ	family	Acanthochitonidae	Cryptoconchidae	placement	科は WoRMS（2026-10-24参照）の Acanthochitonidae に従った（Catalogue of Life では Cryptoconchidae）
+c6hy62	Ficus subintermedia	ビワガイ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+cbh9t2	Nipponolimopsis azumana	マルシラスナガイ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c9h47m	Turbonilla someiensis	ユウガイトカケギリ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c3slnt	Latitriphora multigyrata	カズマキキリオレ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c6jpyd	Fulgoraria kamakurensis	カマクラヒタチオビ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+cc5kpz	Philine pygmaea	クサリキセワタ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+cchmwc	Turbonilla keiskeana	ケイスケイトカケギリ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c57fxj	Tornatina koyasensis	コヤスツララガイ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c6pzy7	Lima vulgatula	チビミノガイ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c7fw8p	Xenophora mekranensis	チリメンクマサカガイ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c7scsf	Nuttallia commoda	ナガイソシジミ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c4nlc9	Pseudarinia sinensis	ヒナウミウサギガイ	verify			sci	学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）
+c54mn5	Tambja morosa	アオスジリュウグウウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ミドリリュウグウウミウシ」で、食い違う
+c48klz	Octopus hongkongensis	アマダコ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ツノモチダコ」で、食い違う
+c45pgs	Nardoa frianti	アライボヒトデ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「アライヒトデ」で、食い違う
+c3n593	Hydrissa sodalis	イガグリガイウミヒドラ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「イガグリガイ」で、食い違う
+c4wxgz	Serratina diaphana	イチョウシラトリ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヌノメイチョウシラトリ」で、食い違う
+c32ygl	Cycloteuthis sirventi	ウチワイカ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「トガリウチワイカ」で、食い違う
+c6qmj4	Lophozozymus anaglyptus	ヒラアシヒロハオウギガニ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒラアシオウギガニ」で、食い違う
+c365kz	Dillwynella sheisinmaruae	ヒロクチクボタシタダミ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒロクチクボシタダミ」で、食い違う
+c44bfx	Montipora venosa	フカアナコモンサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「コモンサンゴ」で、食い違う
+c53mt5	Syllis gracilis	フタマタシリス	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「フタシマシリス」で、食い違う
+c6q5zm	Leucosia craniolaris	フタメコブシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タテジマコブシ」で、食い違う
+c72nzk	Lottia emydia	ベッコウシロガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タテガタシロガイ」で、食い違う
+c4t6jq	Rissoina plicatula	ホソウネチョウジガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ホソウネリチョウジガイ」で、食い違う
+c5yhd5	Chromodoris striatella	ホソスジイロウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ミダレスジイロウミウシ」で、食い違う
+c44bfr	Montipora turgescens	ホンアバタコモンサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「アバタコモンサンゴ」で、食い違う
+c3x99p	Macrorhynchia philippina	マニラウミヒノキ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ナミラウミヒノキ」で、食い違う
+c9p37	Acropora loripes	マルヅツハナガサミドリイシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「マルツツハナガサミドリイシ」で、食い違う
+c69r2f	Cherusius triunguiculatus	マルディビアガニ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「モルジブガニ」で、食い違う
+c9p6c	Acropora solitaryensis	ミドリイシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「エンタクミドリイシ」で、食い違う
+cxxy9	Conus omaria	ミナミアジロイモ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「アジロイモ」で、食い違う
+c6dx3k	Echinostrephus molaris	ミナミタワシウニ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タワシウニ」で、食い違う
+ck68t	Babakina indopacifica	ミナミツツイシミノウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ツツイシミノウミウシ」で、食い違う
+c73pxl	Montipora peltiformis	ムラサキコモンサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「イタイボコモンサンゴ」で、食い違う
+c6qwy7	Melibe papillosa	メリベウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒメメリベ」で、食い違う
+c9smd	Acteon virgatus	ヤナギシボリギジビガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヤナギシボリキジビキ」で、食い違う
+c4h52j	Phyllidiopsis sphingis	ヨツスジマダライボウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タテスジイボウミウシ」で、食い違う
+c73cqk	Metalia spatagus	ライオネスブンブク	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヤマネコブンブク」で、食い違う
+c73d2k	Metalia sternalis	ライオンブンブク	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ノブタブンブク」で、食い違う
+cczny	Amphichama argentata	ウンモザルガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ウンモキクザル」で、食い違う
+c6k7fb	Galeommella utinomii	オオギウロコガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「オウギウロコガイ」で、食い違う
+c3f2st	Galaxea astreata	オガサワラアザミサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「チビアザミサンゴ」で、食い違う
+c32zps	Cyerce kikutarobabai	カノコカンランウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「カノコウロコウミウシ」で、食い違う
+cvys3	Clementia papyracea	カミブスマ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「フスマガイ」で、食い違う
+cq77r	Calyptraea yokoyamai	カリバガサガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「カリバカサガイ」で、食い違う
+cqqn2	Capnella imbricata	カワラフサトサカ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「カワラフサトカサ」で、食い違う
+c47w39	Notodoris citrina	キイロコユビウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「レモンウミウシ」で、食い違う
+c99hlk	Dendrophyllia ijimai	キサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「エントウキサンゴ」で、食い違う
+cdyn7	Angaria sphaerula	キタノカタベ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「キナノカタベ」で、食い違う
+c7pywc	Amaea oyasionensis	キヌジヌノメイトカケ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「キヌメヌノメイトカケ」で、食い違う
+c3qbdy	Isopora cuneata	クサビニオウミドリイシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒラニオウミドリイシ」で、食い違う
+c365kt	Dillwynella fallax	クボタシタダミモドキ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「クボシタダミモドキ」で、食い違う
+cdcfz	Anadara globosa	クマサルボオ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「クマサルボウ」で、食い違う
+c6qhg7	Liocarpilodes harmsi	クロヒズメ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヤエヤマトゲオウギガニ」で、食い違う
+c6rcqn	Metalia dicrana	コオニブンブク	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タツノコブンブク」で、食い違う
+c59n99	Turbo stenogyrus	コシタカサザエ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「コシダカサザエ」で、食い違う
+c43jxn	Minolia punctata	コシタカシタダミ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「コシダカシタダミ」で、食い違う
+c5ywn2	Cladiella australis	コブエダノウトサカ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「センジュノウトサカ」で、食い違う
+c42yt9	Micromelo undatus	コンシボリガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「チャシボリガイ」で、食い違う
+cmkh9	Bornella anguilla	ゴシキユビウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒオドシユビウミウシ」で、食い違う
+c3qqys	Jorunna parva	ゴマフビロウドウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ゴマフビロードウミウシ」で、食い違う
+c5yhkc	Chromodoris aspersa	ゴマフリイロウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「モンコウミウシ」で、食い違う
+c6bbn6	Cranchia scabra	サメハダホウズキイカ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「サメハダボウズキイカ」で、食い違う
+c767h6	Pecten excavatus	シナイタヤ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ハナイタヤ」で、食い違う
+c3p33v	Hypselodoris infucata	シモフリイロウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ホシゾラウミウシ」で、食い違う
+c56p9x	Thuridilla gracilis	シロスジミドリガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タスジミドリガイ」で、食い違う
+cj7w9	Atagema spongiosa	ジャノメカイメンウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「スポンジウミウシ」で、食い違う
+c9g557	Jorunna funebris	ゼニガタウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ブチウミウシ」で、食い違う
+c7x45w	Maladera formosae	タイワンアカビロウドコガネ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「アカビロウドコガネ」で、食い違う
+cks3h	Barnea dilatata	タイワンウミタケ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ウミタケ」で、食い違う
+c5z6xc	Circe scripta	タイワンシラオガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「シラオガイ」で、食い違う
+c6bqxj	Cuspidaria japonica	タマシャクシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「タマジャクシガイ」で、食い違う
+c6rpy2	Montipora aequituberculata	チヂミウスコモンサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「チヂミコモンサンゴ」で、食い違う
+c3gdjx	Glossodoris cincta	チャイロウミウシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「モンジャウミウシ」で、食い違う
+ccd9v	Amaea foulisi	チャイロコナガイトカケ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「チャイロコナトカケ」で、食い違う
+c44bdv	Montipora monasteriata	トゲクボミコモンサンゴ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「コイボコモンサンゴ」で、食い違う
+c9p62	Acropora secale	トゲホソエダミドリイシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ルピナスミドリイシ」で、食い違う
+c39t6c	Engina menkeana	ナガゴマフホラダマシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ゴマフホラダマシ」で、食い違う
+c36qff	Dipsastraea favus	ナミキクメイシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「スボミキクメイシ」で、食い違う
+c4xltp	Sinorchestia nipponensis	ニッポンスナハマトビムシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ニホンスナハマトビムシ」で、食い違う
+c3h7p6	Grandidierella japonica	ニッポンドロソコエビ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ニホンドロソコエビ」で、食い違う
+c7pyw3	Amaea noguchii	ノグチナガイトカケ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ノグチナトカケ」で、食い違う
+c3jccn	Haliclona cinerea	ハイイロカワナシカイメン	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ムラサキカイメン」で、食い違う
+c454vw	Myonera dautzenbergi	ハトムネシャクシ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ハトムネシシャクガイ」で、食い違う
+c3lhv5	Hiatella arctica	ハナシキヌマトイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「キヌマトイガイ」で、食い違う
+c3zlcz	Melo melo	ハルカゼガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ハルカゼヤシガイ」で、食い違う
+cdmrz	Ancistrolepis hikidai	ヒキタバイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒキダバイ」で、食い違う
+c34dg3	Decatopecten plica	ヒナキンチャク	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「キンチャクガイ」で、食い違う
+c65595	Admete watanabei	ヒメウスカワゴロモ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「ヒメウスカワエゾゴロモ」で、食い違う
+c64ch2	Acanthochitona achates	ヒメケハダヒザラガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「コケハダヒザラ」で、食い違う
+c6mhtb	Hybovalgus kamiyai	カミヤヒラタハナムグリ	verify			sci	出典の論文（Kobayashi 2024, 鰓角通信48）は台湾産の同物異名を扱っており、学名の扱いを要確認
+w384916	Halipeurus pelagicus	オオワシ	drop				ハジラミに鳥と同じ和名「オオワシ」が付いており取り違えの疑いがあるため（確かめられるまで外す）
