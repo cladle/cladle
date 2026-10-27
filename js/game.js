@@ -95,21 +95,7 @@ function guess(id) {
     if (G.guesses.length >= limit()) { G.done = true; if (G.gAt) { G.won = true; G.exact = false; } }
   }
   if (G.done) track(mode + (!G.won ? "-lose" : G.exact === false ? "-genusend" : "-win"));  // ゲキムズで属を当てたまま上限まで使ったら属どまり
-  save(); render();
-  if (!G.won) cueTo(id, L);
-}
-// 推測した動物と、答えの動物との分かれ目が画面に入るように、系統樹の方へ動かす（見る場所の案内）
-// スマホはキーボードが閉じて画面の高さが戻るのを少し待つ。もう見えていれば動かさない
-function cueTo(id, L) {
-  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  setTimeout(() => {
-    const a = $(`#board text.tl[data-id="${id}"]`), b = $(`#board .nd[data-id="${L}"]`) || a;
-    if (!a) return;
-    const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
-    const top = Math.min(ra.top, rb.top), bot = Math.max(ra.bottom, rb.bottom), vh = visualViewport?.height || innerHeight;
-    if (top >= 70 && bot <= vh - 30) return;
-    scrollBy({ top: (top + bot) / 2 - vh / 2, behavior: still ? "auto" : "smooth" });
-  }, matchMedia("(pointer: coarse)").matches ? 300 : 0);
+  save(); render();  // 推測のたびに画面は動かさない（すぐ次を入力できるように）。動かすのは正解したときだけ
 }
 let celebrate = false, growId = null, lastEdges = null, openGrow = false, animUntil = 0;  // 正解した直後の演出、推測した直後に伸ばす枝、前回描いた枝
 function deepest() { return deepestOf(G.target, G.guesses, G.reveal); }
