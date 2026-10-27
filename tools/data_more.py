@@ -1710,4 +1710,9 @@ _find("gaikotsupandahoya")["aliases"] = ["パンダボヤ"]
 _find("udefuritsunozayaumiushi")["aliases"] = ["ピカチュウウミウシ"]
 _find("sukumiringogai")["aliases"] = ["ジャンボタニシ"]
 _find("hishikui")["verify"] = {"sci": "IOC 世界鳥類リストは亜種ヒシクイ（serrirostris）を別種 Anser serrirostris とし、オオヒシクイは A. fabalis に残す。ここでは日本鳥類目録改訂第8版に合わせた"}
+# 呼び名を「新口動物（後口動物）」「旧口動物（前口動物）」の対にそろえる（作者の指定、2026-10-27）。文だけなので版は上げない。
+edit("deuterostomia", ja="新口動物（後口動物）")
+edit("protostomia", ja="旧口動物（前口動物）",
+     polytomy="毛顎動物は旧口動物の中の位置が定まっていない（顎口動物などと近いとする解析もある）ため、ここでは三分岐で示す。")
+edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・有顎動物など。")
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）
