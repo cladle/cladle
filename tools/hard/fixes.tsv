@@ -115,3 +115,4 @@ c65595	Admete watanabei	ヒメウスカワゴロモ	verify			ja	和名は BISMaL
 c64ch2	Acanthochitona achates	ヒメケハダヒザラガイ	verify			ja	和名は BISMaL（Catalogue of Life 経由）。iNaturalist・Wikidata では「コケハダヒザラ」で、食い違う
 c6mhtb	Hybovalgus kamiyai	カミヤヒラタハナムグリ	verify			sci	出典の論文（Kobayashi 2024, 鰓角通信48）は台湾産の同物異名を扱っており、学名の扱いを要確認
 w384916	Halipeurus pelagicus	オオワシ	drop				ハジラミに鳥と同じ和名「オオワシ」が付いており取り違えの疑いがあるため（確かめられるまで外す）
+lplecotusauritus	Plecotus auritus	ウサギコウモリ	drop				日本の個体群はニホンウサギコウモリ P. sacrimontis として本家に入っており、それを亜種に含めた旧い扱いの重複になるため
