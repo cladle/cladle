@@ -100,7 +100,7 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
   const maxD = Math.max(...Object.values(T).filter(n => n.ch.length).map(n => n.d), 0);
   // 葉の名前の幅を実際に測り、入りきらない分だけ省略する
   const ctx = (treeHTML.cv ||= document.createElement("canvas")).getContext("2d");
-  ctx.font = `14px ${getComputedStyle(document.body).fontFamily}`;
+  ctx.font = `700 14px ${getComputedStyle(document.body).fontFamily}`;  // 直前の推測と正解は太字になるので、太字の幅で測る
   const tipText = id => id === Q ? "？" : (num[id] ? num[id] + " " : "") + N[id].ja;
   const maxLabel = W * 0.42;
   const fit = id => { let t = id === Q ? "？" : N[id].ja; while (t.length > 2 && ctx.measureText((num[id] ? num[id] + " " : "") + t).width > maxLabel) t = t.slice(0, -1); return t === N[id]?.ja || id === Q ? t : t.slice(0, -1) + "…"; };
@@ -169,19 +169,30 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
   const placed = [];
   const hits = (r, list) => list.some(q => r.x1 < q.x2 && q.x1 < r.x2 && r.y1 < q.y2 && q.y1 < r.y2);
   cand.sort((a, b) => a.prio - b.prio || b.n.d - a.n.d);
+  // 葉の名前と「？」の列。はみ出して書くときに重ねないよう避ける
+  const tipBox = leaves.map(n => ({ x1: tipX - 2, x2: W, y1: n.y - 10, y2: n.y + 8 }));
   for (const { n, st } of cand) {
-    ctx.font = `${st ? "700 13px" : "11px"} ${getComputedStyle(document.body).fontFamily}`;
-    const kin = kinLabel(n.id);
-    let w = ctx.measureText(N[n.id].ja).width; const g = st ? 9 : 5, kh = kin ? 11 : 0;
-    if (kin) { ctx.font = `10px ${getComputedStyle(document.body).fontFamily}`; w = Math.max(w, ctx.measureText(kin).width); }
-    // 右・枝の上（左寄せ）・右上・右下の順に試す
-    const all = [[n.x + g, 0], [n.x - 3 - w, -9], [n.x + 3, -11], [n.x + 3, 14]]
-      .map(([x, dy]) => ({ x, y: n.y + dy, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 + kh } }));
-    const spots = all.filter(sp => sp.r.x1 >= 0 && sp.r.x2 <= tipX - 2);
-    // 現在地と根は必ず書く。狭い画面で葉の手前に収まらないときは、葉の文字の列にはみ出してもよい
-    const wide = all.filter(sp => sp.r.x1 >= 0);
-    const sp = spots.find(sp => !hits(sp.r, placed) && !hits(sp.r, seg))
-      || (st || n.id === D.root ? spots.find(sp => !hits(sp.r, placed)) || wide.find(sp => !hits(sp.r, placed) && !hits(sp.r, seg)) || wide.find(sp => !hits(sp.r, placed)) || spots[0] || wide[0] : null);
+    const fam = getComputedStyle(document.body).fontFamily, kinT = kinLabel(n.id);
+    ctx.font = `${st ? "700 13px" : "11px"} ${fam}`;
+    const w0 = ctx.measureText(N[n.id].ja).width, g = st ? 9 : 5;
+    ctx.font = `10px ${fam}`;
+    const wk = kinT ? Math.max(w0, ctx.measureText(kinT).width) : w0;
+    // 右・枝の上（左寄せ）・右上・右下の順に試す。2行目（所属の説明）を付けた形と付けない形
+    const mk = useKin => { const w = useKin ? wk : w0, kh = useKin ? 11 : 0;
+      return [[n.x + g, 0], [n.x - 3 - w, -9], [n.x + 3, -11], [n.x + 3, 14]]
+        .map(([x, dy]) => ({ x, y: n.y + dy, kin: useKin, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 + kh } }))
+        .filter(sp => sp.r.x1 >= 0); };
+    const withK = kinT ? mk(true) : [], noK = mk(false), inside = l => l.filter(sp => sp.r.x2 <= tipX - 2);
+    // 点の上下で、葉の列の手前に収まるよう左へずらした位置
+    const shifted = () => { const x = Math.min(n.x + 3, tipX - 3 - w0); return x < 0 ? [] : [-11, 14, -23, 26]
+      .map(dy => ({ x, y: n.y + dy, kin: false, r: { x1: x - 1, x2: x + w0 + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 } })); };
+    const free = (l, ...lists) => l.find(sp => lists.every(x => !hits(sp.r, x)));
+    let sp = free(inside(withK), placed, seg) || (kinT ? null : free(inside(noK), placed, seg));
+    // 現在地と根は必ず書く。収まらなければ2行目を省き、それでも無理なら葉の列へはみ出す（葉の名前には重ねない）
+    if (!sp && (st || n.id === D.root))
+      sp = free(inside(noK), placed, seg) || free(inside(noK), placed) || free(shifted(), placed, seg) || free(shifted(), placed)
+        || free(noK, placed, seg, tipBox) || free(noK, placed, tipBox) || free(noK, placed) || noK[0];
+    const kin = sp && sp.kin ? kinT : "";
     if (!sp) continue;
     placed.push(sp.r);
     const la = lateStyle(n.id);
