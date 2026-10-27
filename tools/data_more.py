@@ -1743,4 +1743,35 @@ for _id, _t in {"ooikarinamako": 4, "senjunamako": 3}.items():
 R("isokanidamashi", "anomura", "イソカニダマシ", "Petrolisthes japonicus",
   "磯の石の下にふつうにいる、平たい小さなカニダマシ。カニに似ているが、ヤドカリやタラバガニと同じ異尾類で、長い触角をもち、歩く脚は3対しか見えない。")
 _find("isokanidamashi")["tier"] = 3
-META["datasetVersion"] = "0.3.13"  # イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
+# 作者の指定（2026-10-27「名前が特徴的で、いたなあとなる種」）。照合はゲキムズ用の結果、メンダコは check/picks21/。
+R("ojisan", "syngnathiformes", "オジサン", "Parupeneus multifasciatus", "あごの下に2本の長いひげをもつヒメジの仲間。ひげで砂の中の小動物を探して食べる。")
+R("gonzui", "siluriformes", "ゴンズイ", "Plotosus japonicus", "群れで団子のように集まる「ゴンズイ玉」をつくるナマズの仲間。背びれと胸びれのとげに毒がある。")
+R("umazurahagi", "tetraodontiformes", "ウマヅラハギ", "Thamnaconus modestus", "馬の顔のように長い顔をしたカワハギの仲間。食用にされる。")
+R("kongoufugu", "tetraodontiformes", "コンゴウフグ", "Lactoria cornuta", "目の前と尾の近くに角のような長い突起があるハコフグの仲間。")
+R("chouchinankou", "lophiiformes", "チョウチンアンコウ", "Himantolophus sagamius", "深海にすむアンコウの仲間。頭の上の突起の先が光り、これで獲物をおびき寄せる。")
+R("dangouo", "perciformes", "ダンゴウオ", "Eumicrotremus awae", "数cmほどの丸い小さな魚。腹びれが吸盤になっていて、岩や海藻にくっつく。")
+R("nyuudoukajika", "perciformes", "ニュウドウカジカ", "Psychrolutes phrictus", "深海にすむカジカの仲間。水から引き上げられると、ぶよぶよにたるんだ姿になる。")
+R("hekoayu", "syngnathiformes", "ヘコアユ", "Aeoliscus strigatus", "頭を下に向け、体を立てて泳ぐ細長い魚。ウニのとげの間などに群れて隠れる。")
+R("tsubameuo", "acanthuriformes", "ツバメウオ", "Platax teira", "平たい体の魚。幼魚のうちは背びれと尻びれがとても長い。")
+R("meganemochinouo", "labriformes", "メガネモチノウオ", "Cheilinus undulatus", "大きなものは2 mほどになるベラの仲間。おとなは額がこぶのように盛り上がる。ナポレオンフィッシュとも呼ばれる。", ["ナポレオンフィッシュ"])
+R("nenbutsudai", "gobiiformes", "ネンブツダイ", "Ostorhinchus semilineatus", "群れで泳ぐ小さなテンジクダイの仲間。雄が卵を口の中に入れて守る。")
+R("kagokakidai", "centrarchiformes", "カゴカキダイ", "Microcanthus strigatus", "黄色い体に黒い縦じまがある小さな魚。磯でよく見られる。")
+R("tsunodashi", "acanthuriformes", "ツノダシ", "Zanclus cornutus", "背びれが糸のように長く伸びる、黄・白・黒の模様の魚。サンゴ礁にすむ。")
+R("demenigisu", "euteleostei", "デメニギス", "Macropinna microstoma", "深海魚。頭の上が透明なドームになっていて、その中に筒の形をした目がある。")
+R("donko", "gobiiformes", "ドンコ", "Odontobutis obscurus", "川の流れのゆるい場所にすむハゼの仲間。頭が大きく、小魚やエビなどを食べる。")
+R("umiusagigai", "caenogastropoda", "ウミウサギガイ", "Ovula ovum", "真っ白でつやのある殻をもつ巻貝。生きているときは、黒い外套膜で殻を包んでいる。")
+R("beniokinaebisu", "vetigastropoda", "ベニオキナエビス", "Mikadotrochus hirasei", "深海にすむオキナエビスの仲間。殻の口に切れこみがあり、「生きた化石」と呼ばれる巻貝の一つ。")
+R("unoashi", "gastropoda", "ウノアシ", "Patelloida lanx", "磯の岩につく笠形の貝。殻に太いすじが放射状に走り、縁がぎざぎざになる。")
+R("bakagai", "bivalvia", "バカガイ", "Mactra chinensis", "浅い砂の海底にすむ二枚貝。むき身は「アオヤギ」と呼ばれ、すしだねなどにされる。", ["アオヤギ"])
+R("juumonjidako", "octopodiformes", "ジュウモンジダコ", "Grimpoteuthis hippocrepium", "深海にすむひれのあるタコ。耳のような一対のひれを動かして泳ぐ。")
+R("mendako", "octopodiformes", "メンダコ", "Opisthoteuthis depressa", "深海にすむ平たいタコ。耳のようなひれがあり、傘を広げたような姿で海底近くを漂う。", v={"sci": "WoRMS は Exsuperoteuthis depressa とする（GBIF・CoL は Opisthoteuthis）"})
+R("sodeika", "decapodiformes", "ソデイカ", "Thysanoteuthis rhombus", "大きなものは胴の長さが1 mほどになるイカ。胴のほぼ全長にわたるひし形のひれがある。食用にされる。")
+R("hikariboya", "tunicata", "ヒカリボヤ", "Pyrosoma atlanticum", "たくさんの個体が集まって筒形の群体をつくり、海を漂うホヤの仲間。刺激を受けると青白く光る。")
+R("kimengani", "brachyura", "キメンガニ", "Dorippe sinica", "甲羅のでこぼこが怒った鬼の顔のように見えるカニ。後ろの脚で貝殻などを背負って身を隠す。")
+R("bonerimushi", "sedentaria", "ボネリムシ", "Bonellia minor", "緑色のユムシの仲間。この仲間は雄がとても小さく、雌の体の中で暮らすことで知られる。")
+R("gomafudama", "caenogastropoda", "ゴマフダマ", "Paratectonatica tigrina", "砂の海底にすむタマガイの仲間。ほかの貝の殻に穴をあけて中身を食べる。殻にゴマのような斑点がある。")
+R("hitodeyadoriebi", "caridea", "ヒトデヤドリエビ", "Zenopontonia soror", "ヒトデの体の上で暮らす小さなエビ。体の色をすみかのヒトデに似せている。")
+R("takokurage", "scyphozoa", "タコクラゲ", "Mastigias papua", "太い口腕をもち、タコのように見えるクラゲ。体の中に褐虫藻をすまわせ、光合成でできた栄養も利用する。")
+for _id, _t in {"ojisan": 3, "gonzui": 3, "umazurahagi": 2, "kongoufugu": 3, "chouchinankou": 2, "dangouo": 3, "nyuudoukajika": 3, "hekoayu": 4, "tsubameuo": 3, "meganemochinouo": 2, "nenbutsudai": 4, "kagokakidai": 4, "tsunodashi": 3, "demenigisu": 3, "donko": 3, "umiusagigai": 4, "beniokinaebisu": 4, "unoashi": 4, "bakagai": 3, "juumonjidako": 4, "mendako": 3, "sodeika": 3, "hikariboya": 3, "kimengani": 4, "bonerimushi": 4, "gomafudama": 4, "hitodeyadoriebi": 4, "takokurage": 3}.items():
+    _find(_id)["tier"] = _t
+META["datasetVersion"] = "0.3.14"  # 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
