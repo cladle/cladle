@@ -25,6 +25,11 @@
   --accent: #4fc2ad; --accent-soft: #173a33; --hot: #ff8a5e; --hot-soft: #42251a;
   --warn: #e5bb55; --warn-soft: #3a3016; color-scheme: dark }
 
+/* ゲキムズ表示中だけの配色（html に class="hard" が付く）。形はそのまま色だけ深紅系に差し替える */
+:root.hard { --bg: #f3e6e1; --surface: #fff9f6; --ink: #260b0b; --muted: #6b4a45; --line: #dcc3bb; --accent: #b0122a; --accent-soft: #f5d5d7; --hot: #5a2585; --hot-soft: #e6dcf1 }
+@media (prefers-color-scheme: dark) { :root.hard:not([data-theme="light"]) { --bg: #1a0d0d; --surface: #261414; --ink: #f4e6e3; --muted: #b79c97; --line: #4a2c2a; --accent: #ff6b73; --accent-soft: #4a1a1e; --hot: #c9a0ff; --hot-soft: #33224a; color-scheme: dark } }
+:root.hard[data-theme="dark"] { --bg: #1a0d0d; --surface: #261414; --ink: #f4e6e3; --muted: #b79c97; --line: #4a2c2a; --accent: #ff6b73; --accent-soft: #4a1a1e; --hot: #c9a0ff; --hot-soft: #33224a; color-scheme: dark }
+
 * { box-sizing: border-box }
 body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.6;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px }
