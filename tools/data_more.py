@@ -1888,4 +1888,32 @@ R("nihonusagikoumori", "chiroptera", "ニホンウサギコウモリ", "Plecotus
 for _id, _t in {"meerkat": 1, "mitsuobiarumajiro": 3, "erimakitokage": 1, "jacksonchameleon": 3, "okikurage": 3, "boa": 2, "darumawashi": 4, "ajiazou": 1, "yotsuyubiharinezumi": 2, "nishiindomanatee": 2, "fukuromomonga": 2, "musasabi": 1, "alpaca": 1, "americawashimimizuku": 3, "hashibirokou": 1, "minamiamericaottosei": 3, "kobitokaba": 2, "kotsumekawauso": 1, "chinanago": 1, "akameamagaeru": 2, "rurikongouinko": 2, "kongouinko": 2, "nihonusagikoumori": 3}.items():
     _find(_id)["tier"] = _t
 
+# 旧い属名だけを書いた説明を書き換え（2026-10-27 作者了承）。旧学名は sciSynonyms へ（文だけの修正、版はそのまま）。
+edit("mizukurage", fact="四つ葉のように見える模様は生殖腺。世界のミズクラゲは長く1種とされてきたが、日本のものは遺伝的に別の種と分かった。")
+edit("nipponumishida", fact="ウミユリ類の仲間で、腕を羽ばたかせて泳ぐこともできる。幼いうちは柄で海底にくっついて暮らす。")
+edit("namekujiuo", fact="頭索動物。一生脊索をもち続け、脊椎動物の祖先の姿を考える材料になる。浅い海の砂に潜って暮らす。")
+edit("mikadochozame", fact="チョウザメは軟質類で、硬い鱗が体に並ぶ古いタイプの条鰭類。チョウザメの仲間の卵の塩漬けがキャビアになる。")
+edit("akakangaroo", fact="未熟な子を産み、袋の中で育てる。現存する有袋類で最大。")
+edit("jorougumo", fact="黄色い糸で大きな網を張る。雄は雌よりずっと小さい。")
+edit("kurumaebi", fact="丸まると縞模様が車輪のように見える。高級なエビで、養殖もされている。")
+edit("kikumeishi", fact="菊の花のような個体が並ぶ塊状のサンゴ。浅い岩場でも見られる。")
+edit("genjibotaru", fact="幼虫は川でカワニナを食べる。光る間隔は地域で違い、西日本ではおよそ2秒、東日本ではおよそ4秒ごとに光る。")
+edit("kouika", fact="体の中に「イカの甲」と呼ばれる舟形の石灰質の殻をもつ。甲の後ろの端がとがり、ハリイカとも呼ばれる。")
+edit("momoirosango", fact="桃色の宝石サンゴ。深さ100 mより深い海にすみ、珊瑚細工に使われる。")
+edit("kitamurasakiuni", fact="北日本の食用ウニ。コンブなどの海藻を食べる。")
+edit("ugui", fact="海に下る個体もいる。春の産卵の時期には、体に赤いすじが出る。")
+edit("schlegelaogaeru", fact="日本固有種。田の畔に泡の卵塊を産む。目は金色で、ニホンアマガエルより目のまわりの黒いすじがない。")
+edit("amimenishikihebi", fact="世界最長のヘビ。東南アジアの森や水辺にすむ。")
+edit("yariika", fact="槍の穂先のような細長い胴をもつイカ。冬から春に沿岸へやって来て卵を産む。")
+edit("ootaka", fact="森林で鳥を狩るタカ。昔はハイタカと同じ属とされていたが、近年の研究で別の属に分けられた。")
+edit("hakusenshiomaneki", fact="雄は片方の大きなはさみを振って雌を呼ぶ。昔は世界のシオマネキが1つの属にまとめられていたが、今はいくつもの属に分けられている。")
+_find("kurumaebi").setdefault("sciSynonyms", []).append("Marsupenaeus japonicus")
+_find("kikumeishi").setdefault("sciSynonyms", []).append("Favia speciosa")
+_find("momoirosango").setdefault("sciSynonyms", []).append("Corallium elatius")
+_find("kitamurasakiuni").setdefault("sciSynonyms", []).append("Strongylocentrotus nudus")
+_find("ugui").setdefault("sciSynonyms", []).append("Tribolodon hakonensis")
+_find("schlegelaogaeru").setdefault("sciSynonyms", []).append("Rhacophorus schlegelii")
+_find("amimenishikihebi").setdefault("sciSynonyms", []).append("Python reticulatus")
+_find("yariika").setdefault("sciSynonyms", []).append("Loligo bleekeri")
+_find("hakusenshiomaneki").setdefault("sciSynonyms", []).append("Uca lactea")
 META["datasetVersion"] = "0.3.16.1"  # 0.3.16 のままだと10/29〜11/06に漏れ1日のため .1。 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）

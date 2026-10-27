@@ -2619,7 +2619,7 @@
    "sci": "Aurelia coerulea",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "四つ葉のように見える模様は生殖腺。日本産はかつて A. aurita とされた。",
+   "fact": "四つ葉のように見える模様は生殖腺。世界のミズクラゲは長く1種とされてきたが、日本のものは遺伝的に別の種と分かった。",
    "tier": 1,
    "groups": [
     "クラゲ"
@@ -2705,7 +2705,7 @@
    "sci": "Anneissia japonica",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "ウミユリ類の仲間で、腕を羽ばたかせて泳ぐこともできる。旧学名は Oxycomanthus japonicus。",
+   "fact": "ウミユリ類の仲間で、腕を羽ばたかせて泳ぐこともできる。幼いうちは柄で海底にくっついて暮らす。",
    "tier": 3,
    "sciSynonyms": [
     "Oxycomanthus japonicus"
@@ -2800,7 +2800,7 @@
    "aliases": [
     "ナメクジウオ"
    ],
-   "fact": "頭索動物。一生脊索をもち続け、脊椎動物の祖先の姿を考える材料になる。旧学名は B. belcheri とされることもあった。",
+   "fact": "頭索動物。一生脊索をもち続け、脊椎動物の祖先の姿を考える材料になる。浅い海の砂に潜って暮らす。",
    "tier": 2,
    "gbif": 8146850
   },
@@ -2905,7 +2905,7 @@
    "aliases": [
     "Acipenser medirostris"
    ],
-   "fact": "チョウザメは軟質類で、硬い鱗が体に並ぶ古いタイプの条鰭類。2025年に Acipenser 属から Sinosturio 属に移された。",
+   "fact": "チョウザメは軟質類で、硬い鱗が体に並ぶ古いタイプの条鰭類。チョウザメの仲間の卵の塩漬けがキャビアになる。",
    "tier": 1,
    "sciSynonyms": [
     "Acipenser medirostris",
@@ -3096,7 +3096,7 @@
    "sci": "Osphranter rufus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "未熟な子を産み、袋の中で育てる。旧学名は Macropus rufus。",
+   "fact": "未熟な子を産み、袋の中で育てる。現存する有袋類で最大。",
    "tier": 1,
    "sciSynonyms": [
     "Macropus rufus"
@@ -3550,7 +3550,7 @@
    "sci": "Trichonephila clavata",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "黄色い糸で大きな網を張る。旧学名は Nephila clavata。",
+   "fact": "黄色い糸で大きな網を張る。雄は雌よりずっと小さい。",
    "tier": 1,
    "sciSynonyms": [
     "Nephila clavata"
@@ -3711,12 +3711,15 @@
    "sci": "Penaeus japonicus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "丸まると縞模様が車輪のように見える。Marsupenaeus 属とする扱いもある。",
+   "fact": "丸まると縞模様が車輪のように見える。高級なエビで、養殖もされている。",
    "tier": 1,
    "groups": [
     "エビ"
    ],
-   "gbif": 2223429
+   "gbif": 2223429,
+   "sciSynonyms": [
+    "Marsupenaeus japonicus"
+   ]
   },
   {
    "id": "mijinko",
@@ -4362,12 +4365,15 @@
    "sci": "Dipsastraea speciosa",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "菊の花のような個体が並ぶ塊状のサンゴ。かつては Favia 属に置かれた。",
+   "fact": "菊の花のような個体が並ぶ塊状のサンゴ。浅い岩場でも見られる。",
    "tier": 2,
    "groups": [
     "サンゴ"
    ],
-   "gbif": 8400775
+   "gbif": 8400775,
+   "sciSynonyms": [
+    "Favia speciosa"
+   ]
   },
   {
    "id": "murasakihanaginchaku",
@@ -5590,7 +5596,7 @@
    "aliases": [
     "Luciola cruciata"
    ],
-   "fact": "幼虫は川でカワニナを食べる。2022年に Luciola 属から新属 Nipponoluciola に移された。",
+   "fact": "幼虫は川でカワニナを食べる。光る間隔は地域で違い、西日本ではおよそ2秒、東日本ではおよそ4秒ごとに光る。",
    "verify": {
     "sci": "COL は Nipponoluciola、GBIF は旧属名 Luciola"
    },
@@ -5784,7 +5790,7 @@
     "スミイカ",
     "Sepia esculenta"
    ],
-   "fact": "体内に石灰質の甲（イカの甲）をもつ。近年 Sepia 属から Acanthosepion 属に移された。",
+   "fact": "体の中に「イカの甲」と呼ばれる舟形の石灰質の殻をもつ。甲の後ろの端がとがり、ハリイカとも呼ばれる。",
    "verify": {
     "sci": "GBIF・WoRMS は Acanthosepion。COL は Sepia esculenta のまま"
    },
@@ -6359,9 +6365,12 @@
    "sci": "Pleurocorallium elatius",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "桃色の宝石サンゴ。かつては Corallium 属に置かれた。",
+   "fact": "桃色の宝石サンゴ。深さ100 mより深い海にすみ、珊瑚細工に使われる。",
    "tier": 3,
-   "gbif": 10381632
+   "gbif": 10381632,
+   "sciSynonyms": [
+    "Corallium elatius"
+   ]
   },
   {
    "id": "bizenkurage",
@@ -6461,9 +6470,12 @@
    "sci": "Mesocentrotus nudus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "北日本の食用ウニ。かつては Strongylocentrotus 属に置かれた。",
+   "fact": "北日本の食用ウニ。コンブなどの海藻を食べる。",
    "tier": 3,
-   "gbif": 6474261
+   "gbif": 6474261,
+   "sciSynonyms": [
+    "Strongylocentrotus nudus"
+   ]
   },
   {
    "id": "rappauni",
@@ -6617,9 +6629,12 @@
    "sci": "Pseudaspius hakonensis",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "海に下る個体もいる。かつては Tribolodon 属に置かれた。",
+   "fact": "海に下る個体もいる。春の産卵の時期には、体に赤いすじが出る。",
    "tier": 3,
-   "gbif": 11564062
+   "gbif": 11564062,
+   "sciSynonyms": [
+    "Tribolodon hakonensis"
+   ]
   },
   {
    "id": "zebrafish",
@@ -6769,9 +6784,12 @@
    "sci": "Zhangixalus schlegelii",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "日本固有種。田の畔に泡の卵塊を産む。かつては Rhacophorus 属に置かれた。",
+   "fact": "日本固有種。田の畔に泡の卵塊を産む。目は金色で、ニホンアマガエルより目のまわりの黒いすじがない。",
    "tier": 3,
-   "gbif": 10674422
+   "gbif": 10674422,
+   "sciSynonyms": [
+    "Rhacophorus schlegelii"
+   ]
   },
   {
    "id": "moriaogaeru",
@@ -7206,9 +7224,12 @@
    "sci": "Malayopython reticulatus",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "世界最長のヘビ。かつては Python 属に置かれた。",
+   "fact": "世界最長のヘビ。東南アジアの森や水辺にすむ。",
    "tier": 3,
-   "gbif": 9260388
+   "gbif": 9260388,
+   "sciSynonyms": [
+    "Python reticulatus"
+   ]
   },
   {
    "id": "kusagame",
@@ -7835,9 +7856,12 @@
    "sci": "Heterololigo bleekeri",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "槍の穂先のような細長い胴をもつ。かつては Loligo 属に置かれた。",
+   "fact": "槍の穂先のような細長い胴をもつイカ。冬から春に沿岸へやって来て卵を産む。",
    "tier": 2,
-   "gbif": 6521427
+   "gbif": 6521427,
+   "sciSynonyms": [
+    "Loligo bleekeri"
+   ]
   },
   {
    "id": "kensakiika",
@@ -8249,7 +8273,7 @@
    "aliases": [
     "Accipiter gentilis"
    ],
-   "fact": "森林で鳥を狩るタカ。近年 Accipiter 属から Astur 属に移された。",
+   "fact": "森林で鳥を狩るタカ。昔はハイタカと同じ属とされていたが、近年の研究で別の属に分けられた。",
    "verify": {
     "sci": "属の扱いは文献により異なる"
    },
@@ -8943,8 +8967,11 @@
    "aliases": [
     "シオマネキ"
    ],
-   "fact": "雄は片方の大きなはさみを振って雌を呼ぶ。かつては Uca 属に置かれた。",
-   "tier": 3
+   "fact": "雄は片方の大きなはさみを振って雌を呼ぶ。昔は世界のシオマネキが1つの属にまとめられていたが、今はいくつもの属に分けられている。",
+   "tier": 3,
+   "sciSynonyms": [
+    "Uca lactea"
+   ]
   },
   {
    "id": "sunagani",
