@@ -1,0 +1,17 @@
+# GitHub に送るたびに、データとプログラムに壊れたところがないかを確かめる
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: データの確認
+        run: python3 tools/check.py
+      - name: JavaScript の文法の確認
+        run: for f in js/*.js; do node --check "$f"; done
