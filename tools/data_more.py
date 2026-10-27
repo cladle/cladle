@@ -1610,3 +1610,31 @@ R("futagomushi", "polyopisthocotyla", "フタゴムシ", "Eudiplozoon nipponicum
 for _id, _t in {"burihadamushi": 4, "hiramesinsakatemushi": 4, "futagomushi": 3}.items():
     _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.9"  # 単生類（10/27〜、0.3.8 の予約を差し替え）
+# 一覧ページで作者が出した案（2026-10-27）：知名度の変更27件、本家に入れる11種、ゲキムズだけにする13種。
+# 本家に入れる種の照合はゲキムズ用の結果（check/hard_inv/result.json、魚は日本産魚類全種目録）。ゲキムズだけにする種は tools/hard/hard_only.json へ。
+for _id, _t in {"akaei": 1, "akashumokuzame": 1, "amaminokurousagi": 4, "benikurage": 3, "gangaze": 2, "gigi": 3,
+                "hatagoisoginchaku": 4, "hiranousango": 4, "hossugai": 4, "itomakihitode": 1, "kanehira": 3,
+                "katayureiboya": 2, "kikumeishi": 2, "kuronamako": 2, "kusabiraishi": 4, "maboya": 1, "matsukasauo": 3,
+                "mokuyokukaimen": 4, "momijigai": 4, "nihonkumohitode": 2, "oikawa": 2, "onihitode": 2, "tanago": 1,
+                "tatejimaisoginchaku": 2, "togemomijigai": 3, "urikurage": 2, "zebrafish": 1}.items():
+    _find(_id)["tier"] = _t
+HARD_ONLY = ("ootanago", "zenitanago", "datehaze", "kikuzame", "nezumigisu", "asagaokurage", "bouzujindouika",
+             "asiabouzujindouika", "uijindouika", "hoshizame", "kitanakiusagi", "ashiro", "sekitoriiwashi")
+species[:] = [s for s in species if s["id"] not in HARD_ONLY]
+clades[:] = [c for c in clades if c["id"] != "staurozoa"]  # 十文字クラゲ綱はシラスジアサガオクラゲだけだった
+R("kumanoashitsuki", "sedentaria", "クマノアシツキ", "Acrocirrus validus", "磯の石の下などにすむゴカイの仲間（多毛類）。")
+R("samidorisashiba", "phyllodocida", "サミドリサシバ", "Eulalia viridis", "鮮やかな緑色をしたサシバゴカイの仲間。磯の岩の間にすむ。")
+R("sanhachiurokomushi", "phyllodocida", "サンハチウロコムシ", "Hermilepidonotus helotypus", "背中がうろこのような板でおおわれるウロコムシの仲間。")
+R("kuroshitanashiumiushi", "heterobranchia", "クロシタナシウミウシ", "Dendrodoris arborescens", "黒っぽいウミウシ。名のとおり、多くの巻貝がもつ歯舌（やすり状の歯）がない。")
+R("akaeraminoumiushi", "heterobranchia", "アカエラミノウミウシ", "Sakuraeolis enosimensis", "背中にミノのような突起が並ぶウミウシ。内湾の岸壁などでよく見られる。")
+R("dainanginpo", "perciformes", "ダイナンギンポ", "Dictyosoma temminckii", "磯の岩の間にすむ細長い魚。ギンポと呼ばれるが、ギンポ目ではない。")
+R("nabeka", "blenniiformes", "ナベカ", "Omobranchus elegans", "磯や岸壁の穴にすむ小さなギンポ目の魚。体の前半が黄色っぽい。")
+R("umiichigo", "octocorallia", "ウミイチゴ", "Eleutherobia rubra", "赤いイチゴのような形をした八放サンゴの仲間。")
+R("kaginotekurage", "hydrozoa", "カギノテクラゲ", "Gonionemus vertens", "触手の途中が鉤のように曲がる小さなクラゲ。アマモ場などにすみ、刺されると強く痛む。")
+R("kikumeishimodoki", "scleractinia", "キクメイシモドキ", "Oulastrea crispata", "小さな群体をつくるイシサンゴ。温帯の浅い海や内湾でも見られる。")
+R("sanshouuni", "echinoidea", "サンショウウニ", "Temnopleurus toreumaticus", "内湾の砂泥底にすむ小型のウニ。")
+for _id, _t in {"kumanoashitsuki": 4, "samidorisashiba": 4, "sanhachiurokomushi": 4, "kuroshitanashiumiushi": 3,
+                "akaeraminoumiushi": 3, "dainanginpo": 3, "nabeka": 3, "umiichigo": 3, "kaginotekurage": 3,
+                "kikumeishimodoki": 4, "sanshouuni": 3}.items():
+    _find(_id)["tier"] = _t
+META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）
