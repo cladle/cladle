@@ -1,11 +1,231 @@
 [
-  {"ja": "カノコイセエビ", "sci": "Panulirus longipes", "aliases": [], "fact": "", "tier": 4,
-   "source": "check/decapoda/consensus.tsv（学名は GBIF・CoL・WoRMS、和名は CoL・Wikidata・iNaturalist で一致、2026-10-25）",
-   "place": ["Palinuridae", "Achelata", "Decapoda"]},
-  {"ja": "ミナミテナガエビ", "sci": "Macrobrachium formosense", "aliases": [], "fact": "", "tier": 4,
-   "source": "check/decapoda/consensus.tsv（同上）",
-   "place": ["Palaemonidae", "Caridea", "Decapoda"]},
-  {"ja": "ヨシエビ", "sci": "Metapenaeus ensis", "aliases": [], "fact": "", "tier": 4,
-   "source": "check/decapoda/consensus.tsv（同上）",
-   "place": ["Penaeidae", "Dendrobranchiata", "Decapoda"]}
+ {
+  "ja": "カノコイセエビ",
+  "sci": "Panulirus longipes",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "check/decapoda/consensus.tsv（学名は GBIF・CoL・WoRMS、和名は CoL・Wikidata・iNaturalist で一致、2026-10-25）",
+  "place": [
+   "Palinuridae",
+   "Achelata",
+   "Decapoda"
+  ]
+ },
+ {
+  "ja": "ミナミテナガエビ",
+  "sci": "Macrobrachium formosense",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "check/decapoda/consensus.tsv（同上）",
+  "place": [
+   "Palaemonidae",
+   "Caridea",
+   "Decapoda"
+  ]
+ },
+ {
+  "ja": "ヨシエビ",
+  "sci": "Metapenaeus ensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "check/decapoda/consensus.tsv（同上）",
+  "place": [
+   "Penaeidae",
+   "Dendrobranchiata",
+   "Decapoda"
+  ]
+ },
+ {
+  "ja": "オオタナゴ",
+  "sci": "Acheilognathus macropterus",
+  "aliases": [],
+  "fact": "大陸から入った外来のタナゴ。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Acheilognathidae",
+   "Cypriniformes",
+   "Ostariophysi",
+   "Otomorpha"
+  ]
+ },
+ {
+  "ja": "ゼニタナゴ",
+  "sci": "Acheilognathus typus",
+  "aliases": [],
+  "fact": "うろこが細かい。数が大きく減っている。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Acheilognathidae",
+   "Cypriniformes",
+   "Ostariophysi",
+   "Otomorpha"
+  ]
+ },
+ {
+  "ja": "ダテハゼ",
+  "sci": "Amblyeleotris japonica",
+  "aliases": [],
+  "fact": "テッポウエビの仲間が掘った巣穴に同居し、ハゼが見張り役をする。",
+  "tier": 3,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Gobiiformes",
+   "Percomorpha",
+   "Euteleostei",
+   "Clupeocephala"
+  ]
+ },
+ {
+  "ja": "キクザメ",
+  "sci": "Echinorhinus brucus",
+  "aliases": [],
+  "fact": "体に菊の花のような大きな突起が散らばる深海のサメ。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Selachii",
+   "Elasmobranchii",
+   "Chondrichthyes",
+   "Gnathostomata"
+  ]
+ },
+ {
+  "ja": "ネズミギス",
+  "sci": "Gonorynchus abbreviatus",
+  "aliases": [],
+  "fact": "砂底にすむ細長い魚。コイやナマズと同じ骨鰾類。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Ostariophysi",
+   "Otomorpha",
+   "Clupeocephala",
+   "Teleostei"
+  ]
+ },
+ {
+  "ja": "シラスジアサガオクラゲ",
+  "sci": "Haliclystus borealis",
+  "aliases": [],
+  "fact": "漏斗形の体を柄で海藻に付け、縁の8つの腕の先に小さな触手の房をもつ。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Staurozoa",
+   "Medusozoa",
+   "Cnidaria",
+   "ParaHoxozoa"
+  ],
+  "verify": {
+   "ja": "和名は GBIF のみ。標準和名と学名の対応を要確認"
+  }
+ },
+ {
+  "ja": "ボウズジンドウイカ",
+  "sci": "Loliolus affinis",
+  "aliases": [],
+  "fact": "腕が短い小型のイカ。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Loliolus",
+   "Loliginidae",
+   "Decapodiformes",
+   "Coleoidea"
+  ]
+ },
+ {
+  "ja": "アジアボウズジンドウイカ",
+  "sci": "Loliolus hardwickei",
+  "aliases": [],
+  "fact": "ボウズジンドウイカによく似た小型のイカ。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Loliolus",
+   "Loliginidae",
+   "Decapodiformes",
+   "Coleoidea"
+  ]
+ },
+ {
+  "ja": "ウイジンドウイカ",
+  "sci": "Loliolus uyii",
+  "aliases": [],
+  "fact": "小型のジンドウイカ属のイカ。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Loliolus",
+   "Loliginidae",
+   "Decapodiformes",
+   "Coleoidea"
+  ]
+ },
+ {
+  "ja": "ホシザメ",
+  "sci": "Mustelus manazo",
+  "aliases": [],
+  "fact": "体に白い点が並ぶ。かまぼこの原料にされる。",
+  "tier": 3,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Carcharhiniformes",
+   "Selachii",
+   "Elasmobranchii",
+   "Chondrichthyes"
+  ]
+ },
+ {
+  "ja": "キタナキウサギ",
+  "sci": "Ochotona hyperborea",
+  "aliases": [
+   "エゾナキウサギ"
+  ],
+  "fact": "北海道の岩場にすむ。高い声で鳴く。エゾナキウサギはその亜種。",
+  "tier": 3,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Lagomorpha",
+   "Glires",
+   "Euarchontoglires",
+   "Boreoeutheria"
+  ],
+  "subspeciesAliases": [
+   "エゾナキウサギ"
+  ]
+ },
+ {
+  "ja": "アシロ",
+  "sci": "Ophidion asiro",
+  "aliases": [],
+  "fact": "砂底にすむ細長い魚。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Ophidiiformes",
+   "Percomorpha",
+   "Euteleostei",
+   "Clupeocephala"
+  ]
+ },
+ {
+  "ja": "セキトリイワシ",
+  "sci": "Rouleina squamilatera",
+  "aliases": [],
+  "fact": "深海にすむ黒っぽい魚。",
+  "tier": 4,
+  "source": "本家から移した種（本家 0.3.9 の記載をそのまま、2026-10-27 一覧ページの案）",
+  "place": [
+   "Otomorpha",
+   "Clupeocephala",
+   "Teleostei",
+   "Actinopterygii"
+  ]
+ }
 ]

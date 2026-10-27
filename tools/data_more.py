@@ -1347,8 +1347,9 @@ edit("gorilla", fact="最大級の霊長類。")
 edit("lion", fact="ネコ科では珍しく、群れで暮らす。")
 edit("itou", fact="日本最大級の淡水魚。北海道にすむ。")
 edit("ikaritogeobimushi", fact="海岸の砂粒のすき間にすむ腹毛動物。1937年に広島付近から記載された。")
-edit("minamimedaka", fact="日本のメダカは2種に分けられ、本種は本州の日本海側北部（キタノメダカの分布域）を除く本州から琉球列島にかけて分布する。")
-edit("kitanomedaka", fact="本州の日本海側（青森県から兵庫県）に分布するメダカ。ミナミメダカとは別種として記載された。")
+edit("minamimedaka", fact="日本のメダカは2種に分けられ、本種は本州の日本海側北部（キタノメダカの分布域）を除く本州から琉球列島にかけて分布する。北日本集団がキタノメダカとして新種記載されたのを受けて、2013年にミナミメダカの和名が提唱された。")
+# 2種に分かれた経緯：Sakaizumi et al. 1983（Copeia）・Sakaizumi 1984、原記載 Asai, Senou & Hosoya 2011（Ichthyol. Explor. Freshwaters 22）、和名 瀬能 2013（日本産魚類検索 第三版）
+edit("kitanomedaka", fact="本州の日本海側（青森県から兵庫県）に分布するメダカ。ミナミメダカとは遺伝的に大きく異なり、ひれの形や体の模様でも区別できることから、2011年に別種として記載された。種小名はメダカの研究者の酒泉満にちなむ。")
 edit("hayabusa", fact="急降下では時速300 kmを超えるともいわれる。タカに似るが、オウムやスズメに近い。")
 # 種の範囲（種か亜種か）は分類群ごとに更新されている世界の種リストに従う（2026-10-24 作者「最新の学説を参照したい」）。
 # 哺乳類 MDD 2.1、鳥 IOC World Bird List 15.2、爬虫類 Reptile Database 2026-06（いずれも ChecklistBank 経由）、魚は本村目録、海産は WoRMS。
@@ -1610,3 +1611,281 @@ R("futagomushi", "polyopisthocotyla", "フタゴムシ", "Eudiplozoon nipponicum
 for _id, _t in {"burihadamushi": 4, "hiramesinsakatemushi": 4, "futagomushi": 3}.items():
     _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.9"  # 単生類（10/27〜、0.3.8 の予約を差し替え）
+# 一覧ページで作者が出した案（2026-10-27）：知名度の変更27件、本家に入れる11種、ゲキムズだけにする13種。
+# 本家に入れる種の照合はゲキムズ用の結果（check/hard_inv/result.json、魚は日本産魚類全種目録）。ゲキムズだけにする種は tools/hard/hard_only.json へ。
+for _id, _t in {"akaei": 1, "akashumokuzame": 1, "amaminokurousagi": 4, "benikurage": 3, "gangaze": 2, "gigi": 3,
+                "hatagoisoginchaku": 4, "hiranousango": 4, "hossugai": 4, "itomakihitode": 1, "kanehira": 3,
+                "katayureiboya": 2, "kikumeishi": 2, "kuronamako": 2, "kusabiraishi": 4, "maboya": 1, "matsukasauo": 3,
+                "mokuyokukaimen": 4, "momijigai": 4, "nihonkumohitode": 2, "oikawa": 2, "onihitode": 2, "tanago": 1,
+                "tatejimaisoginchaku": 2, "togemomijigai": 3, "urikurage": 2, "zebrafish": 1}.items():
+    _find(_id)["tier"] = _t
+HARD_ONLY = ("ootanago", "zenitanago", "datehaze", "kikuzame", "nezumigisu", "asagaokurage", "bouzujindouika",
+             "asiabouzujindouika", "uijindouika", "hoshizame", "kitanakiusagi", "ashiro", "sekitoriiwashi")
+species[:] = [s for s in species if s["id"] not in HARD_ONLY]
+clades[:] = [c for c in clades if c["id"] != "staurozoa"]  # 十文字クラゲ綱はシラスジアサガオクラゲだけだった
+R("kumanoashitsuki", "sedentaria", "クマノアシツキ", "Acrocirrus validus", "磯の石の下などにすむゴカイの仲間（多毛類）。")
+R("samidorisashiba", "phyllodocida", "サミドリサシバ", "Eulalia viridis", "鮮やかな緑色をしたサシバゴカイの仲間。磯の岩の間にすむ。")
+R("sanhachiurokomushi", "phyllodocida", "サンハチウロコムシ", "Hermilepidonotus helotypus", "背中がうろこのような板でおおわれるウロコムシの仲間。")
+R("kuroshitanashiumiushi", "heterobranchia", "クロシタナシウミウシ", "Dendrodoris arborescens", "黒っぽいウミウシ。名のとおり、多くの巻貝がもつ歯舌（やすり状の歯）がない。")
+R("akaeraminoumiushi", "heterobranchia", "アカエラミノウミウシ", "Sakuraeolis enosimensis", "背中にミノのような突起が並ぶウミウシ。内湾の岸壁などでよく見られる。")
+R("dainanginpo", "perciformes", "ダイナンギンポ", "Dictyosoma temminckii", "磯の岩の間にすむ細長い魚。ギンポと呼ばれるが、ギンポ目ではない。")
+R("nabeka", "blenniiformes", "ナベカ", "Omobranchus elegans", "磯や岸壁の穴にすむ小さなギンポ目の魚。体の前半が黄色っぽい。")
+R("umiichigo", "octocorallia", "ウミイチゴ", "Eleutherobia rubra", "赤いイチゴのような形をした八放サンゴの仲間。")
+R("kaginotekurage", "hydrozoa", "カギノテクラゲ", "Gonionemus vertens", "触手の途中が鉤のように曲がる小さなクラゲ。アマモ場などにすみ、刺されると強く痛む。")
+R("kikumeishimodoki", "scleractinia", "キクメイシモドキ", "Oulastrea crispata", "小さな群体をつくるイシサンゴ。温帯の浅い海や内湾でも見られる。")
+R("sanshouuni", "echinoidea", "サンショウウニ", "Temnopleurus toreumaticus", "内湾の砂泥底にすむ小型のウニ。")
+for _id, _t in {"kumanoashitsuki": 4, "samidorisashiba": 4, "sanhachiurokomushi": 4, "kuroshitanashiumiushi": 3,
+                "akaeraminoumiushi": 3, "dainanginpo": 3, "nabeka": 3, "umiichigo": 3, "kaginotekurage": 3,
+                "kikumeishimodoki": 4, "sanshouuni": 3}.items():
+    _find(_id)["tier"] = _t
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（check/hard_inv/result.json）と check/picks18/。
+edit("asahigani", fact="甲羅が縦に長く、朱色をしたカニ。ふつうのカニのような横歩きはできず前後に歩くが、前にはほとんど進まない。砂に潜ってすむ。食用にされる。")
+R("kaiyadoriumigumo", "chelicerata", "カイヤドリウミグモ", "Nymphonella tapetis", "アサリなどの二枚貝の中に寄生するウミグモ。各地で増えてアサリ漁に被害を出した。")
+R("ryuujinoomukade", "chilopoda", "リュウジンオオムカデ", "Scolopendra alcyona", "2021年に新種として記載された、琉球列島と台湾の大型のムカデ。水に入って泳ぎ、水辺の生き物も食べる。")
+R("sashihariari", "formicidae", "サシハリアリ", "Paraponera clavata", "中南米の熱帯林にすむ大型のアリ。刺されると非常に強い痛みが続く。", ["パラポネラ"],
+  v={"ja": "和名の出典は Wikidata のみ"})
+R("ootsunohiramushi", "polycladida", "オオツノヒラムシ", "Planocera multitentaculata", "日本の磯の石の下でよく見られる大型のヒラムシ。")
+R("minohiramushi", "polycladida", "ミノヒラムシ", "Thysanozoon brocchii", "背中一面に小さな突起が生えたヒラムシ。体を波打たせて泳ぐこともできる。")
+R("chigokemushi", "bryozoa", "チゴケムシ", "Watersipora subatra", "港の岸壁や船底に付着し、赤黒い板状の群体をつくるコケムシ。")
+R("tagayasanminashi", "caenogastropoda", "タガヤサンミナシ", "Conus textile", "イモガイの一種。網目模様の殻をもつ。毒のある銛のような歯舌で獲物を刺し、人も刺されると危険。")
+R("ashihidanamekuji", "heterobranchia", "アシヒダナメクジ", "Laevicaulis alte", "殻のない陸の貝で、足の両側にひだがある。外来種で、南西諸島などに定着している。")
+R("mimiika", "decapodiformes", "ミミイカ", "Euprymna morsei", "耳のようなひれをもつ小さなイカ。昼は砂に潜って過ごす。")
+for _id, _t in {"kaiyadoriumigumo": 4, "ryuujinoomukade": 4, "sashihariari": 3, "ootsunohiramushi": 4, "minohiramushi": 4,
+                "chigokemushi": 4, "tagayasanminashi": 3, "ashihidanamekuji": 3, "mimiika": 3}.items():
+    _find(_id)["tier"] = _t
+R("ooguchiboya", "tunicata", "オオグチボヤ", "Megalodicopia hians", "深海にすむホヤ。大きく開いた口のような入水孔を閉じて、流れてきた小さな動物を捕らえて食べる。")  # 照合 check/hard_inv/
+_find("ooguchiboya")["tier"] = 3
+# 類線形動物を戻す（作者の指定、2026-10-27）。照合 check/picks19/：学名は GBIF・CoL・WoRMS、和名は CoL・iNaturalist で一致。
+C("nematomorpha", "nematoida", "類線形動物門", "Nematomorpha", "門", "幼生は昆虫などに寄生し、成体は水中で暮らす。")
+R("harigane", "nematomorpha", "ハリガネムシ", "Gordius aquaticus", "針金のように細長い体の寄生虫。幼生は昆虫などの体内で育ち、成体になると水の中に出てくる。")
+_find("harigane")["tier"] = 2
+# 作者の指定（2026-10-27、「タンザニアオオヤスデ」→アフリカオオヤスデ）。照合 check/picks18/：学名は GBIF・CoL・WoRMS で一致、和名は Wikidata のみ。
+R("africaooyasude", "diplopoda", "アフリカオオヤスデ", "Archispirostreptus gigas", "アフリカ東部にすむ大型のヤスデ。ペットとして飼われる。",
+  v={"ja": "和名の出典は Wikidata のみ"})
+_find("africaooyasude")["tier"] = 3
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（無脊椎は check/hard_inv/result.json、ヒシクイは日本鳥類目録改訂第8版）。
+R("umifukurou", "heterobranchia", "ウミフクロウ", "Pleurobranchaea japonica", "殻のないウミウシの仲間。肉食で、ほかの小動物を食べる。")
+R("gogoshimayumushi", "sedentaria", "ゴゴシマユムシ", "Ikedosoma gogoshimense", "瀬戸内海の興居島（ごごしま）にちなんで名づけられたユムシの仲間。干潟の泥に穴を掘ってすむ。")
+R("aominoumiushi", "heterobranchia", "アオミノウミウシ", "Glaucus atlanticus", "海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。")
+R("ishidatami", "vetigastropoda", "イシダタミ", "Monodonta confusa", "磯の岩の上でふつうに見られる巻貝。殻の表面が石畳のような模様になる。")
+R("hishigani", "brachyura", "ヒシガニ", "Enoplolambrus validus", "甲羅がひし形をしたカニ。はさみが大きく、砂泥底にすむ。")
+O("hishikui", "anseriformes", "ヒシクイ", "Anser fabalis", "冬に日本へ渡ってくる大型のガン。黒いくちばしに橙色の帯がある。", ["オオヒシクイ"])
+_find("hishikui")["subspeciesAliases"] = ["オオヒシクイ"]
+for _id, _t in {"umifukurou": 4, "gogoshimayumushi": 4, "aominoumiushi": 3, "ishidatami": 3, "hishigani": 4, "hishikui": 4}.items():
+    _find(_id)["tier"] = _t
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（check/hard_inv/result.json）と check/picks20/。
+# 群の名前で指定されたものは代表の種を選んだ（サルパ→トガリサルパ、タルマワシ→オオタルマワシ、カギムシ→トトロカギムシ）。
+C("onychophora", "panarthropoda", "有爪動物門", "Onychophora", "門", "カギムシ。粘液を発射して獲物を捕らえる。南半球と熱帯に分布。")
+R("sunaisoginchaku", "actiniaria", "スナイソギンチャク", "Dofleinia armata", "砂泥底にすむ大型のイソギンチャク。刺されると強く痛み、ひどく腫れることがある。")
+R("greenhydra", "hydrozoa", "グリーンヒドラ", "Hydra viridissima", "淡水にすむヒドラ。体の細胞の中に緑藻（クロレラの仲間）をすまわせていて、緑色に見える。",
+  v={"ja": "和名の出典は iNaturalist と教育・研究の資料"})
+R("shirogaya", "hydrozoa", "シロガヤ", "Aglaophenia whiteleggei", "鳥の羽のような形の群体をつくるヒドロ虫。触れると刺されて痛む。")
+R("togarisarupa", "tunicata", "トガリサルパ", "Salpa fusiformis", "海を漂う透明な樽形のホヤの仲間（サルパ）。1匹で暮らす世代と、鎖のようにつながる世代を交互に繰り返す。")
+R("ootarumawashi", "malacostraca", "オオタルマワシ", "Phronima sedentaria", "透明なヨコエビの仲間。サルパなどの体をくり抜いて樽を作り、その中で子を育てる。")
+R("mukademeribe", "heterobranchia", "ムカデメリベ", "Melibe viridis", "頭の大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。")
+R("udefuritsunozayaumiushi", "heterobranchia", "ウデフリツノザヤウミウシ", "Thecacera pacifica", "黄色い体に青や橙の模様がある小さなウミウシ。その姿から「ピカチュウウミウシ」の愛称で呼ばれる。")
+R("tamanomidorigai", "heterobranchia", "タマノミドリガイ", "Edenttellina limax", "巻貝の仲間なのに、二枚貝のような2枚の殻をもつ。緑色で、海藻の上で暮らす。",
+  v={"ja": "和名の出典は iNaturalist のみ"})
+R("gaikotsupandahoya", "tunicata", "ガイコツパンダホヤ", "Clavelina ossipandae", "沖縄の久米島で見つかり、2024年に新種として記載されたホヤ。パンダの顔のような黒い模様と骨のような白い筋があり、パンダボヤとも呼ばれる。")
+R("ultramanboya", "tunicata", "ウルトラマンボヤ", "Pycnoclavella diminuta", "小さな群体をつくるホヤ。一つ一つの個体の模様がウルトラマンの顔に似ていることから呼ばれる。",
+  v={"ja": "和名は仮称（CoL・iNaturalist）"})
+R("sukumiringogai", "caenogastropoda", "スクミリンゴガイ", "Pomacea canaliculata", "南米原産の淡水の巻貝。食用に持ち込まれて野生化し、水田のイネを食べる害貝になった。ジャンボタニシとも呼ばれるが、タニシの仲間ではない。")
+R("monhanashako", "malacostraca", "モンハナシャコ", "Odontodactylus scyllarus", "色鮮やかなシャコ。こん棒のような捕脚で、貝殻を割るほど強く打ちつける。")
+R("onimuchouuzumushi", "xenacoelomorpha", "オニムチョウウズムシ", "Amphiscolops oni", "2022年に新種として記載された小さな無腸類。背中に鬼の角のような長い突起がある。",
+  v={"ja": "和名の出典は記載した研究者の発表（筑波大学、2022）と iNaturalist"})
+R("kingghidorahsyllis", "phyllodocida", "キングギドラシリス", "Ramisyllis kingghidorahi", "2022年に佐渡島の個体から新種として記載されたゴカイの仲間。体の後ろが何度も枝分かれし、海綿の中で暮らす。",
+  v={"ja": "和名の出典は記載した研究者の発表（2022）と Wikidata"})
+R("sappa", "clupeiformes", "サッパ", "Sardinella zunasi", "内湾にすむニシンの仲間。岡山県などでは「ママカリ」と呼ばれ、酢漬けにして食べる。", ["ママカリ"])
+R("totorokagimushi", "onychophora", "トトロカギムシ", "Eoperipatus totoro", "ベトナムで見つかり、2013年に新種として記載されたカギムシ。学名は映画『となりのトトロ』にちなむ。",
+  v={"ja": "学術的な和名は確認できず、報道で使われた呼び名"})
+for _id, _t in {"sunaisoginchaku": 4, "greenhydra": 3, "shirogaya": 4, "togarisarupa": 3, "ootarumawashi": 4, "mukademeribe": 4,
+                "udefuritsunozayaumiushi": 3, "tamanomidorigai": 4, "gaikotsupandahoya": 3, "ultramanboya": 3,
+                "sukumiringogai": 2, "monhanashako": 2, "onimuchouuzumushi": 4, "kingghidorahsyllis": 3, "sappa": 3,
+                "totorokagimushi": 3}.items():
+    _find(_id)["tier"] = _t
+# ウミクワガタ→研究の多い種としてソメワケウミクワガタ（雄の二型とハーレムの研究、Tanaka & Nishi 2011 Zool. Sci. 28: 587）。
+R("somewakeumikuwagata", "malacostraca", "ソメワケウミクワガタ", "Elaphognathia discolor", "ウミクワガタの仲間。幼生は魚の血を吸い、成体の雄はクワガタのような大あごをもち、複数の雌を囲うハーレムをつくる。")
+_find("somewakeumikuwagata")["tier"] = 4
+# よく知られた呼び名を別名に（作者了承、2026-10-27）
+_find("gaikotsupandahoya")["aliases"] = ["パンダボヤ"]
+_find("udefuritsunozayaumiushi")["aliases"] = ["ピカチュウウミウシ"]
+_find("sukumiringogai")["aliases"] = ["ジャンボタニシ"]
+_find("hishikui")["verify"] = {"sci": "IOC 世界鳥類リストは亜種ヒシクイ（serrirostris）を別種 Anser serrirostris とし、オオヒシクイは A. fabalis に残す。ここでは日本鳥類目録改訂第8版に合わせた"}
+# 呼び名を「新口動物（後口動物）」「旧口動物（前口動物）」の対にそろえる（作者の指定、2026-10-27）。文だけなので版は上げない。
+edit("deuterostomia", ja="新口動物（後口動物）")
+edit("protostomia", ja="旧口動物（前口動物）",
+     polytomy="毛顎動物は旧口動物の中の位置が定まっていない（顎口動物などと近いとする解析もある）ため、ここでは三分岐で示す。")
+edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・有顎動物など。")
+# 足りない門を戻す（作者の指定、2026-10-27「必死に探して」）。和名は Web・GBIF・iNaturalist・Wikidata で探し直したもの。
+# 3種とも学術的な和名の出典は未確認なので verify を付ける。顎口動物・直泳動物は和名のある種が見つからない。
+C("loricifera", "scalidophora", "胴甲動物門", "Loricifera", "門", "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。")
+R("shinkaishiwakouramushi", "loricifera", "シンカイシワコウラムシ", "Pliciloricus hadalis",
+  "伊豆・小笠原海溝の水深8,260 mの海底から1988年に記載された胴甲動物。日本から初めて記載された胴甲動物。",
+  ["コウラムシ"], v={"ja": "和名の出典は日本語版ウィキペディアのみ（学術的な出典は未確認）"})
+C("micrognathozoa", "gnathifera", "微顎動物門", "Micrognathozoa", "門", "2000年に記載された門。複雑なあごをもつ0.1 mmほどの淡水の動物。")
+R("koagomushi", "micrognathozoa", "コアゴムシ", "Limnognathia maerski",
+  "グリーンランドのディスコ島の冷たい湧き水で1994年に見つかり、2000年に記載された微小な動物。この種のために微顎動物門が設けられた。",
+  v={"ja": "和名の出典は GBIF（Catalogue of Life）と iNaturalist（学術的な出典は未確認）"})
+C("cycliophora", "lophotrochozoa", "有輪動物門", "Cycliophora", "門", "1995年に記載された門。アカザエビ類の口器に付着してくらす。")
+R("pandoramushi", "cycliophora", "パンドラムシ", "Symbion pandora",
+  "ヨーロッパアカザエビの口のまわりの毛に付着してくらす、1 mmに満たない動物。1995年に記載され、この種のために有輪動物門が設けられた。",
+  v={"ja": "和名の出典は日本語版ウィキペディアと大学の研究室の発信（学術的な出典は未確認）"})
+for _id in ("shinkaishiwakouramushi", "koagomushi", "pandoramushi"):
+    _find(_id)["tier"] = 4
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（check/hard_inv/result.json）。
+R("ooikarinamako", "holothuroidea", "オオイカリナマコ", "Synapta maculata",
+  "サンゴ礁の砂地にすむ、ひものように細長いナマコ。長さ2 mほどになる。皮膚に錨（いかり）の形をした骨片があり、触るとくっつく。")
+R("senjunamako", "holothuroidea", "センジュナマコ", "Scotoplanes globosa",
+  "深海の泥の上を、管足が変化した脚で歩くナマコ。背中に角のような突起がある。英語では sea pig（海のブタ）と呼ばれる。")
+for _id, _t in {"ooikarinamako": 4, "senjunamako": 3}.items():
+    _find(_id)["tier"] = _t
+# 作者の指定「カニダマシ」（2026-10-27）→ 磯でふつうに見られるイソカニダマシを代表に。照合はゲキムズ用の結果（WoRMS 由来）。
+R("isokanidamashi", "anomura", "イソカニダマシ", "Petrolisthes japonicus",
+  "磯の石の下にふつうにいる、平たい小さなカニダマシ。カニに似ているが、ヤドカリやタラバガニと同じ異尾類で、長い触角をもち、歩く脚は3対しか見えない。")
+_find("isokanidamashi")["tier"] = 3
+# 作者の指定（2026-10-27「名前が特徴的で、いたなあとなる種」）。照合はゲキムズ用の結果、メンダコは check/picks21/。
+R("ojisan", "syngnathiformes", "オジサン", "Parupeneus multifasciatus", "あごの下に2本の長いひげをもつヒメジの仲間。ひげで砂の中の小動物を探して食べる。")
+R("gonzui", "siluriformes", "ゴンズイ", "Plotosus japonicus", "群れで団子のように集まる「ゴンズイ玉」をつくるナマズの仲間。背びれと胸びれのとげに毒がある。")
+R("umazurahagi", "tetraodontiformes", "ウマヅラハギ", "Thamnaconus modestus", "馬の顔のように長い顔をしたカワハギの仲間。食用にされる。")
+R("kongoufugu", "tetraodontiformes", "コンゴウフグ", "Lactoria cornuta", "目の前と尾の近くに角のような長い突起があるハコフグの仲間。")
+R("chouchinankou", "lophiiformes", "チョウチンアンコウ", "Himantolophus sagamius", "深海にすむアンコウの仲間。頭の上の突起の先が光り、これで獲物をおびき寄せる。")
+R("dangouo", "perciformes", "ダンゴウオ", "Eumicrotremus awae", "数cmほどの丸い小さな魚。腹びれが吸盤になっていて、岩や海藻にくっつく。")
+R("nyuudoukajika", "perciformes", "ニュウドウカジカ", "Psychrolutes phrictus", "深海にすむカジカの仲間。水から引き上げられると、ぶよぶよにたるんだ姿になる。")
+R("hekoayu", "syngnathiformes", "ヘコアユ", "Aeoliscus strigatus", "頭を下に向け、体を立てて泳ぐ細長い魚。ウニのとげの間などに群れて隠れる。")
+R("tsubameuo", "acanthuriformes", "ツバメウオ", "Platax teira", "平たい体の魚。幼魚のうちは背びれと尻びれがとても長い。")
+R("meganemochinouo", "labriformes", "メガネモチノウオ", "Cheilinus undulatus", "大きなものは2 mほどになるベラの仲間。おとなは額がこぶのように盛り上がる。ナポレオンフィッシュとも呼ばれる。", ["ナポレオンフィッシュ"])
+R("nenbutsudai", "gobiiformes", "ネンブツダイ", "Ostorhinchus semilineatus", "群れで泳ぐ小さなテンジクダイの仲間。雄が卵を口の中に入れて守る。")
+R("kagokakidai", "centrarchiformes", "カゴカキダイ", "Microcanthus strigatus", "黄色い体に黒い縦じまがある小さな魚。磯でよく見られる。")
+R("tsunodashi", "acanthuriformes", "ツノダシ", "Zanclus cornutus", "背びれが糸のように長く伸びる、黄・白・黒の模様の魚。サンゴ礁にすむ。")
+R("demenigisu", "euteleostei", "デメニギス", "Macropinna microstoma", "深海魚。頭の上が透明なドームになっていて、その中に筒の形をした目がある。")
+R("donko", "gobiiformes", "ドンコ", "Odontobutis obscurus", "川の流れのゆるい場所にすむハゼの仲間。頭が大きく、小魚やエビなどを食べる。")
+R("umiusagigai", "caenogastropoda", "ウミウサギガイ", "Ovula ovum", "真っ白でつやのある殻をもつ巻貝。生きているときは、黒い外套膜で殻を包んでいる。")
+R("beniokinaebisu", "vetigastropoda", "ベニオキナエビス", "Mikadotrochus hirasei", "深海にすむオキナエビスの仲間。殻の口に切れこみがあり、「生きた化石」と呼ばれる巻貝の一つ。")
+R("unoashi", "gastropoda", "ウノアシ", "Patelloida lanx", "磯の岩につく笠形の貝。殻に太いすじが放射状に走り、縁がぎざぎざになる。")
+R("bakagai", "bivalvia", "バカガイ", "Mactra chinensis", "浅い砂の海底にすむ二枚貝。むき身は「アオヤギ」と呼ばれ、すしだねなどにされる。", ["アオヤギ"])
+R("juumonjidako", "octopodiformes", "ジュウモンジダコ", "Grimpoteuthis hippocrepium", "深海にすむひれのあるタコ。耳のような一対のひれを動かして泳ぐ。")
+R("mendako", "octopodiformes", "メンダコ", "Opisthoteuthis depressa", "深海にすむ平たいタコ。耳のようなひれがあり、傘を広げたような姿で海底近くを漂う。", v={"sci": "WoRMS は Exsuperoteuthis depressa とする（GBIF・CoL は Opisthoteuthis）"})
+R("sodeika", "decapodiformes", "ソデイカ", "Thysanoteuthis rhombus", "大きなものは胴の長さが1 mほどになるイカ。胴のほぼ全長にわたるひし形のひれがある。食用にされる。")
+R("hikariboya", "tunicata", "ヒカリボヤ", "Pyrosoma atlanticum", "たくさんの個体が集まって筒形の群体をつくり、海を漂うホヤの仲間。刺激を受けると青白く光る。")
+R("kimengani", "brachyura", "キメンガニ", "Dorippe sinica", "甲羅のでこぼこが怒った鬼の顔のように見えるカニ。後ろの脚で貝殻などを背負って身を隠す。")
+R("bonerimushi", "sedentaria", "ボネリムシ", "Bonellia minor", "緑色のユムシの仲間。この仲間は雄がとても小さく、雌の体の中で暮らすことで知られる。")
+R("gomafudama", "caenogastropoda", "ゴマフダマ", "Paratectonatica tigrina", "砂の海底にすむタマガイの仲間。ほかの貝の殻に穴をあけて中身を食べる。殻にゴマのような斑点がある。")
+R("hitodeyadoriebi", "caridea", "ヒトデヤドリエビ", "Zenopontonia soror", "ヒトデの体の上で暮らす小さなエビ。体の色をすみかのヒトデに似せている。")
+R("takokurage", "scyphozoa", "タコクラゲ", "Mastigias papua", "太い口腕をもち、タコのように見えるクラゲ。体の中に褐虫藻をすまわせ、光合成でできた栄養も利用する。")
+for _id, _t in {"ojisan": 3, "gonzui": 3, "umazurahagi": 2, "kongoufugu": 3, "chouchinankou": 2, "dangouo": 3, "nyuudoukajika": 3, "hekoayu": 4, "tsubameuo": 3, "meganemochinouo": 2, "nenbutsudai": 4, "kagokakidai": 4, "tsunodashi": 3, "demenigisu": 3, "donko": 3, "umiusagigai": 4, "beniokinaebisu": 4, "unoashi": 4, "bakagai": 3, "juumonjidako": 4, "mendako": 3, "sodeika": 3, "hikariboya": 3, "kimengani": 4, "bonerimushi": 4, "gomafudama": 4, "hitodeyadoriebi": 4, "takokurage": 3}.items():
+    _find(_id)["tier"] = _t
+# 作者の指定（2026-10-27「へんないきもの」の掲載種と身近な昆虫）。照合はゲキムズ用の結果と check/picks22〜24/。
+# 哺乳類は世界哺乳類標準和名リスト2021年度版と一致を確認。ウデムシ・ヒヨケムシは種の和名が見つからず見送り。
+C("monotremata", "mammalia", "単孔目", "Monotremata", "目", "卵を産む哺乳類。カモノハシとハリモグラの仲間。")
+move("monotremata", "kamonohashi")
+C("carabidae", "coleoptera", "オサムシ科", "Carabidae", "科", "地上を歩き回る肉食の甲虫が多い。ハンミョウもこの科に含める。")
+C("cerambycidae", "coleoptera", "カミキリムシ科", "Cerambycidae", "科", "長い触角をもつ甲虫。幼虫は木の幹の中を食べて育つ。")
+move("cerambycidae", "gomadarakamikiri")
+R("onidarumaokoze", "perciformes", "オニダルマオコゼ", "Synanceia verrucosa", "岩やサンゴにそっくりな姿でじっと待ち伏せる魚。背びれのとげに強い毒があり、踏むと命にかかわることもある。")
+R("ubazame", "lamniformes", "ウバザメ", "Cetorhinus maximus", "大きなものは10 mほどになるサメ。大きな口を開けて泳ぎ、えらでプランクトンをこしとって食べる。")
+R("shirowani", "lamniformes", "シロワニ", "Carcharias taurus", "鋭い歯が並ぶ大型のサメ。見た目はこわいが性質はおとなしく、水族館でも飼われる。")
+R("umitengu", "syngnathiformes", "ウミテング", "Eurypegasus draconis", "平たい体を硬い骨板でおおった小さな魚。胸びれを広げ、海底を這うように動く。")
+R("mongarakawahagi", "tetraodontiformes", "モンガラカワハギ", "Balistoides conspicillum", "腹に大きな白い水玉模様がある、派手な色のカワハギの仲間。サンゴ礁にすむ。")
+R("toraeutsubo", "anguilliformes", "トラウツボ", "Enchelycore pardalis", "赤みがかった体に白い斑点があるウツボ。口を閉じても曲がった歯がのぞく。")
+R("chouchouuo", "acanthuriformes", "チョウチョウウオ", "Chaetodon auripes", "黄色い体に細いしま模様がある平たい魚。磯やサンゴ礁で見られる。")
+R("honsomewakebera", "labriformes", "ホンソメワケベラ", "Labroides dimidiatus", "ほかの魚の体についた寄生虫を食べて掃除する小さなベラ。鏡に映った自分を認識できるという研究がある。")
+R("onikamasu", "carangiformes", "オニカマス", "Sphyraena barracuda", "大きなものは1.5 mを超えるカマスの仲間。英語ではバラクーダと呼ばれる。シガテラ毒をもつことがある。")
+R("yamatomeribe", "heterobranchia", "ヤマトメリベ", "Melibe japonica", "大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。")
+R("hadakazoukurage", "caenogastropoda", "ハダカゾウクラゲ", "Pterotrachea coronata", "透明な体で海を泳ぐ巻貝の仲間。殻をもたず、ひれを振って泳ぐ。")
+R("kochouumiushi", "heterobranchia", "コチョウウミウシ", "Crosslandia viridis", "海藻に似た緑色の体をもつウミウシ。体の縁がひらひらと広がる。")
+R("tsumetagai", "caenogastropoda", "ツメタガイ", "Neverita didyma", "砂浜の浅い海にすむ丸い巻貝。ほかの二枚貝の殻に穴をあけて中身を食べる。")
+R("kinchakugani", "brachyura", "キンチャクガニ", "Lybia tessellata", "両方のはさみに小さなイソギンチャクを持ち、ポンポンのように振って身を守る小さなカニ。")
+R("tainoe", "isopoda", "タイノエ", "Ceratothoa verrucosa", "マダイの口の中に寄生する等脚類。雌と雄がつがいで口の中にすみつく。")
+R("sakasakurage", "scyphozoa", "サカサクラゲ", "Cassiopea ornata", "かさを下にして海底でひっくり返って暮らすクラゲ。体の中の褐虫藻に光を当てている。")
+R("amigasakurage", "ctenophora", "アミガサクラゲ", "Beroe forskalii", "触手をもたないクシクラゲの仲間。大きな口でほかのクシクラゲを丸のみにする。")
+R("nichirinhitode", "asteroidea", "ニチリンヒトデ", "Solaster paxillatus", "太陽のように腕が10本前後あるヒトデ。ほかのヒトデを食べる。")
+R("yumenamako", "holothuroidea", "ユメナマコ", "Enypniastes eximia", "深海にすむ半透明で赤いナマコ。体のまわりのひれを動かして泳ぐことができる。")
+R("manhattanboya", "tunicata", "マンハッタンボヤ", "Molgula manhattensis", "北アメリカ東岸原産の小さな丸いホヤ。船について運ばれ、日本の港にも定着している。")
+R("oosarupa", "tunicata", "オオサルパ", "Thetys vagina", "大きなものは30 cmほどになる大型のサルパ。透明な樽形の体で海を漂う。")
+R("goisagi", "pelecaniformes", "ゴイサギ", "Nycticorax nycticorax", "夜に水辺で魚などを捕るサギ。夜に飛びながら「クワッ」と鳴く。")
+R("harimogura", "monotremata", "ハリモグラ", "Tachyglossus aculeatus", "背中が針でおおわれた、卵を産む哺乳類。長い舌でアリやシロアリを食べる。")
+R("hadakadebanezumi", "rodentia", "ハダカデバネズミ", "Heterocephalus glaber", "地下にトンネルを掘って集団で暮らす、毛のほとんどないネズミの仲間。1匹の女王だけが子を産み、30年以上生きることもある。")
+R("minamikoarikui", "xenarthra", "ミナミコアリクイ", "Tamandua tetradactyla", "南アメリカの森にすむ小型のアリクイ。木に登り、尾を枝に巻きつけることができる。")
+R("aiai", "primates", "アイアイ", "Daubentonia madagascariensis", "マダガスカルにすむ夜行性のサル。とても細長い中指で木をたたき、中の虫の幼虫をほじり出して食べる。")
+R("tsuchibuta", "afrotheria", "ツチブタ", "Orycteropus afer", "アフリカにすむ、ブタのような鼻とウサギのような耳をもつ哺乳類。シロアリを食べる。1種だけで管歯目をつくる。")
+R("ogurop", "rodentia", "オグロプレーリードッグ", "Cynomys ludovicianus", "北アメリカの草原に巣穴を掘って群れで暮らすリスの仲間。犬のような声で鳴き合う。")
+R("himearumajiro", "xenarthra", "ヒメアルマジロ", "Chlamyphorus truncatus", "アルゼンチンにすむ、体長10 cmほどの小さなアルマジロ。背中にピンク色のよろいがあり、地中を掘り進む。")
+R("mimisenzankou", "laurasiatheria", "ミミセンザンコウ", "Manis pentadactyla", "体がうろこでおおわれた哺乳類。アリやシロアリを食べ、危険を感じると体を丸める。中国や台湾などにすむ。")
+R("hebikuiwashi", "afroaves", "ヘビクイワシ", "Sagittarius serpentarius", "アフリカの草原にすむ、足の長い猛禽。地上を歩き、ヘビなどを強く蹴って捕らえる。")
+R("wanigame", "testudines", "ワニガメ", "Macrochelys temminckii", "北アメリカにすむ大型のカメ。舌の先のミミズのような突起で魚をおびき寄せる。")
+R("amefukuragaeru", "anura", "アメフクラガエル", "Breviceps adspersus", "アフリカ南部にすむ丸い体のカエル。危険を感じると体をふくらませる。")
+R("leafyseadragon", "syngnathiformes", "リーフィーシードラゴン", "Phycodurus eques", "海藻のような飾りが体じゅうにある、タツノオトシゴの仲間。オーストラリア南部の海にすむ。")
+R("miideragomimushi", "carabidae", "ミイデラゴミムシ", "Pheropsophus jessoensis", "危険を感じると、おしりから100 ℃ほどの高温のガスを噴き出す甲虫。「へっぴりむし」とも呼ばれる。")
+R("douganebuibui", "scarabaeidae", "ドウガネブイブイ", "Anomala cuprea", "銅色の光沢があるコガネムシの仲間。夏の夜に灯りに集まる。")
+R("samuraiari", "formicidae", "サムライアリ", "Polyergus samurai", "ほかのアリの巣を襲ってさなぎを奪い、育ったアリを働かせるアリ。自分では餌をとれない。")
+_find("chou")["aliases"] += ["ウオジラミ"]
+R("mansonjuuketsukyuuchuu", "trematoda", "マンソン住血吸虫", "Schistosoma mansoni", "人の血管にすむ吸虫。アフリカや南アメリカで病気を起こす。雄の体の溝に雌が収まって、つがいで暮らす。")
+R("silverarowana", "teleostei", "シルバーアロワナ", "Osteoglossum bicirrhosum", "南アメリカのアマゾン川などにすむ細長い魚。水面近くの昆虫を、水から跳び上がって捕らえる。")
+R("tsunozemi", "hemiptera", "ツノゼミ", "Butragulus flavipes", "胸の背中側が角のような形にのびた小さな虫。セミに近いカメムシ目の仲間。", v={"sci": "属は資料により Orthobelus とも"})
+R("tamamushi", "coleoptera", "タマムシ", "Chrysochroa fulgidissima", "緑色の金属光沢に赤紫のすじがある甲虫。法隆寺の玉虫厨子には、この虫の翅が飾りに使われた。", ["ヤマトタマムシ"])
+R("hanmyou", "carabidae", "ハンミョウ", "Cicindela chinensis", "赤・緑・青に輝く甲虫。人の前を飛んでは止まるので「みちおしえ」とも呼ばれる。", ["ナミハンミョウ"])
+R("maimaikaburi", "carabidae", "マイマイカブリ", "Carabus blaptoides", "カタツムリの殻に頭を突っ込んで中身を食べる、細長い頭をした甲虫。日本固有種。")
+R("kokuwagata", "lucanidae", "コクワガタ", "Dorcus rectus", "日本でいちばん身近なクワガタムシの一つ。雑木林にすむ。")
+R("koganemushi", "scarabaeidae", "コガネムシ", "Mimela splendens", "緑色の金属光沢がある甲虫。成虫は葉を、幼虫は土の中で植物の根を食べる。")
+R("oosenchikogane", "coleoptera", "オオセンチコガネ", "Phelotrupes auratus", "動物のふんを食べる、金属光沢のある甲虫。地域によって赤・緑・青と色が変わる。")
+R("ruriboshikamikiri", "cerambycidae", "ルリボシカミキリ", "Rosalia batesi", "水色の体に黒い斑点がある美しいカミキリムシ。日本固有種。")
+R("shirosujikamikiri", "cerambycidae", "シロスジカミキリ", "Batocera lineolata", "日本最大級のカミキリムシ。幼虫はクヌギなどの幹の中を食べて育つ。")
+R("nijuuyahoshitentou", "coccinellidae", "ニジュウヤホシテントウ", "Henosepilachna vigintioctopunctata", "背中に28個の黒い斑点があるテントウムシ。ナスやジャガイモの葉を食べる害虫。")
+R("himekurootoshibumi", "coleoptera", "ヒメクロオトシブミ", "Apoderus erythrogaster", "葉を巻いて「揺籃（ようらん）」をつくり、その中に卵を産む小さな甲虫。")
+R("oohiratashidemushi", "coleoptera", "オオヒラタシデムシ", "Necrophila japonica", "動物の死がいに集まる平たい甲虫。死がいを分解する掃除屋。")
+R("sabikikori", "coleoptera", "サビキコリ", "Agrypnus binodulus", "さびたような色のコメツキムシの仲間。ひっくり返すと、パチンと音をたてて跳ね起きる。")
+R("kimunekumabachi", "hymenoptera", "キムネクマバチ", "Xylocopa appendiculata", "胸に黄色い毛がある、丸く大きなハナバチ。おとなしく、雄には針がない。", ["クマバチ"])
+R("satojigabachi", "hymenoptera", "サトジガバチ", "Ammophila sabulosa", "腰がとても細いハチ。ガの幼虫を毒針でまひさせ、巣穴に運んで子の餌にする。")
+R("namihanaabu", "diptera", "ナミハナアブ", "Eristalis tenax", "ミツバチによく似た姿のアブ。幼虫は汚れた水の中で暮らし「オナガウジ」と呼ばれる。")
+R("kiriujigaganbo", "diptera", "キリウジガガンボ", "Tipula aino", "長い脚をもつ大きな蚊のような虫。血は吸わない。")
+R("onbubatta", "orthoptera", "オンブバッタ", "Atractomorpha lata", "小さな雄が大きな雌の背中に乗っている姿がよく見られるバッタ。")
+R("kubikirigisu", "orthoptera", "クビキリギス", "Euconocephalus varius", "とがった頭と赤い口をもつキリギリスの仲間。成虫のまま冬を越し、春に「ジー」と鳴く。")
+R("kutsuwamushi", "orthoptera", "クツワムシ", "Mecopoda niponensis", "「ガチャガチャ」と大きな声で鳴く、大型のキリギリスの仲間。")
+R("matsumushi", "orthoptera", "マツムシ", "Xenogryllus marmoratus", "秋に「チンチロリン」と鳴くコオロギの仲間。")
+R("aomatsumushi", "orthoptera", "アオマツムシ", "Truljalia hibinonis", "緑色のコオロギの仲間。木の上で「リーリー」と大きな声で鳴く外来種。")
+R("niiniizemi", "cicadidae", "ニイニイゼミ", "Platypleura kaempferi", "木の皮のような模様の小さなセミ。梅雨明けの頃から「チー」と鳴く。抜け殻は泥をかぶっていることが多い。")
+R("kuroageha", "papilionidae", "クロアゲハ", "Papilio protenor", "黒い翅をもつ大きなアゲハチョウ。幼虫はミカンなどの葉を食べる。")
+R("tsumagurohyoumon", "lepidoptera", "ツマグロヒョウモン", "Argynnis hyperbius", "雌の前翅の先が黒いヒョウ柄のチョウ。南の地方から分布を北へ広げている。")
+R("ruritateha", "lepidoptera", "ルリタテハ", "Kaniska canace", "黒い翅に青いすじが入ったタテハチョウ。幼虫はホトトギスなどの葉を食べる。")
+R("oogomadara", "lepidoptera", "オオゴマダラ", "Idea leuconoe", "白と黒のまだら模様の大きなチョウ。ゆっくりと飛ぶ。さなぎは金色に輝く。")
+R("benishijimi", "lepidoptera", "ベニシジミ", "Lycaena phlaeas", "橙色の翅に黒い斑点がある小さなチョウ。草地でふつうに見られる。")
+R("ichimonjiseseri", "lepidoptera", "イチモンジセセリ", "Parnara guttata", "茶色の小さなチョウ。後翅に白い斑点が一列に並ぶ。幼虫はイネの葉を食べる。")
+R("oosukashiba", "lepidoptera", "オオスカシバ", "Cephonodes hylas", "透明な翅で花の前に止まるように飛び、蜜を吸うガ。")
+R("oomizuao", "lepidoptera", "オオミズアオ", "Actias aliena", "うすい水色の大きな翅をもつガ。後翅の先が尾のようにのびる。")
+R("yamatoshijimi_b", "lepidoptera", "ヤマトシジミ", "Zizeeria maha", "道ばたのカタバミのまわりでふつうに見られる、小さな青いチョウ。貝のヤマトシジミとは別の生き物。")
+R("katabirotogehamushi", "coleoptera", "カタビロトゲハムシ", "Dactylispa subquadrata", "体じゅうにとげが生えた小さなハムシ。トゲハムシの仲間は昔「トゲトゲ」と呼ばれ、とげのない「トゲナシトゲトゲ」、その中でとげのある「トゲアリトゲナシトゲトゲ」という呼び名も生まれた。")
+for _id, _t in {"onidarumaokoze": 3, "ubazame": 2, "shirowani": 3, "umitengu": 4, "mongarakawahagi": 3, "toraeutsubo": 3, "chouchouuo": 2, "honsomewakebera": 3, "onikamasu": 3, "yamatomeribe": 4, "hadakazoukurage": 4, "kochouumiushi": 4, "tsumetagai": 3, "kinchakugani": 3, "tainoe": 3, "sakasakurage": 3, "amigasakurage": 4, "nichirinhitode": 4, "yumenamako": 4, "manhattanboya": 4, "oosarupa": 4, "goisagi": 3, "harimogura": 2, "hadakadebanezumi": 2, "minamikoarikui": 3, "aiai": 2, "tsuchibuta": 3, "ogurop": 2, "himearumajiro": 4, "mimisenzankou": 3, "hebikuiwashi": 3, "wanigame": 2, "amefukuragaeru": 3, "leafyseadragon": 3, "miideragomimushi": 3, "douganebuibui": 3, "samuraiari": 3, "mansonjuuketsukyuuchuu": 4, "silverarowana": 3, "tsunozemi": 3, "tamamushi": 2, "hanmyou": 2, "maimaikaburi": 3, "kokuwagata": 2, "koganemushi": 2, "oosenchikogane": 3, "ruriboshikamikiri": 3, "shirosujikamikiri": 3, "nijuuyahoshitentou": 3, "himekurootoshibumi": 4, "oohiratashidemushi": 4, "sabikikori": 4, "kimunekumabachi": 2, "satojigabachi": 4, "namihanaabu": 3, "kiriujigaganbo": 3, "onbubatta": 2, "kubikirigisu": 3, "kutsuwamushi": 2, "matsumushi": 2, "aomatsumushi": 3, "niiniizemi": 2, "kuroageha": 2, "tsumagurohyoumon": 2, "ruritateha": 2, "oogomadara": 2, "benishijimi": 2, "ichimonjiseseri": 3, "oosukashiba": 3, "oomizuao": 3, "yamatoshijimi_b": 2, "katabirotogehamushi": 3}.items():
+    _find(_id)["tier"] = _t
+
+# 作者の指定（2026-10-27）。哺乳類は世界哺乳類標準和名リスト2021年度版の和名、ほかは check/picks25/。
+_find("kirin").setdefault("subspeciesAliases", []).append("アミメキリン"); _find("kirin")["aliases"].append("アミメキリン")
+_find("gorilla").setdefault("subspeciesAliases", []).append("ニシローランドゴリラ"); _find("gorilla")["aliases"].append("ニシローランドゴリラ")
+_find("axolotl")["aliases"].append("メキシコサラマンダー")
+edit("aominoumiushi", fact="海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。英語では blue dragon（青いドラゴン）と呼ばれる。")
+R("meerkat", "feliformia", "ミーアキャット", "Suricata suricatta", "アフリカ南部の乾いた土地で群れをつくって暮らすマングースの仲間。見張り役が後ろ足で立って周りを警戒する。")
+R("mitsuobiarumajiro", "xenarthra", "ミツオビアルマジロ", "Tolypeutes tricinctus", "ブラジルにすむアルマジロ。危険を感じると体をボールのように丸めて身を守る。")
+R("erimakitokage", "squamata", "エリマキトカゲ", "Chlamydosaurus kingii", "オーストラリアなどにすむトカゲ。驚くと首のまわりのえりを大きく広げ、後ろ足で立って走る。")
+R("jacksonchameleon", "squamata", "ジャクソンカメレオン", "Trioceros jacksonii", "雄の頭に3本の角があるカメレオン。東アフリカの山地にすむ。")
+R("okikurage", "scyphozoa", "オキクラゲ", "Pelagia noctiluca", "沖合を漂う紫がかったクラゲ。刺されると強く痛む。刺激を受けると光る。")
+R("boa", "serpentes", "ボアコンストリクター", "Boa constrictor", "中南米にすむ大型のヘビ。毒はなく、獲物に巻きついて締めつけて捕らえる。")
+R("darumawashi", "accipitridae", "ダルマワシ", "Terathopius ecaudatus", "アフリカの草原にすむワシ。尾がとても短く、赤い顔をしている。")
+R("ajiazou", "afrotheria", "アジアゾウ", "Elephas maximus", "インドや東南アジアにすむゾウ。アフリカのゾウより耳が小さい。")
+R("yotsuyubiharinezumi", "eulipotyphla", "ヨツユビハリネズミ", "Atelerix albiventris", "アフリカにすむハリネズミ。ペットとして飼われるハリネズミの多くはこの種がもと。")
+R("nishiindomanatee", "afrotheria", "ニシインドマナティー", "Trichechus manatus", "アメリカ南部やカリブ海の暖かい浅い海や川にすむ、海草などを食べる哺乳類。ゾウに近い仲間。", ["アメリカマナティー"])
+R("fukuromomonga", "marsupialia", "フクロモモンガ", "Petaurus breviceps", "オーストラリアなどにすむ有袋類。前足と後ろ足の間の膜を広げて木から木へ滑空する。")
+R("musasabi", "rodentia", "ムササビ", "Petaurista leucogenys", "日本の森にすむ大型のリスの仲間。夜に、前足と後ろ足の間の膜を広げて木から木へ滑空する。", ["ホオジロムササビ"])
+R("alpaca", "artiodactyla", "アルパカ", "Vicugna pacos", "南アメリカのアンデスで、毛をとるために家畜化されたラクダの仲間。", v={"ja": "家畜のため世界哺乳類標準和名リストには無く、和名は Wikidata のみ"})
+R("americawashimimizuku", "strigiformes", "アメリカワシミミズク", "Bubo virginianus", "南北アメリカに広くすむ大型のフクロウ。頭に耳のような羽角がある。")
+R("hashibirokou", "pelecaniformes", "ハシビロコウ", "Balaeniceps rex", "アフリカの湿地にすむ大きな鳥。木靴のような太いくちばしで、肺魚などを捕らえる。何時間もじっと動かないことで知られる。")
+R("minamiamericaottosei", "pinnipedia", "ミナミアメリカオットセイ", "Arctocephalus australis", "南アメリカの海岸にすむオットセイ。")
+R("kobitokaba", "whippomorpha", "コビトカバ", "Choeropsis liberiensis", "西アフリカの森にすむ小型のカバ。体重はカバの10分の1ほど。")
+R("kotsumekawauso", "mustelidae", "コツメカワウソ", "Aonyx cinereus", "東南アジアなどにすむ小型のカワウソ。爪が小さく、器用な前足で貝やカニを探して食べる。")
+R("chinanago", "anguilliformes", "チンアナゴ", "Heteroconger hassi", "砂に穴を掘って体の後ろ半分を埋め、海中に体を伸ばして流れてくるプランクトンを食べる。群れで暮らす。")
+R("akameamagaeru", "anura", "アカメアマガエル", "Agalychnis callidryas", "中米の森にすむ、赤い目と緑の体のアマガエル。")
+R("rurikongouinko", "psittaciformes", "ルリコンゴウインコ", "Ara ararauna", "背中が青、お腹が黄色の大型のインコ。南アメリカの森にすむ。")
+R("kongouinko", "psittaciformes", "コンゴウインコ", "Ara macao", "赤・黄・青の羽をもつ大型のインコ。中南米の森にすむ。", ["アカコンゴウインコ"])
+R("nihonusagikoumori", "chiroptera", "ニホンウサギコウモリ", "Plecotus sacrimontis", "ウサギのように長い耳をもつ日本のコウモリ。森にすみ、木のうろなどをねぐらにする。")
+for _id, _t in {"meerkat": 1, "mitsuobiarumajiro": 3, "erimakitokage": 1, "jacksonchameleon": 3, "okikurage": 3, "boa": 2, "darumawashi": 4, "ajiazou": 1, "yotsuyubiharinezumi": 2, "nishiindomanatee": 2, "fukuromomonga": 2, "musasabi": 1, "alpaca": 1, "americawashimimizuku": 3, "hashibirokou": 1, "minamiamericaottosei": 3, "kobitokaba": 2, "kotsumekawauso": 1, "chinanago": 1, "akameamagaeru": 2, "rurikongouinko": 2, "kongouinko": 2, "nihonusagikoumori": 3}.items():
+    _find(_id)["tier"] = _t
+
+META["datasetVersion"] = "0.3.16.1"  # 0.3.16 のままだと10/29〜11/06に漏れ1日のため .1。 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
