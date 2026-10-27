@@ -31,7 +31,7 @@ const EXTRA = [
   { lv: "fish", name: "魚編", note: "日本の魚 4,791 種から出題。種まで当てれば正解。推測は 20 回まで。" },
 ];
 function extraHTML() {
-  return `<section><h2>番外編</h2><p>本編とは別に、系統をしぼって遊ぶモードです。どれも試作中で、成績は本編とは別に記録します。</p>
+  return `<section><h2>番外編</h2><p>本編とは別に、決まった範囲の動物だけで遊ぶモードです。どれも試作中で、成績は本編とは別に記録します。</p>
     <div class="modes">${EXTRA.map(m => `<button class="mode-card" data-mode="${m.lv}" aria-current="${LEVEL === m.lv}"><b>${esc(m.name)}（試作）</b><span>${esc(m.note)}</span></button>`).join("")}</div></section>`;
 }
 function fishAboutHTML() {
