@@ -1,0 +1,2112 @@
+{
+"aburakoumori": {
+"gbifKey": 5707125,
+"sci": "Pipistrellus abramus",
+"sciConsensus": "Pipistrellus abramus"
+},
+"aburazemi": {
+"gbifKey": 8357478,
+"sci": "Graptopsaltria nigrofuscata",
+"sciConsensus": "Graptopsaltria nigrofuscata"
+},
+"adansonhaetori": {
+"gbifKey": 2177741,
+"sci": "Hasarius adansoni",
+"sciConsensus": "Hasarius adansoni"
+},
+"adineta": {
+"gbifKey": 1000794,
+"sci": "Adineta vaga",
+"sciConsensus": "Adineta vaga"
+},
+"africasuigyu": {
+"gbifKey": 2441034,
+"sci": "Syncerus caffer",
+"sciConsensus": "Syncerus caffer"
+},
+"africazou": {
+"gbifKey": 2435350,
+"sci": "Loxodonta africana",
+"sciConsensus": "Loxodonta africana"
+},
+"ageha": {
+"gbifKey": 1937819,
+"sci": "Papilio xuthus",
+"sciConsensus": "Papilio xuthus"
+},
+"ajiakabutoebi": {
+"gbifKey": 9489150,
+"sci": "Triops granarius",
+"sciConsensus": "Triops granarius"
+},
+"akaei": {
+"gbifKey": 9541869,
+"sci": "Hemitrygon akajei",
+"sciConsensus": "Hemitrygon akajei"
+},
+"akagezaru": {
+"gbifKey": 2436604,
+"sci": "Macaca mulatta",
+"sciConsensus": "Macaca mulatta"
+},
+"akagitsune": {
+"gbifKey": 5219243,
+"sci": "Vulpes vulpes",
+"sciConsensus": "Vulpes vulpes"
+},
+"akaharaimori": {
+"gbifKey": 2431862,
+"sci": "Cynops pyrrhogaster",
+"sciConsensus": "Cynops pyrrhogaster"
+},
+"akaieka": {
+"gbifKey": 1652991,
+"sci": "Culex pipiens",
+"sciConsensus": "Culex pipiens"
+},
+"akakangaroo": {
+"gbifKey": 5219963,
+"sci": "Osphranter rufus",
+"sciConsensus": "Osphranter rufus"
+},
+"akakurage": {
+"gbifKey": 5185426,
+"sci": "Chrysaora pacifica",
+"sciConsensus": "Chrysaora pacifica"
+},
+"akamimigame": {
+"gbifKey": 2443002,
+"sci": "Trachemys scripta",
+"sciConsensus": "Trachemys scripta"
+},
+"akanezumi": {
+"gbifKey": 5219745,
+"sci": "Apodemus speciosus",
+"sciConsensus": "Apodemus speciosus"
+},
+"akasango": {
+"gbifKey": 5185004,
+"sci": "Corallium japonicum",
+"sciConsensus": "Corallium japonicum"
+},
+"akashumokuzame": {
+"gbifKey": 2418789,
+"sci": "Sphyrna lewini",
+"sciConsensus": "Sphyrna lewini"
+},
+"akaumigame": {
+"gbifKey": 8894817,
+"sci": "Caretta caretta",
+"sciConsensus": "Caretta caretta"
+},
+"akauni": {
+"gbifKey": 2278882,
+"sci": "Pseudocentrotus depressus",
+"sciConsensus": "Pseudocentrotus depressus"
+},
+"akayasude": {
+"gbifKey": 9599946,
+"sci": "Nedyopus tambanus",
+"sciConsensus": "Nedyopus tambanus"
+},
+"akiakane": {
+"gbifKey": 1428237,
+"sci": "Sympetrum frequens",
+"sciConsensus": "Sympetrum frequens"
+},
+"amaminokurousagi": {
+"gbifKey": 2436950,
+"sci": "Pentalagus furnessi",
+"sciConsensus": "Pentalagus furnessi"
+},
+"amefurashi": {
+"gbifKey": 5858158,
+"sci": "Aplysia kurodai",
+"sciConsensus": "Aplysia kurodai"
+},
+"amenbo": {
+"gbifKey": 5866108,
+"sci": "Aquarius paludum",
+"sciConsensus": "Aquarius paludum"
+},
+"americazarigani": {
+"gbifKey": 2227300,
+"sci": "Procambarus clarkii",
+"sciConsensus": "Procambarus clarkii"
+},
+"amimenishikihebi": {
+"gbifKey": 9260388,
+"sci": "Malayopython reticulatus",
+"sciConsensus": "Malayopython reticulatus"
+},
+"amurharinezumi": {
+"gbifKey": 5219617,
+"sci": "Erinaceus amurensis",
+"sciConsensus": "Erinaceus amurensis"
+},
+"anausagi": {
+"gbifKey": 2436940,
+"sci": "Oryctolagus cuniculus",
+"sciConsensus": "Oryctolagus cuniculus"
+},
+"anboina": {
+"gbifKey": 5728277,
+"sci": "Conus geographus",
+"sciConsensus": "Conus geographus"
+},
+"andonkurage": {
+"gbifKey": 6472058,
+"sci": "Carybdea brevipedalia",
+"sciConsensus": "Carybdea brevipedalia"
+},
+"anisakis": {
+"gbifKey": 2284295,
+"sci": "Anisakis simplex",
+"sciConsensus": "Anisakis simplex"
+},
+"aodaisho": {
+"gbifKey": 2458390,
+"sci": "Elaphe climacophora",
+"sciConsensus": "Elaphe climacophora"
+},
+"aohitode": {
+"gbifKey": 5187093,
+"sci": "Linckia laevigata",
+"sciConsensus": "Linckia laevigata"
+},
+"aoriika": {
+"gbifKey": 8920970,
+"sci": "Sepioteuthis lessoniana",
+"sciConsensus": "Sepioteuthis lessoniana"
+},
+"aosango": {
+"gbifKey": 2264328,
+"sci": "Heliopora coerulea",
+"sciConsensus": "Heliopora coerulea"
+},
+"aosujiageha": {
+"gbifKey": 5141212,
+"sci": "Graphium sarpedon",
+"sciConsensus": "Graphium sarpedon"
+},
+"aoumigame": {
+"gbifKey": 2442225,
+"sci": "Chelonia mydas",
+"sciConsensus": "Chelonia mydas"
+},
+"aoumiushi": {
+"gbifKey": 9775639,
+"sci": "Hypselodoris festiva",
+"sciConsensus": "Hypselodoris festiva"
+},
+"aozumukade": {
+"gbifKey": 9602721,
+"sci": "Scolopendra japonica",
+"sciConsensus": "Scolopendra japonica"
+},
+"argentinaari": {
+"gbifKey": 1316908,
+"sci": "Linepithema humile",
+"sciConsensus": "Linepithema humile"
+},
+"asagaokurage": {
+"gbifKey": 2264664,
+"sci": "Haliclystus borealis",
+"sciConsensus": "Haliclystus borealis"
+},
+"asagimadara": {
+"gbifKey": 1897664,
+"sci": "Parantica sita",
+"sciConsensus": "Parantica sita"
+},
+"asari": {
+"gbifKey": 4372686,
+"sci": "Ruditapes philippinarum",
+"sciConsensus": "Ruditapes philippinarum"
+},
+"ashidakagumo": {
+"gbifKey": 2161710,
+"sci": "Heteropoda venatoria",
+"sciConsensus": "Heteropoda venatoria"
+},
+"australiahaigyo": {
+"gbifKey": 2441266,
+"sci": "Neoceratodus forsteri",
+"sciConsensus": "Neoceratodus forsteri"
+},
+"axolotl": {
+"gbifKey": 2431950,
+"sci": "Ambystoma mexicanum",
+"sciConsensus": "Ambystoma mexicanum"
+},
+"ayu": {
+"gbifKey": 4283980,
+"sci": "Plecoglossus altivelis",
+"sciConsensus": "Plecoglossus altivelis"
+},
+"azumamogura": {
+"gbifKey": 2436176,
+"sci": "Mogera imaizumii",
+"sciConsensus": "Mogera imaizumii"
+},
+"bafununi": {
+"gbifKey": 5842728,
+"sci": "Hemicentrotus pulcherrimus",
+"sciConsensus": "Hemicentrotus pulcherrimus"
+},
+"barentsia": {
+"gbifKey": 5188771,
+"sci": "Barentsia discreta",
+"sciConsensus": "Barentsia discreta"
+},
+"bengaruyamaneko": {
+"gbifKey": 2434903,
+"sci": "Prionailurus bengalensis",
+"sciConsensus": "Prionailurus bengalensis"
+},
+"benikurage": {
+"gbifKey": 2266021,
+"sci": "Turritopsis dohrnii",
+"sciConsensus": "Turritopsis dohrnii"
+},
+"bizenkurage": {
+"gbifKey": 2264595,
+"sci": "Rhopilema esculentum",
+"sciConsensus": "Rhopilema esculentum"
+},
+"buchihyena": {
+"gbifKey": 5218781,
+"sci": "Crocuta crocuta",
+"sciConsensus": "Crocuta crocuta"
+},
+"capybara": {
+"gbifKey": 5786666,
+"sci": "Hydrochoerus hydrochaeris",
+"sciConsensus": "Hydrochoerus hydrochaeris"
+},
+"celegans": {
+"gbifKey": 2283683,
+"sci": "Caenorhabditis elegans",
+"sciConsensus": "Caenorhabditis elegans"
+},
+"chabanegokiburi": {
+"gbifKey": 1997215,
+"sci": "Blattella germanica",
+"sciConsensus": "Blattella germanica"
+},
+"chimpanzee": {
+"gbifKey": 5219534,
+"sci": "Pan troglodytes",
+"sciConsensus": "Pan troglodytes"
+},
+"chisuibiru": {
+"gbifKey": 5854607,
+"sci": "Hirudo nipponia",
+"sciConsensus": "Hirudo nipponia"
+},
+"chordodes": {
+"gbifKey": 2255591,
+"sci": "Chordodes japonensis",
+"sciConsensus": "Chordodes japonensis"
+},
+"coelacanth": {
+"gbifKey": 2441273,
+"sci": "Latimeria chalumnae",
+"sciConsensus": "Latimeria chalumnae"
+},
+"corynosoma": {
+"gbifKey": 2500050,
+"sci": "Corynosoma villosum",
+"sciConsensus": "Corynosoma villosum"
+},
+"dachou": {
+"gbifKey": 2495150,
+"sci": "Struthio camelus",
+"sciConsensus": "Struthio camelus"
+},
+"daiougusokumushi": {
+"gbifKey": 5177166,
+"sci": "Bathynomus giganteus",
+"sciConsensus": "Bathynomus giganteus"
+},
+"daiouika": {
+"gbifKey": 2290184,
+"sci": "Architeuthis dux",
+"sciConsensus": "Architeuthis dux"
+},
+"daizushisutosenchu": {
+"gbifKey": 5188671,
+"sci": "Heterodera glycines",
+"sciConsensus": "Heterodera glycines"
+},
+"datsu": {
+"gbifKey": 5208032,
+"sci": "Strongylura anastomella",
+"sciConsensus": "Strongylura anastomella"
+},
+"dicyema": {
+"gbifKey": 2509205,
+"sci": "Dicyema japonicum",
+"sciConsensus": "Dicyema japonicum"
+},
+"dobunezumi": {
+"gbifKey": 2439261,
+"sci": "Rattus norvegicus",
+"sciConsensus": "Rattus norvegicus"
+},
+"drosophila": {
+"gbifKey": 5073713,
+"sci": "Drosophila melanogaster",
+"sciConsensus": "Drosophila melanogaster"
+},
+"echinoderes": {
+"gbifKey": 8408626,
+"sci": "Echinoderes ohtsukai",
+"sciConsensus": "Echinoderes ohtsukai"
+},
+"echizenkurage": {
+"gbifKey": 2264583,
+"sci": "Nemopilema nomurai",
+"sciConsensus": "Nemopilema nomurai"
+},
+"enmakorogi": {
+"gbifKey": 1723508,
+"sci": "Teleogryllus emma",
+"sciConsensus": "Teleogryllus emma"
+},
+"erabuumihebi": {
+"gbifKey": 5222129,
+"sci": "Laticauda semifasciata",
+"sciConsensus": "Laticauda semifasciata"
+},
+"erahikimushi": {
+"gbifKey": 2501343,
+"sci": "Priapulus caudatus",
+"sciConsensus": "Priapulus caudatus"
+},
+"euperipatoides": {
+"gbifKey": 2235610,
+"sci": "Euperipatoides rowelli",
+"sciConsensus": "Euperipatoides rowelli"
+},
+"fukurou": {
+"gbifKey": 2497509,
+"sci": "Strix uralensis",
+"sciConsensus": "Strix uralensis"
+},
+"fusakokemushi": {
+"gbifKey": 4984851,
+"sci": "Bugula neritina",
+"sciConsensus": "Bugula neritina"
+},
+"fusenkurage": {
+"gbifKey": 2501122,
+"sci": "Hormiphora palmata",
+"sciConsensus": "Hormiphora palmata"
+},
+"futatogechimadani": {
+"gbifKey": 2183299,
+"sci": "Haemaphysalis longicornis",
+"sciConsensus": "Haemaphysalis longicornis"
+},
+"gangaze": {
+"gbifKey": 5721108,
+"sci": "Diadema setosum",
+"sciConsensus": "Diadema setosum"
+},
+"gazami": {
+"gbifKey": 5716110,
+"sci": "Portunus trituberculatus",
+"sciConsensus": "Portunus trituberculatus"
+},
+"geji": {
+"gbifKey": 2231176,
+"sci": "Thereuonema tuberculata",
+"sciConsensus": "Thereuonema tuberculata"
+},
+"genjibotaru": {
+"gbifKey": 6990480,
+"sci": "Nipponoluciola cruciata",
+"sciConsensus": "Nipponoluciola cruciata"
+},
+"ginkakurage": {
+"gbifKey": 5185632,
+"sci": "Porpita porpita",
+"sciConsensus": "Porpita porpita"
+},
+"ginyanma": {
+"gbifKey": 5051752,
+"sci": "Anax parthenope",
+"sciConsensus": "Anax parthenope"
+},
+"ginzame": {
+"gbifKey": 2417331,
+"sci": "Chimaera phantasma",
+"sciConsensus": "Chimaera phantasma"
+},
+"gnathostomula": {
+"gbifKey": 2307163,
+"sci": "Gnathostomula paradoxa",
+"sciConsensus": "Gnathostomula paradoxa"
+},
+"gomafuazarashi": {
+"gbifKey": 2434791,
+"sci": "Phoca largha",
+"sciConsensus": "Phoca largha"
+},
+"gorilla": {
+"gbifKey": 2436441,
+"sci": "Gorilla gorilla",
+"sciConsensus": "Gorilla gorilla"
+},
+"gyochu": {
+"gbifKey": 2284340,
+"sci": "Enterobius vermicularis",
+"sciConsensus": "Enterobius vermicularis"
+},
+"habu": {
+"gbifKey": 2444178,
+"sci": "Protobothrops flavoviridis",
+"sciConsensus": "Protobothrops flavoviridis"
+},
+"habukurage": {
+"gbifKey": 4340380,
+"sci": "Chironex yamaguchii",
+"sciConsensus": "Chironex yamaguchii"
+},
+"hagurotombo": {
+"gbifKey": 1427091,
+"sci": "Atrocalopteryx atrata",
+"sciConsensus": "Atrocalopteryx atrata"
+},
+"haikyuchu": {
+"gbifKey": 2504051,
+"sci": "Paragonimus westermani",
+"sciConsensus": "Paragonimus westermani"
+},
+"hakofugu": {
+"gbifKey": 5213785,
+"sci": "Ostracion immaculatum",
+"sciConsensus": "Ostracion immaculatum"
+},
+"hakonesanshouo": {
+"gbifKey": 5218339,
+"sci": "Onychodactylus japonicus",
+"sciConsensus": "Onychodactylus japonicus"
+},
+"hakubishin": {
+"gbifKey": 2434654,
+"sci": "Paguma larvata",
+"sciConsensus": "Paguma larvata"
+},
+"hamadangomushi": {
+"gbifKey": 2205107,
+"sci": "Tylos granuliferus",
+"sciConsensus": "Tylos granuliferus"
+},
+"hamaguri": {
+"gbifKey": 4372751,
+"sci": "Meretrix lusoria",
+"sciConsensus": "Meretrix lusoria"
+},
+"hanagasakurage": {
+"gbifKey": 8071247,
+"sci": "Olindias formosus",
+"sciConsensus": "Olindias formosus"
+},
+"hanasakigani": {
+"gbifKey": 2224355,
+"sci": "Paralithodes brevipes",
+"sciConsensus": "Paralithodes brevipes"
+},
+"haraburokamakiri": {
+"gbifKey": 1405951,
+"sci": "Hierodula patellifera",
+"sciConsensus": "Hierodula patellifera"
+},
+"harisenbon": {
+"gbifKey": 5213361,
+"sci": "Diodon holocanthus",
+"sciConsensus": "Diodon holocanthus"
+},
+"hashibosogarasu": {
+"gbifKey": 9409796,
+"sci": "Corvus corone",
+"sciConsensus": "Corvus corone"
+},
+"hashibutogarasu": {
+"gbifKey": 2482487,
+"sci": "Corvus macrorhynchos",
+"sciConsensus": "Corvus macrorhynchos"
+},
+"hatagoisoginchaku": {
+"gbifKey": 2257005,
+"sci": "Stichodactyla gigantea",
+"sciConsensus": "Stichodactyla gigantea"
+},
+"hatsukanezumi": {
+"gbifKey": 7429082,
+"sci": "Mus musculus",
+"sciConsensus": "Mus musculus"
+},
+"hayabusa": {
+"gbifKey": 2481047,
+"sci": "Falco peregrinus",
+"sciConsensus": "Falco peregrinus"
+},
+"herajika": {
+"gbifKey": 2440940,
+"sci": "Alces alces",
+"sciConsensus": "Alces alces"
+},
+"higashikirigirisu": {
+"gbifKey": 1694540,
+"sci": "Gampsocleis mikado",
+"sciConsensus": "Gampsocleis mikado"
+},
+"himegiboshimushi": {
+"gbifKey": 5183904,
+"sci": "Ptychodera flava",
+"sciConsensus": "Ptychodera flava"
+},
+"himehoukimushi": {
+"gbifKey": 5186402,
+"sci": "Phoronis ijimai",
+"sciConsensus": "Phoronis ijimai"
+},
+"hirame": {
+"gbifKey": 2408877,
+"sci": "Paralichthys olivaceus",
+"sciConsensus": "Paralichthys olivaceus"
+},
+"hiranousango": {
+"gbifKey": 5184733,
+"sci": "Platygyra daedalea",
+"sciConsensus": "Platygyra daedalea"
+},
+"hirejako": {
+"gbifKey": 4372624,
+"sci": "Tridacna squamosa",
+"sciConsensus": "Tridacna squamosa"
+},
+"hito": {
+"gbifKey": 2436436,
+"sci": "Homo sapiens",
+"sciConsensus": "Homo sapiens"
+},
+"hitojirami": {
+"gbifKey": 4987991,
+"sci": "Pediculus humanus",
+"sciConsensus": "Pediculus humanus"
+},
+"hitosujishimaka": {
+"gbifKey": 1651430,
+"sci": "Aedes albopictus",
+"sciConsensus": "Aedes albopictus"
+},
+"hizaragai": {
+"gbifKey": 2306237,
+"sci": "Liolophura japonica",
+"sciConsensus": "Liolophura japonica"
+},
+"hohojirozame": {
+"gbifKey": 2420694,
+"sci": "Carcharodon carcharias",
+"sciConsensus": "Carcharodon carcharias"
+},
+"honyadokari": {
+"gbifKey": 4312077,
+"sci": "Pagurus filholi",
+"sciConsensus": "Pagurus filholi"
+},
+"hossugai": {
+"gbifKey": 5793334,
+"sci": "Hyalonema sieboldi",
+"sciConsensus": "Hyalonema sieboldi"
+},
+"hotaruika": {
+"gbifKey": 2290275,
+"sci": "Watasenia scintillans",
+"sciConsensus": "Watasenia scintillans"
+},
+"hotategai": {
+"gbifKey": 4373871,
+"sci": "Mizuhopecten yessoensis",
+"sciConsensus": "Mizuhopecten yessoensis"
+},
+"hounenebi": {
+"gbifKey": 2235222,
+"sci": "Branchinella kugenumaensis",
+"sciConsensus": "Branchinella kugenumaensis"
+},
+"hyoumondako": {
+"gbifKey": 2289328,
+"sci": "Hapalochlaena fasciata",
+"sciConsensus": "Hapalochlaena fasciata"
+},
+"iebae": {
+"gbifKey": 1524843,
+"sci": "Musca domestica",
+"sciConsensus": "Musca domestica"
+},
+"ieshiroari": {
+"gbifKey": 2007383,
+"sci": "Coptotermes formosanus",
+"sciConsensus": "Coptotermes formosanus"
+},
+"iidako": {
+"gbifKey": 5856038,
+"sci": "Amphioctopus fangsiao",
+"sciConsensus": "Amphioctopus fangsiao"
+},
+"inoshishi": {
+"gbifKey": 7705930,
+"sci": "Sus scrofa",
+"sciConsensus": "Sus scrofa"
+},
+"intoshia": {
+"gbifKey": 2509135,
+"sci": "Intoshia linei",
+"sciConsensus": "Intoshia linei"
+},
+"inukaichu": {
+"gbifKey": 2284239,
+"sci": "Toxocara canis",
+"sciConsensus": "Toxocara canis"
+},
+"inushijouchu": {
+"gbifKey": 5188737,
+"sci": "Dirofilaria immitis",
+"sciConsensus": "Dirofilaria immitis"
+},
+"inuwashi": {
+"gbifKey": 2480506,
+"sci": "Aquila chrysaetos",
+"sciConsensus": "Aquila chrysaetos"
+},
+"iriewani": {
+"gbifKey": 2441333,
+"sci": "Crocodylus porosus",
+"sciConsensus": "Crocodylus porosus"
+},
+"iseebi": {
+"gbifKey": 2221649,
+"sci": "Panulirus japonicus",
+"sciConsensus": "Panulirus japonicus"
+},
+"isoyamushi": {
+"gbifKey": 2307088,
+"sci": "Paraspadella gotoi",
+"sciConsensus": "Paraspadella gotoi"
+},
+"itomakihitode": {
+"gbifKey": 2272169,
+"sci": "Patiria pectinifera",
+"sciConsensus": "Patiria pectinifera"
+},
+"itomimizu": {
+"gbifKey": 2308444,
+"sci": "Tubifex tubifex",
+"sciConsensus": "Tubifex tubifex"
+},
+"iwamushi": {
+"gbifKey": 2322248,
+"sci": "Marphysa sanguinea",
+"sciConsensus": "Marphysa sanguinea"
+},
+"jinbeizame": {
+"gbifKey": 2417522,
+"sci": "Rhincodon typus",
+"sciConsensus": "Rhincodon typus"
+},
+"jorougumo": {
+"gbifKey": 10670284,
+"sci": "Trichonephila clavata",
+"sciConsensus": "Trichonephila clavata"
+},
+"jugon": {
+"gbifKey": 9729967,
+"sci": "Dugong dugon",
+"sciConsensus": "Dugong dugon"
+},
+"kaba": {
+"gbifKey": 2441247,
+"sci": "Hippopotamus amphibius",
+"sciConsensus": "Hippopotamus amphibius"
+},
+"kabutogani": {
+"gbifKey": 1010608,
+"sci": "Tachypleus tridentatus",
+"sciConsensus": "Tachypleus tridentatus"
+},
+"kabutokurage": {
+"gbifKey": 2501245,
+"sci": "Bolinopsis mikado",
+"sciConsensus": "Bolinopsis mikado"
+},
+"kabutomushi": {
+"gbifKey": 1076217,
+"sci": "Trypoxylus dichotomus",
+"sciConsensus": "Trypoxylus dichotomus"
+},
+"kaichu": {
+"gbifKey": 4558786,
+"sci": "Ascaris lumbricoides",
+"sciConsensus": "Ascaris lumbricoides"
+},
+"kaiko": {
+"gbifKey": 1868664,
+"sci": "Bombyx mori",
+"sciConsensus": "Bombyx mori"
+},
+"kairodokets": {
+"gbifKey": 5180237,
+"sci": "Euplectella aspergillum",
+"sciConsensus": "Euplectella aspergillum"
+},
+"kakurekumanomi": {
+"gbifKey": 5212106,
+"sci": "Amphiprion ocellaris",
+"sciConsensus": "Amphiprion ocellaris"
+},
+"kamehoozukichouchin": {
+"gbifKey": 5183865,
+"sci": "Laqueus rubellus",
+"sciConsensus": "Laqueus rubellus"
+},
+"kamenote": {
+"gbifKey": 5862485,
+"sci": "Capitulum mitella",
+"sciConsensus": "Capitulum mitella"
+},
+"kamonohashi": {
+"gbifKey": 2433376,
+"sci": "Ornithorhynchus anatinus",
+"sciConsensus": "Ornithorhynchus anatinus"
+},
+"kankyuchu": {
+"gbifKey": 2505601,
+"sci": "Clonorchis sinensis",
+"sciConsensus": "Clonorchis sinensis"
+},
+"karugamo": {
+"gbifKey": 2498061,
+"sci": "Anas zonorhyncha",
+"sciConsensus": "Anas zonorhyncha"
+},
+"kasemimizu": {
+"gbifKey": 4357463,
+"sci": "Epimenia babai",
+"sciConsensus": "Epimenia babai"
+},
+"katakuchiiwashi": {
+"gbifKey": 2413997,
+"sci": "Engraulis japonicus",
+"sciConsensus": "Engraulis japonicus"
+},
+"katayureiboya": {
+"gbifKey": 4356092,
+"sci": "Ciona robusta",
+"sciConsensus": "Ciona robusta"
+},
+"katsuo": {
+"gbifKey": 2374191,
+"sci": "Katsuwonus pelamis",
+"sciConsensus": "Katsuwonus pelamis"
+},
+"katsuonoeboshi": {
+"gbifKey": 2264734,
+"sci": "Physalia physalis",
+"sciConsensus": "Physalia physalis"
+},
+"katsuononkanmuri": {
+"gbifKey": 2265793,
+"sci": "Velella velella",
+"sciConsensus": "Velella velella"
+},
+"kawahagi": {
+"gbifKey": 5213457,
+"sci": "Stephanolepis cirrhifer",
+"sciConsensus": "Stephanolepis cirrhifer"
+},
+"kawakaimen": {
+"gbifKey": 2244968,
+"sci": "Ephydatia fluviatilis",
+"sciConsensus": "Ephydatia fluviatilis"
+},
+"kawayatsume": {
+"gbifKey": 2421341,
+"sci": "Lethenteron camtschaticum",
+"sciConsensus": "Lethenteron camtschaticum"
+},
+"kegani": {
+"gbifKey": 2222059,
+"sci": "Erimacrus isenbeckii",
+"sciConsensus": "Erimacrus isenbeckii"
+},
+"kensakiika": {
+"gbifKey": 2290290,
+"sci": "Uroteuthis edulis",
+"sciConsensus": "Uroteuthis edulis"
+},
+"kera": {
+"gbifKey": 1716183,
+"sci": "Gryllotalpa orientalis",
+"sciConsensus": "Gryllotalpa orientalis"
+},
+"keyarimushi": {
+"gbifKey": 5200293,
+"sci": "Sabellastarte japonica",
+"sciConsensus": "Sabellastarte japonica"
+},
+"kihada": {
+"gbifKey": 2374013,
+"sci": "Thunnus albacares",
+"sciConsensus": "Thunnus albacares"
+},
+"kiirosuzumebachi": {
+"gbifKey": 1311401,
+"sci": "Vespa simillima",
+"sciConsensus": "Vespa simillima"
+},
+"kijibato": {
+"gbifKey": 2495681,
+"sci": "Streptopelia orientalis",
+"sciConsensus": "Streptopelia orientalis"
+},
+"kikugashira": {
+"gbifKey": 8810193,
+"sci": "Rhinolophus nippon",
+"sciConsensus": "Rhinolophus nippon"
+},
+"kikumeishi": {
+"gbifKey": 8400775,
+"sci": "Dipsastraea speciosa",
+"sciConsensus": "Dipsastraea speciosa"
+},
+"kirin": {
+"gbifKey": 2441205,
+"sci": "Giraffa camelopardalis",
+"sciConsensus": "Giraffa camelopardalis"
+},
+"kishayasude": {
+"gbifKey": 1019247,
+"sci": "Parafontaria laminata",
+"sciConsensus": "Parafontaria laminata"
+},
+"kitamizukurage": {
+"gbifKey": 5185430,
+"sci": "Aurelia limbata",
+"sciConsensus": "Aurelia limbata"
+},
+"kitamurasakiuni": {
+"gbifKey": 6474261,
+"sci": "Mesocentrotus nudus",
+"sciConsensus": "Mesocentrotus nudus"
+},
+"kitanakiusagi": {
+"gbifKey": 2437002,
+"sci": "Ochotona hyperborea",
+"sciConsensus": "Ochotona hyperborea"
+},
+"kitanomedaka": {
+"gbifKey": 7193255,
+"sci": "Oryzias sakaizumii",
+"sciConsensus": "Oryzias sakaizumii"
+},
+"kohakuchou": {
+"gbifKey": 2498338,
+"sci": "Cygnus columbianus",
+"sciConsensus": "Cygnus columbianus"
+},
+"koi": {
+"gbifKey": 4286975,
+"sci": "Cyprinus carpio",
+"sciConsensus": "Cyprinus carpio"
+},
+"kokonoobiarumajiro": {
+"gbifKey": 2440779,
+"sci": "Dasypus novemcinctus",
+"sciConsensus": "Dasypus novemcinctus"
+},
+"konoshiro": {
+"gbifKey": 2413040,
+"sci": "Konosirus punctatus",
+"sciConsensus": "Konosirus punctatus"
+},
+"koubemogura": {
+"gbifKey": 2436179,
+"sci": "Mogera wogura",
+"sciConsensus": "Mogera wogura"
+},
+"kouika": {
+"gbifKey": 12193375,
+"sci": "Acanthosepion esculentum",
+"sciConsensus": "Acanthosepion esculentum"
+},
+"koumoridako": {
+"gbifKey": 2290924,
+"sci": "Vampyroteuthis infernalis",
+"sciConsensus": "Vampyroteuthis infernalis"
+},
+"kouteipenguin": {
+"gbifKey": 2481661,
+"sci": "Aptenodytes forsteri",
+"sciConsensus": "Aptenodytes forsteri"
+},
+"kubinagakoutouchu": {
+"gbifKey": 2500699,
+"sci": "Longicollum pagrosomi",
+"sciConsensus": "Longicollum pagrosomi"
+},
+"kubiwaookoumori": {
+"gbifKey": 5218670,
+"sci": "Pteropus dasymallus",
+"sciConsensus": "Pteropus dasymallus"
+},
+"kujaku": {
+"gbifKey": 9451184,
+"sci": "Pavo cristatus",
+"sciConsensus": "Pavo cristatus"
+},
+"kuroawabi": {
+"gbifKey": 4357763,
+"sci": "Haliotis discus",
+"sciConsensus": "Haliotis discus"
+},
+"kurogokiburi": {
+"gbifKey": 2000167,
+"sci": "Periplaneta fuliginosa",
+"sciConsensus": "Periplaneta fuliginosa"
+},
+"kuroisokaimen": {
+"gbifKey": 2249866,
+"sci": "Halichondria okadai",
+"sciConsensus": "Halichondria okadai"
+},
+"kuromaguro": {
+"gbifKey": 2374058,
+"sci": "Thunnus orientalis",
+"sciConsensus": "Thunnus orientalis"
+},
+"kuronamako": {
+"gbifKey": 2279167,
+"sci": "Holothuria atra",
+"sciConsensus": "Holothuria atra"
+},
+"kurooari": {
+"gbifKey": 5034161,
+"sci": "Camponotus japonicus",
+"sciConsensus": "Camponotus japonicus"
+},
+"kurumaebi": {
+"gbifKey": 2223429,
+"sci": "Penaeus japonicus",
+"sciConsensus": "Penaeus japonicus"
+},
+"kusabiraishi": {
+"gbifKey": 2260627,
+"sci": "Fungia fungites",
+"sciConsensus": "Fungia fungites"
+},
+"kusagame": {
+"gbifKey": 2443597,
+"sci": "Mauremys reevesii",
+"sciConsensus": "Mauremys reevesii"
+},
+"kusagikamemushi": {
+"gbifKey": 4485843,
+"sci": "Halyomorpha halys",
+"sciConsensus": "Halyomorpha halys"
+},
+"lepidodermella": {
+"gbifKey": 4281692,
+"sci": "Lepidodermella squamata",
+"sciConsensus": "Lepidodermella squamata"
+},
+"limnognathia": {
+"gbifKey": 4632630,
+"sci": "Limnognathia maerski",
+"sciConsensus": "Limnognathia maerski"
+},
+"lion": {
+"gbifKey": 5219404,
+"sci": "Panthera leo",
+"sciConsensus": "Panthera leo"
+},
+"maboya": {
+"gbifKey": 2331879,
+"sci": "Halocynthia roretzi",
+"sciConsensus": "Halocynthia roretzi"
+},
+"madai": {
+"gbifKey": 5210935,
+"sci": "Pagrus major",
+"sciConsensus": "Pagrus major"
+},
+"madako": {
+"gbifKey": 6521626,
+"sci": "Octopus sinensis",
+"sciConsensus": "Octopus sinensis"
+},
+"madara": {
+"gbifKey": 2415853,
+"sci": "Gadus macrocephalus",
+"sciConsensus": "Gadus macrocephalus"
+},
+"magaki": {
+"gbifKey": 7820753,
+"sci": "Magallana gigas",
+"sciConsensus": "Magallana gigas"
+},
+"magamo": {
+"gbifKey": 9761484,
+"sci": "Anas platyrhynchos",
+"sciConsensus": "Anas platyrhynchos"
+},
+"magan": {
+"gbifKey": 2498017,
+"sci": "Anser albifrons",
+"sciConsensus": "Anser albifrons"
+},
+"mahaze": {
+"gbifKey": 2375974,
+"sci": "Acanthogobius flavimanus",
+"sciConsensus": "Acanthogobius flavimanus"
+},
+"mahitode": {
+"gbifKey": 5187508,
+"sci": "Asterias amurensis",
+"sciConsensus": "Asterias amurensis"
+},
+"maiwashi": {
+"gbifKey": 2412583,
+"sci": "Sardinops melanostictus",
+"sciConsensus": "Sardinops sagax"
+},
+"makkoukujira": {
+"gbifKey": 8123917,
+"sci": "Physeter macrocephalus",
+"sciConsensus": "Physeter macrocephalus"
+},
+"manamako": {
+"gbifKey": 2279100,
+"sci": "Apostichopus japonicus",
+"sciConsensus": "Apostichopus japonicus"
+},
+"manbou": {
+"gbifKey": 5213725,
+"sci": "Mola mola",
+"sciConsensus": "Mola mola"
+},
+"mareebaku": {
+"gbifKey": 7818962,
+"sci": "Tapirus indicus",
+"sciConsensus": "Tapirus indicus"
+},
+"masaba": {
+"gbifKey": 7599552,
+"sci": "Scomber japonicus",
+"sciConsensus": "Scomber japonicus"
+},
+"matsunozaisenchu": {
+"gbifKey": 8848401,
+"sci": "Bursaphelenchus xylophilus",
+"sciConsensus": "Bursaphelenchus xylophilus"
+},
+"midorihimomushi": {
+"gbifKey": 2508398,
+"sci": "Lineus fuscoviridis",
+"sciConsensus": "Lineus fuscoviridis"
+},
+"midorishamisengai": {
+"gbifKey": 5183826,
+"sci": "Lingula anatina",
+"sciConsensus": "Lingula anatina"
+},
+"mijinko": {
+"gbifKey": 2234840,
+"sci": "Daphnia pulex",
+"sciConsensus": "Daphnia pulex"
+},
+"mikadochozame": {
+"gbifKey": 2402117,
+"sci": "Acipenser mikadoi",
+"sciConsensus": "Acipenser mikadoi"
+},
+"minamimedaka": {
+"gbifKey": 2368377,
+"sci": "Oryzias latipes",
+"sciConsensus": "Oryzias latipes"
+},
+"minminzemi": {
+"gbifKey": 8015248,
+"sci": "Hyalessa maculaticollis",
+"sciConsensus": "Hyalessa maculaticollis"
+},
+"misakigiboshi": {
+"gbifKey": 2254526,
+"sci": "Balanoglossus misakiensis",
+"sciConsensus": "Balanoglossus misakiensis"
+},
+"misakihimomushi": {
+"gbifKey": 2508351,
+"sci": "Notospermus geniculatus",
+"sciConsensus": "Notospermus geniculatus"
+},
+"misujimaimai": {
+"gbifKey": 8977527,
+"sci": "Euhadra peliomphala",
+"sciConsensus": "Euhadra peliomphala"
+},
+"miyamauzumushi": {
+"gbifKey": 6475754,
+"sci": "Phagocata vivida",
+"sciConsensus": "Phagocata vivida"
+},
+"mizudako": {
+"gbifKey": 2289485,
+"sci": "Enteroctopus dofleini",
+"sciConsensus": "Enteroctopus dofleini"
+},
+"mizukurage": {
+"gbifKey": 5185431,
+"sci": "Aurelia coerulea",
+"sciConsensus": "Aurelia coerulea"
+},
+"mizumushi": {
+"gbifKey": 5176426,
+"sci": "Asellus hilgendorfii",
+"sciConsensus": "Asellus hilgendorfii"
+},
+"mizutobimushi": {
+"gbifKey": 2122146,
+"sci": "Podura aquatica",
+"sciConsensus": "Podura aquatica"
+},
+"mokuyokukaimen": {
+"gbifKey": 8234398,
+"sci": "Spongia officinalis",
+"sciConsensus": "Spongia officinalis"
+},
+"mokuzugani": {
+"gbifKey": 5863367,
+"sci": "Eriocheir japonica",
+"sciConsensus": "Eriocheir japonica"
+},
+"momijigai": {
+"gbifKey": 5186589,
+"sci": "Astropecten scoparius",
+"sciConsensus": "Astropecten scoparius"
+},
+"momoakaaburamushi": {
+"gbifKey": 2076179,
+"sci": "Myzus persicae",
+"sciConsensus": "Myzus persicae"
+},
+"momoirosango": {
+"gbifKey": 10381632,
+"sci": "Pleurocorallium elatius",
+"sciConsensus": "Pleurocorallium elatius"
+},
+"monkagerou": {
+"gbifKey": 6934529,
+"sci": "Ephemera strigata",
+"sciConsensus": "Ephemera strigata"
+},
+"monshirocho": {
+"gbifKey": 1920496,
+"sci": "Pieris rapae",
+"sciConsensus": "Pieris rapae"
+},
+"moriaogaeru": {
+"gbifKey": 10771812,
+"sci": "Zhangixalus arboreus",
+"sciConsensus": "Zhangixalus arboreus"
+},
+"mukashitokage": {
+"gbifKey": 5227650,
+"sci": "Sphenodon punctatus",
+"sciConsensus": "Sphenodon punctatus"
+},
+"mukashitombo": {
+"gbifKey": 1421306,
+"sci": "Epiophlebia superstes",
+"sciConsensus": "Epiophlebia superstes"
+},
+"mukoujouchu": {
+"gbifKey": 6101574,
+"sci": "Taenia saginata",
+"sciConsensus": "Taenia saginata"
+},
+"murasakihanaginchaku": {
+"gbifKey": 2258574,
+"sci": "Cerianthus filiformis",
+"sciConsensus": "Cerianthus filiformis"
+},
+"murasakiigai": {
+"gbifKey": 2285683,
+"sci": "Mytilus galloprovincialis",
+"sciConsensus": "Mytilus galloprovincialis"
+},
+"murasakiokayadokari": {
+"gbifKey": 5716737,
+"sci": "Coenobita purpureus",
+"sciConsensus": "Coenobita purpureus"
+},
+"murasakiuni": {
+"gbifKey": 5842743,
+"sci": "Heliocidaris crassispina",
+"sciConsensus": "Heliocidaris crassispina"
+},
+"nagakoganegumo": {
+"gbifKey": 5170994,
+"sci": "Argiope bruennichi",
+"sciConsensus": "Argiope bruennichi"
+},
+"namazu": {
+"gbifKey": 2337594,
+"sci": "Silurus asotus",
+"sciConsensus": "Silurus asotus"
+},
+"namekuji": {
+"gbifKey": 5858946,
+"sci": "Meghimatium bilineatum",
+"sciConsensus": "Meghimatium bilineatum"
+},
+"namekujiuo": {
+"gbifKey": 8146850,
+"sci": "Branchiostoma japonicum",
+"sciConsensus": "Branchiostoma japonicum"
+},
+"namihadani": {
+"gbifKey": 2130185,
+"sci": "Tetranychus urticae",
+"sciConsensus": "Tetranychus urticae"
+},
+"namitentou": {
+"gbifKey": 4989904,
+"sci": "Harmonia axyridis",
+"sciConsensus": "Harmonia axyridis"
+},
+"namiuzumushi": {
+"gbifKey": 5892108,
+"sci": "Dugesia japonica",
+"sciConsensus": "Dugesia japonica"
+},
+"nanafushimodoki": {
+"gbifKey": 9501971,
+"sci": "Ramulus mikado",
+"sciConsensus": "Ramulus mikado"
+},
+"nanahoshikudoa": {
+"gbifKey": 10358127,
+"sci": "Kudoa septempunctata",
+"sciConsensus": "Kudoa septempunctata"
+},
+"nanahoshitentou": {
+"gbifKey": 4990191,
+"sci": "Coccinella septempunctata",
+"sciConsensus": "Coccinella septempunctata"
+},
+"nanaloricus": {
+"gbifKey": 2501317,
+"sci": "Nanaloricus mysticus",
+"sciConsensus": "Nanaloricus mysticus"
+},
+"nankyokuokiami": {
+"gbifKey": 2228010,
+"sci": "Euphausia superba",
+"sciConsensus": "Euphausia superba"
+},
+"nanyoumanta": {
+"gbifKey": 9241141,
+"sci": "Mobula alfredi",
+"sciConsensus": "Mobula alfredi"
+},
+"narutobiei": {
+"gbifKey": 7732823,
+"sci": "Aetobatus narutobiei",
+"sciConsensus": "Aetobatus narutobiei"
+},
+"nekobusenchu": {
+"gbifKey": 4556282,
+"sci": "Meloidogyne incognita",
+"sciConsensus": "Meloidogyne incognita"
+},
+"nekonomi": {
+"gbifKey": 1419472,
+"sci": "Ctenocephalides felis",
+"sciConsensus": "Ctenocephalides felis"
+},
+"nekozame": {
+"gbifKey": 8324168,
+"sci": "Heterodontus japonicus",
+"sciConsensus": "Heterodontus japonicus"
+},
+"nihonamagaeru": {
+"gbifKey": 10857535,
+"sci": "Dryophytes japonicus",
+"sciConsensus": "Dryophytes japonicus"
+},
+"nihonanaguma": {
+"gbifKey": 2433884,
+"sci": "Meles anakuma",
+"sciConsensus": "Meles anakuma"
+},
+"nihonhikigaeru": {
+"gbifKey": 5217143,
+"sci": "Bufo japonicus",
+"sciConsensus": "Bufo japonicus"
+},
+"nihonishigame": {
+"gbifKey": 2443368,
+"sci": "Mauremys japonica",
+"sciConsensus": "Mauremys japonica"
+},
+"nihonjika": {
+"gbifKey": 2440954,
+"sci": "Cervus nippon",
+"sciConsensus": "Cervus nippon"
+},
+"nihonjinezumi": {
+"gbifKey": 2435532,
+"sci": "Crocidura dsinezumi",
+"sciConsensus": "Crocidura dsinezumi"
+},
+"nihonjuketsukyuchu": {
+"gbifKey": 12226118,
+"sci": "Schistosoma japonicum",
+"sciConsensus": "Schistosoma japonicum"
+},
+"nihonkairettojouchu": {
+"gbifKey": 9419736,
+"sci": "Dibothriocephalus nihonkaiensis",
+"sciConsensus": "Dibothriocephalus nihonkaiensis"
+},
+"nihonkamoshika": {
+"gbifKey": 4262615,
+"sci": "Capricornis crispus",
+"sciConsensus": "Capricornis crispus"
+},
+"nihonkumohitode": {
+"gbifKey": 2275620,
+"sci": "Ophioplocus japonicus",
+"sciConsensus": "Ophioplocus japonicus"
+},
+"nihonmamushi": {
+"gbifKey": 8963116,
+"sci": "Gloydius blomhoffii",
+"sciConsensus": "Gloydius blomhoffii"
+},
+"nihonmitsubachi": {
+"gbifKey": 1341979,
+"sci": "Apis cerana",
+"sciConsensus": "Apis cerana"
+},
+"nihonnousagi": {
+"gbifKey": 2436711,
+"sci": "Lepus brachyurus",
+"sciConsensus": "Lepus brachyurus"
+},
+"nihonrisu": {
+"gbifKey": 5219673,
+"sci": "Sciurus lis",
+"sciConsensus": "Sciurus lis"
+},
+"nihontokage": {
+"gbifKey": 8154433,
+"sci": "Plestiodon japonicus",
+"sciConsensus": "Plestiodon japonicus"
+},
+"nihonunagi": {
+"gbifKey": 5213022,
+"sci": "Anguilla japonica",
+"sciConsensus": "Anguilla japonica"
+},
+"nihonyamori": {
+"gbifKey": 2447295,
+"sci": "Gekko japonicus",
+"sciConsensus": "Gekko japonicus"
+},
+"nihonzaru": {
+"gbifKey": 2436608,
+"sci": "Macaca fuscata",
+"sciConsensus": "Macaca fuscata"
+},
+"nipponumishida": {
+"gbifKey": 7545120,
+"sci": "Anneissia japonica",
+"sciConsensus": "Anneissia japonica"
+},
+"nisekuronamako": {
+"gbifKey": 4343052,
+"sci": "Holothuria leucospilota",
+"sciConsensus": "Holothuria leucospilota"
+},
+"nishin": {
+"gbifKey": 4284072,
+"sci": "Clupea pallasii",
+"sciConsensus": "Clupea pallasii"
+},
+"nokogirikuwagata": {
+"gbifKey": 7487564,
+"sci": "Prosopocoilus inclinatus",
+"sciConsensus": "Prosopocoilus inclinatus"
+},
+"nutaunagi": {
+"gbifKey": 2498609,
+"sci": "Eptatretus burgeri",
+"sciConsensus": "Eptatretus burgeri"
+},
+"nutria": {
+"gbifKey": 4264680,
+"sci": "Myocastor coypus",
+"sciConsensus": "Myocastor coypus"
+},
+"obikurage": {
+"gbifKey": 2501198,
+"sci": "Cestum veneris",
+"sciConsensus": "Cestum veneris"
+},
+"okadangomushi": {
+"gbifKey": 2203611,
+"sci": "Armadillidium vulgare",
+"sciConsensus": "Armadillidium vulgare"
+},
+"okinotezurumozuru": {
+"gbifKey": 2278418,
+"sci": "Gorgonocephalus eucnemis",
+"sciConsensus": "Gorgonocephalus eucnemis"
+},
+"onihitode": {
+"gbifKey": 2271208,
+"sci": "Acanthaster planci",
+"sciConsensus": "Acanthaster planci"
+},
+"onikumamushi": {
+"gbifKey": 2253484,
+"sci": "Milnesium tardigradum",
+"sciConsensus": "Milnesium tardigradum"
+},
+"oniyanma": {
+"gbifKey": 1421222,
+"sci": "Anotogaster sieboldii",
+"sciConsensus": "Anotogaster sieboldii"
+},
+"ooKurobae": {
+"gbifKey": 1502608,
+"sci": "Calliphora lata",
+"sciConsensus": "Calliphora lata"
+},
+"oohakuchou": {
+"gbifKey": 2498347,
+"sci": "Cygnus cygnus",
+"sciConsensus": "Cygnus cygnus"
+},
+"oohimegumo": {
+"gbifKey": 2157402,
+"sci": "Parasteatoda tepidariorum",
+"sciConsensus": "Parasteatoda tepidariorum"
+},
+"ookamakiri": {
+"gbifKey": 5887934,
+"sci": "Tenodera sinensis",
+"sciConsensus": "Tenodera sinensis"
+},
+"ookami": {
+"gbifKey": 5219173,
+"sci": "Canis lupus",
+"sciConsensus": "Canis lupus"
+},
+"oomarikokemushi": {
+"gbifKey": 1003567,
+"sci": "Pectinatella magnifica",
+"sciConsensus": "Pectinatella magnifica"
+},
+"oomisujikougaibiru": {
+"gbifKey": 5892133,
+"sci": "Bipalium nobile",
+"sciConsensus": "Bipalium nobile"
+},
+"oomurasaki": {
+"gbifKey": 5128519,
+"sci": "Sasakia charonda",
+"sciConsensus": "Sasakia charonda"
+},
+"oosuzumebachi": {
+"gbifKey": 5871429,
+"sci": "Vespa mandarinia",
+"sciConsensus": "Vespa mandarinia"
+},
+"ootanishi": {
+"gbifKey": 2292566,
+"sci": "Cipangopaludina japonica",
+"sciConsensus": "Cipangopaludina japonica"
+},
+"orangutan": {
+"gbifKey": 5219532,
+"sci": "Pongo pygmaeus",
+"sciConsensus": "Pongo pygmaeus"
+},
+"osanshouo": {
+"gbifKey": 2432039,
+"sci": "Andrias japonicus",
+"sciConsensus": "Andrias japonicus"
+},
+"oshidori": {
+"gbifKey": 2498388,
+"sci": "Aix galericulata",
+"sciConsensus": "Aix galericulata"
+},
+"oumugai": {
+"gbifKey": 2289202,
+"sci": "Nautilus pompilius",
+"sciConsensus": "Nautilus pompilius"
+},
+"owankurage": {
+"gbifKey": 2267501,
+"sci": "Aequorea coerulescens",
+"sciConsensus": "Aequorea coerulescens"
+},
+"paipuuni": {
+"gbifKey": 5842749,
+"sci": "Heterocentrotus mamillatus",
+"sciConsensus": "Heterocentrotus mamillatus"
+},
+"panda": {
+"gbifKey": 2433399,
+"sci": "Ailuropoda melanoleuca",
+"sciConsensus": "Ailuropoda melanoleuca"
+},
+"praesagittifera": {
+"gbifKey": 2499163,
+"sci": "Praesagittifera naikaiensis",
+"sciConsensus": "Praesagittifera naikaiensis"
+},
+"rabuka": {
+"gbifKey": 2420627,
+"sci": "Chlamydoselachus anguineus",
+"sciConsensus": "Chlamydoselachus anguineus"
+},
+"raichou": {
+"gbifKey": 5227679,
+"sci": "Lagopus muta",
+"sciConsensus": "Lagopus muta"
+},
+"rakko": {
+"gbifKey": 2433670,
+"sci": "Enhydra lutris",
+"sciConsensus": "Enhydra lutris"
+},
+"rappauni": {
+"gbifKey": 4341617,
+"sci": "Toxopneustes pileolus",
+"sciConsensus": "Toxopneustes pileolus"
+},
+"sake": {
+"gbifKey": 5204014,
+"sci": "Oncorhynchus keta",
+"sciConsensus": "Oncorhynchus keta"
+},
+"sangoisoginchaku": {
+"gbifKey": 4339208,
+"sci": "Entacmaea quadricolor",
+"sciConsensus": "Entacmaea quadricolor"
+},
+"sanma": {
+"gbifKey": 2369261,
+"sci": "Cololabis saira",
+"sciConsensus": "Cololabis saira"
+},
+"satsumahaorimushi": {
+"gbifKey": 2329587,
+"sci": "Lamellibrachia satsuma",
+"sciConsensus": "Lamellibrachia satsuma"
+},
+"savannashimauma": {
+"gbifKey": 2440892,
+"sci": "Equus quagga",
+"sciConsensus": "Equus quagga"
+},
+"sawagani": {
+"gbifKey": 5790281,
+"sci": "Geothelphusa dehaani",
+"sciConsensus": "Geothelphusa dehaani"
+},
+"sawara": {
+"gbifKey": 2374296,
+"sci": "Scomberomorus niphonius",
+"sciConsensus": "Scomberomorus niphonius"
+},
+"sayori": {
+"gbifKey": 2368929,
+"sci": "Hyporhamphus sajori",
+"sciConsensus": "Hyporhamphus sajori"
+},
+"sazae": {
+"gbifKey": 9444233,
+"sci": "Turbo sazae",
+"sciConsensus": "Turbo sazae"
+},
+"schlegelaogaeru": {
+"gbifKey": 10674422,
+"sci": "Zhangixalus schlegelii",
+"sciConsensus": "Zhangixalus schlegelii"
+},
+"seakagokegumo": {
+"gbifKey": 2157928,
+"sci": "Latrodectus hasselti",
+"sciConsensus": "Latrodectus hasselti"
+},
+"seguroashinagabachi": {
+"gbifKey": 1310772,
+"sci": "Polistes jokahamae",
+"sciConsensus": "Polistes jokahamae"
+},
+"seiyomitsubachi": {
+"gbifKey": 1341976,
+"sci": "Apis mellifera",
+"sciConsensus": "Apis mellifera"
+},
+"seiyoushimi": {
+"gbifKey": 1421091,
+"sci": "Lepisma saccharinum",
+"sciConsensus": "Lepisma saccharinum"
+},
+"sekiseiinko": {
+"gbifKey": 2479798,
+"sci": "Melopsittacus undulatus",
+"sciConsensus": "Melopsittacus undulatus"
+},
+"sekishokuyakei": {
+"gbifKey": 9326020,
+"sci": "Gallus gallus",
+"sciConsensus": "Gallus gallus"
+},
+"senmohirahamushi": {
+"gbifKey": 2255380,
+"sci": "Trichoplax adhaerens",
+"sciConsensus": "Trichoplax adhaerens"
+},
+"senmouchu": {
+"gbifKey": 12176003,
+"sci": "Trichinella spiralis",
+"sciConsensus": "Trichinella spiralis"
+},
+"seujiakamukade": {
+"gbifKey": 2232520,
+"sci": "Scolopocryptops rubiginosus",
+"sciConsensus": "Scolopocryptops rubiginosus"
+},
+"shako": {
+"gbifKey": 4316670,
+"sci": "Oratosquilla oratoria",
+"sciConsensus": "Oratosquilla oratoria"
+},
+"shibireei": {
+"gbifKey": 9782215,
+"sci": "Narke japonica",
+"sciConsensus": "Narke japonica"
+},
+"shijuukara": {
+"gbifKey": 5844847,
+"sci": "Parus minor",
+"sciConsensus": "Parus minor"
+},
+"shikakunamako": {
+"gbifKey": 4343242,
+"sci": "Stichopus chloronotus",
+"sciConsensus": "Stichopus chloronotus"
+},
+"shimahebi": {
+"gbifKey": 2458480,
+"sci": "Elaphe quadrivirgata",
+"sciConsensus": "Elaphe quadrivirgata"
+},
+"shimamimizu": {
+"gbifKey": 5815560,
+"sci": "Eisenia fetida",
+"sciConsensus": "Eisenia fetida"
+},
+"shiokaratombo": {
+"gbifKey": 1428595,
+"sci": "Orthetrum albistylum",
+"sciConsensus": "Orthetrum albistylum"
+},
+"shiomizutsubowamushi": {
+"gbifKey": 4984146,
+"sci": "Brachionus plicatilis",
+"sciConsensus": "Brachionus plicatilis"
+},
+"shirikenimori": {
+"gbifKey": 2431863,
+"sci": "Cynops ensicauda",
+"sciConsensus": "Cynops ensicauda"
+},
+"shironagasu": {
+"gbifKey": 2440735,
+"sci": "Balaenoptera musculus",
+"sciConsensus": "Balaenoptera musculus"
+},
+"shirosai": {
+"gbifKey": 2440880,
+"sci": "Ceratotherium simum",
+"sciConsensus": "Ceratotherium simum"
+},
+"shouryoubatta": {
+"gbifKey": 5099473,
+"sci": "Acrida cinerea",
+"sciConsensus": "Acrida cinerea"
+},
+"siebold_mimizu": {
+"gbifKey": 11141140,
+"sci": "Metaphire sieboldi",
+"sciConsensus": "Metaphire sieboldi"
+},
+"sujihoshimushi": {
+"gbifKey": 5234445,
+"sci": "Sipunculus nudus",
+"sciConsensus": "Sipunculus nudus"
+},
+"suppon": {
+"gbifKey": 5220435,
+"sci": "Pelodiscus sinensis",
+"sciConsensus": "Pelodiscus sinensis"
+},
+"surumeika": {
+"gbifKey": 2290498,
+"sci": "Todarodes pacificus",
+"sciConsensus": "Todarodes pacificus"
+},
+"suzume": {
+"gbifKey": 5231198,
+"sci": "Passer montanus",
+"sciConsensus": "Passer montanus"
+},
+"suzumushi": {
+"gbifKey": 1719343,
+"sci": "Meloimorpha japonica",
+"sciConsensus": "Meloimorpha japonica"
+},
+"symbion": {
+"gbifKey": 2307136,
+"sci": "Symbion pandora",
+"sciConsensus": "Symbion pandora"
+},
+"tagame": {
+"gbifKey": 9490978,
+"sci": "Kirkaldyia deyrolli",
+"sciConsensus": "Kirkaldyia deyrollei"
+},
+"takaashigani": {
+"gbifKey": 5729749,
+"sci": "Macrocheira kaempferi",
+"sciConsensus": "Macrocheira kaempferi"
+},
+"takobune": {
+"gbifKey": 5189604,
+"sci": "Argonauta hians",
+"sciConsensus": "Argonauta hians"
+},
+"takonomakura": {
+"gbifKey": 5721230,
+"sci": "Clypeaster japonicus",
+"sciConsensus": "Clypeaster japonicus"
+},
+"takoujouchu": {
+"gbifKey": 7725417,
+"sci": "Echinococcus multilocularis",
+"sciConsensus": "Echinococcus multilocularis"
+},
+"tancho": {
+"gbifKey": 2474944,
+"sci": "Grus japonensis",
+"sciConsensus": "Grus japonensis"
+},
+"tarabagani": {
+"gbifKey": 2224359,
+"sci": "Paralithodes camtschaticus",
+"sciConsensus": "Paralithodes camtschaticus"
+},
+"tatejimaisoginchaku": {
+"gbifKey": 4283395,
+"sci": "Diadumene lineata",
+"sciConsensus": "Diadumene lineata"
+},
+"tatsunootoshigo": {
+"gbifKey": 5201126,
+"sci": "Hippocampus coronatus",
+"sciConsensus": "Hippocampus coronatus"
+},
+"tobizumukade": {
+"gbifKey": 10405326,
+"sci": "Scolopendra mutilans",
+"sciConsensus": "Scolopendra mutilans"
+},
+"todo": {
+"gbifKey": 2433462,
+"sci": "Eumetopias jubatus",
+"sciConsensus": "Eumetopias jubatus"
+},
+"toki": {
+"gbifKey": 2480810,
+"sci": "Nipponia nippon",
+"sciConsensus": "Nipponia nippon"
+},
+"tonosamabatta": {
+"gbifKey": 1713418,
+"sci": "Locusta migratoria",
+"sciConsensus": "Locusta migratoria"
+},
+"tonosamagaeru": {
+"gbifKey": 2426634,
+"sci": "Pelophylax nigromaculatus",
+"sciConsensus": "Pelophylax nigromaculatus"
+},
+"tora": {
+"gbifKey": 5219416,
+"sci": "Panthera tigris",
+"sciConsensus": "Panthera tigris"
+},
+"torafugu": {
+"gbifKey": 2407604,
+"sci": "Takifugu rubripes",
+"sciConsensus": "Takifugu rubripes"
+},
+"torafunamako": {
+"gbifKey": 4343061,
+"sci": "Holothuria pervicax",
+"sciConsensus": "Holothuria pervicax"
+},
+"torinoashi": {
+"gbifKey": 5842515,
+"sci": "Metacrinus rotundus",
+"sciConsensus": "Metacrinus rotundus"
+},
+"tsukinowaguma": {
+"gbifKey": 9335699,
+"sci": "Ursus thibetanus",
+"sciConsensus": "Ursus thibetanus"
+},
+"tsukutsukuboushi": {
+"gbifKey": 8538327,
+"sci": "Meimuna opalifera",
+"sciConsensus": "Meimuna opalifera"
+},
+"tsunohiramushi": {
+"gbifKey": 5891979,
+"sci": "Planocera reticulata",
+"sciConsensus": "Planocera reticulata"
+},
+"ugui": {
+"gbifKey": 11564062,
+"sci": "Pseudaspius hakonensis",
+"sciConsensus": "Pseudaspius hakonensis"
+},
+"uguisu": {
+"gbifKey": 8351644,
+"sci": "Horornis diphone",
+"sciConsensus": "Horornis diphone"
+},
+"umabiru": {
+"gbifKey": 10411125,
+"sci": "Whitmania pigra",
+"sciConsensus": "Whitmania pigra"
+},
+"umeboshiisogin": {
+"gbifKey": 2256559,
+"sci": "Actinia equina",
+"sciConsensus": "Actinia equina"
+},
+"umigumo": {
+"gbifKey": 2118190,
+"sci": "Ammothella biunguiculata",
+"sciConsensus": "Ammothella biunguiculata"
+},
+"umihotaru": {
+"gbifKey": 8058329,
+"sci": "Vargula hilgendorfii",
+"sciConsensus": "Vargula hilgendorfii"
+},
+"umikemushi": {
+"gbifKey": 5197032,
+"sci": "Chloeia flava",
+"sciConsensus": "Chloeia flava"
+},
+"umineko": {
+"gbifKey": 2481197,
+"sci": "Larus crassirostris",
+"sciConsensus": "Larus crassirostris"
+},
+"umisaboten": {
+"gbifKey": 5184436,
+"sci": "Cavernularia obesa",
+"sciConsensus": "Cavernularia obesa"
+},
+"urikurage": {
+"gbifKey": 51,
+"sci": "Beroe cucumis",
+"sciConsensus": "Beroe cucumis"
+},
+"urumeiwashi": {
+"gbifKey": 2413187,
+"sci": "Etrumeus micropus",
+"sciConsensus": "Etrumeus micropus"
+},
+"ushimanbou": {
+"gbifKey": 5213725,
+"sci": "Mola alexandrini",
+"sciConsensus": "Mola alexandrini"
+},
+"usubakagerou": {
+"gbifKey": 5164646,
+"sci": "Hagenomyia micans",
+"sciConsensus": "Hagenomyia micans"
+},
+"usuedamidoriishi": {
+"gbifKey": 5184694,
+"sci": "Acropora tenuis",
+"sciConsensus": "Acropora tenuis"
+},
+"uzura": {
+"gbifKey": 2474162,
+"sci": "Coturnix japonica",
+"sciConsensus": "Coturnix japonica"
+},
+"wakareotamaboya": {
+"gbifKey": 2332555,
+"sci": "Oikopleura dioica",
+"sciConsensus": "Oikopleura dioica"
+},
+"wamongokiburi": {
+"gbifKey": 2000152,
+"sci": "Periplaneta americana",
+"sciConsensus": "Periplaneta americana"
+},
+"waokitsunezaru": {
+"gbifKey": 2436412,
+"sci": "Lemur catta",
+"sciConsensus": "Lemur catta"
+},
+"warajimushi": {
+"gbifKey": 6284337,
+"sci": "Porcellio scaber",
+"sciConsensus": "Porcellio scaber"
+},
+"xenoturbella": {
+"gbifKey": 9532385,
+"sci": "Xenoturbella japonica",
+"sciConsensus": "Xenoturbella japonica"
+},
+"yaeyamasasori": {
+"gbifKey": 4656272,
+"sci": "Liocheles australasiae",
+"sciConsensus": "Liocheles australasiae"
+},
+"yakadotsunogai": {
+"gbifKey": 2284844,
+"sci": "Dentalium octangulatum",
+"sciConsensus": "Dentalium octangulatum"
+},
+"yakeyasude": {
+"gbifKey": 1017419,
+"sci": "Oxidus gracilis",
+"sciConsensus": "Oxidus gracilis"
+},
+"yamabiru": {
+"gbifKey": 9918483,
+"sci": "Haemadipsa japonica",
+"sciConsensus": "Haemadipsa japonica"
+},
+"yamadori": {
+"gbifKey": 2473484,
+"sci": "Syrmaticus soemmerringii",
+"sciConsensus": "Syrmaticus soemmerringii"
+},
+"yamakagashi": {
+"gbifKey": 2452268,
+"sci": "Rhabdophis tigrinus",
+"sciConsensus": "Rhabdophis tigrinus"
+},
+"yamamayu": {
+"gbifKey": 1866568,
+"sci": "Antheraea yamamai",
+"sciConsensus": "Antheraea yamamai"
+},
+"yamatokawagokai": {
+"gbifKey": 2316424,
+"sci": "Hediste diadroma",
+"sciConsensus": "Hediste diadroma"
+},
+"yamatoshijimi": {
+"gbifKey": 5794029,
+"sci": "Corbicula japonica",
+"sciConsensus": "Corbicula japonica"
+},
+"yamatoshiroari": {
+"gbifKey": 8796429,
+"sci": "Reticulitermes speratus",
+"sciConsensus": "Reticulitermes speratus"
+},
+"yanbarutosakayasude": {
+"gbifKey": 4986594,
+"sci": "Chamberlinius hualienensis",
+"sciConsensus": "Chamberlinius hualienensis"
+},
+"yariika": {
+"gbifKey": 6521427,
+"sci": "Heterololigo bleekeri",
+"sciConsensus": "Heterololigo bleekeri"
+},
+"yashigani": {
+"gbifKey": 4311512,
+"sci": "Birgus latro",
+"sciConsensus": "Birgus latro"
+},
+"yatsudehitode": {
+"gbifKey": 2273830,
+"sci": "Coscinasterias acutispina",
+"sciConsensus": "Coscinasterias acutispina"
+},
+"yokogawakyuchu": {
+"gbifKey": 2505584,
+"sci": "Metagonimus yokogawai",
+"sciConsensus": "Metagonimus yokogawai"
+},
+"yokozunakumamushi": {
+"gbifKey": 2253920,
+"sci": "Ramazzottius varieornatus",
+"sciConsensus": "Ramazzottius varieornatus"
+},
+"yubinagakoumori": {
+"gbifKey": 5787699,
+"sci": "Miniopterus fuliginosus",
+"sciConsensus": "Miniopterus fuliginosus"
+},
+"yumushi": {
+"gbifKey": 2509002,
+"sci": "Urechis unicinctus",
+"sciConsensus": "Urechis unicinctus"
+},
+"yuukoujouchu": {
+"gbifKey": 6101576,
+"sci": "Taenia solium",
+"sciConsensus": "Taenia solium"
+},
+"yuukyokuchu": {
+"gbifKey": 4556994,
+"sci": "Gnathostoma spinigerum",
+"sciConsensus": "Gnathostoma spinigerum"
+},
+"zebrafish": {
+"gbifKey": 9797255,
+"sci": "Danio rerio",
+"sciConsensus": "Danio rerio"
+},
+"zuwaigani": {
+"gbifKey": 2226639,
+"sci": "Chionoecetes opilio",
+"sciConsensus": "Chionoecetes opilio"
+}
+}
