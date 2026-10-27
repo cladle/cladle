@@ -50,6 +50,12 @@ function render() {
     if (r) { r.classList.add("celebrate"); r.style.animationDelay = wait + "s"; }
     const msg = exactWin() ? `正解！ ${N[G.target].ja} でした。` : `属まで正解！ 答えは ${N[G.target].ja} でした。`;
     if (still) flash(msg); else setTimeout(() => { if (G.won) flash(msg); }, (wait - .3) * 1000);
+    // 枝が根元から答えの種まで伸びるのを見られるよう、答えの種を画面の真ん中に持ってくる（スマホはキーボードが閉じるのを待つ）
+    setTimeout(() => {
+      const a = $(`#board text.tl[data-id="${G.target}"]`); if (!a) return;
+      const ra = a.getBoundingClientRect(), vh = visualViewport?.height || innerHeight, hb = $("header").getBoundingClientRect().bottom;
+      scrollBy({ top: (ra.top + ra.bottom) / 2 - (hb + vh) / 2, behavior: still ? "auto" : "smooth" });  // 上のタブの下から画面の下までの真ん中
+    }, matchMedia("(pointer: coarse)").matches ? 300 : 0);
     setTimeout(() => r?.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" }), wait * 1000 + 500);
   }
 }
