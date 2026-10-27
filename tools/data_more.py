@@ -1662,4 +1662,14 @@ _find("harigane")["tier"] = 2
 R("africaooyasude", "diplopoda", "アフリカオオヤスデ", "Archispirostreptus gigas", "アフリカ東部にすむ大型のヤスデ。ペットとして飼われる。",
   v={"ja": "和名の出典は Wikidata のみ"})
 _find("africaooyasude")["tier"] = 3
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（無脊椎は check/hard_inv/result.json、ヒシクイは日本鳥類目録改訂第8版）。
+R("umifukurou", "heterobranchia", "ウミフクロウ", "Pleurobranchaea japonica", "殻のないウミウシの仲間。肉食で、ほかの小動物を食べる。")
+R("gogoshimayumushi", "sedentaria", "ゴゴシマユムシ", "Ikedosoma gogoshimense", "瀬戸内海の興居島（ごごしま）にちなんで名づけられたユムシの仲間。干潟の泥に穴を掘ってすむ。")
+R("aominoumiushi", "heterobranchia", "アオミノウミウシ", "Glaucus atlanticus", "海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。")
+R("ishidatami", "vetigastropoda", "イシダタミ", "Monodonta confusa", "磯の岩の上でふつうに見られる巻貝。殻の表面が石畳のような模様になる。")
+R("hishigani", "brachyura", "ヒシガニ", "Enoplolambrus validus", "甲羅がひし形をしたカニ。はさみが大きく、砂泥底にすむ。")
+O("hishikui", "anseriformes", "ヒシクイ", "Anser fabalis", "冬に日本へ渡ってくる大型のガン。黒いくちばしに橙色の帯がある。", ["オオヒシクイ"])
+_find("hishikui")["subspeciesAliases"] = ["オオヒシクイ"]
+for _id, _t in {"umifukurou": 4, "gogoshimayumushi": 4, "aominoumiushi": 3, "ishidatami": 3, "hishigani": 4, "hishikui": 4}.items():
+    _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）

@@ -11322,6 +11322,71 @@
     "ja": "和名の出典は Wikidata のみ"
    },
    "tier": 3
+  },
+  {
+   "id": "umifukurou",
+   "parent": "heterobranchia",
+   "ja": "ウミフクロウ",
+   "sci": "Pleurobranchaea japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "殻のないウミウシの仲間。肉食で、ほかの小動物を食べる。",
+   "tier": 4
+  },
+  {
+   "id": "gogoshimayumushi",
+   "parent": "sedentaria",
+   "ja": "ゴゴシマユムシ",
+   "sci": "Ikedosoma gogoshimense",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "瀬戸内海の興居島（ごごしま）にちなんで名づけられたユムシの仲間。干潟の泥に穴を掘ってすむ。",
+   "tier": 4
+  },
+  {
+   "id": "aominoumiushi",
+   "parent": "heterobranchia",
+   "ja": "アオミノウミウシ",
+   "sci": "Glaucus atlanticus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。",
+   "tier": 3
+  },
+  {
+   "id": "ishidatami",
+   "parent": "vetigastropoda",
+   "ja": "イシダタミ",
+   "sci": "Monodonta confusa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の岩の上でふつうに見られる巻貝。殻の表面が石畳のような模様になる。",
+   "tier": 3
+  },
+  {
+   "id": "hishigani",
+   "parent": "brachyura",
+   "ja": "ヒシガニ",
+   "sci": "Enoplolambrus validus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "甲羅がひし形をしたカニ。はさみが大きく、砂泥底にすむ。",
+   "tier": 4
+  },
+  {
+   "id": "hishikui",
+   "parent": "anseriformes",
+   "ja": "ヒシクイ",
+   "sci": "Anser fabalis",
+   "jaStatus": "standard",
+   "aliases": [
+    "オオヒシクイ"
+   ],
+   "fact": "冬に日本へ渡ってくる大型のガン。黒いくちばしに橙色の帯がある。",
+   "subspeciesAliases": [
+    "オオヒシクイ"
+   ],
+   "tier": 4
   }
  ]
 }
