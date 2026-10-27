@@ -26,6 +26,14 @@ ${k.land ? `<li>陸の昆虫・貝・鳥・哺乳類の対象種：環境省自�
     <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
     <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>`;
 }
+// 番外編：本編とは別の、範囲をしぼったモード。足すときはここに1行
+const EXTRA = [
+  { lv: "fish", name: "魚編", note: "日本の魚 4,791 種から出題。種まで当てれば正解。推測は 20 回まで。" },
+];
+function extraHTML() {
+  return `<section><h2>番外編</h2><p>本編とは別に、仲間をしぼって遊ぶモードです。どれも試作中で、成績は本編とは別に記録します。</p>
+    <div class="modes">${EXTRA.map(m => `<button class="mode-card" data-mode="${m.lv}" aria-current="${LEVEL === m.lv}"><b>${esc(m.name)}（試作）</b><span>${esc(m.note)}</span></button>`).join("")}</div></section>`;
+}
 function fishAboutHTML() {
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>魚編について</h2><ul>
