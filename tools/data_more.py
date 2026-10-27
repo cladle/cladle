@@ -1637,4 +1637,19 @@ for _id, _t in {"kumanoashitsuki": 4, "samidorisashiba": 4, "sanhachiurokomushi"
                 "akaeraminoumiushi": 3, "dainanginpo": 3, "nabeka": 3, "umiichigo": 3, "kaginotekurage": 3,
                 "kikumeishimodoki": 4, "sanshouuni": 3}.items():
     _find(_id)["tier"] = _t
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（check/hard_inv/result.json）と check/picks18/。
+edit("asahigani", fact="甲羅が縦に長く、朱色をしたカニ。ふつうのカニのような横歩きはできず前後に歩くが、前にはほとんど進まない。砂に潜ってすむ。食用にされる。")
+R("kaiyadoriumigumo", "chelicerata", "カイヤドリウミグモ", "Nymphonella tapetis", "アサリなどの二枚貝の中に寄生するウミグモ。各地で増えてアサリ漁に被害を出した。")
+R("ryuujinoomukade", "chilopoda", "リュウジンオオムカデ", "Scolopendra alcyona", "2021年に新種として記載された、琉球列島と台湾の大型のムカデ。水に入って泳ぎ、水辺の生き物も食べる。")
+R("sashihariari", "formicidae", "サシハリアリ", "Paraponera clavata", "中南米の熱帯林にすむ大型のアリ。刺されると非常に強い痛みが続く。", ["パラポネラ"],
+  v={"ja": "和名の出典は Wikidata のみ"})
+R("ootsunohiramushi", "polycladida", "オオツノヒラムシ", "Planocera multitentaculata", "日本の磯の石の下でよく見られる大型のヒラムシ。")
+R("minohiramushi", "polycladida", "ミノヒラムシ", "Thysanozoon brocchii", "背中一面に小さな突起が生えたヒラムシ。体を波打たせて泳ぐこともできる。")
+R("chigokemushi", "bryozoa", "チゴケムシ", "Watersipora subatra", "港の岸壁や船底に付着し、赤黒い板状の群体をつくるコケムシ。")
+R("tagayasanminashi", "caenogastropoda", "タガヤサンミナシ", "Conus textile", "イモガイの一種。網目模様の殻をもつ。毒のある銛のような歯舌で獲物を刺し、人も刺されると危険。")
+R("ashihidanamekuji", "heterobranchia", "アシヒダナメクジ", "Laevicaulis alte", "殻のない陸の貝で、足の両側にひだがある。外来種で、南西諸島などに定着している。")
+R("mimiika", "decapodiformes", "ミミイカ", "Euprymna morsei", "耳のようなひれをもつ小さなイカ。昼は砂に潜って過ごす。")
+for _id, _t in {"kaiyadoriumigumo": 4, "ryuujinoomukade": 4, "sashihariari": 3, "ootsunohiramushi": 4, "minohiramushi": 4,
+                "chigokemushi": 4, "tagayasanminashi": 3, "ashihidanamekuji": 3, "mimiika": 3}.items():
+    _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）

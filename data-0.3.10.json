@@ -10934,7 +10934,7 @@
    "sci": "Ranina ranina",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "甲羅が縦に長く、朱色をしたカニ。砂に潜ってすむ。食用にされる。",
+   "fact": "甲羅が縦に長く、朱色をしたカニ。ふつうのカニのような横歩きはできず前後に歩くが、前にはほとんど進まない。砂に潜ってすむ。食用にされる。",
    "tier": 3
   },
   {
@@ -11185,6 +11185,101 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "内湾の砂泥底にすむ小型のウニ。",
+   "tier": 3
+  },
+  {
+   "id": "kaiyadoriumigumo",
+   "parent": "chelicerata",
+   "ja": "カイヤドリウミグモ",
+   "sci": "Nymphonella tapetis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アサリなどの二枚貝の中に寄生するウミグモ。各地で増えてアサリ漁に被害を出した。",
+   "tier": 4
+  },
+  {
+   "id": "ryuujinoomukade",
+   "parent": "chilopoda",
+   "ja": "リュウジンオオムカデ",
+   "sci": "Scolopendra alcyona",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "2021年に新種として記載された、琉球列島と台湾の大型のムカデ。水に入って泳ぎ、水辺の生き物も食べる。",
+   "tier": 4
+  },
+  {
+   "id": "sashihariari",
+   "parent": "formicidae",
+   "ja": "サシハリアリ",
+   "sci": "Paraponera clavata",
+   "jaStatus": "standard",
+   "aliases": [
+    "パラポネラ"
+   ],
+   "fact": "中南米の熱帯林にすむ大型のアリ。刺されると非常に強い痛みが続く。",
+   "verify": {
+    "ja": "和名の出典は Wikidata のみ"
+   },
+   "tier": 3
+  },
+  {
+   "id": "ootsunohiramushi",
+   "parent": "polycladida",
+   "ja": "オオツノヒラムシ",
+   "sci": "Planocera multitentaculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本の磯の石の下でよく見られる大型のヒラムシ。",
+   "tier": 4
+  },
+  {
+   "id": "minohiramushi",
+   "parent": "polycladida",
+   "ja": "ミノヒラムシ",
+   "sci": "Thysanozoon brocchii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中一面に小さな突起が生えたヒラムシ。体を波打たせて泳ぐこともできる。",
+   "tier": 4
+  },
+  {
+   "id": "chigokemushi",
+   "parent": "bryozoa",
+   "ja": "チゴケムシ",
+   "sci": "Watersipora subatra",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "港の岸壁や船底に付着し、赤黒い板状の群体をつくるコケムシ。",
+   "tier": 4
+  },
+  {
+   "id": "tagayasanminashi",
+   "parent": "caenogastropoda",
+   "ja": "タガヤサンミナシ",
+   "sci": "Conus textile",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イモガイの一種。網目模様の殻をもつ。毒のある銛のような歯舌で獲物を刺し、人も刺されると危険。",
+   "tier": 3
+  },
+  {
+   "id": "ashihidanamekuji",
+   "parent": "heterobranchia",
+   "ja": "アシヒダナメクジ",
+   "sci": "Laevicaulis alte",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "殻のない陸の貝で、足の両側にひだがある。外来種で、南西諸島などに定着している。",
+   "tier": 3
+  },
+  {
+   "id": "mimiika",
+   "parent": "decapodiformes",
+   "ja": "ミミイカ",
+   "sci": "Euprymna morsei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "耳のようなひれをもつ小さなイカ。昼は砂に潜って過ごす。",
    "tier": 3
   }
  ]
