@@ -1654,4 +1654,8 @@ for _id, _t in {"kaiyadoriumigumo": 4, "ryuujinoomukade": 4, "sashihariari": 3, 
     _find(_id)["tier"] = _t
 R("ooguchiboya", "tunicata", "オオグチボヤ", "Megalodicopia hians", "深海にすむホヤ。大きく開いた口のような入水孔を閉じて、流れてきた小さな動物を捕らえて食べる。")  # 照合 check/hard_inv/
 _find("ooguchiboya")["tier"] = 3
+# 類線形動物を戻す（作者の指定、2026-10-27）。照合 check/picks19/：学名は GBIF・CoL・WoRMS、和名は CoL・iNaturalist で一致。
+C("nematomorpha", "nematoida", "類線形動物門", "Nematomorpha", "門", "幼生は昆虫などに寄生し、成体は水中で暮らす。")
+R("harigane", "nematomorpha", "ハリガネムシ", "Gordius aquaticus", "針金のように細長い体の寄生虫。幼生は昆虫などの体内で育ち、成体になると水の中に出てくる。")
+_find("harigane")["tier"] = 2
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）

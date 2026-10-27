@@ -2442,6 +2442,14 @@
    "verify": {
     "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
    }
+  },
+  {
+   "id": "nematomorpha",
+   "parent": "nematoida",
+   "ja": "類線形動物門",
+   "sci": "Nematomorpha",
+   "rank": "門",
+   "desc": "幼生は昆虫などに寄生し、成体は水中で暮らす。"
   }
  ],
  "species": [
@@ -11291,6 +11299,16 @@
    "aliases": [],
    "fact": "深海にすむホヤ。大きく開いた口のような入水孔を閉じて、流れてきた小さな動物を捕らえて食べる。",
    "tier": 3
+  },
+  {
+   "id": "harigane",
+   "parent": "nematomorpha",
+   "ja": "ハリガネムシ",
+   "sci": "Gordius aquaticus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "針金のように細長い体の寄生虫。幼生は昆虫などの体内で育ち、成体になると水の中に出てくる。",
+   "tier": 2
   }
  ]
 }
