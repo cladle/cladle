@@ -74,8 +74,12 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .meter i.used { background: var(--accent) }
 
 .inputbox { position: relative }
+.inputbox.pin { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--hdr, 96px)); z-index: 4; background: var(--bg); padding-block: 4px 6px }  /* 推測で系統樹の方へ画面が動いても、すぐ次を入力できるよう上に残す（終わったら外す） */
 #guess { width: 100%; font: inherit; font-size: 1.05rem; padding: 12px 14px; border: 2px solid var(--ink); border-radius: 10px; background: var(--surface); color: var(--ink) }
 #guess:disabled { opacity: .5 }
+.leftpin { display: none; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: .8rem; color: var(--muted); pointer-events: none }
+.inputbox.pin.hidleft .leftpin { display: block }
+.inputbox.pin.hidleft #guess { padding-right: 84px }
 .sugg { list-style: none; margin: 4px 0 0; padding: 4px; position: absolute; left: 0; right: 0; z-index: 4; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgb(0 0 0 / .15); max-height: 50vh; overflow-y: auto }
 .sugg li { padding: 8px 10px; border-radius: 6px; cursor: pointer; display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline }
 .sugg li[aria-selected="true"], .sugg li:hover { background: var(--accent-soft) }
@@ -198,7 +202,7 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
   .cgsvg .ln.goal.fade, .cgsvg .tq.fade, .cgsvg .tl.fade, .cgsvg .nl.fade, .cgsvg .nd.fade { animation: fadein .35s ease-out both }
   @keyframes fadein { from { opacity: 0 } }
   .cgsvg.win .tl.hit { transform-box: fill-box; transform-origin: left center; animation: pop .6s ease-out both }
-  @keyframes pop { 0% { opacity: 0; transform: scale(.6) } 70% { transform: scale(1.15) } 100% { opacity: 1; transform: scale(1) } }
+  @keyframes pop { 0% { opacity: 0; transform: scale(.6) } 55% { transform: scale(1.45) } 80% { transform: scale(.95) } 100% { opacity: 1; transform: scale(1) } }
 }
 .result .fact { margin: 0 }
 .share { font-family: var(--f-mono); font-size: .8rem; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); border-radius: 8px; padding: 10px; margin: 0; user-select: all }

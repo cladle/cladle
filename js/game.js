@@ -107,8 +107,9 @@ function cueTo(id, L) {
     if (!a) return;
     const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
     const top = Math.min(ra.top, rb.top), bot = Math.max(ra.bottom, rb.bottom), vh = visualViewport?.height || innerHeight;
-    if (top >= 70 && bot <= vh - 30) return;
-    scrollBy({ top: (top + bot) / 2 - vh / 2, behavior: still ? "auto" : "smooth" });
+    const hb = $(".inputbox").getBoundingClientRect().bottom;  // 上に残る入力欄の下から画面の下までを見える範囲とする
+    if (top >= hb + 8 && bot <= vh - 30) return;
+    scrollBy({ top: (top + bot) / 2 - (hb + vh) / 2, behavior: still ? "auto" : "smooth" });
   }, matchMedia("(pointer: coarse)").matches ? 300 : 0);
 }
 let celebrate = false, growId = null, lastEdges = null, openGrow = false, animUntil = 0;  // 正解した直後の演出、推測した直後に伸ばす枝、前回描いた枝
