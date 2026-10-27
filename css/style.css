@@ -49,7 +49,8 @@ h1 .yomi { font-family: var(--f-body); font-size: .7rem; letter-spacing: .08em; 
 .brand small { color: var(--muted); font-size: .8rem }
 nav { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px }
 nav button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 5px 10px; font-size: .8rem; white-space: nowrap; cursor: pointer }
-@media (max-width: 400px) { nav { gap: 2px } nav button { padding: 5px 6px; font-size: .72rem } }  /* タブ6つをスマホ幅で1行に収める */
+@media (max-width: 460px) { nav { gap: 3px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none } nav::-webkit-scrollbar { display: none } nav button { padding: 5px 8px; font-size: .78rem; flex: none } }  /* タブ6つを1行に。入りきらないときは横にずらして見る */
+@media (max-width: 400px) { nav { gap: 2px } nav button { padding: 5px 6px; font-size: .72rem } }  /* 狭いスマホではさらに詰める */
 nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
 .level { margin-left: auto; align-self: center; border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 4px 10px; font-size: .78rem; cursor: pointer; white-space: nowrap; min-height: 32px }
 .level[aria-pressed="true"] { background: var(--hot); border-color: var(--hot); color: var(--surface); font-weight: 700 }
