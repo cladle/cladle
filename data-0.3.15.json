@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.14",
+  "datasetVersion": "0.3.15",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
@@ -2482,6 +2482,30 @@
    "sci": "Cycliophora",
    "rank": "門",
    "desc": "1995年に記載された門。アカザエビ類の口器に付着してくらす。"
+  },
+  {
+   "id": "monotremata",
+   "parent": "mammalia",
+   "ja": "単孔目",
+   "sci": "Monotremata",
+   "rank": "目",
+   "desc": "卵を産む哺乳類。カモノハシとハリモグラの仲間。"
+  },
+  {
+   "id": "carabidae",
+   "parent": "coleoptera",
+   "ja": "オサムシ科",
+   "sci": "Carabidae",
+   "rank": "科",
+   "desc": "地上を歩き回る肉食の甲虫が多い。ハンミョウもこの科に含める。"
+  },
+  {
+   "id": "cerambycidae",
+   "parent": "coleoptera",
+   "ja": "カミキリムシ科",
+   "sci": "Cerambycidae",
+   "rank": "科",
+   "desc": "長い触角をもつ甲虫。幼虫は木の幹の中を食べて育つ。"
   }
  ],
  "species": [
@@ -3056,7 +3080,7 @@
   },
   {
    "id": "kamonohashi",
-   "parent": "mammalia",
+   "parent": "monotremata",
    "ja": "カモノハシ",
    "sci": "Ornithorhynchus anatinus",
    "jaStatus": "standard",
@@ -8981,7 +9005,9 @@
    "ja": "チョウ",
    "sci": "Argulus japonicus",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "ウオジラミ"
+   ],
    "fact": "コイや金魚の体表に寄生する鰓尾類。昆虫のチョウとは無関係。",
    "tier": 4
   },
@@ -9169,7 +9195,7 @@
   },
   {
    "id": "gomadarakamikiri",
-   "parent": "coleoptera",
+   "parent": "cerambycidae",
    "ja": "ゴマダラカミキリ",
    "sci": "Anoplophora malasiaca",
    "jaStatus": "standard",
@@ -11976,6 +12002,735 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "太い口腕をもち、タコのように見えるクラゲ。体の中に褐虫藻をすまわせ、光合成でできた栄養も利用する。",
+   "tier": 3
+  },
+  {
+   "id": "onidarumaokoze",
+   "parent": "perciformes",
+   "ja": "オニダルマオコゼ",
+   "sci": "Synanceia verrucosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "岩やサンゴにそっくりな姿でじっと待ち伏せる魚。背びれのとげに強い毒があり、踏むと命にかかわることもある。",
+   "tier": 3
+  },
+  {
+   "id": "ubazame",
+   "parent": "lamniformes",
+   "ja": "ウバザメ",
+   "sci": "Cetorhinus maximus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは10 mほどになるサメ。大きな口を開けて泳ぎ、えらでプランクトンをこしとって食べる。",
+   "tier": 2
+  },
+  {
+   "id": "shirowani",
+   "parent": "lamniformes",
+   "ja": "シロワニ",
+   "sci": "Carcharias taurus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鋭い歯が並ぶ大型のサメ。見た目はこわいが性質はおとなしく、水族館でも飼われる。",
+   "tier": 3
+  },
+  {
+   "id": "umitengu",
+   "parent": "syngnathiformes",
+   "ja": "ウミテング",
+   "sci": "Eurypegasus draconis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "平たい体を硬い骨板でおおった小さな魚。胸びれを広げ、海底を這うように動く。",
+   "tier": 4
+  },
+  {
+   "id": "mongarakawahagi",
+   "parent": "tetraodontiformes",
+   "ja": "モンガラカワハギ",
+   "sci": "Balistoides conspicillum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "腹に大きな白い水玉模様がある、派手な色のカワハギの仲間。サンゴ礁にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "toraeutsubo",
+   "parent": "anguilliformes",
+   "ja": "トラウツボ",
+   "sci": "Enchelycore pardalis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤みがかった体に白い斑点があるウツボ。口を閉じても曲がった歯がのぞく。",
+   "tier": 3
+  },
+  {
+   "id": "chouchouuo",
+   "parent": "acanthuriformes",
+   "ja": "チョウチョウウオ",
+   "sci": "Chaetodon auripes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黄色い体に細いしま模様がある平たい魚。磯やサンゴ礁で見られる。",
+   "tier": 2
+  },
+  {
+   "id": "honsomewakebera",
+   "parent": "labriformes",
+   "ja": "ホンソメワケベラ",
+   "sci": "Labroides dimidiatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ほかの魚の体についた寄生虫を食べて掃除する小さなベラ。鏡に映った自分を認識できるという研究がある。",
+   "tier": 3
+  },
+  {
+   "id": "onikamasu",
+   "parent": "carangiformes",
+   "ja": "オニカマス",
+   "sci": "Sphyraena barracuda",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは1.5 mを超えるカマスの仲間。英語ではバラクーダと呼ばれる。シガテラ毒をもつことがある。",
+   "tier": 3
+  },
+  {
+   "id": "yamatomeribe",
+   "parent": "heterobranchia",
+   "ja": "ヤマトメリベ",
+   "sci": "Melibe japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。",
+   "tier": 4
+  },
+  {
+   "id": "hadakazoukurage",
+   "parent": "caenogastropoda",
+   "ja": "ハダカゾウクラゲ",
+   "sci": "Pterotrachea coronata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明な体で海を泳ぐ巻貝の仲間。殻をもたず、ひれを振って泳ぐ。",
+   "tier": 4
+  },
+  {
+   "id": "kochouumiushi",
+   "parent": "heterobranchia",
+   "ja": "コチョウウミウシ",
+   "sci": "Crosslandia viridis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海藻に似た緑色の体をもつウミウシ。体の縁がひらひらと広がる。",
+   "tier": 4
+  },
+  {
+   "id": "tsumetagai",
+   "parent": "caenogastropoda",
+   "ja": "ツメタガイ",
+   "sci": "Neverita didyma",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂浜の浅い海にすむ丸い巻貝。ほかの二枚貝の殻に穴をあけて中身を食べる。",
+   "tier": 3
+  },
+  {
+   "id": "kinchakugani",
+   "parent": "brachyura",
+   "ja": "キンチャクガニ",
+   "sci": "Lybia tessellata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "両方のはさみに小さなイソギンチャクを持ち、ポンポンのように振って身を守る小さなカニ。",
+   "tier": 3
+  },
+  {
+   "id": "tainoe",
+   "parent": "isopoda",
+   "ja": "タイノエ",
+   "sci": "Ceratothoa verrucosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マダイの口の中に寄生する等脚類。雌と雄がつがいで口の中にすみつく。",
+   "tier": 3
+  },
+  {
+   "id": "sakasakurage",
+   "parent": "scyphozoa",
+   "ja": "サカサクラゲ",
+   "sci": "Cassiopea ornata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "かさを下にして海底でひっくり返って暮らすクラゲ。体の中の褐虫藻に光を当てている。",
+   "tier": 3
+  },
+  {
+   "id": "amigasakurage",
+   "parent": "ctenophora",
+   "ja": "アミガサクラゲ",
+   "sci": "Beroe forskalii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "触手をもたないクシクラゲの仲間。大きな口でほかのクシクラゲを丸のみにする。",
+   "tier": 4
+  },
+  {
+   "id": "nichirinhitode",
+   "parent": "asteroidea",
+   "ja": "ニチリンヒトデ",
+   "sci": "Solaster paxillatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "太陽のように腕が10本前後あるヒトデ。ほかのヒトデを食べる。",
+   "tier": 4
+  },
+  {
+   "id": "yumenamako",
+   "parent": "holothuroidea",
+   "ja": "ユメナマコ",
+   "sci": "Enypniastes eximia",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむ半透明で赤いナマコ。体のまわりのひれを動かして泳ぐことができる。",
+   "tier": 4
+  },
+  {
+   "id": "manhattanboya",
+   "parent": "tunicata",
+   "ja": "マンハッタンボヤ",
+   "sci": "Molgula manhattensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北アメリカ東岸原産の小さな丸いホヤ。船について運ばれ、日本の港にも定着している。",
+   "tier": 4
+  },
+  {
+   "id": "oosarupa",
+   "parent": "tunicata",
+   "ja": "オオサルパ",
+   "sci": "Thetys vagina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは30 cmほどになる大型のサルパ。透明な樽形の体で海を漂う。",
+   "tier": 4
+  },
+  {
+   "id": "goisagi",
+   "parent": "pelecaniformes",
+   "ja": "ゴイサギ",
+   "sci": "Nycticorax nycticorax",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夜に水辺で魚などを捕るサギ。夜に飛びながら「クワッ」と鳴く。",
+   "tier": 3
+  },
+  {
+   "id": "harimogura",
+   "parent": "monotremata",
+   "ja": "ハリモグラ",
+   "sci": "Tachyglossus aculeatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中が針でおおわれた、卵を産む哺乳類。長い舌でアリやシロアリを食べる。",
+   "tier": 2
+  },
+  {
+   "id": "hadakadebanezumi",
+   "parent": "rodentia",
+   "ja": "ハダカデバネズミ",
+   "sci": "Heterocephalus glaber",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "地下にトンネルを掘って集団で暮らす、毛のほとんどないネズミの仲間。1匹の女王だけが子を産み、30年以上生きることもある。",
+   "tier": 2
+  },
+  {
+   "id": "minamikoarikui",
+   "parent": "xenarthra",
+   "ja": "ミナミコアリクイ",
+   "sci": "Tamandua tetradactyla",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカの森にすむ小型のアリクイ。木に登り、尾を枝に巻きつけることができる。",
+   "tier": 3
+  },
+  {
+   "id": "aiai",
+   "parent": "primates",
+   "ja": "アイアイ",
+   "sci": "Daubentonia madagascariensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マダガスカルにすむ夜行性のサル。とても細長い中指で木をたたき、中の虫の幼虫をほじり出して食べる。",
+   "tier": 2
+  },
+  {
+   "id": "tsuchibuta",
+   "parent": "afrotheria",
+   "ja": "ツチブタ",
+   "sci": "Orycteropus afer",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカにすむ、ブタのような鼻とウサギのような耳をもつ哺乳類。シロアリを食べる。1種だけで管歯目をつくる。",
+   "tier": 3
+  },
+  {
+   "id": "ogurop",
+   "parent": "rodentia",
+   "ja": "オグロプレーリードッグ",
+   "sci": "Cynomys ludovicianus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北アメリカの草原に巣穴を掘って群れで暮らすリスの仲間。犬のような声で鳴き合う。",
+   "tier": 2
+  },
+  {
+   "id": "himearumajiro",
+   "parent": "xenarthra",
+   "ja": "ヒメアルマジロ",
+   "sci": "Chlamyphorus truncatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アルゼンチンにすむ、体長10 cmほどの小さなアルマジロ。背中にピンク色のよろいがあり、地中を掘り進む。",
+   "tier": 4
+  },
+  {
+   "id": "mimisenzankou",
+   "parent": "laurasiatheria",
+   "ja": "ミミセンザンコウ",
+   "sci": "Manis pentadactyla",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体がうろこでおおわれた哺乳類。アリやシロアリを食べ、危険を感じると体を丸める。中国や台湾などにすむ。",
+   "tier": 3
+  },
+  {
+   "id": "hebikuiwashi",
+   "parent": "afroaves",
+   "ja": "ヘビクイワシ",
+   "sci": "Sagittarius serpentarius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカの草原にすむ、足の長い猛禽。地上を歩き、ヘビなどを強く蹴って捕らえる。",
+   "tier": 3
+  },
+  {
+   "id": "wanigame",
+   "parent": "testudines",
+   "ja": "ワニガメ",
+   "sci": "Macrochelys temminckii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北アメリカにすむ大型のカメ。舌の先のミミズのような突起で魚をおびき寄せる。",
+   "tier": 2
+  },
+  {
+   "id": "amefukuragaeru",
+   "parent": "anura",
+   "ja": "アメフクラガエル",
+   "sci": "Breviceps adspersus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ南部にすむ丸い体のカエル。危険を感じると体をふくらませる。",
+   "tier": 3
+  },
+  {
+   "id": "leafyseadragon",
+   "parent": "syngnathiformes",
+   "ja": "リーフィーシードラゴン",
+   "sci": "Phycodurus eques",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海藻のような飾りが体じゅうにある、タツノオトシゴの仲間。オーストラリア南部の海にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "miideragomimushi",
+   "parent": "carabidae",
+   "ja": "ミイデラゴミムシ",
+   "sci": "Pheropsophus jessoensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "危険を感じると、おしりから100 ℃ほどの高温のガスを噴き出す甲虫。「へっぴりむし」とも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "douganebuibui",
+   "parent": "scarabaeidae",
+   "ja": "ドウガネブイブイ",
+   "sci": "Anomala cuprea",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "銅色の光沢があるコガネムシの仲間。夏の夜に灯りに集まる。",
+   "tier": 3
+  },
+  {
+   "id": "samuraiari",
+   "parent": "formicidae",
+   "ja": "サムライアリ",
+   "sci": "Polyergus samurai",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ほかのアリの巣を襲ってさなぎを奪い、育ったアリを働かせるアリ。自分では餌をとれない。",
+   "tier": 3
+  },
+  {
+   "id": "mansonjuuketsukyuuchuu",
+   "parent": "trematoda",
+   "ja": "マンソン住血吸虫",
+   "sci": "Schistosoma mansoni",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "人の血管にすむ吸虫。アフリカや南アメリカで病気を起こす。雄の体の溝に雌が収まって、つがいで暮らす。",
+   "tier": 4
+  },
+  {
+   "id": "silverarowana",
+   "parent": "teleostei",
+   "ja": "シルバーアロワナ",
+   "sci": "Osteoglossum bicirrhosum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカのアマゾン川などにすむ細長い魚。水面近くの昆虫を、水から跳び上がって捕らえる。",
+   "tier": 3
+  },
+  {
+   "id": "tsunozemi",
+   "parent": "hemiptera",
+   "ja": "ツノゼミ",
+   "sci": "Butragulus flavipes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "胸の背中側が角のような形にのびた小さな虫。セミに近いカメムシ目の仲間。",
+   "verify": {
+    "sci": "属は資料により Orthobelus とも"
+   },
+   "tier": 3
+  },
+  {
+   "id": "tamamushi",
+   "parent": "coleoptera",
+   "ja": "タマムシ",
+   "sci": "Chrysochroa fulgidissima",
+   "jaStatus": "standard",
+   "aliases": [
+    "ヤマトタマムシ"
+   ],
+   "fact": "緑色の金属光沢に赤紫のすじがある甲虫。法隆寺の玉虫厨子には、この虫の翅が飾りに使われた。",
+   "tier": 2
+  },
+  {
+   "id": "hanmyou",
+   "parent": "carabidae",
+   "ja": "ハンミョウ",
+   "sci": "Cicindela chinensis",
+   "jaStatus": "standard",
+   "aliases": [
+    "ナミハンミョウ"
+   ],
+   "fact": "赤・緑・青に輝く甲虫。人の前を飛んでは止まるので「みちおしえ」とも呼ばれる。",
+   "tier": 2
+  },
+  {
+   "id": "maimaikaburi",
+   "parent": "carabidae",
+   "ja": "マイマイカブリ",
+   "sci": "Carabus blaptoides",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "カタツムリの殻に頭を突っ込んで中身を食べる、細長い頭をした甲虫。日本固有種。",
+   "tier": 3
+  },
+  {
+   "id": "kokuwagata",
+   "parent": "lucanidae",
+   "ja": "コクワガタ",
+   "sci": "Dorcus rectus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本でいちばん身近なクワガタムシの一つ。雑木林にすむ。",
+   "tier": 2
+  },
+  {
+   "id": "koganemushi",
+   "parent": "scarabaeidae",
+   "ja": "コガネムシ",
+   "sci": "Mimela splendens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "緑色の金属光沢がある甲虫。成虫は葉を、幼虫は土の中で植物の根を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "oosenchikogane",
+   "parent": "coleoptera",
+   "ja": "オオセンチコガネ",
+   "sci": "Phelotrupes auratus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "動物のふんを食べる、金属光沢のある甲虫。地域によって赤・緑・青と色が変わる。",
+   "tier": 3
+  },
+  {
+   "id": "ruriboshikamikiri",
+   "parent": "cerambycidae",
+   "ja": "ルリボシカミキリ",
+   "sci": "Rosalia batesi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "水色の体に黒い斑点がある美しいカミキリムシ。日本固有種。",
+   "tier": 3
+  },
+  {
+   "id": "shirosujikamikiri",
+   "parent": "cerambycidae",
+   "ja": "シロスジカミキリ",
+   "sci": "Batocera lineolata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本最大級のカミキリムシ。幼虫はクヌギなどの幹の中を食べて育つ。",
+   "tier": 3
+  },
+  {
+   "id": "nijuuyahoshitentou",
+   "parent": "coccinellidae",
+   "ja": "ニジュウヤホシテントウ",
+   "sci": "Henosepilachna vigintioctopunctata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中に28個の黒い斑点があるテントウムシ。ナスやジャガイモの葉を食べる害虫。",
+   "tier": 3
+  },
+  {
+   "id": "himekurootoshibumi",
+   "parent": "coleoptera",
+   "ja": "ヒメクロオトシブミ",
+   "sci": "Apoderus erythrogaster",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "葉を巻いて「揺籃（ようらん）」をつくり、その中に卵を産む小さな甲虫。",
+   "tier": 4
+  },
+  {
+   "id": "oohiratashidemushi",
+   "parent": "coleoptera",
+   "ja": "オオヒラタシデムシ",
+   "sci": "Necrophila japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "動物の死がいに集まる平たい甲虫。死がいを分解する掃除屋。",
+   "tier": 4
+  },
+  {
+   "id": "sabikikori",
+   "parent": "coleoptera",
+   "ja": "サビキコリ",
+   "sci": "Agrypnus binodulus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "さびたような色のコメツキムシの仲間。ひっくり返すと、パチンと音をたてて跳ね起きる。",
+   "tier": 4
+  },
+  {
+   "id": "kimunekumabachi",
+   "parent": "hymenoptera",
+   "ja": "キムネクマバチ",
+   "sci": "Xylocopa appendiculata",
+   "jaStatus": "standard",
+   "aliases": [
+    "クマバチ"
+   ],
+   "fact": "胸に黄色い毛がある、丸く大きなハナバチ。おとなしく、雄には針がない。",
+   "tier": 2
+  },
+  {
+   "id": "satojigabachi",
+   "parent": "hymenoptera",
+   "ja": "サトジガバチ",
+   "sci": "Ammophila sabulosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "腰がとても細いハチ。ガの幼虫を毒針でまひさせ、巣穴に運んで子の餌にする。",
+   "tier": 4
+  },
+  {
+   "id": "namihanaabu",
+   "parent": "diptera",
+   "ja": "ナミハナアブ",
+   "sci": "Eristalis tenax",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ミツバチによく似た姿のアブ。幼虫は汚れた水の中で暮らし「オナガウジ」と呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "kiriujigaganbo",
+   "parent": "diptera",
+   "ja": "キリウジガガンボ",
+   "sci": "Tipula aino",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "長い脚をもつ大きな蚊のような虫。血は吸わない。",
+   "tier": 3
+  },
+  {
+   "id": "onbubatta",
+   "parent": "orthoptera",
+   "ja": "オンブバッタ",
+   "sci": "Atractomorpha lata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小さな雄が大きな雌の背中に乗っている姿がよく見られるバッタ。",
+   "tier": 2
+  },
+  {
+   "id": "kubikirigisu",
+   "parent": "orthoptera",
+   "ja": "クビキリギス",
+   "sci": "Euconocephalus varius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "とがった頭と赤い口をもつキリギリスの仲間。成虫のまま冬を越し、春に「ジー」と鳴く。",
+   "tier": 3
+  },
+  {
+   "id": "kutsuwamushi",
+   "parent": "orthoptera",
+   "ja": "クツワムシ",
+   "sci": "Mecopoda niponensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "「ガチャガチャ」と大きな声で鳴く、大型のキリギリスの仲間。",
+   "tier": 2
+  },
+  {
+   "id": "matsumushi",
+   "parent": "orthoptera",
+   "ja": "マツムシ",
+   "sci": "Xenogryllus marmoratus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "秋に「チンチロリン」と鳴くコオロギの仲間。",
+   "tier": 2
+  },
+  {
+   "id": "aomatsumushi",
+   "parent": "orthoptera",
+   "ja": "アオマツムシ",
+   "sci": "Truljalia hibinonis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "緑色のコオロギの仲間。木の上で「リーリー」と大きな声で鳴く外来種。",
+   "tier": 3
+  },
+  {
+   "id": "niiniizemi",
+   "parent": "cicadidae",
+   "ja": "ニイニイゼミ",
+   "sci": "Platypleura kaempferi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "木の皮のような模様の小さなセミ。梅雨明けの頃から「チー」と鳴く。抜け殻は泥をかぶっていることが多い。",
+   "tier": 2
+  },
+  {
+   "id": "kuroageha",
+   "parent": "papilionidae",
+   "ja": "クロアゲハ",
+   "sci": "Papilio protenor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒い翅をもつ大きなアゲハチョウ。幼虫はミカンなどの葉を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "tsumagurohyoumon",
+   "parent": "lepidoptera",
+   "ja": "ツマグロヒョウモン",
+   "sci": "Argynnis hyperbius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雌の前翅の先が黒いヒョウ柄のチョウ。南の地方から分布を北へ広げている。",
+   "tier": 2
+  },
+  {
+   "id": "ruritateha",
+   "parent": "lepidoptera",
+   "ja": "ルリタテハ",
+   "sci": "Kaniska canace",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒い翅に青いすじが入ったタテハチョウ。幼虫はホトトギスなどの葉を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "oogomadara",
+   "parent": "lepidoptera",
+   "ja": "オオゴマダラ",
+   "sci": "Idea leuconoe",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "白と黒のまだら模様の大きなチョウ。ゆっくりと飛ぶ。さなぎは金色に輝く。",
+   "tier": 2
+  },
+  {
+   "id": "benishijimi",
+   "parent": "lepidoptera",
+   "ja": "ベニシジミ",
+   "sci": "Lycaena phlaeas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "橙色の翅に黒い斑点がある小さなチョウ。草地でふつうに見られる。",
+   "tier": 2
+  },
+  {
+   "id": "ichimonjiseseri",
+   "parent": "lepidoptera",
+   "ja": "イチモンジセセリ",
+   "sci": "Parnara guttata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "茶色の小さなチョウ。後翅に白い斑点が一列に並ぶ。幼虫はイネの葉を食べる。",
+   "tier": 3
+  },
+  {
+   "id": "oosukashiba",
+   "parent": "lepidoptera",
+   "ja": "オオスカシバ",
+   "sci": "Cephonodes hylas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明な翅で花の前に止まるように飛び、蜜を吸うガ。",
+   "tier": 3
+  },
+  {
+   "id": "oomizuao",
+   "parent": "lepidoptera",
+   "ja": "オオミズアオ",
+   "sci": "Actias aliena",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "うすい水色の大きな翅をもつガ。後翅の先が尾のようにのびる。",
+   "tier": 3
+  },
+  {
+   "id": "yamatoshijimi_b",
+   "parent": "lepidoptera",
+   "ja": "ヤマトシジミ",
+   "sci": "Zizeeria maha",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "道ばたのカタバミのまわりでふつうに見られる、小さな青いチョウ。貝のヤマトシジミとは別の生き物。",
+   "tier": 2
+  },
+  {
+   "id": "katabirotogehamushi",
+   "parent": "coleoptera",
+   "ja": "カタビロトゲハムシ",
+   "sci": "Dactylispa subquadrata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体じゅうにとげが生えた小さなハムシ。トゲハムシの仲間は昔「トゲトゲ」と呼ばれ、とげのない「トゲナシトゲトゲ」、その中でとげのある「トゲアリトゲナシトゲトゲ」という呼び名も生まれた。",
    "tier": 3
   }
  ]
