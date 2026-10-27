@@ -1703,7 +1703,7 @@ for _id, _t in {"sunaisoginchaku": 4, "greenhydra": 3, "shirogaya": 4, "togarisa
                 "totorokagimushi": 3}.items():
     _find(_id)["tier"] = _t
 # ウミクワガタ→研究の多い種としてソメワケウミクワガタ（雄の二型とハーレムの研究、Tanaka & Nishi 2011 Zool. Sci. 28: 587）。
-R("somewakeumikuwagata", "malacostraca", "ソメワケウミクワガタ", "Elaphognathia discolor", "ウミクワガタの仲間。幼生は魚の血を吸い、成体の雄はクワガタのような大あごをもって、巣穴に雌を集める。")
+R("somewakeumikuwagata", "malacostraca", "ソメワケウミクワガタ", "Elaphognathia discolor", "ウミクワガタの仲間。幼生は魚の血を吸い、成体の雄はクワガタのような大あごをもち、複数の雌を囲うハーレムをつくる。")
 _find("somewakeumikuwagata")["tier"] = 4
 # よく知られた呼び名を別名に（作者了承、2026-10-27）
 _find("gaikotsupandahoya")["aliases"] = ["パンダボヤ"]
