@@ -229,6 +229,7 @@ function resultHTML() {
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
     <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
+    ${mode === "daily" ? "" : <p class="hint">共有したリンクから、相手も同じ動物で遊べます。</p>}
     <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     ${namesHTML(t)}
