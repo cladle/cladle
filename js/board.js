@@ -175,11 +175,13 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     let w = ctx.measureText(N[n.id].ja).width; const g = st ? 9 : 5, kh = kin ? 11 : 0;
     if (kin) { ctx.font = `10px ${getComputedStyle(document.body).fontFamily}`; w = Math.max(w, ctx.measureText(kin).width); }
     // 右・枝の上（左寄せ）・右上・右下の順に試す
-    const spots = [[n.x + g, 0], [n.x - 3 - w, -9], [n.x + 3, -11], [n.x + 3, 14]]
-      .map(([x, dy]) => ({ x, y: n.y + dy, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 + kh } }))
-      .filter(sp => sp.r.x1 >= 0 && sp.r.x2 <= tipX - 2);
+    const all = [[n.x + g, 0], [n.x - 3 - w, -9], [n.x + 3, -11], [n.x + 3, 14]]
+      .map(([x, dy]) => ({ x, y: n.y + dy, r: { x1: x - 1, x2: x + w + 1, y1: n.y + dy - 7, y2: n.y + dy + 5 + kh } }));
+    const spots = all.filter(sp => sp.r.x1 >= 0 && sp.r.x2 <= tipX - 2);
+    // 現在地と根は必ず書く。狭い画面で葉の手前に収まらないときは、葉の文字の列にはみ出してもよい
+    const wide = all.filter(sp => sp.r.x1 >= 0);
     const sp = spots.find(sp => !hits(sp.r, placed) && !hits(sp.r, seg))
-      || (st || n.id === D.root ? spots.find(sp => !hits(sp.r, placed)) || spots[0] : null);
+      || (st || n.id === D.root ? spots.find(sp => !hits(sp.r, placed)) || wide.find(sp => !hits(sp.r, placed) && !hits(sp.r, seg)) || wide.find(sp => !hits(sp.r, placed)) || spots[0] || wide[0] : null);
     if (!sp) continue;
     placed.push(sp.r);
     const la = lateStyle(n.id);

@@ -112,6 +112,10 @@ PLACE = {"Copepoda": "multicrustacea", "Tantulocarida": "multicrustacea", "Ostra
          "Polyplacophora": "aculifera", "Caudofoveata": "aculifera", "Solenogastres": "aculifera",
          "Scaphopoda": "conchifera", "Monoplacophora": "conchifera", "Cephalochordata": "chordata", "Echiura": "sedentaria",
          "Diclidophoridae": "polyopisthocotyla"}
+# 本家に無くなった綱で、ゲキムズの種を入れるのに要るもの（本家の種が無くなり節目ごと外れた）
+if "staurozoa" not in C and "medusozoa" in C:
+    C["staurozoa"] = {"id": "staurozoa", "parent": "medusozoa", "ja": "十文字クラゲ綱", "sci": "Staurozoa", "rank": "綱", "desc": "海藻などに柄で付着して暮らすクラゲ。"}
+PLACE["Stauromedusae"] = "staurozoa"
 # 本家で名前を改めた群（Brabec et al. 2023：単生綱は単系統でなく、2亜綱を綱に格上げ）
 SYN = {"Monopisthocotylea": "Monopisthocotyla", "Polyopisthocotylea": "Polyopisthocotyla"}
 # 側系統・多系統とされる群は節目にしない（子は一つ上に付ける）
@@ -247,6 +251,10 @@ if landf:
         old = byja_all.get(x["ja"])
         # 既にある種の別名（亜種名など）と同じ和名は、その種の扱いを優先して入れない（イリオモテヤマネコなど）
         if not old and x["ja"] in alias_of: log["land_is_alias"].append((x["ja"], x["sci"], alias_of[x["ja"]])); continue
+        # 別名（亜種名など）が同じ属の既にある種の和名なら、同じ生き物を別の扱いで入れていることになるので入れない
+        # （本家のニホンウサギコウモリ P. sacrimontis と、それを亜種に含めたウサギコウモリ P. auritus など）
+        same = [a for a in x.get("aliases", []) if a in byja_all and byja_all[a]["sci"].split()[0] == x["sci"].split()[0]]
+        if same: log["land_alias_is_species"].append((x["ja"], x["sci"], same)); continue
         if x["sci"] in sp_sci or x["sci"] in bysci_main: log["land_exists"].append(x["ja"]); continue
         if old:
             # 綱が違う同名（鳥のクロサギと魚のクロサギ、チョウのヤマトシジミと貝のヤマトシジミなど）は両方入れる
