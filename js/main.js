@@ -56,16 +56,26 @@ async function copyShare() {
   catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
+// ゲキムズのデータ（約20,000種）は大きいので、ボタンに触れた時点や、前にゲキムズで遊んだ人には空いた時間に先に読んでおく
+let hardP = null;
+function prefetchHard() {
+  if (DATA.hard || hardP) return hardP;
+  return hardP = loadData("data-hard.json").then(d => DATA.hard = d, e => { hardP = null; throw e; });
+}
+// 一度組み立てた系統樹はモードごとに取っておき、切り替え直したときは組み立て直さない
+const BUILT = {};
 async function setLevel(lv) {
   if (lv === LEVEL || !DATA.normal) return;
   const bs = document.querySelectorAll(".level"), off = d => bs.forEach(b => b.disabled = d); off(true);
-  try { DATA[lv] ||= await loadData(LV_FILE[lv]); }
-  catch (e) { flash(`${LV_NAME[lv]}のデータを読み込めませんでした（${e.message}）`, true); off(false); return; }
+  try { DATA[lv] ||= await (lv === "hard" ? prefetchHard() : loadData(LV_FILE[lv])); }
+  catch (e) { flash(`${LV_NAME[lv] || "ふつうモード"}のデータを読み込めませんでした（${e.message}）`, true); off(false); return; }
   off(false);
   if (lv !== "normal") track("level-" + lv);  // 切り替える前に送る（切り替えた先の印が付かないように）
+  BUILT[LEVEL] = { D, N, SP, BUCKETS, BW, MAX };
   LEVEL = lv; store.set("dk-level", lv);
-  N = {}; SP = [];
-  build(DATA[lv]); applyLevel();
+  if (BUILT[lv]) ({ D, N, SP, BUCKETS, BW, MAX } = BUILT[lv]);
+  else { N = {}; SP = []; build(DATA[lv]); }
+  applyLevel();
   STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats")));
   G = null; ZK = null; ZKQ = ""; ZKHIT = null; $("#zkq").value = ""; renderZukan();
   setView(view === "about" || view === "howto" || view === "zukan" ? view : view === "free" ? "free" : "daily");
@@ -98,6 +108,8 @@ loadData().then(async data => {
   if (LV_FILE[want] && want !== "normal") try { DATA[want] = await loadData(LV_FILE[want]); LEVEL = want; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
   build(DATA[LEVEL]); wire(); applyLevel();
   $("#level").onclick = () => setLevel(HARD() ? "normal" : "hard");
+  $("#level").addEventListener("pointerdown", () => { if (!HARD()) prefetchHard()?.catch(() => {}); });
+  if (!HARD() && store.get("dk-hard-stats")) (window.requestIdleCallback || (f => setTimeout(f, 3000)))(() => prefetchHard()?.catch(() => {}));
   renderZukan();
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();

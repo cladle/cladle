@@ -23,7 +23,9 @@ const limit = () => G.gAt ? G.gAt + HUNT : MAX;
 
 // ---- 文字の正規化（カタカナ→ひらがな、全角半角、空白・中黒を除去）----
 function norm(s) {
-  return String(s).normalize("NFKC").toLowerCase()
+  s = String(s);
+  // ASCII とふつうのカタカナだけなら NFKC は何も変えないので省く（ゲキムズの2万種で起動が重くならないように）
+  return (/[^\u0020-\u007e\u30a1-\u30f6\u30fc\u30fb]/.test(s) ? s.normalize("NFKC") : s).toLowerCase()
     .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
     .replace(/[\s・･\-‐.]/g, "");
 }
@@ -62,5 +64,5 @@ function build(data) {
   BW = BUCKETS.map(B => sel.bucketWeight === "sqrt" ? Math.sqrt(B.reduce((a, x) => a + (x.st ?? x.ids.length), 0)) : 1);
 }
 function makeKeys(s) { s.keys = [[s.ja, "ja"], [s.sci, "sci"], ...(s.sciSynonyms || []).map(a => [a, "syn"]), ...s.aliases.map(a => [a, (s.subspeciesAliases || []).includes(a) ? "subsp" : "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
-function path(id) { const a = []; while (id) { a.unshift(id); id = N[id].parent; } return a; }
+function path(id) { const a = []; while (id) { a.push(id); id = N[id].parent; } return a.reverse(); }
 function lca(a, b) { const pa = new Set(path(a)); let x = b; while (!pa.has(x)) x = N[x].parent; return x; }
