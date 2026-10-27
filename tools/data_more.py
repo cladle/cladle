@@ -1888,4 +1888,4 @@ R("nihonusagikoumori", "chiroptera", "ニホンウサギコウモリ", "Plecotus
 for _id, _t in {"meerkat": 1, "mitsuobiarumajiro": 3, "erimakitokage": 1, "jacksonchameleon": 3, "okikurage": 3, "boa": 2, "darumawashi": 4, "ajiazou": 1, "yotsuyubiharinezumi": 2, "nishiindomanatee": 2, "fukuromomonga": 2, "musasabi": 1, "alpaca": 1, "americawashimimizuku": 3, "hashibirokou": 1, "minamiamericaottosei": 3, "kobitokaba": 2, "kotsumekawauso": 1, "chinanago": 1, "akameamagaeru": 2, "rurikongouinko": 2, "kongouinko": 2, "nihonusagikoumori": 3}.items():
     _find(_id)["tier"] = _t
 
-META["datasetVersion"] = "0.3.16"  # 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
+META["datasetVersion"] = "0.3.16.1"  # 0.3.16 のままだと10/29〜11/06に漏れ1日のため .1。 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
