@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.12",
+  "datasetVersion": "0.3.13",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
@@ -11679,6 +11679,16 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "深海の泥の上を、管足が変化した脚で歩くナマコ。背中に角のような突起がある。英語では sea pig（海のブタ）と呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "isokanidamashi",
+   "parent": "anomura",
+   "ja": "イソカニダマシ",
+   "sci": "Petrolisthes japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の石の下にふつうにいる、平たい小さなカニダマシ。カニに似ているが、ヤドカリやタラバガニと同じ異尾類で、長い触角をもち、歩く脚は3対しか見えない。",
    "tier": 3
   }
  ]
