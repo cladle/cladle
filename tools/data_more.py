@@ -1702,4 +1702,12 @@ for _id, _t in {"sunaisoginchaku": 4, "greenhydra": 3, "shirogaya": 4, "togarisa
                 "sukumiringogai": 2, "monhanashako": 2, "onimuchouuzumushi": 4, "kingghidorahsyllis": 3, "sappa": 3,
                 "totorokagimushi": 3}.items():
     _find(_id)["tier"] = _t
+# ウミクワガタ→研究の多い種としてソメワケウミクワガタ（雄の二型とハーレムの研究、Tanaka & Nishi 2011 Zool. Sci. 28: 587）。
+R("somewakeumikuwagata", "malacostraca", "ソメワケウミクワガタ", "Elaphognathia discolor", "ウミクワガタの仲間。幼生は魚の血を吸い、成体の雄はクワガタのような大あごをもって、巣穴に雌を集める。")
+_find("somewakeumikuwagata")["tier"] = 4
+# よく知られた呼び名を別名に（作者了承、2026-10-27）
+_find("gaikotsupandahoya")["aliases"] = ["パンダボヤ"]
+_find("udefuritsunozayaumiushi")["aliases"] = ["ピカチュウウミウシ"]
+_find("sukumiringogai")["aliases"] = ["ジャンボタニシ"]
+_find("hishikui")["verify"] = {"sci": "IOC 世界鳥類リストは亜種ヒシクイ（serrirostris）を別種 Anser serrirostris とし、オオヒシクイは A. fabalis に残す。ここでは日本鳥類目録改訂第8版に合わせた"}
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）
