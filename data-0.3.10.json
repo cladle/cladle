@@ -11309,6 +11309,19 @@
    "aliases": [],
    "fact": "針金のように細長い体の寄生虫。幼生は昆虫などの体内で育ち、成体になると水の中に出てくる。",
    "tier": 2
+  },
+  {
+   "id": "africaooyasude",
+   "parent": "diplopoda",
+   "ja": "アフリカオオヤスデ",
+   "sci": "Archispirostreptus gigas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ東部にすむ大型のヤスデ。ペットとして飼われる。",
+   "verify": {
+    "ja": "和名の出典は Wikidata のみ"
+   },
+   "tier": 3
   }
  ]
 }

@@ -1658,4 +1658,8 @@ _find("ooguchiboya")["tier"] = 3
 C("nematomorpha", "nematoida", "類線形動物門", "Nematomorpha", "門", "幼生は昆虫などに寄生し、成体は水中で暮らす。")
 R("harigane", "nematomorpha", "ハリガネムシ", "Gordius aquaticus", "針金のように細長い体の寄生虫。幼生は昆虫などの体内で育ち、成体になると水の中に出てくる。")
 _find("harigane")["tier"] = 2
+# 作者の指定（2026-10-27、「タンザニアオオヤスデ」→アフリカオオヤスデ）。照合 check/picks18/：学名は GBIF・CoL・WoRMS で一致、和名は Wikidata のみ。
+R("africaooyasude", "diplopoda", "アフリカオオヤスデ", "Archispirostreptus gigas", "アフリカ東部にすむ大型のヤスデ。ペットとして飼われる。",
+  v={"ja": "和名の出典は Wikidata のみ"})
+_find("africaooyasude")["tier"] = 3
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）
