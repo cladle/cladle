@@ -3,6 +3,7 @@
 // ---- ゲーム状態 ----
 let G = null, mode = "daily";
 function newGame(m, code) {
+  pause();
   const c = m === "shared" ? shareDecode(code) : null;
   if (m === "shared" && N[c?.t]?.kind !== "species") { newGame("free"); flash("この共有リンクの動物は、今のデータでは開けませんでした（リンクが途中で切れているか、収録種が変わった可能性があります）。", true); return; }
   if (m !== "shared" && G?.code && /^#(hard\/)?p=/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search + (HARD() ? "#hard" : ""));  // 共有された問題から離れたらリンクの印を消す
@@ -22,15 +23,35 @@ function newGame(m, code) {
   G.guesses = G.guesses.filter(id => N[id]); if (G.reveal && !N[G.reveal]) delete G.reveal;  // データから外れた種・節目
   if (!G.done && G.guesses.length >= limit()) { G.done = true; if (G.gAt) { G.won = true; G.exact = false; } }  // 上限を下げる前の記録
   lastEdges = null; openGrow = G.guesses.length > 0;  // 開いたときは今の木を根元から手早く伸ばす
-  G.fresh = null;
+  G.fresh = null; resume();
   if (m === "daily" && G.done && !STATS.days[G.day]) save();  // 成績を付ける前に解いた日の分
   render();
 }
+const SLOT = { daily: "dk-daily", free: "dk-free", shared: "dk-shared" };
 function save() {
-  store.set(KEY({ daily: "dk-daily", free: "dk-free", shared: "dk-shared" }[mode]), { ...G, fresh: null });
+  tick();
+  store.set(KEY(SLOT[mode]), { ...G, fresh: null });
   if (mode !== "daily") return;
-  if (G.done || G.gAt) STATS.days[G.day] = { w: G.won || G.gAt ? 1 : 0, n: G.gAt || G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.gAt && !G.exact ? { g: 1 } : {}), ...(G.gAt && G.exact ? { s: G.guesses.length - G.gAt } : {}) };
+  if (G.done || G.gAt) STATS.days[G.day] = { w: G.won || G.gAt ? 1 : 0, n: G.gAt || G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(G.ms != null && G.done ? { t: Math.round(G.ms / 1000) } : {}), ...(G.gAt && !G.exact ? { g: 1 } : {}), ...(G.gAt && G.exact ? { s: G.guesses.length - G.gAt } : {}) };
   saveStats();
+}
+// ---- かかった時間：最初の推測から、正解・降参・上限まで ----
+// 画面が見えている間だけ数える（別のタブ・アプリに移っている間は止める）。G.ms に足していくので、閉じて戻っても続きから
+// この仕組みより前に始めた回は G.ms が無いので測らない
+let runFrom = null;
+function tick() {
+  if (runFrom == null) return;
+  const now = performance.now();
+  G.ms = (G.ms || 0) + now - runFrom; runFrom = G.done ? null : now;
+}
+function resume() { runFrom = G && G.ms != null && G.guesses.length && !G.done && !document.hidden ? performance.now() : null; }
+// 別の問題・難易度へ移る前に、それまでの分を保存する（「別の問題にする」で消した回は保存し直さない）
+function pause() { if (runFrom != null && G && store.get(KEY(SLOT[mode]))) save(); runFrom = null; }
+document.addEventListener("visibilitychange", () => document.hidden ? pause() : resume());
+addEventListener("pagehide", pause);
+function timeText(ms) {
+  const s = Math.round(ms / 1000), h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60;
+  return h ? `${h}時間${m}分` : m ? `${m}分${s % 60}秒` : `${s}秒`;
 }
 // ---- 成績（今日の動物だけ数える）----
 // このブラウザに保存する（別の端末とは共有されない）
@@ -82,7 +103,7 @@ function guess(id) {
   if (G.done || G.guesses.includes(id)) return;
   const before = deepest();
   G.guesses.push(id);
-  if (G.guesses.length === 1) track(mode + "-start");
+  if (G.guesses.length === 1) { track(mode + "-start"); G.ms = 0; runFrom = performance.now(); }
   const L = lca(id, G.target);
   growId = id;
   if (id === G.target) { G.done = G.won = true; G.exact = true; celebrate = true; $("#flash").hidden = true; }

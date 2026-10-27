@@ -58,7 +58,7 @@ async function setLevel(lv) {
   const b = $("#level"); b.disabled = true;
   try { DATA[lv] ||= await loadData(lv === "hard" ? "data-hard.json" : "data.json"); }
   catch (e) { flash(`ゲキムズのデータを読み込めませんでした（${e.message}）`, true); b.disabled = false; return; }
-  b.disabled = false;
+  b.disabled = false; pause();
   if (lv === "hard") track("level-hard");  // 切り替える前に送る（ゲキムズの印が付かないように）
   LEVEL = lv; store.set("dk-level", lv);
   N = {}; SP = [];
