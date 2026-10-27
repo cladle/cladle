@@ -227,14 +227,14 @@ function resultHTML() {
   const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
-    <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
-    ${mode === "daily" ? "" : `<p class="hint">共有したリンクから、相手も同じ動物で遊べます。</p>`}
-    <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
     ${namesHTML(t)}
     ${t.fact ? `<p class="fact">${esc(t.fact)}</p>` : ""}
     <div class="lookup">調べる：${lookupLinks(t)}</div>
+    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
+    <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
+    ${mode === "daily" ? "" : `<p class="hint">共有したリンクから、相手も同じ動物で遊べます。</p>`}
+    <pre class="share" id="shareText">${esc(shareText())}</pre>
     <div class="fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
     ${kinHTML(t)}
     <div class="row"><button class="btn ghost" id="toZukan">図鑑でこの動物を見る</button>
