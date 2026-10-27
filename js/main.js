@@ -6,7 +6,7 @@ function setView(v) {
   view = v;
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
   $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto";
-  demoStop(); $(".demo").hidden = HARD(); if (v === "howto" && !HARD()) demoPlay();
+  demoStop(); $(".demo").hidden = BIG(); if (v === "howto" && !BIG()) demoPlay();
   if (v === "daily" || v === "free") { if (mode !== v || !G) newGame(v); }
   window.scrollTo(0, 0);
 }
@@ -55,11 +55,11 @@ async function copyShare() {
 
 async function setLevel(lv) {
   if (lv === LEVEL || !DATA.normal) return;
-  const b = $("#level"); b.disabled = true;
-  try { DATA[lv] ||= await loadData(lv === "hard" ? "data-hard.json" : "data.json"); }
-  catch (e) { flash(`ゲキムズのデータを読み込めませんでした（${e.message}）`, true); b.disabled = false; return; }
-  b.disabled = false;
-  if (lv === "hard") track("level-hard");  // 切り替える前に送る（ゲキムズの印が付かないように）
+  const bs = document.querySelectorAll(".level"), off = d => bs.forEach(b => b.disabled = d); off(true);
+  try { DATA[lv] ||= await loadData(LV_FILE[lv]); }
+  catch (e) { flash(`${LV_NAME[lv]}のデータを読み込めませんでした（${e.message}）`, true); off(false); return; }
+  off(false);
+  if (lv !== "normal") track("level-" + lv);  // 切り替える前に送る（切り替えた先の印が付かないように）
   LEVEL = lv; store.set("dk-level", lv);
   N = {}; SP = [];
   build(DATA[lv]); applyLevel();
@@ -69,10 +69,11 @@ async function setLevel(lv) {
 }
 function applyLevel() {
   const h = HARD();
-  $("#level").setAttribute("aria-pressed", h);
+  $("#level").setAttribute("aria-pressed", h); $("#levelFish").setAttribute("aria-pressed", FISH());
   document.documentElement.classList.toggle("hard", h);
-  $("#levelNote").hidden = !h;
+  $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
+  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：日本の魚 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
@@ -90,20 +91,21 @@ async function loadData(f = "data.json") {
 }
 loadData().then(async data => {
   DATA.normal = data;
-  const want = /^#?hard/.test(location.hash) ? "hard" : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
-  if (want === "hard") try { DATA.hard = await loadData("data-hard.json"); LEVEL = "hard"; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
+  const m = location.hash.match(/^#?(hard|fish)/), want = m ? m[1] : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
+  if (LV_FILE[want] && want !== "normal") try { DATA[want] = await loadData(LV_FILE[want]); LEVEL = want; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
   build(DATA[LEVEL]); wire(); applyLevel();
   $("#level").onclick = () => setLevel(HARD() ? "normal" : "hard");
+  $("#levelFish").onclick = () => setLevel(FISH() ? "normal" : "fish");
   renderZukan();
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
   $("#demoPrev").onclick = () => { demoStop(); demoShow(demoI - 1, false); };
   $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
   $("#demoReplay").onclick = demoPlay;
-  const h = location.hash.slice(1).replace(/^hard\/?/, "");
+  const h = location.hash.slice(1).replace(/^(hard|fish)\/?/, "");
   if (h.startsWith("p=")) openShared(h.slice(2));
   else setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
-  addEventListener("hashchange", () => { const m = location.hash.match(/^#(hard\/)?p=(.+)$/); if (m && !!m[1] === HARD()) openShared(m[2]); });
+  addEventListener("hashchange", () => { const m = location.hash.match(/^#(?:(hard|fish)\/)?p=(.+)$/); if (m && (m[1] || "normal") === LEVEL) openShared(m[2]); });
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });

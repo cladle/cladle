@@ -11,7 +11,7 @@ function shareDecode(c) {
 function playLine() {
   if (mode === "daily") return "";
   const c = shareEncode({ t: G.target, w: G.won ? 1 : 0, n: G.won ? clearN() : G.guesses.length, h: (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0), ...(HARD() && exactWin() ? { x: G.gAt ? G.guesses.length - G.gAt : 0 } : {}), ...(G.gaveUp ? { g: 1 } : {}) });
-  return `\nこの動物で遊ぶ → https://cladle.github.io/cladle/?from=share#${HARD() ? "hard/" : ""}p=${c}`;
+  return `\nこの動物で遊ぶ → https://cladle.github.io/cladle/?from=share#${BIG() ? LEVEL + "/" : ""}p=${c}`;
 }
 function sharedFrom(c) {
   if (!c.w) return c.g ? "降参" : "当てられず";

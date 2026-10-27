@@ -23,14 +23,14 @@ function hintsHTML() {
     out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
   else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
-  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : HARD() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
+  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : BIG() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
   else if (n >= HINT2) out.push(`<button class="btn ghost hintbtn" data-hint="2">💡 ヒント2</button>`);
   return out.join("");
 }
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
 
 function render() {
-  $("#modeLabel").textContent = (HARD() ? "ゲキムズ " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : mode === "shared" ? "共有された問題" : "フリープレイ");
+  $("#modeLabel").textContent = (BIG() ? LV_NAME[LEVEL] + " " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : mode === "shared" ? "共有された問題" : "フリープレイ");
   const hunt = G.gAt && !G.done, base = hunt ? G.gAt : 0;
   $("#leftLabel").textContent = hunt ? "種探し 残り" : "残り";
   $("#left").textContent = hunt ? limit() - G.guesses.length : MAX - Math.min(G.guesses.length, MAX);
@@ -273,9 +273,9 @@ function shareText() {
     const r = N[lca(g, G.target)].depth / (td - 1);
     return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
   });
-  const title = (HARD() ? "Cladle ゲキムズ" : "Cladle") + (mode === "daily" ? ` #${dailyNo(G.day)}` : mode === "shared" ? "（共有された問題）" : "（フリー）");
+  const title = "Cladle" + (BIG() ? " " + LV_NAME[LEVEL] : "") + (mode === "daily" ? ` #${dailyNo(G.day)}` : mode === "shared" ? "（共有された問題）" : "（フリー）");
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (HARD() ? "#hard" : "") : ""}${playLine()}`;
+  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (BIG() ? "#" + LEVEL : "") : ""}${playLine()}`;
 }

@@ -26,8 +26,23 @@ ${k.land ? `<li>陸の昆虫・貝・鳥・哺乳類の対象種：環境省自�
     <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
     <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>`;
 }
+function fishAboutHTML() {
+  const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+  return `  <section><h2>魚編について</h2><ul>
+    <li>試作版です。ゲキムズモードのデータから、脊椎動物のうち四肢動物を除いた ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは日本産魚類全種目録で標準和名のある日本の魚で、ふつうモードのシーラカンスなども含みます。</li>
+    <li>系統は、目より上を魚類の分子系統の論文に、目・科を日本産魚類全種目録（Catalog of Fishes の体系）に従っています。側系統群は節目にしていません。</li>
+    <li>和名のない属は学名で表示しています。</li>
+    <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
+  <section><h2>出典</h2><ul>
+    <li>本村浩之．2026．日本産魚類全種目録．これまでに記録された日本産魚類全種の現在の標準和名と学名．Online ver. 42（2026-08-27）．${a("https://www.museum.kagoshima-u.ac.jp/staff/motomura/jaf.html", "鹿児島大学総合研究博物館")}</li>
+    <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
+    <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>
+  <section><h2>ライセンス・注記</h2><ul>
+    <li>成績はこの端末のブラウザにだけ保存され、送信されません。ふつうモード・ゲキムズとは別に記録します。</li></ul></section>`;
+}
 function aboutHTML() {
   if (HARD()) return hardAboutHTML();
+  if (FISH()) return fishAboutHTML();
   const nv = SP.filter(s => s.verify).length;
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>このゲームについて</h2><ul>
