@@ -393,6 +393,18 @@ if fixesf:
             s["verify"] = dict(s.get("verify", {}), **{k: r["verify_text"]})
         log["fixes"].append([a, r["sci"], r["new"]])
 
+# ---- 4d. 知名度の上書き（tools/hard/hard_tiers.tsv：sci・ja・tier。一覧ページで作者が変えた案を表にしたもの）----
+# 本家にもいる種は本家の data_more.py で変えるので、ここではゲキムズだけの種に使う。和名が違う行は使わない
+_ht = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hard_tiers.tsv")
+if os.path.exists(_ht):
+    import csv
+    bysci_sp = {s["sci"]: s for s in SP}
+    log["hard_tiers"] = []
+    for r in csv.DictReader(open(_ht, encoding="utf-8"), delimiter="\t"):
+        s = bysci_sp.get(r["sci"])
+        if not s or s["ja"] != r["ja"] or r["tier"] not in ("1", "2", "3", "4"): log["hard_tiers"].append(["skip", r["sci"], r["ja"], r["tier"]]); continue
+        s["tier"] = int(r["tier"]); log["hard_tiers"].append(["set", r["sci"], r["tier"]])
+
 # ---- 5. 片付け ----
 has = set()
 for s in SP:
