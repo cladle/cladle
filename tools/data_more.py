@@ -519,7 +519,7 @@ META["status"] = ("学名と和名を GBIF・Catalogue of Life・WoRMS・Wikidat
 
 # ---------------- 少ない群への追加（2026-10-22） ----------------
 # 綱・目などの節目で収録が4種以下だと、そこまで絞れた後に総当たりで当たってしまうので候補を増やす。
-# shun の判断で、これらも出題対象にする（推測専用にすると「正解にならない」と覚えられるため）。
+# 作者の判断で、これらも出題対象にする（推測専用にすると「正解にならない」と覚えられるため）。
 # 図鑑や水族館で見かける程度の種を選ぶ。グループ名は aliases に入れない。
 R = S
 
@@ -708,7 +708,7 @@ META["status"] = "試作版。鳥類・哺乳類・爬虫両生類・昆虫な�
 META["licenseNotes"] = "外部の情報源のデータは丸ごと同梱していない（名前は照合結果を個別に記載）。"
 
 # ---------------- メジャーな動物の追加（2026-10-23） ----------------
-# shun「もっとメジャーな生物を」「節足動物・魚類は綱（目）が多い分増やす」。候補は check/major/candidates.md。
+# 作者「もっとメジャーな生物を」「節足動物・魚類は綱（目）が多い分増やす」。候補は check/major/candidates.md。
 # 魚の和名・学名と目は本村（2026）日本産魚類全種目録 ver. 42 に合わせた（スズキはペルカ目ではなくホタルジャコ目、など）。
 M = S
 
@@ -925,7 +925,7 @@ M("ooshakogai", "bivalvia", "オオシャコガイ", "Tridacna gigas", "最大�
 M("hadakakamegai", "heterobranchia", "ハダカカメガイ", "Clione limacina", "殻のない浮遊性の巻貝。クリオネの名で知られる。", ["クリオネ"], v={"sci": "北太平洋のものを別種・別亜種とする見解がある", "ja": "C. limacina の和名は GBIF・Wikidata・iNat ではダイオウハダカカメガイ。日本のハダカカメガイを C. okhotensis とする見解がある"})
 M("africamaimai", "heterobranchia", "アフリカマイマイ", "Lissachatina fulica", "世界最大級の陸貝。南西諸島などで外来種。広東住血線虫を運ぶ。", ["Achatina fulica"])
 
-# ---------------- 知名度の段階（tier、2026-10-23 shun了承） ----------------
+# ---------------- 知名度の段階（tier、2026-10-23 作者了承） ----------------
 # tier 1 = よく知られている（省略時）、tier 2 = 図鑑レベル。今日の動物は tier 2 を少しだけ出にくくする。
 # 推測・補完は全種で使う。判断は手作業（学名の音写しかない種は tier 2）。
 TIER2 = set("""
@@ -956,7 +956,7 @@ for _s in species:
         _s["tier"] = 2
 assert TIER2 <= {_s["id"] for _s in species}, TIER2 - {_s["id"] for _s in species}
 
-# ---------------- 知名度を4段階に（2026-10-23 shun「もうちょっと細かく」） ----------------
+# ---------------- 知名度を4段階に（2026-10-23 作者「もうちょっと細かく」） ----------------
 # 1 = だれでも知っている／2 = よく知られている（水族館・動物園・食卓の定番など）
 # 3 = 図鑑レベル／4 = 専門的（和名が学名表記・微小動物・寄生虫の多くなど）
 # 既定は上の TIER2 に入っていれば 3、それ以外は 2。下の2つのリストで 1 と 4 に上書きする。
@@ -995,13 +995,13 @@ for _s in species:
     if _s["id"] in TIER4 or _s.get("jaStatus") == "provisional": _t = 4
     _s["tier"] = _t
 
-# 出題の重み（ページ側が読む）。shun の A/B/C 回答が出たら bucketWeight と tierWeights をここで変える。
+# 出題の重み（ページ側が読む）。作者の A/B/C 回答が出たら bucketWeight と tierWeights をここで変える。
 META["selection"]["tierWeights"] = {"1": 1, "2": 0.9, "3": 0.8, "4": 0.7}
-META["selection"]["bucketWeight"] = "sqrt"  # 2026-10-23 shun 案B
+META["selection"]["bucketWeight"] = "sqrt"  # 2026-10-23 作者案B
 
-# 和名の無い種は入れない（2026-10-23 shun）。種の和名が無い仮名13種を外し、種が無くなった節目も外す。
+# 和名の無い種は入れない（2026-10-23 作者）。種の和名が無い仮名13種を外し、種が無くなった節目も外す。
 # 動吻・腹毛・二胚は和名のある種で戻した（CoL 経由の BISMaL と原記載論文、check/bismal_col/summary.md）。
-# shun「コガネトゲカワでいいかも」（2026-10-23）。和名は BISMaL（CoL 3LR 経由）。原記載 Adrianov, Murakami & Shirayama (2002) Species Diversity 7: 47–66
+# 作者「コガネトゲカワでいいかも」（2026-10-23）。和名は BISMaL（CoL 3LR 経由）。原記載 Adrianov, Murakami & Shirayama (2002) Species Diversity 7: 47–66
 edit("echinoderes", ja="コガネトゲカワ", sci="Echinoderes aureus", jaStatus="standard", aliases=["トゲカワ"],
      fact="和歌山県の田辺湾から2002年に新種として記載されたトゲカワ。動吻動物は英語で mud dragon（マッドドラゴン）と呼ばれる。")
 _find("echinoderes").pop("verify", None)
@@ -1043,13 +1043,13 @@ edit("namekujiuo", ja="ヒガシナメクジウオ", aliases=["ナメクジウ�
 edit("hadakakamegai", sci="Clione elegantissima", verify=None)          # 北太平洋のハダカカメガイは C. limacina（ダイオウハダカカメガイ）と別種（Yamazaki & Kuwahara 2017）
 _find("hadakakamegai").pop("verify", None)
 
-# 和名の別名を併記（2026-10-23 shun「キヒトデとマヒトデみたいに併記」）。BISMaL(CoL)・CoL にある同じ種の別の和名。check/bismal_col/summary.md
+# 和名の別名を併記（2026-10-23 作者「キヒトデとマヒトデみたいに併記」）。BISMaL(CoL)・CoL にある同じ種の別の和名。check/bismal_col/summary.md
 _find("akoyagai")["aliases"] += ["ベニコチョウガイ"]   # BISMaL・CoL・GBIF は P. fucata をベニコチョウガイ、日本のアコヤガイは亜種 P. f. martensii とする扱い
 _find("isazaami")["aliases"] += ["クロイサザアミ"]
 _find("manamako")["aliases"] += ["アカナマコ"]           # 体色の型の名前としても使われる
 _find("sangoisoginchaku")["aliases"] += ["ウスカワイソギンチャク", "タマイタダキイソギンチャク"]
 
-# 旧学名（2026-10-23 shun「主な旧名だけ」）。同じ種で名前だけ変わったものに限る。別種と取り違えていた名前は入れない。
+# 旧学名（2026-10-23 作者「主な旧名だけ」）。同じ種で名前だけ変わったものに限る。別種と取り違えていた名前は入れない。
 # 候補と除外の理由は check/synonyms/candidates.md。表示と入力はゲーム側。
 SCI_SYN = {
     "mikadochozame": ["Acipenser medirostris", "Acipenser mikadoi"],
@@ -1083,11 +1083,11 @@ for s in species:
 for _n in ["ベニコチョウガイ", "クロイサザアミ", "アカナマコ", "ウスカワイソギンチャク", "タマイタダキイソギンチャク", "マヒトデ"]:
     assert len(_names[_n]) == 1, ("別名の重複", _n, _names[_n])
 
-# 2026-10-23 shun 了承：出題の並びを入れ替えるため版を上げる（ページ担当の依頼）
+# 2026-10-23 作者了承：出題の並びを入れ替えるため版を上げる（ページ担当の依頼）
 META["datasetVersion"] = "0.3.2.1"  # 0.3.2.1（633種）=10/25〜（ネタバレ回避で版名を変更、0.3.1 は不使用）。文（fact/desc）だけの修正は版を上げずページ担当が各data*.jsonに直接差し替える。種・節目・tier・重みを変えるときだけ 0.3.3 以降に上げる
 
-# ---------------- shun が入れたい種（2026-10-23〜） ----------------
-# 照合は check/shun_picks/（学名 GBIF・CoL・WoRMS、和名 BISMaL(CoL)・GBIF・Wikidata・iNat）。
+# ---------------- 作者が入れたい種（2026-10-23〜） ----------------
+# 照合は check/picks/（学名 GBIF・CoL・WoRMS、和名 BISMaL(CoL)・GBIF・Wikidata・iNat）。
 C("polycladida", "platyhelminthes", "多岐腸目", "Polycladida", "目",
   "海にすむ大型の渦虫類（ヒラムシ）。腸が体の中央から多数に枝分かれする。")
 move("polycladida", "tsunohiramushi")
@@ -1104,7 +1104,7 @@ S("jindouika", "loliginidae", "ジンドウイカ", "Loliolus japonica",
   "内湾にすむ小型のヤリイカの仲間。胴の長さは10cmほど。")
 for _id, _t in {"kaiyadorihiramushi": 4, "usuhiramushi": 4, "isoawamochi": 3, "jindouika": 3}.items():
     _find(_id)["tier"] = _t
-# shun「アワモチとジンドウイカ系は和名わかるやつ全部」。和名が2つ以上の情報源で確かめられた種だけ（check/shun_picks2/）。
+# 作者「アワモチとジンドウイカ系は和名わかるやつ全部」。和名が2つ以上の情報源で確かめられた種だけ（check/picks2/）。
 # センベイアワモチ・ゴマセンベイアワモチ・チゴイソアワモチは iNat だけで、学名との対応を確かめられず見送り。
 # ボウズジンドウイカ・アジアボウズジンドウイカは iNat と全国いか加工業協同組合のイカ図鑑で確認。
 C("onchidiidae", "heterobranchia", "アワモチ科", "Onchidiidae", "科",
@@ -1124,7 +1124,7 @@ for _id in ["doroawamochi", "yabegawamochi", "himeawamochi", "beika", "himejindo
     _find(_id)["tier"] = 4
 META["status"] += "説明文（一言説明）は出典を個別に確かめたものではなく、誤りを含む可能性がある。"
 
-# ---------------- 鳥・昆虫・魚の目を埋める（2026-10-23 shun「一目に最低1〜2種」） ----------------
+# ---------------- 鳥・昆虫・魚の目を埋める（2026-10-23 作者「一目に最低1〜2種」） ----------------
 # 鳥は日本鳥類目録改訂第8版の目、魚は本村（2026）日本産魚類全種目録 ver. 42 の目、昆虫は日本産の目を基準に、欠けていた目へ1〜2種を足した。
 # 名前は鳥=鳥類目録、魚=本村目録、それ以外=check/orders/ の照合。目の節目は2種以上になるときだけ作る（1種だけの目は上の節目に直接つける）。
 # 見送り：ガー目（本村目録で和名が括弧付きの外来種のみ）、カカトアルキ目（種の和名が無い）。
@@ -1174,7 +1174,7 @@ O("shiroarimodoki", "polyneoptera", "シロアリモドキ", "Oligotoma saunders
 O("caudelljuzuhige", "polyneoptera", "コーデルジュズヒゲムシ", "Spiralizoros caudelli", "数珠のような触角をもつ小さな昆虫。朽ち木の中で集団で暮らす。",
   v={"ja": "和名は日本の研究発表（筑波大学）での使用例のみで確認"})
 _find("caudelljuzuhige")["sciSynonyms"] = ["Zorotypus caudelli"]
-# 棘皮（shun 指定）
+# 棘皮（作者の指定）
 O("bunbukuchagama", "echinoidea", "ブンブクチャガマ", "Schizaster lacunosus", "砂の中にもぐってすむ、心臓のような形のウニ。")
 # 魚（名前・目は本村目録 ver. 42）
 C("elopomorpha", "teleostei", "カライワシ上目", "Elopomorpha", "上目", "カライワシ・ソトイワシ・ソコギス・ウナギなど。幼生が平たく透明なレプトセファルスになる。")
@@ -1247,7 +1247,7 @@ for _t, _ids in _T.items():
     for _id in _ids.split():
         _find(_id)["tier"] = _t
 
-# ---------------- 環形動物（特に多毛類）を増やす（2026-10-23 shun「環形動物少なすぎ、特に多毛類」） ----------------
+# ---------------- 環形動物（特に多毛類）を増やす（2026-10-23 作者「環形動物少なすぎ、特に多毛類」） ----------------
 # 照合は check/annelida/・check/annelida2/（和名は BISMaL(CoL) 優先）。
 C("phyllodocida", "errantia", "サシバゴカイ目", "Phyllodocida", "目", "ゴカイ・チロリ・ウロコムシなど。よく動き回る多毛類。")
 C("nereididae", "phyllodocida", "ゴカイ科", "Nereididae", "科", "釣り餌でおなじみのゴカイ類。")
@@ -1279,7 +1279,7 @@ for _t, _ids in {3: "isogokai aogokai chirori oniisome ibarakanzashi",
     for _id in _ids.split():
         _find(_id)["tier"] = _t
 
-# shun 指定（2026-10-24）
+# 作者の指定（2026-10-24）
 C("psittaciformes", "australaves", "インコ目", "Psittaciformes", "目", "インコ・オウム類。足の指が前後2本ずつに分かれる。")
 move("psittaciformes", "sekiseiinko")
 O("kakapo", "psittaciformes", "カカポ", "Strigops habroptilus", "ニュージーランドにすむ飛べないインコ。夜行性で、世界で最も重いインコ。",
@@ -1313,17 +1313,17 @@ O("aburabote", "acheilognathidae", "アブラボテ", "Tanakia limbata", "体が
 for _id, _t in {"torafukarappa": 3, "meganekarappa": 4, "tanago": 3, "itasenpara": 3, "miyakotanago": 3,
                 "ichimonjitanago": 4, "ootanago": 4, "kanehira": 4, "zenitanago": 4, "yaritanago": 4, "aburabote": 4}.items():
     _find(_id)["tier"] = _t
-# shun「ニッポンバラタナゴとタイリクバラタナゴを同種と扱うのはまずい」（2026-10-24）→ 亜種を別々の項目として入れる（例外）。
+# 作者「ニッポンバラタナゴとタイリクバラタナゴを同種と扱うのはまずい」（2026-10-24）→ 亜種を別々の項目として入れる（例外）。
 O("nipponbaratanago", "acheilognathidae", "ニッポンバラタナゴ", "Rhodeus ocellatus kurumeus",
   "西日本の在来の亜種。外来のタイリクバラタナゴとの交雑で純粋な集団が減っている。")
 O("tairikubaratanago", "acheilognathidae", "タイリクバラタナゴ", "Rhodeus ocellatus ocellatus",
   "大陸から入った外来の亜種。在来のニッポンバラタナゴと交雑する。")
 _find("nipponbaratanago")["tier"] = 3
 _find("tairikubaratanago")["tier"] = 3
-# 亜種の扱いは保留（2026-10-24 shun「もっと深掘って議論するべき、別名で拾うのも危うい。一旦保留」）。バラタナゴの2亜種はいったん外す。
+# 亜種の扱いは保留（2026-10-24 作者「もっと深掘って議論するべき、別名で拾うのも危うい。一旦保留」）。バラタナゴの2亜種はいったん外す。
 species[:] = [s for s in species if s["id"] not in ("nipponbaratanago", "tairikubaratanago")]
 _find("inu")["verify"] = {"sci": "オオカミの亜種 Canis lupus familiaris とする扱いもある"}
-# 亜種名の別名（2026-10-24 shun決定「亜種と明示して種で推測」）。aliases のうち亜種の和名を subspeciesAliases にも書き、
+# 亜種名の別名（2026-10-24 作者の決定「亜種と明示して種で推測」）。aliases のうち亜種の和名を subspeciesAliases にも書き、
 # 補完候補で「〜（…の亜種）」と表示する。aliases には残すので、古いページでも今までどおり打てる。
 # キシャヤスデ／オビババヤスデはどちらが種かの扱いを議論中のため入れない。
 SUBSP_ALIASES = {
@@ -1350,7 +1350,7 @@ edit("ikaritogeobimushi", fact="海岸の砂粒のすき間にすむ腹毛動物
 edit("minamimedaka", fact="日本のメダカは2種に分けられ、本種は本州の日本海側北部（キタノメダカの分布域）を除く本州から琉球列島にかけて分布する。")
 edit("kitanomedaka", fact="本州の日本海側（青森県から兵庫県）に分布するメダカ。ミナミメダカとは別種として記載された。")
 edit("hayabusa", fact="急降下では時速300 kmを超えるともいわれる。タカに似るが、オウムやスズメに近い。")
-# 種の範囲（種か亜種か）は分類群ごとに更新されている世界の種リストに従う（2026-10-24 shun「最新の学説を参照したい」）。
+# 種の範囲（種か亜種か）は分類群ごとに更新されている世界の種リストに従う（2026-10-24 作者「最新の学説を参照したい」）。
 # 哺乳類 MDD 2.1、鳥 IOC World Bird List 15.2、爬虫類 Reptile Database 2026-06（いずれも ChecklistBank 経由）、魚は本村目録、海産は WoRMS。
 # 2026-10-24 照合（check/latest/summary.md）：四肢動物171種のうち食い違いはシジュウカラだけ。
 _s = _find("shijuukara")
@@ -1382,7 +1382,7 @@ edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠
 edit("takaashigani", fact="脚を広げると3 m以上になり、脚を広げた幅では世界最大のカニ。")
 edit("higashikirigirisu", fact="日本のキリギリスを東西2種に分ける扱いでの、東日本の種。同じ種とする見方もある。")
 
-# ---------------- ハゼ目を増やす（2026-10-24 shun 了承、0.3.3 として 10/26〜） ----------------
+# ---------------- ハゼ目を増やす（2026-10-24 作者了承、0.3.3 として 10/26〜） ----------------
 # 和名・学名・科は本村浩之（2026）日本産魚類全種目録 ver.42 で照合（8種とも一致）。
 # 目録ではマハゼ・ムツゴロウなどはオクスデルクス科、ダテハゼはハゼ科。ハゼ科はダテハゼ1種なので節目を作らない。
 C("oxudercidae", "gobiiformes", "オクスデルクス科", "Oxudercidae", "科",
@@ -1402,25 +1402,25 @@ for _id, _t in {"tobihaze": 2, "warasubo": 3, "chichibu": 3, "shirouo": 3, "ukig
     _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.3"  # 10/26〜（ハゼ8種）
 
-# C. elegans の表示名（2026-10-24 shun決定）：標準和名がないので、日本語の文献で使われる表記にする
+# C. elegans の表示名（2026-10-24 作者の決定）：標準和名がないので、日本語の文献で使われる表記にする
 edit("celegans", ja="C. エレガンス", aliases=["シー・エレガンス", "エレガンス", "線虫"],
      verify={"ja": "標準和名はない。日本語の文献で使われる表記「C. エレガンス」で示す"})
 
-# アメリカンロブスター → 標準和名アメリカウミザリガニ（2026-10-24 shun了承。徳島県水産研究所の報告に「標準和名；アメリカウミザリガニ」）
+# アメリカンロブスター → 標準和名アメリカウミザリガニ（2026-10-24 作者了承。徳島県水産研究所の報告に「標準和名；アメリカウミザリガニ」）
 edit("lobster", ja="アメリカウミザリガニ", jaStatus="standard", aliases=["アメリカンロブスター", "オマールエビ", "ロブスター"],
      fact="北米大西洋岸の大型のエビ。アメリカンロブスターとも呼ばれ、オマールエビの名で売られる。")
 
-# ---------------- 通称（2026-10-24 shun「許可できるのはサナダムシとプラナリアと魚介類だけ」） ----------------
+# ---------------- 通称（2026-10-24 作者「許可できるのはサナダムシとプラナリアと魚介類だけ」） ----------------
 # 打っても今の名前に含まれず候補に出ないものだけ足す。プラナリア（ナミウズムシ）は build_data.py の GROUP_ALIASES から外して aliases に残した。
 for _id in ("mukoujouchu", "yuukoujouchu"):
     _find(_id)["aliases"].append("サナダムシ")
-# 通称で当てる種は、一言説明でも通称との関係を書く（2026-10-24 shun）
+# 通称で当てる種は、一言説明でも通称との関係を書く（2026-10-24 作者）
 edit("namiuzumushi", fact="体を切っても各断片から全身が再生する。「プラナリア」の名で実験に使われる代表的な種。プラナリアはもともとウズムシの仲間を広く指す呼び名。")
 edit("nihonkairettojouchu", fact="サクラマスなどの生食で感染し、数mに達する。「サナダムシ」は条虫の仲間をまとめて呼ぶ俗称。")
 edit("mukoujouchu", fact="牛肉の生食で感染する。「サナダムシ」と呼ばれる条虫の一種。")
 edit("yuukoujouchu", fact="豚肉の生食で感染する。頭部に鉤をもつ。「サナダムシ」と呼ばれる条虫の一種。")
 
-# 学術的に大事な種の一言説明（2026-10-24 shun了承、出典は check/facts/notable_species.md）
+# 学術的に大事な種の一言説明（2026-10-24 作者了承、出典は check/facts/notable_species.md）
 edit("senmohirahamushi", fact="体の構造が動物の中でも最も単純な部類。2008年に板状動物で初めてゲノムが読まれ、多くの発生関連遺伝子をもつことが分かった。")
 edit("celegans", fact="全細胞の系譜が分かっているモデル生物。1998年に、多細胞生物で初めてゲノムのほぼ全体が読まれた。この線虫を使った研究に2002年のノーベル生理学・医学賞が贈られた。")
 edit("drosophila", fact="遺伝学の代表的なモデル生物。このハエで遺伝子が染色体にのっていることを示したモーガンは1933年にノーベル賞を受けた。2000年に昆虫で初めてゲノムの大部分が読まれた。")
@@ -1447,7 +1447,7 @@ edit("nankyokuokiami", fact="南極の生態系を支える。1種あたりの�
 edit("umihotaru", fact="貝形虫の一種。発光物質を海中に吐き出して青く光る。この発光物質（ルシフェリン）は1956年に下村脩が結晶化し、のちのGFPの発見（2008年ノーベル化学賞）につながった。")
 edit("seiyomitsubachi", fact="8の字ダンスで蜜源の方向と距離を伝える。このダンスを解き明かしたフリッシュは1973年にノーベル生理学・医学賞を受けた。")
 
-# ---------------- カメムシ目と水生昆虫を増やす（2026-10-25 shun「カメムシ増やす、ミズカマキリとかの有名水生昆虫増やす」） ----------------
+# ---------------- カメムシ目と水生昆虫を増やす（2026-10-25 作者「カメムシ増やす、ミズカマキリとかの有名水生昆虫増やす」） ----------------
 # 照合は check/hemiptera_aquatic/（和名は15種とも CoL・GBIF・Wikidata・iNat で一致。学名は3種が GBIF のみ応答）。
 C("heteroptera", "hemiptera", "カメムシ亜目", "Heteroptera", "亜目", "前翅の付け根側が硬くなったカメムシ類。異翅亜目とも。アメンボ・タガメ・サシガメなど。")
 move("heteroptera", "amenbo", "tagame", "kusagikamemushi", "tokojirami")
@@ -1482,8 +1482,8 @@ for _id, _t in {"mizukamakiri": 2, "taikouchi": 3, "kooimushi": 3, "matsumomushi
     _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.4.1"  # (上書きあり) カメムシ目・水生昆虫15種。10/26〜（ネタバレ回避で版名変更、0.3.3 は不使用）
 
-# ---------------- shun 指定（2026-10-25）：鳥 ----------------
-# 照合は check/shun_picks7/・check/shun_picks8/（学名・和名とも一致）。
+# ---------------- 作者の指定（2026-10-25）：鳥 ----------------
+# 照合は check/picks7/・check/picks8/（学名・和名とも一致）。
 C("muscicapidae", "passeriformes", "ヒタキ科", "Muscicapidae", "科", "ヒタキ・ツグミの仲間に近い小鳥。ジョウビタキ・キビタキ・オオルリなど。")
 O("joubitaki", "muscicapidae", "ジョウビタキ", "Phoenicurus auroreus", "冬に大陸から渡ってくる。雄は胸がオレンジ色で、翼に白い斑がある。日本で繁殖する例も見つかっている。")
 O("kibitaki", "muscicapidae", "キビタキ", "Ficedula narcissina", "夏に林で繁殖する。雄は眉と腰が黄色く、のどが橙色。")
@@ -1491,12 +1491,12 @@ O("mozu", "passeriformes", "モズ", "Lanius bucephalus", "捕らえた虫やカ
 for _id, _t in {"joubitaki": 2, "kibitaki": 3, "mozu": 2}.items():
     _find(_id)["tier"] = _t
 O("yairochou", "passeriformes", "ヤイロチョウ", "Pitta nympha", "夏に渡ってきて、西日本などの暗い森で繁殖する。名のとおり羽が多くの色で彩られる。数が少なく絶滅危惧種。")
-_find("yairochou")["tier"] = 3   # check/shun_picks9/
+_find("yairochou")["tier"] = 3   # check/picks9/
 O("ogamaguchiyotaka", "strisores", "オーストラリアガマグチヨタカ", "Podargus strigoides",
   "オーストラリアにすむ夜行性の鳥。幅の広い口をもち、昼は枝の上で折れた枝のような姿でじっとしている。ヨタカとは別の目（ガマグチヨタカ目）に分けられる。")
-_find("ogamaguchiyotaka")["tier"] = 3   # check/shun_picks10/
-# shun 指定の鳥（2026-10-25 第2弾）。照合は check/shun_picks11/（和名12種一致、ヤマガラは GBIF のみ Poecile varius）。
-# コハクチョウ・カワセミ・シジュウカラは収録済み。「ミミズク」は1種の名前ではないので shun に確認。
+_find("ogamaguchiyotaka")["tier"] = 3   # check/picks10/
+# 作者が指定した鳥（2026-10-25 第2弾）。照合は check/picks11/（和名12種一致、ヤマガラは GBIF のみ Poecile varius）。
+# コハクチョウ・カワセミ・シジュウカラは収録済み。「ミミズク」は1種の名前ではないので 作者に確認。
 C("strigiformes", "afroaves", "フクロウ目", "Strigiformes", "目", "夜行性の猛禽。顔が平たく、音で獲物の位置を知る。")
 move("strigiformes", "fukurou")
 O("konohazuku", "strigiformes", "コノハズク", "Otus sunia", "夏に渡ってくる小型のフクロウ。「ブッ・ポウ・ソウ」と鳴き、「声のブッポウソウ」と呼ばれた。")
@@ -1523,29 +1523,29 @@ O("rurihitaki", "muscicapidae", "ルリビタキ", "Tarsiger cyanurus", "雄は�
 for _id, _t in {"konohazuku": 3, "kogera": 2, "chougenbou": 3, "okameinko": 2, "aoashikatsuodori": 3, "yamagara": 2,
                 "enaga": 2, "misosazai": 3, "rurikakesu": 3, "ooruri": 2, "isohiyodori": 3, "rurihitaki": 3}.items():
     _find(_id)["tier"] = _t
-# 「ミミズク」→ shun「トラフズク以外」（2026-10-25）。照合は check/shun_picks12/。ワシミミズクの和名は日本鳥類目録改訂第8版に掲載。
+# 「ミミズク」→ 作者「トラフズク以外」（2026-10-25）。照合は check/picks12/。ワシミミズクの和名は日本鳥類目録改訂第8版に掲載。
 O("washimimizuku", "strigiformes", "ワシミミズク", "Bubo bubo", "ユーラシアに広く分布する大型のフクロウ。日本では北海道でまれに記録される。")
 O("komimizuku", "strigiformes", "コミミズク", "Asio flammeus", "冬に渡ってきて、草原や河原を低く飛んでネズミを探す。昼間も活動する。")
 O("ookonohazuku", "strigiformes", "オオコノハズク", "Otus semitorques", "一年中日本の森にすむ小型のフクロウ。目が橙色。")
 for _id, _t in {"washimimizuku": 2, "komimizuku": 3, "ookonohazuku": 3}.items():
     _find(_id)["tier"] = _t
-# shun 指定（2026-10-25）。照合は check/shun_picks13/。
+# 作者の指定（2026-10-25）。照合は check/picks13/。
 O("kantetsu", "trematoda", "肝蛭", "Fasciola hepatica", "ウシやヒツジなどの肝臓の胆管に寄生する大型の吸虫。巻貝を中間宿主とし、水草についた幼虫を食べて感染する。", ["カンテツ"],
   v={"sci": "日本の肝蛭は F. hepatica と巨大肝蛭 F. gigantica の雑種に由来するとされる系統が多い"})
 _find("kantetsu")["tier"] = 4
-META["datasetVersion"] = "0.3.5"  # shun 指定の鳥など（10/27〜の予定）
-# shun 指定（2026-10-25）。照合はゲキムズ用の check/hard_inv/（result.json で ok）。
+META["datasetVersion"] = "0.3.5"  # 作者が指定した鳥など（10/27〜の予定）
+# 作者の指定（2026-10-25）。照合はゲキムズ用の check/hard_inv/（result.json で ok）。
 R("nunomeitomakihitode", "asteroidea", "ヌノメイトマキヒトデ", "Aquilonastra batheri", "磯の石の下などにいる小さなヒトデ。イトマキヒトデと同じイトマキヒトデ科。")
 R("togemomijigai", "asteroidea", "トゲモミジガイ", "Astropecten polyacanthus", "モミジガイの仲間で、腕の縁に長い棘が並ぶ。砂底にすみ、フグ毒（テトロドトキシン）をもつ例が報告されている。")
-R("sukashikashipan", "echinoidea", "スカシカシパン", "Astriclypeus mannii", "平たい円盤形のウニで、殻に細長い穴が5つ開いている。浅い砂底に潜ってすむ。タコノマクラと同じタコノマクラ目。")  # 照合 check/shun_picks14/
+R("sukashikashipan", "echinoidea", "スカシカシパン", "Astriclypeus mannii", "平たい円盤形のウニで、殻に細長い穴が5つ開いている。浅い砂底に潜ってすむ。タコノマクラと同じタコノマクラ目。")  # 照合 check/picks14/
 for _id in ("nunomeitomakihitode", "togemomijigai"):
     _find(_id)["tier"] = 4
 _find("sukashikashipan")["tier"] = 3
 # ゲキムズと揃える（2026-10-25）：シリケンイモリの2亜種名（ゲキムズ側の別名に合わせた）。別名だけなので版は上げない。
 _find("shirikenimori")["aliases"] = ["アマミシリケンイモリ", "オキナワシリケンイモリ"]
 _find("shirikenimori")["subspeciesAliases"] = ["アマミシリケンイモリ", "オキナワシリケンイモリ"]
-META["datasetVersion"] = "0.3.6"  # shun 指定のヒトデ・カシパン（10/28〜の予定）
-# 十脚目の追加（shun「十脚目をもっと、ゴシキエビとか」、振り分けは任せる 2026-10-25）。候補と入れる先は check/decapoda/candidates.md。
+META["datasetVersion"] = "0.3.6"  # 作者が指定したヒトデ・カシパン（10/28〜の予定）
+# 十脚目の追加（作者「十脚目をもっと、ゴシキエビとか」、振り分けは任せる 2026-10-25）。候補と入れる先は check/decapoda/candidates.md。
 # エビ類などは check/decapoda/consensus.tsv、カニはゲキムズの照合結果（check/hard_inv/result.json で ok）。知名度4の5種はゲキムズだけに置く。
 R("goshikiebi", "achelata", "ゴシキエビ", "Panulirus versicolor", "イセエビの仲間。体に青・白・黒などの模様があり、サンゴ礁にすむ。")
 R("nishikiebi", "achelata", "ニシキエビ", "Panulirus ornatus", "イセエビの仲間で大型になる。脚に黄色と黒の縞模様がある。")
@@ -1587,11 +1587,11 @@ for _id, _t in {"goshikiebi": 3, "nishikiebi": 3, "uchiwaebi": 3, "zouriebi": 3,
                 "chigogani": 3, "minamikometsukigani": 3, "mamekobushigani": 3}.items():
     _find(_id)["tier"] = _t
 META["datasetVersion"] = "0.3.7.1"  # 十脚目32種（10/29〜、ネタバレ回避で .1）
-# shun 指定（2026-10-25）。照合はゲキムズ用 check/hard_inv/result.json で ok。
+# 作者の指定（2026-10-25）。照合はゲキムズ用 check/hard_inv/result.json で ok。
 R("subesubemanjuugani", "brachyura", "スベスベマンジュウガニ", "Atergatis floridus", "磯にすむ、つるりとした丸い甲羅のカニ。麻痺性貝毒やフグ毒をもつことがあり、食べると危険。")
 _find("subesubemanjuugani")["tier"] = 2
 META["datasetVersion"] = "0.3.8"  # スベスベマンジュウガニ（10/27〜に前倒し）
-# 単生類（shun 2026-10-26「Neodermata に単生類がいない」）。Brabec et al. 2023（Curr. Biol. 33: 4269）の系統ゲノム解析で
+# 単生類（作者 2026-10-26「Neodermata に単生類がいない」）。Brabec et al. 2023（Curr. Biol. 33: 4269）の系統ゲノム解析で
 # 単生綱 Monogenea は単系統でないとされ、2亜綱を綱に格上げ（Monopisthocotyla・Polyopisthocotyla）。Polyopisthocotyla が吸虫の姉妹、
 # Monopisthocotyla は条虫の姉妹か最初に分かれる系統で解析法により揺れるため、Neodermata の下は4つの多分岐にする。
 # 和名「単後吸盤類」「多後吸盤類」は学術文献での定着を確かめていないので学名表記。照合は check/monogenea/ と check/hard_inv/。
