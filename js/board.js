@@ -227,7 +227,7 @@ function resultHTML() {
   const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
   return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
+    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.ms != null ? `<span>⏱ ${timeText(G.ms)}</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     ${mode === "daily" ? "" : `<p class="hint">共有したリンクから、相手も同じ動物で遊べます。</p>`}
     <pre class="share" id="shareText">${esc(shareText())}</pre>
@@ -277,5 +277,5 @@ function shareText() {
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
   const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (HARD() ? "#hard" : "") : ""}${playLine()}`;
+  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}${G.ms != null ? `  ⏱${timeText(G.ms)}` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (HARD() ? "#hard" : "") : ""}${playLine()}`;
 }
