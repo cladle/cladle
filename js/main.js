@@ -53,16 +53,26 @@ async function copyShare() {
   catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
+// ゲキムズのデータ（約20,000種）は大きいので、ボタンに触れた時点や、前にゲキムズで遊んだ人には空いた時間に先に読んでおく
+let hardP = null;
+function prefetchHard() {
+  if (DATA.hard || hardP) return hardP;
+  return hardP = loadData("data-hard.json").then(d => DATA.hard = d, e => { hardP = null; throw e; });
+}
+// 一度組み立てた系統樹はモードごとに取っておき、切り替え直したときは組み立て直さない
+const BUILT = {};
 async function setLevel(lv) {
   if (lv === LEVEL || !DATA.normal) return;
   const b = $("#level"); b.disabled = true;
-  try { DATA[lv] ||= await loadData(lv === "hard" ? "data-hard.json" : "data.json"); }
+  try { DATA[lv] ||= await (lv === "hard" ? prefetchHard() : loadData("data.json")); }
   catch (e) { flash(`ゲキムズのデータを読み込めませんでした（${e.message}）`, true); b.disabled = false; return; }
   b.disabled = false;
   if (lv === "hard") track("level-hard");  // 切り替える前に送る（ゲキムズの印が付かないように）
+  BUILT[LEVEL] = { D, N, SP, BUCKETS, BW, MAX };
   LEVEL = lv; store.set("dk-level", lv);
-  N = {}; SP = [];
-  build(DATA[lv]); applyLevel();
+  if (BUILT[lv]) ({ D, N, SP, BUCKETS, BW, MAX } = BUILT[lv]);
+  else { N = {}; SP = []; build(DATA[lv]); }
+  applyLevel();
   STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats")));
   G = null; ZK = null; ZKQ = ""; ZKHIT = null; $("#zkq").value = ""; renderZukan();
   setView(view === "about" || view === "howto" || view === "zukan" ? view : view === "free" ? "free" : "daily");
@@ -94,6 +104,8 @@ loadData().then(async data => {
   if (want === "hard") try { DATA.hard = await loadData("data-hard.json"); LEVEL = "hard"; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
   build(DATA[LEVEL]); wire(); applyLevel();
   $("#level").onclick = () => setLevel(HARD() ? "normal" : "hard");
+  $("#level").addEventListener("pointerdown", () => { if (!HARD()) prefetchHard()?.catch(() => {}); });
+  if (!HARD() && store.get("dk-hard-stats")) (window.requestIdleCallback || (f => setTimeout(f, 3000)))(() => prefetchHard()?.catch(() => {}));
   renderZukan();
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
