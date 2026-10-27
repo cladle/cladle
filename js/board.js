@@ -35,7 +35,7 @@ function render() {
   $("#leftLabel").textContent = hunt ? "種探し 残り" : "残り";
   $("#left").textContent = hunt ? limit() - G.guesses.length : MAX - Math.min(G.guesses.length, MAX);
   $("#meter").innerHTML = Array.from({ length: hunt ? HUNT : MAX }, (_, i) => `<i class="${i < G.guesses.length - base ? "used" : ""}"></i>`).join("");
-  $("#guess").disabled = G.done;
+  $("#guess").disabled = G.done; $(".inputbox").classList.toggle("pin", !G.done);  // 遊んでいる間だけ入力欄を上に残す
   if (!G.guesses.length) $("#flash").hidden = true;
 
   const h = treeHTML(G.target, G.guesses, G.done, G.fresh, $("#board").clientWidth, { reveal: G.reveal, dim: G.h1 && !G.done, win: celebrate, grow: celebrate || openGrow ? { id: G.target, prev: new Set(), all: true, fast: openGrow && !celebrate } : growId && lastEdges ? { id: growId, prev: lastEdges } : null });
