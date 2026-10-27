@@ -199,6 +199,8 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
   .cgsvg .ln.goal.fade, .cgsvg .tq.fade, .cgsvg .tl.fade, .cgsvg .nl.fade, .cgsvg .nd.fade { animation: fadein .35s ease-out both }
   @keyframes fadein { from { opacity: 0 } }
   .cgsvg.win .tl.hit { transform-box: fill-box; transform-origin: left center; animation: pop .6s ease-out both }
+  .cgsvg.win .ln.on { transition: stroke-width .4s ease-out }
+  .cgsvg.win.hitfx .ln.on { stroke-width: 7; transition-duration: .08s }
   @keyframes pop { 0% { opacity: 0; transform: scale(.6) } 55% { transform: scale(1.45) } 80% { transform: scale(.95) } 100% { opacity: 1; transform: scale(1) } }
 }
 .result .fact { margin: 0 }

@@ -50,6 +50,8 @@ function render() {
     if (r) { r.classList.add("celebrate"); r.style.animationDelay = wait + "s"; }
     const msg = exactWin() ? `正解！ ${N[G.target].ja} でした。` : `属まで正解！ 答えは ${N[G.target].ja} でした。`;
     if (still) flash(msg); else setTimeout(() => { if (G.won) flash(msg); }, wait * 1000);
+    // 答えに届いた瞬間、根元から答えまでの道筋を一瞬太くする
+    if (!still) setTimeout(() => { const v = $("#board svg.cgsvg"); if (!v) return; v.classList.add("hitfx"); setTimeout(() => v.classList.remove("hitfx"), 300); }, treeHTML.animEnd * 1000);
     // 枝が根元から答えの種まで伸びるのを見られるよう、答えの種を画面の真ん中に持ってくる（スマホはキーボードが閉じるのを待つ）
     setTimeout(() => {
       const a = $(`#board text.tl[data-id="${G.target}"]`); if (!a) return;
