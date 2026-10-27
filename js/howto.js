@@ -12,7 +12,7 @@ const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "
     "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] };
 let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
-  return (HARD() ? hardHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
+  return (HARD() ? hardHowto() : FISH() ? fishHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
     <li><b>動物を入れる</b><span>答えの動物との共通の祖先がわかり、系統樹に枝が増えます。</span></li>
     <li><b>緑の点の中を探す</b><span>答えの動物は緑の点より先にいます。その中の、まだ試していない仲間を入れます。</span></li>
     <li><b>${MAX} 回以内に当てる</b><span>${HINT1} 回目と ${HINT2} 回目のあとにヒントが使えます。</span></li></ol>
@@ -25,6 +25,14 @@ function howtoHTML() {
     <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
     <li>系統樹の節目（分類群）は、すべてクレード（ある祖先とその子孫すべてからなる単系統群）です。魚類や爬虫類のような、子孫の一部を除いたまとまりは使っていません。</li>
     <li><span class="poly">多分岐</span>は系統関係が議論中で、分岐の順を決めていない節目です。</li></ul></details>`;
+}
+function fishHowto() {
+  return `<section class="hard-rule"><h2>魚編（試作）</h2><ul>
+    <li>日本産魚類全種目録にある日本の魚 ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。どの種も同じ確率で出ます。</li>
+    <li>「魚類」は、四肢動物を除いた残りのまとまり（側系統群）なので、節目にはしていません。系統樹の左端は脊椎動物の祖先で、円口類（ヌタウナギ・ヤツメウナギ）、軟骨魚類（サメ・エイ・ギンザメ）、条鰭類、肉鰭類（シーラカンス・ハイギョ）に分かれます。</li>
+    <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
+    <li>ヒント1は ふつうモードと同じです。ヒント2は科より下の節目は開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
+    <li>和名のない属は学名で表示します。</li></ul></section>`;
 }
 function hardHowto() {
   const s = D.meta.selection;

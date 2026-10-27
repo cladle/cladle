@@ -10,7 +10,7 @@ function openSheet(id) {
   if (!isSp && kinLabel(id)) h += `<div class="kin-n">${esc(kinLabel(id))}（定着した和名が無いため学名で表示）</div>`;
   if (!hide) h += `<p style="margin:0">${esc(isSp ? n.fact : n.desc)}</p>`;
   if (!isSp && view === "zukan") h += `<div class="path">収録 ${n.count} 種</div>`;
-  if (!hide && isSp && !n.fact && HARD()) h += `<p style="margin:0;color:var(--muted);font-size:.85rem">${esc(N[n.parent].ja)}（${esc(N[n.parent].rank)}） › ${esc(path(n.id).map(x => N[x]).filter(x => x.rank === "科")[0]?.ja || "")}</p>`;
+  if (!hide && isSp && !n.fact && BIG()) h += `<p style="margin:0;color:var(--muted);font-size:.85rem">${esc(N[n.parent].ja)}（${esc(N[n.parent].rank)}） › ${esc(path(n.id).map(x => N[x]).filter(x => x.rank === "科")[0]?.ja || "")}</p>`;
   if (n.polytomy) h += `<div class="note poly-n"><b>多分岐の理由：</b>${esc(n.polytomy)}</div>`;
   if (n.verify) h += `<div class="note v-n"><b>要確認：</b>${esc(Object.entries(n.verify).map(([k, v]) => ({ ja: "和名", sci: "学名", placement: "位置" }[k] || k) + "：" + v).join("／"))}</div>`;
   if (isSp) h += namesHTML(n);

@@ -5,8 +5,9 @@ let view = "daily";
 function setView(v) {
   view = v;
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
-  $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto";
-  demoStop(); $(".demo").hidden = HARD(); if (v === "howto" && !HARD()) demoPlay();
+  $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto"; $("#extra").hidden = v !== "extra";
+  if (v === "extra") $("#extraDoc").innerHTML = extraHTML();
+  demoStop(); $(".demo").hidden = BIG(); if (v === "howto" && !BIG()) demoPlay();
   if (v === "daily" || v === "free") { if (mode !== v || !G) newGame(v); }
   window.scrollTo(0, 0);
 }
@@ -38,6 +39,8 @@ function wire() {
     if (e.target.id === "xpost") track(mode + "-share-x");
     if (e.target.id === "again") { store.set(KEY("dk-free"), null); newGame("free"); }
     if (e.target.id === "goFree") setView("free");
+    const mc = e.target.closest("[data-mode]"); if (mc) { if (mc.dataset.mode === LEVEL) setView("daily"); else setLevel(mc.dataset.mode); return; }
+    if (e.target.id === "backNormal") { setLevel("normal"); return; }
     if (e.target.id === "toZukan") { track("zukan-from-result"); revealInZukan(G.target); }
     if (e.target.id === "closeSheet" || e.target.id === "scrim") closeSheet();
   });
@@ -63,11 +66,11 @@ function prefetchHard() {
 const BUILT = {};
 async function setLevel(lv) {
   if (lv === LEVEL || !DATA.normal) return;
-  const b = $("#level"); b.disabled = true;
-  try { DATA[lv] ||= await (lv === "hard" ? prefetchHard() : loadData("data.json")); }
-  catch (e) { flash(`ゲキムズのデータを読み込めませんでした（${e.message}）`, true); b.disabled = false; return; }
-  b.disabled = false;
-  if (lv === "hard") track("level-hard");  // 切り替える前に送る（ゲキムズの印が付かないように）
+  const bs = document.querySelectorAll(".level"), off = d => bs.forEach(b => b.disabled = d); off(true);
+  try { DATA[lv] ||= await (lv === "hard" ? prefetchHard() : loadData(LV_FILE[lv])); }
+  catch (e) { flash(`${LV_NAME[lv] || "ふつうモード"}のデータを読み込めませんでした（${e.message}）`, true); off(false); return; }
+  off(false);
+  if (lv !== "normal") track("level-" + lv);  // 切り替える前に送る（切り替えた先の印が付かないように）
   BUILT[LEVEL] = { D, N, SP, BUCKETS, BW, MAX };
   LEVEL = lv; store.set("dk-level", lv);
   if (BUILT[lv]) ({ D, N, SP, BUCKETS, BW, MAX } = BUILT[lv]);
@@ -80,9 +83,10 @@ async function setLevel(lv) {
 function applyLevel() {
   const h = HARD();
   $("#level").setAttribute("aria-pressed", h);
-  document.documentElement.classList.toggle("hard", h);
-  $("#levelNote").hidden = !h;
+  document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH());
+  $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
+  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：日本の魚 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうに戻る</button>`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
@@ -100,8 +104,8 @@ async function loadData(f = "data.json") {
 }
 loadData().then(async data => {
   DATA.normal = data;
-  const want = /^#?hard/.test(location.hash) ? "hard" : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
-  if (want === "hard") try { DATA.hard = await loadData("data-hard.json"); LEVEL = "hard"; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
+  const m = location.hash.match(/^#?(hard|fish)/), want = m ? m[1] : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
+  if (LV_FILE[want] && want !== "normal") try { DATA[want] = await loadData(LV_FILE[want]); LEVEL = want; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
   build(DATA[LEVEL]); wire(); applyLevel();
   $("#level").onclick = () => setLevel(HARD() ? "normal" : "hard");
   $("#level").addEventListener("pointerdown", () => { if (!HARD()) prefetchHard()?.catch(() => {}); });
@@ -112,10 +116,10 @@ loadData().then(async data => {
   $("#demoPrev").onclick = () => { demoStop(); demoShow(demoI - 1, false); };
   $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
   $("#demoReplay").onclick = demoPlay;
-  const h = location.hash.slice(1).replace(/^hard\/?/, "");
+  const h = location.hash.slice(1).replace(/^(hard|fish)\/?/, "");
   if (h.startsWith("p=")) openShared(h.slice(2));
-  else setView(["free", "zukan", "about", "howto"].includes(h) ? h : "daily");
-  addEventListener("hashchange", () => { const m = location.hash.match(/^#(hard\/)?p=(.+)$/); if (m && !!m[1] === HARD()) openShared(m[2]); });
+  else setView(["free", "zukan", "about", "howto", "extra"].includes(h) ? h : "daily");
+  addEventListener("hashchange", () => { const m = location.hash.match(/^#(?:(hard|fish)\/)?p=(.+)$/); if (m && (m[1] || "normal") === LEVEL) openShared(m[2]); });
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });

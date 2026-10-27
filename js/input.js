@@ -14,7 +14,7 @@ function suggest(q) {
     }
     if (best) out.push(best);
   }
-  const cap = HARD() ? 20 : 8; suggMore = out.length - cap;
+  const cap = BIG() ? 20 : 8; suggMore = out.length - cap;
   return out.sort((a, b) => a.score - b.score).slice(0, cap);
 }
 function showSugg() {
@@ -26,7 +26,7 @@ function showSugg() {
     // 亜種名で当たったときは「亜種名（種名の亜種）」と出し、選ぶと種の推測になる
     const name = r.k.k === "subsp" ? `<span>${esc(r.k.t)}</span><span class="via">（${esc(r.s.ja)}の亜種）</span>` : `<span>${esc(r.s.ja)}</span>${via}`;
     return `<li role="option" id="o${i}" data-id="${r.s.id}" aria-selected="${i === sel}" class="${used ? "used" : ""}">${name}<span class="sci">${esc(r.s.sci)}</span>${used ? `<span class="via">推測済み</span>` : ""}</li>`;
-  }).join("") + (HARD() && suggMore > 0 ? `<li class="more" aria-disabled="true">ほか ${suggMore.toLocaleString()} 種（もう少し打つと絞れます）</li>` : "");
+  }).join("") + (BIG() && suggMore > 0 ? `<li class="more" aria-disabled="true">ほか ${suggMore.toLocaleString()} 種（もう少し打つと絞れます）</li>` : "");
   u.hidden = false; $("#guess").setAttribute("aria-expanded", "true");
 }
 function choose(id) { $("#guess").value = ""; $("#sugg").hidden = true; if (G.guesses.includes(id)) { flash(`${N[id].ja} はもう推測しました。`, true); return; } guess(id);

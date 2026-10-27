@@ -23,9 +23,10 @@
 | `js/texts.js` | データ欄の文章 |
 | `js/howto.js` | 遊び方の文章と、例題の再生 |
 | `js/main.js` | 画面の切り替えと起動、データの読み込み |
-| `data.json`, `data-hard.json` | 今の版の収録データ（生成物。手で直さない）。予約中の次の版があれば `data-<版>.json` も置く |
+| `data.json`, `data-hard.json`, `data-fish.json` | 今の版の収録データ（生成物。手で直さない）。予約中の次の版があれば `data-<版>.json` も置く |
 | `tools/build_data.py`, `tools/data_more.py` | 収録データの正本。ここから `data-<版>.json` を作る |
 | `tools/hard/` | ゲキムズのデータの作り方（`tools/hard/README.md`） |
+| `tools/fish/make_fish.py` | 魚編のデータ `data-fish.json` を、ゲキムズのデータから魚だけ切り出して作る |
 | `tools/check.py` | 公開前の確認（送るたびに GitHub が自動で動かす） |
 | `docs/SCHEMA.md`, `docs/SOURCES.md` | データの形式と、名前の出典 |
 
