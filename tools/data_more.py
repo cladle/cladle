@@ -1652,4 +1652,6 @@ R("mimiika", "decapodiformes", "ミミイカ", "Euprymna morsei", "耳のよう�
 for _id, _t in {"kaiyadoriumigumo": 4, "ryuujinoomukade": 4, "sashihariari": 3, "ootsunohiramushi": 4, "minohiramushi": 4,
                 "chigokemushi": 4, "tagayasanminashi": 3, "ashihidanamekuji": 3, "mimiika": 3}.items():
     _find(_id)["tier"] = _t
+R("ooguchiboya", "tunicata", "オオグチボヤ", "Megalodicopia hians", "深海にすむホヤ。大きく開いた口のような入水孔を閉じて、流れてきた小さな動物を捕らえて食べる。")  # 照合 check/hard_inv/
+_find("ooguchiboya")["tier"] = 3
 META["datasetVersion"] = "0.3.10"  # 一覧ページの案（知名度・本家とゲキムズの振り分け）

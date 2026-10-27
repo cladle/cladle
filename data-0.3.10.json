@@ -11281,6 +11281,16 @@
    "aliases": [],
    "fact": "耳のようなひれをもつ小さなイカ。昼は砂に潜って過ごす。",
    "tier": 3
+  },
+  {
+   "id": "ooguchiboya",
+   "parent": "tunicata",
+   "ja": "オオグチボヤ",
+   "sci": "Megalodicopia hians",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむホヤ。大きく開いた口のような入水孔を閉じて、流れてきた小さな動物を捕らえて食べる。",
+   "tier": 3
   }
  ]
 }
