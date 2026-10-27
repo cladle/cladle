@@ -141,14 +141,14 @@ function useHint(n) {
 }
 // ゲキムズのヒント2（属を開かないとき）：和名の文字数と、ほかの種とも共通する終わり方（「…ウロコムシ」など）
 function jaClue(id) {
-  const ja = N[id].ja; let suf = "";
-  for (let k = ja.length - 2; k >= 2 && !suf; k--) { const t = ja.slice(-k); if (SP.filter(s => s.id !== id && s.ja.endsWith(t)).length >= 3) suf = t; }
+  const ja = N[id].baseJa || N[id].ja; let suf = "";
+  for (let k = ja.length - 2; k >= 2 && !suf; k--) { const t = ja.slice(-k); if (SP.filter(s => s.id !== id && (s.baseJa || s.ja).endsWith(t)).length >= 3) suf = t; }
   return `和名は ${ja.length} 文字` + (suf ? `で、「…${suf}」で終わります。` : `で、「${ja[0]}…」で始まります。`);
 }
 // 豆知識から正解の名前（和名・別名・学名）を伏せる
 function maskFact(id) {
   const s = N[id]; let t = s.fact || "";
-  for (const w of [s.ja, ...(s.aliases || []), s.sci, s.sci.split(" ")[0], ...(s.sciSynonyms || []).flatMap(x => [x, x.split(" ")[0]])].filter(w => w && w.length > 1).sort((a, b) => b.length - a.length)) t = t.split(w).join("〇〇");
+  for (const w of [s.ja, s.baseJa, ...(s.aliases || []), s.sci, s.sci.split(" ")[0], ...(s.sciSynonyms || []).flatMap(x => [x, x.split(" ")[0]])].filter(w => w && w.length > 1).sort((a, b) => b.length - a.length)) t = t.split(w).join("〇〇");
   return t;
 }
 // 降参・別の問題（押し間違いで消えないよう、2回押して決める）

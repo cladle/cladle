@@ -34,6 +34,7 @@ function build(data) {
   const root = data.clades.find(c => !c.parent).id; walk(root, 0); D.root = root;
   // 出題：まず枠（主要な門ごと＋その他の門）を等確率で選び、枠の中は門ごとに重みをつけて選ぶ
   // ゲキムズは枠を綱などの大きなまとまり、枠の中を目（bucketRank）で分ける
+  tagSameNames();
   const sel = data.meta.selection || {}, named = sel.buckets || [], rank = sel.bucketRank || "門";
   for (const s of SP) {
     const p = path(s.id);
@@ -57,6 +58,17 @@ function build(data) {
   // 枠の選び方：既定は等確率。"sqrt" なら枠内の重みの合計の平方根に比例させる
   BW = BUCKETS.map(B => sel.bucketWeight === "sqrt" ? Math.sqrt(B.reduce((a, x) => a + (x.st ?? x.ids.length), 0)) : 1);
 }
-function makeKeys(s) { s.keys = [[s.ja, "ja"], [s.sci, "sci"], ...(s.sciSynonyms || []).map(a => [a, "syn"]), ...s.aliases.map(a => [a, (s.subspeciesAliases || []).includes(a) ? "subsp" : "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
+function makeKeys(s) { s.keys = [[s.ja, "ja"], ...(s.baseJa ? [[s.baseJa, "ja"]] : []), [s.sci, "sci"], ...(s.sciSynonyms || []).map(a => [a, "syn"]), ...s.aliases.map(a => [a, (s.subspeciesAliases || []).includes(a) ? "subsp" : "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
+// 和名が同じ別種（貝と蝶のヤマトシジミなど）は、表示名に所属の綱（同じ綱なら学名）を添えて見分ける。元の和名は baseJa
+function tagSameNames() {
+  const byJa = {};
+  for (const s of SP) (byJa[s.ja] ||= []).push(s);
+  const up = (s, r) => { let p = s.parent; while (p && !(N[p].rank === r && !/^[A-Za-z]/.test(N[p].ja))) p = N[p].parent; return p && N[p].ja; };
+  for (const g of Object.values(byJa)) {
+    if (g.length < 2) continue;
+    const cls = g.map(s => up(s, "綱") || up(s, "門")), uniq = new Set(cls).size === g.length;
+    g.forEach((s, i) => { s.baseJa = s.ja; s.ja = `${s.ja}（${uniq ? cls[i] : s.sci}）`; });
+  }
+}
 function path(id) { const a = []; while (id) { a.unshift(id); id = N[id].parent; } return a; }
 function lca(a, b) { const pa = new Set(path(a)); let x = b; while (!pa.has(x)) x = N[x].parent; return x; }

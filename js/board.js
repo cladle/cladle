@@ -260,9 +260,9 @@ function kinHTML(t) {
 // 写真は載せず（権利と同定の問題）、外部の図鑑・検索へのリンクにする
 function lookupLinks(t) {
   const q = encodeURIComponent;
-  return [["Wikipedia", `https://ja.wikipedia.org/w/index.php?search=${q(t.ja)}`],
+  return [["Wikipedia", `https://ja.wikipedia.org/w/index.php?search=${q(t.baseJa || t.ja)}`],
     t.gbif && ["GBIF", `https://www.gbif.org/species/${t.gbif}`],
-    ["画像検索", `https://www.google.com/search?tbm=isch&q=${q(t.ja + " " + t.sci)}`]]
+    ["画像検索", `https://www.google.com/search?tbm=isch&q=${q((t.baseJa || t.ja) + " " + t.sci)}`]]
     .filter(Boolean).map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${l}</a>`).join("");
 }
 function shareText() {
