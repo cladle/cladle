@@ -25,6 +25,19 @@
   --accent: #4fc2ad; --accent-soft: #173a33; --hot: #ff8a5e; --hot-soft: #42251a;
   --warn: #e5bb55; --warn-soft: #3a3016; color-scheme: dark }
 
+/* ゲキムズ表示中だけの配色（html に class="hard" が付く）。形はそのまま色だけ差し替え、見出しは深紅の帯にする */
+:root.hard { --bg: #f6eeec; --surface: #fffbfa; --ink: #240909; --muted: #674642; --line: #dcc5c0; --accent: #b0122a; --accent-soft: #f6d8da; --hot: #5a2585; --hot-soft: #e6dcf1 }
+:root.hard header { --bg: #a3101f; --surface: #a3101f; --ink: #ffffff; --muted: #ffd9d9; --line: #e07a82; --hot: #ffd23f }
+@media (prefers-color-scheme: dark) { :root.hard:not([data-theme="light"]) { --bg: #160b0b; --surface: #231313; --ink: #f4e6e3; --muted: #b79c97; --line: #4a2c2a; --accent: #ff6b73; --accent-soft: #4a1a1e; --hot: #c9a0ff; --hot-soft: #33224a; color-scheme: dark }
+  :root.hard:not([data-theme="light"]) header { --bg: #8e0d1b; --surface: #8e0d1b; --ink: #ffffff; --muted: #ffd9d9; --line: #d4707a; --hot: #ffd23f } }
+:root.hard[data-theme="dark"] { --bg: #160b0b; --surface: #231313; --ink: #f4e6e3; --muted: #b79c97; --line: #4a2c2a; --accent: #ff6b73; --accent-soft: #4a1a1e; --hot: #c9a0ff; --hot-soft: #33224a; color-scheme: dark }
+:root.hard[data-theme="dark"] header { --bg: #8e0d1b; --surface: #8e0d1b; --ink: #ffffff; --muted: #ffd9d9; --line: #d4707a; --hot: #ffd23f }
+/* 帯を画面の端まで広げる。h1 などは body の色を継ぐので、帯の中の文字色もここで決める */
+:root.hard header { background: var(--bg); color: var(--ink); box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(-100vmax -100vmax 0) }
+:root.hard body::before { background: #a3101f }
+@media (prefers-color-scheme: dark) { :root.hard:not([data-theme="light"]) body::before { background: #8e0d1b } }
+:root.hard[data-theme="dark"] body::before { background: #8e0d1b }
+
 * { box-sizing: border-box }
 body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.6;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px }
