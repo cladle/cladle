@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.11",
+  "datasetVersion": "0.3.12",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
@@ -11660,6 +11660,26 @@
     "ja": "和名の出典は日本語版ウィキペディアと大学の研究室の発信（学術的な出典は未確認）"
    },
    "tier": 4
+  },
+  {
+   "id": "ooikarinamako",
+   "parent": "holothuroidea",
+   "ja": "オオイカリナマコ",
+   "sci": "Synapta maculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "サンゴ礁の砂地にすむ、ひものように細長いナマコ。長さ2 mほどになる。皮膚に錨（いかり）の形をした骨片があり、触るとくっつく。",
+   "tier": 4
+  },
+  {
+   "id": "senjunamako",
+   "parent": "holothuroidea",
+   "ja": "センジュナマコ",
+   "sci": "Scotoplanes globosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海の泥の上を、管足が変化した脚で歩くナマコ。背中に角のような突起がある。英語では sea pig（海のブタ）と呼ばれる。",
+   "tier": 3
   }
  ]
 }

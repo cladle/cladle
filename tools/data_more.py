@@ -1732,4 +1732,11 @@ R("pandoramushi", "cycliophora", "パンドラムシ", "Symbion pandora",
   v={"ja": "和名の出典は日本語版ウィキペディアと大学の研究室の発信（学術的な出典は未確認）"})
 for _id in ("shinkaishiwakouramushi", "koagomushi", "pandoramushi"):
     _find(_id)["tier"] = 4
-META["datasetVersion"] = "0.3.11"  # 足りない門の3種（胴甲・微顎・有輪）を戻す。前の版 0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
+# 作者の指定（2026-10-27）。照合はゲキムズ用の結果（check/hard_inv/result.json）。
+R("ooikarinamako", "holothuroidea", "オオイカリナマコ", "Synapta maculata",
+  "サンゴ礁の砂地にすむ、ひものように細長いナマコ。長さ2 mほどになる。皮膚に錨（いかり）の形をした骨片があり、触るとくっつく。")
+R("senjunamako", "holothuroidea", "センジュナマコ", "Scotoplanes globosa",
+  "深海の泥の上を、管足が変化した脚で歩くナマコ。背中に角のような突起がある。英語では sea pig（海のブタ）と呼ばれる。")
+for _id, _t in {"ooikarinamako": 4, "senjunamako": 3}.items():
+    _find(_id)["tier"] = _t
+META["datasetVersion"] = "0.3.12"  # ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
