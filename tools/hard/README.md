@@ -32,4 +32,4 @@
 python3 tools/hard/merge_hard.py <本家の最新 data-*.json> cache/hard_vert.json <col を展開したフォルダ> <出力.json> tools/hard/fixes.tsv <worms を展開したフォルダ> cache/land.json
 ```
 
-出力に `datasetVersion`（`hard-0.3.6` など）を付けて `data-hard-<版>.json` として置き、今いちばん新しいゲキムズの版の `meta.next` に開始日とファイル名を書きます。本家の種を足したときも、本家の新しい版を渡して作り直します。
+出力に `datasetVersion`（`hard-0.3.6` など）を付けて `data-hard-<版>.json` として置き、`data-hard.json` の `meta.next` に開始日とファイル名を書きます。切り替わったあとは中身を `data-hard.json` に写し、`data-hard-<版>.json` は消します。本家の種を足したときも、本家の新しい版を渡して作り直します。

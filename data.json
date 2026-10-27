@@ -1,12 +1,12 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.0",
+  "datasetVersion": "0.3.9",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
    "backbone": "NCBI Taxonomy / Open Tree of Life の構成を参考に手作業で編集",
-   "nomenclature": "学名は GBIF Backbone Taxonomy・Catalogue of Life・WoRMS で照合（2026-10-22）。日本産の魚類は本村浩之（2026）日本産魚類全種目録 Online ver. 42 に合わせた（2026-10-23）",
+   "nomenclature": "学名は GBIF Backbone Taxonomy・Catalogue of Life・WoRMS で照合（2026-10-22）。日本産の魚類は本村浩之（2026）日本産魚類全種目録 Online ver. 42 に合わせた（2026-10-23）。種の範囲（種か亜種か）は分類群ごとの世界の種リストに合わせた（2026-10-24）：哺乳類 Mammal Diversity Database 2.1、鳥類 IOC World Bird List 15.2、爬虫類 The Reptile Database 2026-06。",
    "phylogenyNotes": "主要分岐は分子系統（系統ゲノム解析）に基づく。動物の根元、ParaHoxozoa内、左右相称動物の根元、毛顎動物、二胚動物・直泳動物などの位置は議論中のため多分岐で表現。",
    "nonMonophyleticGroupsExcluded": [
     "魚類",
@@ -47,10 +47,6 @@
     "4": 0.7
    },
    "bucketWeight": "sqrt"
-  },
-  "next": {
-   "from": "2026-10-25",
-   "file": "data-0.3.2.json"
   }
  },
  "clades": [
@@ -1689,10 +1685,11 @@
    "ja": "Neodermata",
    "sci": "Neodermata",
    "rank": "クレード",
-   "desc": "吸虫・条虫・単生類をまとめた寄生性のクレード。幼生の表皮を脱ぎ捨てる。",
+   "desc": "吸虫・条虫と、魚などの体表やえらにつく単生類をまとめた寄生性のクレード。幼生の表皮を脱ぎ捨てる。",
    "verify": {
     "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
-   }
+   },
+   "polytomy": "吸虫・条虫と、かつて単生綱にまとめられた2群の分かれる順は議論中。系統ゲノム解析（Brabec et al. 2023）ではPolyopisthocotyla が吸虫の姉妹群になり、単生綱は単系統でないとされたため、ここでは四分岐で示す。"
   },
   {
    "id": "trematoda",
@@ -1825,7 +1822,7 @@
   },
   {
    "id": "columbidae",
-   "parent": "neoaves",
+   "parent": "columbimorphae",
    "ja": "ハト科",
    "sci": "Columbidae",
    "rank": "科",
@@ -1849,7 +1846,7 @@
   },
   {
    "id": "anguilliformes",
-   "parent": "teleostei",
+   "parent": "elopomorpha",
    "ja": "ウナギ目",
    "sci": "Anguilliformes",
    "rank": "目",
@@ -2060,6 +2057,399 @@
    "sci": "Loliolus",
    "rank": "属",
    "desc": "内湾や沿岸にすむ小型のヤリイカ科のイカ。"
+  },
+  {
+   "id": "strisores",
+   "parent": "neoaves",
+   "ja": "Strisores",
+   "sci": "Strisores",
+   "rank": "クレード",
+   "desc": "ヨタカ類とアマツバメ・ハチドリ類のまとまり。"
+  },
+  {
+   "id": "cuculiformes",
+   "parent": "neoaves",
+   "ja": "カッコウ目",
+   "sci": "Cuculiformes",
+   "rank": "目",
+   "desc": "カッコウ・ホトトギスなど。托卵をする種が多い。"
+  },
+  {
+   "id": "columbimorphae",
+   "parent": "neoaves",
+   "ja": "Columbimorphae",
+   "sci": "Columbimorphae",
+   "rank": "クレード",
+   "desc": "ハト類とサケイ類などのまとまり。"
+  },
+  {
+   "id": "gruiformes",
+   "parent": "neoaves",
+   "ja": "ツル目",
+   "sci": "Gruiformes",
+   "rank": "目",
+   "desc": "ツル類とクイナ類など。"
+  },
+  {
+   "id": "mirandornithes",
+   "parent": "neoaves",
+   "ja": "Mirandornithes",
+   "sci": "Mirandornithes",
+   "rank": "クレード",
+   "desc": "カイツブリ類とフラミンゴ類のまとまり。見た目は違うが分子系統で近縁とされる。"
+  },
+  {
+   "id": "charadriiformes",
+   "parent": "neoaves",
+   "ja": "チドリ目",
+   "sci": "Charadriiformes",
+   "rank": "目",
+   "desc": "チドリ・シギ・カモメ・ウミスズメなど。"
+  },
+  {
+   "id": "procellariiformes",
+   "parent": "aequornithes",
+   "ja": "ミズナギドリ目",
+   "sci": "Procellariiformes",
+   "rank": "目",
+   "desc": "管状の鼻孔をもつ外洋性の海鳥。"
+  },
+  {
+   "id": "suliformes",
+   "parent": "aequornithes",
+   "ja": "カツオドリ目",
+   "sci": "Suliformes",
+   "rank": "目",
+   "desc": "カツオドリ・ウ・グンカンドリなど。"
+  },
+  {
+   "id": "pelecaniformes",
+   "parent": "aequornithes",
+   "ja": "ペリカン目",
+   "sci": "Pelecaniformes",
+   "rank": "目",
+   "desc": "ペリカン・サギ・トキなど。"
+  },
+  {
+   "id": "coraciiformes",
+   "parent": "afroaves",
+   "ja": "ブッポウソウ目",
+   "sci": "Coraciiformes",
+   "rank": "目",
+   "desc": "カワセミ・ブッポウソウ・ハチクイなど。"
+  },
+  {
+   "id": "neuropterida",
+   "parent": "holometabola",
+   "ja": "Neuropterida",
+   "sci": "Neuropterida",
+   "rank": "クレード",
+   "desc": "アミメカゲロウ目・ヘビトンボ目・ラクダムシ目のまとまり。"
+  },
+  {
+   "id": "elopomorpha",
+   "parent": "teleostei",
+   "ja": "カライワシ上目",
+   "sci": "Elopomorpha",
+   "rank": "上目",
+   "desc": "カライワシ・ソトイワシ・ソコギス・ウナギなど。幼生が平たく透明なレプトセファルスになる。"
+  },
+  {
+   "id": "siluriformes",
+   "parent": "ostariophysi",
+   "ja": "ナマズ目",
+   "sci": "Siluriformes",
+   "rank": "目",
+   "desc": "口のまわりにひげをもつ魚。"
+  },
+  {
+   "id": "aulopiformes",
+   "parent": "euteleostei",
+   "ja": "ヒメ目",
+   "sci": "Aulopiformes",
+   "rank": "目",
+   "desc": "エソ類やミズウオなど。"
+  },
+  {
+   "id": "lampriformes",
+   "parent": "euteleostei",
+   "ja": "アカマンボウ目",
+   "sci": "Lampriformes",
+   "rank": "目",
+   "desc": "アカマンボウやリュウグウノツカイなど。"
+  },
+  {
+   "id": "gadiformes",
+   "parent": "euteleostei",
+   "ja": "タラ目",
+   "sci": "Gadiformes",
+   "rank": "目",
+   "desc": "タラ類やソコダラ類。冷たい海に多い。"
+  },
+  {
+   "id": "beryciformes",
+   "parent": "euteleostei",
+   "ja": "キンメダイ目",
+   "sci": "Beryciformes",
+   "rank": "目",
+   "desc": "キンメダイ類やイットウダイ類。"
+  },
+  {
+   "id": "ophidiiformes",
+   "parent": "percomorpha",
+   "ja": "アシロ目",
+   "sci": "Ophidiiformes",
+   "rank": "目",
+   "desc": "アシロ類やカクレウオ類。"
+  },
+  {
+   "id": "syngnathiformes",
+   "parent": "percomorpha",
+   "ja": "ヨウジウオ目",
+   "sci": "Syngnathiformes",
+   "rank": "目",
+   "desc": "ヨウジウオ・タツノオトシゴ・ヘラヤガラなど。雄が卵を守る種が多い。"
+  },
+  {
+   "id": "blenniiformes",
+   "parent": "percomorpha",
+   "ja": "ギンポ目",
+   "sci": "Blenniiformes",
+   "rank": "目",
+   "desc": "イソギンポ類やスズメダイ類など。"
+  },
+  {
+   "id": "labriformes",
+   "parent": "percomorpha",
+   "ja": "ベラ目",
+   "sci": "Labriformes",
+   "rank": "目",
+   "desc": "ベラ類やブダイ類。"
+  },
+  {
+   "id": "acropomatiformes",
+   "parent": "percomorpha",
+   "ja": "ホタルジャコ目",
+   "sci": "Acropomatiformes",
+   "rank": "目",
+   "desc": "スズキ・アカムツ・ムツなど。"
+  },
+  {
+   "id": "lophiiformes",
+   "parent": "percomorpha",
+   "ja": "アンコウ目",
+   "sci": "Lophiiformes",
+   "rank": "目",
+   "desc": "背びれの棘が釣り竿のように変化した魚。"
+  },
+  {
+   "id": "carcharhiniformes",
+   "parent": "selachii",
+   "ja": "メジロザメ目",
+   "sci": "Carcharhiniformes",
+   "rank": "目",
+   "desc": "メジロザメ・シュモクザメ・ドチザメなど。"
+  },
+  {
+   "id": "lamniformes",
+   "parent": "selachii",
+   "ja": "ネズミザメ目",
+   "sci": "Lamniformes",
+   "rank": "目",
+   "desc": "ホオジロザメ・メガマウスザメなど。"
+  },
+  {
+   "id": "myliobatiformes",
+   "parent": "batoidea",
+   "ja": "トビエイ目",
+   "sci": "Myliobatiformes",
+   "rank": "目",
+   "desc": "アカエイ・トビエイ・イトマキエイなど。"
+  },
+  {
+   "id": "phyllodocida",
+   "parent": "errantia",
+   "ja": "サシバゴカイ目",
+   "sci": "Phyllodocida",
+   "rank": "目",
+   "desc": "ゴカイ・チロリ・ウロコムシなど。よく動き回る多毛類。"
+  },
+  {
+   "id": "nereididae",
+   "parent": "phyllodocida",
+   "ja": "ゴカイ科",
+   "sci": "Nereididae",
+   "rank": "科",
+   "desc": "釣り餌でおなじみのゴカイ類。"
+  },
+  {
+   "id": "eunicida",
+   "parent": "errantia",
+   "ja": "イソメ目",
+   "sci": "Eunicida",
+   "rank": "目",
+   "desc": "イソメ類。じょうぶなあごをもつ。"
+  },
+  {
+   "id": "sabellida",
+   "parent": "sedentaria",
+   "ja": "ケヤリムシ目",
+   "sci": "Sabellida",
+   "rank": "目",
+   "desc": "管の中にすみ、頭の触手を花のように広げて餌をとる。ハオリムシ類もここに含まれる。"
+  },
+  {
+   "id": "psittaciformes",
+   "parent": "australaves",
+   "ja": "インコ目",
+   "sci": "Psittaciformes",
+   "rank": "目",
+   "desc": "インコ・オウム類。足の指が前後2本ずつに分かれる。"
+  },
+  {
+   "id": "boidae",
+   "parent": "serpentes",
+   "ja": "ボア科",
+   "sci": "Boidae",
+   "rank": "科",
+   "desc": "獲物に巻きついて締めつけるヘビ。子を産む種が多い。"
+  },
+  {
+   "id": "calappidae",
+   "parent": "brachyura",
+   "ja": "カラッパ科",
+   "sci": "Calappidae",
+   "rank": "科",
+   "desc": "はさみで顔を隠すような姿勢をとるカニ。"
+  },
+  {
+   "id": "acheilognathidae",
+   "parent": "cypriniformes",
+   "ja": "タナゴ科",
+   "sci": "Acheilognathidae",
+   "rank": "科",
+   "desc": "生きた二枚貝の中に卵を産みつける小型のコイ類。"
+  },
+  {
+   "id": "oxudercidae",
+   "parent": "gobiiformes",
+   "ja": "オクスデルクス科",
+   "sci": "Oxudercidae",
+   "rank": "科",
+   "desc": "マハゼ・ムツゴロウ・ヨシノボリ類など。日本産魚類全種目録では、従来のハゼ科からこの科が分けられている。",
+   "verify": {
+    "placement": "ハゼ科に含める分類体系もある（日本産魚類全種目録に従う）"
+   }
+  },
+  {
+   "id": "heteroptera",
+   "parent": "hemiptera",
+   "ja": "カメムシ亜目",
+   "sci": "Heteroptera",
+   "rank": "亜目",
+   "desc": "前翅の付け根側が硬くなったカメムシ類。異翅亜目とも。アメンボ・タガメ・サシガメなど。"
+  },
+  {
+   "id": "nepomorpha",
+   "parent": "heteroptera",
+   "ja": "タイコウチ下目",
+   "sci": "Nepomorpha",
+   "rank": "下目",
+   "desc": "水中で暮らすカメムシ類。前脚で獲物を捕らえるものが多い。"
+  },
+  {
+   "id": "nepidae",
+   "parent": "nepomorpha",
+   "ja": "タイコウチ科",
+   "sci": "Nepidae",
+   "rank": "科",
+   "desc": "腹の先の長い呼吸管を水面に出して空気を取り入れる。"
+  },
+  {
+   "id": "belostomatidae",
+   "parent": "nepomorpha",
+   "ja": "コオイムシ科",
+   "sci": "Belostomatidae",
+   "rank": "科",
+   "desc": "タガメ・コオイムシなど。雄が卵を守る。"
+  },
+  {
+   "id": "sternorrhyncha",
+   "parent": "hemiptera",
+   "ja": "腹吻亜目",
+   "sci": "Sternorrhyncha",
+   "rank": "亜目",
+   "desc": "アブラムシ・カイガラムシ・コナジラミ・キジラミなど。植物の汁を吸う小さな虫。"
+  },
+  {
+   "id": "lampyridae",
+   "parent": "coleoptera",
+   "ja": "ホタル科",
+   "sci": "Lampyridae",
+   "rank": "科",
+   "desc": "腹の発光器で光るものが多い甲虫。"
+  },
+  {
+   "id": "muscicapidae",
+   "parent": "passeriformes",
+   "ja": "ヒタキ科",
+   "sci": "Muscicapidae",
+   "rank": "科",
+   "desc": "ヒタキ・ツグミの仲間に近い小鳥。ジョウビタキ・キビタキ・オオルリなど。"
+  },
+  {
+   "id": "strigiformes",
+   "parent": "afroaves",
+   "ja": "フクロウ目",
+   "sci": "Strigiformes",
+   "rank": "目",
+   "desc": "夜行性の猛禽。顔が平たく、音で獲物の位置を知る。"
+  },
+  {
+   "id": "piciformes",
+   "parent": "afroaves",
+   "ja": "キツツキ目",
+   "sci": "Piciformes",
+   "rank": "目",
+   "desc": "キツツキ・オオハシなど。足の指が前後2本ずつに分かれる。"
+  },
+  {
+   "id": "falconiformes",
+   "parent": "australaves",
+   "ja": "ハヤブサ目",
+   "sci": "Falconiformes",
+   "rank": "目",
+   "desc": "ハヤブサ・チョウゲンボウなど。タカに似るが、タカ目とは別の系統。"
+  },
+  {
+   "id": "paridae",
+   "parent": "passeriformes",
+   "ja": "シジュウカラ科",
+   "sci": "Paridae",
+   "rank": "科",
+   "desc": "シジュウカラ・ヤマガラ・コガラなど。"
+  },
+  {
+   "id": "monopisthocotyla",
+   "parent": "neodermata",
+   "ja": "Monopisthocotyla",
+   "sci": "Monopisthocotyla",
+   "rank": "綱",
+   "desc": "かつての単生綱の一部。体の後ろの固着器は1つの円盤状で、鉤をもつ。魚の体表やえらにつく。",
+   "verify": {
+    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
+   }
+  },
+  {
+   "id": "polyopisthocotyla",
+   "parent": "neodermata",
+   "ja": "Polyopisthocotyla",
+   "sci": "Polyopisthocotyla",
+   "rank": "綱",
+   "desc": "かつての単生綱の一部。体の後ろに小さなはさみ状の固着器が多数並び、主に魚のえらにつく。",
+   "verify": {
+    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
+   }
   }
  ],
  "species": [
@@ -2427,7 +2817,7 @@
   },
   {
    "id": "akaei",
-   "parent": "batoidea",
+   "parent": "myliobatiformes",
    "ja": "アカエイ",
    "sci": "Hemitrygon akajei",
    "jaStatus": "standard",
@@ -2538,7 +2928,7 @@
   },
   {
    "id": "tatsunootoshigo",
-   "parent": "percomorpha",
+   "parent": "syngnathiformes",
    "ja": "タツノオトシゴ",
    "sci": "Hippocampus coronatus",
    "jaStatus": "standard",
@@ -2744,7 +3134,10 @@
    "verify": {
     "sci": "日本産を独立種 N. viverrinus とするか N. procyonoides の亜種とするかで扱いが分かれる"
    },
-   "tier": 1
+   "tier": 1,
+   "subspeciesAliases": [
+    "ホンドタヌキ"
+   ]
   },
   {
    "id": "tsukinowaguma",
@@ -2913,7 +3306,7 @@
   },
   {
    "id": "toki",
-   "parent": "aequornithes",
+   "parent": "pelecaniformes",
    "ja": "トキ",
    "sci": "Nipponia nippon",
    "jaStatus": "standard",
@@ -3684,7 +4077,7 @@
   },
   {
    "id": "yamatokawagokai",
-   "parent": "errantia",
+   "parent": "nereididae",
    "ja": "ヤマトカワゴカイ",
    "sci": "Hediste diadroma",
    "jaStatus": "standard",
@@ -3709,7 +4102,7 @@
   },
   {
    "id": "satsumahaorimushi",
-   "parent": "sedentaria",
+   "parent": "sabellida",
    "ja": "サツマハオリムシ",
    "sci": "Lamellibrachia satsuma",
    "jaStatus": "standard",
@@ -4187,7 +4580,7 @@
   },
   {
    "id": "hohojirozame",
-   "parent": "selachii",
+   "parent": "lamniformes",
    "ja": "ホオジロザメ",
    "sci": "Carcharodon carcharias",
    "jaStatus": "standard",
@@ -4201,7 +4594,7 @@
   },
   {
    "id": "nanyoumanta",
-   "parent": "batoidea",
+   "parent": "myliobatiformes",
    "ja": "ナンヨウマンタ",
    "sci": "Mobula alfredi",
    "jaStatus": "standard",
@@ -4236,7 +4629,7 @@
   },
   {
    "id": "namazu",
-   "parent": "ostariophysi",
+   "parent": "siluriformes",
    "ja": "ナマズ",
    "sci": "Silurus asotus",
    "jaStatus": "standard",
@@ -4276,7 +4669,7 @@
   },
   {
    "id": "madara",
-   "parent": "euteleostei",
+   "parent": "gadiformes",
    "ja": "マダラ",
    "sci": "Gadus macrocephalus",
    "jaStatus": "standard",
@@ -4354,7 +4747,7 @@
   },
   {
    "id": "kakurekumanomi",
-   "parent": "percomorpha",
+   "parent": "blenniiformes",
    "ja": "カクレクマノミ",
    "sci": "Amphiprion ocellaris",
    "jaStatus": "standard",
@@ -4368,7 +4761,7 @@
   },
   {
    "id": "mahaze",
-   "parent": "gobiiformes",
+   "parent": "oxudercidae",
    "ja": "マハゼ",
    "sci": "Acanthogobius flavimanus",
    "jaStatus": "standard",
@@ -4524,6 +4917,10 @@
    ],
    "fact": "北半球に広く分布する。日本のホンドギツネ・キタキツネはその亜種。",
    "tier": 1,
+   "subspeciesAliases": [
+    "ホンドギツネ",
+    "キタキツネ"
+   ],
    "groups": [
     "キツネ"
    ],
@@ -4558,6 +4955,10 @@
     "sci": "イリオモテヤマネコの位置づけ（亜種か別種か）は議論がある"
    },
    "tier": 2,
+   "subspeciesAliases": [
+    "ツシマヤマネコ",
+    "イリオモテヤマネコ"
+   ],
    "groups": [
     "ヤマネコ"
    ],
@@ -4719,7 +5120,7 @@
   },
   {
    "id": "tancho",
-   "parent": "neoaves",
+   "parent": "gruiformes",
    "ja": "タンチョウ",
    "sci": "Grus japonensis",
    "jaStatus": "standard",
@@ -4735,7 +5136,7 @@
   },
   {
    "id": "umineko",
-   "parent": "neoaves",
+   "parent": "charadriiformes",
    "ja": "ウミネコ",
    "sci": "Larus crassirostris",
    "jaStatus": "standard",
@@ -4763,7 +5164,7 @@
   },
   {
    "id": "fukurou",
-   "parent": "afroaves",
+   "parent": "strigiformes",
    "ja": "フクロウ",
    "sci": "Strix uralensis",
    "jaStatus": "standard",
@@ -4774,7 +5175,7 @@
   },
   {
    "id": "hayabusa",
-   "parent": "australaves",
+   "parent": "falconiformes",
    "ja": "ハヤブサ",
    "sci": "Falco peregrinus",
    "jaStatus": "standard",
@@ -4785,7 +5186,7 @@
   },
   {
    "id": "sekiseiinko",
-   "parent": "australaves",
+   "parent": "psittaciformes",
    "ja": "セキセイインコ",
    "sci": "Melopsittacus undulatus",
    "jaStatus": "standard",
@@ -4824,7 +5225,7 @@
   },
   {
    "id": "shijuukara",
-   "parent": "passeriformes",
+   "parent": "paridae",
    "ja": "シジュウカラ",
    "sci": "Parus cinereus",
    "jaStatus": "standard",
@@ -4904,7 +5305,7 @@
    ],
    "fact": "8年周期で大発生し、線路に集まって列車を止めたことから名づけられた。",
    "verify": {
-    "ja": "キシャヤスデは亜種の和名で、種全体の和名はオビババヤスデとする資料が多い"
+    "ja": "MilliBase は亜種を分けず、キシャヤスデ（armigera）は P. laminata の異名とする。種の和名をオビババヤスデとする資料（GBIF・Wikidata・iNaturalist）もあるが、学術的な典拠は未確認"
    },
    "tier": 3,
    "groups": [
@@ -5101,7 +5502,7 @@
   },
   {
    "id": "amenbo",
-   "parent": "hemiptera",
+   "parent": "heteroptera",
    "ja": "アメンボ",
    "sci": "Aquarius paludum",
    "jaStatus": "standard",
@@ -5143,7 +5544,7 @@
   },
   {
    "id": "genjibotaru",
-   "parent": "coleoptera",
+   "parent": "lampyridae",
    "ja": "ゲンジボタル",
    "sci": "Nipponoluciola cruciata",
    "jaStatus": "standard",
@@ -5193,7 +5594,7 @@
   },
   {
    "id": "usubakagerou",
-   "parent": "holometabola",
+   "parent": "neuropterida",
    "ja": "ウスバカゲロウ",
    "sci": "Hagenomyia micans",
    "jaStatus": "standard",
@@ -5552,7 +5953,7 @@
   },
   {
    "id": "iwamushi",
-   "parent": "errantia",
+   "parent": "eunicida",
    "ja": "イワムシ",
    "sci": "Marphysa sanguinea",
    "jaStatus": "standard",
@@ -5569,7 +5970,7 @@
   },
   {
    "id": "keyarimushi",
-   "parent": "sedentaria",
+   "parent": "sabellida",
    "ja": "ケヤリムシ",
    "sci": "Sabellastarte japonica",
    "jaStatus": "standard",
@@ -6071,7 +6472,7 @@
   },
   {
    "id": "akashumokuzame",
-   "parent": "selachii",
+   "parent": "carcharhiniformes",
    "ja": "アカシュモクザメ",
    "sci": "Sphyrna lewini",
    "jaStatus": "standard",
@@ -6115,7 +6516,7 @@
   },
   {
    "id": "narutobiei",
-   "parent": "batoidea",
+   "parent": "myliobatiformes",
    "ja": "ナルトビエイ",
    "sci": "Aetobatus narutobiei",
    "jaStatus": "standard",
@@ -6370,11 +6771,11 @@
    ],
    "fact": "奄美・沖縄のイモリ。尾が剣のように平たい。",
    "tier": 3,
-   "gbif": 2431863,
    "subspeciesAliases": [
     "アマミシリケンイモリ",
     "オキナワシリケンイモリ"
-   ]
+   ],
+   "gbif": 2431863
   },
   {
    "id": "axolotl",
@@ -6513,6 +6914,9 @@
    ],
    "fact": "北海道の岩場にすむ。高い声で鳴く。エゾナキウサギはその亜種。",
    "tier": 3,
+   "subspeciesAliases": [
+    "エゾナキウサギ"
+   ],
    "gbif": 2437002
   },
   {
@@ -6795,6 +7199,9 @@
    ],
    "fact": "ミドリガメとして売られた北米原産のカメ。日本で野生化したものの多くは亜種ミシシッピアカミミガメ。条件付特定外来生物。",
    "tier": 1,
+   "subspeciesAliases": [
+    "ミシシッピアカミミガメ"
+   ],
    "gbif": 2443002
   },
   {
@@ -7221,7 +7628,7 @@
   },
   {
    "id": "tagame",
-   "parent": "hemiptera",
+   "parent": "belostomatidae",
    "ja": "タガメ",
    "sci": "Kirkaldyia deyrollei",
    "jaStatus": "standard",
@@ -7232,7 +7639,7 @@
   },
   {
    "id": "kusagikamemushi",
-   "parent": "hemiptera",
+   "parent": "heteroptera",
    "ja": "クサギカメムシ",
    "sci": "Halyomorpha halys",
    "jaStatus": "standard",
@@ -7252,6 +7659,9 @@
    ],
    "fact": "日本の在来亜種がニホンミツバチ。オオスズメバチを集団で包んで熱殺する。",
    "tier": 2,
+   "subspeciesAliases": [
+    "ニホンミツバチ"
+   ],
    "gbif": 1341979
   },
   {
@@ -7580,7 +7990,7 @@
    ],
    "fact": "オオカミから家畜化された最初の家畜。",
    "verify": {
-    "sci": "タイリクオオカミの亜種 Canis lupus familiaris とする扱いもある"
+    "sci": "オオカミの亜種 Canis lupus familiaris とする扱いもある"
    },
    "tier": 1
   },
@@ -7746,7 +8156,7 @@
   },
   {
    "id": "kakkou",
-   "parent": "neoaves",
+   "parent": "cuculiformes",
    "ja": "カッコウ",
    "sci": "Cuculus canorus",
    "jaStatus": "standard",
@@ -7756,7 +8166,7 @@
   },
   {
    "id": "benifuramingo",
-   "parent": "neoaves",
+   "parent": "mirandornithes",
    "ja": "ベニイロフラミンゴ",
    "sci": "Phoenicopterus ruber",
    "jaStatus": "common",
@@ -7768,7 +8178,7 @@
   },
   {
    "id": "aosagi",
-   "parent": "aequornithes",
+   "parent": "pelecaniformes",
    "ja": "アオサギ",
    "sci": "Ardea cinerea",
    "jaStatus": "standard",
@@ -7788,7 +8198,7 @@
   },
   {
    "id": "ahoudori",
-   "parent": "aequornithes",
+   "parent": "procellariiformes",
    "ja": "アホウドリ",
    "sci": "Phoebastria albatrus",
    "jaStatus": "standard",
@@ -7828,7 +8238,7 @@
   },
   {
    "id": "kawasemi",
-   "parent": "afroaves",
+   "parent": "coraciiformes",
    "ja": "カワセミ",
    "sci": "Alcedo atthis",
    "jaStatus": "standard",
@@ -7949,7 +8359,7 @@
   },
   {
    "id": "yoshikirizame",
-   "parent": "selachii",
+   "parent": "carcharhiniformes",
    "ja": "ヨシキリザメ",
    "sci": "Prionace glauca",
    "jaStatus": "standard",
@@ -7959,7 +8369,7 @@
   },
   {
    "id": "megamouth",
-   "parent": "selachii",
+   "parent": "lamniformes",
    "ja": "メガマウスザメ",
    "sci": "Megachasma pelagios",
    "jaStatus": "standard",
@@ -7979,7 +8389,7 @@
   },
   {
    "id": "hoshizame",
-   "parent": "selachii",
+   "parent": "carcharhiniformes",
    "ja": "ホシザメ",
    "sci": "Mustelus manazo",
    "jaStatus": "standard",
@@ -8086,7 +8496,7 @@
   },
   {
    "id": "kinmedai",
-   "parent": "euteleostei",
+   "parent": "beryciformes",
    "ja": "キンメダイ",
    "sci": "Beryx splendens",
    "jaStatus": "standard",
@@ -8106,7 +8516,7 @@
   },
   {
    "id": "ryuuguunotsukai",
-   "parent": "euteleostei",
+   "parent": "lampriformes",
    "ja": "リュウグウノツカイ",
    "sci": "Regalecus russellii",
    "jaStatus": "standard",
@@ -8250,7 +8660,7 @@
   },
   {
    "id": "suzuki",
-   "parent": "percomorpha",
+   "parent": "acropomatiformes",
    "ja": "スズキ",
    "sci": "Lateolabrax japonicus",
    "jaStatus": "standard",
@@ -8307,7 +8717,7 @@
   },
   {
    "id": "mutsugorou",
-   "parent": "gobiiformes",
+   "parent": "oxudercidae",
    "ja": "ムツゴロウ",
    "sci": "Boleophthalmus pectinirostris",
    "jaStatus": "standard",
@@ -8317,7 +8727,7 @@
   },
   {
    "id": "kiankou",
-   "parent": "percomorpha",
+   "parent": "lophiiformes",
    "ja": "キアンコウ",
    "sci": "Lophius litulon",
    "jaStatus": "standard",
@@ -8676,7 +9086,7 @@
   },
   {
    "id": "tokojirami",
-   "parent": "hemiptera",
+   "parent": "heteroptera",
    "ja": "トコジラミ",
    "sci": "Cimex lectularius",
    "jaStatus": "standard",
@@ -8688,7 +9098,7 @@
   },
   {
    "id": "hebitombo",
-   "parent": "holometabola",
+   "parent": "neuropterida",
    "ja": "ヘビトンボ",
    "sci": "Protohermes grandis",
    "jaStatus": "standard",
@@ -9022,6 +9432,1801 @@
    "aliases": [],
    "fact": "小型のジンドウイカ属のイカ。",
    "tier": 4
+  },
+  {
+   "id": "yotaka",
+   "parent": "strisores",
+   "ja": "ヨタカ",
+   "sci": "Caprimulgus jotaka",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夜に飛びながら虫を捕らえる。昼は枝の上で木の皮のような姿でじっとしている。",
+   "tier": 4
+  },
+  {
+   "id": "amatsubame",
+   "parent": "strisores",
+   "ja": "アマツバメ",
+   "sci": "Apus pacificus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ほとんど地上に降りず、飛びながら暮らす。ツバメとは別の目。",
+   "tier": 4
+  },
+  {
+   "id": "nogan",
+   "parent": "neoaves",
+   "ja": "ノガン",
+   "sci": "Otis tarda",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "草原にすむ大型の鳥。飛べる鳥の中では最も重い部類。",
+   "tier": 4
+  },
+  {
+   "id": "hototogisu",
+   "parent": "cuculiformes",
+   "ja": "ホトトギス",
+   "sci": "Cuculus poliocephalus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ウグイスの巣に托卵する。「特許許可局」と聞きなされる声で鳴く。",
+   "tier": 3
+  },
+  {
+   "id": "sakei",
+   "parent": "columbimorphae",
+   "ja": "サケイ",
+   "sci": "Syrrhaptes paradoxus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中央アジアの乾燥地にすむ。日本にはまれに渡来する。",
+   "tier": 4
+  },
+  {
+   "id": "ban",
+   "parent": "gruiformes",
+   "ja": "バン",
+   "sci": "Gallinula chloropus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤い額をもつクイナの仲間。水辺の草むらで暮らす。",
+   "tier": 3
+  },
+  {
+   "id": "kaitsuburi",
+   "parent": "mirandornithes",
+   "ja": "カイツブリ",
+   "sci": "Tachybaptus ruficollis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "池や湖で潜って魚を捕らえる小型の水鳥。",
+   "tier": 3
+  },
+  {
+   "id": "kochidori",
+   "parent": "charadriiformes",
+   "ja": "コチドリ",
+   "sci": "Charadrius dubius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "河原や埋め立て地の地面に卵を産む。目のまわりが黄色い。",
+   "tier": 4
+  },
+  {
+   "id": "akaonettaichou",
+   "parent": "neoaves",
+   "ja": "アカオネッタイチョウ",
+   "sci": "Phaethon rubricauda",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤くて長い中央の尾羽をもつ海鳥。",
+   "tier": 4
+  },
+  {
+   "id": "abi",
+   "parent": "aequornithes",
+   "ja": "アビ",
+   "sci": "Gavia stellata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "冬に日本の沿岸に来る潜水の得意な水鳥。",
+   "tier": 4
+  },
+  {
+   "id": "oomizunagidori",
+   "parent": "procellariiformes",
+   "ja": "オオミズナギドリ",
+   "sci": "Calonectris leucomelas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本近海の島で繁殖し、外洋で魚を捕らえる。",
+   "tier": 4
+  },
+  {
+   "id": "kawau",
+   "parent": "suliformes",
+   "ja": "カワウ",
+   "sci": "Phalacrocorax carbo",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "潜って魚を捕らえる黒い水鳥。鵜飼いにはウミウが使われる。",
+   "tier": 3
+  },
+  {
+   "id": "katsuodori",
+   "parent": "suliformes",
+   "ja": "カツオドリ",
+   "sci": "Sula leucogaster",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "空から海に飛び込んで魚を捕らえる。",
+   "tier": 4
+  },
+  {
+   "id": "yatsugashira",
+   "parent": "afroaves",
+   "ja": "ヤツガシラ",
+   "sci": "Upupa epops",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "扇のような冠羽をもつ。サイチョウに近い仲間。",
+   "tier": 4
+  },
+  {
+   "id": "buppousou",
+   "parent": "coraciiformes",
+   "ja": "ブッポウソウ",
+   "sci": "Eurystomus orientalis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "青緑色の夏鳥。名前は別の鳥（コノハズク）の鳴き声から誤って付けられた。",
+   "tier": 4
+  },
+  {
+   "id": "akagera",
+   "parent": "piciformes",
+   "ja": "アカゲラ",
+   "sci": "Dendrocopos major",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "木の幹をつついて穴をあけ、中の虫を食べるキツツキ。",
+   "tier": 3
+  },
+  {
+   "id": "rakudamushi",
+   "parent": "neuropterida",
+   "ja": "ラクダムシ",
+   "sci": "Inocellia japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "首のように長い前胸をもつ。幼虫は樹皮の下で他の虫を食べる。",
+   "tier": 4
+  },
+  {
+   "id": "suzumebachinejirebane",
+   "parent": "holometabola",
+   "ja": "スズメバチネジレバネ",
+   "sci": "Xenos moutoni",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "スズメバチの腹部に寄生する。雌は一生ハチの体から出ない。",
+   "tier": 4
+  },
+  {
+   "id": "iga",
+   "parent": "lepidoptera",
+   "ja": "イガ",
+   "sci": "Tinea translucens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "幼虫が毛織物などを食べる小さなガ。",
+   "tier": 3
+  },
+  {
+   "id": "shiroarimodoki",
+   "parent": "polyneoptera",
+   "ja": "シロアリモドキ",
+   "sci": "Oligotoma saundersii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "前脚の先から糸を出し、絹のトンネルを作ってその中で暮らす。",
+   "tier": 4
+  },
+  {
+   "id": "caudelljuzuhige",
+   "parent": "polyneoptera",
+   "ja": "コーデルジュズヒゲムシ",
+   "sci": "Spiralizoros caudelli",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "数珠のような触角をもつ小さな昆虫。朽ち木の中で集団で暮らす。",
+   "verify": {
+    "ja": "和名は日本の研究発表（筑波大学）での使用例のみで確認"
+   },
+   "sciSynonyms": [
+    "Zorotypus caudelli"
+   ],
+   "tier": 4
+  },
+  {
+   "id": "bunbukuchagama",
+   "parent": "echinoidea",
+   "ja": "ブンブクチャガマ",
+   "sci": "Schizaster lacunosus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂の中にもぐってすむ、心臓のような形のウニ。",
+   "tier": 4
+  },
+  {
+   "id": "karaiwashi",
+   "parent": "elopomorpha",
+   "ja": "カライワシ",
+   "sci": "Elops hawaiensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "沿岸や河口にすむ細長い魚。",
+   "tier": 4
+  },
+  {
+   "id": "sotoiwashi",
+   "parent": "elopomorpha",
+   "ja": "ソトイワシ",
+   "sci": "Albula argentea",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "浅い砂底の海にすむ銀色の魚。",
+   "tier": 4
+  },
+  {
+   "id": "sokogisu",
+   "parent": "elopomorpha",
+   "ja": "ソコギス",
+   "sci": "Polyacanthonotus challengeri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむ細長い魚。",
+   "tier": 4
+  },
+  {
+   "id": "sekitoriiwashi",
+   "parent": "otomorpha",
+   "ja": "セキトリイワシ",
+   "sci": "Rouleina squamilatera",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむ黒っぽい魚。",
+   "tier": 4
+  },
+  {
+   "id": "nezumigisu",
+   "parent": "ostariophysi",
+   "ja": "ネズミギス",
+   "sci": "Gonorynchus abbreviatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂底にすむ細長い魚。コイやナマズと同じ骨鰾類。",
+   "tier": 4
+  },
+  {
+   "id": "gigi",
+   "parent": "siluriformes",
+   "ja": "ギギ",
+   "sci": "Tachysurus nudiceps",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "西日本の川にすむ。胸びれの棘をこすって「ギーギー」と音を出す。",
+   "tier": 4
+  },
+  {
+   "id": "nigisu",
+   "parent": "euteleostei",
+   "ja": "ニギス",
+   "sci": "Glossanodon semifasciatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "やや深い海にすむ。干物などで食べられる。",
+   "tier": 4
+  },
+  {
+   "id": "houraieso",
+   "parent": "euteleostei",
+   "ja": "ホウライエソ",
+   "sci": "Chauliodus sloani",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "長い牙をもつ深海魚。",
+   "tier": 4
+  },
+  {
+   "id": "shachiburi",
+   "parent": "euteleostei",
+   "ja": "シャチブリ",
+   "sci": "Ateleopus japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "やわらかい体をもつ深海魚。",
+   "tier": 4
+  },
+  {
+   "id": "maeso",
+   "parent": "aulopiformes",
+   "ja": "マエソ",
+   "sci": "Saurida macrolepis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂底にすむ。かまぼこの原料になる。",
+   "tier": 4
+  },
+  {
+   "id": "mizuuo",
+   "parent": "aulopiformes",
+   "ja": "ミズウオ",
+   "sci": "Alepisaurus ferox",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きな背びれと鋭い歯をもつ深海魚。",
+   "tier": 4
+  },
+  {
+   "id": "hadakaiwashi",
+   "parent": "euteleostei",
+   "ja": "ハダカイワシ",
+   "sci": "Diaphus watasei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体に発光器をもつ深海魚。",
+   "tier": 4
+  },
+  {
+   "id": "akamanbou",
+   "parent": "lampriformes",
+   "ja": "アカマンボウ",
+   "sci": "Lampris megalopsis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体の一部を温かく保つことができる魚。マンボウとは別の目。",
+   "tier": 4
+  },
+  {
+   "id": "ginmedai",
+   "parent": "euteleostei",
+   "ja": "ギンメダイ",
+   "sci": "Polymixia japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "あごの下に2本のひげをもつ。",
+   "tier": 4
+  },
+  {
+   "id": "suketoudara",
+   "parent": "gadiformes",
+   "ja": "スケトウダラ",
+   "sci": "Gadus chalcogrammus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "卵巣がたらこや明太子になる。",
+   "tier": 3
+  },
+  {
+   "id": "matsukasauo",
+   "parent": "euteleostei",
+   "ja": "マツカサウオ",
+   "sci": "Monocentris japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "硬いうろこでおおわれ、あごの下に発光器をもつ。",
+   "tier": 4
+  },
+  {
+   "id": "ittoudai",
+   "parent": "beryciformes",
+   "ja": "イットウダイ",
+   "sci": "Sargocentron spinosissimum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤い体と大きな目をもつ。",
+   "tier": 4
+  },
+  {
+   "id": "ashiro",
+   "parent": "ophidiiformes",
+   "ja": "アシロ",
+   "sci": "Ophidion asiro",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂底にすむ細長い魚。",
+   "tier": 4
+  },
+  {
+   "id": "kakureuo",
+   "parent": "ophidiiformes",
+   "ja": "カクレウオ",
+   "sci": "Encheliophis sagamianus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ナマコの体の中に隠れてすむ。",
+   "tier": 4
+  },
+  {
+   "id": "youjiuo",
+   "parent": "syngnathiformes",
+   "ja": "ヨウジウオ",
+   "sci": "Syngnathus schlegeli",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "楊枝のように細長い。雄の腹に卵を抱く。",
+   "tier": 4
+  },
+  {
+   "id": "taunagi",
+   "parent": "percomorpha",
+   "ja": "タウナギ",
+   "sci": "Monopterus albus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ウナギに似た細長い淡水魚。空気呼吸ができる。",
+   "tier": 4
+  },
+  {
+   "id": "kamuruchi",
+   "parent": "percomorpha",
+   "ja": "カムルチー",
+   "sci": "Channa argus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "空気呼吸ができる外来の淡水魚。ライギョとも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "tougorouiwashi",
+   "parent": "percomorpha",
+   "ja": "トウゴロウイワシ",
+   "sci": "Doboatherina bleekeri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "沿岸を群れで泳ぐ小魚。イワシとは別の目。",
+   "tier": 4
+  },
+  {
+   "id": "kadayashi",
+   "parent": "percomorpha",
+   "ja": "カダヤシ",
+   "sci": "Gambusia affinis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "子を産む外来の小魚。蚊の幼虫を食べる。",
+   "tier": 3
+  },
+  {
+   "id": "nairutirapia",
+   "parent": "percomorpha",
+   "ja": "ナイルティラピア",
+   "sci": "Oreochromis niloticus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ原産の外来魚。口の中で卵や稚魚を守る。",
+   "tier": 3
+  },
+  {
+   "id": "bora",
+   "parent": "percomorpha",
+   "ja": "ボラ",
+   "sci": "Mugil cephalus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "成長につれて名前が変わる出世魚。卵巣がからすみになる。",
+   "tier": 3
+  },
+  {
+   "id": "isoginpo",
+   "parent": "blenniiformes",
+   "ja": "イソギンポ",
+   "sci": "Parablennius yatabei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の岩の穴にすむ小魚。",
+   "tier": 4
+  },
+  {
+   "id": "kyuusen",
+   "parent": "labriformes",
+   "ja": "キュウセン",
+   "sci": "Leptojulis poecilepterus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夜は砂にもぐって眠るベラ。",
+   "tier": 4
+  },
+  {
+   "id": "kobudai",
+   "parent": "labriformes",
+   "ja": "コブダイ",
+   "sci": "Bodianus reticulatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雄の額が大きくこぶ状にふくらむ。雌から雄に性転換する。",
+   "tier": 3
+  },
+  {
+   "id": "akamutsu",
+   "parent": "acropomatiformes",
+   "ja": "アカムツ",
+   "sci": "Doederleinia berycoides",
+   "jaStatus": "standard",
+   "aliases": [
+    "ノドグロ"
+   ],
+   "fact": "口の中が黒いことから「のどぐろ」とも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "kaeruankou",
+   "parent": "lophiiformes",
+   "ja": "カエルアンコウ",
+   "sci": "Antennarius striatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "胸びれで海底を歩くように動く。",
+   "tier": 4
+  },
+  {
+   "id": "aburatsunozame",
+   "parent": "selachii",
+   "ja": "アブラツノザメ",
+   "sci": "Squalus suckleyi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背びれの前に棘をもつ。",
+   "tier": 4
+  },
+  {
+   "id": "kikuzame",
+   "parent": "selachii",
+   "ja": "キクザメ",
+   "sci": "Echinorhinus brucus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体に菊の花のような大きな突起が散らばる深海のサメ。",
+   "tier": 4
+  },
+  {
+   "id": "kasuzame",
+   "parent": "selachii",
+   "ja": "カスザメ",
+   "sci": "Squatina japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "エイのように平たい体をもつサメ。",
+   "tier": 4
+  },
+  {
+   "id": "gangiei",
+   "parent": "batoidea",
+   "ja": "ガンギエイ",
+   "sci": "Dipturus chinensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ひし形の体をもつエイ。卵を殻に包んで産む。",
+   "tier": 4
+  },
+  {
+   "id": "sakatazame",
+   "parent": "batoidea",
+   "ja": "サカタザメ",
+   "sci": "Rhinobatos schlegelii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "サメのような体の後半をもつエイ。",
+   "tier": 4
+  },
+  {
+   "id": "isogokai",
+   "parent": "nereididae",
+   "ja": "イソゴカイ",
+   "sci": "Perinereis nuntia",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "岩の多い海岸にすむゴカイ。",
+   "tier": 3
+  },
+  {
+   "id": "aogokai",
+   "parent": "nereididae",
+   "ja": "アオゴカイ",
+   "sci": "Perinereis aibuhitensis",
+   "jaStatus": "standard",
+   "aliases": [
+    "アオイソメ"
+   ],
+   "fact": "「アオイソメ」の名で釣り餌として売られる。",
+   "tier": 3
+  },
+  {
+   "id": "chirori",
+   "parent": "phyllodocida",
+   "ja": "チロリ",
+   "sci": "Glycera chirori",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "口を勢いよく突き出して獲物を捕らえる。釣り餌にもされる。",
+   "tier": 3
+  },
+  {
+   "id": "yachiurokomushi",
+   "parent": "phyllodocida",
+   "ja": "ヤチウロコムシ",
+   "sci": "Lepidonotus elongatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中がうろこのような板でおおわれた多毛類。",
+   "tier": 4
+  },
+  {
+   "id": "oyogigokai",
+   "parent": "phyllodocida",
+   "ja": "オヨギゴカイ",
+   "sci": "Tomopteris pacifica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明な体で一生を海中で泳いで暮らす。",
+   "tier": 4
+  },
+  {
+   "id": "oniisome",
+   "parent": "eunicida",
+   "ja": "オニイソメ",
+   "sci": "Eunice aphroditois",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂に体を埋め、大きなあごで通りかかった魚を捕らえる。長さ1m以上になることもある。",
+   "tier": 3
+  },
+  {
+   "id": "sugokaiisome",
+   "parent": "eunicida",
+   "ja": "スゴカイイソメ",
+   "sci": "Diopatra sugokai",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "貝殻のかけらなどを貼りつけた管の中にすむ。",
+   "tier": 4
+  },
+  {
+   "id": "ibarakanzashi",
+   "parent": "sabellida",
+   "ja": "イバラカンザシ",
+   "sci": "Spirobranchus giganteus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "サンゴに埋まった石灰の管から、色とりどりのらせん状の触手を出す。",
+   "tier": 3
+  },
+  {
+   "id": "kasanekanzashigokai",
+   "parent": "sabellida",
+   "ja": "カサネカンザシゴカイ",
+   "sci": "Hydroides elegans",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "船底などに石灰の管を作って付着する。",
+   "tier": 4
+  },
+  {
+   "id": "tamashikigokai",
+   "parent": "sedentaria",
+   "ja": "タマシキゴカイ",
+   "sci": "Arenicola brasiliensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "干潟の砂にすみ、砂の上にとぐろを巻いたような糞を残す。",
+   "tier": 4
+  },
+  {
+   "id": "mizuhikigokai",
+   "parent": "sedentaria",
+   "ja": "ミズヒキゴカイ",
+   "sci": "Cirriformia tentaculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "泥の中にすみ、糸のような触手を泥の上に広げる。",
+   "tier": 4
+  },
+  {
+   "id": "itogokai",
+   "parent": "sedentaria",
+   "ja": "イトゴカイ",
+   "sci": "Capitella capitata",
+   "jaStatus": "standard",
+   "aliases": [
+    "ナミイトゴカイ"
+   ],
+   "fact": "有機物の多い泥に多く、環境の汚れの目安にされる。",
+   "tier": 4
+  },
+  {
+   "id": "umiisagomushi",
+   "parent": "sedentaria",
+   "ja": "ウミイサゴムシ",
+   "sci": "Lagis bocki",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂粒を貼りつけた円すい形の管の中にすむ。",
+   "tier": 4
+  },
+  {
+   "id": "tsutsuoofelia",
+   "parent": "sedentaria",
+   "ja": "ツツオオフェリア",
+   "sci": "Armandia lanceolata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂の中にすむ小型の多毛類。",
+   "tier": 4
+  },
+  {
+   "id": "tsubasagokai",
+   "parent": "annelida",
+   "ja": "ツバサゴカイ",
+   "sci": "Chaetopterus cautus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "U字形の管の中にすみ、翼のような突起で水流を起こす。",
+   "tier": 4
+  },
+  {
+   "id": "eramimizu",
+   "parent": "clitellata",
+   "ja": "エラミミズ",
+   "sci": "Branchiura sowerbyi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体の後ろにえらをもつ水中のミミズ。",
+   "tier": 4
+  },
+  {
+   "id": "kakapo",
+   "parent": "psittaciformes",
+   "ja": "カカポ",
+   "sci": "Strigops habroptilus",
+   "jaStatus": "standard",
+   "aliases": [
+    "フクロウオウム"
+   ],
+   "fact": "ニュージーランドにすむ飛べないインコ。夜行性で、世界で最も重いインコ。",
+   "sciSynonyms": [
+    "Strigops habroptila"
+   ],
+   "tier": 3
+  },
+  {
+   "id": "youmu",
+   "parent": "psittaciformes",
+   "ja": "ヨウム",
+   "sci": "Psittacus erithacus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカにすむ灰色のインコ。人の言葉をよくまねる。",
+   "tier": 2
+  },
+  {
+   "id": "greenbasilisk",
+   "parent": "squamata",
+   "ja": "グリーンバシリスク",
+   "sci": "Basiliscus plumifrons",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "後ろ脚で水面を走ることができるトカゲ。",
+   "tier": 3
+  },
+  {
+   "id": "nijiboa",
+   "parent": "boidae",
+   "ja": "ニジボア",
+   "sci": "Epicrates cenchria",
+   "jaStatus": "standard",
+   "aliases": [
+    "ブラジルレインボーボア"
+   ],
+   "fact": "うろこが光を受けて虹色に輝くボア。",
+   "tier": 3
+  },
+  {
+   "id": "colombianijiboa",
+   "parent": "boidae",
+   "ja": "コロンビアニジボア",
+   "sci": "Epicrates maurus",
+   "jaStatus": "standard",
+   "aliases": [
+    "コロンビアレインボーボア"
+   ],
+   "fact": "以前はニジボアの亜種とされていたボア。",
+   "verify": {
+    "ja": "和名は Catalogue of Life のみで確認。ペットの通称はコロンビアレインボーボア"
+   },
+   "tier": 4
+  },
+  {
+   "id": "etopirika",
+   "parent": "charadriiformes",
+   "ja": "エトピリカ",
+   "sci": "Fratercula cirrhata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなオレンジ色のくちばしと黄色い飾り羽をもつ海鳥。北海道東部でわずかに繁殖する。",
+   "tier": 3
+  },
+  {
+   "id": "torafukarappa",
+   "parent": "calappidae",
+   "ja": "トラフカラッパ",
+   "sci": "Calappa lophos",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂にもぐるカニ。はさみの突起で巻貝の殻を割って食べる。",
+   "tier": 3
+  },
+  {
+   "id": "meganekarappa",
+   "parent": "calappidae",
+   "ja": "メガネカラッパ",
+   "sci": "Calappa philargius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "甲羅に眼鏡のような模様があるカラッパ。",
+   "tier": 4
+  },
+  {
+   "id": "tanago",
+   "parent": "acheilognathidae",
+   "ja": "タナゴ",
+   "sci": "Acheilognathus melanogaster",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "関東・東北の平野部にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "ichimonjitanago",
+   "parent": "acheilognathidae",
+   "ja": "イチモンジタナゴ",
+   "sci": "Acheilognathus cyanostigma",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体の側面に一本の青い線がある。",
+   "tier": 4
+  },
+  {
+   "id": "itasenpara",
+   "parent": "acheilognathidae",
+   "ja": "イタセンパラ",
+   "sci": "Acheilognathus longipinnis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "国の天然記念物。秋に産卵する。",
+   "tier": 3
+  },
+  {
+   "id": "ootanago",
+   "parent": "acheilognathidae",
+   "ja": "オオタナゴ",
+   "sci": "Acheilognathus macropterus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大陸から入った外来のタナゴ。",
+   "tier": 4
+  },
+  {
+   "id": "kanehira",
+   "parent": "acheilognathidae",
+   "ja": "カネヒラ",
+   "sci": "Acheilognathus rhombeus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本のタナゴでは大型。秋に産卵する。",
+   "tier": 4
+  },
+  {
+   "id": "zenitanago",
+   "parent": "acheilognathidae",
+   "ja": "ゼニタナゴ",
+   "sci": "Acheilognathus typus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "うろこが細かい。数が大きく減っている。",
+   "tier": 4
+  },
+  {
+   "id": "miyakotanago",
+   "parent": "acheilognathidae",
+   "ja": "ミヤコタナゴ",
+   "sci": "Pseudorhodeus tanago",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "関東地方の固有種で国の天然記念物。",
+   "tier": 3
+  },
+  {
+   "id": "yaritanago",
+   "parent": "acheilognathidae",
+   "ja": "ヤリタナゴ",
+   "sci": "Tanakia lanceolata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本で最も広く分布するタナゴの一つ。",
+   "tier": 4
+  },
+  {
+   "id": "aburabote",
+   "parent": "acheilognathidae",
+   "ja": "アブラボテ",
+   "sci": "Tanakia limbata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体が油を塗ったような褐色をしている。",
+   "tier": 4
+  },
+  {
+   "id": "tobihaze",
+   "parent": "oxudercidae",
+   "ja": "トビハゼ",
+   "sci": "Periophthalmus modestus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "干潟の泥の上で暮らし、胸びれで這ったり、尾で跳ねたりする。",
+   "tier": 2
+  },
+  {
+   "id": "warasubo",
+   "parent": "oxudercidae",
+   "ja": "ワラスボ",
+   "sci": "Odontamblyopus lacepedii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本では有明海などの泥干潟にすむ。目は小さく皮膚に埋もれ、口には鋭い歯が並ぶ。",
+   "tier": 3
+  },
+  {
+   "id": "chichibu",
+   "parent": "oxudercidae",
+   "ja": "チチブ",
+   "sci": "Tridentiger obscurus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "河口や内湾の汽水域に多いハゼ。雄が石のすき間などに産みつけられた卵を守る。",
+   "tier": 3
+  },
+  {
+   "id": "shirouo",
+   "parent": "oxudercidae",
+   "ja": "シロウオ",
+   "sci": "Leucopsarion petersii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "春に川をさかのぼって産卵する透明な小魚。シラウオ（シラウオ科）とは別の魚。",
+   "tier": 3
+  },
+  {
+   "id": "ukigori",
+   "parent": "oxudercidae",
+   "ja": "ウキゴリ",
+   "sci": "Gymnogobius urotaenia",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "川や湖にすむハゼ。第1背びれの後ろの端に黒い斑点がある。",
+   "tier": 3
+  },
+  {
+   "id": "kawayoshinobori",
+   "parent": "oxudercidae",
+   "ja": "カワヨシノボリ",
+   "sci": "Rhinogobius flumineus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海に下らず、一生を川で過ごすヨシノボリ。",
+   "tier": 3
+  },
+  {
+   "id": "mimizuhaze",
+   "parent": "oxudercidae",
+   "ja": "ミミズハゼ",
+   "sci": "Luciogobius guttatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体が細長い小さなハゼ。海岸や河口の石のすき間にすむ。",
+   "tier": 4
+  },
+  {
+   "id": "datehaze",
+   "parent": "gobiiformes",
+   "ja": "ダテハゼ",
+   "sci": "Amblyeleotris japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "テッポウエビの仲間が掘った巣穴に同居し、ハゼが見張り役をする。",
+   "tier": 3
+  },
+  {
+   "id": "mizukamakiri",
+   "parent": "nepidae",
+   "ja": "ミズカマキリ",
+   "sci": "Ranatra chinensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "細長い体と鎌のような前脚をもつ水生のカメムシ。前脚で小魚や昆虫を捕らえて体液を吸う。",
+   "tier": 2
+  },
+  {
+   "id": "taikouchi",
+   "parent": "nepidae",
+   "ja": "タイコウチ",
+   "sci": "Laccotrephes japonensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "池や田んぼの浅い水にすむ。腹の先の呼吸管を水面に出して呼吸する。",
+   "tier": 3
+  },
+  {
+   "id": "kooimushi",
+   "parent": "belostomatidae",
+   "ja": "コオイムシ",
+   "sci": "Appasus japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雌が雄の背中に卵を産みつけ、雄が卵を背負って守る。",
+   "tier": 3
+  },
+  {
+   "id": "matsumomushi",
+   "parent": "nepomorpha",
+   "ja": "マツモムシ",
+   "sci": "Notonecta triguttata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中を下にして泳ぐ水生のカメムシ。刺されると痛い。",
+   "tier": 3
+  },
+  {
+   "id": "esakimonkitsunokamemushi",
+   "parent": "heteroptera",
+   "ja": "エサキモンキツノカメムシ",
+   "sci": "Sastragala esakii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中に黄色いハート形の紋がある。雌が卵や幼虫に覆いかぶさって守る。",
+   "tier": 3
+  },
+  {
+   "id": "akasujikamemushi",
+   "parent": "heteroptera",
+   "ja": "アカスジカメムシ",
+   "sci": "Graphosoma rubrolineatum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤と黒の縦縞が目立つ。セリ科の植物によくとまる。",
+   "verify": {
+    "sci": "Catalogue of Life では未確認（GBIF のみ）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "marukamemushi",
+   "parent": "heteroptera",
+   "ja": "マルカメムシ",
+   "sci": "Megacopta punctatissima",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "丸くて小さなカメムシ。クズなどマメ科の植物に群がる。",
+   "verify": {
+    "sci": "近縁の M. cribraria と同種とする見解もある"
+   },
+   "tier": 3
+  },
+  {
+   "id": "yokozunasashigame",
+   "parent": "heteroptera",
+   "ja": "ヨコヅナサシガメ",
+   "sci": "Agriosphodrus dohrni",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中国から入ってきたとされるサシガメ。サクラなどの幹で集団で越冬し、ほかの昆虫の体液を吸う。",
+   "tier": 3
+  },
+  {
+   "id": "momoakaaburamushi",
+   "parent": "sternorrhyncha",
+   "ja": "モモアカアブラムシ",
+   "sci": "Myzus persicae",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "さまざまな作物につく害虫。植物のウイルス病を広める。",
+   "tier": 3,
+   "gbif": 2076179
+  },
+  {
+   "id": "iseriakaigaramushi",
+   "parent": "sternorrhyncha",
+   "ja": "イセリアカイガラムシ",
+   "sci": "Icerya purchasi",
+   "jaStatus": "standard",
+   "aliases": [
+    "ワタフキカイガラムシ"
+   ],
+   "fact": "柑橘類の害虫。天敵のベダリアテントウを導入して抑えた、生物的防除の代表例。",
+   "tier": 4
+  },
+  {
+   "id": "tobiirounka",
+   "parent": "hemiptera",
+   "ja": "トビイロウンカ",
+   "sci": "Nilaparvata lugens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "稲の害虫。梅雨のころ、大陸から気流に乗って日本に飛んでくる。",
+   "tier": 3
+  },
+  {
+   "id": "aobahagoromo",
+   "parent": "hemiptera",
+   "ja": "アオバハゴロモ",
+   "sci": "Geisha distinctissima",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "薄緑色の三角形の翅をもつ。幼虫は白い綿のような蝋をまとう。",
+   "tier": 3
+  },
+  {
+   "id": "heikebotaru",
+   "parent": "lampyridae",
+   "ja": "ヘイケボタル",
+   "sci": "Aquatica lateralis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "田んぼや湿地にすむホタル。幼虫は水中で巻貝を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "gamushi",
+   "parent": "coleoptera",
+   "ja": "ガムシ",
+   "sci": "Hydrophilus acuminatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "池や田んぼにすむ大型の水生甲虫。成虫はおもに水草を食べ、幼虫は巻貝などを捕らえる。",
+   "tier": 3
+  },
+  {
+   "id": "mizusumashi",
+   "parent": "coleoptera",
+   "ja": "ミズスマシ",
+   "sci": "Gyrinus japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "水面をくるくる回るように泳ぐ甲虫。複眼が水面の上と下を見る2つに分かれている。",
+   "verify": {
+    "sci": "Catalogue of Life では未確認（GBIF のみ）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "joubitaki",
+   "parent": "muscicapidae",
+   "ja": "ジョウビタキ",
+   "sci": "Phoenicurus auroreus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "冬に大陸から渡ってくる。雄は胸がオレンジ色で、翼に白い斑がある。日本で繁殖する例も見つかっている。",
+   "tier": 2
+  },
+  {
+   "id": "kibitaki",
+   "parent": "muscicapidae",
+   "ja": "キビタキ",
+   "sci": "Ficedula narcissina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夏に林で繁殖する。雄は眉と腰が黄色く、のどが橙色。",
+   "tier": 3
+  },
+  {
+   "id": "mozu",
+   "parent": "passeriformes",
+   "ja": "モズ",
+   "sci": "Lanius bucephalus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "捕らえた虫やカエルなどを枝に刺しておく「はやにえ」で知られる。秋に鋭い声で高鳴きする。",
+   "tier": 2
+  },
+  {
+   "id": "yairochou",
+   "parent": "passeriformes",
+   "ja": "ヤイロチョウ",
+   "sci": "Pitta nympha",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夏に渡ってきて、西日本などの暗い森で繁殖する。名のとおり羽が多くの色で彩られる。数が少なく絶滅危惧種。",
+   "tier": 3
+  },
+  {
+   "id": "ogamaguchiyotaka",
+   "parent": "strisores",
+   "ja": "オーストラリアガマグチヨタカ",
+   "sci": "Podargus strigoides",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリアにすむ夜行性の鳥。幅の広い口をもち、昼は枝の上で折れた枝のような姿でじっとしている。ヨタカとは別の目（ガマグチヨタカ目）に分けられる。",
+   "tier": 3
+  },
+  {
+   "id": "konohazuku",
+   "parent": "strigiformes",
+   "ja": "コノハズク",
+   "sci": "Otus sunia",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夏に渡ってくる小型のフクロウ。「ブッ・ポウ・ソウ」と鳴き、「声のブッポウソウ」と呼ばれた。",
+   "tier": 3
+  },
+  {
+   "id": "kogera",
+   "parent": "piciformes",
+   "ja": "コゲラ",
+   "sci": "Yungipicus kizuki",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "スズメほどの大きさの小さなキツツキ。都市の公園でも見られる。",
+   "sciSynonyms": [
+    "Dendrocopos kizuki"
+   ],
+   "tier": 2
+  },
+  {
+   "id": "chougenbou",
+   "parent": "falconiformes",
+   "ja": "チョウゲンボウ",
+   "sci": "Falco tinnunculus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小型のハヤブサの仲間。空中で羽ばたいて止まり（停空飛翔）、地上のネズミなどを探す。",
+   "tier": 3
+  },
+  {
+   "id": "okameinko",
+   "parent": "psittaciformes",
+   "ja": "オカメインコ",
+   "sci": "Nymphicus hollandicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリア原産。冠羽と頬の橙色の斑が目立つ。オウム科の仲間で、ペットとして飼われる。",
+   "tier": 2
+  },
+  {
+   "id": "aoashikatsuodori",
+   "parent": "suliformes",
+   "ja": "アオアシカツオドリ",
+   "sci": "Sula nebouxii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鮮やかな青い足をもつ海鳥。雄は求愛のとき足を交互に持ち上げて見せる。ガラパゴス諸島などにすむ。",
+   "tier": 3
+  },
+  {
+   "id": "yamagara",
+   "parent": "paridae",
+   "ja": "ヤマガラ",
+   "sci": "Sittiparus varius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "木の実を蓄える習性がある。人によく慣れ、昔はおみくじを引く芸に使われた。",
+   "sciSynonyms": [
+    "Poecile varius"
+   ],
+   "tier": 2
+  },
+  {
+   "id": "enaga",
+   "parent": "passeriformes",
+   "ja": "エナガ",
+   "sci": "Aegithalos caudatus",
+   "jaStatus": "standard",
+   "aliases": [
+    "シマエナガ"
+   ],
+   "fact": "長い尾をもつ小さな鳥。冬は群れで動く。北海道の亜種シマエナガは顔が真っ白。",
+   "subspeciesAliases": [
+    "シマエナガ"
+   ],
+   "tier": 2
+  },
+  {
+   "id": "misosazai",
+   "parent": "passeriformes",
+   "ja": "ミソサザイ",
+   "sci": "Troglodytes troglodytes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "尾をぴんと立てる小さな茶色の鳥。体の割に大きな声で複雑にさえずる。",
+   "tier": 3
+  },
+  {
+   "id": "rurikakesu",
+   "parent": "passeriformes",
+   "ja": "ルリカケス",
+   "sci": "Garrulus lidthi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "奄美群島の一部にだけすむカラス科の鳥。瑠璃色と赤茶色の羽をもつ。鹿児島県の県鳥。",
+   "tier": 3
+  },
+  {
+   "id": "ooruri",
+   "parent": "muscicapidae",
+   "ja": "オオルリ",
+   "sci": "Cyanoptila cyanomelana",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夏に渡ってきて渓流沿いの林で繁殖する。雄は背中が深い青色で、美しい声でさえずる。",
+   "tier": 2
+  },
+  {
+   "id": "isohiyodori",
+   "parent": "muscicapidae",
+   "ja": "イソヒヨドリ",
+   "sci": "Monticola solitarius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海岸の岩場にすむが、市街地でも見られるようになった。名前に反してヒヨドリではなくヒタキ科の鳥。",
+   "tier": 3
+  },
+  {
+   "id": "rurihitaki",
+   "parent": "muscicapidae",
+   "ja": "ルリビタキ",
+   "sci": "Tarsiger cyanurus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雄は成長すると背中が瑠璃色になる。夏は山地の森、冬は低地で過ごす。",
+   "tier": 3
+  },
+  {
+   "id": "washimimizuku",
+   "parent": "strigiformes",
+   "ja": "ワシミミズク",
+   "sci": "Bubo bubo",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ユーラシアに広く分布する大型のフクロウ。日本では北海道でまれに記録される。",
+   "tier": 2
+  },
+  {
+   "id": "komimizuku",
+   "parent": "strigiformes",
+   "ja": "コミミズク",
+   "sci": "Asio flammeus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "冬に渡ってきて、草原や河原を低く飛んでネズミを探す。昼間も活動する。",
+   "tier": 3
+  },
+  {
+   "id": "ookonohazuku",
+   "parent": "strigiformes",
+   "ja": "オオコノハズク",
+   "sci": "Otus semitorques",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "一年中日本の森にすむ小型のフクロウ。目が橙色。",
+   "tier": 3
+  },
+  {
+   "id": "kantetsu",
+   "parent": "trematoda",
+   "ja": "肝蛭",
+   "sci": "Fasciola hepatica",
+   "jaStatus": "standard",
+   "aliases": [
+    "カンテツ"
+   ],
+   "fact": "ウシやヒツジなどの肝臓の胆管に寄生する大型の吸虫。巻貝を中間宿主とし、水草についた幼虫を食べて感染する。",
+   "verify": {
+    "sci": "日本の肝蛭は F. hepatica と巨大肝蛭 F. gigantica の雑種に由来するとされる系統が多い"
+   },
+   "tier": 4
+  },
+  {
+   "id": "nunomeitomakihitode",
+   "parent": "asteroidea",
+   "ja": "ヌノメイトマキヒトデ",
+   "sci": "Aquilonastra batheri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の石の下などにいる小さなヒトデ。イトマキヒトデと同じイトマキヒトデ科。",
+   "tier": 4
+  },
+  {
+   "id": "togemomijigai",
+   "parent": "asteroidea",
+   "ja": "トゲモミジガイ",
+   "sci": "Astropecten polyacanthus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "モミジガイの仲間で、腕の縁に長い棘が並ぶ。砂底にすみ、フグ毒（テトロドトキシン）をもつ例が報告されている。",
+   "tier": 4
+  },
+  {
+   "id": "sukashikashipan",
+   "parent": "echinoidea",
+   "ja": "スカシカシパン",
+   "sci": "Astriclypeus mannii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "平たい円盤形のウニで、殻に細長い穴が5つ開いている。浅い砂底に潜ってすむ。タコノマクラと同じタコノマクラ目。",
+   "tier": 3
+  },
+  {
+   "id": "goshikiebi",
+   "parent": "achelata",
+   "ja": "ゴシキエビ",
+   "sci": "Panulirus versicolor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イセエビの仲間。体に青・白・黒などの模様があり、サンゴ礁にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "nishikiebi",
+   "parent": "achelata",
+   "ja": "ニシキエビ",
+   "sci": "Panulirus ornatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イセエビの仲間で大型になる。脚に黄色と黒の縞模様がある。",
+   "tier": 3
+  },
+  {
+   "id": "uchiwaebi",
+   "parent": "achelata",
+   "ja": "ウチワエビ",
+   "sci": "Ibacus ciliatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "セミエビの仲間。体が平たく、うちわのような形をしている。砂泥底にすみ、食用にされる。",
+   "tier": 3
+  },
+  {
+   "id": "zouriebi",
+   "parent": "achelata",
+   "ja": "ゾウリエビ",
+   "sci": "Parribacus japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "セミエビの仲間。平たい体が草履に似る。岩礁にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "akazaebi",
+   "parent": "astacidea",
+   "ja": "アカザエビ",
+   "sci": "Metanephrops japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "細長いはさみをもつ赤いエビ。やや深い海の泥底に穴を掘ってすむ。食用にされる。",
+   "tier": 2
+  },
+  {
+   "id": "uchidazarigani",
+   "parent": "astacidea",
+   "ja": "ウチダザリガニ",
+   "sci": "Pacifastacus leniusculus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米原産のザリガニ。食用として持ち込まれ、北海道などで野生化した。特定外来生物。",
+   "tier": 2
+  },
+  {
+   "id": "botanebi",
+   "parent": "caridea",
+   "ja": "ボタンエビ",
+   "sci": "Pandalus nipponensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "やや深い海にすむタラバエビ科のエビ。市場で「ボタンエビ」として売られるものの多くは近縁のトヤマエビ。",
+   "tier": 2
+  },
+  {
+   "id": "toyamaebi",
+   "parent": "caridea",
+   "ja": "トヤマエビ",
+   "sci": "Pandalus hypsinotus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北の海にすむタラバエビ科のエビ。北海道などでボタンエビの名で売られる。",
+   "tier": 3
+  },
+  {
+   "id": "teppouebi",
+   "parent": "caridea",
+   "ja": "テッポウエビ",
+   "sci": "Alpheus brevicristatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "片方の大きなはさみを勢いよく閉じて、パチンと大きな音を出す。干潟などに穴を掘ってすむ。",
+   "tier": 2
+  },
+  {
+   "id": "sujiebi",
+   "parent": "caridea",
+   "ja": "スジエビ",
+   "sci": "Palaemon paucidens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "川や池にすむ透明なエビ。体に黒い縞がある。",
+   "tier": 2
+  },
+  {
+   "id": "minaminumaebi",
+   "parent": "caridea",
+   "ja": "ミナミヌマエビ",
+   "sci": "Neocaridina denticulata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "川や池にすむ小さなヌマエビの仲間。卵からいきなり小さなエビの姿で生まれる。",
+   "tier": 2
+  },
+  {
+   "id": "furisodeebi",
+   "parent": "caridea",
+   "ja": "フリソデエビ",
+   "sci": "Hymenocera picta",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "振袖のように広がったはさみをもつ。ヒトデを食べる。",
+   "tier": 3
+  },
+  {
+   "id": "otohimeebi",
+   "parent": "decapoda",
+   "ja": "オトヒメエビ",
+   "sci": "Stenopus hispidus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤と白の縞模様のエビ。魚の体についた寄生虫などを食べる掃除エビとして知られる。",
+   "tier": 3
+  },
+  {
+   "id": "shibaebi",
+   "parent": "dendrobranchiata",
+   "ja": "シバエビ",
+   "sci": "Metapenaeus joyneri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "クルマエビの仲間。内湾の砂泥底にすみ、食用にされる。",
+   "tier": 3
+  },
+  {
+   "id": "aburagani",
+   "parent": "anomura",
+   "ja": "アブラガニ",
+   "sci": "Paralithodes platypus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "タラバガニと同じ属のヤドカリの仲間。タラバガニより甲羅の色が青みがかる。",
+   "tier": 3
+  },
+  {
+   "id": "somenyadokari",
+   "parent": "anomura",
+   "ja": "ソメンヤドカリ",
+   "sci": "Dardanus pedunculatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "貝殻にイソギンチャクをつけて背負うヤドカリ。イソギンチャクは身を守るのに役立つ。",
+   "tier": 3
+  },
+  {
+   "id": "okayadokari",
+   "parent": "anomura",
+   "ja": "オカヤドカリ",
+   "sci": "Coenobita cavipes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "陸で暮らすヤドカリ。オカヤドカリの仲間は天然記念物に指定されている。",
+   "tier": 2
+  },
+  {
+   "id": "benizuwaigani",
+   "parent": "brachyura",
+   "ja": "ベニズワイガニ",
+   "sci": "Chionoecetes japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ズワイガニより深い海にすむ。ゆでる前から甲羅が赤い。",
+   "tier": 2
+  },
+  {
+   "id": "chuugokumokuzugani",
+   "parent": "brachyura",
+   "ja": "チュウゴクモクズガニ",
+   "sci": "Eriocheir sinensis",
+   "jaStatus": "standard",
+   "aliases": [
+    "上海蟹",
+    "シャンハイガニ"
+   ],
+   "fact": "モクズガニに近い種で、中国では「上海蟹（シャンハイガニ）」として食べられる。日本では特定外来生物。",
+   "tier": 2
+  },
+  {
+   "id": "amiminokogirigazami",
+   "parent": "brachyura",
+   "ja": "アミメノコギリガザミ",
+   "sci": "Scylla serrata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マングローブの泥地などにすむ大型のカニ。はさみが大きく、食用にされる。",
+   "tier": 3
+  },
+  {
+   "id": "ishigani",
+   "parent": "brachyura",
+   "ja": "イシガニ",
+   "sci": "Charybdis japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ガザミに近いワタリガニの仲間。岩の多い浅い海にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "asahigani",
+   "parent": "brachyura",
+   "ja": "アサヒガニ",
+   "sci": "Ranina ranina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "甲羅が縦に長く、朱色をしたカニ。砂に潜ってすむ。食用にされる。",
+   "tier": 3
+  },
+  {
+   "id": "heikegani",
+   "parent": "brachyura",
+   "ja": "ヘイケガニ",
+   "sci": "Heikeopsis japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "甲羅の凹凸が怒った人の顔に見える。平家の武者の怨念という言い伝えから名がついた。",
+   "tier": 2
+  },
+  {
+   "id": "isogani",
+   "parent": "brachyura",
+   "ja": "イソガニ",
+   "sci": "Hemigrapsus sanguineus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の石の下などにふつうにいる小さなカニ。",
+   "tier": 2
+  },
+  {
+   "id": "akategani",
+   "parent": "brachyura",
+   "ja": "アカテガニ",
+   "sci": "Chiromantes haematocheir",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "はさみが赤いカニ。海辺近くの陸で暮らし、夏の夜に海へ下りて幼生を放つ。",
+   "tier": 2
+  },
+  {
+   "id": "benkeigani",
+   "parent": "brachyura",
+   "ja": "ベンケイガニ",
+   "sci": "Orisarma intermedium",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "河口近くの陸で暮らすカニ。甲羅が赤みを帯びる。",
+   "tier": 3
+  },
+  {
+   "id": "shiomaneki",
+   "parent": "brachyura",
+   "ja": "シオマネキ",
+   "sci": "Tubuca arcuata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雄の片方のはさみがとても大きい。干潟ではさみを振る様子が潮を招くように見える。",
+   "tier": 2
+  },
+  {
+   "id": "ashiharagani",
+   "parent": "brachyura",
+   "ja": "アシハラガニ",
+   "sci": "Helice tridens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "河口のヨシ原などにすむカニ。",
+   "tier": 3
+  },
+  {
+   "id": "kometsukigani",
+   "parent": "brachyura",
+   "ja": "コメツキガニ",
+   "sci": "Scopimera globosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂浜の干潟にすむ小さなカニ。砂を食べて残りを団子にして並べる。",
+   "tier": 3
+  },
+  {
+   "id": "chigogani",
+   "parent": "brachyura",
+   "ja": "チゴガニ",
+   "sci": "Ilyoplax pusilla",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "泥の干潟にすむ小さなカニ。雄ははさみを上げ下げして求愛する。",
+   "tier": 3
+  },
+  {
+   "id": "minamikometsukigani",
+   "parent": "brachyura",
+   "ja": "ミナミコメツキガニ",
+   "sci": "Mictyris guinotae",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南の島の干潟に群れでいる青いカニ。前向きに歩く。",
+   "tier": 3
+  },
+  {
+   "id": "mamekobushigani",
+   "parent": "brachyura",
+   "ja": "マメコブシガニ",
+   "sci": "Pyrhila pisum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "丸く小さな甲羅をもつカニ。内湾の干潟にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "subesubemanjuugani",
+   "parent": "brachyura",
+   "ja": "スベスベマンジュウガニ",
+   "sci": "Atergatis floridus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯にすむ、つるりとした丸い甲羅のカニ。麻痺性貝毒やフグ毒をもつことがあり、食べると危険。",
+   "tier": 2
+  },
+  {
+   "id": "burihadamushi",
+   "parent": "monopisthocotyla",
+   "ja": "ブリハダムシ",
+   "sci": "Benedenia seriolae",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ブリなどの体表につく単生類。養殖のブリ類で増えて問題になる。",
+   "tier": 4
+  },
+  {
+   "id": "hiramesinsakatemushi",
+   "parent": "polyopisthocotyla",
+   "ja": "ヒラメシンサカテムシ",
+   "sci": "Neoheterobothrium hirame",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ヒラメのえらや口の中に寄生し、貧血を起こさせる。",
+   "tier": 4
+  },
+  {
+   "id": "futagomushi",
+   "parent": "polyopisthocotyla",
+   "ja": "フタゴムシ",
+   "sci": "Eudiplozoon nipponicum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "コイなどのえらにつく。2匹の幼虫が出会って体が合わさり、一生X字形につながったまま暮らす。",
+   "tier": 3
   }
  ]
 }
