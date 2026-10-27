@@ -30,6 +30,9 @@
 @media (prefers-color-scheme: dark) { :root.hard:not([data-theme="light"]) { --bg: #1a0d0d; --surface: #261414; --ink: #f4e6e3; --muted: #b79c97; --line: #4a2c2a; --accent: #ff6b73; --accent-soft: #4a1a1e; --hot: #c9a0ff; --hot-soft: #33224a; color-scheme: dark } }
 :root.hard[data-theme="dark"] { --bg: #1a0d0d; --surface: #261414; --ink: #f4e6e3; --muted: #b79c97; --line: #4a2c2a; --accent: #ff6b73; --accent-soft: #4a1a1e; --hot: #c9a0ff; --hot-soft: #33224a; color-scheme: dark }
 
+/* 魚編表示中だけの配色（html に class="fish" が付く）。夜の海：ライト・ダークどちらでも濃紺の地に水色の枝、黄色の「？」 */
+:root.fish { --bg: #0a1830; --surface: #11234a; --ink: #e6eefa; --muted: #a3b5d1; --line: #294068; --accent: #62c6ff; --accent-soft: #173763; --hot: #ffd166; --hot-soft: #3d3519; color-scheme: dark }
+
 * { box-sizing: border-box }
 body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.6;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px }
