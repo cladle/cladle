@@ -22,9 +22,7 @@ function hintsHTML() {
   if (G.gAt) { const k = SP.filter(s => s.parent === N[G.target].parent && !G.guesses.includes(s.id)).length;
     out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
-  else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
   if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : BIG() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
-  else if (n >= HINT2) out.push(`<button class="btn ghost hintbtn" data-hint="2">💡 ヒント2</button>`);
   return out.join("");
 }
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }

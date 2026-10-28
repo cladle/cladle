@@ -152,9 +152,14 @@ function maskFact(id) {
   for (const w of [s.ja, ...(s.aliases || []), s.sci, s.sci.split(" ")[0], ...(s.sciSynonyms || []).flatMap(x => [x, x.split(" ")[0]])].filter(w => w && w.length > 1).sort((a, b) => b.length - a.length)) t = t.split(w).join("〇〇");
   return t;
 }
-// 降参・別の問題（押し間違いで消えないよう、2回押して決める）
+// 途中のボタンは1列にまとめる：ヒント（押すたびに次の段階）と、降参（フリーは1回目の推測までは別の問題）
+// 降参・別の問題は押し間違いで消えないよう、2回押して決める
 function actionsHTML() {
   if (G.done) return mode === "free" ? `<button class="btn" data-act="next">次の問題</button>` : "";
-  return (mode === "free" ? `<button class="btn ghost" data-act="reset">別の問題にする</button>` : "")
-    + (G.gAt ? `<button class="btn ghost" data-act="reveal">答えを見る</button>` : G.guesses.length ? `<button class="btn ghost" data-act="giveup">降参する</button>` : "");
+  const n = G.guesses.length;
+  const hint = !G.h1 && n >= HINT1 ? `<button class="btn ghost hintbtn" data-hint="1">💡 ヒント</button>`
+    : G.h1 && !G.h2 && n >= HINT2 ? `<button class="btn ghost hintbtn" data-hint="2">💡 もう1つヒント</button>` : "";
+  return hint + (G.gAt ? `<button class="btn ghost" data-act="reveal">答えを見る</button>`
+    : n ? `<button class="btn ghost" data-act="giveup">降参する</button>`
+    : mode === "free" ? `<button class="btn ghost" data-act="reset">別の問題にする</button>` : "");
 }

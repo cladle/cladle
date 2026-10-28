@@ -5,6 +5,7 @@ let view = "daily";
 function setView(v) {
   view = v;
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
+  document.querySelectorAll(".ico").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
   $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto"; $("#extra").hidden = v !== "extra";
   if (v === "extra") $("#extraDoc").innerHTML = extraHTML();
   demoStop(); if (v === "howto") demoPlay();
@@ -13,7 +14,7 @@ function setView(v) {
 }
 
 function wire() {
-  document.querySelectorAll("nav button").forEach(b => b.onclick = () => { if (b.dataset.v !== view) { track("tab-" + b.dataset.v); zkSearched = false; } setView(b.dataset.v); });
+  document.querySelectorAll("nav button, .ico").forEach(b => b.onclick = () => { if (b.dataset.v !== view) { track("tab-" + b.dataset.v); zkSearched = false; } setView(b.dataset.v); });
   const inp = $("#guess");
   inp.addEventListener("input", showSugg);
   inp.addEventListener("keydown", e => {
@@ -88,9 +89,9 @@ function applyLevel() {
   document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH()); document.documentElement.classList.toggle("bird", BIRD()); document.documentElement.classList.toggle("insect", INSECT());
   $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
-  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：日本の魚を中心に ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
-  if (BIRD()) $("#levelNote").innerHTML = `<b>鳥編（試作）</b>：鳥 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
-  if (INSECT()) $("#levelNote").innerHTML = `<b>昆虫編（試作）</b>：昆虫 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
+  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：魚類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
+  if (BIRD()) $("#levelNote").innerHTML = `<b>鳥編（試作）</b>：鳥類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
+  if (INSECT()) $("#levelNote").innerHTML = `<b>昆虫編（試作）</b>：昆虫類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
@@ -115,7 +116,6 @@ loadData().then(async data => {
   $("#level").addEventListener("pointerdown", () => { if (!HARD()) prefetchHard()?.catch(() => {}); });
   if (!HARD() && store.get("dk-hard-stats")) (window.requestIdleCallback || (f => setTimeout(f, 3000)))(() => prefetchHard()?.catch(() => {}));
   renderZukan();
-  if (INSECT()) $("#levelNote").innerHTML = `<b>昆虫編（試作）</b>：昆虫 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
   $("#demoPrev").onclick = () => { demoStop(); demoShow(demoI - 1, false); };
