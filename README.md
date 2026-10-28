@@ -28,6 +28,7 @@
 | `tools/hard/` | ゲキムズのデータの作り方（`tools/hard/README.md`） |
 | `tools/fish/make_fish.py` | 魚編のデータ `data-fish.json` を、ゲキムズのデータから魚だけ切り出して作る |
 | `tools/check.py` | 公開前の確認（送るたびに GitHub が自動で動かす） |
+| `tools/stamp.py` | 公開するときに、css/・js/ の読み込みに中身の印（`?v=…`）を付ける（GitHub が自動で動かす。手では動かさない） |
 | `docs/SCHEMA.md`, `docs/SOURCES.md` | データの形式と、名前の出典 |
 
 JavaScript は上の表の順に読み込まれます。後のファイルは、前のファイルで作った関数や変数をそのまま使えます。
