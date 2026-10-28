@@ -1916,4 +1916,20 @@ _find("schlegelaogaeru").setdefault("sciSynonyms", []).append("Rhacophorus schle
 _find("amimenishikihebi").setdefault("sciSynonyms", []).append("Python reticulatus")
 _find("yariika").setdefault("sciSynonyms", []).append("Loligo bleekeri")
 _find("hakusenshiomaneki").setdefault("sciSynonyms", []).append("Uca lactea")
+# 節目と種の説明を最新の分類に合わせる（2026-10-28）。文の直しは各版に反映し、版は上げない。
+edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（有顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
+edit("spiralia", polytomy="扁形動物・腹毛動物・有顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
+edit("anguilliformes", desc="ウナギ・アナゴ・ウツボ・ハモ。幼生はレプトセファルス。")
+edit("nihonunagi", fact="マリアナ諸島西方の海で産卵し、レプトセファルス幼生として日本へ来る。")
+edit("muscicapidae", desc="ヒタキの仲間の小鳥。ツグミ科に近い。ジョウビタキ・キビタキ・オオルリなど。")
+edit("dictyoptera", desc="ゴキブリ・シロアリ・カマキリ。ゴキブリとカマキリは卵を卵鞘にまとめて産む。")
+edit("thecostraca", desc="フジツボやカメノテなど。幼生は泳ぐが、成体の多くは岩などに固着する。")
+edit("senmohirahamushi", fact="体の構造が動物の中でも最も単純な部類。2008年に板形動物で初めてゲノムが読まれ、多くの発生関連遺伝子をもつことが分かった。")
+edit("waokitsunezaru", fact="マダガスカルにすむキツネザルの仲間（曲鼻猿類）。尾に白黒の輪の模様がある。")
+# タコノマクラ目（Clypeasteroida）とスカシカシパンなどのカシパン類（Scutelloida）は別の系統（Mongiardino Koch et al. 2022、WoRMS）
+edit("sukashikashipan", fact="平たい円盤形のウニで、殻に細長い穴が5つ開いている。浅い砂底に潜ってすむ。タコノマクラに似るが、分子系統の研究を受けて今の分類ではタコノマクラ目とは別の目に置かれる。")
+edit("sukumiringogai", fact="南米原産の淡水の巻貝。食用に持ち込まれて野生化し、水田のイネを食べる害貝になった。ジャンボタニシとも呼ばれるが、タニシ科ではなくリンゴガイ科の貝。")
+# 置き場所の直し（予約中の版に入れる）。ボアコンストリクターはボア科（ReptileDB）、ソメワケウミクワガタは等脚目ウミクワガタ科（WoRMS）
+move("boidae", "boa")
+move("isopoda", "somewakeumikuwagata")
 META["datasetVersion"] = "0.3.16.1"  # 0.3.16 のままだと10/29〜11/06に漏れ1日のため .1。 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
