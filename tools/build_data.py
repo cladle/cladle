@@ -189,7 +189,7 @@ C("clupeocephala", "teleostei", "Clupeocephala", "Clupeocephala", "クレード"
 S("maiwashi", "clupeocephala", "マイワシ", "Sardinops melanostictus", "数十年周期で漁獲量が大きく増減する。", ["イワシ", "Sardinops sagax"],
   v={"sci": "GBIF・WoRMS は世界のマイワシ属を Sardinops sagax 1種にまとめる。日本の文献では S. melanostictus を使うことが多く、ここでは後者を採用（要確認）"})
 S("koi", "clupeocephala", "コイ", "Cyprinus carpio", "喉の奥にある咽頭歯で餌をすりつぶす。")
-C("percomorpha", "clupeocephala", "スズキ系", "Percomorpha", "クレード", "棘鰭類の中心となる大きなグループ。スズキ目（Perciformes）より広く、フグ目・ダツ目・ハゼ目・カレイ目など多くの目を含む。")
+C("percomorpha", "clupeocephala", "スズキ系", "Percomorpha", "クレード", "棘鰭類の中心となる大きなグループ。ペルカ目（Perciformes）のほか、フグ目・ダツ目・ハゼ目・アジ目（ヒラメ・カレイ類を含む）など多くの目を含む。")
 S("minamimedaka", "percomorpha", "ミナミメダカ", "Oryzias latipes", "日本のメダカは2種に分けられ、本種は本州の太平洋側以南に分布する。", ["メダカ"])
 S("kuromaguro", "percomorpha", "クロマグロ", "Thunnus orientalis", "体温を水温より高く保つ仕組みをもつ。", ["マグロ", "ホンマグロ"])
 S("tatsunootoshigo", "percomorpha", "タツノオトシゴ", "Hippocampus coronatus", "雄の育児嚢で卵を育てる。")
