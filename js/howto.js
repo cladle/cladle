@@ -28,6 +28,15 @@ const DEMOS = { normal: { target: "Trypoxylus dichotomus", guesses: ["Homo sapie
     "💭 カモメとも別の枝。タカやスズメの仲間、オオタカはどうだ？",
     "💭 Telluraves まで来た。種の多いスズメ目の、カラスは？",
     "💭 スズメ目の中。小さくて目のまわりが白い、メジロだ！",
+    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
+  insect: { target: "Coccinella septempunctata", guesses: ["Lepisma saccharinum", "Orthetrum albistylum", "Locusta migratoria", "Pieris rapae", "Trypoxylus dichotomus", "Coccinella septempunctata"],
+  think: [
+    "💭 まずは遠い虫で、大きく分けよう。はねの無いセイヨウシミはどうだ？",
+    "💭 はねのある昆虫（有翅昆虫亜綱）の中。シオカラトンボは？",
+    "💭 トンボとも別の枝。新翅類の中の、トノサマバッタは？",
+    "💭 バッタとも別。完全変態類の中の、モンシロチョウはどうだ？",
+    "💭 チョウとも別の枝。種の多いコウチュウ目の、カブトムシは？",
+    "💭 多食亜目まで来た。赤くて星が七つ、ナナホシテントウだ！",
     "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] } };
 let DEMO = null;
 function demoData() {
@@ -36,14 +45,14 @@ function demoData() {
 }
 let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
-  return (HARD() ? hardHowto() : FISH() ? fishHowto() : BIRD() ? birdHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
+  return (HARD() ? hardHowto() : FISH() ? fishHowto() : BIRD() ? birdHowto() : INSECT() ? insectHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
     <li><b>動物を入れる</b><span>答えの動物との共通の祖先がわかり、系統樹に枝が増えます。</span></li>
     <li><b>緑の点の中を探す</b><span>答えの動物は緑の点より先にいます。その中の、まだ試していない仲間を入れます。</span></li>
     <li><b>${MAX} 回以内に当てる</b><span>${HINT1} 回目と ${HINT2} 回目のあとにヒントが使えます。</span></li></ol>
     <div class="legend"><span><i class="lg-dot"></i>答えの動物がいる範囲</span><span><i class="lg-on"></i>答えへの道</span><span><i class="lg-goal"></i><b>？</b> 答えの動物</span><span>名前を押すと説明</span></div></section>
   <details class="doc-more"><summary>くわしいルール</summary><ul>
     <li>名前はひらがな・カタカナ・学名・別名のどれでも探せます。</li>
-    <li>左端が${FISH() ? "脊椎動物" : BIRD() ? "鳥" : "動物全体"}の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
+    <li>左端が${FISH() ? "脊椎動物" : BIRD() ? "鳥" : INSECT() ? "昆虫" : "動物全体"}の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
     <li>「新しい手がかりはありません」は、緑の点より外側の動物を入れたということです。</li>
     <li>ヒント1は残りの候補の数、ヒント2は一歩先の節目です。ヒントを使っても回数は減りません。</li>
     <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
@@ -65,6 +74,14 @@ function birdHowto() {
     <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
     <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
     <li>和名のない属は学名で表示します。</li></ul></section>`;
+}
+function insectHowto() {
+  return `<section class="hard-rule"><h2>昆虫編（試作）</h2><ul>
+    <li>昆虫 ${SP.length.toLocaleString()} 種から出題します。ほとんどは環境省「種の多様性調査」の対象種（トンボ・チョウ・ガ・セミと水生カメムシ・甲虫）で、ほかにふつうモードの昆虫、論文から足したコガネムシ上科、海辺の昆虫などを入れています。推測にも全種が使え、どの種も同じ確率で出ます。</li>
+    <li>系統樹の左端は昆虫の祖先で、はねの無いイシノミ・シミと、はねのある昆虫（有翅昆虫亜綱）に分かれます。目・科の並びは Catalogue of Life に、目より上は昆虫の系統ゲノム解析（Misof et al. 2014）に従っています。</li>
+    <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
+    <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
+    <li>和名の確かめられない目・科と、和名のない属は学名で表示します。</li></ul></section>`;
 }
 function hardHowto() {
   const s = D.meta.selection;

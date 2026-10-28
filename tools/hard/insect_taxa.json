@@ -1,0 +1,1517 @@
+{
+ "source": "目・科の並び：Catalogue of Life（ChecklistBank 3LR）。和名：環境省（1997）種の多様性調査（動物分布調査）対象種一覧、無ければ Wikidata・GBIF・iNaturalist の多数決",
+ "orders": {
+  "Dermaptera": {
+   "under": "Polyneoptera",
+   "ja": "ハサミムシ目"
+  },
+  "Megaloptera": {
+   "under": "Neuropterida",
+   "ja": "ヘビトンボ目"
+  },
+  "Ephemeroptera": {
+   "under": "Pterygota",
+   "ja": "カゲロウ目"
+  },
+  "Notoptera": {
+   "under": "Polyneoptera",
+   "ja": "Notoptera"
+  },
+  "Raphidioptera": {
+   "under": "Neuropterida",
+   "ja": "Raphidioptera"
+  },
+  "Zygentoma": {
+   "under": "Insecta",
+   "ja": "Zygentoma"
+  },
+  "Archaeognatha": {
+   "under": "Insecta",
+   "ja": "イシノミ目"
+  },
+  "Mantodea": {
+   "under": "Dictyoptera",
+   "ja": "カマキリ目"
+  },
+  "Neuroptera": {
+   "under": "Neuropterida",
+   "ja": "アミメカゲロウ目"
+  },
+  "Embioptera": {
+   "under": "Polyneoptera",
+   "ja": "シロアリモドキ目"
+  },
+  "Mecoptera": {
+   "under": "Mecopterida",
+   "ja": "シリアゲムシ目"
+  },
+  "Psocodea": {
+   "under": "Paraneoptera",
+   "ja": "Psocodea"
+  },
+  "Plecoptera": {
+   "under": "Polyneoptera",
+   "ja": "カワゲラ目"
+  },
+  "Phasmida": {
+   "under": "Polyneoptera",
+   "ja": "ナナフシ目"
+  },
+  "Siphonaptera": {
+   "under": "Mecopterida",
+   "ja": "ノミ目"
+  },
+  "Zoraptera": {
+   "under": "Polyneoptera",
+   "ja": "ジュズヒゲムシ目"
+  },
+  "Trichoptera": {
+   "under": "Mecopterida",
+   "ja": "トビケラ目"
+  },
+  "Thysanoptera": {
+   "under": "Paraneoptera",
+   "ja": "アザミウマ目"
+  },
+  "Strepsiptera": {
+   "under": "Holometabola",
+   "ja": "ネジレバネ目"
+  }
+ },
+ "families": {
+  "Acanthosomatidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Pentatomoidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "ツノカメムシ科"
+  },
+  "Acrididae": {
+   "order": "Orthoptera",
+   "under": [
+    "Acridoidea",
+    "Acrididea",
+    "Caelifera",
+    "Orthoptera"
+   ],
+   "ja": "バッタ科"
+  },
+  "Aeshnidae": {
+   "order": "Odonata",
+   "under": [
+    "Aeshnoidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "ヤンマ科"
+  },
+  "Anisolabididae": {
+   "order": "Dermaptera",
+   "under": [
+    "Anisolabidoidea",
+    "Mesodermaptera",
+    "Epidermaptera",
+    "Neodermaptera",
+    "Dermaptera"
+   ],
+   "ja": "ハサミムシ科"
+  },
+  "Aphelocheiridae": {
+   "order": "Hemiptera",
+   "under": [
+    "Naucoroidea",
+    "Nepomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "ナベブタムシ科"
+  },
+  "Aphididae": {
+   "order": "Hemiptera",
+   "under": [
+    "Aphidoidea",
+    "Aphidomorpha",
+    "Sternorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "アブラムシ科"
+  },
+  "Apidae": {
+   "order": "Hymenoptera",
+   "under": [
+    "Apoidea",
+    "Aculeata",
+    "Apocrita",
+    "Hymenoptera"
+   ],
+   "ja": "ミツバチ科"
+  },
+  "Attelabidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Curculionoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "オトシブミ科"
+  },
+  "Belostomatidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Nepoidea",
+    "Nepomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "コオイムシ科"
+  },
+  "Blattellidae": {
+   "order": "Blattodea",
+   "under": [
+    "Blaberoidea",
+    "Blattodea"
+   ],
+   "ja": "Blattellidae"
+  },
+  "Blattidae": {
+   "order": "Blattodea",
+   "under": [
+    "Blattoidea",
+    "Solumblattodea",
+    "Blattodea"
+   ],
+   "ja": "ゴキブリ科"
+  },
+  "Bombycidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Bombycoidea",
+    "Lepidoptera"
+   ],
+   "ja": "カイコガ科"
+  },
+  "Buprestidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Buprestoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "タマムシ科"
+  },
+  "Calopterygidae": {
+   "order": "Odonata",
+   "under": [
+    "Calopterygoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "カワトンボ科"
+  },
+  "Canacidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ニセミギワバエ科"
+  },
+  "Carabidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Adephaga",
+    "Coleoptera"
+   ],
+   "ja": "オサムシ科"
+  },
+  "Cerambycidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Chrysomeloidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "カミキリムシ科"
+  },
+  "Chironomidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ユスリカ科"
+  },
+  "Chlorocyphidae": {
+   "order": "Odonata",
+   "under": [
+    "Calopterygoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "ハナダカトンボ科"
+  },
+  "Chlorogomphidae": {
+   "order": "Odonata",
+   "under": [
+    "Cordulegastroidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "ミナミヤンマ科"
+  },
+  "Chrysomelidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Chrysomeloidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ハムシ科"
+  },
+  "Cicadidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Cicadoidea",
+    "Clypeata",
+    "Cicadomorpha",
+    "Auchenorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "セミ科"
+  },
+  "Cimicidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Cimicoidea",
+    "Cimicomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "トコジラミ科"
+  },
+  "Coccinellidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Coccinelloidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "テントウムシ科"
+  },
+  "Coenagrionidae": {
+   "order": "Odonata",
+   "under": [
+    "Coenagrionoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "イトトンボ科"
+  },
+  "Cordulegastridae": {
+   "order": "Odonata",
+   "under": [
+    "Cordulegastroidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "オニヤンマ科"
+  },
+  "Corduliidae": {
+   "order": "Odonata",
+   "under": [
+    "Libelluloidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "エゾトンボ科"
+  },
+  "Corydalidae": {
+   "order": "Megaloptera",
+   "under": [
+    "Megaloptera"
+   ],
+   "ja": "ヘビトンボ科"
+  },
+  "Crambidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Pyraloidea",
+    "Lepidoptera"
+   ],
+   "ja": "ツトガ科"
+  },
+  "Culicidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "カ科"
+  },
+  "Delphacidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Delphacoidea",
+    "Fulgoromorpha",
+    "Auchenorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "ウンカ科"
+  },
+  "Drosophilidae": {
+   "order": "Diptera",
+   "under": [
+    "Muscomorpha",
+    "Diptera"
+   ],
+   "ja": "ショウジョウバエ科"
+  },
+  "Dryomyzidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ベッコウバエ科"
+  },
+  "Dytiscidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Adephaga",
+    "Coleoptera"
+   ],
+   "ja": "ゲンゴロウ科"
+  },
+  "Elateridae": {
+   "order": "Coleoptera",
+   "under": [
+    "Elateroidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "コメツキムシ科"
+  },
+  "Ephemeridae": {
+   "order": "Ephemeroptera",
+   "under": [
+    "Ephemeroidea",
+    "Ephemeroptera"
+   ],
+   "ja": "モンカゲロウ科"
+  },
+  "Epiophlebiidae": {
+   "order": "Odonata",
+   "under": [
+    "Epiophlebioidea",
+    "Anisozygoptera",
+    "Odonata"
+   ],
+   "ja": "ムカシトンボ科"
+  },
+  "Erebidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Noctuoidea",
+    "Lepidoptera"
+   ],
+   "ja": "トモエガ科"
+  },
+  "Euphaeidae": {
+   "order": "Odonata",
+   "under": [
+    "Euphaeoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "ミナミカワトンボ科"
+  },
+  "Flatidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Fulgoroidea",
+    "Fulgoromorpha",
+    "Auchenorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "アオバハゴロモ科"
+  },
+  "Formicidae": {
+   "order": "Hymenoptera",
+   "under": [
+    "Formicoidea",
+    "Aculeata",
+    "Apocrita",
+    "Hymenoptera"
+   ],
+   "ja": "アリ科"
+  },
+  "Geotrupidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Scarabaeoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "センチコガネ科"
+  },
+  "Gerridae": {
+   "order": "Hemiptera",
+   "under": [
+    "Gerroidea",
+    "Dipsocoromorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "アメンボ科"
+  },
+  "Gomphidae": {
+   "order": "Odonata",
+   "under": [
+    "Gomphoidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "サナエトンボ科"
+  },
+  "Gryllidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Grylloidea",
+    "Gryllidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "コオロギ科"
+  },
+  "Grylloblattidae": {
+   "order": "Notoptera",
+   "under": [
+    "Grylloblattina",
+    "Grylloblattodea",
+    "Notoptera"
+   ],
+   "ja": "ガロアムシ科"
+  },
+  "Gryllotalpidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Gryllotalpoidea",
+    "Gryllidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "ケラ科"
+  },
+  "Gyrinidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Adephaga",
+    "Coleoptera"
+   ],
+   "ja": "ミズスマシ科"
+  },
+  "Hermatobatidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Gerroidea",
+    "Dipsocoromorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "サンゴアメンボ科"
+  },
+  "Hesperiidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Papilionoidea",
+    "Lepidoptera"
+   ],
+   "ja": "セセリチョウ科"
+  },
+  "Heterotermitidae": {
+   "order": "Blattodea",
+   "under": [
+    "Euisoptera",
+    "Termitoidae",
+    "Blattodea"
+   ],
+   "ja": "Heterotermitidae"
+  },
+  "Hybosoridae": {
+   "order": "Coleoptera",
+   "under": [
+    "Scarabaeoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "アツバコガネ科"
+  },
+  "Hydraenidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Staphylinoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ダルマガムシ科"
+  },
+  "Hydrophilidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Hydrophiloidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ガムシ科"
+  },
+  "Inocelliidae": {
+   "order": "Raphidioptera",
+   "under": [
+    "Raphidioptera"
+   ],
+   "ja": "ラクダムシ科"
+  },
+  "Labiduridae": {
+   "order": "Dermaptera",
+   "under": [
+    "Labiduroidea",
+    "Mesodermaptera",
+    "Epidermaptera",
+    "Neodermaptera",
+    "Dermaptera"
+   ],
+   "ja": "オオハサミムシ科"
+  },
+  "Lampyridae": {
+   "order": "Coleoptera",
+   "under": [
+    "Elateroidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ホタル科"
+  },
+  "Lepismatidae": {
+   "order": "Zygentoma",
+   "under": [
+    "Lepismatoidea",
+    "Zygentoma"
+   ],
+   "ja": "シミ科"
+  },
+  "Lestidae": {
+   "order": "Odonata",
+   "under": [
+    "Lestoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "アオイトトンボ科"
+  },
+  "Libellulidae": {
+   "order": "Odonata",
+   "under": [
+    "Libelluloidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "トンボ科"
+  },
+  "Lucanidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Scarabaeoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "クワガタムシ科"
+  },
+  "Lycaenidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Papilionoidea",
+    "Lepidoptera"
+   ],
+   "ja": "シジミチョウ科"
+  },
+  "Machilidae": {
+   "order": "Archaeognatha",
+   "under": [
+    "Machiloidea",
+    "Machilida",
+    "Archaeognatha"
+   ],
+   "ja": "イシノミ科"
+  },
+  "Macromidiidae": {
+   "order": "Odonata",
+   "under": [
+    "Libelluloidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "Macromidiidae"
+  },
+  "Macromiidae": {
+   "order": "Odonata",
+   "under": [
+    "Libelluloidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "ヤマトンボ科"
+  },
+  "Mantidae": {
+   "order": "Mantodea",
+   "under": [
+    "Artimantodea",
+    "Schizomantodea",
+    "Eumantodea",
+    "Mantodea"
+   ],
+   "ja": "カマキリ科"
+  },
+  "Membracidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Membracoidea",
+    "Clypeata",
+    "Cicadomorpha",
+    "Auchenorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "ツノゼミ科"
+  },
+  "Mesoveliidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Mesovelioidea",
+    "Dipsocoromorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "ミズカメムシ科"
+  },
+  "Monophlebidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Coccomorpha",
+    "Sternorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "ワタフキカイガラムシ科"
+  },
+  "Muscidae": {
+   "order": "Diptera",
+   "under": [
+    "Muscomorpha",
+    "Diptera"
+   ],
+   "ja": "イエバエ科"
+  },
+  "Myrmeleontidae": {
+   "order": "Neuroptera",
+   "under": [
+    "Neuroptera"
+   ],
+   "ja": "ウスバカゲロウ科"
+  },
+  "Nepidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Nepoidea",
+    "Nepomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "タイコウチ科"
+  },
+  "Noctuidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Noctuoidea",
+    "Lepidoptera"
+   ],
+   "ja": "ヤガ科"
+  },
+  "Noteridae": {
+   "order": "Coleoptera",
+   "under": [
+    "Adephaga",
+    "Coleoptera"
+   ],
+   "ja": "コツブゲンゴロウ科"
+  },
+  "Notonectidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Notonectoidea",
+    "Nepomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "マツモムシ科"
+  },
+  "Nymphalidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Papilionoidea",
+    "Lepidoptera"
+   ],
+   "ja": "タテハチョウ科"
+  },
+  "Oecanthidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Grylloidea",
+    "Gryllidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "カンタン科"
+  },
+  "Oligotomidae": {
+   "order": "Embioptera",
+   "under": [
+    "Embioidea",
+    "Embiidea",
+    "Embioptera"
+   ],
+   "ja": "シロアリモドキ科"
+  },
+  "Omaniidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Leptopodoidea",
+    "Leptopodomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "サンゴカメムシ科"
+  },
+  "Panorpidae": {
+   "order": "Mecoptera",
+   "under": [
+    "Mecoptera"
+   ],
+   "ja": "シリアゲムシ科"
+  },
+  "Papilionidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Papilionoidea",
+    "Lepidoptera"
+   ],
+   "ja": "アゲハチョウ科"
+  },
+  "Pediculidae": {
+   "order": "Psocodea",
+   "under": [
+    "Anoplura",
+    "Phthiraptera",
+    "Troctomorpha",
+    "Psocodea"
+   ],
+   "ja": "ヒトジラミ科"
+  },
+  "Pentatomidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Pentatomoidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "カメムシ科"
+  },
+  "Perlidae": {
+   "order": "Plecoptera",
+   "under": [
+    "Perloidea",
+    "Systellognatha",
+    "Arctoperlaria",
+    "Plecoptera"
+   ],
+   "ja": "カワゲラ科"
+  },
+  "Petaluridae": {
+   "order": "Odonata",
+   "under": [
+    "Gomphoidea",
+    "Anisoptera",
+    "Odonata"
+   ],
+   "ja": "ムカシヤンマ科"
+  },
+  "Phalangopsidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Grylloidea",
+    "Gryllidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "スズムシ科"
+  },
+  "Phasmatidae": {
+   "order": "Phasmida",
+   "under": [
+    "Euphasmatodea",
+    "Phasmida"
+   ],
+   "ja": "Phasmatidae"
+  },
+  "Pieridae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Papilionoidea",
+    "Lepidoptera"
+   ],
+   "ja": "シロチョウ科"
+  },
+  "Plataspidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Pentatomoidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "マルカメムシ科"
+  },
+  "Platycnemididae": {
+   "order": "Odonata",
+   "under": [
+    "Coenagrionoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "モノサシトンボ科"
+  },
+  "Psychidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Tineoidea",
+    "Lepidoptera"
+   ],
+   "ja": "ミノガ科"
+  },
+  "Pulicidae": {
+   "order": "Siphonaptera",
+   "under": [
+    "Pulicoidea",
+    "Pulicomorpha",
+    "Siphonaptera"
+   ],
+   "ja": "ヒトノミ科"
+  },
+  "Pyrgomorphidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Pyrgomorphoidea",
+    "Acrididea",
+    "Caelifera",
+    "Orthoptera"
+   ],
+   "ja": "オンブバッタ科"
+  },
+  "Reduviidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Reduvioidea",
+    "Cimicomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "サシガメ科"
+  },
+  "Rhaphidophoridae": {
+   "order": "Orthoptera",
+   "under": [
+    "Rhaphidophoroidea",
+    "Tettigoniidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "カマドウマ科"
+  },
+  "Rhipidolestidae": {
+   "order": "Odonata",
+   "under": [
+    "Calopterygoidea",
+    "Zygoptera",
+    "Odonata"
+   ],
+   "ja": "Rhipidolestidae"
+  },
+  "Saldidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Saldoidea",
+    "Leptopodomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "ミズギワカメムシ科"
+  },
+  "Saturniidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Bombycoidea",
+    "Lepidoptera"
+   ],
+   "ja": "ヤママユガ科"
+  },
+  "Scarabaeidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Scarabaeoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "コガネムシ科"
+  },
+  "Sphecidae": {
+   "order": "Hymenoptera",
+   "under": [
+    "Apoidea",
+    "Aculeata",
+    "Apocrita",
+    "Hymenoptera"
+   ],
+   "ja": "アナバチ科"
+  },
+  "Sphingidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Bombycoidea",
+    "Lepidoptera"
+   ],
+   "ja": "スズメガ科"
+  },
+  "Spiralizoridae": {
+   "order": "Zoraptera",
+   "under": [
+    "Zoraptera"
+   ],
+   "ja": "Spiralizoridae"
+  },
+  "Staphylinidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Staphylinoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ハネカクシ科"
+  },
+  "Stenopsychidae": {
+   "order": "Trichoptera",
+   "under": [
+    "Philopotamoidea",
+    "Trichoptera"
+   ],
+   "ja": "ヒゲナガカワトビケラ科"
+  },
+  "Syrphidae": {
+   "order": "Diptera",
+   "under": [
+    "Muscomorpha",
+    "Diptera"
+   ],
+   "ja": "ハナアブ科"
+  },
+  "Tabanidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "アブ科"
+  },
+  "Tettigoniidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Tettigonioidea",
+    "Tettigoniidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "キリギリス科"
+  },
+  "Thripidae": {
+   "order": "Thysanoptera",
+   "under": [
+    "Thysanoptera"
+   ],
+   "ja": "アザミウマ科"
+  },
+  "Tineidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Tineoidea",
+    "Lepidoptera"
+   ],
+   "ja": "ヒロズコガ科"
+  },
+  "Tipulidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ガガンボ科"
+  },
+  "Veliidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Gerroidea",
+    "Dipsocoromorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "カタビロアメンボ科"
+  },
+  "Vespidae": {
+   "order": "Hymenoptera",
+   "under": [
+    "Vespoidea",
+    "Aculeata",
+    "Apocrita",
+    "Hymenoptera"
+   ],
+   "ja": "スズメバチ科"
+  },
+  "Xenidae": {
+   "order": "Strepsiptera",
+   "under": [
+    "Strepsiptera"
+   ],
+   "ja": "ネジレバネ科"
+  }
+ },
+ "familySynonyms": {
+  "Carcinophoridae": "Anisolabididae"
+ },
+ "genera": {
+  "Anisolabis": "Anisolabididae",
+  "Locusta": "Acrididae",
+  "Periplaneta": "Blattidae",
+  "Reticulitermes": "Heterotermitidae",
+  "Apis": "Apidae",
+  "Pieris": "Pieridae",
+  "Bombyx": "Bombycidae",
+  "Drosophila": "Drosophilidae",
+  "Lepisma": "Lepismatidae",
+  "Anotogaster": "Cordulegastridae",
+  "Ephemera": "Ephemeridae",
+  "Teleogryllus": "Gryllidae",
+  "Tenodera": "Mantidae",
+  "Ramulus": "Phasmatidae",
+  "Pediculus": "Pediculidae",
+  "Vespa": "Vespidae",
+  "Hagenomyia": "Myrmeleontidae",
+  "Sasakia": "Nymphalidae",
+  "Musca": "Muscidae",
+  "Ctenocephalides": "Pulicidae",
+  "Atrocalopteryx": "Calopterygidae",
+  "Epiophlebia": "Epiophlebiidae",
+  "Acrida": "Acrididae",
+  "Gampsocleis": "Tettigoniidae",
+  "Gryllotalpa": "Gryllotalpidae",
+  "Meloimorpha": "Phalangopsidae",
+  "Hierodula": "Mantidae",
+  "Blattella": "Blattellidae",
+  "Coptotermes": "Heterotermitidae",
+  "Halyomorpha": "Pentatomidae",
+  "Polistes": "Vespidae",
+  "Pedetontus": "Machilidae",
+  "Oyamia": "Perlidae",
+  "Labidura": "Labiduridae",
+  "Galloisiana": "Grylloblattidae",
+  "Diestrammena": "Rhaphidophoridae",
+  "Thrips": "Thripidae",
+  "Cimex": "Cimicidae",
+  "Protohermes": "Corydalidae",
+  "Panorpa": "Panorpidae",
+  "Stenopsyche": "Stenopsychidae",
+  "Eumeta": "Psychidae",
+  "Tabanus": "Tabanidae",
+  "Inocellia": "Inocelliidae",
+  "Xenos": "Xenidae",
+  "Tinea": "Tineidae",
+  "Oligotoma": "Oligotomidae",
+  "Spiralizoros": "Spiralizoridae",
+  "Sastragala": "Acanthosomatidae",
+  "Graphosoma": "Pentatomidae",
+  "Megacopta": "Plataspidae",
+  "Agriosphodrus": "Reduviidae",
+  "Myzus": "Aphididae",
+  "Icerya": "Monophlebidae",
+  "Nilaparvata": "Delphacidae",
+  "Geisha": "Flatidae",
+  "Hydrophilus": "Hydrophilidae",
+  "Gyrinus": "Gyrinidae",
+  "Butragulus": "Membracidae",
+  "Chrysochroa": "Buprestidae",
+  "Phelotrupes": "Geotrupidae",
+  "Apoderus": "Attelabidae",
+  "Necrophila": "Staphylinidae",
+  "Agrypnus": "Elateridae",
+  "Xylocopa": "Apidae",
+  "Ammophila": "Sphecidae",
+  "Eristalis": "Syrphidae",
+  "Tipula": "Tipulidae",
+  "Atractomorpha": "Pyrgomorphidae",
+  "Euconocephalus": "Tettigoniidae",
+  "Mecopoda": "Tettigoniidae",
+  "Xenogryllus": "Gryllidae",
+  "Truljalia": "Oecanthidae",
+  "Kaniska": "Nymphalidae",
+  "Idea": "Nymphalidae",
+  "Lycaena": "Lycaenidae",
+  "Dactylispa": "Chrysomelidae"
+ },
+ "names": {
+  "Acanthosomatidae": "ツノカメムシ科",
+  "Acrididae": "バッタ科",
+  "Aeshnidae": "ヤンマ科",
+  "Anisolabididae": "ハサミムシ科",
+  "Anisoptera": "トンボ亜目",
+  "Aphelocheiridae": "ナベブタムシ科",
+  "Aphididae": "アブラムシ科",
+  "Apidae": "ミツバチ科",
+  "Archaeognatha": "イシノミ目",
+  "Attelabidae": "オトシブミ科",
+  "Belostomatidae": "コオイムシ科",
+  "Blattidae": "ゴキブリ科",
+  "Bombycidae": "カイコガ科",
+  "Bombycoidea": "カイコガ上科",
+  "Buprestidae": "タマムシ科",
+  "Calopterygidae": "カワトンボ科",
+  "Canacidae": "ニセミギワバエ科",
+  "Carabidae": "オサムシ科",
+  "Cerambycidae": "カミキリムシ科",
+  "Chironomidae": "ユスリカ科",
+  "Chlorocyphidae": "ハナダカトンボ科",
+  "Chlorogomphidae": "ミナミヤンマ科",
+  "Chrysomelidae": "ハムシ科",
+  "Cicadidae": "セミ科",
+  "Cimicidae": "トコジラミ科",
+  "Coccinellidae": "テントウムシ科",
+  "Coenagrionidae": "イトトンボ科",
+  "Cordulegastridae": "オニヤンマ科",
+  "Corduliidae": "エゾトンボ科",
+  "Corydalidae": "ヘビトンボ科",
+  "Crambidae": "ツトガ科",
+  "Culicidae": "カ科",
+  "Delphacidae": "ウンカ科",
+  "Dermaptera": "ハサミムシ目",
+  "Drosophilidae": "ショウジョウバエ科",
+  "Dryomyzidae": "ベッコウバエ科",
+  "Dytiscidae": "ゲンゴロウ科",
+  "Elateridae": "コメツキムシ科",
+  "Embioptera": "シロアリモドキ目",
+  "Ephemeridae": "モンカゲロウ科",
+  "Ephemeroptera": "カゲロウ目",
+  "Epiophlebiidae": "ムカシトンボ科",
+  "Erebidae": "トモエガ科",
+  "Euphaeidae": "ミナミカワトンボ科",
+  "Flatidae": "アオバハゴロモ科",
+  "Formicidae": "アリ科",
+  "Geotrupidae": "センチコガネ科",
+  "Gerridae": "アメンボ科",
+  "Gomphidae": "サナエトンボ科",
+  "Gryllidae": "コオロギ科",
+  "Grylloblattidae": "ガロアムシ科",
+  "Gryllotalpidae": "ケラ科",
+  "Gyrinidae": "ミズスマシ科",
+  "Hermatobatidae": "サンゴアメンボ科",
+  "Hesperiidae": "セセリチョウ科",
+  "Hybosoridae": "アツバコガネ科",
+  "Hydraenidae": "ダルマガムシ科",
+  "Hydrophilidae": "ガムシ科",
+  "Inocelliidae": "ラクダムシ科",
+  "Labiduridae": "オオハサミムシ科",
+  "Lampyridae": "ホタル科",
+  "Lepismatidae": "シミ科",
+  "Lestidae": "アオイトトンボ科",
+  "Libellulidae": "トンボ科",
+  "Libelluloidea": "トンボ上科",
+  "Lucanidae": "クワガタムシ科",
+  "Lycaenidae": "シジミチョウ科",
+  "Machilidae": "イシノミ科",
+  "Macromiidae": "ヤマトンボ科",
+  "Mantidae": "カマキリ科",
+  "Mantodea": "カマキリ目",
+  "Mecoptera": "シリアゲムシ目",
+  "Megaloptera": "ヘビトンボ目",
+  "Membracidae": "ツノゼミ科",
+  "Mesoveliidae": "ミズカメムシ科",
+  "Monophlebidae": "ワタフキカイガラムシ科",
+  "Muscidae": "イエバエ科",
+  "Myrmeleontidae": "ウスバカゲロウ科",
+  "Nepidae": "タイコウチ科",
+  "Neuroptera": "アミメカゲロウ目",
+  "Noctuidae": "ヤガ科",
+  "Noctuoidea": "ヤガ上科",
+  "Noteridae": "コツブゲンゴロウ科",
+  "Notonectidae": "マツモムシ科",
+  "Nymphalidae": "タテハチョウ科",
+  "Oecanthidae": "カンタン科",
+  "Oligotomidae": "シロアリモドキ科",
+  "Omaniidae": "サンゴカメムシ科",
+  "Panorpidae": "シリアゲムシ科",
+  "Papilionidae": "アゲハチョウ科",
+  "Pediculidae": "ヒトジラミ科",
+  "Pentatomidae": "カメムシ科",
+  "Perlidae": "カワゲラ科",
+  "Petaluridae": "ムカシヤンマ科",
+  "Phalangopsidae": "スズムシ科",
+  "Phasmida": "ナナフシ目",
+  "Pieridae": "シロチョウ科",
+  "Plataspidae": "マルカメムシ科",
+  "Platycnemididae": "モノサシトンボ科",
+  "Plecoptera": "カワゲラ目",
+  "Polyphaga": "多食亜目",
+  "Psychidae": "ミノガ科",
+  "Pulicidae": "ヒトノミ科",
+  "Pyrgomorphidae": "オンブバッタ科",
+  "Reduviidae": "サシガメ科",
+  "Rhaphidophoridae": "カマドウマ科",
+  "Saldidae": "ミズギワカメムシ科",
+  "Saturniidae": "ヤママユガ科",
+  "Scarabaeidae": "コガネムシ科",
+  "Scarabaeoidea": "コガネムシ上科",
+  "Siphonaptera": "ノミ目",
+  "Sphecidae": "アナバチ科",
+  "Sphingidae": "スズメガ科",
+  "Staphylinidae": "ハネカクシ科",
+  "Stenopsychidae": "ヒゲナガカワトビケラ科",
+  "Strepsiptera": "ネジレバネ目",
+  "Syrphidae": "ハナアブ科",
+  "Tabanidae": "アブ科",
+  "Tettigoniidae": "キリギリス科",
+  "Thripidae": "アザミウマ科",
+  "Thysanoptera": "アザミウマ目",
+  "Tineidae": "ヒロズコガ科",
+  "Tipulidae": "ガガンボ科",
+  "Trichoptera": "トビケラ目",
+  "Veliidae": "カタビロアメンボ科",
+  "Vespidae": "スズメバチ科",
+  "Xenidae": "ネジレバネ科",
+  "Zoraptera": "ジュズヒゲムシ目",
+  "Zygoptera": "イトトンボ亜目"
+ },
+ "nameSources": {
+  "Acanthosomatidae": "GBIF・iNaturalist",
+  "Acrididae": "GBIF・Wikidata・iNaturalist",
+  "Aeshnidae": "GBIF・Wikidata・iNaturalist",
+  "Anisolabididae": "GBIF・iNaturalist",
+  "Anisoptera": "Wikidata・iNaturalist",
+  "Aphelocheiridae": "GBIF・iNaturalist",
+  "Aphididae": "GBIF・iNaturalist",
+  "Apidae": "GBIF・Wikidata・iNaturalist",
+  "Archaeognatha": "Wikidata・iNaturalist",
+  "Attelabidae": "GBIF・Wikidata・iNaturalist",
+  "Belostomatidae": "環境省1997",
+  "Blattidae": "GBIF・Wikidata・iNaturalist",
+  "Bombycidae": "GBIF・Wikidata・iNaturalist",
+  "Bombycoidea": "Wikidata・iNaturalist",
+  "Buprestidae": "GBIF・Wikidata・iNaturalist",
+  "Calopterygidae": "環境省1997",
+  "Canacidae": "GBIF・Wikidata・iNaturalist",
+  "Carabidae": "GBIF・Wikidata・iNaturalist",
+  "Cerambycidae": "環境省1997",
+  "Chironomidae": "GBIF・Wikidata・iNaturalist",
+  "Chlorocyphidae": "環境省1997",
+  "Chlorogomphidae": "GBIF・iNaturalist",
+  "Chrysomelidae": "GBIF・Wikidata・iNaturalist",
+  "Cicadidae": "環境省1997",
+  "Cimicidae": "GBIF・iNaturalist",
+  "Coccinellidae": "GBIF・Wikidata・iNaturalist",
+  "Coenagrionidae": "環境省1997",
+  "Cordulegastridae": "GBIF・Wikidata・iNaturalist",
+  "Corduliidae": "環境省1997",
+  "Corydalidae": "GBIF・Wikidata・iNaturalist",
+  "Crambidae": "GBIF・Wikidata・iNaturalist",
+  "Culicidae": "GBIF・Wikidata・iNaturalist",
+  "Delphacidae": "GBIF・Wikidata・iNaturalist",
+  "Dermaptera": "GBIF・Wikidata・iNaturalist",
+  "Drosophilidae": "GBIF・Wikidata・iNaturalist",
+  "Dryomyzidae": "GBIF・Wikidata・iNaturalist",
+  "Dytiscidae": "環境省1997",
+  "Elateridae": "GBIF・Wikidata・iNaturalist",
+  "Embioptera": "Wikidata・iNaturalist",
+  "Ephemeridae": "GBIF・iNaturalist",
+  "Ephemeroptera": "GBIF・Wikidata・iNaturalist",
+  "Epiophlebiidae": "環境省1997",
+  "Erebidae": "GBIF・Wikidata・iNaturalist",
+  "Euphaeidae": "環境省1997",
+  "Flatidae": "GBIF・Wikidata・iNaturalist",
+  "Formicidae": "GBIF・Wikidata・iNaturalist",
+  "Geotrupidae": "GBIF・Wikidata・iNaturalist",
+  "Gerridae": "環境省1997",
+  "Gomphidae": "環境省1997",
+  "Gryllidae": "GBIF・Wikidata・iNaturalist",
+  "Grylloblattidae": "GBIF・iNaturalist",
+  "Gryllotalpidae": "GBIF・Wikidata・iNaturalist",
+  "Gyrinidae": "環境省1997",
+  "Hermatobatidae": "GBIF・iNaturalist",
+  "Hesperiidae": "環境省1997",
+  "Hybosoridae": "GBIF・iNaturalist",
+  "Hydraenidae": "GBIF・Wikidata・iNaturalist",
+  "Hydrophilidae": "GBIF・Wikidata・iNaturalist",
+  "Inocelliidae": "GBIF・iNaturalist",
+  "Labiduridae": "GBIF・iNaturalist",
+  "Lampyridae": "GBIF・Wikidata・iNaturalist",
+  "Lepismatidae": "GBIF・Wikidata・iNaturalist",
+  "Lestidae": "環境省1997",
+  "Libellulidae": "環境省1997",
+  "Libelluloidea": "Wikidata・iNaturalist",
+  "Lucanidae": "環境省1997",
+  "Lycaenidae": "環境省1997",
+  "Machilidae": "GBIF・Wikidata・iNaturalist",
+  "Macromiidae": "GBIF・iNaturalist",
+  "Mantidae": "GBIF・Wikidata・iNaturalist",
+  "Mantodea": "Wikidata・iNaturalist",
+  "Mecoptera": "Wikidata・iNaturalist",
+  "Megaloptera": "Wikidata・iNaturalist",
+  "Membracidae": "GBIF・Wikidata・iNaturalist",
+  "Mesoveliidae": "GBIF・Wikidata・iNaturalist",
+  "Monophlebidae": "GBIF・iNaturalist",
+  "Muscidae": "GBIF・Wikidata・iNaturalist",
+  "Myrmeleontidae": "GBIF・Wikidata・iNaturalist",
+  "Nepidae": "環境省1997",
+  "Neuroptera": "GBIF・Wikidata・iNaturalist",
+  "Noctuidae": "環境省1997",
+  "Noctuoidea": "Wikidata・iNaturalist",
+  "Noteridae": "GBIF・iNaturalist",
+  "Notonectidae": "環境省1997",
+  "Nymphalidae": "環境省1997",
+  "Oecanthidae": "GBIF・Wikidata・iNaturalist",
+  "Oligotomidae": "GBIF・iNaturalist",
+  "Omaniidae": "GBIF・iNaturalist",
+  "Panorpidae": "GBIF・Wikidata・iNaturalist",
+  "Papilionidae": "環境省1997",
+  "Pediculidae": "GBIF・iNaturalist",
+  "Pentatomidae": "GBIF・Wikidata・iNaturalist",
+  "Perlidae": "GBIF・iNaturalist",
+  "Petaluridae": "環境省1997",
+  "Phalangopsidae": "GBIF・Wikidata・iNaturalist",
+  "Phasmida": "Wikidata・iNaturalist",
+  "Pieridae": "環境省1997",
+  "Plataspidae": "GBIF・iNaturalist",
+  "Platycnemididae": "GBIF・Wikidata・iNaturalist",
+  "Plecoptera": "Wikidata・iNaturalist",
+  "Polyphaga": "Wikidata・iNaturalist",
+  "Psychidae": "GBIF・Wikidata・iNaturalist",
+  "Pulicidae": "GBIF・iNaturalist",
+  "Pyrgomorphidae": "GBIF・iNaturalist",
+  "Reduviidae": "GBIF・Wikidata・iNaturalist",
+  "Rhaphidophoridae": "GBIF・Wikidata・iNaturalist",
+  "Saldidae": "GBIF・iNaturalist",
+  "Saturniidae": "環境省1997",
+  "Scarabaeidae": "GBIF・Wikidata・iNaturalist",
+  "Scarabaeoidea": "Wikidata・iNaturalist",
+  "Siphonaptera": "Wikidata・iNaturalist",
+  "Sphecidae": "GBIF・Wikidata・iNaturalist",
+  "Sphingidae": "環境省1997",
+  "Staphylinidae": "GBIF・Wikidata・iNaturalist",
+  "Stenopsychidae": "GBIF・iNaturalist",
+  "Strepsiptera": "Wikidata・iNaturalist",
+  "Syrphidae": "Wikidata・iNaturalist",
+  "Tabanidae": "GBIF・Wikidata・iNaturalist",
+  "Tettigoniidae": "GBIF・Wikidata・iNaturalist",
+  "Thripidae": "GBIF・iNaturalist",
+  "Thysanoptera": "Wikidata・iNaturalist",
+  "Tineidae": "GBIF・iNaturalist",
+  "Tipulidae": "GBIF・Wikidata・iNaturalist",
+  "Trichoptera": "Wikidata・iNaturalist",
+  "Veliidae": "GBIF・Wikidata・iNaturalist",
+  "Vespidae": "GBIF・Wikidata・iNaturalist",
+  "Xenidae": "GBIF・iNaturalist",
+  "Zoraptera": "Wikidata・iNaturalist",
+  "Zygoptera": "Wikidata・iNaturalist"
+ },
+ "unnamed": {
+  "Blattellidae": {
+   "チャバネゴキブリ科": [
+    "Wikidata"
+   ]
+  },
+  "Calopterygoidea": {
+   "カワトンボ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Carcinophoridae": {},
+  "Coenagrionoidea": {
+   "イトトンボ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Gerromorpha": {
+   "アメンボ下目": [
+    "iNaturalist"
+   ]
+  },
+  "Gomphoidea": {
+   "サナエトンボ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Heterotermitidae": {
+   "ミゾガシラシロアリ科": [
+    "iNaturalist"
+   ]
+  },
+  "Leptopodomorpha": {
+   "ミズギワカメムシ下目": [
+    "iNaturalist"
+   ]
+  },
+  "Macromidiidae": {},
+  "Muscomorpha": {
+   "ハエ下目": [
+    "Wikidata"
+   ]
+  },
+  "Notoptera": {
+   "ガロアムシ目": [
+    "iNaturalist"
+   ]
+  },
+  "Phasmatidae": {
+   "ナナフシ科": [
+    "GBIF",
+    "Wikidata"
+   ],
+   "ナナフシモドキ科": [
+    "GBIF",
+    "iNaturalist"
+   ]
+  },
+  "Psocodea": {
+   "咀顎目": [
+    "Wikidata"
+   ],
+   "カジリムシ目": [
+    "iNaturalist"
+   ]
+  },
+  "Raphidioptera": {
+   "ラクダムシ目": [
+    "iNaturalist"
+   ]
+  },
+  "Rhipidolestidae": {
+   "トゲオトンボ科": [
+    "iNaturalist"
+   ]
+  },
+  "Spiralizoridae": {},
+  "Zygentoma": {
+   "シミ目": [
+    "iNaturalist"
+   ]
+  }
+ }
+}

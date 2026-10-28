@@ -4,7 +4,7 @@
 1. data.json と data-hard.json から meta.next をたどり、予約されている版のファイルが全部あるか
 2. tools/build_data.py で作り直したデータが、いちばん新しい版のファイルと同じか
    （違うときは、data-*.json を手で直したか、data_more.py を直したのに作り直していない）
-3. data-fish.json・data-bird.json が data-hard.json から tools/fish/make_fish.py・tools/bird/make_bird.py で作ったものと同じか（違っても止めずに知らせるだけ）
+3. data-fish.json・data-bird.json・data-insect.json が data-hard.json から tools/fish/make_fish.py・tools/bird/make_bird.py・tools/insect/make_insect.py で作ったものと同じか（違っても止めずに知らせるだけ）
 """
 import json, os, subprocess, sys, tempfile
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -26,9 +26,11 @@ hard, good = chain("data-hard.json"); ok &= good
 print("今日の動物の予約:", " → ".join(main))
 fish, good = chain("data-fish.json"); ok &= good
 bird, good = chain("data-bird.json"); ok &= good
+insect, good = chain("data-insect.json"); ok &= good
 print("ゲキムズの予約:", " → ".join(hard))
 print("魚編の予約:", " → ".join(fish))
 print("鳥編の予約:", " → ".join(bird))
+print("昆虫編の予約:", " → ".join(insect))
 
 with tempfile.TemporaryDirectory() as d:
     out = os.path.join(d, "built.json")
@@ -43,7 +45,7 @@ for k in ("clades", "species"):
         print(f"× {main[-1]} の {k} が build_data.py の結果と {len(diff)} 件ちがう:", ", ".join(diff[:10]))
 if built["meta"]["datasetVersion"] != latest["meta"]["datasetVersion"]:
     print(f"△ 版番号：build_data.py は {built['meta']['datasetVersion']}、{main[-1]} は {latest['meta']['datasetVersion']}（新しい版を作ったら予約を足す）")
-for name, tool, files in (("魚編", "fish/make_fish.py", fish), ("鳥編", "bird/make_bird.py", bird)):
+for name, tool, files in (("魚編", "fish/make_fish.py", fish), ("鳥編", "bird/make_bird.py", bird), ("昆虫編", "insect/make_insect.py", insect)):
     with tempfile.TemporaryDirectory() as d:
         out = os.path.join(d, "sub.json")
         subprocess.run([sys.executable, os.path.join(ROOT, "tools", *tool.split("/")), os.path.join(ROOT, hard[-1]), out], check=True, stdout=subprocess.DEVNULL)
