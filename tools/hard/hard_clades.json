@@ -11,6 +11,15 @@
   "source": "現生ハイギョ（オーストラリア・南アメリカ・アフリカ）は単系統（Betancur-R. et al. 2017; Near & Thacker 2024）"
  },
  {
+  "id": "f_trochilidae",
+  "ja": "ハチドリ科",
+  "sci": "Trochilidae",
+  "rank": "科",
+  "under": "Apodiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は iNaturalist・Wikidata・GBIF で一致（2026-10-28）"
+  },
+  {
   "id": "o_osteoglossiformes",
   "ja": "アロワナ目",
   "sci": "Osteoglossiformes",

@@ -10,7 +10,10 @@
   無ければ Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前（データの取得元の決まりと同じ多数決）。
   そろわなければ学名のまま。階級の語尾（目・亜目・下目・上科・科）が合わない名前は数えない。
   語尾の無い名前（Wikidata の「ヤンマ」など）は、その階級の語尾を付けたものとして数える。
-- 取得結果は取得結果フォルダに置き、2回目からはそれを使う（外部の API に何度も問い合わせない）。
+- 取得結果は取得結果フォルダに 1 件ずつためて、2 回目からはそれを使う（外部の API に何度も問い合わせない）。
+- 亜科：同じ科に Catalogue of Life の亜科が 2 つ以上出てくる科だけ、属をその亜科の節目の下に入れる
+  （ハンミョウ亜科とオサムシ亜科など）。亜科の和名も上と同じ決まり。
+- 作り直したゲキムズにもう一度かけてよい。前の insect_taxa.json の属の対応は残し、新しく科の無い属が出たら足す。
 """
 import json, os, re, sys, time, unicodedata, urllib.parse, urllib.request, collections
 
@@ -28,10 +31,13 @@ def get(u):
             req = urllib.request.Request(u, headers={"User-Agent": "cladle-name-check/0.1 (educational)"})
             return json.load(urllib.request.urlopen(req, timeout=30))
         except Exception: time.sleep(3)
-def cached(name, fn):
+def cached(name, keys, fn):
+    """取得結果フォルダの name に、keys のうちまだ無いものだけ fn(key) で取ってためる"""
     p = os.path.join(cache, name)
-    if not os.path.exists(p): json.dump(fn(), open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-    return json.load(open(p, encoding="utf-8"))
+    d = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    for k in keys:
+        if k not in d: d[k] = fn(k); json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    return d
 def col(q, rank=None):
     time.sleep(0.4)
     d = get("https://api.checklistbank.org/dataset/3LR/match/nameusage?" + urllib.parse.urlencode({"q": q, **({"rank": rank} if rank else {})})) or {}
@@ -45,14 +51,14 @@ for s in H["species"]:
     if "Insecta" not in {c["sci"] for c in a}: continue
     r = {c["rank"] for c in a}
     if "科" not in r or "目" not in r: need[a[0]["sci"]] = s["sci"]
-G = cached("col_genera.json", lambda: {g: col(sp) for g, sp in sorted(need.items())})
+G = cached("col_genera.json", sorted(need), lambda g: col(need[g]))
 GENUS_FIX = {"Graphosoma": "Pentatomidae", "Halyomorpha": "Pentatomidae", "Megacopta": "Plataspidae"}  # 種名が CoL で引けなかったもの（属の所属は CoL と同じ）
-genera = {}
+genera = json.load(open(out, encoding="utf-8")).get("genera", {}) if os.path.exists(out) else {}
 for g in need:
     f = GENUS_FIX.get(g) or next((n for r, n in G.get(g, {}).get("cl", []) if r == "family"), None)
     if f: genera[g] = f
 fams = {c["sci"] for c in H["clades"] if c["rank"] == "科" and insect(c["id"])} | set(genera.values())
-F = cached("col_families.json", lambda: {f: col(f, "family") for f in sorted(fams)})
+F = cached("col_families.json", sorted(fams), lambda f: col(f, "family"))
 FAM_UNDER = {"Plataspidae": ["Pentatomoidea", "Pentatomomorpha", "Heteroptera", "Hemiptera"],
              # CoL のハエ目は科の上の階級が無い。ハエ下目（Muscomorpha）は Wiegmann et al. 2011（PNAS 108: 5690–5695）
              "Drosophilidae": ["Muscomorpha", "Diptera"], "Muscidae": ["Muscomorpha", "Diptera"], "Syrphidae": ["Muscomorpha", "Diptera"]}
@@ -76,6 +82,25 @@ for f in sorted(fams):
     families[f] = {"order": o, "under": path}
     if o in ORDER_UNDER: orders[o] = {"under": ORDER_UNDER[o]}
 
+# ---- 1b. 亜科（Catalogue of Life）。同じ科に 2 つ以上の亜科が出てくる科だけ、亜科の節目を置く ----
+gen_fam = {}
+for c in H["clades"]:
+    if c["rank"] == "属" and insect(c["id"]):
+        f = next((a["sci"] for a in anc(c["parent"]) if a["rank"] == "科"), None)
+        if f: gen_fam[c["sci"]] = f
+GA = cached("col_genus_all.json", sorted(gen_fam), lambda g: col(g, "genus"))
+genus_sub = {}
+for g, f in gen_fam.items():
+    cl = GA.get(g, {}).get("cl", [])
+    if GA.get(g, {}).get("status") != "accepted": continue
+    sub = next((n for r, n in cl if r == "subfamily"), None)
+    cf = next((n for r, n in cl if r == "family"), None)
+    if sub and cf == f: genus_sub[g] = sub
+by_fam = collections.defaultdict(set)
+for g, sub in genus_sub.items(): by_fam[gen_fam[g]].add(sub)
+genus_sub = {g: sub for g, sub in genus_sub.items() if len(by_fam[gen_fam[g]]) >= 2}
+subfamilies = {sub: {"family": gen_fam[g]} for g, sub in genus_sub.items()}
+
 # ---- 2. 和名 ----
 B = {}
 for f in ("05_to", "06_cho", "07_se", "08_ga", "09_ko"):
@@ -87,34 +112,31 @@ for f in ("05_to", "06_cho", "07_se", "08_ga", "09_ko"):
             if m:
                 for n in (m[1], m[2]):
                     if n: B.setdefault(n.title(), m[3])
-RANK = {"目": "目", "亜目": "亜目", "下目": "下目", "上科": "上科", "科": "科"}
+RANK = {"目": "目", "亜目": "亜目", "下目": "下目", "上科": "上科", "科": "科", "亜科": "亜科"}
 names = {}
 for c in H["clades"]:
     if c["rank"] in RANK and c["ja"] == c["sci"] and insect(c["id"]): names[c["sci"]] = c["rank"]
 for f in families: names.setdefault(f, "科")
 for o in orders: names.setdefault(o, "目")
-def wd():
-    q = "SELECT ?n ?l WHERE { VALUES ?n {%s} ?i wdt:P225 ?n . ?i rdfs:label ?l FILTER(lang(?l)='ja') }" % " ".join('"%s"' % n for n in sorted(names))
+for sub in subfamilies: names.setdefault(sub, "亜科")
+def wd(n):
+    q = "SELECT ?l WHERE { ?i wdt:P225 \"%s\" ; rdfs:label ?l FILTER(lang(?l)='ja') }" % n
     d = get("https://query.wikidata.org/sparql?" + urllib.parse.urlencode({"query": q, "format": "json"}))
-    r = collections.defaultdict(list)
-    for b in d["results"]["bindings"]: r[b["n"]["value"]].append(b["l"]["value"])
-    return r
-def vern():
-    r = {}
-    for n in sorted(names):
-        x = {}
-        m = get("https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": n, "kingdom": "Animalia"})) or {}
-        if m.get("usageKey") and m.get("canonicalName") == n:
-            v = get(f"https://api.gbif.org/v1/species/{m['usageKey']}/vernacularNames?limit=200") or {}
-            x["gbif"] = sorted({y["vernacularName"] for y in v.get("results", []) if y.get("language") == "jpn"})
-        time.sleep(0.3)
-        i = get("https://api.inaturalist.org/v1/taxa?" + urllib.parse.urlencode({"q": n, "locale": "ja", "per_page": 5})) or {}
-        for t in i.get("results", []):
-            if t["name"] == n: x["inat"] = t.get("preferred_common_name"); break
-        time.sleep(1)
-        r[n] = x
-    return r
-W, V = cached("wikidata.json", wd), cached("vernacular.json", vern)
+    time.sleep(0.5)
+    return [b["l"]["value"] for b in d["results"]["bindings"]]
+def vern(n):
+    x = {}
+    m = get("https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": n, "kingdom": "Animalia"})) or {}
+    if m.get("usageKey") and m.get("canonicalName") == n:
+        v = get(f"https://api.gbif.org/v1/species/{m['usageKey']}/vernacularNames?limit=200") or {}
+        x["gbif"] = sorted({y["vernacularName"] for y in v.get("results", []) if y.get("language") == "jpn"})
+    time.sleep(0.3)
+    i = get("https://api.inaturalist.org/v1/taxa?" + urllib.parse.urlencode({"q": n, "locale": "ja", "per_page": 5})) or {}
+    for t in i.get("results", []):
+        if t["name"] == n: x["inat"] = t.get("preferred_common_name"); break
+    time.sleep(1)
+    return x
+W, V = cached("wikidata.json", sorted(names), wd), cached("vernacular.json", sorted(names), vern)
 def norm(nm, suf):
     nm = nm.strip()
     if nm.endswith(suf) and not (suf == "目" and nm.endswith(("亜目", "下目", "上目"))) and not (suf == "科" and nm.endswith(("亜科", "上科"))): return nm
@@ -135,10 +157,12 @@ for n, rk in sorted(names.items()):
 
 for o in orders: orders[o]["ja"] = ja.get(o, {}).get("ja", o)
 for f in families: families[f]["ja"] = ja.get(f, {}).get("ja", f)
+for sub in subfamilies: subfamilies[sub]["ja"] = ja.get(sub, {}).get("ja", sub)
 json.dump({"source": "目・科の並び：Catalogue of Life（ChecklistBank 3LR）。和名：環境省（1997）種の多様性調査（動物分布調査）対象種一覧、無ければ Wikidata・GBIF・iNaturalist の多数決",
            "orders": orders, "families": families, "familySynonyms": syn, "genera": genera,
+           "subfamilies": subfamilies, "genusSubfamily": dict(sorted(genus_sub.items())),
            "names": {n: v["ja"] for n, v in ja.items()}, "nameSources": {n: v["source"] for n, v in ja.items()},
            "unnamed": {n: votes.get(n, {}) for n in sorted(names) if n not in ja}},
           open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print(f"{out}: 目 {len(orders)}・科 {len(families)}・属 {len(genera)}・和名 {len(ja)}/{len(names)}")
+print(f"{out}: 目 {len(orders)}・科 {len(families)}・属 {len(genera)}・亜科 {len(subfamilies)}（{len(genus_sub)} 属）・和名 {len(ja)}/{len(names)}")
 print("学名のまま:", ", ".join(n for n in sorted(names) if n not in ja))

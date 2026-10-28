@@ -25,6 +25,10 @@
    "under": "Insecta",
    "ja": "Zygentoma"
   },
+  "Phasmida": {
+   "under": "Polyneoptera",
+   "ja": "ナナフシ目"
+  },
   "Archaeognatha": {
    "under": "Insecta",
    "ja": "イシノミ目"
@@ -52,10 +56,6 @@
   "Plecoptera": {
    "under": "Polyneoptera",
    "ja": "カワゲラ目"
-  },
-  "Phasmida": {
-   "under": "Polyneoptera",
-   "ja": "ナナフシ目"
   },
   "Siphonaptera": {
    "under": "Mecopterida",
@@ -108,6 +108,16 @@
    ],
    "ja": "ヤンマ科"
   },
+  "Alydidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Coreoidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "ホソヘリカメムシ科"
+  },
   "Anisolabididae": {
    "order": "Dermaptera",
    "under": [
@@ -149,6 +159,13 @@
    ],
    "ja": "ミツバチ科"
   },
+  "Asilidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ムシヒキアブ科"
+  },
   "Attelabidae": {
    "order": "Coleoptera",
    "under": [
@@ -167,6 +184,14 @@
     "Hemiptera"
    ],
    "ja": "コオイムシ科"
+  },
+  "Blaberidae": {
+   "order": "Blattodea",
+   "under": [
+    "Blaberoidea",
+    "Blattodea"
+   ],
+   "ja": "オオゴキブリ科"
   },
   "Blattellidae": {
    "order": "Blattodea",
@@ -192,6 +217,13 @@
     "Lepidoptera"
    ],
    "ja": "カイコガ科"
+  },
+  "Bombyliidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ツリアブ科"
   },
   "Buprestidae": {
    "order": "Coleoptera",
@@ -269,6 +301,17 @@
    ],
    "ja": "ハムシ科"
   },
+  "Cicadellidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Membracoidea",
+    "Clypeata",
+    "Cicadomorpha",
+    "Auchenorrhyncha",
+    "Hemiptera"
+   ],
+   "ja": "ヨコバイ科"
+  },
   "Cicadidae": {
    "order": "Hemiptera",
    "under": [
@@ -326,6 +369,16 @@
    ],
    "ja": "エゾトンボ科"
   },
+  "Coreidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Coreoidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "ヘリカメムシ科"
+  },
   "Corydalidae": {
    "order": "Megaloptera",
    "under": [
@@ -348,6 +401,15 @@
    ],
    "ja": "カ科"
   },
+  "Curculionidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Curculionoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ゾウムシ科"
+  },
   "Delphacidae": {
    "order": "Hemiptera",
    "under": [
@@ -357,6 +419,15 @@
     "Hemiptera"
    ],
    "ja": "ウンカ科"
+  },
+  "Dermestidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Bostrichoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "カツオブシムシ科"
   },
   "Drosophilidae": {
    "order": "Diptera",
@@ -372,6 +443,15 @@
     "Diptera"
    ],
    "ja": "ベッコウバエ科"
+  },
+  "Dryophthoridae": {
+   "order": "Coleoptera",
+   "under": [
+    "Curculionoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "Dryophthoridae"
   },
   "Dytiscidae": {
    "order": "Coleoptera",
@@ -397,6 +477,14 @@
     "Ephemeroptera"
    ],
    "ja": "モンカゲロウ科"
+  },
+  "Epicopeiidae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Geometroidea",
+    "Lepidoptera"
+   ],
+   "ja": "アゲハモドキガ科"
   },
   "Epiophlebiidae": {
    "order": "Odonata",
@@ -443,6 +531,14 @@
     "Hymenoptera"
    ],
    "ja": "アリ科"
+  },
+  "Geometridae": {
+   "order": "Lepidoptera",
+   "under": [
+    "Geometroidea",
+    "Lepidoptera"
+   ],
+   "ja": "シャクガ科"
   },
   "Geotrupidae": {
    "order": "Coleoptera",
@@ -590,6 +686,16 @@
    ],
    "ja": "ホタル科"
   },
+  "Largidae": {
+   "order": "Hemiptera",
+   "under": [
+    "Pyrrhocoroidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "オオホシカメムシ科"
+  },
   "Lepismatidae": {
    "order": "Zygentoma",
    "under": [
@@ -615,6 +721,14 @@
     "Odonata"
    ],
    "ja": "トンボ科"
+  },
+  "Lonchodidae": {
+   "order": "Phasmida",
+   "under": [
+    "Euphasmatodea",
+    "Phasmida"
+   ],
+   "ja": "トゲナナフシ科"
   },
   "Lucanidae": {
    "order": "Coleoptera",
@@ -690,6 +804,16 @@
     "Hemiptera"
    ],
    "ja": "ミズカメムシ科"
+  },
+  "Mogoplistidae": {
+   "order": "Orthoptera",
+   "under": [
+    "Grylloidea",
+    "Gryllidea",
+    "Ensifera",
+    "Orthoptera"
+   ],
+   "ja": "カネタタキ科"
   },
   "Monophlebidae": {
    "order": "Hemiptera",
@@ -970,6 +1094,16 @@
    ],
    "ja": "コガネムシ科"
   },
+  "Scutelleridae": {
+   "order": "Hemiptera",
+   "under": [
+    "Pentatomoidea",
+    "Pentatomomorpha",
+    "Heteroptera",
+    "Hemiptera"
+   ],
+   "ja": "キンカメムシ科"
+  },
   "Sphecidae": {
    "order": "Hymenoptera",
    "under": [
@@ -1012,6 +1146,13 @@
    ],
    "ja": "ヒゲナガカワトビケラ科"
   },
+  "Stratiomyidae": {
+   "order": "Diptera",
+   "under": [
+    "Diptera"
+   ],
+   "ja": "ミズアブ科"
+  },
   "Syrphidae": {
    "order": "Diptera",
    "under": [
@@ -1026,6 +1167,15 @@
     "Diptera"
    ],
    "ja": "アブ科"
+  },
+  "Tenebrionidae": {
+   "order": "Coleoptera",
+   "under": [
+    "Tenebrionoidea",
+    "Polyphaga",
+    "Coleoptera"
+   ],
+   "ja": "ゴミムシダマシ科"
   },
   "Tettigoniidae": {
    "order": "Orthoptera",
@@ -1087,9 +1237,7 @@
    "ja": "ネジレバネ科"
   }
  },
- "familySynonyms": {
-  "Carcinophoridae": "Anisolabididae"
- },
+ "familySynonyms": {},
  "genera": {
   "Anisolabis": "Anisolabididae",
   "Locusta": "Acrididae",
@@ -1169,126 +1317,1061 @@
   "Lycaena": "Lycaenidae",
   "Dactylispa": "Chrysomelidae"
  },
+ "subfamilies": {
+  "Rutelinae": {
+   "family": "Scarabaeidae",
+   "ja": "Rutelinae"
+  },
+  "Cetoniinae": {
+   "family": "Scarabaeidae",
+   "ja": "ハナムグリ亜科"
+  },
+  "Aphodiinae": {
+   "family": "Scarabaeidae",
+   "ja": "Aphodiinae"
+  },
+  "Melolonthinae": {
+   "family": "Scarabaeidae",
+   "ja": "コフキコガネ亜科"
+  },
+  "Scarabaeinae": {
+   "family": "Scarabaeidae",
+   "ja": "Scarabaeinae"
+  },
+  "Lucaninae": {
+   "family": "Lucanidae",
+   "ja": "クワガタムシ亜科"
+  },
+  "Sericinae": {
+   "family": "Scarabaeidae",
+   "ja": "Sericinae"
+  },
+  "Aleocharinae": {
+   "family": "Staphylinidae",
+   "ja": "Aleocharinae"
+  },
+  "Halobatinae": {
+   "family": "Gerridae",
+   "ja": "Halobatinae"
+  },
+  "Chironominae": {
+   "family": "Chironomidae",
+   "ja": "Chironominae"
+  },
+  "Culicinae": {
+   "family": "Culicidae",
+   "ja": "Culicinae"
+  },
+  "Hydroporinae": {
+   "family": "Dytiscidae",
+   "ja": "ケシゲンゴロウ亜科"
+  },
+  "Telmatogetoninae": {
+   "family": "Chironomidae",
+   "ja": "Telmatogetoninae"
+  },
+  "Orthocladiinae": {
+   "family": "Chironomidae",
+   "ja": "Orthocladiinae"
+  },
+  "Acentropinae": {
+   "family": "Crambidae",
+   "ja": "ミズメイガ亜科"
+  },
+  "Platycnemidinae": {
+   "family": "Platycnemididae",
+   "ja": "Platycnemidinae"
+  },
+  "Calicnemiinae": {
+   "family": "Platycnemididae",
+   "ja": "Calicnemiinae"
+  },
+  "Pyrginae": {
+   "family": "Hesperiidae",
+   "ja": "チャマダラセセリ亜科"
+  },
+  "Coeliadinae": {
+   "family": "Hesperiidae",
+   "ja": "Coeliadinae"
+  },
+  "Heteropterinae": {
+   "family": "Hesperiidae",
+   "ja": "Heteropterinae"
+  },
+  "Hesperiinae": {
+   "family": "Hesperiidae",
+   "ja": "セセリチョウ亜科"
+  },
+  "Lycaeninae": {
+   "family": "Lycaenidae",
+   "ja": "ベニシジミ亜科"
+  },
+  "Theclinae": {
+   "family": "Lycaenidae",
+   "ja": "ミドリシジミ亜科"
+  },
+  "Miletinae": {
+   "family": "Lycaenidae",
+   "ja": "Miletinae"
+  },
+  "Polyommatinae": {
+   "family": "Lycaenidae",
+   "ja": "ヒメシジミ亜科"
+  },
+  "Libytheinae": {
+   "family": "Nymphalidae",
+   "ja": "テングチョウ亜科"
+  },
+  "Danainae": {
+   "family": "Nymphalidae",
+   "ja": "マダラチョウ亜科"
+  },
+  "Biblidinae": {
+   "family": "Nymphalidae",
+   "ja": "カバタテハ亜科"
+  },
+  "Heliconiinae": {
+   "family": "Nymphalidae",
+   "ja": "ドクチョウ亜科"
+  },
+  "Calinaginae": {
+   "family": "Nymphalidae",
+   "ja": "Calinaginae"
+  },
+  "Limenitidinae": {
+   "family": "Nymphalidae",
+   "ja": "イチモンジチョウ亜科"
+  },
+  "Nymphalinae": {
+   "family": "Nymphalidae",
+   "ja": "タテハチョウ亜科"
+  },
+  "Cyrestinae": {
+   "family": "Nymphalidae",
+   "ja": "イシガケチョウ亜科"
+  },
+  "Pseudoergolinae": {
+   "family": "Nymphalidae",
+   "ja": "Pseudoergolinae"
+  },
+  "Apaturinae": {
+   "family": "Nymphalidae",
+   "ja": "コムラサキ亜科"
+  },
+  "Charaxinae": {
+   "family": "Nymphalidae",
+   "ja": "フタオチョウ亜科"
+  },
+  "Satyrinae": {
+   "family": "Nymphalidae",
+   "ja": "ジャノメチョウ亜科"
+  },
+  "Cicadinae": {
+   "family": "Cicadidae",
+   "ja": "Cicadinae"
+  },
+  "Cicadettinae": {
+   "family": "Cicadidae",
+   "ja": "Cicadettinae"
+  },
+  "Gerrinae": {
+   "family": "Gerridae",
+   "ja": "Gerrinae"
+  },
+  "Belostomatinae": {
+   "family": "Belostomatidae",
+   "ja": "コオイムシ亜科"
+  },
+  "Lethocerinae": {
+   "family": "Belostomatidae",
+   "ja": "タガメ亜科"
+  },
+  "Nepinae": {
+   "family": "Nepidae",
+   "ja": "Nepinae"
+  },
+  "Ranatrinae": {
+   "family": "Nepidae",
+   "ja": "Ranatrinae"
+  },
+  "Saturniinae": {
+   "family": "Saturniidae",
+   "ja": "Saturniinae"
+  },
+  "Agliinae": {
+   "family": "Saturniidae",
+   "ja": "Agliinae"
+  },
+  "Sphinginae": {
+   "family": "Sphingidae",
+   "ja": "Sphinginae"
+  },
+  "Smerinthinae": {
+   "family": "Sphingidae",
+   "ja": "Smerinthinae"
+  },
+  "Macroglossinae": {
+   "family": "Sphingidae",
+   "ja": "ホウジャク亜科"
+  },
+  "Erebinae": {
+   "family": "Erebidae",
+   "ja": "トモエガ亜科"
+  },
+  "Calpinae": {
+   "family": "Erebidae",
+   "ja": "Calpinae"
+  },
+  "Cicindelinae": {
+   "family": "Carabidae",
+   "ja": "Cicindelinae"
+  },
+  "Syndesinae": {
+   "family": "Lucanidae",
+   "ja": "Syndesinae"
+  },
+  "Aesalinae": {
+   "family": "Lucanidae",
+   "ja": "Aesalinae"
+  },
+  "Lepturinae": {
+   "family": "Cerambycidae",
+   "ja": "Lepturinae"
+  },
+  "Necydalinae": {
+   "family": "Cerambycidae",
+   "ja": "Necydalinae"
+  },
+  "Notomicrinae": {
+   "family": "Noteridae",
+   "ja": "Notomicrinae"
+  },
+  "Noterinae": {
+   "family": "Noteridae",
+   "ja": "Noterinae"
+  },
+  "Laccophilinae": {
+   "family": "Dytiscidae",
+   "ja": "Laccophilinae"
+  },
+  "Agabinae": {
+   "family": "Dytiscidae",
+   "ja": "マメゲンゴロウ亜科"
+  },
+  "Copelatinae": {
+   "family": "Dytiscidae",
+   "ja": "セスジゲンゴロウ亜科"
+  },
+  "Colymbetinae": {
+   "family": "Dytiscidae",
+   "ja": "Colymbetinae"
+  },
+  "Dytiscinae": {
+   "family": "Dytiscidae",
+   "ja": "Dytiscinae"
+  },
+  "Cybistrinae": {
+   "family": "Dytiscidae",
+   "ja": "Cybistrinae"
+  },
+  "Archiearinae": {
+   "family": "Geometridae",
+   "ja": "Archiearinae"
+  },
+  "Cyrtacanthacridinae": {
+   "family": "Acrididae",
+   "ja": "ツチイナゴ亜科"
+  },
+  "Galerucinae": {
+   "family": "Chrysomelidae",
+   "ja": "ヒゲナガハムシ亜科"
+  },
+  "Curetinae": {
+   "family": "Lycaenidae",
+   "ja": "Curetinae"
+  },
+  "Vespinae": {
+   "family": "Vespidae",
+   "ja": "スズメバチ亜科"
+  },
+  "Mantinae": {
+   "family": "Mantidae",
+   "ja": "カマキリ亜科"
+  },
+  "Arctiinae": {
+   "family": "Erebidae",
+   "ja": "ヒトリガ亜科"
+  },
+  "Criocerinae": {
+   "family": "Chrysomelidae",
+   "ja": "Criocerinae"
+  },
+  "Spilomelinae": {
+   "family": "Crambidae",
+   "ja": "Spilomelinae"
+  },
+  "Formicinae": {
+   "family": "Formicidae",
+   "ja": "Formicinae"
+  },
+  "Oedipodinae": {
+   "family": "Acrididae",
+   "ja": "トノサマバッタ亜科"
+  },
+  "Eristalinae": {
+   "family": "Syrphidae",
+   "ja": "Eristalinae"
+  },
+  "Eneopterinae": {
+   "family": "Gryllidae",
+   "ja": "Eneopterinae"
+  },
+  "Syrphinae": {
+   "family": "Syrphidae",
+   "ja": "Syrphinae"
+  },
+  "Conocephalinae": {
+   "family": "Tettigoniidae",
+   "ja": "Conocephalinae"
+  },
+  "Lamiinae": {
+   "family": "Cerambycidae",
+   "ja": "フトカミキリ亜科"
+  },
+  "Cassidinae": {
+   "family": "Chrysomelidae",
+   "ja": "カメノコハムシ亜科"
+  },
+  "Myrmicinae": {
+   "family": "Formicidae",
+   "ja": "フタフシアリ亜科"
+  },
+  "Tenoderinae": {
+   "family": "Mantidae",
+   "ja": "Tenoderinae"
+  },
+  "Xylocopinae": {
+   "family": "Apidae",
+   "ja": "Xylocopinae"
+  },
+  "Alydinae": {
+   "family": "Alydidae",
+   "ja": "Alydinae"
+  },
+  "Oxyinae": {
+   "family": "Acrididae",
+   "ja": "Oxyinae"
+  },
+  "Tettigoniinae": {
+   "family": "Tettigoniidae",
+   "ja": "Tettigoniinae"
+  },
+  "Gomphocerinae": {
+   "family": "Acrididae",
+   "ja": "Gomphocerinae"
+  },
+  "Phaneropterinae": {
+   "family": "Tettigoniidae",
+   "ja": "ツユムシ亜科"
+  },
+  "Lymantriinae": {
+   "family": "Erebidae",
+   "ja": "Lymantriinae"
+  },
+  "Apinae": {
+   "family": "Apidae",
+   "ja": "ミツバチ亜科"
+  },
+  "Polistinae": {
+   "family": "Vespidae",
+   "ja": "アシナガバチ亜科"
+  },
+  "Aganainae": {
+   "family": "Erebidae",
+   "ja": "Aganainae"
+  },
+  "Cerambycinae": {
+   "family": "Cerambycidae",
+   "ja": "カミキリ亜科"
+  },
+  "Carabinae": {
+   "family": "Carabidae",
+   "ja": "オサムシ亜科"
+  },
+  "Epilamprinae": {
+   "family": "Blaberidae",
+   "ja": "Epilamprinae"
+  },
+  "Ennominae": {
+   "family": "Geometridae",
+   "ja": "Ennominae"
+  },
+  "Geometrinae": {
+   "family": "Geometridae",
+   "ja": "Geometrinae"
+  },
+  "Prioninae": {
+   "family": "Cerambycidae",
+   "ja": "Prioninae"
+  },
+  "Panesthiinae": {
+   "family": "Blaberidae",
+   "ja": "オオゴキブリ亜科"
+  },
+  "Chrysomelinae": {
+   "family": "Chrysomelidae",
+   "ja": "ハムシ亜科"
+  },
+  "Hierodulinae": {
+   "family": "Mantidae",
+   "ja": "Hierodulinae"
+  },
+  "Platyninae": {
+   "family": "Carabidae",
+   "ja": "Platyninae"
+  },
+  "Micrelytrinae": {
+   "family": "Alydidae",
+   "ja": "Micrelytrinae"
+  },
+  "Eumeninae": {
+   "family": "Vespidae",
+   "ja": "ドロバチ亜科"
+  },
+  "Dynastinae": {
+   "family": "Scarabaeidae",
+   "ja": "カブトムシ亜科"
+  },
+  "Gryllinae": {
+   "family": "Gryllidae",
+   "ja": "コオロギ亜科"
+  },
+  "Acridinae": {
+   "family": "Acrididae",
+   "ja": "ショウリョウバッタ亜科"
+  },
+  "Dolichoderinae": {
+   "family": "Formicidae",
+   "ja": "Dolichoderinae"
+  },
+  "Anophelinae": {
+   "family": "Culicidae",
+   "ja": "Anophelinae"
+  },
+  "Paraponerinae": {
+   "family": "Formicidae",
+   "ja": "Paraponerinae"
+  },
+  "Brachininae": {
+   "family": "Carabidae",
+   "ja": "Brachininae"
+  },
+  "Silphinae": {
+   "family": "Staphylinidae",
+   "ja": "Silphinae"
+  },
+  "Mecopodinae": {
+   "family": "Tettigoniidae",
+   "ja": "Mecopodinae"
+  }
+ },
+ "genusSubfamily": {
+  "Abroscelis": "Cicindelinae",
+  "Acherontia": "Sphinginae",
+  "Acilius": "Dytiscinae",
+  "Acosmeryx": "Macroglossinae",
+  "Acrida": "Acridinae",
+  "Actias": "Saturniinae",
+  "Aedes": "Culicinae",
+  "Aegosoma": "Prioninae",
+  "Aegus": "Lucaninae",
+  "Aeromachus": "Hesperiinae",
+  "Aesalus": "Aesalinae",
+  "Agabus": "Agabinae",
+  "Aganocrossus": "Aphodiinae",
+  "Aglais": "Nymphalinae",
+  "Aglia": "Agliinae",
+  "Agrilinus": "Aphodiinae",
+  "Agrius": "Sphinginae",
+  "Allopachria": "Hydroporinae",
+  "Alosterna": "Lepturinae",
+  "Amata": "Arctiinae",
+  "Ambulyx": "Smerinthinae",
+  "Ampelophaga": "Macroglossinae",
+  "Anastrangalia": "Lepturinae",
+  "Anomala": "Rutelinae",
+  "Anopheles": "Anophelinae",
+  "Anoploderomorpha": "Lepturinae",
+  "Anoplophora": "Lamiinae",
+  "Antheraea": "Saturniinae",
+  "Apatura": "Apaturinae",
+  "Aphodius": "Aphodiinae",
+  "Apis": "Apinae",
+  "Apogonia": "Melolonthinae",
+  "Appasus": "Belostomatinae",
+  "Araschnia": "Nymphalinae",
+  "Argynnis": "Heliconiinae",
+  "Argyronome": "Heliconiinae",
+  "Arhopala": "Theclinae",
+  "Ariadne": "Biblidinae",
+  "Asclepios": "Halobatinae",
+  "Asota": "Aganainae",
+  "Attacus": "Saturniinae",
+  "Aulacophora": "Galerucinae",
+  "Auritibicen": "Cicadinae",
+  "Badamia": "Coeliadinae",
+  "Barsine": "Arctiinae",
+  "Batocera": "Lamiinae",
+  "Bibasis": "Coeliadinae",
+  "Bocchoris": "Spilomelinae",
+  "Bombus": "Apinae",
+  "Boudinotiana": "Archiearinae",
+  "Brachypronomaea": "Aleocharinae",
+  "Brachyta": "Lepturinae",
+  "Brenthis": "Heliconiinae",
+  "Bryothinusa": "Aleocharinae",
+  "Calamosternus": "Aphodiinae",
+  "Calinaga": "Calinaginae",
+  "Callambulyx": "Smerinthinae",
+  "Callytron": "Cicindelinae",
+  "Caltoris": "Hesperiinae",
+  "Camponotus": "Formicinae",
+  "Canthydrus": "Noterinae",
+  "Carabus": "Carabinae",
+  "Caraphia": "Lepturinae",
+  "Cardiodactylus": "Eneopterinae",
+  "Carilia": "Lepturinae",
+  "Carterocephalus": "Heteropterinae",
+  "Catocala": "Erebinae",
+  "Catochrysops": "Polyommatinae",
+  "Celastrina": "Polyommatinae",
+  "Cephonodes": "Macroglossinae",
+  "Ceruchus": "Syndesinae",
+  "Cetonia": "Cetoniinae",
+  "Chaetodera": "Cicindelinae",
+  "Choaspes": "Coeliadinae",
+  "Chrysolina": "Chrysomelinae",
+  "Chrysozephyrus": "Lycaeninae",
+  "Cicindela": "Cicindelinae",
+  "Cirrochroa": "Heliconiinae",
+  "Clanis": "Smerinthinae",
+  "Clossiana": "Heliconiinae",
+  "Coeliccia": "Calicnemiinae",
+  "Coenonympha": "Satyrinae",
+  "Colobopterus": "Aphodiinae",
+  "Colymbetes": "Colymbetinae",
+  "Comostola": "Geometrinae",
+  "Conocephalus": "Conocephalinae",
+  "Copelatus": "Copelatinae",
+  "Corennys": "Lepturinae",
+  "Cryptotympana": "Cicadinae",
+  "Culex": "Culicinae",
+  "Cupha": "Heliconiinae",
+  "Cupido": "Polyommatinae",
+  "Curetis": "Curetinae",
+  "Cyana": "Arctiinae",
+  "Cybister": "Cybistrinae",
+  "Cylindera": "Cicindelinae",
+  "Cymatophoropsis": "Calpinae",
+  "Cyrestis": "Cyrestinae",
+  "Dactylispa": "Cassidinae",
+  "Daimio": "Pyrginae",
+  "Damora": "Heliconiinae",
+  "Danaus": "Danainae",
+  "Daphnis": "Macroglossinae",
+  "Dasyvalgus": "Cetoniinae",
+  "Deilephila": "Macroglossinae",
+  "Diaulota": "Aleocharinae",
+  "Dichorragia": "Pseudoergolinae",
+  "Dicrotendipes": "Chironominae",
+  "Dimitshydrus": "Hydroporinae",
+  "Dinoptera": "Lepturinae",
+  "Dolbina": "Sphinginae",
+  "Doleschallia": "Nymphalinae",
+  "Dolichus": "Platyninae",
+  "Dorcus": "Lucaninae",
+  "Ducetia": "Phaneropterinae",
+  "Dynastes": "Dynastinae",
+  "Dytiscus": "Dytiscinae",
+  "Elymnias": "Satyrinae",
+  "Encyclops": "Lepturinae",
+  "Enoploderes": "Lepturinae",
+  "Ephies": "Lepturinae",
+  "Episyrphus": "Syrphinae",
+  "Erebia": "Satyrinae",
+  "Erebus": "Erebinae",
+  "Eretes": "Dytiscinae",
+  "Erionota": "Hesperiinae",
+  "Eristalis": "Eristalinae",
+  "Eristena": "Acentropinae",
+  "Erynnis": "Pyrginae",
+  "Etorofus": "Lepturinae",
+  "Euchrysops": "Polyommatinae",
+  "Euconocephalus": "Conocephalinae",
+  "Eudocima": "Calpinae",
+  "Euploea": "Danainae",
+  "Euracmaeops": "Lepturinae",
+  "Eustrangalis": "Lepturinae",
+  "Euterpnosia": "Cicadinae",
+  "Everes": "Polyommatinae",
+  "Evodinellus": "Lepturinae",
+  "Exomala": "Rutelinae",
+  "Fabriciana": "Heliconiinae",
+  "Famegana": "Polyommatinae",
+  "Figulus": "Lucaninae",
+  "Fixsenia": "Theclinae",
+  "Formica": "Formicinae",
+  "Formosopyrrhona": "Lepturinae",
+  "Gallerucida": "Galerucinae",
+  "Gametis": "Cetoniinae",
+  "Gampsocleis": "Tettigoniinae",
+  "Gastrophysa": "Chrysomelinae",
+  "Gerris": "Gerrinae",
+  "Glaucopsyche": "Polyommatinae",
+  "Glycyphana": "Cetoniinae",
+  "Gonista": "Gomphocerinae",
+  "Graphoderus": "Dytiscinae",
+  "Graptopsaltria": "Cicadinae",
+  "Halobates": "Halobatinae",
+  "Halorhadinus": "Aleocharinae",
+  "Hasora": "Coeliadinae",
+  "Hemaris": "Macroglossinae",
+  "Hesperia": "Hesperiinae",
+  "Hestina": "Apaturinae",
+  "Hierodula": "Hierodulinae",
+  "Hippotion": "Macroglossinae",
+  "Holochlora": "Phaneropterinae",
+  "Hyalessa": "Cicadinae",
+  "Hybovalgus": "Cetoniinae",
+  "Hydaticus": "Dytiscinae",
+  "Hydroglyphus": "Hydroporinae",
+  "Hydroporus": "Hydroporinae",
+  "Hydrovatus": "Hydroporinae",
+  "Hygrotus": "Hydroporinae",
+  "Hyles": "Macroglossinae",
+  "Hyphydrus": "Hydroporinae",
+  "Hypolimnas": "Nymphalinae",
+  "Idea": "Danainae",
+  "Ideopsis": "Danainae",
+  "Idiostrangalia": "Lepturinae",
+  "Ilybius": "Agabinae",
+  "Isoteinon": "Hesperiinae",
+  "Jamides": "Polyommatinae",
+  "Japanocorus": "Lepturinae",
+  "Japanolaccophilus": "Laccophilinae",
+  "Japanostrangalia": "Lepturinae",
+  "Judolia": "Lepturinae",
+  "Judolidia": "Lepturinae",
+  "Junonia": "Nymphalinae",
+  "Kallima": "Nymphalinae",
+  "Kanekoa": "Lepturinae",
+  "Kentrochrysalis": "Sphinginae",
+  "Kirkaldyia": "Lethocerinae",
+  "Konoa": "Lepturinae",
+  "Kosemia": "Cicadettinae",
+  "Krananda": "Ennominae",
+  "Labarrus": "Aphodiinae",
+  "Laccophilus": "Laccophilinae",
+  "Laccoptera": "Cassidinae",
+  "Laccotrephes": "Nepinae",
+  "Ladoga": "Limenitidinae",
+  "Lampides": "Polyommatinae",
+  "Langia": "Smerinthinae",
+  "Leiodytes": "Hydroporinae",
+  "Lema": "Criocerinae",
+  "Lemula": "Lepturinae",
+  "Leptocorisa": "Micrelytrinae",
+  "Leptostrangalia": "Lepturinae",
+  "Leptura": "Lepturinae",
+  "Lethe": "Satyrinae",
+  "Lethocerus": "Lethocerinae",
+  "Libythea": "Libytheinae",
+  "Limbodessus": "Hydroporinae",
+  "Limenitis": "Limenitidinae",
+  "Limnogonus": "Gerrinae",
+  "Limnometra": "Gerrinae",
+  "Limnoporus": "Gerrinae",
+  "Linepithema": "Dolichoderinae",
+  "Liodessus": "Hydroporinae",
+  "Liparocephalus": "Aleocharinae",
+  "Locusta": "Oedipodinae",
+  "Loepa": "Saturniinae",
+  "Lophyra": "Cicindelinae",
+  "Lucanus": "Lucaninae",
+  "Lucia": "Theclinae",
+  "Lycaena": "Lycaeninae",
+  "Lymantria": "Lymantriinae",
+  "Macroglossum": "Macroglossinae",
+  "Macroleptura": "Lepturinae",
+  "Macropidonia": "Lepturinae",
+  "Maculinea": "Lycaeninae",
+  "Maladera": "Sericinae",
+  "Maruca": "Spilomelinae",
+  "Marumba": "Smerinthinae",
+  "Mecopoda": "Mecopodinae",
+  "Megisba": "Polyommatinae",
+  "Meimuna": "Cicadinae",
+  "Melanitis": "Satyrinae",
+  "Melitaea": "Nymphalinae",
+  "Melolontha": "Melolonthinae",
+  "Metrocoris": "Halobatinae",
+  "Microdytes": "Hydroporinae",
+  "Mimas": "Smerinthinae",
+  "Mimela": "Rutelinae",
+  "Mimostrangalia": "Lepturinae",
+  "Mogannia": "Cicadettinae",
+  "Muda": "Cicadettinae",
+  "Munamizoa": "Lepturinae",
+  "Mycalesis": "Satyrinae",
+  "Myriochila": "Cicindelinae",
+  "Nacaduba": "Polyommatinae",
+  "Nebrioporus": "Hydroporinae",
+  "Necrophila": "Silphinae",
+  "Nectoporus": "Hydroporinae",
+  "Necydalis": "Necydalinae",
+  "Neocerambyx": "Cerambycinae",
+  "Neocollyris": "Cicindelinae",
+  "Neogerris": "Gerrinae",
+  "Neogurelca": "Macroglossinae",
+  "Neohydrocoptus": "Noterinae",
+  "Neolucanus": "Lucaninae",
+  "Neonectes": "Hydroporinae",
+  "Neope": "Satyrinae",
+  "Nepa": "Nepinae",
+  "Neptis": "Limenitidinae",
+  "Nigidius": "Lucaninae",
+  "Nigrotrichia": "Melolonthinae",
+  "Niphanda": "Polyommatinae",
+  "Nipponoserica": "Sericinae",
+  "Nipponovalgus": "Cetoniinae",
+  "Nivellia": "Lepturinae",
+  "Noterus": "Noterinae",
+  "Notocrypta": "Hesperiinae",
+  "Nymphalis": "Nymphalinae",
+  "Ochlerotatus": "Culicinae",
+  "Ochlodes": "Hesperiinae",
+  "Oedaleus": "Oedipodinae",
+  "Oedecnema": "Lepturinae",
+  "Oeneis": "Satyrinae",
+  "Ohbayashia": "Lepturinae",
+  "Onthophagus": "Scarabaeinae",
+  "Opisthoplatia": "Epilamprinae",
+  "Oraesia": "Calpinae",
+  "Oreodytes": "Hydroporinae",
+  "Oreumenes": "Eumeninae",
+  "Ourapteryx": "Ennominae",
+  "Oxya": "Oxyinae",
+  "Pachypidonia": "Lepturinae",
+  "Pachyta": "Lepturinae",
+  "Pachytodes": "Lepturinae",
+  "Palpita": "Spilomelinae",
+  "Panesthia": "Panesthiinae",
+  "Paragaurotes": "Lepturinae",
+  "Paraglenea": "Lamiinae",
+  "Paranaspia": "Lepturinae",
+  "Parantica": "Danainae",
+  "Paraponera": "Paraponerinae",
+  "Parascatonomus": "Scarabaeinae",
+  "Parastasia": "Rutelinae",
+  "Parastrangalis": "Lepturinae",
+  "Parathyma": "Limenitidinae",
+  "Parnara": "Hesperiinae",
+  "Parum": "Smerinthinae",
+  "Patanga": "Cyrtacanthacridinae",
+  "Pedostrangalia": "Lepturinae",
+  "Pelopidas": "Hesperiinae",
+  "Pergesa": "Macroglossinae",
+  "Petrelaea": "Polyommatinae",
+  "Phalanta": "Heliconiinae",
+  "Phaneroptera": "Phaneropterinae",
+  "Phaulula": "Phaneropterinae",
+  "Pheropsophus": "Brachininae",
+  "Phreatodytes": "Notomicrinae",
+  "Phyllosphingia": "Smerinthinae",
+  "Phytomia": "Eristalinae",
+  "Pidonia": "Lepturinae",
+  "Pithecops": "Polyommatinae",
+  "Planopleura": "Cicadinae",
+  "Platambus": "Agabinae",
+  "Platycerus": "Lucaninae",
+  "Platycnemis": "Platycnemidinae",
+  "Platynectes": "Agabinae",
+  "Platypleura": "Cicadinae",
+  "Plebejus": "Polyommatinae",
+  "Polistes": "Polistinae",
+  "Polyergus": "Formicinae",
+  "Polygonia": "Nymphalinae",
+  "Polyphylla": "Melolonthinae",
+  "Polyptychus": "Smerinthinae",
+  "Polyrhachis": "Formicinae",
+  "Polytremis": "Hesperiinae",
+  "Polyura": "Charaxinae",
+  "Pomponia": "Cicadinae",
+  "Pontomyia": "Chironominae",
+  "Popillia": "Rutelinae",
+  "Potanthus": "Hesperiinae",
+  "Prismognathus": "Lucaninae",
+  "Pristomyrmex": "Myrmicinae",
+  "Prosopocoilus": "Lucaninae",
+  "Prosotas": "Lycaeninae",
+  "Protaetia": "Cetoniinae",
+  "Psacothea": "Lamiinae",
+  "Pseudalosterna": "Lepturinae",
+  "Pseudocopera": "Platycnemidinae",
+  "Pseudosieversia": "Lepturinae",
+  "Pseudotorynorrhina": "Cetoniinae",
+  "Psilogramma": "Sphinginae",
+  "Purpuricenus": "Cerambycinae",
+  "Pygostrangalia": "Lepturinae",
+  "Pyrgus": "Pyrginae",
+  "Pyrrhona": "Lepturinae",
+  "Ranatra": "Ranatrinae",
+  "Rapala": "Theclinae",
+  "Rhaetulus": "Lucaninae",
+  "Rhagastis": "Macroglossinae",
+  "Rhagium": "Lepturinae",
+  "Rhantaticus": "Dytiscinae",
+  "Rhantus": "Colymbetinae",
+  "Rhodinia": "Saturniinae",
+  "Rhyparus": "Aphodiinae",
+  "Riptortus": "Alydinae",
+  "Rosalia": "Cerambycinae",
+  "Sachalinobia": "Lepturinae",
+  "Samia": "Saturniinae",
+  "Sasakia": "Apaturinae",
+  "Scolitantides": "Polyommatinae",
+  "Serrognathus": "Lucaninae",
+  "Smerinthus": "Smerinthinae",
+  "Speyeria": "Heliconiinae",
+  "Sphinx": "Sphinginae",
+  "Spindasis": "Lycaeninae",
+  "Spoladea": "Spilomelinae",
+  "Statilia": "Mantinae",
+  "Stenurella": "Lepturinae",
+  "Stictoleptura": "Lepturinae",
+  "Strangalia": "Lepturinae",
+  "Strangalomorpha": "Lepturinae",
+  "Streeyola": "Cicadinae",
+  "Suastus": "Hesperiinae",
+  "Suisha": "Cicadinae",
+  "Syntomoides": "Arctiinae",
+  "Tagiades": "Pyrginae",
+  "Tanna": "Cicadinae",
+  "Taraka": "Miletinae",
+  "Teleogryllus": "Gryllinae",
+  "Telicota": "Hesperiinae",
+  "Telmatogeton": "Telmatogetoninae",
+  "Tenodera": "Tenoderinae",
+  "Tetramorium": "Myrmicinae",
+  "Tettigonia": "Tettigoniinae",
+  "Thalassomya": "Telmatogetoninae",
+  "Thalassosmittia": "Orthocladiinae",
+  "Therates": "Cicindelinae",
+  "Theretra": "Macroglossinae",
+  "Thymelicus": "Hesperiinae",
+  "Timelaea": "Apaturinae",
+  "Tirumala": "Danainae",
+  "Toxotinus": "Lepturinae",
+  "Trilophidia": "Oedipodinae",
+  "Trypoxylus": "Dynastinae",
+  "Vagitanus": "Cicadettinae",
+  "Vanessa": "Nymphalinae",
+  "Velutinodorcus": "Lucaninae",
+  "Vespa": "Vespinae",
+  "Xenogryllus": "Eneopterinae",
+  "Xenophyrama": "Lepturinae",
+  "Xylocopa": "Xylocopinae",
+  "Yezoterpnosia": "Cicadinae",
+  "Yoma": "Nymphalinae",
+  "Ypthima": "Satyrinae",
+  "Zizeeria": "Polyommatinae",
+  "Zizina": "Polyommatinae",
+  "Zizula": "Polyommatinae"
+ },
  "names": {
   "Acanthosomatidae": "ツノカメムシ科",
+  "Acentropinae": "ミズメイガ亜科",
   "Acrididae": "バッタ科",
+  "Acrididea": "バッタ下目",
+  "Acridinae": "ショウリョウバッタ亜科",
   "Aeshnidae": "ヤンマ科",
+  "Agabinae": "マメゲンゴロウ亜科",
+  "Alydidae": "ホソヘリカメムシ科",
   "Anisolabididae": "ハサミムシ科",
-  "Anisoptera": "トンボ亜目",
+  "Apaturinae": "コムラサキ亜科",
   "Aphelocheiridae": "ナベブタムシ科",
   "Aphididae": "アブラムシ科",
   "Apidae": "ミツバチ科",
+  "Apinae": "ミツバチ亜科",
+  "Apoidea": "ミツバチ上科",
   "Archaeognatha": "イシノミ目",
+  "Arctiinae": "ヒトリガ亜科",
+  "Asilidae": "ムシヒキアブ科",
   "Attelabidae": "オトシブミ科",
   "Belostomatidae": "コオイムシ科",
+  "Belostomatinae": "コオイムシ亜科",
+  "Biblidinae": "カバタテハ亜科",
+  "Blaberidae": "オオゴキブリ科",
   "Blattidae": "ゴキブリ科",
   "Bombycidae": "カイコガ科",
-  "Bombycoidea": "カイコガ上科",
+  "Bombyliidae": "ツリアブ科",
   "Buprestidae": "タマムシ科",
   "Calopterygidae": "カワトンボ科",
   "Canacidae": "ニセミギワバエ科",
   "Carabidae": "オサムシ科",
+  "Carabinae": "オサムシ亜科",
+  "Cassidinae": "カメノコハムシ亜科",
   "Cerambycidae": "カミキリムシ科",
+  "Cerambycinae": "カミキリ亜科",
+  "Cetoniinae": "ハナムグリ亜科",
+  "Charaxinae": "フタオチョウ亜科",
   "Chironomidae": "ユスリカ科",
   "Chlorocyphidae": "ハナダカトンボ科",
   "Chlorogomphidae": "ミナミヤンマ科",
   "Chrysomelidae": "ハムシ科",
+  "Chrysomelinae": "ハムシ亜科",
+  "Cicadellidae": "ヨコバイ科",
   "Cicadidae": "セミ科",
   "Cimicidae": "トコジラミ科",
   "Coccinellidae": "テントウムシ科",
   "Coenagrionidae": "イトトンボ科",
+  "Copelatinae": "セスジゲンゴロウ亜科",
   "Cordulegastridae": "オニヤンマ科",
   "Corduliidae": "エゾトンボ科",
+  "Coreidae": "ヘリカメムシ科",
   "Corydalidae": "ヘビトンボ科",
   "Crambidae": "ツトガ科",
   "Culicidae": "カ科",
+  "Curculionidae": "ゾウムシ科",
+  "Curculionoidea": "ゾウムシ上科",
+  "Cyrestinae": "イシガケチョウ亜科",
+  "Cyrtacanthacridinae": "ツチイナゴ亜科",
+  "Danainae": "マダラチョウ亜科",
   "Delphacidae": "ウンカ科",
   "Dermaptera": "ハサミムシ目",
+  "Dermestidae": "カツオブシムシ科",
   "Drosophilidae": "ショウジョウバエ科",
   "Dryomyzidae": "ベッコウバエ科",
+  "Dynastinae": "カブトムシ亜科",
   "Dytiscidae": "ゲンゴロウ科",
   "Elateridae": "コメツキムシ科",
   "Embioptera": "シロアリモドキ目",
+  "Ensifera": "キリギリス亜目",
   "Ephemeridae": "モンカゲロウ科",
   "Ephemeroptera": "カゲロウ目",
+  "Epicopeiidae": "アゲハモドキガ科",
   "Epiophlebiidae": "ムカシトンボ科",
   "Erebidae": "トモエガ科",
+  "Erebinae": "トモエガ亜科",
+  "Eumeninae": "ドロバチ亜科",
   "Euphaeidae": "ミナミカワトンボ科",
   "Flatidae": "アオバハゴロモ科",
   "Formicidae": "アリ科",
+  "Galerucinae": "ヒゲナガハムシ亜科",
+  "Geometridae": "シャクガ科",
+  "Geometroidea": "シャクガ上科",
   "Geotrupidae": "センチコガネ科",
   "Gerridae": "アメンボ科",
   "Gomphidae": "サナエトンボ科",
   "Gryllidae": "コオロギ科",
+  "Gryllidea": "コオロギ下目",
+  "Gryllinae": "コオロギ亜科",
   "Grylloblattidae": "ガロアムシ科",
+  "Grylloidea": "コオロギ上科",
   "Gryllotalpidae": "ケラ科",
   "Gyrinidae": "ミズスマシ科",
+  "Heliconiinae": "ドクチョウ亜科",
   "Hermatobatidae": "サンゴアメンボ科",
   "Hesperiidae": "セセリチョウ科",
+  "Hesperiinae": "セセリチョウ亜科",
   "Hybosoridae": "アツバコガネ科",
   "Hydraenidae": "ダルマガムシ科",
   "Hydrophilidae": "ガムシ科",
+  "Hydroporinae": "ケシゲンゴロウ亜科",
   "Inocelliidae": "ラクダムシ科",
   "Labiduridae": "オオハサミムシ科",
+  "Lamiinae": "フトカミキリ亜科",
   "Lampyridae": "ホタル科",
+  "Largidae": "オオホシカメムシ科",
   "Lepismatidae": "シミ科",
   "Lestidae": "アオイトトンボ科",
+  "Lethocerinae": "タガメ亜科",
   "Libellulidae": "トンボ科",
-  "Libelluloidea": "トンボ上科",
+  "Libytheinae": "テングチョウ亜科",
+  "Limenitidinae": "イチモンジチョウ亜科",
+  "Lonchodidae": "トゲナナフシ科",
   "Lucanidae": "クワガタムシ科",
+  "Lucaninae": "クワガタムシ亜科",
   "Lycaenidae": "シジミチョウ科",
+  "Lycaeninae": "ベニシジミ亜科",
   "Machilidae": "イシノミ科",
+  "Macroglossinae": "ホウジャク亜科",
   "Macromiidae": "ヤマトンボ科",
   "Mantidae": "カマキリ科",
+  "Mantinae": "カマキリ亜科",
   "Mantodea": "カマキリ目",
   "Mecoptera": "シリアゲムシ目",
   "Megaloptera": "ヘビトンボ目",
+  "Melolonthinae": "コフキコガネ亜科",
   "Membracidae": "ツノゼミ科",
   "Mesoveliidae": "ミズカメムシ科",
+  "Mogoplistidae": "カネタタキ科",
   "Monophlebidae": "ワタフキカイガラムシ科",
   "Muscidae": "イエバエ科",
   "Myrmeleontidae": "ウスバカゲロウ科",
+  "Myrmicinae": "フタフシアリ亜科",
   "Nepidae": "タイコウチ科",
   "Neuroptera": "アミメカゲロウ目",
   "Noctuidae": "ヤガ科",
-  "Noctuoidea": "ヤガ上科",
   "Noteridae": "コツブゲンゴロウ科",
   "Notonectidae": "マツモムシ科",
   "Nymphalidae": "タテハチョウ科",
+  "Nymphalinae": "タテハチョウ亜科",
   "Oecanthidae": "カンタン科",
+  "Oedipodinae": "トノサマバッタ亜科",
   "Oligotomidae": "シロアリモドキ科",
   "Omaniidae": "サンゴカメムシ科",
+  "Panesthiinae": "オオゴキブリ亜科",
   "Panorpidae": "シリアゲムシ科",
   "Papilionidae": "アゲハチョウ科",
   "Pediculidae": "ヒトジラミ科",
   "Pentatomidae": "カメムシ科",
+  "Pentatomoidea": "カメムシ上科",
   "Perlidae": "カワゲラ科",
   "Petaluridae": "ムカシヤンマ科",
   "Phalangopsidae": "スズムシ科",
+  "Phaneropterinae": "ツユムシ亜科",
   "Phasmida": "ナナフシ目",
   "Pieridae": "シロチョウ科",
   "Plataspidae": "マルカメムシ科",
   "Platycnemididae": "モノサシトンボ科",
   "Plecoptera": "カワゲラ目",
-  "Polyphaga": "多食亜目",
+  "Polistinae": "アシナガバチ亜科",
+  "Polyommatinae": "ヒメシジミ亜科",
   "Psychidae": "ミノガ科",
   "Pulicidae": "ヒトノミ科",
+  "Pyrginae": "チャマダラセセリ亜科",
   "Pyrgomorphidae": "オンブバッタ科",
   "Reduviidae": "サシガメ科",
   "Rhaphidophoridae": "カマドウマ科",
   "Saldidae": "ミズギワカメムシ科",
   "Saturniidae": "ヤママユガ科",
+  "Satyrinae": "ジャノメチョウ亜科",
   "Scarabaeidae": "コガネムシ科",
-  "Scarabaeoidea": "コガネムシ上科",
+  "Scutelleridae": "キンカメムシ科",
   "Siphonaptera": "ノミ目",
   "Sphecidae": "アナバチ科",
   "Sphingidae": "スズメガ科",
   "Staphylinidae": "ハネカクシ科",
   "Stenopsychidae": "ヒゲナガカワトビケラ科",
+  "Stratiomyidae": "ミズアブ科",
   "Strepsiptera": "ネジレバネ目",
   "Syrphidae": "ハナアブ科",
   "Tabanidae": "アブ科",
+  "Tenebrionidae": "ゴミムシダマシ科",
   "Tettigoniidae": "キリギリス科",
+  "Tettigoniidea": "キリギリス下目",
+  "Theclinae": "ミドリシジミ亜科",
   "Thripidae": "アザミウマ科",
   "Thysanoptera": "アザミウマ目",
   "Tineidae": "ヒロズコガ科",
@@ -1296,130 +2379,194 @@
   "Trichoptera": "トビケラ目",
   "Veliidae": "カタビロアメンボ科",
   "Vespidae": "スズメバチ科",
+  "Vespinae": "スズメバチ亜科",
   "Xenidae": "ネジレバネ科",
-  "Zoraptera": "ジュズヒゲムシ目",
-  "Zygoptera": "イトトンボ亜目"
+  "Zoraptera": "ジュズヒゲムシ目"
  },
  "nameSources": {
   "Acanthosomatidae": "GBIF・iNaturalist",
+  "Acentropinae": "Wikidata・iNaturalist",
   "Acrididae": "GBIF・Wikidata・iNaturalist",
+  "Acrididea": "Wikidata・iNaturalist",
+  "Acridinae": "Wikidata・iNaturalist",
   "Aeshnidae": "GBIF・Wikidata・iNaturalist",
+  "Agabinae": "Wikidata・iNaturalist",
+  "Alydidae": "GBIF・iNaturalist",
   "Anisolabididae": "GBIF・iNaturalist",
-  "Anisoptera": "Wikidata・iNaturalist",
+  "Apaturinae": "Wikidata・iNaturalist",
   "Aphelocheiridae": "GBIF・iNaturalist",
   "Aphididae": "GBIF・iNaturalist",
   "Apidae": "GBIF・Wikidata・iNaturalist",
+  "Apinae": "Wikidata・iNaturalist",
+  "Apoidea": "Wikidata・iNaturalist",
   "Archaeognatha": "Wikidata・iNaturalist",
+  "Arctiinae": "Wikidata・iNaturalist",
+  "Asilidae": "GBIF・Wikidata・iNaturalist",
   "Attelabidae": "GBIF・Wikidata・iNaturalist",
   "Belostomatidae": "環境省1997",
+  "Belostomatinae": "Wikidata・iNaturalist",
+  "Biblidinae": "Wikidata・iNaturalist",
+  "Blaberidae": "GBIF・Wikidata・iNaturalist",
   "Blattidae": "GBIF・Wikidata・iNaturalist",
   "Bombycidae": "GBIF・Wikidata・iNaturalist",
-  "Bombycoidea": "Wikidata・iNaturalist",
+  "Bombyliidae": "Wikidata・iNaturalist",
   "Buprestidae": "GBIF・Wikidata・iNaturalist",
   "Calopterygidae": "環境省1997",
   "Canacidae": "GBIF・Wikidata・iNaturalist",
   "Carabidae": "GBIF・Wikidata・iNaturalist",
+  "Carabinae": "Wikidata・iNaturalist",
+  "Cassidinae": "Wikidata・iNaturalist",
   "Cerambycidae": "環境省1997",
+  "Cerambycinae": "Wikidata・iNaturalist",
+  "Cetoniinae": "Wikidata・iNaturalist",
+  "Charaxinae": "Wikidata・iNaturalist",
   "Chironomidae": "GBIF・Wikidata・iNaturalist",
   "Chlorocyphidae": "環境省1997",
   "Chlorogomphidae": "GBIF・iNaturalist",
   "Chrysomelidae": "GBIF・Wikidata・iNaturalist",
+  "Chrysomelinae": "Wikidata・iNaturalist",
+  "Cicadellidae": "GBIF・Wikidata・iNaturalist",
   "Cicadidae": "環境省1997",
   "Cimicidae": "GBIF・iNaturalist",
   "Coccinellidae": "GBIF・Wikidata・iNaturalist",
   "Coenagrionidae": "環境省1997",
+  "Copelatinae": "Wikidata・iNaturalist",
   "Cordulegastridae": "GBIF・Wikidata・iNaturalist",
   "Corduliidae": "環境省1997",
+  "Coreidae": "GBIF・iNaturalist",
   "Corydalidae": "GBIF・Wikidata・iNaturalist",
   "Crambidae": "GBIF・Wikidata・iNaturalist",
   "Culicidae": "GBIF・Wikidata・iNaturalist",
+  "Curculionidae": "GBIF・Wikidata・iNaturalist",
+  "Curculionoidea": "Wikidata・iNaturalist",
+  "Cyrestinae": "Wikidata・iNaturalist",
+  "Cyrtacanthacridinae": "Wikidata・iNaturalist",
+  "Danainae": "Wikidata・iNaturalist",
   "Delphacidae": "GBIF・Wikidata・iNaturalist",
   "Dermaptera": "GBIF・Wikidata・iNaturalist",
+  "Dermestidae": "GBIF・Wikidata・iNaturalist",
   "Drosophilidae": "GBIF・Wikidata・iNaturalist",
   "Dryomyzidae": "GBIF・Wikidata・iNaturalist",
+  "Dynastinae": "Wikidata・iNaturalist",
   "Dytiscidae": "環境省1997",
   "Elateridae": "GBIF・Wikidata・iNaturalist",
   "Embioptera": "Wikidata・iNaturalist",
+  "Ensifera": "Wikidata・iNaturalist",
   "Ephemeridae": "GBIF・iNaturalist",
   "Ephemeroptera": "GBIF・Wikidata・iNaturalist",
+  "Epicopeiidae": "GBIF・Wikidata・iNaturalist",
   "Epiophlebiidae": "環境省1997",
   "Erebidae": "GBIF・Wikidata・iNaturalist",
+  "Erebinae": "Wikidata・iNaturalist",
+  "Eumeninae": "Wikidata・iNaturalist",
   "Euphaeidae": "環境省1997",
   "Flatidae": "GBIF・Wikidata・iNaturalist",
   "Formicidae": "GBIF・Wikidata・iNaturalist",
+  "Galerucinae": "Wikidata・iNaturalist",
+  "Geometridae": "環境省1997",
+  "Geometroidea": "Wikidata・iNaturalist",
   "Geotrupidae": "GBIF・Wikidata・iNaturalist",
   "Gerridae": "環境省1997",
   "Gomphidae": "環境省1997",
   "Gryllidae": "GBIF・Wikidata・iNaturalist",
+  "Gryllidea": "Wikidata・iNaturalist",
+  "Gryllinae": "Wikidata・iNaturalist",
   "Grylloblattidae": "GBIF・iNaturalist",
+  "Grylloidea": "Wikidata・iNaturalist",
   "Gryllotalpidae": "GBIF・Wikidata・iNaturalist",
   "Gyrinidae": "環境省1997",
+  "Heliconiinae": "Wikidata・iNaturalist",
   "Hermatobatidae": "GBIF・iNaturalist",
   "Hesperiidae": "環境省1997",
+  "Hesperiinae": "Wikidata・iNaturalist",
   "Hybosoridae": "GBIF・iNaturalist",
   "Hydraenidae": "GBIF・Wikidata・iNaturalist",
   "Hydrophilidae": "GBIF・Wikidata・iNaturalist",
+  "Hydroporinae": "Wikidata・iNaturalist",
   "Inocelliidae": "GBIF・iNaturalist",
   "Labiduridae": "GBIF・iNaturalist",
+  "Lamiinae": "Wikidata・iNaturalist",
   "Lampyridae": "GBIF・Wikidata・iNaturalist",
+  "Largidae": "GBIF・iNaturalist",
   "Lepismatidae": "GBIF・Wikidata・iNaturalist",
   "Lestidae": "環境省1997",
+  "Lethocerinae": "Wikidata・iNaturalist",
   "Libellulidae": "環境省1997",
-  "Libelluloidea": "Wikidata・iNaturalist",
+  "Libytheinae": "Wikidata・iNaturalist",
+  "Limenitidinae": "Wikidata・iNaturalist",
+  "Lonchodidae": "GBIF・iNaturalist",
   "Lucanidae": "環境省1997",
+  "Lucaninae": "Wikidata・iNaturalist",
   "Lycaenidae": "環境省1997",
+  "Lycaeninae": "Wikidata・iNaturalist",
   "Machilidae": "GBIF・Wikidata・iNaturalist",
+  "Macroglossinae": "Wikidata・iNaturalist",
   "Macromiidae": "GBIF・iNaturalist",
   "Mantidae": "GBIF・Wikidata・iNaturalist",
+  "Mantinae": "Wikidata・iNaturalist",
   "Mantodea": "Wikidata・iNaturalist",
   "Mecoptera": "Wikidata・iNaturalist",
   "Megaloptera": "Wikidata・iNaturalist",
+  "Melolonthinae": "Wikidata・iNaturalist",
   "Membracidae": "GBIF・Wikidata・iNaturalist",
   "Mesoveliidae": "GBIF・Wikidata・iNaturalist",
+  "Mogoplistidae": "GBIF・iNaturalist",
   "Monophlebidae": "GBIF・iNaturalist",
   "Muscidae": "GBIF・Wikidata・iNaturalist",
   "Myrmeleontidae": "GBIF・Wikidata・iNaturalist",
+  "Myrmicinae": "Wikidata・iNaturalist",
   "Nepidae": "環境省1997",
   "Neuroptera": "GBIF・Wikidata・iNaturalist",
   "Noctuidae": "環境省1997",
-  "Noctuoidea": "Wikidata・iNaturalist",
   "Noteridae": "GBIF・iNaturalist",
   "Notonectidae": "環境省1997",
   "Nymphalidae": "環境省1997",
+  "Nymphalinae": "Wikidata・iNaturalist",
   "Oecanthidae": "GBIF・Wikidata・iNaturalist",
+  "Oedipodinae": "Wikidata・iNaturalist",
   "Oligotomidae": "GBIF・iNaturalist",
   "Omaniidae": "GBIF・iNaturalist",
+  "Panesthiinae": "Wikidata・iNaturalist",
   "Panorpidae": "GBIF・Wikidata・iNaturalist",
   "Papilionidae": "環境省1997",
   "Pediculidae": "GBIF・iNaturalist",
   "Pentatomidae": "GBIF・Wikidata・iNaturalist",
+  "Pentatomoidea": "Wikidata・iNaturalist",
   "Perlidae": "GBIF・iNaturalist",
   "Petaluridae": "環境省1997",
   "Phalangopsidae": "GBIF・Wikidata・iNaturalist",
+  "Phaneropterinae": "Wikidata・iNaturalist",
   "Phasmida": "Wikidata・iNaturalist",
   "Pieridae": "環境省1997",
   "Plataspidae": "GBIF・iNaturalist",
   "Platycnemididae": "GBIF・Wikidata・iNaturalist",
   "Plecoptera": "Wikidata・iNaturalist",
-  "Polyphaga": "Wikidata・iNaturalist",
+  "Polistinae": "Wikidata・iNaturalist",
+  "Polyommatinae": "Wikidata・iNaturalist",
   "Psychidae": "GBIF・Wikidata・iNaturalist",
   "Pulicidae": "GBIF・iNaturalist",
+  "Pyrginae": "Wikidata・iNaturalist",
   "Pyrgomorphidae": "GBIF・iNaturalist",
   "Reduviidae": "GBIF・Wikidata・iNaturalist",
   "Rhaphidophoridae": "GBIF・Wikidata・iNaturalist",
   "Saldidae": "GBIF・iNaturalist",
   "Saturniidae": "環境省1997",
+  "Satyrinae": "Wikidata・iNaturalist",
   "Scarabaeidae": "GBIF・Wikidata・iNaturalist",
-  "Scarabaeoidea": "Wikidata・iNaturalist",
+  "Scutelleridae": "GBIF・Wikidata・iNaturalist",
   "Siphonaptera": "Wikidata・iNaturalist",
   "Sphecidae": "GBIF・Wikidata・iNaturalist",
   "Sphingidae": "環境省1997",
   "Staphylinidae": "GBIF・Wikidata・iNaturalist",
   "Stenopsychidae": "GBIF・iNaturalist",
+  "Stratiomyidae": "GBIF・Wikidata・iNaturalist",
   "Strepsiptera": "Wikidata・iNaturalist",
   "Syrphidae": "Wikidata・iNaturalist",
   "Tabanidae": "GBIF・Wikidata・iNaturalist",
+  "Tenebrionidae": "GBIF・Wikidata・iNaturalist",
   "Tettigoniidae": "GBIF・Wikidata・iNaturalist",
+  "Tettigoniidea": "Wikidata・iNaturalist",
+  "Theclinae": "Wikidata・iNaturalist",
   "Thripidae": "GBIF・iNaturalist",
   "Thysanoptera": "Wikidata・iNaturalist",
   "Tineidae": "GBIF・iNaturalist",
@@ -1427,14 +2574,70 @@
   "Trichoptera": "Wikidata・iNaturalist",
   "Veliidae": "GBIF・Wikidata・iNaturalist",
   "Vespidae": "GBIF・Wikidata・iNaturalist",
+  "Vespinae": "Wikidata・iNaturalist",
   "Xenidae": "GBIF・iNaturalist",
-  "Zoraptera": "Wikidata・iNaturalist",
-  "Zygoptera": "Wikidata・iNaturalist"
+  "Zoraptera": "Wikidata・iNaturalist"
  },
  "unnamed": {
+  "Aesalinae": {
+   "マダラクワガタ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Aganainae": {
+   "ヒトリモドキガ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Agliinae": {
+   "エゾヨツメ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Aleocharinae": {
+   "ヒゲブトハネカクシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Alydinae": {
+   "ホソヘリカメムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Anophelinae": {
+   "ハマダラカ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Aphodiinae": {
+   "マグソコガネ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Archiearinae": {
+   "カバシャク亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Blaberoidea": {
+   "オオゴキブリ上科": [
+    "iNaturalist"
+   ]
+  },
   "Blattellidae": {
    "チャバネゴキブリ科": [
     "Wikidata"
+   ]
+  },
+  "Brachininae": {
+   "ホソクビゴミムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Calicnemiinae": {},
+  "Calinaginae": {
+   "クビワチョウ亜科": [
+    "iNaturalist"
    ]
   },
   "Calopterygoidea": {
@@ -1442,9 +2645,133 @@
     "iNaturalist"
    ]
   },
-  "Carcinophoridae": {},
+  "Calpinae": {
+   "エグリバ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Chironominae": {
+   "ユスリカ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Cicadettinae": {
+   "チッチゼミ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Cicadinae": {
+   "セミ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Cicindelinae": {
+   "ハンミョウ亜科": [
+    "Wikidata"
+   ]
+  },
+  "Cimicomorpha": {
+   "トコジラミ下目": [
+    "iNaturalist"
+   ]
+  },
+  "Coeliadinae": {
+   "アオバセセリ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Coenagrionoidea": {
    "イトトンボ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Colymbetinae": {
+   "ヒメゲンゴロウ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Conocephalinae": {
+   "ササキリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Cordulegastroidea": {
+   "オニヤンマ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Coreoidea": {
+   "ヘリカメムシ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Criocerinae": {
+   "クビナガハムシ亜科": [
+    "Wikidata"
+   ],
+   "クビボソハムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Culicinae": {
+   "ナミカ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Curetinae": {
+   "ウラギンシジミ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Cybistrinae": {
+   "ゲンゴロウ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Dolichoderinae": {
+   "カタアリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Dryophthoridae": {},
+  "Dytiscinae": {
+   "ゲンゴロウモドキ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Eneopterinae": {
+   "マツムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Ennominae": {
+   "エダシャク亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Epilamprinae": {
+   "マダラゴキブリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Eristalinae": {
+   "ハナアブ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Euphasmatodea": {},
+  "Formicinae": {
+   "ヤマアリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Geometrinae": {
+   "アオシャク亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Gerrinae": {
+   "アメンボ亜科": [
     "iNaturalist"
    ]
   },
@@ -1453,8 +2780,23 @@
     "iNaturalist"
    ]
   },
+  "Gomphocerinae": {
+   "ヒナバッタ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Gomphoidea": {
    "サナエトンボ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Halobatinae": {
+   "ウミアメンボ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Heteropterinae": {
+   "チョウセンキボシセセリ亜科": [
     "iNaturalist"
    ]
   },
@@ -1463,19 +2805,86 @@
     "iNaturalist"
    ]
   },
+  "Hierodulinae": {
+   "ハラビロカマキリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Laccophilinae": {
+   "ツブゲンゴロウ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Leptopodomorpha": {
    "ミズギワカメムシ下目": [
     "iNaturalist"
    ]
   },
+  "Lepturinae": {
+   "ハナカミキリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Lymantriinae": {
+   "ドクガ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Macromidiidae": {},
+  "Mecopodinae": {
+   "クツワムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Membracoidea": {
+   "ツノゼミ上科": [
+    "iNaturalist"
+   ]
+  },
+  "Micrelytrinae": {
+   "ヒメクモヘリカメムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Miletinae": {
+   "アシナガシジミ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Muscomorpha": {
    "ハエ下目": [
     "Wikidata"
    ]
   },
+  "Necydalinae": {},
+  "Nepinae": {
+   "タイコウチ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Noterinae": {},
+  "Notomicrinae": {},
   "Notoptera": {
    "ガロアムシ目": [
+    "iNaturalist"
+   ]
+  },
+  "Orthocladiinae": {
+   "エリユスリカ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Oxyinae": {
+   "イナゴ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Paraponerinae": {},
+  "Pentatomomorpha": {
+   "ペンタトモモルファ下目": [
+    "Wikidata"
+   ],
+   "カメムシ下目": [
     "iNaturalist"
    ]
   },
@@ -1489,11 +2898,28 @@
     "iNaturalist"
    ]
   },
+  "Platycnemidinae": {},
+  "Platyninae": {
+   "ヒラタゴミムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Prioninae": {
+   "ノコギリカミキリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Pseudoergolinae": {},
   "Psocodea": {
    "咀顎目": [
     "Wikidata"
    ],
    "カジリムシ目": [
+    "iNaturalist"
+   ]
+  },
+  "Ranatrinae": {
+   "ミズカマキリ亜科": [
     "iNaturalist"
    ]
   },
@@ -1507,7 +2933,83 @@
     "iNaturalist"
    ]
   },
+  "Rutelinae": {
+   "スジコガネ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Saturniinae": {
+   "サトゥルニイネ亜科": [
+    "Wikidata"
+   ],
+   "ヤママユガ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Scarabaeinae": {
+   "ダイコクコガネ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Sericinae": {
+   "ビロウドコガネ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Silphinae": {
+   "シデムシ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Smerinthinae": {
+   "ウチスズメ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Sphinginae": {
+   "スズメガ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Spilomelinae": {
+   "ヒゲナガノメイガ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Spiralizoridae": {},
+  "Syndesinae": {
+   "イッカククワガタ亜科": [
+    "Wikidata"
+   ],
+   "ツツクワガタ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Syrphinae": {
+   "ヒラタアブ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Telmatogetoninae": {
+   "イソユスリカ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Tenoderinae": {
+   "カマキリ亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Tettigoniinae": {
+   "キリギリス亜科": [
+    "iNaturalist"
+   ]
+  },
+  "Xylocopinae": {
+   "クマバチ亜科": [
+    "iNaturalist"
+   ]
+  },
   "Zygentoma": {
    "シミ目": [
     "iNaturalist"

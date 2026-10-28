@@ -1318,5 +1318,101 @@
    "Estrildidae",
    "Passeriformes"
   ]
+ },
+ {
+  "ja": "マメハチドリ",
+  "sci": "Mellisuga helenae",
+  "aliases": [],
+  "fact": "",
+  "tier": 2,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "オオハチドリ",
+  "sci": "Patagona gigas",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "ヤリハシハチドリ",
+  "sci": "Ensifera ensifera",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "ノドアカハチドリ",
+  "sci": "Archilochus colubris",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "アンナハチドリ",
+  "sci": "Calypte anna",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "アカフトオハチドリ",
+  "sci": "Selasphorus rufus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "トパーズハチドリ",
+  "sci": "Topaza pella",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "アオミミハチドリ",
+  "sci": "Colibri coruscans",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-28、check/hummingbirds/）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
  }
 ]
