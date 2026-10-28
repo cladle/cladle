@@ -19,6 +19,15 @@ const DEMOS = { normal: { target: "Trypoxylus dichotomus", guesses: ["Homo sapie
     "💭 スズキ系まで絞れた。タイの仲間、マダイは？",
     "💭 マダイと同じ Eupercaria の中。ホウボウはどうだ？",
     "💭 ペルカ目まで来た。同じ目で、岩場にすむカサゴだ！",
+    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
+  bird: { target: "Zosterops japonicus", guesses: ["Struthio camelus", "Anas platyrhynchos", "Larus crassirostris", "Astur gentilis", "Corvus macrorhynchos", "Zosterops japonicus"],
+  think: [
+    "💭 まずは遠い鳥で、大きく分けよう。飛べないダチョウはどうだ？",
+    "💭 ダチョウの仲間ではない。新顎類の中の、カモはどうだ？",
+    "💭 カモの仲間でもない。新鳥類の中の、ウミネコは？",
+    "💭 カモメとも別の枝。タカやスズメの仲間、オオタカはどうだ？",
+    "💭 Telluraves まで来た。種の多いスズメ目の、カラスは？",
+    "💭 スズメ目の中。小さくて目のまわりが白い、メジロだ！",
     "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] } };
 let DEMO = null;
 function demoData() {
@@ -27,14 +36,14 @@ function demoData() {
 }
 let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
-  return (HARD() ? hardHowto() : FISH() ? fishHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
+  return (HARD() ? hardHowto() : FISH() ? fishHowto() : BIRD() ? birdHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
     <li><b>動物を入れる</b><span>答えの動物との共通の祖先がわかり、系統樹に枝が増えます。</span></li>
     <li><b>緑の点の中を探す</b><span>答えの動物は緑の点より先にいます。その中の、まだ試していない仲間を入れます。</span></li>
     <li><b>${MAX} 回以内に当てる</b><span>${HINT1} 回目と ${HINT2} 回目のあとにヒントが使えます。</span></li></ol>
     <div class="legend"><span><i class="lg-dot"></i>答えの動物がいる範囲</span><span><i class="lg-on"></i>答えへの道</span><span><i class="lg-goal"></i><b>？</b> 答えの動物</span><span>名前を押すと説明</span></div></section>
   <details class="doc-more"><summary>くわしいルール</summary><ul>
     <li>名前はひらがな・カタカナ・学名・別名のどれでも探せます。</li>
-    <li>左端が${FISH() ? "脊椎動物" : "動物全体"}の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
+    <li>左端が${FISH() ? "脊椎動物" : BIRD() ? "鳥" : "動物全体"}の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
     <li>「新しい手がかりはありません」は、緑の点より外側の動物を入れたということです。</li>
     <li>ヒント1は残りの候補の数、ヒント2は一歩先の節目です。ヒントを使っても回数は減りません。</li>
     <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
@@ -45,6 +54,14 @@ function fishHowto() {
   return `<section class="hard-rule"><h2>魚編（試作）</h2><ul>
     <li>日本の魚を中心に ${SP.length.toLocaleString()} 種から出題します。日本の魚は日本産魚類全種目録に標準和名のある種で、ほかにふつうモードのシーラカンス・ハイギョ・ゼブラフィッシュを入れています。推測にも全種が使え、どの種も同じ確率で出ます。</li>
     <li>「魚類」は、四肢動物を除いた残りのまとまり（側系統群）なので、節目にはしていません。系統樹の左端は脊椎動物の祖先で、円口類（ヌタウナギ・ヤツメウナギ）、軟骨魚類（サメ・エイ・ギンザメ）、条鰭類、肉鰭類（シーラカンス・ハイギョ）に分かれます。</li>
+    <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
+    <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
+    <li>和名のない属は学名で表示します。</li></ul></section>`;
+}
+function birdHowto() {
+  return `<section class="hard-rule"><h2>鳥編（試作）</h2><ul>
+    <li>日本の鳥を中心に ${SP.length.toLocaleString()} 種から出題します。日本の鳥は日本鳥類目録改訂第8版に載っている種（外来種を含む）で、ほかにふつうモードのダチョウ・ペンギンなど外国の鳥を入れています。推測にも全種が使え、どの種も同じ確率で出ます。</li>
+    <li>系統樹の左端は鳥の祖先で、ダチョウなどの古顎類と、それ以外の新顎類に分かれます。目・科・属は日本鳥類目録に従っています。新鳥類の中の目どうしの分岐の順は、研究によって結果が割れるので決めていません。</li>
     <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
     <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
     <li>和名のない属は学名で表示します。</li></ul></section>`;
