@@ -26,18 +26,18 @@ ${k.land ? `<li>陸の昆虫・貝・鳥・哺乳類の対象種：環境省自�
     <li>魚類の目より上の系統：Betancur-R. et al. (2017) BMC Evol. Biol. 17:162 ／ Near &amp; Thacker (2024) Bull. Peabody Mus. Nat. Hist. 65:3–302</li>
     <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>`;
 }
-// 番外編：本編とは別の、範囲をしぼったモード。足すときはここに1行
+// 番外編：ふつうモードとは別の、出題する範囲を決めたモード。足すときはここに1行
 const EXTRA = [
-  { lv: "fish", name: "魚編", note: "日本の魚 4,791 種から出題。種まで当てれば正解。推測は 20 回まで。" },
+  { lv: "fish", name: "魚編", note: "日本の魚を中心に 4,791 種から出題。種まで当てれば正解。推測は 20 回まで。" },
 ];
 function extraHTML() {
-  return `<section><h2>番外編</h2><p>本編とは別に、決まった範囲の動物だけで遊ぶモードです。どれも試作中で、成績は本編とは別に記録します。</p>
+  return `<section><h2>番外編</h2><p>ふつうモードとは別に、決まった範囲の動物だけで遊ぶモードです。成績はふつうモードとは別に記録します。</p>
     <div class="modes">${EXTRA.map(m => `<button class="mode-card" data-mode="${m.lv}" aria-current="${LEVEL === m.lv}"><b>${esc(m.name)}（試作）</b><span>${esc(m.note)}</span></button>`).join("")}</div></section>`;
 }
 function fishAboutHTML() {
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>魚編について</h2><ul>
-    <li>試作版です。ゲキムズモードのデータから、脊椎動物のうち四肢動物を除いた ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは日本産魚類全種目録で標準和名のある日本の魚で、ふつうモードのシーラカンスなども含みます。</li>
+    <li>試作版です。ゲキムズモードのデータから、脊椎動物のうち四肢動物を除いた ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは日本産魚類全種目録に標準和名のある日本の魚で、ほかにふつうモードのシーラカンス・ハイギョ・ゼブラフィッシュを含みます。</li>
     <li>系統は、目より上を魚類の分子系統の論文に、目・科を日本産魚類全種目録（Catalog of Fishes の体系）に従っています。側系統群は節目にしていません。</li>
     <li>和名のない属は学名で表示しています。</li>
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>

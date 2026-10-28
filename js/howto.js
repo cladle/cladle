@@ -1,7 +1,8 @@
 // 遊び方の例題の自動再生
 "use strict";
 // ---- 遊び方（例題の自動再生）----
-const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "monshirocho", "kabutomushi"],
+// 種は学名で書き、開いているデータの中から探す（ゲキムズは ふつうモードと同じ例題を使う）
+const DEMOS = { normal: { target: "Trypoxylus dichotomus", guesses: ["Homo sapiens", "Octopus sinensis", "Chionoecetes opilio", "Pieris rapae", "Trypoxylus dichotomus"],
   // 各段階で「次に何を入れるか」の考え方
   think: [
     "💭 まずは遠い動物で、大きく分けよう。",
@@ -9,7 +10,21 @@ const DEMO = { target: "kabutomushi", guesses: ["hito", "madako", "zuwaigani", "
     "💭 タコでもない。種の多い節足動物、カニはどうだ？",
     "💭 カニでもない。同じ汎甲殻類の昆虫、チョウは？",
     "💭 さなぎになる昆虫まで来た。甲虫のカブトムシだ！",
-    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] };
+    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
+  fish: { target: "Sebastiscus marmoratus", guesses: ["Carcharodon carcharias", "Sardinops melanostictus", "Trachurus japonicus", "Pagrus major", "Chelidonichthys spinosus", "Sebastiscus marmoratus"],
+  think: [
+    "💭 まずは遠い魚で、大きく分けよう。サメはどうだ？",
+    "💭 サメの仲間ではない。硬い骨の魚、イワシはどうだ？",
+    "💭 イワシとも別の枝。ひれにとげのある魚、アジは？",
+    "💭 スズキ系まで絞れた。タイの仲間、マダイは？",
+    "💭 マダイと同じ Eupercaria の中。ホウボウはどうだ？",
+    "💭 ペルカ目まで来た。同じ目で、岩場にすむカサゴだ！",
+    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] } };
+let DEMO = null;
+function demoData() {
+  const d = DEMOS[LEVEL] || DEMOS.normal, id = sci => SP.find(s => s.sci === sci)?.id;
+  return { target: id(d.target), guesses: d.guesses.map(id).filter(Boolean), think: d.think };
+}
 let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
   return (HARD() ? hardHowto() : FISH() ? fishHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
@@ -19,7 +34,7 @@ function howtoHTML() {
     <div class="legend"><span><i class="lg-dot"></i>答えの動物がいる範囲</span><span><i class="lg-on"></i>答えへの道</span><span><i class="lg-goal"></i><b>？</b> 答えの動物</span><span>名前を押すと説明</span></div></section>
   <details class="doc-more"><summary>くわしいルール</summary><ul>
     <li>名前はひらがな・カタカナ・学名・別名のどれでも探せます。</li>
-    <li>左端が動物全体の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
+    <li>左端が${FISH() ? "脊椎動物" : "動物全体"}の祖先で、右へ行くほど細かい仲間です。右端の番号は入れた順です。</li>
     <li>「新しい手がかりはありません」は、緑の点より外側の動物を入れたということです。</li>
     <li>ヒント1は残りの候補の数、ヒント2は一歩先の節目です。ヒントを使っても回数は減りません。</li>
     <li>「今日の動物」は日本時間で毎日変わり、誰でも同じ問題です。「フリー」は何度でも遊べます。</li>
@@ -28,10 +43,10 @@ function howtoHTML() {
 }
 function fishHowto() {
   return `<section class="hard-rule"><h2>魚編（試作）</h2><ul>
-    <li>日本産魚類全種目録にある日本の魚 ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。どの種も同じ確率で出ます。</li>
+    <li>日本の魚を中心に ${SP.length.toLocaleString()} 種から出題します。日本の魚は日本産魚類全種目録に標準和名のある種で、ほかにふつうモードのシーラカンス・ハイギョ・ゼブラフィッシュを入れています。推測にも全種が使え、どの種も同じ確率で出ます。</li>
     <li>「魚類」は、四肢動物を除いた残りのまとまり（側系統群）なので、節目にはしていません。系統樹の左端は脊椎動物の祖先で、円口類（ヌタウナギ・ヤツメウナギ）、軟骨魚類（サメ・エイ・ギンザメ）、条鰭類、肉鰭類（シーラカンス・ハイギョ）に分かれます。</li>
     <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
-    <li>ヒント1は ふつうモードと同じです。ヒント2は科より下の節目は開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
+    <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
     <li>和名のない属は学名で表示します。</li></ul></section>`;
 }
 function hardHowto() {
@@ -40,10 +55,11 @@ function hardHowto() {
     <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物${(D.meta.counts || {}).land ? "、陸の昆虫・クモ・鳥・貝" : ""}などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
     <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）です。答えの種名はまだ出ないので、続けて種まで当てると 🎯、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
     <li>推測は ${MAX} 回まで。属でクリアしたあとは、それとは別に<b>種探しが ${HUNT} 回</b>あり、その属にあと何種いるかも出ます。</li>
-    <li>ヒント1は ふつうモードと同じです。ヒント2は科より下の節目は開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
+    <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
     <li>和名のない属や科は学名で表示します。</li></ul></section>`;
 }
 function demoShow(i, typing) {
+  if (!DEMO || DEMO.level !== LEVEL) { DEMO = demoData(); DEMO.level = LEVEL; demoEdges = null; demoPrevI = -1; }
   const t = DEMO.target, gs = DEMO.guesses.filter(g => N[g]), n = gs.length;
   demoI = Math.max(0, Math.min(i, n));
   const done = gs.slice(0, demoI), last = done[done.length - 1];
