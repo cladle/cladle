@@ -15,3 +15,5 @@ jobs:
         run: python3 tools/check.py
       - name: JavaScript の文法の確認
         run: for f in js/*.js; do node --check "$f"; done
+      - name: 公開用の印付けの確認
+        run: cp index.html /tmp/index.html && cp -r css js /tmp/ && python3 tools/stamp.py /tmp/index.html

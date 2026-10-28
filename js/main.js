@@ -98,7 +98,7 @@ const due = data => data.meta.next && data.meta.next.from <= todayJST();
 async function loadData(f = "data.json") {
   let data;
   for (let i = 0; i < 30; i++) {
-    const r = await fetch(f);
+    const r = await fetch(f, { cache: "no-cache" });  // 毎回サーバーに「変わった？」と聞く（変わっていなければ取っておいたものを使う）
     if (!r.ok) { if (data) break; throw new Error(r.status); }  // 予約の先のファイルが無い（古い data.json がキャッシュに残っていたときなど）は今の版のまま
     data = await r.json(); if (!due(data)) break; f = data.meta.next.file;
   }
