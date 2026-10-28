@@ -53,9 +53,10 @@ function fishAboutHTML() {
 function birdAboutHTML() {
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>鳥編について</h2><ul>
-    <li>試作版です。ゲキムズモードのデータから、鳥 ${SP.length.toLocaleString()} 種を取り出しています。日本鳥類目録改訂第8版に載っている種（外来種を含む）と、ふつうモードの外国の鳥です。</li>
+    <li>試作版です。ゲキムズモードのデータから、鳥 ${SP.length.toLocaleString()} 種を取り出しています。日本鳥類目録改訂第8版に載っている種（外来種を含む）と、ふつうモードの外国の鳥、よく知られたハチドリ数種です。</li>
     <li>目・科・属の並びと和名は日本鳥類目録改訂第8版に従っています。学名は、Catalogue of Life などで新しい属に移されているものはそちらを使っているため、目録と違うことがあります。</li>
     <li>目より上の系統は、鳥類の系統ゲノム解析でそろって支持されるまとまり（新顎類・新鳥類・Telluraves など）だけを節目にしています。</li>
+    <li>目録に載っていない外国の鳥の和名は、Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前を使っています。</li>
     <li>和名のない属は学名で表示しています。</li>
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
   <section><h2>出典</h2><ul>
