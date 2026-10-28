@@ -5,6 +5,7 @@ let view = "daily";
 function setView(v) {
   view = v;
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
+  document.querySelectorAll(".ico").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
   $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto"; $("#extra").hidden = v !== "extra";
   if (v === "extra") $("#extraDoc").innerHTML = extraHTML();
   demoStop(); if (v === "howto") demoPlay();
@@ -13,7 +14,7 @@ function setView(v) {
 }
 
 function wire() {
-  document.querySelectorAll("nav button").forEach(b => b.onclick = () => { if (b.dataset.v !== view) { track("tab-" + b.dataset.v); zkSearched = false; } setView(b.dataset.v); });
+  document.querySelectorAll("nav button, .ico").forEach(b => b.onclick = () => { if (b.dataset.v !== view) { track("tab-" + b.dataset.v); zkSearched = false; } setView(b.dataset.v); });
   const inp = $("#guess");
   inp.addEventListener("input", showSugg);
   inp.addEventListener("keydown", e => {

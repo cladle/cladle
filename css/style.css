@@ -53,6 +53,11 @@ header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; backg
 .brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap }
 h1 { font-family: var(--f-display); font-weight: 400; font-size: 1.55rem; letter-spacing: .02em; margin: 0; line-height: 1.2 }
 h1 .yomi { font-family: var(--f-body); font-size: .7rem; letter-spacing: .08em; color: var(--muted); margin-left: 8px; vertical-align: middle }
+.ico { align-self: center; flex: none; width: 32px; height: 32px; padding: 0; border: 1px solid var(--line); background: transparent; border-radius: 50%; font-size: .9rem; font-weight: 700; line-height: 1; cursor: pointer }  /* 遊び方・データはタイトルの右の記号にして、タブは遊ぶ画面だけにする */
+.ico + .ico { margin-left: -4px }
+@media (max-width: 420px) { .brand { gap: 8px } .level .shisaku { display: none } }
+@media (max-width: 380px) { .brand { gap: 6px } .ico { width: 28px; height: 28px } h1 .yomi { margin-left: 5px } }  /* 狭い画面ではタイトル・記号・ゲキムズを1段に収める（試作の印はゲキムズ中の説明に出る） */
+.ico[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
 .brand small { color: var(--muted); font-size: .8rem }
 nav { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px }
 header nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none }  /* タブは1段で横幅いっぱいに並べ、入りきらないときは横にずらして見る */
