@@ -43,10 +43,10 @@ if built["meta"]["datasetVersion"] != latest["meta"]["datasetVersion"]:
     print(f"△ 版番号：build_data.py は {built['meta']['datasetVersion']}、{main[-1]} は {latest['meta']['datasetVersion']}（新しい版を作ったら予約を足す）")
 with tempfile.TemporaryDirectory() as d:
     out = os.path.join(d, "fish.json")
-    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "fish", "make_fish.py"), os.path.join(ROOT, "data-hard.json"), out], check=True, stdout=subprocess.DEVNULL)
+    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "fish", "make_fish.py"), os.path.join(ROOT, hard[-1]), out], check=True, stdout=subprocess.DEVNULL)
     built = json.load(open(out, encoding="utf-8"))
 latest = json.load(open(os.path.join(ROOT, fish[-1]), encoding="utf-8"))
 if any(built[k] != latest[k] for k in ("clades", "species")):
-    print(f"△ {fish[-1]} が data-hard.json から作ったものと違う（ゲキムズを作り直したら、魚編も版を上げて作り直す）")
+    print(f"△ {fish[-1]} が {hard[-1]} から作ったものと違う（ゲキムズを作り直したら、魚編も版を上げて作り直す）")
 print("○ 問題なし" if ok else "× 直すところがあります")
 sys.exit(0 if ok else 1)
