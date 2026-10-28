@@ -28,7 +28,7 @@ ${k.land ? `<li>陸の昆虫・貝・鳥・哺乳類の対象種：環境省自�
 }
 // 番外編：ふつうモードとは別の、出題する範囲を決めたモード。足すときはここに1行
 const EXTRA = [
-  { lv: "fish", name: "魚編", note: "日本の魚を中心に約 4,800 種から出題。種まで当てれば正解。推測は 20 回まで。" },
+  { lv: "fish", name: "魚編", note: "魚類 約 4,800 種から出題。種まで当てれば正解。推測は 20 回まで。" },
   { lv: "bird", name: "鳥編", note: "日本の鳥を中心に約 700 種から出題。種まで当てれば正解。推測は 20 回まで。" },
 ];
 function extraHTML() {
@@ -38,7 +38,7 @@ function extraHTML() {
 function fishAboutHTML() {
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>魚編について</h2><ul>
-    <li>試作版です。ゲキムズモードのデータから、脊椎動物のうち四肢動物を除いた ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは日本産魚類全種目録に標準和名のある日本の魚で、ほかにふつうモードのシーラカンス・ハイギョ・ゼブラフィッシュを含みます。</li>
+    <li>試作版です。ゲキムズモードのデータから、脊椎動物のうち四肢動物を除いた ${SP.length.toLocaleString()} 種を取り出しています。日本産魚類全種目録に標準和名のある種に、和名が確かめられた外国の魚（シーラカンス・ハイギョ・ゼブラフィッシュなど）を加えています。</li>
     <li>系統は、目より上を魚類の分子系統の論文に、目・科を日本産魚類全種目録（Catalog of Fishes の体系）に従っています。側系統群は節目にしていません。</li>
     <li>和名のない属は学名で表示しています。</li>
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
