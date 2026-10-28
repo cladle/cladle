@@ -29,10 +29,11 @@ function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className =
 
 function render() {
   $("#modeLabel").textContent = (BIG() ? LV_NAME[LEVEL] + " " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : mode === "shared" ? "共有された問題" : "フリープレイ");
-  const hunt = G.gAt && !G.done;
+  const hunt = G.gAt && !G.done, base = hunt ? G.gAt : 0;
   $("#leftLabel").textContent = hunt ? "種探し 残り" : "残り";
   $("#left").textContent = hunt ? limit() - G.guesses.length : MAX - Math.min(G.guesses.length, MAX);
   $("#leftPin").textContent = $("#leftLabel").textContent + " " + $("#left").textContent;  // 上の残り回数が隠れたとき、入力欄の右端に出す
+  $("#meter").innerHTML = Array.from({ length: hunt ? HUNT : MAX }, (_, i) => `<i class="${i < G.guesses.length - base ? "used" : ""}"></i>`).join("");
   $("#guess").disabled = G.done; $(".inputbox").classList.toggle("pin", !G.done);  // 遊んでいる間だけ入力欄を上に残す
   if (!G.guesses.length) $("#flash").hidden = true;
 
