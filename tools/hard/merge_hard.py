@@ -31,7 +31,8 @@ byja = {s["ja"]: s for s in HS}
 FOREIGN = {"zebrafish": ("o_cypriniformes", "Danionidae"), "axolotl": ("caudata", "Ambystomatidae"),
            "amimenishikihebi": ("serpentes", "Pythonidae"), "komodo": ("squamata", "Varanidae"),
            "kingcobra": ("sf_elapinae", None), "zougame": ("testudinoidea", "Testudinidae"),
-           "iriewani": ("crocodylia", "Crocodylidae"), "alligator": ("crocodylia", "Alligatoridae")}
+           "iriewani": ("crocodylia", "Crocodylidae"), "alligator": ("crocodylia", "Alligatoridae"),
+           "leafyseadragon": ("o_syngnathiformes", "Syngnathidae")}
 extra_species = []
 for s in FH:
     h = (byja.get(s["ja"]) if byja.get(s["ja"]) else None) or next((x for x in bysci.get(s["sci"], []) if True), None)
@@ -400,6 +401,13 @@ if os.path.exists(_ho):
         byja_all[h["ja"]] = SP[-1]
         log["hard_only"].append(["added", h["ja"], C[par]["sci"], C[C[par]["parent"]]["sci"]])
 
+# 目録に無い本家の脊椎動物（外国の種）も属の節目の下へ
+for x in extra_species:
+    if C[x["parent"]]["rank"] == "属": continue
+    g = x["sci"].split()[0]
+    gs = [i for i, c in C.items() if c["rank"] == "属" and c["sci"] == g and c["parent"] == x["parent"]]
+    x["parent"] = gs[0] if gs else add(gid(C[x["parent"]]["sci"], g), x["parent"], "", g, "属")
+
 # 本家の種（脊椎の魚・爬虫両生以外）も属の節目の下へ
 for s in keep_main:
     g = s["sci"].split()[0]
@@ -502,6 +510,13 @@ for c in clades:
         c["polytomy"] = (c.get("polytomy", "") + " " + NOTE).strip()
 for s in SP:
     for k in ("main", "colsrc", "_w"): s.pop(k, None)
+# 目録側の節目（o_・f_ などの id）が本家と同じ群なら、本家の説明を引き継ぐ
+_mdesc = collections.defaultdict(list)
+for c in MC.values():
+    if c.get("desc"): _mdesc[(c["sci"], c["rank"])].append(c["desc"])
+for c in clades:
+    d = _mdesc.get((c["sci"], c["rank"]), [])
+    if not c.get("desc") and len(set(d)) == 1: c["desc"] = d[0]
 # ゲキムズだけの節目の説明（tools/hard/clade_desc.tsv：id, desc, 出典。本家と同じ節目は本家の説明のまま）
 _desc = os.path.join(os.path.dirname(os.path.abspath(__file__)), "clade_desc.tsv")
 if os.path.exists(_desc):

@@ -9,5 +9,26 @@
    "Neoceratodus forsteri"
   ],
   "source": "現生ハイギョ（オーストラリア・南アメリカ・アフリカ）は単系統（Betancur-R. et al. 2017; Near & Thacker 2024）"
+ },
+ {
+  "id": "o_osteoglossiformes",
+  "ja": "アロワナ目",
+  "sci": "Osteoglossiformes",
+  "rank": "目",
+  "under": "Teleostei",
+  "take": [
+   "Osteoglossum bicirrhosum"
+  ],
+  "source": "アロワナ類（Osteoglossomorpha）は真骨類の中の3つの大きなまとまりの一つ（Betancur-R. et al. 2017; Near & Thacker 2024）"
+ },
+ {
+  "id": "f_osteoglossidae",
+  "ja": "アロワナ科",
+  "sci": "Osteoglossidae",
+  "rank": "科",
+  "under": "Osteoglossiformes",
+  "take": [
+   "Osteoglossum bicirrhosum"
+  ]
  }
 ]
