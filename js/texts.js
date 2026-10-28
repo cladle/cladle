@@ -29,6 +29,7 @@ ${k.land ? `<li>陸の昆虫・貝・鳥・哺乳類の対象種：環境省自�
 // 番外編：ふつうモードとは別の、出題する範囲を決めたモード。足すときはここに1行
 const EXTRA = [
   { lv: "fish", name: "魚編", note: "日本の魚を中心に約 4,800 種から出題。種まで当てれば正解。推測は 20 回まで。" },
+  { lv: "bird", name: "鳥編", note: "日本の鳥を中心に約 700 種から出題。種まで当てれば正解。推測は 20 回まで。" },
 ];
 function extraHTML() {
   return `<section><h2>番外編</h2><p>ふつうモードとは別に、決まった範囲の動物だけで遊ぶモードです。成績はふつうモードとは別に記録します。</p>
@@ -48,9 +49,25 @@ function fishAboutHTML() {
   <section><h2>ライセンス・注記</h2><ul>
     <li>成績はこの端末のブラウザにだけ保存され、送信されません。ふつうモード・ゲキムズとは別に記録します。</li></ul></section>`;
 }
+function birdAboutHTML() {
+  const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+  return `  <section><h2>鳥編について</h2><ul>
+    <li>試作版です。ゲキムズモードのデータから、鳥 ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは日本鳥類目録改訂第8版に載っている日本の鳥（外来種を含む）で、ほかにふつうモードの外国の鳥を含みます。</li>
+    <li>目・科・属の並びと和名は日本鳥類目録改訂第8版に従っています。学名は、Catalogue of Life などで新しい属に移されているものはそちらを使っているため、目録と違うことがあります。</li>
+    <li>目より上の系統は、鳥類の系統ゲノム解析でそろって支持されるまとまり（新顎類・新鳥類・Telluraves など）だけを節目にしています。</li>
+    <li>和名のない属は学名で表示しています。</li>
+    <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
+  <section><h2>出典</h2><ul>
+    <li>日本鳥学会（2024）日本鳥類目録改訂第8版．掲載鳥類リスト ver.1（2024-10-08公開）．${a("https://ornithology.jp/checklist.html", "日本鳥学会")}（リストを加工して使用）</li>
+    <li>鳥類の目より上の系統：Jarvis et al. (2014) Science 346:1320–1331 ／ Prum et al. (2015) Nature 526:569–573 ／ Stiller et al. (2024) Nature 629:851–860</li>
+    <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>
+  <section><h2>ライセンス・注記</h2><ul>
+    <li>成績はこの端末のブラウザにだけ保存され、送信されません。ふつうモード・ゲキムズ・魚編とは別に記録します。</li></ul></section>`;
+}
 function aboutHTML() {
   if (HARD()) return hardAboutHTML();
   if (FISH()) return fishAboutHTML();
+  if (BIRD()) return birdAboutHTML();
   const nv = SP.filter(s => s.verify).length;
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>このゲームについて</h2><ul>

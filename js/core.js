@@ -8,14 +8,15 @@ const store = {
 };
 
 let D, N = {}, SP = [], BUCKETS = [], BW = [], MAX = 15;
-// ゲキムズ・魚編：別のデータ（data-hard.json・data-fish.json）に切り替える。成績・途中の問題はモードごとに別に保存する
+// ゲキムズ・魚編・鳥編：別のデータ（data-hard.json・data-fish.json・data-bird.json）に切り替える。成績・途中の問題はモードごとに別に保存する
 let LEVEL = "normal";
 const DATA = {};
-const LV_FILE = { normal: "data.json", hard: "data-hard.json", fish: "data-fish.json" };
-const LV_NAME = { normal: "", hard: "ゲキムズ", fish: "魚編" };
+const LV_FILE = { normal: "data.json", hard: "data-hard.json", fish: "data-fish.json", bird: "data-bird.json" };
+const LV_NAME = { normal: "", hard: "ゲキムズ", fish: "魚編", bird: "鳥編" };
 const KEY = k => LEVEL === "normal" ? k : k.replace("dk-", `dk-${LEVEL}-`);
 const HARD = () => LEVEL === "hard";
 const FISH = () => LEVEL === "fish";
+const BIRD = () => LEVEL === "bird";
 const BIG = () => LEVEL !== "normal";  // 種の多いデータ（補完の件数、ヒント2の出し方、図鑑の属・科の表示）
 const HINT1 = 10, HINT2 = 13;  // この回数の推測のあとにヒントが押せる
 const HUNT = 8;  // ゲキムズ：属でクリアしたあとの種探しの回数（残り回数とは別）

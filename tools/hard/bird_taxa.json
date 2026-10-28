@@ -1,0 +1,759 @@
+{
+ "source": "日本鳥学会（2024）日本鳥類目録改訂第8版 掲載鳥類リスト ver.1（2024-10-08公開）",
+ "orders": {
+  "Anseriformes": {
+   "ja": "カモ目"
+  },
+  "Galliformes": {
+   "ja": "キジ目"
+  },
+  "Caprimulgiformes": {
+   "ja": "ヨタカ目",
+   "under": "Strisores"
+  },
+  "Apodiformes": {
+   "ja": "アマツバメ目",
+   "under": "Strisores"
+  },
+  "Otidiformes": {
+   "ja": "ノガン目",
+   "under": "Neoaves"
+  },
+  "Cuculiformes": {
+   "ja": "カッコウ目"
+  },
+  "Pterocliformes": {
+   "ja": "サケイ目",
+   "under": "Columbimorphae"
+  },
+  "Columbiformes": {
+   "ja": "ハト目",
+   "under": "Columbimorphae"
+  },
+  "Gruiformes": {
+   "ja": "ツル目"
+  },
+  "Podicipediformes": {
+   "ja": "カイツブリ目",
+   "under": "Mirandornithes"
+  },
+  "Charadriiformes": {
+   "ja": "チドリ目"
+  },
+  "Phaethontiformes": {
+   "ja": "ネッタイチョウ目",
+   "under": "Neoaves"
+  },
+  "Gaviiformes": {
+   "ja": "アビ目",
+   "under": "Aequornithes"
+  },
+  "Procellariiformes": {
+   "ja": "ミズナギドリ目"
+  },
+  "Ciconiiformes": {
+   "ja": "コウノトリ目",
+   "under": "Aequornithes"
+  },
+  "Suliformes": {
+   "ja": "カツオドリ目"
+  },
+  "Pelecaniformes": {
+   "ja": "ペリカン目"
+  },
+  "Accipitriformes": {
+   "ja": "タカ目",
+   "under": "Afroaves"
+  },
+  "Strigiformes": {
+   "ja": "フクロウ目"
+  },
+  "Bucerotiformes": {
+   "ja": "サイチョウ目",
+   "under": "Afroaves"
+  },
+  "Coraciiformes": {
+   "ja": "ブッポウソウ目"
+  },
+  "Piciformes": {
+   "ja": "キツツキ目"
+  },
+  "Falconiformes": {
+   "ja": "ハヤブサ目"
+  },
+  "Passeriformes": {
+   "ja": "スズメ目"
+  },
+  "Psittaciformes": {
+   "ja": "インコ目"
+  }
+ },
+ "families": {
+  "Anatidae": {
+   "ja": "カモ科",
+   "order": "Anseriformes"
+  },
+  "Phasianidae": {
+   "ja": "キジ科",
+   "order": "Galliformes"
+  },
+  "Caprimulgidae": {
+   "ja": "ヨタカ科",
+   "order": "Caprimulgiformes"
+  },
+  "Apodidae": {
+   "ja": "アマツバメ科",
+   "order": "Apodiformes"
+  },
+  "Otididae": {
+   "ja": "ノガン科",
+   "order": "Otidiformes"
+  },
+  "Cuculidae": {
+   "ja": "カッコウ科",
+   "order": "Cuculiformes"
+  },
+  "Pteroclidae": {
+   "ja": "サケイ科",
+   "order": "Pterocliformes"
+  },
+  "Columbidae": {
+   "ja": "ハト科",
+   "order": "Columbiformes"
+  },
+  "Rallidae": {
+   "ja": "クイナ科",
+   "order": "Gruiformes"
+  },
+  "Gruidae": {
+   "ja": "ツル科",
+   "order": "Gruiformes"
+  },
+  "Podicipedidae": {
+   "ja": "カイツブリ科",
+   "order": "Podicipediformes"
+  },
+  "Turnicidae": {
+   "ja": "ミフウズラ科",
+   "order": "Charadriiformes"
+  },
+  "Haematopodidae": {
+   "ja": "ミヤコドリ科",
+   "order": "Charadriiformes"
+  },
+  "Recurvirostridae": {
+   "ja": "セイタカシギ科",
+   "order": "Charadriiformes"
+  },
+  "Charadriidae": {
+   "ja": "チドリ科",
+   "order": "Charadriiformes"
+  },
+  "Rostratulidae": {
+   "ja": "タマシギ科",
+   "order": "Charadriiformes"
+  },
+  "Jacanidae": {
+   "ja": "レンカク科",
+   "order": "Charadriiformes"
+  },
+  "Scolopacidae": {
+   "ja": "シギ科",
+   "order": "Charadriiformes"
+  },
+  "Glareolidae": {
+   "ja": "ツバメチドリ科",
+   "order": "Charadriiformes"
+  },
+  "Laridae": {
+   "ja": "カモメ科",
+   "order": "Charadriiformes"
+  },
+  "Stercorariidae": {
+   "ja": "トウゾクカモメ科",
+   "order": "Charadriiformes"
+  },
+  "Alcidae": {
+   "ja": "ウミスズメ科",
+   "order": "Charadriiformes"
+  },
+  "Phaethontidae": {
+   "ja": "ネッタイチョウ科",
+   "order": "Phaethontiformes"
+  },
+  "Gaviidae": {
+   "ja": "アビ科",
+   "order": "Gaviiformes"
+  },
+  "Oceanitidae": {
+   "ja": "アシナガウミツバメ科",
+   "order": "Procellariiformes"
+  },
+  "Diomedeidae": {
+   "ja": "アホウドリ科",
+   "order": "Procellariiformes"
+  },
+  "Hydrobatidae": {
+   "ja": "ウミツバメ科",
+   "order": "Procellariiformes"
+  },
+  "Procellariidae": {
+   "ja": "ミズナギドリ科",
+   "order": "Procellariiformes"
+  },
+  "Ciconiidae": {
+   "ja": "コウノトリ科",
+   "order": "Ciconiiformes"
+  },
+  "Fregatidae": {
+   "ja": "グンカンドリ科",
+   "order": "Suliformes"
+  },
+  "Sulidae": {
+   "ja": "カツオドリ科",
+   "order": "Suliformes"
+  },
+  "Phalacrocoracidae": {
+   "ja": "ウ科",
+   "order": "Suliformes"
+  },
+  "Threskiornithidae": {
+   "ja": "トキ科",
+   "order": "Pelecaniformes"
+  },
+  "Ardeidae": {
+   "ja": "サギ科",
+   "order": "Pelecaniformes"
+  },
+  "Pelecanidae": {
+   "ja": "ペリカン科",
+   "order": "Pelecaniformes"
+  },
+  "Pandionidae": {
+   "ja": "ミサゴ科",
+   "order": "Accipitriformes"
+  },
+  "Accipitridae": {
+   "ja": "タカ科",
+   "order": "Accipitriformes"
+  },
+  "Strigidae": {
+   "ja": "フクロウ科",
+   "order": "Strigiformes"
+  },
+  "Upupidae": {
+   "ja": "ヤツガシラ科",
+   "order": "Bucerotiformes"
+  },
+  "Coraciidae": {
+   "ja": "ブッポウソウ科",
+   "order": "Coraciiformes"
+  },
+  "Alcedinidae": {
+   "ja": "カワセミ科",
+   "order": "Coraciiformes"
+  },
+  "Meropidae": {
+   "ja": "ハチクイ科",
+   "order": "Coraciiformes"
+  },
+  "Picidae": {
+   "ja": "キツツキ科",
+   "order": "Piciformes"
+  },
+  "Falconidae": {
+   "ja": "ハヤブサ科",
+   "order": "Falconiformes"
+  },
+  "Pittidae": {
+   "ja": "ヤイロチョウ科",
+   "order": "Passeriformes"
+  },
+  "Artamidae": {
+   "ja": "モリツバメ科",
+   "order": "Passeriformes"
+  },
+  "Campephagidae": {
+   "ja": "サンショウクイ科",
+   "order": "Passeriformes"
+  },
+  "Oriolidae": {
+   "ja": "コウライウグイス科",
+   "order": "Passeriformes"
+  },
+  "Dicruridae": {
+   "ja": "オウチュウ科",
+   "order": "Passeriformes"
+  },
+  "Monarchidae": {
+   "ja": "カササギヒタキ科",
+   "order": "Passeriformes"
+  },
+  "Laniidae": {
+   "ja": "モズ科",
+   "order": "Passeriformes"
+  },
+  "Corvidae": {
+   "ja": "カラス科",
+   "order": "Passeriformes"
+  },
+  "Bombycillidae": {
+   "ja": "レンジャク科",
+   "order": "Passeriformes"
+  },
+  "Paridae": {
+   "ja": "シジュウカラ科",
+   "order": "Passeriformes"
+  },
+  "Remizidae": {
+   "ja": "ツリスガラ科",
+   "order": "Passeriformes"
+  },
+  "Panuridae": {
+   "ja": "ヒゲガラ科",
+   "order": "Passeriformes"
+  },
+  "Alaudidae": {
+   "ja": "ヒバリ科",
+   "order": "Passeriformes"
+  },
+  "Pycnonotidae": {
+   "ja": "ヒヨドリ科",
+   "order": "Passeriformes"
+  },
+  "Hirundinidae": {
+   "ja": "ツバメ科",
+   "order": "Passeriformes"
+  },
+  "Cettiidae": {
+   "ja": "ウグイス科",
+   "order": "Passeriformes"
+  },
+  "Aegithalidae": {
+   "ja": "エナガ科",
+   "order": "Passeriformes"
+  },
+  "Phylloscopidae": {
+   "ja": "ムシクイ科",
+   "order": "Passeriformes"
+  },
+  "Acrocephalidae": {
+   "ja": "ヨシキリ科",
+   "order": "Passeriformes"
+  },
+  "Locustellidae": {
+   "ja": "センニュウ科",
+   "order": "Passeriformes"
+  },
+  "Cisticolidae": {
+   "ja": "セッカ科",
+   "order": "Passeriformes"
+  },
+  "Sylviidae": {
+   "ja": "ズグロムシクイ科",
+   "order": "Passeriformes"
+  },
+  "Zosteropidae": {
+   "ja": "メジロ科",
+   "order": "Passeriformes"
+  },
+  "Regulidae": {
+   "ja": "キクイタダキ科",
+   "order": "Passeriformes"
+  },
+  "Troglodytidae": {
+   "ja": "ミソサザイ科",
+   "order": "Passeriformes"
+  },
+  "Sittidae": {
+   "ja": "ゴジュウカラ科",
+   "order": "Passeriformes"
+  },
+  "Certhiidae": {
+   "ja": "キバシリ科",
+   "order": "Passeriformes"
+  },
+  "Sturnidae": {
+   "ja": "ムクドリ科",
+   "order": "Passeriformes"
+  },
+  "Turdidae": {
+   "ja": "ツグミ科",
+   "order": "Passeriformes"
+  },
+  "Muscicapidae": {
+   "ja": "ヒタキ科",
+   "order": "Passeriformes"
+  },
+  "Cinclidae": {
+   "ja": "カワガラス科",
+   "order": "Passeriformes"
+  },
+  "Passeridae": {
+   "ja": "スズメ科",
+   "order": "Passeriformes"
+  },
+  "Prunellidae": {
+   "ja": "イワヒバリ科",
+   "order": "Passeriformes"
+  },
+  "Motacillidae": {
+   "ja": "セキレイ科",
+   "order": "Passeriformes"
+  },
+  "Fringillidae": {
+   "ja": "アトリ科",
+   "order": "Passeriformes"
+  },
+  "Calcariidae": {
+   "ja": "ツメナガホオジロ科",
+   "order": "Passeriformes"
+  },
+  "Emberizidae": {
+   "ja": "ホオジロ科",
+   "order": "Passeriformes"
+  },
+  "Passerellidae": {
+   "ja": "ゴマフスズメ科",
+   "order": "Passeriformes"
+  },
+  "Parulidae": {
+   "ja": "アメリカムシクイ科",
+   "order": "Passeriformes"
+  },
+  "Odontophoridae": {
+   "ja": "ハウズラ科",
+   "order": "Galliformes"
+  },
+  "Psittacidae": {
+   "ja": "ヨウム科",
+   "order": "Psittaciformes"
+  },
+  "Psittaculidae": {
+   "ja": "インコ科",
+   "order": "Psittaciformes"
+  },
+  "Leiothrichidae": {
+   "ja": "ソウシチョウ科",
+   "order": "Passeriformes"
+  },
+  "Ploceidae": {
+   "ja": "ハタオリドリ科",
+   "order": "Passeriformes"
+  },
+  "Estrildidae": {
+   "ja": "カエデチョウ科",
+   "order": "Passeriformes"
+  },
+  "Viduidae": {
+   "ja": "テンニンチョウ科",
+   "order": "Passeriformes"
+  },
+  "Thraupidae": {
+   "ja": "フウキンチョウ科",
+   "order": "Passeriformes"
+  }
+ },
+ "genera": {
+  "Dendrocygna": "Anatidae",
+  "Branta": "Anatidae",
+  "Anser": "Anatidae",
+  "Cygnus": "Anatidae",
+  "Tadorna": "Anatidae",
+  "Aix": "Anatidae",
+  "Nettapus": "Anatidae",
+  "Sibirionetta": "Anatidae",
+  "Spatula": "Anatidae",
+  "Mareca": "Anatidae",
+  "Anas": "Anatidae",
+  "Netta": "Anatidae",
+  "Aythya": "Anatidae",
+  "Polysticta": "Anatidae",
+  "Somateria": "Anatidae",
+  "Histrionicus": "Anatidae",
+  "Melanitta": "Anatidae",
+  "Clangula": "Anatidae",
+  "Bucephala": "Anatidae",
+  "Mergellus": "Anatidae",
+  "Lophodytes": "Anatidae",
+  "Mergus": "Anatidae",
+  "Tetrastes": "Phasianidae",
+  "Lagopus": "Phasianidae",
+  "Syrmaticus": "Phasianidae",
+  "Phasianus": "Phasianidae",
+  "Coturnix": "Phasianidae",
+  "Caprimulgus": "Caprimulgidae",
+  "Hirundapus": "Apodidae",
+  "Apus": "Apodidae",
+  "Otis": "Otididae",
+  "Tetrax": "Otididae",
+  "Centropus": "Cuculidae",
+  "Clamator": "Cuculidae",
+  "Eudynamys": "Cuculidae",
+  "Urodynamis": "Cuculidae",
+  "Cacomantis": "Cuculidae",
+  "Hierococcyx": "Cuculidae",
+  "Cuculus": "Cuculidae",
+  "Syrrhaptes": "Pteroclidae",
+  "Columba": "Columbidae",
+  "Streptopelia": "Columbidae",
+  "Chalcophaps": "Columbidae",
+  "Treron": "Columbidae",
+  "Ptilinopus": "Columbidae",
+  "Rallus": "Rallidae",
+  "Crex": "Rallidae",
+  "Lewinia": "Rallidae",
+  "Hypotaenidia": "Rallidae",
+  "Gallinula": "Rallidae",
+  "Fulica": "Rallidae",
+  "Coturnicops": "Rallidae",
+  "Zapornia": "Rallidae",
+  "Rallina": "Rallidae",
+  "Poliolimnas": "Rallidae",
+  "Gallicrex": "Rallidae",
+  "Amaurornis": "Rallidae",
+  "Leucogeranus": "Gruidae",
+  "Antigone": "Gruidae",
+  "Anthropoides": "Gruidae",
+  "Grus": "Gruidae",
+  "Tachybaptus": "Podicipedidae",
+  "Podiceps": "Podicipedidae",
+  "Turnix": "Turnicidae",
+  "Haematopus": "Haematopodidae",
+  "Himantopus": "Recurvirostridae",
+  "Recurvirostra": "Recurvirostridae",
+  "Vanellus": "Charadriidae",
+  "Pluvialis": "Charadriidae",
+  "Charadrius": "Charadriidae",
+  "Eudromias": "Charadriidae",
+  "Rostratula": "Rostratulidae",
+  "Hydrophasianus": "Jacanidae",
+  "Numenius": "Scolopacidae",
+  "Limosa": "Scolopacidae",
+  "Arenaria": "Scolopacidae",
+  "Calidris": "Scolopacidae",
+  "Limnodromus": "Scolopacidae",
+  "Scolopax": "Scolopacidae",
+  "Lymnocryptes": "Scolopacidae",
+  "Gallinago": "Scolopacidae",
+  "Xenus": "Scolopacidae",
+  "Phalaropus": "Scolopacidae",
+  "Actitis": "Scolopacidae",
+  "Tringa": "Scolopacidae",
+  "Glareola": "Glareolidae",
+  "Anous": "Laridae",
+  "Gygis": "Laridae",
+  "Rissa": "Laridae",
+  "Pagophila": "Laridae",
+  "Xema": "Laridae",
+  "Chroicocephalus": "Laridae",
+  "Saundersilarus": "Laridae",
+  "Hydrocoloeus": "Laridae",
+  "Rhodostethia": "Laridae",
+  "Leucophaeus": "Laridae",
+  "Ichthyaetus": "Laridae",
+  "Larus": "Laridae",
+  "Gelochelidon": "Laridae",
+  "Hydroprogne": "Laridae",
+  "Thalasseus": "Laridae",
+  "Sternula": "Laridae",
+  "Onychoprion": "Laridae",
+  "Sterna": "Laridae",
+  "Chlidonias": "Laridae",
+  "Stercorarius": "Stercorariidae",
+  "Alle": "Alcidae",
+  "Uria": "Alcidae",
+  "Cepphus": "Alcidae",
+  "Brachyramphus": "Alcidae",
+  "Synthliboramphus": "Alcidae",
+  "Ptychoramphus": "Alcidae",
+  "Aethia": "Alcidae",
+  "Cerorhinca": "Alcidae",
+  "Fratercula": "Alcidae",
+  "Phaethon": "Phaethontidae",
+  "Gavia": "Gaviidae",
+  "Oceanites": "Oceanitidae",
+  "Phoebastria": "Diomedeidae",
+  "Hydrobates": "Hydrobatidae",
+  "Fulmarus": "Procellariidae",
+  "Pterodroma": "Procellariidae",
+  "Calonectris": "Procellariidae",
+  "Ardenna": "Procellariidae",
+  "Puffinus": "Procellariidae",
+  "Bulweria": "Procellariidae",
+  "Ciconia": "Ciconiidae",
+  "Fregata": "Fregatidae",
+  "Sula": "Sulidae",
+  "Urile": "Phalacrocoracidae",
+  "Phalacrocorax": "Phalacrocoracidae",
+  "Threskiornis": "Threskiornithidae",
+  "Nipponia": "Threskiornithidae",
+  "Plegadis": "Threskiornithidae",
+  "Platalea": "Threskiornithidae",
+  "Botaurus": "Ardeidae",
+  "Ixobrychus": "Ardeidae",
+  "Gorsachius": "Ardeidae",
+  "Nycticorax": "Ardeidae",
+  "Butorides": "Ardeidae",
+  "Ardeola": "Ardeidae",
+  "Bubulcus": "Ardeidae",
+  "Ardea": "Ardeidae",
+  "Egretta": "Ardeidae",
+  "Pelecanus": "Pelecanidae",
+  "Pandion": "Pandionidae",
+  "Pernis": "Accipitridae",
+  "Aegypius": "Accipitridae",
+  "Spilornis": "Accipitridae",
+  "Nisaetus": "Accipitridae",
+  "Clanga": "Accipitridae",
+  "Aquila": "Accipitridae",
+  "Accipiter": "Accipitridae",
+  "Circus": "Accipitridae",
+  "Milvus": "Accipitridae",
+  "Haliaeetus": "Accipitridae",
+  "Butastur": "Accipitridae",
+  "Buteo": "Accipitridae",
+  "Ninox": "Strigidae",
+  "Aegolius": "Strigidae",
+  "Otus": "Strigidae",
+  "Asio": "Strigidae",
+  "Bubo": "Strigidae",
+  "Ketupa": "Strigidae",
+  "Strix": "Strigidae",
+  "Upupa": "Upupidae",
+  "Eurystomus": "Coraciidae",
+  "Halcyon": "Alcedinidae",
+  "Todiramphus": "Alcedinidae",
+  "Alcedo": "Alcedinidae",
+  "Ceyx": "Alcedinidae",
+  "Megaceryle": "Alcedinidae",
+  "Merops": "Meropidae",
+  "Jynx": "Picidae",
+  "Yungipicus": "Picidae",
+  "Picoides": "Picidae",
+  "Dryobates": "Picidae",
+  "Dendrocopos": "Picidae",
+  "Dryocopus": "Picidae",
+  "Picus": "Picidae",
+  "Falco": "Falconidae",
+  "Pitta": "Pittidae",
+  "Artamus": "Artamidae",
+  "Pericrocotus": "Campephagidae",
+  "Lalage": "Campephagidae",
+  "Oriolus": "Oriolidae",
+  "Dicrurus": "Dicruridae",
+  "Hypothymis": "Monarchidae",
+  "Terpsiphone": "Monarchidae",
+  "Lanius": "Laniidae",
+  "Garrulus": "Corvidae",
+  "Cyanopica": "Corvidae",
+  "Pica": "Corvidae",
+  "Nucifraga": "Corvidae",
+  "Corvus": "Corvidae",
+  "Bombycilla": "Bombycillidae",
+  "Periparus": "Paridae",
+  "Pardaliparus": "Paridae",
+  "Sittiparus": "Paridae",
+  "Poecile": "Paridae",
+  "Cyanistes": "Paridae",
+  "Parus": "Paridae",
+  "Remiz": "Remizidae",
+  "Panurus": "Panuridae",
+  "Alauda": "Alaudidae",
+  "Eremophila": "Alaudidae",
+  "Calandrella": "Alaudidae",
+  "Melanocorypha": "Alaudidae",
+  "Alaudala": "Alaudidae",
+  "Hypsipetes": "Pycnonotidae",
+  "Pycnonotus": "Pycnonotidae",
+  "Riparia": "Hirundinidae",
+  "Hirundo": "Hirundinidae",
+  "Delichon": "Hirundinidae",
+  "Cecropis": "Hirundinidae",
+  "Horornis": "Cettiidae",
+  "Urosphena": "Cettiidae",
+  "Aegithalos": "Aegithalidae",
+  "Phylloscopus": "Phylloscopidae",
+  "Acrocephalus": "Acrocephalidae",
+  "Arundinax": "Acrocephalidae",
+  "Iduna": "Acrocephalidae",
+  "Locustella": "Locustellidae",
+  "Cisticola": "Cisticolidae",
+  "Curruca": "Sylviidae",
+  "Apalopteron": "Zosteropidae",
+  "Zosterops": "Zosteropidae",
+  "Regulus": "Regulidae",
+  "Troglodytes": "Troglodytidae",
+  "Sitta": "Sittidae",
+  "Certhia": "Certhiidae",
+  "Spodiopsar": "Sturnidae",
+  "Agropsar": "Sturnidae",
+  "Sturnia": "Sturnidae",
+  "Pastor": "Sturnidae",
+  "Sturnus": "Sturnidae",
+  "Catharus": "Turdidae",
+  "Zoothera": "Turdidae",
+  "Cichlopasser": "Turdidae",
+  "Geokichla": "Turdidae",
+  "Turdus": "Turdidae",
+  "Muscicapa": "Muscicapidae",
+  "Cyanoptila": "Muscicapidae",
+  "Eumyias": "Muscicapidae",
+  "Erithacus": "Muscicapidae",
+  "Luscinia": "Muscicapidae",
+  "Calliope": "Muscicapidae",
+  "Larvivora": "Muscicapidae",
+  "Ficedula": "Muscicapidae",
+  "Tarsiger": "Muscicapidae",
+  "Phoenicurus": "Muscicapidae",
+  "Monticola": "Muscicapidae",
+  "Saxicola": "Muscicapidae",
+  "Oenanthe": "Muscicapidae",
+  "Cinclus": "Cinclidae",
+  "Passer": "Passeridae",
+  "Prunella": "Prunellidae",
+  "Dendronanthus": "Motacillidae",
+  "Motacilla": "Motacillidae",
+  "Anthus": "Motacillidae",
+  "Fringilla": "Fringillidae",
+  "Coccothraustes": "Fringillidae",
+  "Eophona": "Fringillidae",
+  "Pinicola": "Fringillidae",
+  "Pyrrhula": "Fringillidae",
+  "Leucosticte": "Fringillidae",
+  "Carpodacus": "Fringillidae",
+  "Chloris": "Fringillidae",
+  "Acanthis": "Fringillidae",
+  "Loxia": "Fringillidae",
+  "Spinus": "Fringillidae",
+  "Calcarius": "Calcariidae",
+  "Plectrophenax": "Calcariidae",
+  "Emberiza": "Emberizidae",
+  "Passerella": "Passerellidae",
+  "Zonotrichia": "Passerellidae",
+  "Passerculus": "Passerellidae",
+  "Melospiza": "Passerellidae",
+  "Geothlypis": "Parulidae",
+  "Setophaga": "Parulidae",
+  "Colinus": "Odontophoridae",
+  "Pavo": "Phasianidae",
+  "Bambusicola": "Phasianidae",
+  "Myiopsitta": "Psittacidae",
+  "Psittacula": "Psittaculidae",
+  "Melopsittacus": "Psittaculidae",
+  "Urocissa": "Corvidae",
+  "Leiothrix": "Leiothrichidae",
+  "Garrulax": "Leiothrichidae",
+  "Ianthocincla": "Leiothrichidae",
+  "Pterorhinus": "Leiothrichidae",
+  "Acridotheres": "Sturnidae",
+  "Ploceus": "Ploceidae",
+  "Euplectes": "Ploceidae",
+  "Padda": "Estrildidae",
+  "Lonchura": "Estrildidae",
+  "Estrilda": "Estrildidae",
+  "Amandava": "Estrildidae",
+  "Vidua": "Viduidae",
+  "Paroaria": "Thraupidae"
+ }
+}
