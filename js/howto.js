@@ -99,7 +99,8 @@ function demoShow(i, typing) {
     let k = 0; typed.textContent = "";
     const step = () => { if (view !== "howto") return; typed.textContent = word.slice(0, ++k); if (k < word.length) demoTimer = setTimeout(step, 110); else demoTimer = setTimeout(() => demoShow(demoI + 1, true), 700); };
     // 説明と💭を読み終えられるだけ待ってから次を打ち始める（1文字およそ0.08秒）
-    demoTimer = setTimeout(step, Math.max(2400, treeHTML.animEnd * 1000 + 1200, 1000 + (cap.length + (DEMO.think[demoI] || "").length) * 80));
+    // 1手目は遊び方をすぐ見せるため、説明を待たずに打ち始める
+    demoTimer = setTimeout(step, !demoI ? 700 : Math.max(2400, treeHTML.animEnd * 1000 + 1200, 1000 + (cap.length + (DEMO.think[demoI] || "").length) * 80));
   } else typed.textContent = next ? "" : "";
 }
 function demoStop() { clearTimeout(demoTimer); demoTimer = null; }
