@@ -22,20 +22,17 @@ function hintsHTML() {
   if (G.gAt) { const k = SP.filter(s => s.parent === N[G.target].parent && !G.guesses.includes(s.id)).length;
     out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
   if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
-  else if (n >= HINT1) out.push(`<button class="btn ghost hintbtn" data-hint="1">💡 ヒント1</button>`);
   if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : BIG() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
-  else if (n >= HINT2) out.push(`<button class="btn ghost hintbtn" data-hint="2">💡 ヒント2</button>`);
   return out.join("");
 }
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
 
 function render() {
   $("#modeLabel").textContent = (BIG() ? LV_NAME[LEVEL] + " " : "") + (mode === "daily" ? `今日の動物 #${dailyNo(G.day)}` : mode === "shared" ? "共有された問題" : "フリープレイ");
-  const hunt = G.gAt && !G.done, base = hunt ? G.gAt : 0;
+  const hunt = G.gAt && !G.done;
   $("#leftLabel").textContent = hunt ? "種探し 残り" : "残り";
   $("#left").textContent = hunt ? limit() - G.guesses.length : MAX - Math.min(G.guesses.length, MAX);
   $("#leftPin").textContent = $("#leftLabel").textContent + " " + $("#left").textContent;  // 上の残り回数が隠れたとき、入力欄の右端に出す
-  $("#meter").innerHTML = Array.from({ length: hunt ? HUNT : MAX }, (_, i) => `<i class="${i < G.guesses.length - base ? "used" : ""}"></i>`).join("");
   $("#guess").disabled = G.done; $(".inputbox").classList.toggle("pin", !G.done);  // 遊んでいる間だけ入力欄を上に残す
   if (!G.guesses.length) $("#flash").hidden = true;
 

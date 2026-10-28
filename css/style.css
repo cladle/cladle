@@ -71,9 +71,6 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 
 .status { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 12px 0 8px; font-size: .85rem; color: var(--muted) }
 .status b { font-family: var(--f-mono); color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums }
-.meter { display: flex; gap: 2px; flex: 1; max-width: 220px }
-.meter i { flex: 1; height: 6px; border-radius: 1px; background: var(--line) }
-.meter i.used { background: var(--accent) }
 
 .inputbox { position: relative }
 .inputbox.pin { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--hdr, 96px)); z-index: 4; background: var(--bg); padding-block: 4px 6px }  /* 推測で系統樹の方へ画面が動いても、すぐ次を入力できるよう上に残す（終わったら外す） */
