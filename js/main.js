@@ -86,11 +86,12 @@ async function setLevel(lv) {
 function applyLevel() {
   const h = HARD();
   $("#level").setAttribute("aria-pressed", h);
-  document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH()); document.documentElement.classList.toggle("bird", BIRD());
+  document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH()); document.documentElement.classList.toggle("bird", BIRD()); document.documentElement.classList.toggle("insect", INSECT());
   $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
   if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：魚類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
-  if (BIRD()) $("#levelNote").innerHTML = `<b>鳥編（試作）</b>：日本の鳥を中心に ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
+  if (BIRD()) $("#levelNote").innerHTML = `<b>鳥編（試作）</b>：鳥類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
+  if (INSECT()) $("#levelNote").innerHTML = `<b>昆虫編（試作）</b>：昆虫類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
@@ -108,7 +109,7 @@ async function loadData(f = "data.json") {
 }
 loadData().then(async data => {
   DATA.normal = data;
-  const m = location.hash.match(/^#?(hard|fish|bird)/), want = m ? m[1] : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
+  const m = location.hash.match(/^#?(hard|fish|bird|insect)/), want = m ? m[1] : location.hash === "#normal" ? "normal" : store.get("dk-level") || "normal";
   if (LV_FILE[want] && want !== "normal") try { DATA[want] = await loadData(LV_FILE[want]); LEVEL = want; STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats"))); } catch (e) {}
   build(DATA[LEVEL]); wire(); applyLevel();
   $("#level").onclick = () => setLevel(HARD() ? "normal" : "hard");
@@ -120,10 +121,10 @@ loadData().then(async data => {
   $("#demoPrev").onclick = () => { demoStop(); demoShow(demoI - 1, false); };
   $("#demoNext").onclick = () => { demoStop(); demoShow(demoI + 1, false); };
   $("#demoReplay").onclick = demoPlay;
-  const h = location.hash.slice(1).replace(/^(hard|fish|bird)\/?/, "");
+  const h = location.hash.slice(1).replace(/^(hard|fish|bird|insect)\/?/, "");
   if (h.startsWith("p=")) openShared(h.slice(2));
   else setView(["free", "zukan", "about", "howto", "extra"].includes(h) ? h : "daily");
-  addEventListener("hashchange", () => { const m = location.hash.match(/^#(?:(hard|fish|bird)\/)?p=(.+)$/); if (m && (m[1] || "normal") === LEVEL) openShared(m[2]); });
+  addEventListener("hashchange", () => { const m = location.hash.match(/^#(?:(hard|fish|bird|insect)\/)?p=(.+)$/); if (m && (m[1] || "normal") === LEVEL) openShared(m[2]); });
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });

@@ -299,42 +299,62 @@ for g in sorted([i for i, c in C.items() if c.get("_graft")], key=lambda i: -len
             if x in Ag or C[x]["rank"] == "属" or C[x]["parent"] not in A: continue
             log["regraft"].append((C[x]["sci"], C[C[x]["parent"]]["sci"], C[g]["sci"])); C[x]["parent"] = g
 
-# ---- 4a0. 鳥の目・科を日本鳥類目録改訂第8版に合わせる（tools/hard/bird_taxa.json、osj_birds.py が作る） ----
-# 陸の生き物で足した鳥の科は Catalogue of Life の分類から作ったので、和名が無く、目の抜けた科もある
-_bt = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bird_taxa.json")
-if os.path.exists(_bt) and "aves" in C:
-    BT = json.load(open(_bt, encoding="utf-8"))
-    log["birds"] = []
-    def in_aves(i): return "aves" in anc(C, i)
-    def find(sci, rank): return next((i for i, c in C.items() if c["sci"] == sci and c["rank"] == rank and in_aves(i)), None)
-    up = {c["sci"]: i for i, c in C.items() if c["rank"] == "クレード" and in_aves(i)}
+# ---- 4a0. 鳥と昆虫の目・科を整える（鳥：tools/hard/bird_taxa.json＝日本鳥類目録改訂第8版、osj_birds.py が作る。
+#      昆虫：tools/hard/insect_taxa.json＝Catalogue of Life の並びと環境省 1997 ほかの和名、insect_taxa.py が作る） ----
+# 陸の生き物で足した科は Catalogue of Life の分類から作ったので、和名が無く、目の抜けた科もある
+# {"orders": {学名: {ja, under}}, "families": {学名: {ja, order, under: [上の階級の学名、下から順]}}, "genera": {属: 科}, "names": {学名: 和名}}
+TAXA_GENERA = []
+def fix_taxa(path, root, tag):
+    if not os.path.exists(path) or root not in C: return
+    BT = json.load(open(path, encoding="utf-8"))
+    log[tag] = []
+    def inside(i): return root in anc(C, i)
+    def find(sci, rank): return next((i for i, c in C.items() if c["sci"] == sci and c["rank"] == rank and inside(i)), None)
+    for a, b in BT.get("familySynonyms", {}).items():  # Catalogue of Life で今は別の名前の科（Carcinophoridae → Anisolabididae）
+        for i, c in C.items():
+            if c["sci"] == a and c["rank"] == "科" and inside(i): c["sci"] = b; c["ja"] = b; log[tag].append(["family_renamed", a, b])
+    up = {c["sci"]: i for i, c in C.items() if c["rank"] != "属" and inside(i)}
     oid = {}
     for o, v in BT["orders"].items():
         i = find(o, "目")
         if not i:
-            if v.get("under") not in up: log["birds"].append(["noplace", o]); continue
-            i = add("o_" + o.lower(), up[v["under"]], v["ja"], o, "目"); log["birds"].append(["order", o, v["under"]])
+            if v.get("under") not in up: log[tag].append(["noplace", o]); continue
+            i = add("o_" + o.lower(), up[v["under"]], v["ja"], o, "目"); log[tag].append(["order", o, v["under"]])
         if C[i]["ja"] == C[i]["sci"]: C[i]["ja"] = v["ja"]
-        # Catalogue of Life から作った目は鳥綱の直下にあるので、目録の位置（より細かいまとまり）へ移す
+        # Catalogue of Life から作った目は綱の直下にあるので、決めた位置（より細かいまとまり）へ移す
         if v.get("under") in up and C[i]["parent"] in anc(C, up[v["under"]])[1:]:
-            log["birds"].append(["order_moved", o, C[C[i]["parent"]]["sci"], v["under"]]); C[i]["parent"] = up[v["under"]]
+            log[tag].append(["order_moved", o, C[C[i]["parent"]]["sci"], v["under"]]); C[i]["parent"] = up[v["under"]]
         C[i].pop("_graft", None)  # 科が一つだけの目も、片付けで畳まずに残す
         oid[o] = i
+    for i, c in C.items():
+        if c["rank"] == "目" and inside(i): oid.setdefault(c["sci"], i)
     fid = {}
     for f, v in BT["families"].items():
         if v["order"] not in oid: continue
-        ids = [i for i, c in C.items() if c["sci"] == f and c["rank"] == "科" and in_aves(i)] or [add("f_" + f.lower(), oid[v["order"]], v["ja"], f, "科")]
+        o = oid[v["order"]]
+        # 置き場所：上の階級のうち、その目の中に既にある一番細かいもの（無ければ目）
+        par = next((x for n in v.get("under", []) for x in [find_in(n, o)] if x), o)
+        ids = [i for i, c in C.items() if c["sci"] == f and c["rank"] == "科" and inside(i)] or [add("f_" + f.lower(), par, v["ja"], f, "科")]
         for i in ids:  # 同じ科が別の id で二つできていることがある（本家の節目と陸の生き物で作った節目）
             if C[i]["ja"] == C[i]["sci"]: C[i]["ja"] = v["ja"]
-            if C[i]["parent"] != oid[v["order"]] and oid[v["order"]] not in anc(C, C[i]["parent"]):
-                log["birds"].append(["family", f, C[C[i]["parent"]]["sci"], v["order"]]); C[i]["parent"] = oid[v["order"]]
+            # 目の外にある科は目の下へ。目の中でも、より細かい置き場所があればそこへ
+            if o not in anc(C, C[i]["parent"]) or (par != C[i]["parent"] and C[i]["parent"] in anc(C, par)):
+                log[tag].append(["family", f, C[C[i]["parent"]]["sci"], C[par]["sci"]]); C[i]["parent"] = par
         fid[f] = ids[0]
-    # 科を通らずに目やクレードの直下にある属は、目録の科の下へ（本家の種の属は後で作るので、そのあとにもう一度）
-    def bird_genera():
+    for n, j in BT.get("names", {}).items():
+        for i, c in C.items():
+            if c["sci"] == n and c["ja"] == c["sci"] and c["rank"] != "属" and inside(i): c["ja"] = j
+    # 科を通らずに目やクレードの直下にある属は、決めた科の下へ（本家の種の属は後で作るので、そのあとにもう一度）
+    def genera():
         for i, c in list(C.items()):
-            if c["rank"] == "属" and in_aves(i) and C[c["parent"]]["rank"] != "科" and BT["genera"].get(c["sci"]) in fid:
-                log["birds"].append(["genus", c["sci"], C[c["parent"]]["sci"], BT["genera"][c["sci"]]]); c["parent"] = fid[BT["genera"][c["sci"]]]
-    bird_genera()
+            if c["rank"] == "属" and inside(i) and C[c["parent"]]["rank"] != "科" and BT["genera"].get(c["sci"]) in fid:
+                log[tag].append(["genus", c["sci"], C[c["parent"]]["sci"], BT["genera"][c["sci"]]]); c["parent"] = fid[BT["genera"][c["sci"]]]
+    genera(); TAXA_GENERA.append(genera)
+def find_in(sci, o):
+    return next((i for i, c in C.items() if c["sci"] == sci and c["rank"] not in ("属", "科") and (i == o or o in anc(C, i))), None)
+_here = os.path.dirname(os.path.abspath(__file__))
+fix_taxa(os.path.join(_here, "bird_taxa.json"), "aves", "birds")
+fix_taxa(os.path.join(_here, "insect_taxa.json"), "insecta", "insects")
 
 # ---- 4a1. 本家に無い節目（tools/hard/hard_clades.json） ----
 # [{"id","ja","sci","rank","under":親の学名,"take":[下へ入れる種・節目の学名]}]  追加種で多分岐にならないように使う
@@ -391,7 +411,7 @@ for s in keep_main:
         if C[s["parent"]]["rank"] == "属": hit = s["parent"]
         else: hit = add(gid(C[s["parent"]]["sci"], g), s["parent"], "", g, "属")
     s = dict(s); s["parent"] = hit; SP.append(s)
-if "bird_genera" in globals(): bird_genera()
+for _g in TAXA_GENERA: _g()
 
 for s in SP:
     if s["ja"] in SUBSP_EXTRA:
@@ -516,8 +536,10 @@ if landf:
     meta["japaneseNameSources"] += ["環境省自然環境局生物多様性センター「種の多様性調査（動物分布調査）対象種一覧」（1997、公共データ利用規約 PDL1.0）を使用し、学名を Catalogue of Life に合わせて Cladle が加工",
                                     "Japan Spider Catalog. (2026). Japan Spider Catalog（種リスト 2026-10-24 生成分）. https://japan-spider-catalog.pages.dev/ (accessed 2026-10-25). Cladle が加工"]
     meta["status"] += "陸の昆虫・クモ・鳥・哺乳類・陸と淡水の貝は、環境省の種の多様性調査の対象種一覧（学名は Catalogue of Life に合わせた）と Japan Spider Catalog から足した（2026-10-25）。鳥と哺乳類はそのうち日本鳥類目録第8版・世界哺乳類標準和名リストにある種だけを、そのリストの和名で入れた。"
-if os.path.exists(_bt):
+if os.path.exists(os.path.join(_here, "bird_taxa.json")):
     meta["japaneseNameSources"].append("日本鳥学会（2024）日本鳥類目録改訂第8版 掲載鳥類リスト ver.1（2024-10-08公開）。鳥の目・科・属の並びと和名、ゲキムズだけの鳥の和名・学名（Cladle が加工）")
+if os.path.exists(os.path.join(_here, "insect_taxa.json")):
+    meta["japaneseNameSources"].append("昆虫の目・科の和名：環境省（1997）種の多様性調査（動物分布調査）対象種一覧（PDL1.0）、無ければ Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前（Cladle が照合）。並びは Catalogue of Life、目より上は Misof et al. 2014")
 if wormsdir: meta["japaneseNameSources"].append("World Register of Marine Species（ChecklistBank 2011, CC BY 4.0）の日本語名（BISMaL 由来）")
 # 照合できなかった昆虫（コガネムシ上科）の和名の出典論文（fixes.tsv と同じフォルダの insects_refs.tsv）
 refsf = fixesf and os.path.join(os.path.dirname(fixesf), "insects_refs.tsv")

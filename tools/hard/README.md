@@ -9,6 +9,7 @@
 | `hard_facts.tsv` | ゲキムズだけの種の一言説明。1行1種で、学名・和名・説明・出典をタブで区切る |
 | `hard_only.json` | 本家に入れず、ゲキムズだけに入れる種。`place` に、入れる場所の節目（科・目など）を下から順に書く |
 | `hard_tiers.tsv` | ゲキムズだけの種の知名度（1〜4）の上書き。学名・和名・tier をタブで区切る（一覧ページの案を表にしたもの） |
+| `insect_taxa.json` | 昆虫の目・科の並び（Catalogue of Life）と和名（環境省1997、無ければ Wikidata・GBIF・iNaturalist の多数決）。`insect_taxa.py` が作る。目より上の置き場所は `insect_taxa.py` の `ORDER_UNDER` に書く |
 | `bird_taxa.json` | 鳥の目・科・属の並びと和名（日本鳥類目録改訂第8版）。`osj_birds.py` が目録の掲載鳥類リスト（Excel）から作る。目より上の置き場所は `osj_birds.py` の `ORDER_UNDER` に書く |
 | `fixes.tsv` | 和名・学名の直し（標準和名リストなどと照らした結果） |
 | `insects_refs.tsv` | 照合できなかった昆虫の和名の出典論文 |
