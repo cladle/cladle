@@ -31,7 +31,8 @@ byja = {s["ja"]: s for s in HS}
 FOREIGN = {"zebrafish": ("o_cypriniformes", "Danionidae"), "axolotl": ("caudata", "Ambystomatidae"),
            "amimenishikihebi": ("serpentes", "Pythonidae"), "komodo": ("squamata", "Varanidae"),
            "kingcobra": ("sf_elapinae", None), "zougame": ("testudinoidea", "Testudinidae"),
-           "iriewani": ("crocodylia", "Crocodylidae"), "alligator": ("crocodylia", "Alligatoridae")}
+           "iriewani": ("crocodylia", "Crocodylidae"), "alligator": ("crocodylia", "Alligatoridae"),
+           "leafyseadragon": ("o_syngnathiformes", "Syngnathidae")}
 extra_species = []
 for s in FH:
     h = (byja.get(s["ja"]) if byja.get(s["ja"]) else None) or next((x for x in bysci.get(s["sci"], []) if True), None)
@@ -122,7 +123,8 @@ SYN = {"Monopisthocotylea": "Monopisthocotyla", "Polyopisthocotylea": "Polyopist
 BLACK = {"Crustacea", "Polychaeta", "Canalipalpata", "Scolecida", "Littorinimorpha", "Cymothoida", "Filifera", "Anthoathecata",
          "Ascidiacea", "Phlebobranchia", "Arachnida", "Heterotremata", "Archaeogastropoda", "Mesogastropoda", "Opisthobranchia",
          "Pulmonata", "Prosobranchia", "Turbellaria", "Valvatida", "Spinulosida", "Valvatacea", "Aspidochirotida", "Lithistida",
-         "Trachymedusae", "Gammaridea", "Maxillopoda", "Entomostraca", "Heterodonta", "Eumalacostraca", "Rhabdocoela", "Monogenea"}
+         "Trachymedusae", "Gammaridea", "Maxillopoda", "Entomostraca", "Heterodonta", "Eumalacostraca", "Rhabdocoela", "Monogenea",
+         "Oligochaeta"}  # 貧毛類：ヒル類がミミズの中から生じたので側系統
 KEEP_RANK = {"subphylum", "superclass", "class", "subclass", "infraclass", "subterclass", "superorder", "order", "suborder", "infraorder", "superfamily", "family"}
 RANKJA = {"subphylum": "亜門", "superclass": "上綱", "class": "綱", "subclass": "亜綱", "infraclass": "下綱", "subterclass": "小綱",
           "superorder": "上目", "order": "目", "suborder": "亜目", "infraorder": "下目", "superfamily": "上科", "family": "科"}
@@ -224,6 +226,7 @@ if wormsdir:
         scis = {re.sub(r" \([A-Z][a-z]+\)", "", x[1]["usage"]["name"]["scientificName"]) for x in lst}
         if len(scis) > 1: log["worms_dupname"].append(ja); continue
         r, u, d = lst[0]; sci = scis.pop()
+        if "incertae" in sci.lower(): log["worms_incertae"].append((ja, sci)); continue  # 属が決まっていない種（学名が二名法にならない）
         if ja in byja_all or sci in bysci_main or ja in cand: continue
         if col_ja.get(sci) and ja not in col_ja[sci]: log["worms_colconflict"].append((ja, sci, sorted(col_ja[sci]))); continue
         if sci in sp_sci: log["worms_dupsci"].append(ja); continue
@@ -414,6 +417,13 @@ if os.path.exists(_ho):
         byja_all[h["ja"]] = SP[-1]
         log["hard_only"].append(["added", h["ja"], C[par]["sci"], C[C[par]["parent"]]["sci"]])
 
+# 目録に無い本家の脊椎動物（外国の種）も属の節目の下へ
+for x in extra_species:
+    if C[x["parent"]]["rank"] == "属": continue
+    g = x["sci"].split()[0]
+    gs = [i for i, c in C.items() if c["rank"] == "属" and c["sci"] == g and c["parent"] == x["parent"]]
+    x["parent"] = gs[0] if gs else add(gid(C[x["parent"]]["sci"], g), x["parent"], "", g, "属")
+
 # 本家の種（脊椎の魚・爬虫両生以外）も属の節目の下へ
 for s in keep_main:
     g = s["sci"].split()[0]
@@ -493,6 +503,49 @@ if os.path.exists(_ht):
         if not s or s["ja"] != r["ja"] or r["tier"] not in ("1", "2", "3", "4"): log["hard_tiers"].append(["skip", r["sci"], r["ja"], r["tier"]]); continue
         s["tier"] = int(r["tier"]); log["hard_tiers"].append(["set", r["sci"], r["tier"]])
 
+# ---- 4e. 置き場所の直し ----
+# 足した科などが、本家のクレードの外に並んでしまうもの。{入れる先の学名: [中へ入れる節目の学名]}
+MOVE_INTO = {"Pinnipedia": ["Odobenidae", "Otariidae", "Phocidae"],  # 鰭脚類の3科（MDD 2.1、WoRMS）
+             "Ruminantia": ["Cervidae"],  # シカ科は反芻類（MDD 2.1）
+             "Hexacorallia": ["Cerianthidae"],  # ハナギンチャク類は六放サンゴ類の中で最初に分かれた群（McFadden et al. 2021、WoRMS）
+             "Accipitriformes": ["Sagittarius"],  # ヘビクイワシはタカ目（IOC 15.2）
+             "Annelida": ["Amphinomida"],  # ウミケムシ類は Pleistoannelida の外で分かれる（Weigert et al. 2014）
+             "Luminacea": ["Astriclypeus"]}  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
+for to, items in MOVE_INTO.items():
+    t = [i for i, c in C.items() if c["sci"] == to and c["rank"] != "属"]
+    if len(t) != 1: log["move_into"].append(["notarget", to]); continue
+    for i, c in C.items():
+        if c["sci"] in items and c["parent"] != t[0] and i not in anc(C, t[0]):
+            log["move_into"].append([c["sci"], C[c["parent"]]["sci"], to]); c["parent"] = t[0]
+# 科を通らずに上の節目の直下にある属は、その属の科（Catalogue of Life・WoRMS・陸の生き物の分類）が下にあれば、その科の下へ
+GENUS_FAM = {"Suricata": "Herpestidae", "Alces": "Cervidae", "Architeuthis": "Architeuthidae",  # 本家だけの種（MDD 2.1、WoRMS）
+             "Metaphire": "Megascolecidae", "Eisenia": "Lumbricidae", "Tubifex": "Naididae", "Branchiura": "Naididae"}
+for x in list(U.values()) + (list(WU.values()) if wormsdir else []):
+    d = {c["rank"]: c["name"] for c in x.get("classification", [])}
+    g = x["usage"]["name"].get("scientificName", "").split(" ")[0]
+    if g and d.get("family"): GENUS_FAM.setdefault(g, d["family"])
+for x in LD["species"]:
+    d = {c["rank"]: c["name"] for c in x["classification"]}
+    if d.get("family"): GENUS_FAM.setdefault(x["sci"].split()[0], d["family"])
+fams = collections.defaultdict(list)
+for i, c in C.items():
+    if c["rank"] == "科": fams[c["sci"]].append(i)
+for i, c in C.items():
+    if c["rank"] != "属" or C[c["parent"]]["rank"] == "科": continue
+    f = [j for j in fams.get(GENUS_FAM.get(c["sci"]), []) if c["parent"] in anc(C, j)[1:]]
+    if len(f) == 1: log["genus_to_family"].append([c["sci"], C[c["parent"]]["sci"], C[f[0]]["sci"]]); c["parent"] = f[0]
+# 同じ属が二つの節目になっているもの（一方がもう一方の上の節目の直下）は、深い方にまとめる（同じ深さなら本家の節目に）
+gen = collections.defaultdict(list)
+for i, c in C.items():
+    if c["rank"] == "属": gen[c["sci"]].append(i)
+for g, ids in gen.items():
+    for a in ids:
+        for b in ids:
+            if a != b and a in C and b in C and C[a]["parent"] in anc(C, C[b]["parent"]) and (C[a]["parent"] != C[b]["parent"] or ((b in MC), a) > ((a in MC), b)):
+                for x in list(C.values()) + SP:
+                    if x["parent"] == a: x["parent"] = b
+                log["genus_merged"].append([g, C[C[a]["parent"]]["sci"], C[C[b]["parent"]]["sci"]]); del C[a]
+
 # ---- 5. 片付け ----
 has = set()
 for s in SP:
@@ -503,7 +556,8 @@ clades = [C[i] for i in dict.fromkeys(order) if i in has]
 ch = collections.Counter(c["parent"] for c in clades); ch.update(s["parent"] for s in SP)
 alive = {c["id"]: c for c in clades}
 for c in clades:
-    if (c["rank"] in ("クレード", "上科", "下目") or c.get("_graft") and c["rank"] not in ("科", "属")) and ch[c["id"]] == 1 and c["parent"]:
+    # 本家の節目（ミクソゾア・鉤頭動物など）は、子が一つでも本家と同じく残す
+    if (c["rank"] in ("クレード", "上科", "下目") or c.get("_graft") and c["rank"] not in ("科", "属")) and ch[c["id"]] == 1 and c["parent"] and c["id"] not in MC:
         for d in list(alive.values()) + SP:
             if d["parent"] == c["id"]: d["parent"] = c["parent"]
         del alive[c["id"]]
@@ -516,6 +570,13 @@ for c in clades:
         c["polytomy"] = (c.get("polytomy", "") + " " + NOTE).strip()
 for s in SP:
     for k in ("main", "colsrc", "_w"): s.pop(k, None)
+# 目録側の節目（o_・f_ などの id）が本家と同じ群なら、本家の説明を引き継ぐ
+_mdesc = collections.defaultdict(list)
+for c in MC.values():
+    if c.get("desc"): _mdesc[(c["sci"], c["rank"])].append(c["desc"])
+for c in clades:
+    d = _mdesc.get((c["sci"], c["rank"]), [])
+    if not c.get("desc") and len(set(d)) == 1: c["desc"] = d[0]
 # ゲキムズだけの節目の説明（tools/hard/clade_desc.tsv：id, desc, 出典。本家と同じ節目は本家の説明のまま）
 _desc = os.path.join(os.path.dirname(os.path.abspath(__file__)), "clade_desc.tsv")
 if os.path.exists(_desc):
