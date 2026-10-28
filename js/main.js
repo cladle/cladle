@@ -31,7 +31,8 @@ function wire() {
   document.addEventListener("click", e => {
     if (!e.target.closest(".inputbox")) $("#sugg").hidden = true;
     const z = e.target.closest("[data-zk]"); if (z) { zukanGo(z.dataset.zk); return; }
-    const b = e.target.closest(".clade, .twig, .clade-mini, .svgnode, .nl, .zk [data-id]:is(button)");
+    const zr = e.target.closest("[data-zkreveal]"); if (zr) { track("sheet-zukan"); revealInZukan(zr.dataset.zkreveal); return; }
+    const b = e.target.closest(".clade, .twig, .clade-mini, .svgnode, .nl, .zk [data-id]:is(button), .sheet-path [data-id]");
     if (b) { e.preventDefault(); track(N[b.dataset.id]?.kind === "species" ? "sheet-species" : "sheet-clade"); openSheet(b.dataset.id); return; }
     const lk = e.target.closest(".lookup a"); if (lk) track("lookup-" + ({ Wikipedia: "wikipedia", GBIF: "gbif" }[lk.textContent] || "image"));
     const hb = e.target.closest(".hintbtn"); if (hb) { useHint(+hb.dataset.hint); return; }

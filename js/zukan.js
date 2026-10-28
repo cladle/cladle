@@ -15,8 +15,10 @@ function openSheet(id) {
   if (n.verify) h += `<div class="note v-n"><b>要確認：</b>${esc(Object.entries(n.verify).map(([k, v]) => ({ ja: "和名", sci: "学名", placement: "位置" }[k] || k) + "：" + v).join("／"))}</div>`;
   if (isSp) h += namesHTML(n);
   if (isSp && !hide) h += `<div class="lookup">調べる：${lookupLinks(n)}</div>`;
-  h += `<div class="path">${path(n.parent || id).map(x => esc(N[x].ja)).join(" › ")}</div>`;
-  h += `<button class="btn ghost close" id="closeSheet">閉じる</button>`;
+  // 道筋の名前を押すとその分類群の説明へ。「図鑑で見る」で図鑑のその階層（種は入っている階層）へ移る
+  h += hide ? `<div class="path">${path(n.parent || id).map(x => esc(N[x].ja)).join(" › ")}</div>`
+    : `<div class="path sheet-path">${path(n.parent || id).map(x => `<button data-id="${x}">${esc(N[x].ja)}</button>`).join("<span>›</span>")}</div>`;
+  h += `<div class="row sheet-act">${hide || (isSp && view === "zukan") ? "" : `<button class="btn ghost" ${isSp ? `data-zkreveal="${id}"` : `data-zk="${id}"`}>図鑑で見る</button>`}<button class="btn ghost close" id="closeSheet">閉じる</button></div>`;
   $("#sheetIn").innerHTML = h; $("#sheet").hidden = $("#scrim").hidden = false; $("#closeSheet").focus();
 }
 function closeSheet() { $("#sheet").hidden = $("#scrim").hidden = true; }
@@ -47,9 +49,9 @@ function renderZukan() {
     ${cl.length ? `<div class="zk-sec">下位のグループ</div><ul class="zk-list">${cl.map(zkRow).join("")}</ul>` : ""}
     ${sp.length ? `<div class="zk-sec">種</div><ul class="zk-list">${sp.map(zkRow).join("")}</ul>` : ""}`;
 }
-function zukanGo(id) { ZK = id; ZKHIT = null; ZKQ = ""; $("#zkq").value = ""; renderZukan(); $("#zk").scrollIntoView({ block: "start" }); scrollTo({ top: 0 }); }
+function zukanGo(id) { closeSheet(); if (view !== "zukan") setView("zukan"); ZK = id; ZKHIT = null; ZKQ = ""; $("#zkq").value = ""; renderZukan(); $("#zk").scrollIntoView({ block: "start" }); scrollTo({ top: 0 }); }
 function revealInZukan(id) {
-  setView("zukan");
+  closeSheet(); setView("zukan");
   ZK = N[id].parent; ZKQ = ""; ZKHIT = id; $("#zkq").value = ""; renderZukan();
   document.querySelector(`#zk li[data-sp="${id}"]`)?.scrollIntoView({ block: "center" });
 }
