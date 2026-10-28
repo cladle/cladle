@@ -7,7 +7,7 @@ function setView(v) {
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
   $("#game").hidden = !(v === "daily" || v === "free"); $("#zukan").hidden = v !== "zukan"; $("#about").hidden = v !== "about"; $("#howto").hidden = v !== "howto"; $("#extra").hidden = v !== "extra";
   if (v === "extra") $("#extraDoc").innerHTML = extraHTML();
-  demoStop(); $(".demo").hidden = BIG(); if (v === "howto" && !BIG()) demoPlay();
+  demoStop(); if (v === "howto") demoPlay();
   if (v === "daily" || v === "free") { if (mode !== v || !G) newGame(v); }
   window.scrollTo(0, 0);
 }
@@ -88,7 +88,7 @@ function applyLevel() {
   document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH());
   $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
-  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：日本の魚 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうに戻る</button>`;
+  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：日本の魚を中心に ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
