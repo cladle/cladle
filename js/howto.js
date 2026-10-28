@@ -97,9 +97,9 @@ function demoShow(i, typing) {
   if (typing && next) {
     const word = N[next].ja.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
     let k = 0; typed.textContent = "";
-    const step = () => { if (view !== "howto") return; typed.textContent = word.slice(0, ++k); if (k < word.length) demoTimer = setTimeout(step, 140); else demoTimer = setTimeout(() => demoShow(demoI + 1, true), 900); };
-    // 説明と💭を読み終えられるだけ待ってから次を打ち始める（1文字およそ0.1秒）
-    demoTimer = setTimeout(step, Math.max(3000, treeHTML.animEnd * 1000 + 1500, 1200 + (cap.length + (DEMO.think[demoI] || "").length) * 100));
+    const step = () => { if (view !== "howto") return; typed.textContent = word.slice(0, ++k); if (k < word.length) demoTimer = setTimeout(step, 110); else demoTimer = setTimeout(() => demoShow(demoI + 1, true), 700); };
+    // 説明と💭を読み終えられるだけ待ってから次を打ち始める（1文字およそ0.08秒）
+    demoTimer = setTimeout(step, Math.max(2400, treeHTML.animEnd * 1000 + 1200, 1000 + (cap.length + (DEMO.think[demoI] || "").length) * 80));
   } else typed.textContent = next ? "" : "";
 }
 function demoStop() { clearTimeout(demoTimer); demoTimer = null; }
