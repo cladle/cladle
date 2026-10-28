@@ -86,6 +86,7 @@ async function setLevel(lv) {
 function applyLevel() {
   const h = HARD();
   $("#level").setAttribute("aria-pressed", h);
+  $("#level").hidden = BIG() && !h;  // 番外編で遊んでいる間はゲキムズのボタンを隠す（戻るのは説明の「ふつうモードに戻る」から）
   document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH()); document.documentElement.classList.toggle("bird", BIRD()); document.documentElement.classList.toggle("insect", INSECT());
   $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
