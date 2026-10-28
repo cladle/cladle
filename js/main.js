@@ -88,7 +88,7 @@ function applyLevel() {
   document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH()); document.documentElement.classList.toggle("bird", BIRD());
   $("#levelNote").hidden = !BIG();
   if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
-  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：日本の魚を中心に ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
+  if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：魚類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   if (BIRD()) $("#levelNote").innerHTML = `<b>鳥編（試作）</b>：日本の鳥を中心に ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
