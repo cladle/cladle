@@ -299,6 +299,18 @@ for g in sorted([i for i, c in C.items() if c.get("_graft")], key=lambda i: -len
             if x in Ag or C[x]["rank"] == "属" or C[x]["parent"] not in A: continue
             log["regraft"].append((C[x]["sci"], C[C[x]["parent"]]["sci"], C[g]["sci"])); C[x]["parent"] = g
 
+# ---- 4a1. 本家に無い節目（tools/hard/hard_clades.json） ----
+# [{"id","ja","sci","rank","under":親の学名,"take":[下へ入れる種・節目の学名]}]  追加種で多分岐にならないように使う
+_hc = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hard_clades.json")
+if os.path.exists(_hc):
+    for h in json.load(open(_hc, encoding="utf-8")):
+        up = [c["id"] for c in C.values() if c["sci"] == h["under"]]
+        if not up: log["hard_clades"].append(["noplace", h["sci"]]); continue
+        add(h["id"], up[0], h["ja"], h["sci"], h["rank"], h.get("desc", ""))
+        for x in list(C.values()) + SP:
+            if x["parent"] == up[0] and x["sci"] in h["take"]: x["parent"] = h["id"]
+        log["hard_clades"].append(["added", h["sci"], h["under"]])
+
 # ---- 4a2. 本家に無い個別の追加種（tools/hard/hard_only.json） ----
 # [{"ja","sci","aliases","fact","tier","verify","source","place":[祖先の学名, 下から順]}]
 # 同じ学名の属があればその下、無ければ place の中で最初に木にある節目の下に属を作る
@@ -319,7 +331,11 @@ if os.path.exists(_ho):
         anc_ids = [i for nm in h["place"] for i in byname.get(nm, [])]
         gs = [i for i in byname.get(g, []) if C[i]["rank"] == "属" and (not anc_ids or set(anc(C, i)) & set(anc_ids))]
         if gs: par = gs[0]
-        elif anc_ids: par = add(gid(C[anc_ids[0]]["sci"], g), anc_ids[0], "", g, "属")
+        elif anc_ids:
+            par = add(gid(C[anc_ids[0]]["sci"], g), anc_ids[0], "", g, "属")
+            # 同じ属の既存の種が place の節目の直下にあれば、作った属の下へ入れる（例：シーラカンス）
+            for s in SP:
+                if s["parent"] == anc_ids[0] and s["sci"].split()[0] == g: s["parent"] = par
         else: log["hard_only"].append(["noplace", h["ja"], h["sci"]]); continue
         sid = "h" + re.sub(r"[^a-z0-9]", "", h["sci"].lower())
         SP.append({"id": sid, "parent": par, "ja": h["ja"], "sci": h["sci"], "jaStatus": "standard", "aliases": h.get("aliases", []),

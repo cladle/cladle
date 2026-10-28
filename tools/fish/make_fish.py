@@ -10,7 +10,7 @@
 """
 import json, sys
 
-FISH_VERSION = "fish-0.1.0"
+FISH_VERSION = "fish-0.1.1"
 src, out = sys.argv[1], sys.argv[2]
 H = json.load(open(src, encoding="utf-8"))
 C = {c["id"]: c for c in H["clades"]}

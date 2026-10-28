@@ -1,0 +1,13 @@
+[
+ {
+  "id": "dipnoi",
+  "ja": "ハイギョ類",
+  "sci": "Dipnoi",
+  "rank": "クレード",
+  "under": "Rhipidistia",
+  "take": [
+   "Neoceratodus forsteri"
+  ],
+  "source": "現生ハイギョ（オーストラリア・南アメリカ・アフリカ）は単系統（Betancur-R. et al. 2017; Near & Thacker 2024）"
+ }
+]

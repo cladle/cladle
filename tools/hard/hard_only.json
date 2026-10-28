@@ -227,5 +227,28 @@
    "Teleostei",
    "Actinopterygii"
   ]
+ },
+ {
+  "ja": "インドネシアシーラカンス",
+  "sci": "Latimeria menadoensis",
+  "aliases": [],
+  "fact": "1997年にインドネシアのスラウェシ島北部で見つかった、2種目の現生シーラカンス。",
+  "tier": 3,
+  "source": "岩田雅光ほか（2019）「インドネシアシーラカンスLatimeria menadoensisの初幼魚観察とLatimeria chalumnae胎仔との比較」。CoL・Wikidata・iNaturalistも同じ和名（check/sarco/）",
+  "place": [
+   "Sarcopterygii"
+  ]
+ },
+ {
+  "ja": "ミナミアメリカハイギョ",
+  "sci": "Lepidosiren paradoxa",
+  "aliases": [],
+  "fact": "南アメリカのアマゾン川などにすむハイギョ。2024年に読まれたゲノムは、それまでに解読された動物で最大だった。",
+  "tier": 3,
+  "source": "Schartl et al. (2024) Nature 634（Nature Asia の日本語要約が和名を使用）。Wikidataも同じ（check/sarco/）",
+  "place": [
+   "Dipnoi",
+   "Rhipidistia"
+  ]
  }
 ]
