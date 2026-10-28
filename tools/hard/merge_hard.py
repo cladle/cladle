@@ -237,6 +237,10 @@ if wormsdir:
 
 # ---- 4a0. 陸の生き物（環境省「種の多様性調査 対象種一覧」の学名を CoL に合わせたもの＋Japan Spider Catalog のクモ） ----
 LD = json.load(open(landf)) if landf else {"species": [], "cladeJa": {}}
+# 足す昆虫（tools/hard/insect_extra.json、insect_extra.py が作る）も陸の生き物と同じ扱いで足す
+_ie = os.path.join(os.path.dirname(os.path.abspath(__file__)), "insect_extra.json")
+if landf and os.path.exists(_ie):
+    LD["species"] = LD["species"] + [{k: v for k, v in x.items() if k != "jaVotes"} for x in json.load(open(_ie, encoding="utf-8"))["species"]]
 if landf:
     have = {c["sci"] for c in C.values() if c["rank"] != "属"}
     below = collections.defaultdict(set)
@@ -349,6 +353,16 @@ def fix_taxa(path, root, tag):
         for i, c in list(C.items()):
             if c["rank"] == "属" and inside(i) and C[c["parent"]]["rank"] != "科" and BT["genera"].get(c["sci"]) in fid:
                 log[tag].append(["genus", c["sci"], C[c["parent"]]["sci"], BT["genera"][c["sci"]]]); c["parent"] = fid[BT["genera"][c["sci"]]]
+        # 亜科（insect_taxa.json の genusSubfamily）：科の直下の属を、その科の中の亜科の節目の下へ
+        for i, c in list(C.items()):
+            sub = BT.get("genusSubfamily", {}).get(c["sci"])
+            if c["rank"] != "属" or not sub or not inside(i) or C[c["parent"]]["rank"] != "科": continue
+            fam = c["parent"]
+            if C[fam]["sci"] != BT["subfamilies"][sub]["family"]: continue
+            sid = "sf_" + re.sub(r"[^a-z0-9]", "", sub.lower())
+            if sid in C and C[sid]["parent"] != fam: sid += "_" + re.sub(r"[^a-z0-9]", "", C[fam]["sci"].lower())[:16]
+            if sid not in C: add(sid, fam, BT["subfamilies"][sub]["ja"], sub, "亜科")
+            log[tag].append(["subfamily", c["sci"], sub]); c["parent"] = sid
     genera(); TAXA_GENERA.append(genera)
 def find_in(sci, o):
     return next((i for i, c in C.items() if c["sci"] == sci and c["rank"] not in ("属", "科") and (i == o or o in anc(C, i))), None)
@@ -539,7 +553,10 @@ if landf:
 if os.path.exists(os.path.join(_here, "bird_taxa.json")):
     meta["japaneseNameSources"].append("日本鳥学会（2024）日本鳥類目録改訂第8版 掲載鳥類リスト ver.1（2024-10-08公開）。鳥の目・科・属の並びと和名、ゲキムズだけの鳥の和名・学名（Cladle が加工）")
 if os.path.exists(os.path.join(_here, "insect_taxa.json")):
-    meta["japaneseNameSources"].append("昆虫の目・科の和名：環境省（1997）種の多様性調査（動物分布調査）対象種一覧（PDL1.0）、無ければ Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前（Cladle が照合）。並びは Catalogue of Life、目より上は Misof et al. 2014")
+    meta["japaneseNameSources"].append("昆虫の目・科・亜科の和名：環境省（1997）種の多様性調査（動物分布調査）対象種一覧（PDL1.0）、無ければ Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前（Cladle が照合、そろわないものは学名のまま）。並びと亜科は Catalogue of Life、目より上は Misof et al. 2014")
+if os.path.exists(_ie):
+    meta["japaneseNameSources"].append("足した昆虫（環境省の一覧で学名が合わなかった種と、iNaturalist の日本の研究用観察数の上位 300 種）の和名：iNaturalist・Wikidata・GBIF（環境省の種は環境省の和名も）のうち 2 つ以上でそろう名前。学名は Catalogue of Life、無ければ GBIF Backbone（Cladle が照合）")
+    meta["status"] += "身近な昆虫（iNaturalist の日本の観察数の上位）と、環境省の一覧で学名が合わずに落ちていた昆虫を足した（2026-10-28）。"
 if wormsdir: meta["japaneseNameSources"].append("World Register of Marine Species（ChecklistBank 2011, CC BY 4.0）の日本語名（BISMaL 由来）")
 # 照合できなかった昆虫（コガネムシ上科）の和名の出典論文（fixes.tsv と同じフォルダの insects_refs.tsv）
 refsf = fixesf and os.path.join(os.path.dirname(fixesf), "insects_refs.tsv")

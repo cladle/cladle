@@ -4,13 +4,13 @@
   python3 tools/insect/make_insect.py data-hard.json data-insect.json
 
 - 昆虫綱の種をすべて残す。根は昆虫綱。目・科の並びは Catalogue of Life、和名は環境省（1997）種の多様性調査の
-  対象種一覧ほか（ゲキムズ側の tools/hard/insect_taxa.json）。種はゲキムズに今ある昆虫のまま（作者の判断）。
+  対象種一覧ほか（ゲキムズ側の tools/hard/insect_taxa.json）。科の中の亜科も Catalogue of Life に従う。種はゲキムズにある昆虫（環境省の一覧の種に、身近な種と学名が合わずに落ちていた種を足したもの、tools/hard/insect_extra.json）。
 - 全種を答えに出し、知名度や目ごとの重みは付けずに全種から同じ確率で選ぶ（魚編と同じ）。
 - 種・節目・知名度を変えたら版番号（INSECT_VERSION）を上げる。今日の動物の選び方に入っている。
 """
 import json, sys
 
-INSECT_VERSION = "insect-0.1.0"
+INSECT_VERSION = "insect-0.1.1"
 src, out = sys.argv[1], sys.argv[2]
 H = json.load(open(src, encoding="utf-8"))
 C = {c["id"]: c for c in H["clades"]}
@@ -40,9 +40,9 @@ meta.update({
     "taxonomy": {
         "backbone": "目より上は分子系統の論文に基づく主な節目だけを置き、分かれる順が定まらないところは多分岐にした。",
         "nomenclature": "Catalogue of Life Checklist（ChecklistBank 3LR）",
-        "phylogenyNotes": "目・科の並びは Catalogue of Life に従い、目より上は Misof et al. 2014（Science 346: 763–767）の系統で、ふつうモード・ゲキムズにあるまとまり（有翅昆虫・新翅類・多新翅類・準新翅類・完全変態類など）だけを節目にした。",
+        "phylogenyNotes": "目・科・亜科の並びは Catalogue of Life に従い、目より上は Misof et al. 2014（Science 346: 763–767）の系統で、ふつうモード・ゲキムズにあるまとまり（有翅昆虫・新翅類・多新翅類・準新翅類・完全変態類など）だけを節目にした。",
     },
-    "japaneseNameSources": [x for x in H["meta"]["japaneseNameSources"] if x.startswith(("環境省", "昆虫の目・科", "GBIF", "Catalogue of Life", "World Register", "コガネムシ上科"))],
+    "japaneseNameSources": [x for x in H["meta"]["japaneseNameSources"] if x.startswith(("環境省", "昆虫の目・科", "足した昆虫", "GBIF", "Catalogue of Life", "World Register", "コガネムシ上科"))],
     "status": "試作版。ゲキムズのデータ（" + H["meta"]["datasetVersion"] + "）から昆虫だけを切り出した。",
     "counts": {"species": len(species)},
     "selection": {

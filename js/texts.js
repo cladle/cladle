@@ -67,16 +67,18 @@ function birdAboutHTML() {
     <li>成績はこの端末のブラウザにだけ保存され、送信されません。ふつうモード・ゲキムズ・魚編とは別に記録します。</li></ul></section>`;
 }
 function insectAboutHTML() {
+  const extra = (D.meta.japaneseNameSources || []).some(x => x.startsWith("足した昆虫"));
   const a = (u, t) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
   return `  <section><h2>昆虫編について</h2><ul>
-    <li>試作版です。ゲキムズモードのデータから、昆虫 ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは環境省「種の多様性調査（動物分布調査）対象種一覧」（1997）のトンボ・チョウ・ガ・セミと水生カメムシ・甲虫で、ほかにふつうモードの昆虫、分布の記録の論文から足したコガネムシ上科、Catalogue of Life・WoRMS に日本語名のある海辺の昆虫（ウミアメンボなど）を含みます。</li>
-    <li>目・科の並びは Catalogue of Life に従っています。目より上は、昆虫の系統ゲノム解析で支持されるまとまり（有翅昆虫・新翅類・多新翅類・準新翅類・完全変態類など）だけを節目にしています。</li>
-    <li>目・科の和名は、環境省の一覧にあるものはそれを、無いものは Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前を使っています。そろわないもの（シミ目・ラクダムシ目にあたる群など）は学名のままです。日本昆虫目録（日本昆虫学会）とはまだ照合していません。</li>
+    <li>試作版です。ゲキムズモードのデータから、昆虫 ${SP.length.toLocaleString()} 種を取り出しています。ほとんどは環境省「種の多様性調査（動物分布調査）対象種一覧」（1997）のトンボ・チョウ・ガ・セミと水生カメムシ・甲虫で、ほかにふつうモードの昆虫、分布の記録の論文から足したコガネムシ上科、Catalogue of Life・WoRMS に日本語名のある海辺の昆虫（ウミアメンボなど）を含みます。${extra ? "身近な昆虫（iNaturalist の日本での観察数の上位 300 種）のうち入っていなかった種と、環境省の一覧で学名が今の学名と合わずに落ちていた種も足しています。" : ""}</li>
+    <li>目・科${extra ? "・亜科" : ""}の並びは Catalogue of Life に従っています。目より上は、昆虫の系統ゲノム解析で支持されるまとまり（有翅昆虫・新翅類・多新翅類・準新翅類・完全変態類など）だけを節目にしています。</li>
+    <li>目・科${extra ? "・亜科" : ""}の和名は、環境省の一覧にあるものはそれを、無いものは Wikidata・GBIF・iNaturalist のうち 2 つ以上でそろう名前を使っています。そろわないもの（シミ目・ラクダムシ目にあたる群${extra ? "、ハンミョウ亜科にあたる Cicindelinae" : ""}など）は学名のままです。日本昆虫目録（日本昆虫学会）とはまだ照合していません。</li>
     <li>和名のない属は学名で表示しています。</li>
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
   <section><h2>出典</h2><ul>
     <li>環境省自然環境局生物多様性センター（1997）種の多様性調査（動物分布調査）対象種一覧．${a("https://www.biodic.go.jp/", "生物多様性センター")}（公共データ利用規約 PDL1.0、学名を Catalogue of Life に合わせて加工）</li>
-    <li>Catalogue of Life Checklist（ChecklistBank 3LR）．目・科の並び</li>
+    <li>Catalogue of Life Checklist（ChecklistBank 3LR）．目・科${extra ? "・亜科" : ""}の並び${extra ? "、学名" : ""}</li>
+    ${extra ? `<li>足した昆虫：${a("https://www.inaturalist.org/", "iNaturalist")} の日本での研究用観察数の上位 300 種。和名は iNaturalist・${a("https://www.wikidata.org/", "Wikidata")}・GBIF（環境省の一覧の種はその和名も）のうち 2 つ以上でそろう名前、学名は Catalogue of Life、無ければ GBIF Backbone Taxonomy（${a("https://doi.org/10.15468/39omei", "doi:10.15468/39omei")}）</li>` : ""}
     <li>昆虫の目より上の系統：Misof et al. (2014) Science 346:763–767</li>
     ${(D.meta.japaneseNameSources || []).filter(x => x.startsWith("コガネムシ上科")).map(x => `<li>${esc(x)}</li>`).join("")}
     <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>
