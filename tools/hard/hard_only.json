@@ -1414,5 +1414,17 @@
    "Trochilidae",
    "Apodiformes"
   ]
+ },
+ {
+  "ja": "アメリカヤマシギ",
+  "sci": "Scolopax minor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF の3つで一致（2026-10-29）",
+  "place": [
+   "Scolopacidae",
+   "Charadriiformes"
+  ]
  }
 ]
