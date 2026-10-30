@@ -1959,3 +1959,11 @@ move("tectipleura", "amefurashi", "hadakakamegai", "tamanomidorigai")
 move("stylommatophora", "misujimaimai", "namekuji", "africamaimai")
 move("systellommatophora", "ashihidanamekuji", "onchidiidae")
 # 出題の重み（枠・門・知名度）と種の並びは変わらないので版は上げず、今の版に入れる（10/30 から）
+# 作者の指定（2026-10-31）。2026年10月に新種として記載された種。和名・学名は原記載（Yokogawa, Murakami & Nakano 2026, Zoological Science 43）と
+# 京都大学・美祢市の発表（2026-10-27）による。コムシ目（双尾類）は本家に無かったので六脚亜門の下に節目を足す。
+C("diplura", "hexapoda", "コムシ目", "Diplura", "目",
+  "目も翅もない、細長い土の中の六脚類。腹の先に2本の尾（尾角）またはハサミをもつ。昆虫綱には含めない。")
+R("akiyoshihoraananagakomushi", "diplura", "アキヨシホラアナナガコムシ", "Pacificampa dodecas",
+  "山口県秋吉台の石灰岩の洞窟にすむナガコムシの仲間。長く名前が無いままだったが、2026年に新種として記載された。体長は最大13 mm（触角と尾角を除く）で、ナガコムシ科で世界最大。")
+_find("akiyoshihoraananagakomushi")["tier"] = 4
+META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ（11/01〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
