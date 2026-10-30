@@ -1933,3 +1933,29 @@ edit("sukumiringogai", fact="南米原産の淡水の巻貝。食用に持ち込
 move("boidae", "boa")
 move("isopoda", "somewakeumikuwagata")
 META["datasetVersion"] = "0.3.16.1"  # 0.3.16 のままだと10/29〜11/06に漏れ1日のため .1。 動物園・水族館の人気種など。0.3.15: へんないきもの・身近な昆虫。0.3.14: 名前が特徴的な28種。0.3.13: イソカニダマシ。0.3.12: ナマコ2種。0.3.11: 足りない門の3種（胴甲・微顎・有輪）を戻す。0.3.10: 一覧ページの案（知名度・本家とゲキムズの振り分け）
+# 異鰓類の中を分ける（2026-10-30）。骨組みは Bouchet et al. 2017（Malacologia 61）・Kano et al. 2016・MolluscaBase。
+# 和名は BISMaL（裸鰓目）・京都府レッドデータブック（柄眼目）で確かめたものだけ、ほかは学名のまま
+C("nudipleura", "heterobranchia", "Nudipleura", "Nudipleura", "クレード",
+  "ウミウシの多く（裸鰓目）と、ウミフクロウなどの側鰓類。殻は無いか、体の中に小さく残るだけ。")
+C("nudibranchia", "nudipleura", "裸鰓目", "Nudibranchia", "目",
+  "大人になると殻をもたないウミウシの仲間。えらが体の表面にむき出しになっている。")
+C("doridina", "nudibranchia", "Doridina", "Doridina", "亜目",
+  "背中の後ろに、肛門を囲む花のようなえらをもつウミウシ。アオウミウシなど。")
+C("cladobranchia", "nudibranchia", "Cladobranchia", "Cladobranchia", "亜目",
+  "背中に突起（ミノ）などが並ぶウミウシ。ミノウミウシ・メリベの仲間など。")
+C("tectipleura", "heterobranchia", "Tectipleura", "Tectipleura", "クレード",
+  "アメフラシ・ハダカカメガイ（クリオネ）・タマノミドリガイの仲間と、カタツムリ・ナメクジなどの有肺類を含むまとまり。",
+  poly="アメフラシ類・翼足類・Sacoglossa（タマノミドリガイなど）・Eupulmonata の関係は解析によって異なる（Sacoglossa と有肺類をまとめる Panpulmonata を認めるかなど）ため、ここでは多分岐で示す。")
+C("eupulmonata", "tectipleura", "Eupulmonata", "Eupulmonata", "クレード",
+  "陸のカタツムリ・ナメクジと、海辺のアワモチの仲間などを含むまとまり。外套腔が肺としてはたらく。")
+C("stylommatophora", "eupulmonata", "柄眼目", "Stylommatophora", "目",
+  "陸のカタツムリとナメクジの多く。目が長い触角の先にある。")
+C("systellommatophora", "eupulmonata", "Systellommatophora", "Systellommatophora", "目",
+  "殻をもたない、ナメクジ形の貝。海辺のアワモチの仲間と、陸のアシヒダナメクジの仲間。")
+move("doridina", "aoumiushi", "kuroshitanashiumiushi", "udefuritsunozayaumiushi")
+move("cladobranchia", "akaeraminoumiushi", "aominoumiushi", "mukademeribe", "yamatomeribe", "kochouumiushi")
+move("nudipleura", "umifukurou")
+move("tectipleura", "amefurashi", "hadakakamegai", "tamanomidorigai")
+move("stylommatophora", "misujimaimai", "namekuji", "africamaimai")
+move("systellommatophora", "ashihidanamekuji", "onchidiidae")
+# 出題の重み（枠・門・知名度）と種の並びは変わらないので版は上げず、今の版に入れる（10/30 から）
