@@ -510,7 +510,8 @@ MOVE_INTO = {"Pinnipedia": ["Odobenidae", "Otariidae", "Phocidae"],  # 鰭脚類
              "Hexacorallia": ["Cerianthidae"],  # ハナギンチャク類は六放サンゴ類の中で最初に分かれた群（McFadden et al. 2021、WoRMS）
              "Accipitriformes": ["Sagittarius"],  # ヘビクイワシはタカ目（IOC 15.2）
              "Annelida": ["Amphinomida"],  # ウミケムシ類は Pleistoannelida の外で分かれる（Weigert et al. 2014）
-             "Luminacea": ["Astriclypeus"]}  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
+             "Luminacea": ["Astriclypeus"],  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
+             "Systellommatophora": ["Laevicaulis"]}  # アシヒダナメクジ属はアシヒダナメクジ科で Systellommatophora（WoRMS／MolluscaBase）
 for to, items in MOVE_INTO.items():
     t = [i for i, c in C.items() if c["sci"] == to and c["rank"] != "属"]
     if len(t) != 1: log["move_into"].append(["notarget", to]); continue
@@ -568,6 +569,11 @@ kids = collections.Counter(c["parent"] for c in clades if c["id"] in MC)
 for c in clades:
     if c["id"] in graft_par and kids[c["id"]]:
         c["polytomy"] = (c.get("polytomy", "") + " " + NOTE).strip()
+# ゲキムズで足した群が並んで多分岐になる節目の理由（学名: 説明）
+HARD_POLY = {"Heterobranchia": "Euthyneura（ウミウシ・アメフラシ・カタツムリなど）より先に分かれた小さな群（Valvatoidea・Architectonicidae など、lower Heterobranchia と呼ばれる）は、どの順に分かれたかが決まっていないため、ここでは並べて示す（Bouchet et al. 2017）。"}
+for c in clades:
+    if c["sci"] in HARD_POLY and c["rank"] != "属":
+        c["polytomy"] = (c.get("polytomy", "") + " " + HARD_POLY[c["sci"]]).strip()
 for s in SP:
     for k in ("main", "colsrc", "_w"): s.pop(k, None)
 # 目録側の節目（o_・f_ などの id）が本家と同じ群なら、本家の説明を引き継ぐ
