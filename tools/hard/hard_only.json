@@ -1426,5 +1426,1817 @@
    "Scolopacidae",
    "Charadriiformes"
   ]
+ },
+ {
+  "ja": "ソマリアダチョウ",
+  "sci": "Struthio molybdophanes",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Struthionidae",
+   "Struthioniformes"
+  ]
+ },
+ {
+  "ja": "レア",
+  "sci": "Rhea americana",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Rheidae",
+   "Rheiformes"
+  ]
+ },
+ {
+  "ja": "ダーウィンレア",
+  "sci": "Rhea pennata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Rheidae",
+   "Rheiformes"
+  ]
+ },
+ {
+  "ja": "コマダラキーウィ",
+  "sci": "Apteryx owenii",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Apterygidae",
+   "Apterygiformes"
+  ]
+ },
+ {
+  "ja": "キーウィ",
+  "sci": "Apteryx australis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Apterygidae",
+   "Apterygiformes"
+  ]
+ },
+ {
+  "ja": "ヒクイドリ",
+  "sci": "Casuarius casuarius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Casuariidae",
+   "Casuariiformes"
+  ]
+ },
+ {
+  "ja": "パプアヒクイドリ",
+  "sci": "Casuarius unappendiculatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Casuariidae",
+   "Casuariiformes"
+  ]
+ },
+ {
+  "ja": "オオシギダチョウ",
+  "sci": "Tinamus major",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tinamidae",
+   "Tinamiformes"
+  ]
+ },
+ {
+  "ja": "オバシギダチョウ",
+  "sci": "Tinamus solitarius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tinamidae",
+   "Tinamiformes"
+  ]
+ },
+ {
+  "ja": "シチメンチョウ",
+  "sci": "Meleagris gallopavo",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Phasianidae",
+   "Galliformes"
+  ]
+ },
+ {
+  "ja": "カンムリウズラ",
+  "sci": "Callipepla californica",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Odontophoridae",
+   "Galliformes"
+  ]
+ },
+ {
+  "ja": "エリマキライチョウ",
+  "sci": "Bonasa umbellus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Phasianidae",
+   "Galliformes"
+  ]
+ },
+ {
+  "ja": "ヤブツカツクリ",
+  "sci": "Alectura lathami",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Megapodiidae",
+   "Galliformes"
+  ]
+ },
+ {
+  "ja": "アメリカヨタカ",
+  "sci": "Chordeiles minor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Caprimulgidae",
+   "Caprimulgiformes"
+  ]
+ },
+ {
+  "ja": "ヨーロッパヨタカ",
+  "sci": "Caprimulgus europaeus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Caprimulgidae",
+   "Caprimulgiformes"
+  ]
+ },
+ {
+  "ja": "アブラヨタカ",
+  "sci": "Steatornis caripensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Steatornithidae",
+   "Steatornithiformes"
+  ]
+ },
+ {
+  "ja": "ハイイロタチヨタカ",
+  "sci": "Nyctibius griseus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Nyctibiidae",
+   "Nyctibiiformes"
+  ]
+ },
+ {
+  "ja": "オオタチヨタカ",
+  "sci": "Nyctibius grandis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Nyctibiidae",
+   "Nyctibiiformes"
+  ]
+ },
+ {
+  "ja": "パプアガマグチヨタカ",
+  "sci": "Podargus papuensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Podargidae",
+   "Podargiformes"
+  ]
+ },
+ {
+  "ja": "セイロンガマグチヨタカ",
+  "sci": "Batrachostomus moniliger",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Podargidae",
+   "Podargiformes"
+  ]
+ },
+ {
+  "ja": "オーストラリアズクヨタカ",
+  "sci": "Aegotheles cristatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Aegothelidae",
+   "Aegotheliformes"
+  ]
+ },
+ {
+  "ja": "オオズクヨタカ",
+  "sci": "Aegotheles insignis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Aegothelidae",
+   "Aegotheliformes"
+  ]
+ },
+ {
+  "ja": "ヨーロッパアマツバメ",
+  "sci": "Apus apus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Apodidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "アレンハチドリ",
+  "sci": "Selasphorus sasin",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "エントツアマツバメ",
+  "sci": "Chaetura pelagica",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Apodidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "ツバメハチドリ",
+  "sci": "Eupetomena macroura",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "ニシヒメアマツバメ",
+  "sci": "Apus affinis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata で一致（2026-10-30）",
+  "place": [
+   "Apodidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "ヒメハチドリ",
+  "sci": "Selasphorus calliope",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Trochilidae",
+   "Apodiformes"
+  ]
+ },
+ {
+  "ja": "エボシドリ",
+  "sci": "Tauraco corythaix",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Musophagidae",
+   "Musophagiformes"
+  ]
+ },
+ {
+  "ja": "カンムリエボシドリ",
+  "sci": "Corythaeola cristata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Musophagidae",
+   "Musophagiformes"
+  ]
+ },
+ {
+  "ja": "メスアカクイナモドキ",
+  "sci": "Monias benschi",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Mesitornithidae",
+   "Mesitornithiformes"
+  ]
+ },
+ {
+  "ja": "ムナジロクイナモドキ",
+  "sci": "Mesitornis variegatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Mesitornithidae",
+   "Mesitornithiformes"
+  ]
+ },
+ {
+  "ja": "クロハラサケイ",
+  "sci": "Pterocles orientalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Pteroclidae",
+   "Pterocliformes"
+  ]
+ },
+ {
+  "ja": "ナゲキバト",
+  "sci": "Zenaida macroura",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Columbidae",
+   "Columbiformes"
+  ]
+ },
+ {
+  "ja": "モリバト",
+  "sci": "Columba palumbus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Columbidae",
+   "Columbiformes"
+  ]
+ },
+ {
+  "ja": "カノコバト",
+  "sci": "Spilopelia chinensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Columbidae",
+   "Columbiformes"
+  ]
+ },
+ {
+  "ja": "インカバト",
+  "sci": "Columbina inca",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Columbidae",
+   "Columbiformes"
+  ]
+ },
+ {
+  "ja": "チョウショウバト",
+  "sci": "Geopelia striata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Columbidae",
+   "Columbiformes"
+  ]
+ },
+ {
+  "ja": "ニュージーランドバト",
+  "sci": "Hemiphaga novaeseelandiae",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Columbidae",
+   "Columbiformes"
+  ]
+ },
+ {
+  "ja": "チリーフラミンゴ",
+  "sci": "Phoenicopterus chilensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Phoenicopteridae",
+   "Phoenicopteriformes"
+  ]
+ },
+ {
+  "ja": "コフラミンゴ",
+  "sci": "Phoeniconaias minor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Phoenicopteridae",
+   "Phoenicopteriformes"
+  ]
+ },
+ {
+  "ja": "ジャノメドリ",
+  "sci": "Eurypyga helias",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Eurypygidae",
+   "Eurypygiformes"
+  ]
+ },
+ {
+  "ja": "カグー",
+  "sci": "Rhynochetos jubatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Rhynochetidae",
+   "Eurypygiformes"
+  ]
+ },
+ {
+  "ja": "マゼランペンギン",
+  "sci": "Spheniscus magellanicus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Spheniscidae",
+   "Sphenisciformes"
+  ]
+ },
+ {
+  "ja": "コガタペンギン",
+  "sci": "Eudyptula minor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Spheniscidae",
+   "Sphenisciformes"
+  ]
+ },
+ {
+  "ja": "ツメバケイ",
+  "sci": "Opisthocomus hoazin",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Opisthocomidae",
+   "Opisthocomiformes"
+  ]
+ },
+ {
+  "ja": "アメリカフクロウ",
+  "sci": "Strix varia",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Strigidae",
+   "Strigiformes"
+  ]
+ },
+ {
+  "ja": "チャイロネズミドリ",
+  "sci": "Colius striatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Coliidae",
+   "Coliiformes"
+  ]
+ },
+ {
+  "ja": "セジロネズミドリ",
+  "sci": "Colius colius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Coliidae",
+   "Coliiformes"
+  ]
+ },
+ {
+  "ja": "オオブッポウソウ",
+  "sci": "Leptosomus discolor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Leptosomidae",
+   "Leptosomiformes"
+  ]
+ },
+ {
+  "ja": "カザリキヌバネドリ",
+  "sci": "Pharomachrus mocinno",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Trogonidae",
+   "Trogoniformes"
+  ]
+ },
+ {
+  "ja": "クビワオグロキヌバネドリ",
+  "sci": "Trogon melanurus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Trogonidae",
+   "Trogoniformes"
+  ]
+ },
+ {
+  "ja": "ミナミキバシコサイチョウ",
+  "sci": "Tockus leucomelas",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Bucerotidae",
+   "Bucerotiformes"
+  ]
+ },
+ {
+  "ja": "ミナミジサイチョウ",
+  "sci": "Bucorvus leadbeateri",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Bucorvidae",
+   "Bucerotiformes"
+  ]
+ },
+ {
+  "ja": "オオサイチョウ",
+  "sci": "Buceros bicornis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Bucerotidae",
+   "Bucerotiformes"
+  ]
+ },
+ {
+  "ja": "セジロコゲラ",
+  "sci": "Dryobates pubescens",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "ハシボソキツツキ",
+  "sci": "Colaptes auratus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "ドングリキツツキ",
+  "sci": "Melanerpes formicivorus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "シルスイキツツキ",
+  "sci": "Sphyrapicus varius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "ズアカキツツキ",
+  "sci": "Melanerpes erythrocephalus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "ヨーロッパアオゲラ",
+  "sci": "Picus viridis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "ヒメアカゲラ",
+  "sci": "Dendrocoptes medius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "サンショクキムネオオハシ",
+  "sci": "Ramphastos sulfuratus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Ramphastidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "アリツカゲラ",
+  "sci": "Colaptes campestris",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Picidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "オニオオハシ",
+  "sci": "Ramphastos toco",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Ramphastidae",
+   "Piciformes"
+  ]
+ },
+ {
+  "ja": "アカノガンモドキ",
+  "sci": "Cariama cristata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cariamidae",
+   "Cariamiformes"
+  ]
+ },
+ {
+  "ja": "クロアシノガンモドキ",
+  "sci": "Chunga burmeisteri",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cariamidae",
+   "Cariamiformes"
+  ]
+ },
+ {
+  "ja": "キバタン",
+  "sci": "Cacatua galerita",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cacatuidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "モモイロインコ",
+  "sci": "Eolophus roseicapilla",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cacatuidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "アカクサインコ",
+  "sci": "Platycercus elegans",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Psittaculidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "ナナクサインコ",
+  "sci": "Platycercus eximius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Psittaculidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "アカビタイムジオウム",
+  "sci": "Cacatua sanguinea",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cacatuidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "ビセイインコ",
+  "sci": "Psephotus haematonotus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Psittaculidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "メキシコアカボウシインコ",
+  "sci": "Amazona viridigenalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Psittacidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "カカ",
+  "sci": "Nestor meridionalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Strigopidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "テリクロオウム",
+  "sci": "Calyptorhynchus lathami",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cacatuidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "ミヤマオウム",
+  "sci": "Nestor notabilis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Strigopidae",
+   "Psittaciformes"
+  ]
+ },
+ {
+  "ja": "コマツグミ",
+  "sci": "Turdus migratorius",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Turdidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ショウジョウコウカンチョウ",
+  "sci": "Cardinalis cardinalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "メキシコマシコ",
+  "sci": "Haemorhous mexicanus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ハゴロモガラス",
+  "sci": "Agelaius phoeniceus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ユキヒメドリ",
+  "sci": "Junco hyemalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "マネシツグミ",
+  "sci": "Mimus polyglottos",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Mimidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ヨーロッパシジュウカラ",
+  "sci": "Parus major",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata で一致（2026-10-30）",
+  "place": [
+   "Paridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アオカケス",
+  "sci": "Cyanocitta cristata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Corvidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "オウゴンヒワ",
+  "sci": "Spinus tristis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アメリカガラス",
+  "sci": "Corvus brachyrhynchos",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Corvidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "オナガクロムクドリモドキ",
+  "sci": "Quiscalus mexicanus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アメリカコガラ",
+  "sci": "Poecile atricapillus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Paridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ルリツグミ",
+  "sci": "Sialia sialis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Turdidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アオガラ",
+  "sci": "Cyanistes caeruleus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Paridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ズキンガラス",
+  "sci": "Corvus cornix",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Corvidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "チャガシラヒメドリ",
+  "sci": "Spizella passerina",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ノドジロシトド",
+  "sci": "Zonotrichia albicollis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ヒメレンジャク",
+  "sci": "Bombycilla cedrorum",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Bombycillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ゴシキヒワ",
+  "sci": "Carduelis carduelis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ムナジロゴジュウカラ",
+  "sci": "Sitta carolinensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Sittidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "オオクロムクドリモドキ",
+  "sci": "Quiscalus quiscula",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ネコマネドリ",
+  "sci": "Dumetella carolinensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Mimidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "コウウチョウ",
+  "sci": "Molothrus ater",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ベニタイランチョウ",
+  "sci": "Pyrocephalus rubinus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tyrannidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アオカワラヒワ",
+  "sci": "Chloris chloris",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "エボシガラ",
+  "sci": "Baeolophus bicolor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Paridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ミドリツバメ",
+  "sci": "Tachycineta bicolor",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Hirundinidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "キバラオオタイランチョウ",
+  "sci": "Pitangus sulphuratus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tyrannidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アメリカカケス",
+  "sci": "Aphelocoma californica",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Corvidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "オウサマタイランチョウ",
+  "sci": "Tyrannus tyrannus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tyrannidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "チャカタルリツグミ",
+  "sci": "Sialia mexicana",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Turdidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ボルチモアムクドリモドキ",
+  "sci": "Icterus galbula",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "カササギフエガラス",
+  "sci": "Gymnorhina tibicen",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cracticidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "カロライナコガラ",
+  "sci": "Poecile carolinensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Paridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ステラーカケス",
+  "sci": "Cyanocitta stelleri",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Corvidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "チャイロコツグミ",
+  "sci": "Catharus guttatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Turdidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ルリノジコ",
+  "sci": "Passerina cyanea",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ムネアカヒワ",
+  "sci": "Linaria cannabina",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ムネアカイカル",
+  "sci": "Pheucticus ludovicianus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "サメズアカアメリカムシクイ",
+  "sci": "Leiothlypis celata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Parulidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ムネアカゴジュウカラ",
+  "sci": "Sitta canadensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Sittidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "イエミソサザイ",
+  "sci": "Troglodytes aedon",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Troglodytidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "チャイロツキヒメハエトリ",
+  "sci": "Sayornis saya",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tyrannidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "チャイロツグミモドキ",
+  "sci": "Toxostoma rufum",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Mimidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "テリムクドリモドキ",
+  "sci": "Euphagus cyanocephalus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アメリカオオモズ",
+  "sci": "Lanius ludovicianus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Laniidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アカエリシトド",
+  "sci": "Zonotrichia capensis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ルリオーストラリアムシクイ",
+  "sci": "Malurus cyaneus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Maluridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ワキアカトウヒチョウ",
+  "sci": "Pipilo erythrophthalmus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "マツノキヒワ",
+  "sci": "Spinus pinus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "シキチョウ",
+  "sci": "Copsychus saularis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Muscicapidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ヒメウタスズメ",
+  "sci": "Melospiza lincolnii",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ウィルソンアメリカムシクイ",
+  "sci": "Cardellina pusilla",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Parulidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アメリカキバシリ",
+  "sci": "Certhia americana",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Certhiidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ニシタイランチョウ",
+  "sci": "Tyrannus verticalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tyrannidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ムラサキマシコ",
+  "sci": "Haemorhous purpureus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ゴシキノジコ",
+  "sci": "Passerina ciris",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ニシフウキンチョウ",
+  "sci": "Piranga ludoviciana",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ヨーロッパカヤクグリ",
+  "sci": "Prunella modularis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Prunellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "アカメモズモドキ",
+  "sci": "Vireo olivaceus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Vireonidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "チャバライカル",
+  "sci": "Pheucticus melanocephalus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "サンショクツバメ",
+  "sci": "Petrochelidon pyrrhonota",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Hirundinidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "マツアメリカムシクイ",
+  "sci": "Setophaga pinus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Parulidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "セリン",
+  "sci": "Serinus serinus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Fringillidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ルリイカル",
+  "sci": "Passerina caerulea",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Cardinalidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ニシマキバドリ",
+  "sci": "Sturnella neglecta",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Icteridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ニシイワツバメ",
+  "sci": "Delichon urbicum",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Hirundinidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "エンビタイランチョウ",
+  "sci": "Tyrannus forficatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Tyrannidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ツチスドリ",
+  "sci": "Grallina cyanoleuca",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Monarchidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ズアカアメリカムシクイ",
+  "sci": "Leiothlypis ruficapilla",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Parulidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ヨコフリオウギビタキ",
+  "sci": "Rhipidura leucophrys",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Rhipiduridae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "ムナフヒメドリ",
+  "sci": "Spizelloides arborea",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Passerellidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "シロオビアメリカムシクイ",
+  "sci": "Setophaga magnolia",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Parulidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "カマドムシクイ",
+  "sci": "Seiurus aurocapilla",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "目ごとの補充（世界の種数の図を参考、iNaturalist の観察数順）。学名は Catalogue of Life、和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）",
+  "place": [
+   "Parulidae",
+   "Passeriformes"
+  ]
  }
 ]
