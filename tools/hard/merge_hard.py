@@ -577,17 +577,19 @@ for c in MC.values():
 for c in clades:
     d = _mdesc.get((c["sci"], c["rank"]), [])
     if not c.get("desc") and len(set(d)) == 1: c["desc"] = d[0]
-# ゲキムズだけの節目の説明（tools/hard/clade_desc.tsv：id, desc, 出典。本家と同じ節目は本家の説明のまま）
+# ゲキムズだけの節目の説明（tools/hard/clade_desc.tsv：sci, rank, desc, 出典。学名と階級で引く。本家と同じ節目は本家の説明のまま）
 _desc = os.path.join(os.path.dirname(os.path.abspath(__file__)), "clade_desc.tsv")
 if os.path.exists(_desc):
     import csv
-    alive_c = {c["id"]: c for c in clades}
+    _by = collections.defaultdict(list)
+    for c in clades: _by[(c["sci"], c["rank"])].append(c)
     log["hard_desc"] = []
     for r in csv.DictReader(open(_desc, encoding="utf-8"), delimiter="\t"):
-        c = alive_c.get(r["id"])
-        if not c: log["hard_desc"].append(["notfound", r["id"]]); continue
-        if r["id"] in MC: log["hard_desc"].append(["main", r["id"]]); continue
-        c["desc"] = r["desc"]; log["hard_desc"].append(["set", r["id"]])
+        cs = _by.get((r["sci"], r["rank"]))
+        if not cs: log["hard_desc"].append(["notfound", r["sci"]]); continue
+        for c in cs:
+            if c["id"] in MC or c.get("desc"): log["hard_desc"].append(["main", r["sci"]]); continue
+            c["desc"] = r["desc"]; log["hard_desc"].append(["set", r["sci"]])
 # 節目の id が前回の作り直しから変わったか（説明などを id で付けている人のため）
 _ids = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "clade_ids.json")
 _now = {c["id"]: c["sci"] for c in clades}
