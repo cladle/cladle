@@ -21,8 +21,12 @@ function hintsHTML() {
   if (mode === "shared" && !n) out.push(`<p class="hint">📮 共有された動物です。解き終わると、共有した人の回数が見られます。</p>`);
   if (G.gAt) { const k = SP.filter(s => s.parent === N[G.target].parent && !G.guesses.includes(s.id)).length;
     out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
-  if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 「${esc(N[deepest()].ja)}」の中に、候補はあと <b>${c}</b> 種です。</p>`); }
-  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は「${esc(N[G.reveal].ja)}」の仲間です。</p>` : BIG() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
+  // 学名だけの節目には、近い和名の門・綱・目を添える（例：「Xxxoidea」（腹足綱の中の上科））
+  const nm = id => `「${esc(N[id].ja)}」${kinLabel(id) ? `（${esc(kinLabel(id))}）` : ""}`;
+  if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 ${nm(deepest())}の中に、候補はあと <b>${c}</b> 種です。</p>`); }
+  const ex = G.h2 && G.reveal ? hintExamples(G.reveal) : [];
+  const exT = ex.length ? `この仲間には ${ex.map(id => esc(N[id].ja)).join(" や ")} がいます（${ex.length > 1 ? "どちらも" : ""}答えではありません）。` : "";
+  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は${nm(G.reveal)}の仲間です。${exT}</p>` : BIG() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
   return out.join("");
 }
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
