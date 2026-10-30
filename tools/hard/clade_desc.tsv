@@ -1,0 +1,329 @@
+sci	rank	desc	出典
+Neopterygii	クレード	ガー類と真骨類をまとめたクレード。先に分かれたチョウザメ目と違い、背びれ・しりびれの鰭条（ひれのすじ）が、それを支える骨と同じ数になる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Neoteleostei	クレード	ヒメ目・ハダカイワシ目・棘鰭類などをまとめたクレード。サケ目・ニギス目・キュウリウオ目と違い、鰓弓を後ろへ引く筋肉（背側牽引筋）をもつ。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Eurypterygii	クレード	ヒメ目と、ハダカイワシ目・棘鰭類をまとめたクレード。隣のシャチブリ目とは見た目ではっきり分けられず、主に骨格の細かな特徴と遺伝子の解析でまとまる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Ctenosquamata	クレード	ハダカイワシ目と棘鰭類をまとめたクレード。名前は櫛鱗（ふちに細かいとげのある鱗）に由来するが、隣のヒメ目との違いは主に骨格の細かな特徴と遺伝子の解析による。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Acanthomorpha	クレード	タラ目・マトウダイ目・スズキ系などをまとめたクレード。隣のハダカイワシ目と違い、背びれ・しりびれ・腹びれの前のほうに節のない硬い棘（とげ）をもつ（タラ目などでは失われた）。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Acanthopterygii	クレード	キンメダイ目・ヒウチダイ目とスズキ系をまとめたクレード。隣のタラ目・アカマンボウ目・マトウダイ目などとは見た目の共通点で分けにくく、主に遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162
+Pleocyemata	亜目	カニ・ヤドカリ・ザリガニ・イセエビ・コエビなどをまとめた十脚目の亜目（抱卵亜目）。隣のクルマエビ類（根鰓亜目）が卵を水中に産み放すのに対し、雌が卵を腹肢に抱えて守る。	De Grave et al. 2009 Raffles Bull Zool Suppl 21:1
+Eupercaria	クレード	スズキ系の中の大きなクレードで、ペルカ目（カサゴ・アイナメなどを含む）・ベラ目・ニザダイ目・フグ目・アンコウ目などをまとめる。隣のハゼ目・アジ目などとの見た目の共通点は無く、遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162
+Euthyneura	下綱	異鰓類の大部分をまとめた群で、ウミウシ・アメフラシ・カタツムリ・ナメクジなどを含む。先に分かれたクルマガイ科などと違い、内臓をめぐる神経の輪のねじれがほどけている（名前は「まっすぐな神経」の意味）。	Bouchet et al. 2017 Malacologia 61:1–526; Zapata et al. 2014 Proc R Soc B 281:20141739
+Tectipleura	小綱	アメフラシ・ブドウガイ・翼足類・嚢舌類（ミドリガイなど）・陸や海辺の有肺類（カタツムリ・ナメクジ・アワモチなど）をまとめた群。隣の裸鰓類の群（Ringipleura）やキジビキガイの群（Acteonimorpha）との見た目の共通点は無く、遺伝子の解析でまとまる。	Bouchet et al. 2017 Malacologia 61:1–526; Kano et al. 2016 Mol Phylogenet Evol 94:715
+Autobranchia	亜綱	二枚貝の大部分（アサリ・カキ・ホタテガイなど）をまとめた群。隣の原鰓類（Protobranchia）と違い、えらが大きくなって、水中の微粒子をこしとって食べるのに使われる。	Bieler et al. 2014 Invertebr Syst 28:32; Bouchet & Rocroi 2010 Malacologia 52:1
+Neogastropoda	目	イモガイ・アッキガイ・バイ・フデガイなどを含む巻貝の目。ほとんどが肉食で、長くのびる吻と、水を取りこむ水管の溝をもつ。新生腹足類のほかの群とは、肉食に向いた消化管のつくりで区別される。	Bouchet et al. 2017 Malacologia 61:1–526; Ponder & Lindberg 1997 Zool J Linn Soc 119:83
+Heteroconchia	下綱	アサリ・ハマグリ・シャコガイなどをまとめた二枚貝の群。隣の翼形類（Pteriomorphia：カキ・ホタテガイ・イガイなど）と違い、多くは足糸で岩に付かず、外套膜の縁がくっついて水管を作る。	Bieler et al. 2014 Invertebr Syst 28:32
+Euheterodonta	小綱	アサリ・マテガイ・シャコガイ・シャクシガイなど、水管をもつ二枚貝の大部分をまとめた群。隣のモシオガイ類（Archiheterodonta）との違いは主に遺伝子の解析による。	Bieler et al. 2014 Invertebr Syst 28:32
+Eupulmonata	上目	カタツムリ・ナメクジ・オカミミガイ・アワモチなどの有肺類をまとめた群。外套腔が肺になって空気を吸う。隣のアメフラシや翼足類などが海の中で暮らすのに対し、陸や海辺で暮らす種が多い。	Bouchet et al. 2017 Malacologia 61:1–526
+Imparidentia	上目	アサリ・バカガイ・シャコガイ・ツキガイなどをまとめた二枚貝の群。隣のAnomalodesmataとの見た目の共通点は無く、遺伝子の解析でまとまる。	Bieler et al. 2014 Invertebr Syst 28:32
+Amphipoda	目	ヨコエビ・ワレカラ・タルマワシなどの目。隣の十脚目などと違い、背甲（甲羅）がなく、体が左右に平たく、目は柄の先につかない。	Lowry & Myers 2017 Zootaxa 4265:1
+Ovalentaria	クレード	スズキ系の中のクレードで、ボラ目・ギンポ目・ダツ目・カワスズメ目などをまとめる。遺伝子の解析でまとまった群だが、粘着性の糸のついた卵を産む種が多く、名前もそれに由来する。	Wainwright et al. 2012 Syst Biol 61:1001; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Hydroidolina	亜綱	ヒドロ虫綱の大部分（オワンクラゲ・カツオノエボシなど）をまとめた亜綱。隣の硬クラゲ類（Trachylinae）と違い、多くはポリプの時期をもち、群体を作る。	Bouillon et al. 2006 An Introduction to Hydrozoa; Cartwright & Nawrocki 2010 Integr Comp Biol 50:456
+Pteriomorphia	下綱	カキ・ホタテガイ・イガイ・アカガイ・アコヤガイなどをまとめた二枚貝の群。隣のHeteroconchiaと違い、足糸やセメントで岩に付く種が多く、水管をもたない。	Bieler et al. 2014 Invertebr Syst 28:32
+Polyphaga	亜目	カブトムシ・クワガタ・テントウムシ・ホタル・カミキリムシ・ゾウムシなど、甲虫の大部分（約9割の種）を含む亜目（カブトムシ亜目）。隣のオサムシ・ゲンゴロウの仲間（オサムシ亜目）と違い、後ろ脚の付け根（後基節）が腹の第1節を左右に分断しない。	Lawrence et al. 2011 Ann Zool 61:1; McKenna et al. 2019 PNAS 116:24729
+Ringipleura	小綱	ウミウシ（裸鰓目）・カメノコフシエラガイ類と、殻をもつマメウラシマガイ科をまとめた群。見た目の共通点は乏しく、遺伝子の解析でまとまる。	Bouchet et al. 2017 Malacologia 61:1–526; Kano et al. 2016 Mol Phylogenet Evol 94:715
+Nudipleura	上目	ウミウシ（裸鰓目）とカメノコフシエラガイ類をまとめた群。隣のマメウラシマガイ科と違い、成体は外から見える殻をもたない。	Bouchet et al. 2017 Malacologia 61:1–526; Wägele et al. 2014 Org Divers Evol 14:133
+Nudibranchia	目	いわゆるウミウシの目（裸鰓目）。隣のカメノコフシエラガイ類が体の中に殻と右側のえらを残すのに対し、成体は殻を完全に失い、背中に二次的なえらや突起をもつ。	Bouchet et al. 2017 Malacologia 61:1–526; Wägele et al. 2014 Org Divers Evol 14:133
+Senticaudata	亜目	ヨコエビの大きな亜目で、モクズヨコエビ・ワレカラ・ドロクダムシなどを含む。隣の亜目と違い、尾肢の先端に頑丈な刺毛が並ぶ（名前は「とげのある尾」の意味）。	Lowry & Myers 2013 Zootaxa 3610:1; Lowry & Myers 2017 Zootaxa 4265:1
+Refertina	亜目	ミドリイシ・ハマサンゴなどを含むイシサンゴの亜目（いわゆる「複雑系」）。遺伝子の解析で見つかった群で、隣のVacatina（「頑丈系」）に比べ、骨格の石灰化が弱く、すき間の多い軽い骨格の種が多い。	Romano & Palumbi 1996 Science 271:640; Kitahara et al. 2016 The Cnidaria, Past, Present and Future p.365
+Neoasteroidea	下綱	現生のヒトデをすべて含む下綱。化石だけが知られる古いヒトデ類と区別するための名前で、ヒトデ綱の中で隣り合う現生の群は無い。	Mah & Blake 2012 PLoS ONE 7:e35644; Linchangco et al. 2017 Mol Phylogenet Evol 115:161
+Helicoidei	下目	ミスジマイマイ・カタマイマイなど、大きめのカタツムリを多く含む陸の有肺類の群。隣のキセルガイ類やベッコウマイマイ類とは、殻よりも交尾器などの体の中のつくりと遺伝子の解析で分けられる。	Bouchet et al. 2017 Malacologia 61:1–526
+Leptothecata	目	オワンクラゲ・ウミサカヅキ・コップガヤなどを含むヒドロ虫の目（有鞘類）。隣の群と違い、ポリプのまわりを硬い外皮のコップ（ヒドロ莢）が包み、クラゲの生殖腺は放射管の上にできる。	Bouillon et al. 2006 An Introduction to Hydrozoa; Maronna et al. 2016 Sci Rep 6:18075
+Pylopulmonata	上目	トウガタガイ科などからなる群。トウガタガイ類は小さな巻貝で、ほかの無脊椎動物に針のような口を刺して体液を吸う。隣の群とは遺伝子の解析で分かれる。	Bouchet et al. 2017 Malacologia 61:1–526
+Venerida	目	アサリ・ハマグリ（マルスダレガイ科）・バカガイ・シジミなどを含む目。長い水管で砂にもぐって暮らす種が多い。隣のザルガイの群（Cardiida）とは主に遺伝子の解析で分かれる。	Bieler et al. 2014 Invertebr Syst 28:32
+Vacatina	亜目	キクメイシ・ハナヤサイサンゴ・クサビライシなどを含むイシサンゴの亜目（いわゆる「頑丈系」）。遺伝子の解析で見つかった群で、隣のRefertinaに比べ、厚く重い骨格をもつ種が多い。	Romano & Palumbi 1996 Science 271:640; Kitahara et al. 2016 The Cnidaria, Past, Present and Future p.365
+Nereidiformia	亜目	ゴカイ科・シリス科などを含むサシバゴカイ目の亜目。隣の亜目との見た目の共通点ははっきりせず、主に遺伝子と細かな体のつくりでまとまる。	Rouse et al. 2022 Annelida (Oxford Univ Press); Struck et al. 2011 Nature 471:95
+Cardiida	目	ザルガイ科（シャコガイを含む）とニッコウガイ・マスオガイなどの仲間をまとめた目。隣のマルスダレガイの群（Venerida）とは主に遺伝子の解析で分かれる。	Bieler et al. 2014 Invertebr Syst 28:32
+Malacalcyonacea	目	ソフトコーラル（トゲトサカなど）や多くのヤギ類を含む八放サンゴの目。遺伝子の解析で分けられた2目の一方で、隣のScleralcyonaceaとは主に遺伝子で分かれる（名前の「malac」は「柔らかい」の意味）。	McFadden et al. 2022 Bull Soc Syst Biol 1:8735
+Amphilochidea	亜目	ヨコエビの亜目の1つで、ソコエビ類など海底で暮らす種を多く含む。隣のSenticaudataにある尾肢の頑丈な刺毛をもたないことなどで分けられる。	Lowry & Myers 2017 Zootaxa 4265:1
+Corophiida	下目	ドロクダムシ類やワレカラ類を含むヨコエビの下目。泥や糸で管を作って住む種や、細長い体で海藻などにつかまって暮らすワレカラ類など、付着生活の種が多い。	Lowry & Myers 2013 Zootaxa 3610:1; Lowry & Myers 2017 Zootaxa 4265:1
+Heteroscleromorpha	亜綱	普通海綿の大部分を含む亜綱。隣の角質海綿類（Keratosa）やVerongimorphaと違い、ガラス質（ケイ酸）の骨片をもつ。	Morrow & Cárdenas 2015 Front Zool 12:7
+Aphroditiformia	亜目	ウロコムシ類をまとめたサシバゴカイ目の亜目。隣の亜目と違い、背中に鱗のような板（背鱗）が並ぶ。	Rouse et al. 2022 Annelida (Oxford Univ Press)
+Hyperiidea	亜目	タルマワシ・ウミノミ・クラゲノミなどの亜目。隣のヨコエビ類が海底などで暮らすのに対し、一生を沖合の海中で過ごし、クラゲやサルパなどにすみつく種が多い。	Lowry & Myers 2017 Zootaxa 4265:1; Bowman & Gruner 1973 Smithson Contrib Zool 146:1
+Clausilioidei	下目	キセルガイ類の群。細長い殻をもち、多くは左巻きで、殻口の奥に閉弁という板状のふたをもつ。この閉弁で隣のカタツムリ類と見分けられる。	Bouchet et al. 2017 Malacologia 61:1–526
+Doridoidei	下目	アオウミウシ・イロウミウシ類など、ドーリス類と呼ばれるウミウシの群。隣のCladobranchiaと違い、背中の後ろで肛門のまわりに花のようなえらを輪の形に並べる。	Bouchet et al. 2017 Malacologia 61:1–526; Wägele et al. 2014 Org Divers Evol 14:133
+Limacoidei	下目	ベッコウマイマイ類・コハクガイ類などを含む陸の有肺類の群。殻の薄い種が多く、殻を失ったナメクジ形の種も含む。隣のカタツムリ類とは主に体の中のつくりと遺伝子の解析で分かれる。	Bouchet et al. 2017 Malacologia 61:1–526
+Otophysi	クレード	コイ目・ナマズ目などをまとめたクレード。隣のネズミギス目と違い、うきぶくろと内耳をつなぐ小骨の列（ウェーバー器官）が完成しており、音をよく聞きとれる。	Nelson et al. 2016 Fishes of the World 5th ed.
+Stomiatii	クレード	キュウリウオ目（ワカサギ・アユなど）とワニトカゲギス目をまとめたクレード。隣のサケ目・ニギス目とは見た目で分けにくく、主に遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162
+Anisoptera	亜目	ヤンマ・トンボ・サナエトンボなどの亜目（不均翅亜目）。隣のイトトンボ類と違い、後ろの翅が前の翅より幅広く、止まるときも翅を広げたまま。左右の複眼が近くにある。	Dijkstra et al. 2013 Zootaxa 3703:36; Bybee et al. 2016 Syst Entomol 41:291
+Articulata	亜綱	現生のウミユリ・ウミシダをすべて含む亜綱。化石だけが知られる古いウミユリ類と区別するための名前で、ウミユリ綱の中で隣り合う現生の群は無い。	Hess & Messing 2011 Treatise on Invertebrate Paleontology Part T revised 3; Rouse et al. 2013 Mol Phylogenet Evol 66:161
+Comatulida	目	ウミシダ類などを含む目。隣の有柄のウミユリ類（Isocrinida）と違い、多くは成体で柄を失い、巻枝（まきえだ）で岩などにつかまったり、腕で泳いだりする。ただし柄をもつ小さなウミユリ類も含む。	Hemery et al. 2013 Mol Phylogenet Evol 69:1121; Rouse et al. 2013 Mol Phylogenet Evol 66:161
+Stomiiformes	目	ヨコエソ科・ムネエソ科などを含む、中深層から深海の魚の目。隣のキュウリウオ目と違い、多くは体の腹側に発光器が並ぶ。	Nelson et al. 2016 Fishes of the World 5th ed.
+Podoplea	上目	ソコミジンコ類・ケンミジンコ類や、魚に寄生する種などを含むカイアシ類の群。カラヌス類（Gymnoplea）と違い、体の大きな関節が第4胸節と第5胸節の間にある。	Khodami et al. 2017 Sci Rep 7:9164; Huys & Boxshall 1991 Copepod Evolution
+Metophiurida	下綱	現生のクモヒトデをすべて含む下綱。化石だけが知られる古い群と区別するための名前で、クモヒトデ綱の中で隣り合う現生の群は無い。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Cladobranchia	亜目	ミノウミウシ類などのウミウシの群。隣のドーリス類と違い、背中に枝分かれした突起（ミノ）が並ぶ。刺胞動物を食べ、その刺胞を突起にためて身を守る種もいる。	Bouchet et al. 2017 Malacologia 61:1–526; Wägele et al. 2014 Org Divers Evol 14:133
+Cirripedia	亜綱	フジツボ・エボシガイ・フクロムシなどの亜綱（蔓脚類）。隣のキンチャクムシ類（Ascothoracida）と違い、成体は固着生活か寄生生活に特化し、自由生活の種は殻板で体を包む。	Chan et al. 2021 Zool J Linn Soc 193:789
+Lysianassida	下目	ナミノコソコエビ・ウシロマエソコエビなどを含むヨコエビの下目。死んだ魚などに群がる腐肉食の種や、砂に潜る種が多い。隣のAmphilochidaとは主に口器や脚のつくりで分けられる。	Lowry & Myers 2017 Zootaxa 4265:1
+Myctophiformes	目	ハダカイワシ科とソトオリイワシ科からなる目。体に発光器が並び、夜に表層近くまで上がる種が多い。隣の棘鰭類と違い、ひれに硬い棘をもたない。	Nelson et al. 2016 Fishes of the World 5th ed.
+Thoracica	下綱	フジツボ・エボシガイなど、殻板をもつ蔓脚類の下綱（完胸類）。隣のフクロムシ類（Rhizocephala）と違い、蔓のような脚で水中の餌をかき集めて食べる。	Chan et al. 2021 Zool J Linn Soc 193:789
+Thoracicalcarea	上目	フジツボ類とエボシガイ類など、石灰質の殻板をもつ完胸類の上目。隣のミョウガガイ科（Iblidae）の殻板が石灰化しないのと違う点が名前の由来。	Chan et al. 2021 Zool J Linn Soc 193:789
+Neoloricata	亜綱	ヒザラガイ類の亜綱で、現生のヒザラガイはすべてここに入る。隣のケハダウミヒモ類などの無板類と違い、背中に8枚の殻板が並ぶ。	Sirenko 2006 Venus 65:27; Bouchet & Rocroi 2010 Malacologia 52:1
+Anomalodesmata	上目	シャクシガイ・オキナガイなどを含む二枚貝の群。殻の内側が真珠層になる種が多い。シャクシガイ類のように、隣のImparidentiaには見られない、小さな動物を吸いこんで食べる肉食の種がいる。	Bieler et al. 2014 Invertebr Syst 28:32
+Ophintegrida	上目	ニホンクモヒトデ・トゲクモヒトデなどを含むクモヒトデの上目。隣のEuryophiuridaとの見た目の共通点は無く、遺伝子の解析でまとまる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Euechinoidea	亜綱	キダリス類（Cidaroida）以外の現生のウニすべてを含む亜綱。隣のキダリス類とは主に殻の板のつくりで分かれ、多くは細く数の多いとげをもつ。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Oegopsida	目	スルメイカ・ホタルイカ・ソデイカなどを含むイカの目（開眼目）。隣のヤリイカ科（閉眼目）と違い、目の前に膜（角膜）がなく、眼球が直接海水に触れる。ほとんどが沖合や深海で暮らす。	Jereb & Roper 2010 FAO Species Catalogue Cephalopods Vol. 2; Lindgren et al. 2012 BMC Evol Biol 12:129
+Actinopoda	亜綱	マナマコ・クロナマコなど、管足をもつナマコをまとめた亜綱。隣の無足目（イカリナマコ類）と違い、水管系から体の側面へ伸びる放射水管と管足をもつ。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Physocephalata	下目	タルマワシ・ウミノミなどを含むクラゲノミ類の下目。隣のPhysosomataと違い、頭が大きくふくらみ、大きな目をもつ種が多い。	Bowman & Gruner 1973 Smithson Contrib Zool 146:1
+Arcida	目	アカガイ・サルボウなどを含む目。ちょうつがいに小さな歯が一列に並ぶ。隣のカキやホタテガイの仲間と違い、血液にヘモグロビンを含むため身が赤い種が多い。	Bieler et al. 2014 Invertebr Syst 28:32
+Galeomorphii	クレード	ネコザメ目・テンジクザメ目・ネズミザメ目・メジロザメ目をまとめたサメのクレード。隣のツノザメ類（Squalomorphii）と違い、しりびれをもつ。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; Nelson et al. 2016 Fishes of the World 5th ed.
+Atherinomorpha	クレード	トウゴロウイワシ目・ダツ目・カダヤシ目をまとめたクレード。サンマ・トビウオ・メダカ・グッピーなどを含む。上あごの骨のつくりなどでまとまり、隣のボラ目やギンポ目とは遺伝子の解析でも分かれる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Cycloneritida	目	アマオブネガイ・ヤマキサゴなどを含む目。石灰質のふたをもち、殻の内側の仕切りを溶かして中を広く使う。ほかの巻貝の群より先に分かれた古い系統で、海から川や陸にまで進出した。	Bouchet et al. 2017 Malacologia 61:1–526
+Pectinida	目	ホタテガイ・ツキヒガイ・ナミマガシワなどを含む目。隣のカキの仲間（Ostreida）と違い、ホタテガイ類は外套膜の縁に多くの目をもち、殻を開け閉めして泳ぐことができる。	Bieler et al. 2014 Invertebr Syst 28:32
+Lepetellida	目	アワビ・スカシガイ・テンガイなどを含む目。隣のニシキウズ類などと違い、殻に穴や切れこみがあり、そこから水を出す種が多い。	Bouchet et al. 2017 Malacologia 61:1–526
+Cumacea	目	クーマ類の目。前半身の甲羅がふくらみ、後ろの腹部が細長い尾のように見える。隣のほかの軟甲類と違い、甲羅の前方にえらを入れる室があり、砂に潜って暮らす。	Watling 2005 Cumacea Database; Haye et al. 2004 Zool J Linn Soc 141:209
+Rhabditophora	亜門	扁形動物の大部分（ウズムシ・ヒラムシ・吸虫・条虫など）をまとめた亜門。表皮に棒状の分泌体（ラブダイト）をもち、くっつくための腺の仕組みをもつ点で、扁形動物のもう1つの小さな群（カテヌラ類）と違う。	Laumer et al. 2015 eLife 4:e05503; Egger et al. 2015 Curr Biol 25:1347
+Siphonophorae	目	カツオノエボシ・アイオイクラゲなどの管クラゲ類の目。泳ぐ・食べる・増えるなど、役割の違う個体がつながった群体で、全体が1匹の動物のように動く。	Munro et al. 2018 Mol Phylogenet Evol 127:823; Bouillon et al. 2006 An Introduction to Hydrozoa
+Scleralcyonacea	目	アカサンゴ（宝石サンゴ）・アオサンゴ・ウミエラ類などを含む八放サンゴの目。遺伝子の解析で分けられた2目の一方で、硬い石灰質の骨格や骨軸をもつ種を多く含む（名前の「scler」は「硬い」の意味）。	McFadden et al. 2022 Bull Soc Syst Biol 1:8735
+Balanomorpha	目	フジツボ類の目。隣のエボシガイ類（Scalpellomorpha）と違い、柄をもたず、殻板で囲んだ体を岩などに直接くっつける。	Chan et al. 2021 Zool J Linn Soc 193:789
+Chitonida	目	ヒザラガイ・ヒゲヒザラガイなど、浅い海の岩でよく見るヒザラガイの大部分を含む目。隣のサメハダヒザラガイ類（Lepidopleurina）と違い、殻板に切れこみのある挿入板をもつ。	Sirenko 2006 Venus 65:27
+Ostreida	目	カキ・アコヤガイ・ハボウキガイなどを含む目。カキ類は片方の殻を岩に固着させ、殻を閉じる筋肉は1つだけになる。隣のホタテガイの仲間とは、主に殻のつくりと遺伝子の解析で分かれる。	Bieler et al. 2014 Invertebr Syst 28:32
+Enthemonae	亜目	ハタゴイソギンチャク・ウメボシイソギンチャクなど、イソギンチャクの大部分を含む亜目。隣のAnenthemonaeと違い、体の中を仕切る隔膜が典型的な並び方をする。	Rodríguez et al. 2014 PLoS ONE 9:e96998
+Protobranchia	亜綱	キヌタレガイ・ソデガイ・クルミガイなどを含む二枚貝の亜綱。隣のAutobranchiaと違い、えらは小さく呼吸だけに使い、唇の触手で泥の中の有機物を集めて食べる。	Bieler et al. 2014 Invertebr Syst 28:32
+Stolidobranchia	目	マボヤ・シロボヤ・イタボヤなどの目（襞鰓目）。隣のマンジュウボヤ類（Aplousobranchia）と違い、えらの袋にひだがあり、生殖腺が体の壁にある。	Delsuc et al. 2018 BMC Biol 16:39; Shenkar & Swalla 2011 PLoS ONE 6:e20657
+Amphilochida	下目	ヨロイヨコエビ・スベヨコエビなどを含むヨコエビの下目。隣のLysianassidaとは主に口器や脚のつくりで分けられる。	Lowry & Myers 2017 Zootaxa 4265:1
+Physosomata	下目	ツメカクシ・フクレノミなどを含むクラゲノミ類の下目。隣のPhysocephalataと違い、頭や目が小さく、深い海にすむ種が多い。	Bowman & Gruner 1973 Smithson Contrib Zool 146:1
+Aplousobranchia	目	マンジュウボヤ・ウスボヤなどの目（無管鰓目）。多くは小さな個体が集まって群体を作る。隣のマボヤ類と違い、体が胸部と腹部に分かれ、生殖腺が腸の輪の中にある。	Delsuc et al. 2018 BMC Biol 16:39; Shenkar & Swalla 2011 PLoS ONE 6:e20657
+Squalomorphii	クレード	カグラザメ目・ツノザメ目・カスザメ目・ノコギリザメ目などをまとめたサメのクレード。隣のGaleomorphiiと違い、しりびれをもたない。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; Nelson et al. 2016 Fishes of the World 5th ed.
+Unipeltata	亜目	現生のシャコ類（口脚目）すべてを含む亜目。ほかの軟甲類と違い、第2胸脚がカマキリの鎌のような捕脚になり、獲物を突き刺したり打ち砕いたりする。	Ahyong & Harling 2000 Rec Aust Mus 52:5
+Zygoptera	亜目	イトトンボ・カワトンボなどの亜目（均翅亜目）。隣のトンボ・ヤンマ類と違い、前後の翅がほぼ同じ形で、多くは止まるときに翅を背中の上で閉じる。左右の複眼が離れている。	Dijkstra et al. 2013 Zootaxa 3703:36; Bybee et al. 2016 Syst Entomol 41:291
+Amphilepidida	目	ニホンクモヒトデ・アミメクモヒトデなどを含む目。浅い海の種が多い。隣の目とは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Pupilloidei	下目	ミジンマイマイ・ノミガイ・キバサナギガイなど、殻の高さ数mmほどの小さなカタツムリを多く含む群。隣のカタツムリ類とは主に遺伝子の解析で分かれる。	Bouchet et al. 2017 Malacologia 61:1–526
+Patellogastropoda	亜綱	カサガイ類（真正カサガイ）の亜綱。円錐形の殻をもち、岩の藻類を硬い歯舌で削りとって食べる。ほかの腹足類とは歯舌やえらのつくりで分かれ、最も早く分かれた系統の1つとされる。	Bouchet et al. 2017 Malacologia 61:1–526
+Nacellida	目	ヨメガカサ・アオガイなどを含むカサガイの目。隣のツタノハガイ科（Patellidae）とは主に歯舌のつくりと遺伝子の解析で分かれる。	Bouchet et al. 2017 Malacologia 61:1–526; Nakano & Ozawa 2007 J Molluscan Stud 73:79
+Calycophorae	亜目	アイオイクラゲなどの管クラゲの亜目。隣の2亜目と違い、浮き（気泡体）をもたず、釣り鐘形の泳鐘で泳ぐ。	Munro et al. 2018 Mol Phylogenet Evol 127:823
+Lucinida	目	ツキガイ・ハナシガイなどを含む目。えらの中に硫黄を利用する細菌を共生させ、その細菌が作る栄養に頼って暮らす。これが隣の群と大きく違う点。	Bieler et al. 2014 Invertebr Syst 28:32; Taylor & Glover 2006 Zool J Linn Soc 148:421
+Squaliformes	目	ツノザメ・カラスザメ・ヨロイザメなどを含む目。2つの背びれの前に棘をもつ種が多く、深海性の種が多い。隣のカグラザメ目と違い、えら穴は5対。	Nelson et al. 2016 Fishes of the World 5th ed.
+Tentaculata	綱	有櫛動物のうち触手をもつ綱で、カブトクラゲ・フウセンクラゲ・クシヒラムシなどを含む。隣のウリクラゲ類と違い、少なくとも幼生の時期に1対の触手をもつ。	Mills 1998–2024 Ctenophores; Whelan et al. 2017 Nat Ecol Evol 1:1737
+Gnathophiurina	亜目	トゲクモヒトデ・ウデナガクモヒトデなどを含む亜目。隣の亜目とは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Trachylinae	亜綱	カッパクラゲ・ハナガサクラゲ・カギノテクラゲなどを含むヒドロ虫の亜綱。隣のHydroidolinaと違い、多くはポリプの時期をもたないか、ごく小さい。	Collins et al. 2008 Syst Biol 57:651; Bouillon et al. 2006 An Introduction to Hydrozoa
+Irregularia	下綱	ブンブクやカシパン類をまとめた下綱（不正形類）。隣の丸いウニたちと違い、体が前後に長く左右対称に近くなり、肛門が殻のてっぺんから後ろへ移る。とげは短く細かい。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Oniscidea	亜目	ダンゴムシ・ワラジムシ・フナムシなどの亜目。等脚目のほかの群が水の中で暮らすのに対し、陸上生活に適応しており、腹肢に空気を取りこむ白い器官（偽気管）をもつ種が多い。	Schmalfuss 2003 Stuttg Beitr Naturk A 654; Brusca & Wilson 1991 Mem Queensl Mus 31:143
+Scaphopoda	綱	ツノガイ類の綱。ゾウの牙のような、両端が開いた管状の殻をもつ。ほかの貝類と違い、頭の近くから出る細い触手（頭糸）で砂の中の小さな生き物を捕らえる。	Bouchet & Rocroi 2010 Malacologia 52:1; Steiner 1992 J Molluscan Stud 58:385
+Thaliacea	綱	サルパ・ヒカリボヤ・ウミタルの綱。隣のホヤ類と違い、一生を海中に漂って暮らし、体の前から取りこんだ水を後ろへ噴き出して進む。	Govindarajan et al. 2011 Mol Phylogenet Evol 58:449; Delsuc et al. 2018 BMC Biol 16:39
+Acteonimorpha	小綱	キジビキガイ科などからなる小さな群。殻の中に体を引っこめ、ふたで閉じることができる。異鰓類の中ではほかの2群（Ringipleura・Tectipleura）より先に分かれたとされる。	Bouchet et al. 2017 Malacologia 61:1–526
+Sacoglossa	上目	ミドリガイ・ブドウガイの一部などを含む群（嚢舌類）。隣の群と違い、藻類の細胞に歯舌で穴をあけて中身を吸う。食べた藻類の葉緑体を体内で働かせ続ける種もいる。	Bouchet et al. 2017 Malacologia 61:1–526; Händeler et al. 2009 Front Zool 6:28
+Capitata	亜目	ギンカクラゲ・アナサンゴモドキなどを含むヒドロ虫の亜目。ポリプの触手の先が丸くふくらみ、そこに刺胞が集まる（名前は「頭のある」の意味）。	Bouillon et al. 2006 An Introduction to Hydrozoa; Nawrocki et al. 2010 Zool Scr 39:290
+Pteropoda	目	ハダカカメガイ（クリオネ）・ウキヅノガイなどの翼足類。隣の群と違い、足が翼のように広がり、一生を海中を泳いで暮らす。	Bouchet et al. 2017 Malacologia 61:1–526
+Rajiformes	目	ガンギエイ科などからなるエイの目。体が平たいひし形で、卵は角のある殻に包まれる。隣のシビレエイ目のような発電器官を頭にはもたず、尾に弱い発電器官をもつ。	Last et al. 2016 Rays of the World; Nelson et al. 2016 Fishes of the World 5th ed.
+Tetractinellida	目	ホシカイメン・マルカイメンなどの目。隣の目と違い、先が3つに分かれた錨のような大きな骨片（triaene）をもつ。	Morrow & Cárdenas 2015 Front Zool 12:7; Cárdenas et al. 2011 Zool Scr 40:446
+Acanthochitonina	亜目	ヒゲヒザラガイ・ケハダヒザラガイなどを含むヒザラガイの亜目。隣のクサズリガイの仲間（Chitonoidea）とは、主に殻板の細かなつくりと遺伝子の解析で分かれる。	Sirenko 2006 Venus 65:27
+Echinacea	小綱	バフンウニ・ムラサキウニ・ラッパウニなどをまとめた小綱。隣のAulodontaと違い、歯の断面がT字形で、縦に竜骨のような張り出しがある。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Haplosclerida	目	カワナシカイメン・ヤワクダカイメンなどの目。隣の目と違い、単純な針形の骨片が網目のように組み合わさった骨格をもつ。	Morrow & Cárdenas 2015 Front Zool 12:7
+Paxillosida	目	スナヒトデ・モミジガイなどの目。隣の群と違い、管足の先に吸盤がなく、砂に潜って暮らす。背中に傘のような小突起（パキシラ）が並ぶ。	Mah & Blake 2012 PLoS ONE 7:e35644
+Talitrida	下目	ハマトビムシ類・モクズヨコエビ類を含むヨコエビの下目。浜辺の打ち上げ海藻の下や陸上の落ち葉の中に進出した種を含む。	Lowry & Myers 2013 Zootaxa 3610:1
+Alepocephaliformes	目	セキトリイワシ科とハナメイワシ科からなる深海魚の目。多くは黒っぽい体で、うきぶくろをもたない。かつてはニギス目などに近いとされたが、遺伝子の解析でニシン目・骨鰾類に近いことが分かった。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Discomedusae	亜綱	ミズクラゲ・アカクラゲ・エチゼンクラゲなどをまとめた鉢クラゲの亜綱。隣の冠クラゲ類（Coronatae）と違い、傘に冠のような溝（冠溝）をもたない。	Bayha et al. 2010 Integr Comp Biol 50:436; Collins et al. 2006 Syst Biol 55:97
+Nuculanida	目	ソデガイ・ロウバイなどを含む原鰓類の目。隣のクルミガイ科と違い、水管をもつ。	Bieler et al. 2014 Invertebr Syst 28:32
+Valvifera	亜目	ヘラムシ類の亜目。隣の等脚類と違い、一番後ろの付属肢（尾肢）が扉のように腹側を覆い、腹肢（えら）を守る。	Brusca & Wilson 1991 Mem Queensl Mus 31:143; Poore & Bruce 2012 PLoS ONE 7:e43529
+Hadziida	下目	イソヨコエビ・ノコギリヨコエビ・アゴナガヨコエビなどを含むヨコエビの下目。隣の下目とは、主に口器や脚の細かなつくりで分けられる。	Lowry & Myers 2013 Zootaxa 3610:1
+Ophiacanthida	目	トゲナガクモヒトデ・オハグロクモヒトデなどを含む目。隣の目とは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Gerromorpha	下目	アメンボ・ミズカメムシなどの下目。水面で暮らすカメムシで、体の細かい毛で水をはじく。水中で暮らすタイコウチ・ミズカマキリ類（タイコウチ下目）とは別の系統。	Weirauch & Schuh 2011 Annu Rev Entomol 56:487; Damgaard 2008 Insect Syst Evol 39:431
+Acotylea	亜目	ヒラムシの亜目。隣のCotyleaと違い、腹側に吸盤をもたない。	Bahia et al. 2017 Mol Phylogenet Evol 115:24; Laumer et al. 2015 eLife 4:e05503
+Accipitriformes	目	タカ・ワシ・ミサゴ・ヘビクイワシなどの目。隣のフクロウ目と同じく鋭いくちばしとつめで獲物を捕らえるが、主に昼に活動する。ハヤブサ類は別の系統（ハヤブサ目）。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Forcipulatacea	上目	キヒトデ・ヤツデヒトデなどを含むヒトデの上目。隣の群と違い、小さなはさみ（叉棘）の2枚の刃が根元で交差する。	Mah & Blake 2012 PLoS ONE 7:e35644
+Hoplonemertea	綱	ヒモビル・フカミゾヒモムシなどを含むヒモムシの綱（針紐虫類）。隣の綱と違い、吻の中に針（口針）をもつ。	Thollesson & Norenburg 2003 Proc R Soc B 270:407; Kajihara et al. 2008 Species Divers 13:245
+Pilidiophora	綱	ミドリヒモムシ・リュウキュウヒモムシなどを含むヒモムシの綱。隣の綱と違い、帽子のような形のピリディウム幼生の時期をもつ。	Thollesson & Norenburg 2003 Proc R Soc B 270:407; Strand et al. 2019 Zool Scr 48:118
+Sagittoidea	綱	現生のヤムシ（毛顎動物）をすべて含む綱。化石だけが知られる群と区別するための名前で、毛顎動物の中で隣り合う現生の群は無い。	Bieri 1991 Proc Biol Soc Wash 104:216; Kapp 1991 Zool Verh Leiden 271
+Scalpellomorpha	目	エボシガイ・ミョウガガイ類などの目。隣のフジツボ類（Balanomorpha）と違い、柔らかい柄の先に殻板で包まれた体がつく。	Chan et al. 2021 Zool J Linn Soc 193:789
+Sipuncula	目	ホシムシ類。体に節がなく、口のまわりを含む前半身（陥入吻）を出し入れする。かつては独立した門とされたが、遺伝子の解析で環形動物の中の早く分かれた系統と分かった。	Struck et al. 2007 Nature 447:95; Weigert et al. 2014 Mol Biol Evol 31:1391
+Astrophorina	亜目	ホシカイメン類などの亜目。隣のSpirophorinaと違い、星形の小さな骨片（aster）をもつ。	Cárdenas et al. 2011 Zool Scr 40:446
+Lepidopleurina	亜目	サメハダヒザラガイなどを含むヒザラガイの亜目。深い海の種が多い。隣のChitonidaと違い、殻板の縁に周りの肉帯へ差しこむ切れこみのある板（挿入板）がない。	Sirenko 2006 Venus 65:27
+Physonectae	亜目	ヨウラククラゲ・ヘビクラゲなどの管クラゲの亜目。小さな浮き（気泡体）と、その下に並ぶ泳鐘の両方をもつ。	Munro et al. 2018 Mol Phylogenet Evol 127:823
+Cirratuliformia	亜目	ミズヒキゴカイ・ハボウキゴカイ・ウミダルマなどをまとめた群。隣の定在性の多毛類とは、見た目の共通点は乏しく、主に遺伝子の解析でまとまる。	Rouse et al. 2022 Annelida (Oxford Univ Press); Weigert & Bleidorn 2016 Zool Lett 2:24
+Euryophiurida	上目	テヅルモヅル類とクシノハクモヒトデ類をまとめた上目。深い海の種が多い。隣のOphintegridaとは遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Glyceriformia	亜目	チロリ類をまとめた亜目。隣の亜目と違い、長く突き出せる吻の先に4本のあごをもつ。	Rouse et al. 2022 Annelida (Oxford Univ Press)
+Heteronemertea	目	ヒモムシの大部分を含む目（異紐虫目）。長い体をもつ種が多い。隣のHubrechtellidae科と違い、体壁の筋肉が外・中・内の3層になる。	Thollesson & Norenburg 2003 Proc R Soc B 270:407; Kajihara et al. 2008 Species Divers 13:245
+Aphragmophora	目	ヤムシ（Sagittidae など）を含む目。沖合の海中を漂う種がほとんど。隣のPhragmophoraと違い、体の中に横向きの筋肉（横筋）をもたない。	Tokioka 1965 Publ Seto Mar Biol Lab 13:335
+Euthecosomata	亜目	ウキヅノガイ・カメガイなど、殻をもつ翼足類の亜目。粘液の網で植物プランクトンなどをとらえて食べる。隣の裸殻翼足類（Gymnosomata）と違い、殻をもつ。	Bouchet et al. 2017 Malacologia 61:1–526
+Holothuriida	目	クロナマコ・ニセクロナマコなどの目。サンゴ礁に多い。隣の目と違い、刺激を受けると肛門から白い糸状の器官（キュビエ器官）を出す種を含む。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Mugiliformes	目	ボラ科を含む目（ここではタカサゴイシモチ科も含める）。ボラ類は泥の中の藻類や有機物をこしとって食べる。隣のダツ目やギンポ目とは遺伝子の解析で分かれる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Nelson et al. 2016 Fishes of the World 5th ed.
+Poecilosclerida	目	ミカーレカイメン・ブドウカイメンなどの目。隣の目と違い、錨のような形の小さな骨片（chela）をもつ種が多い。	Morrow & Cárdenas 2015 Front Zool 12:7
+Adapedonta	目	マテガイ・キヌマトイガイなどを含む目。マテガイ類は細長い殻で砂に深く縦に潜る。隣の群とは主に遺伝子の解析で分かれる。	Bieler et al. 2014 Invertebr Syst 28:32
+Atelostomata	小綱	ブンブクチャガマ・オカメブンブクなどのブンブク類をまとめた小綱。隣のカシパン類と違い、成体は口の歯（アリストテレスの提灯）をもたない。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Pentatomomorpha	下目	クサギカメムシ・ヘリカメムシ類などの下目。多くは植物の汁を吸う。隣のサシガメ類（Cimicomorpha）などと違い、腹部に感覚毛（毛点）をもつ。	Weirauch & Schuh 2011 Annu Rev Entomol 56:487
+Suberitida	目	ホテイカイメン・イソカイメンなどの目。隣の目とは、骨片の組み合わせと遺伝子の解析で分かれる。	Morrow & Cárdenas 2015 Front Zool 12:7
+Archiheterodonta	小綱	モシオガイ・トマヤガイなどを含む小さな二枚貝の群。殻は厚く、水管はほとんど発達しない。隣のEuheterodontaとは主に遺伝子の解析で分かれる。	Bieler et al. 2014 Invertebr Syst 28:32
+Monostilifera	目	針紐虫類の目。隣のPolystiliferaと違い、吻の中の口針が1本の台に1本だけつく。	Kajihara et al. 2008 Species Divers 13:245; Strand et al. 2019 Zool Scr 48:118
+Spatangoida	目	ブンブクチャガマ・オカメブンブクなどのブンブクの目。心臓のような形の殻で、砂の中に潜って堆積物を食べる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Amphinomida	目	ウミケムシ類の目。隣の環形動物と違い、石灰質の中空の剛毛をもち、触れると折れて刺さる。遺伝子の解析では環形動物の中で早く分かれた系統とされる。	Weigert et al. 2014 Mol Biol Evol 31:1391; Rouse et al. 2022 Annelida (Oxford Univ Press)
+Aplanulata	亜目	ソトエリクラゲ・クダウミヒドラなどを含むヒドロ虫の群。隣の群と違い、繊毛で泳ぐプラヌラ幼生の時期をもたない（名前は「プラヌラなし」の意味）。	Collins et al. 2005 Invertebr Biol 124:51; Nawrocki et al. 2010 Zool Scr 39:290
+Argentiniformes	目	ニギス・デメニギス・ソコイワシなどを含む目。大きな目をもつ種が多い。隣のサケ目とは見た目で分けにくく、主に骨格の細かな特徴と遺伝子の解析でまとまる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Dendrochirotida	目	キンコ・グミなどの目（樹手目）。隣の目と違い、口のまわりに枝分かれした触手を広げ、水中の粒をとらえて食べる。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Dentaliida	目	ヤカドツノガイなどを含むツノガイの目。隣のクチキレツノガイの仲間（Gadilida）と違い、殻は殻口がいちばん太い、まっすぐに細くなる角の形。	Steiner 1992 J Molluscan Stud 58:385; Bouchet & Rocroi 2010 Malacologia 52:1
+Forcipulatida	目	キヒトデ・ヤツデヒトデ・ニッポンヒトデなどを含む目。腕の先まで吸盤のある管足が4列に並ぶ種が多く、貝をこじあけて食べる。隣の深海性のヒトデ類（Brisingida など）とは、腕と体盤のつくりで分かれる。	Mah & Blake 2012 PLoS ONE 7:e35644
+Gekkota	下目	ヤモリとトカゲモドキの下目。隣のトカゲ類と違い、多くは夜に活動し、鳴き声を出す種がいる。ヤモリ類はまぶたがなく、透明な膜で目を覆い、指の裏の細かい毛で壁を登る。	Pyron et al. 2013 BMC Evol Biol 13:93
+Ophiodermatina	亜目	オハグロクモヒトデ・クロクモヒトデなどを含む亜目。浅いサンゴ礁などに多い。隣のOphiacanthinaとは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Ensifera	亜目	キリギリス・コオロギ・カマドウマ・ケラなどの亜目。隣のバッタの仲間と違い、触角が体より長く、鳴く種は前翅をこすり合わせて鳴き、音を聞く耳（鼓膜）は前脚にある。	Song et al. 2015 Cladistics 31:621
+Eumonostilifera	亜目	Monostiliferaの大部分を含む亜目。隣のCratenemertidae科とは主に遺伝子の解析で分かれる。	Strand et al. 2019 Zool Scr 48:118
+Eupantopodida	亜目	ウミグモ類の亜目で、現生のウミグモのほとんどを含む。体はとても細く、腸や生殖腺が長い脚の中にまで入りこむ。鋏角類の中で最初に分かれた系統とされることが多い。	Bamber 2007 Zootaxa 1668:295; Ballesteros et al. 2021 Mol Biol Evol 38:686
+Trachichthyiformes	目	ヒウチダイ・マツカサウオ・ヒカリキンメダイなどを含む目。かつてはキンメダイ目に含められたが、遺伝子の解析で別の目に分けられた。マツカサウオやヒカリキンメダイは発光器をもつ。	Betancur-R et al. 2017 BMC Evol Biol 17:162
+Brissidina	亜目	ヒラタブンブク・オカメブンブクなどを含むブンブクの亜目。隣のPaleopneustinaとは殻の板の並び方や溝（帯線）のつくりで分かれる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Copelata	目	オタマボヤ・サイヅチボヤの目（尾虫類）。隣のホヤ類と違い、成体になってもオタマジャクシのような尾を残し、自分で作った粘液の「家」でプランクトンをこしとる。	Delsuc et al. 2018 BMC Biol 16:39
+Cotylea	亜目	ニセツノヒラムシ類などのヒラムシの亜目。色あざやかな種が多い。隣のAcotyleaと違い、腹側に吸盤をもち、頭の前に一対のひだ状の触手をもつ種が多い。	Bahia et al. 2017 Mol Phylogenet Evol 115:24
+Elasipodida	目	センジュナマコ・カンテンナマコなどの深海のナマコの目。隣の目と違い、体が寒天のようにやわらかく、泳ぐことができる種もいる。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Gadilida	目	ハラブトツノガイ・クチキレツノガイなどを含むツノガイの目。隣のDentaliidaと違い、殻の中ほどがいちばん太くふくらむ種が多い。	Steiner 1992 J Molluscan Stud 58:385; Bouchet & Rocroi 2010 Malacologia 52:1
+Rhynchobdellida	目	ウオビル・ウミビルなどの目（吻蛭類）。隣のチスイビル類などと違い、あごをもたず、口から突き出す吻を宿主に刺して血を吸う。	Tessler et al. 2018 Mol Phylogenet Evol 127:172
+Synallactida	目	マナマコ・シカクナマコ・バイカナマコなどの目。食用のナマコの多くを含む。隣のクロナマコ類とは遺伝子の解析で分けられた。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Cidaroida	目	ボウズウニ・ミカドウニなどのキダリス類の目。隣のEuechinoideaと違い、太く長い大とげがまばらに並び、口のまわりに外えらがない。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Echinidea	下目	ムラサキウニ・バフンウニ・ラッパウニなど、浅い海でよく見るウニを多く含む下目。隣の群とは主に殻の板の並び方と遺伝子の解析で分かれる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Semaeostomeae	目	ミズクラゲ・アカクラゲなどの旗口クラゲの目。隣の根口クラゲ目と違い、傘の縁に触手をもち、中央に1つの口がある。	Bayha et al. 2010 Integr Comp Biol 50:436
+Axiidea	下目	アナエビ・スナモグリなどの下目。隣のアナジャコ類（Gebiidea）とは、はさみの形や遺伝子の解析で分かれ、干潟の砂泥に深い巣穴を掘る。	Robles et al. 2009 Decapod Crustacean Phylogenetics; De Grave et al. 2009 Raffles Bull Zool Suppl 21:1
+Gymnolaemata	綱	海産のコケムシの大部分を含む綱（裸喉類）。触手冠が円形に並び、多くは石灰質の骨格をもつ。淡水のコケムシ（Pectinatella など、触手冠が馬蹄形）や、管状の個虫をもつ円口類（Lichenoporidae など）とは別の系統。	Waeschenbach et al. 2012 Mol Phylogenet Evol 62:718
+Mygalomorphae	下目	ジグモ・トタテグモ・ジョウゴグモなどのクモの下目（原疣亜目とも）。ほかのクモ（クモ亜目）の鋏角が左右から挟むように動くのに対し、鋏角が平行に並び、上下に打ち下ろすように動く。	World Spider Catalog 2024; Wheeler et al. 2017 Cladistics 33:574
+Neognathostomata	小綱	タコノマクラ・スカシカシパン・マメウニなどをまとめた小綱。隣のブンブク類（Atelostomata）とは殻の板のつくりなどで分かれ、カシパン類は成体も口の歯（アリストテレスの提灯）をもつ。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Phyllodociformia	亜目	サシバゴカイ類の亜目。隣の亜目と違い、体の両側に木の葉のような形の突起（背触鬚）が並ぶ。	Rouse et al. 2022 Annelida (Oxford Univ Press)
+Amphiporina	下目	ヒモビル・メノコヒモムシなどを含む下目。隣のOerstediidae科とは主に遺伝子の解析で分かれる。	Strand et al. 2019 Zool Scr 48:118
+Aplysiida	目	アメフラシ類の目。殻は薄く体の中に埋もれる。隣の群と違い、刺激を受けると紫色の汁を出す。海藻を食べる。	Bouchet et al. 2017 Malacologia 61:1–526
+Apodida	目	イカリナマコ・クルマナマコなどの目（無足目）。隣のActinopodaと違い、管足をもたず、皮膚の中に錨や車輪の形の小さな骨片がある。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Lobata	目	カブトクラゲ・アカダマクラゲなどの目（カブトクラゲ目）。隣のフウセンクラゲ目と違い、成体は口の左右に大きな袋のような口葉をもち、触手は小さい。	Mills 1998–2024 Ctenophores; Whelan et al. 2017 Nat Ecol Evol 1:1737
+Luminacea	上目	タコノマクラ・スカシカシパン・マメウニなどをまとめた上目。隣のマンジュウウニ科（Echinoneidae）と違い、殻が平たい種が多い。	Kroh & Smith 2010 J Syst Palaeontol 8:147; Mongiardino Koch et al. 2022 eLife 11:e72460
+Muscomorpha	下目	イエバエ・ショウジョウバエ・ハナアブなどのハエ類の群。隣のカ・アブ・ガガンボの仲間と違い、幼虫の最後の皮を硬くした殻（囲蛹殻）の中でさなぎになる。	Wiegmann et al. 2011 PNAS 108:5690
+Narcomedusae	目	ツヅミクラゲ類の目。隣のカギノテクラゲなどと違い、触手が傘の縁ではなく傘の上のほうから出る。	Bouillon et al. 2006 An Introduction to Hydrozoa; Collins et al. 2008 Syst Biol 57:651
+Rhizostomeae	目	エチゼンクラゲ・ビゼンクラゲ・タコクラゲなどの根口クラゲの目。隣の旗口クラゲ目と違い、傘の縁に触手がなく、中央の口がふさがって、口腕にある多数の小さな口から餌を取る。	Bayha et al. 2010 Integr Comp Biol 50:436
+Atheriniformes	目	トウゴロウイワシ・ギンイソイワシ・ナミノハナなどを含む目。体の側面に銀色の帯が走る種が多い。隣のダツ目と違い、背びれが2つに分かれる。	Nelson et al. 2016 Fishes of the World 5th ed.
+Aulodonta	下綱	ガンガゼ・フクロウニなどをまとめた下綱。隣のEchinaceaと違い、口の歯（アリストテレスの提灯の歯）の断面がU字形の溝になる。ガンガゼ類は中空の長いとげをもつ。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Cheilostomatida	目	フサコケムシ・チゴケムシなどの目（唇口目）。隣の櫛口目と違い、個虫の入口にふたがあり、骨格が石灰化する。	Waeschenbach et al. 2012 Mol Phylogenet Evol 62:718
+Chimaeriformes	目	ギンザメ科とテングギンザメ科などからなる目。現生の全頭類はすべてこの目に入る。深い海に住み、背びれの前に毒をもつ棘がある。	Nelson et al. 2016 Fishes of the World 5th ed.
+Cydippida	目	フウセンクラゲ・テマリクラゲなどの目。隣のカブトクラゲ目と違い、体は丸く、鞘から長く伸びる1対の触手をもつ。遺伝子の解析では1つのまとまりにならない（多系統）とされる。	Mills 1998–2024 Ctenophores; Whelan et al. 2017 Nat Ecol Evol 1:1737
+Durocryptodira	クレード	ウミガメ・イシガメ・リクガメなどをまとめたカメのクレード。隣のスッポン科やカミツキガメ科とは遺伝子の解析で分かれる。	Joyce et al. 2021 Swiss J Palaeontol 140:5; Crawford et al. 2015 Mol Phylogenet Evol 83:250
+Holocephali	亜綱	ギンザメ類からなる軟骨魚類の亜綱。隣のサメ・エイ類（板鰓亜綱）と違い、上あごが頭骨と一体になり、えら穴は皮膚のふたで覆われて1対だけに見える。	Nelson et al. 2016 Fishes of the World 5th ed.
+Ophiurida	目	クシノハクモヒトデ・ハコクモヒトデなどを含む目。隣のテヅルモヅル類と違い、腕は枝分かれせず、横に振ってすばやく動く。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Apodiformes	目	アマツバメとハチドリの目。隣のヨタカ目と違い、脚がとても短く、飛びながら暮らす時間が長い。ハチドリは空中で静止して花の蜜を吸う。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Columbiformes	目	ハトの目。隣のサケイ目と違い、親がそのう（食道の袋）から「ピジョンミルク」を出してひなを育てる。水を吸いこむように飲める。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Epicaridea	亜目	ヤドリムシ類の亜目。エビ・カニ・ヤドカリなどのえらや腹に寄生し、雌は脚が退化して大きな袋のような体になる。	Boyko et al. 2013 J Crust Biol 33:271; Poore & Bruce 2012 PLoS ONE 7:e43529
+Gadilimorpha	亜目	ハラブトツノガイ科などを含むGadilidaの亜目。隣のEntalinidae科とは、殻の形や足のつくりで分かれる。	Steiner 1992 J Molluscan Stud 58:385
+Zeiformes	目	マトウダイ・カガミダイ・オオメマトウダイなどを含む目。体は左右に平たく、口を前に大きく突き出せる。隣のタラ目やアカマンボウ目とは遺伝子の解析で分かれる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Zoantharia	目	スナギンチャク類の目。隣のイソギンチャク目と違い、多くは群体を作り、体の壁に砂粒などを取りこむ。骨格はもたない。	Sinniger et al. 2005 Mar Biol 147:1121; Daly et al. 2007 Zootaxa 1668:127
+Antipatharia	目	ウミカラマツ類（黒サンゴ）の目。隣のイシサンゴ目などと違い、骨格は石灰ではなく、とげのある黒っぽいタンパク質の骨軸。	Daly et al. 2007 Zootaxa 1668:127; Opresko 2001 Zool Med Leiden 75:147
+Euryalida	目	テヅルモヅル・ツノモヅルなどの目。隣のクシノハクモヒトデ類と違い、腕が長く巻きつくように動き、テヅルモヅル類では腕が何度も枝分かれする。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Flustrina	亜目	フサコケムシ・チゴケムシなどを含む唇口目の亜目。唇口目の大部分を含み、隣のThalamoporellidae科とは主に骨格のつくりで分かれる。	Waeschenbach et al. 2012 Mol Phylogenet Evol 62:718
+Ophiurina	亜目	クシノハクモヒトデ類などを含む亜目。隣のOphiomusaidae科とは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Tanaidacea	目	タナイス類の目。隣のほかの軟甲類と違い、甲羅が胸の前の2節だけを覆い、第2胸脚が大きなはさみになる。	Błażewicz-Paszkowycz et al. 2012 PLoS ONE 7:e33068
+Tettigoniidea	下目	キリギリス・ツユムシ・カマドウマなどの下目。隣のコオロギ類と違い、足先の節（跗節）が4節で、雌の産卵管は刀のように平たいものが多い。	Song et al. 2015 Cladistics 31:621
+Acrididea	下目	バッタ・イナゴ・オンブバッタなどの下目。隣のキリギリス・コオロギの仲間と違い、触角が短く、後ろ脚と前翅をこすって鳴き、耳（鼓膜）は腹の付け根にある。	Song et al. 2015 Cladistics 31:621
+Asellota	亜目	ミズムシ・ウミミズムシなどの亜目。隣の等脚類とは、雄の交尾に使う腹肢の形などで分けられる。深海で特に多様化している。	Brusca & Wilson 1991 Mem Queensl Mus 31:143; Poore & Bruce 2012 PLoS ONE 7:e43529
+Axinellida	目	ジクカイメン・ヤスリカイメンなどの目。隣の目とは主に遺伝子の解析で分かれる。	Morrow & Cárdenas 2015 Front Zool 12:7
+Bubarida	目	トゲカイメン・ウスカイメンなどの目。隣の目とは主に遺伝子の解析で分かれ、骨片の形だけで見分けるのは難しい。	Morrow & Cárdenas 2015 Front Zool 12:7
+Euphausiacea	目	オキアミ類の目。隣のエビ類（十脚目）と違い、えらが甲羅に覆われずに外へ出ており、体に発光器をもつ。ナンキョクオキアミはクジラなどの重要な餌になる。	Brinton et al. 2000 World Euphausiids; Martin & Davis 2001 Updated Classification of the Recent Crustacea
+Keratosa	亜綱	モクヨクカイメン（浴用海綿）などを含む亜綱。隣のHeteroscleromorphaと違い、ガラス質の骨片をもたず、タンパク質（スポンジン）の繊維で体を支える。	Morrow & Cárdenas 2015 Front Zool 12:7
+Ophiacanthina	亜目	トゲナガクモヒトデなどを含む亜目。腕に長いとげを並べる種が多く、深い海に多い。隣のOphiodermatinaとは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Platyctenida	目	クシヒラムシ・コトクラゲなどの目。隣の群と違い、体が平たく、海底やほかの動物の上をはって暮らす。多くは成体で櫛板を失う。	Mills 1998–2024 Ctenophores; Alamaru et al. 2017 Zool Scr 46:127
+Clionaida	目	アナホリカイメン・パンカイメンなどの目。貝殻やサンゴの骨格に穴を掘って住む種を含む点が、隣の目と違う。	Morrow & Cárdenas 2015 Front Zool 12:7
+Dactyliophorae	亜目	エチゼンクラゲ・ビゼンクラゲなどを含む根口クラゲの亜目。隣のKolpophoraeとは、主に体のつくりと遺伝子の解析で分けられる。	Bayha et al. 2010 Integr Comp Biol 50:436
+Dictyoceratida	目	モクヨクカイメン・ツチイロカイメンなどの目。骨片をもたず、スポンジンの繊維が網目になった骨格をもつ。浴用海綿はこの目の種。	Morrow & Cárdenas 2015 Front Zool 12:7
+Echiuroidea	目	ユムシ類。体に節がなく、口の前に長い吻をもつ。かつては独立した門とされたが、遺伝子の解析で環形動物の定在性の群の中に入ることが分かった。	Struck et al. 2011 Nature 471:95; Rouse et al. 2022 Annelida (Oxford Univ Press)
+Ophionereidina	亜目	ニホンクモヒトデ・アミメクモヒトデなどを含む亜目。隣の亜目とは主に遺伝子の解析で分かれる。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Orectolobiformes	目	ジンベエザメ・テンジクザメ・オオセなどを含む目。隣のネコザメ目と違って背びれに棘がなく、口の前に1対のひげをもつ。	Nelson et al. 2016 Fishes of the World 5th ed.
+Spirophorina	亜目	マルカイメン（トウナスカイメン）類などの亜目。隣のAstrophorinaと違い、らせん形の小さな骨片をもつ。	Cárdenas et al. 2011 Zool Scr 40:446
+Coronatae	目	クロカムリクラゲ・エフィラクラゲなどの冠クラゲの目。深い海の種が多い。隣のDiscomedusaeと違い、傘の周りに冠のような溝（冠溝）がある。	Bayha et al. 2010 Integr Comp Biol 50:436
+Cyprinodontiformes	目	カダヤシ・グッピー・モーリーなどを含む目。日本ではカダヤシ科の外来種が見られる。隣のダツ目・トウゴロウイワシ目と違い、カダヤシ科の多くは卵ではなく子を産む。	Nelson et al. 2016 Fishes of the World 5th ed.
+Gymnosomata	亜目	ハダカカメガイ（クリオネ）など、殻をもたない翼足類の亜目。殻をもつ翼足類（Euthecosomata）を捕まえて食べる肉食。	Bouchet et al. 2017 Malacologia 61:1–526
+Laganiformes	下目	ヨツアナカシパン・マメウニなどの下目。小さく平たい殻をもつ。隣のスカシカシパン類（Scutelliformes）とは、殻の中の支柱や板の並び方で分かれる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Limnomedusae	目	カギノテクラゲ・ハナガサクラゲ・マミズクラゲなどを含む目。淡水にすむクラゲを含む点が、ほかのヒドロ虫の群と違う。小さなポリプの時期をもつ種が多い。	Bouillon et al. 2006 An Introduction to Hydrozoa; Collins et al. 2008 Syst Biol 57:651
+Palaeonemertea	綱	ホソヒモムシなどを含むヒモムシの綱（古紐虫類）。隣の綱と違い、吻に針がなく、ピリディウム幼生の時期もない。	Thollesson & Norenburg 2003 Proc R Soc B 270:407; Kajihara et al. 2008 Species Divers 13:245
+Rhinopristiformes	目	サカタザメ・シノノメサカタザメ・ノコギリエイなどを含む目。ほかのエイと違い、尾が太く、サメに似た細長い体をもつ。	Last et al. 2016 Rays of the World; Nelson et al. 2016 Fishes of the World 5th ed.
+Stauromedusae	目	ジュウモンジクラゲ・アサガオクラゲなどの目。現生の十文字クラゲはすべてここに入る。クラゲの形のまま柄で海藻などにくっついて暮らす。	Miranda et al. 2016 Zool J Linn Soc 177:471
+Torpediniformes	目	シビレエイ類の目。ほかのエイと違い、頭の両側にある大きな発電器官で強い電気を起こし、身を守ったり獲物をしびれさせたりする。	Nelson et al. 2016 Fishes of the World 5th ed.; Last et al. 2016 Rays of the World
+Velatida	目	マクヒトデ類の目。背中に膜を張ったような構造をもち、その下に水を通す。深い海の種が多い。	Mah & Blake 2012 PLoS ONE 7:e35644
+Yinpterochiroptera	亜目	オオコウモリとキクガシラコウモリなどをまとめた亜目。超音波を使わないオオコウモリと、超音波で獲物を探すキクガシラコウモリが近縁だと遺伝子の解析で分かった。隣の亜目（Yangochiroptera）とは主に遺伝子で分かれる。	Teeling et al. 2005 Science 307:580; 日本哺乳類学会 2018 世界哺乳類標準和名目録
+Anenthemonae	亜目	ムシモドキギンチャク・カワリギンチャクなどを含むイソギンチャクの亜目。隣のEnthemonaeと違い、体の中を仕切る隔膜の並び方が独特（名前は「典型的な並びでない」の意味）。	Rodríguez et al. 2014 PLoS ONE 9:e96998
+Calcarea	綱	石灰海綿類の綱。ほかの海綿と違い、骨片が炭酸カルシウム（石灰）でできている。	Manuel et al. 2003 Syst Biol 52:311; Morrow & Cárdenas 2015 Front Zool 12:7
+Diplostraca	上目	ミジンコ・エボシミジンコなどの上目（双殻類）。隣のホウネンエビ類やカブトエビ類と違い、体が二枚貝のような甲殻に包まれる。	Olesen 2009 J Crust Biol 29:399; Martin & Davis 2001 Updated Classification of the Recent Crustacea
+Echinothuriacea	上目	フクロウニ類などをまとめた上目。隣のガンガゼ科と違い、殻の板がしっかりつながらず、殻が革袋のように柔らかい。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Gebiidea	下目	アナジャコ類の下目。干潟に巣穴を掘る。かつてはアナエビ類（Axiidea）と同じ群とされたが、遺伝子の解析で別の系統と分かった。	Robles et al. 2009 Decapod Crustacean Phylogenetics; De Grave et al. 2009 Raffles Bull Zool Suppl 21:1
+Gryllidea	下目	コオロギ・スズムシ・ケラなどの下目。隣のキリギリス類と違い、跗節が3節で、雌の産卵管は針のように細い。	Song et al. 2015 Cladistics 31:621
+Myzostomida	目	スイクチムシ類の目。ウミシダなどの棘皮動物に寄生する、平たい小さな動物。位置の分かりにくい群だったが、遺伝子の解析で環形動物に入るとされる。	Struck et al. 2011 Nature 471:95; Weigert et al. 2014 Mol Biol Evol 31:1391
+Rhizocephala	下綱	フクロムシ類の下綱。カニやエビに寄生し、成体は殻も脚も失って、宿主の体の中に根のような組織を広げる。幼生の形でフジツボの仲間と分かる。	Høeg et al. 2020 Zool J Linn Soc 190:632; Chan et al. 2021 Zool J Linn Soc 193:789
+Sciuromorpha	亜目	リス・ムササビ・モモンガ・ヤマネなどの亜目（リス形亜目）。隣のネズミ類などとは主に遺伝子の解析で分かれる。	Fabre et al. 2012 BMC Evol Biol 12:88; 日本哺乳類学会 2018 世界哺乳類標準和名目録
+Systellommatophora	目	イソアワモチ・ドロアワモチなどの目。殻をもたず、肛門が体の後端にある。陸の有肺類の多く（柄眼目）とは、殻がないことや体のつくり、遺伝子の解析で分かれる。	Bouchet et al. 2017 Malacologia 61:1–526; Dayrat et al. 2011 Zool J Linn Soc 163:585
+Tanaidomorpha	亜目	ホソツメタナイス・ツツタナイスなどを含むタナイス類の亜目。隣のアプセウデス類と違い、第1触角が二叉せず、多くは管を作って住む。	Błażewicz-Paszkowycz et al. 2012 PLoS ONE 7:e33068
+Anabantaria	クレード	タウナギ目とキノボリウオ目をまとめたクレード。隣のスズキ系の群とは遺伝子の解析で分かれ、空気を吸って呼吸できる種が多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162
+Ascothoracida	亜綱	キンチャクムシ・シダムシなどの亜綱。サンゴやヒトデなどに寄生する。隣のフジツボ類と違い、成体も二枚貝のような殻（背甲）をもつ。	Chan et al. 2021 Zool J Linn Soc 193:789
+Brachycnemina	亜目	イワスナギンチャクなどを含むスナギンチャクの亜目。浅い海の岩の上で暮らす種が多い。隣のMacrocneminaと違い、第5対の隔膜が短く、口までとどかない。	Sinniger et al. 2005 Mar Biol 147:1121
+Echinothurioida	目	フクロウニ類の目。殻が柔らかく、深い海の種が多い。隣のPedinidae科と違い、殻の板が重なり合って曲がる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Isocrinida	目	トリノアシ・オオウミユリなどの目。隣のウミシダ類と違い、成体も長い柄をもち、柄の節から輪状に巻枝が出る。	Hess & Messing 2011 Treatise on Invertebrate Paleontology Part T revised 3; Rouse et al. 2013 Mol Phylogenet Evol 66:161
+Myxiniformes	目	ヌタウナギ類の目。隣のヤツメウナギ目と違い、目がよく発達せず、口は吸盤ではない。体から大量の粘液を出す。	Nelson et al. 2016 Fishes of the World 5th ed.
+Notacanthiformes	目	トカゲギス科とソコギス科からなる深海魚の目。ウナギ目と同じく、透明で平たいレプトセファルス幼生の時期をもつ。ウナギ目と違い、腹びれをもつ。	Nelson et al. 2016 Fishes of the World 5th ed.
+Petromyzontiformes	目	ヤツメウナギ類の目。隣のヌタウナギ目と違い、吸盤状の口と、目の後ろに並ぶ7対のえら穴をもつ。幼生は川の泥の中で暮らす。	Nelson et al. 2016 Fishes of the World 5th ed.
+Albuliformes	目	ソトイワシ類の目。ウナギ目と同じく、レプトセファルス幼生の時期をもつ。隣のカライワシ目と違い、口が下向きで、海底の砂の中の貝などを食べる。	Nelson et al. 2016 Fishes of the World 5th ed.
+Anabantiformes	目	タイワンドジョウ類やゴクラクギョ類などを含む目。隣のタウナギ目と違い、えらの上にある迷路器官（上鰓器官）で空気を吸って呼吸する。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Cimicomorpha	下目	サシガメ・トコジラミなどを含む下目。ほかの昆虫を捕らえて体液を吸う種や、動物の血を吸う種を含む。隣のカメムシ類（Pentatomomorpha）とは、腹部の毛点がないことなどで分かれる。	Weirauch & Schuh 2011 Annu Rev Entomol 56:487
+Cirrata	亜目	メンダコ・ジュウモンジダコなどを含む深海のタコの亜目（有触毛亜目）。隣の普通のタコの仲間と違い、胴にひれをもち、腕の吸盤のわきに細い毛（触毛）が並ぶ。墨袋をもたない。	Jereb et al. 2014 FAO Species Catalogue Cephalopods Vol. 3
+Enteropneusta	綱	ギボシムシ類の綱。隣のフサカツギ類（翼鰓類）が小さな群体で管に住むのに対し、単独で砂泥に潜って暮らすミミズのような体をもつ。	Cannon et al. 2014 Curr Biol 24:2827
+Gaviiformes	目	アビの目。水に潜って魚を捕らえる。隣のミズナギドリ目などと違い、脚が体のずっと後ろにあり、陸上ではうまく歩けない。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Hexanchiformes	目	カグラザメ・ラブカなどを含む目。ほかのサメのえら穴が5対なのに対し、6対または7対あり、背びれは1つだけ。	Nelson et al. 2016 Fishes of the World 5th ed.
+Hexasterophora	亜綱	カイロウドウケツ・ハチノスカイメンなどの亜綱。隣のホッスガイ類（Amphidiscophora）と違い、六放の先が星のように分かれた小さな骨片（六放星状体）をもつ。	Dohrmann et al. 2008 Syst Biol 57:388
+Kolpophorae	亜目	タコクラゲ・サカサクラゲなどを含む根口クラゲの亜目。体に褐虫藻を共生させる種を多く含む。隣のDactyliophoraeとは、主に体のつくりと遺伝子の解析で分けられる。	Bayha et al. 2010 Integr Comp Biol 50:436
+Lepisosteiformes	目	ガー類の目。北米などの淡水に住み、日本では外来種として見つかる。隣の真骨類と違い、硬いエナメル質の鱗（硬鱗）で体が覆われる。	Nelson et al. 2016 Fishes of the World 5th ed.
+Leucosolenida	目	ケツボカイメン・チャツボカイメンなどの目。隣のクラトリナ類と違い、体の壁が厚く、水の通り道が複雑になる種が多い。	Manuel et al. 2003 Syst Biol 52:311
+Macrocnemina	亜目	ヤドカリスナギンチャクなどを含むスナギンチャクの亜目。ほかの動物の上に付着する種が多い。隣のBrachycneminaと違い、第5対の隔膜が口までとどく。	Sinniger et al. 2005 Mar Biol 147:1121
+Mantodea	目	カマキリの目。隣のゴキブリ目（シロアリを含む）と違い、前脚が獲物をつかむ鎌になり、首をよく動かせる三角形の頭をもつ。	Misof et al. 2014 Science 346:763; Evangelista et al. 2019 Proc R Soc B 286:20182076
+Ophioscolecida	目	カエデクモヒトデなどを含む目。隣の目と違い、体が厚い皮膚で覆われ、骨片が外から見えにくい。	O'Hara et al. 2017 Mol Phylogenet Evol 107:415
+Podicipediformes	目	カイツブリの目。潜水が得意で、足指に木の葉のようなひれ（弁足）をもつ。遺伝子の解析で、見た目の大きく違うフラミンゴに最も近いことが分かった。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Polystilifera	目	オヨギヒモムシ・ミカドヒモムシなどの目。隣のMonostiliferaと違い、吻の中の台に多数の小さな口針が並ぶ。	Kajihara et al. 2008 Species Divers 13:245
+Acipenseriformes	目	チョウザメ類の目。隣のNeopterygiiと違い、骨格の多くが軟骨のままで、体の側面に硬い板状の鱗（骨板）が並ぶ。卵はキャビアになる。	Nelson et al. 2016 Fishes of the World 5th ed.
+Allomalorhagida	綱	トゲカワ（動吻動物）の綱の1つ。隣のCyclorhagidaとは、頭の後ろの首の板のつくりなどで分かれる。	Sørensen et al. 2015 Zool Anz 258:1
+Ateleopodiformes	目	シャチブリ類の目。深い海の底近くに住み、骨格の多くが軟骨のままで、体はぶよぶよしている。隣のEurypterygiiより先に分かれた系統とされる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Bourgueticrinina	亜目	ムチウミユリなど、柄をもつ小さなウミユリの亜目。柄をもつが、遺伝子の解析でウミシダ類（Comatulida）の中に入ることが分かった。	Hemery et al. 2013 Mol Phylogenet Evol 69:1121; Rouse et al. 2013 Mol Phylogenet Evol 66:161
+Carybdeida	目	アンドンクラゲなどの目。隣のハブクラゲ類（Chirodropida）と違い、傘の四隅から触手が1本ずつ（または1束ずつ）出て、枝分かれしない。	Bentlage et al. 2010 Proc R Soc B 277:493
+Cichliformes	目	カワスズメ科（シクリッド）の目。アフリカや中南米の淡水に多く、ティラピア類が日本の一部の川に定着している。隣の群と違い、鼻の穴が左右に1つずつしかない。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Cystonectae	亜目	カツオノエボシ・ボウズニラなどの管クラゲの亜目。隣の2亜目と違い、大きな浮き（気泡体）をもち、泳鐘をもたない。	Munro et al. 2018 Mol Phylogenet Evol 127:823
+Dactylogyridea	目	ユビガタムシ類など、魚のえらに付く単生類の目。隣のハダムシ類（Capsalidea）と違い、体の後ろの付着器に複数の小さな鉤をもつ。	Brabec et al. 2023 Int J Parasitol 53:133
+Iguania	下目	イグアナ・アガマ・アノールなどの下目。隣のトカゲ類と違い、多くは獲物を舌でからめとって捕らえる。遺伝子の解析では、ヘビやオオトカゲに近いとされる。	Pyron et al. 2013 BMC Evol Biol 13:93
+Molpadida	目	イモナマコ類の目。隣の目と違い、体の後ろが尾のように細くなり、管足は肛門の近くの小さな突起だけ。泥に潜って暮らす。	Miller et al. 2017 Mol Phylogenet Evol 111:110
+Nebaliacea	亜目	コノハエビ類の目（薄甲類）。ほかの軟甲類の腹部が6節なのに対して7節あり、二枚貝のような大きな甲羅で胸を包む。	Martin & Davis 2001 Updated Classification of the Recent Crustacea; Walker-Smith & Poore 2001 Invertebr Taxon 15:807
+Paleopneustina	亜目	ブンブクチャガマ・アナグマブンブクなどを含むブンブクの亜目。隣のBrissidinaとは殻の板の並び方や溝（帯線）のつくりで分かれる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Polymixiiformes	目	ギンメダイ類の目。あごの下に1対のひげをもつ。棘鰭類の中で早く分かれた系統で、隣のタラ目やマトウダイ目にはこのひげが無い。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Verongimorpha	亜綱	ナンコツカイメンなどを含む亜綱。隣のHeteroscleromorphaと違い、多くはガラス質の骨片をもたない。主に遺伝子の解析でまとまる。	Morrow & Cárdenas 2015 Front Zool 12:7
+Bonelliida	亜目	ボネリムシなどを含むユムシの亜目。隣のユムシ類と違い、雄がとても小さく、雌の体の中に住む種が多い。	Rouse et al. 2022 Annelida (Oxford Univ Press)
+Capsalidea	目	ハダムシ類の目。魚の体表に付く寄生虫で、ブリなどの養殖で問題になる。隣のユビガタムシ類と違い、大きな円盤形の付着器をもつ。	Brabec et al. 2023 Int J Parasitol 53:133
+Cyclorhagida	綱	ヒゲトゲカワ・コガネトゲカワなどを含むトゲカワの綱。隣のAllomalorhagidaとは、頭の後ろの首の板のつくりなどで分かれる。	Sørensen et al. 2015 Zool Anz 258:1
+Homosclerophorida	目	プラキナカイメン・ノリカイメンなどの目（同骨海綿類）。骨片は小さいか、もたない。ほかの海綿と違い、上皮の下に基底膜をもち、石灰海綿類に近い系統とされる。	Gazave et al. 2012 Hydrobiologia 687:3
+Leptopodomorpha	下目	ミズギワカメムシ・サンゴカメムシなどの下目。水辺の地面を走り回る小さなカメムシ。隣の水面のアメンボ類や水中のタイコウチ類とは別の系統。	Weirauch & Schuh 2011 Annu Rev Entomol 56:487
+Lingulida	目	シャミセンガイ類などの目。隣のチョウチンガイ類と違い、殻がリン酸カルシウムを含み、ちょうつがいの歯がない。長い肉茎で砂泥に巣穴を作る。	Williams et al. 2000 Treatise on Invertebrate Paleontology Part H revised 2
+Phragmophora	目	イソヤムシ類などを含む目。海底近くで暮らす種を含む。隣のAphragmophoraと違い、体の中に横向きの筋肉（横筋）をもつ。	Tokioka 1965 Publ Seto Mar Biol Lab 13:335
+Ploima	目	ツボワムシ・カメノコウワムシなどを含むワムシの目。隣の鉤頭動物（寄生性）と違い、自由に泳ぐ。ツボワムシは魚の養殖で稚魚の餌として使われる。	Segers 2007 Zootaxa 1564:1
+Reptantia	亜目	ミカドヒモムシ類などの亜目。隣のPelagicaと違い、海底をはって暮らす。	Kajihara et al. 2008 Species Divers 13:245
+Sceptrulophora	目	ハチノスカイメン・タコアシカイメンなどの目。隣のカイロウドウケツ科と違い、ほうきの形などをした特別な小さい骨片（sceptrule）をもつ。	Dohrmann et al. 2008 Syst Biol 57:388
+Squatiniformes	目	カスザメ類の目。エイのように平たい体をもつが、エイと違ってえら穴が体の横にあり、胸びれは頭と離れているサメのなかま。	Nelson et al. 2016 Fishes of the World 5th ed.
+Chirodropida	目	ハブクラゲなどの目。隣のアンドンクラゲ類（Carybdeida）と違い、傘の四隅にある腕が枝分かれし、それぞれから多くの触手が出る。	Bentlage et al. 2010 Proc R Soc B 277:493
+Ciconiiformes	目	コウノトリの目。長いくちばしと脚をもつ大型の水辺の鳥。かつてサギ類なども含めたが、今はコウノトリ科だけ。隣のペリカン目（サギを含む）と違い、首を伸ばして飛ぶ。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Clathrinida	目	クラトリナカイメン・カゴアミカイメンなどの目。隣のLeucosolenidaと違い、細い管が網目のように集まった単純なつくりの種が多い。	Manuel et al. 2003 Syst Biol 52:311
+Ctenostomatida	目	ヤワコケムシ類などの目（櫛口目）。隣の唇口目と違い、骨格が石灰化せず、個虫の入口にふたがない。	Waeschenbach et al. 2012 Mol Phylogenet Evol 62:718
+Dermaptera	目	ハサミムシの目。隣の目と違い、腹の先に大きなはさみ（尾角が変化したもの）をもつ。	Misof et al. 2014 Science 346:763
+Dipnoi	クレード	肺魚の仲間。オーストラリア・南米・アフリカの淡水に住む。隣の四肢動物と同じく肺で空気を吸って呼吸でき、魚の中で四肢動物にいちばん近い系統。	Nelson et al. 2016 Fishes of the World 5th ed.
+Echinorhiniformes	目	キクザメ類の目。体の表面に大きなとげ状の鱗が散らばる。かつてはツノザメ目に含められたが、背びれに棘がないことなどから別の目に分けられた。	Nelson et al. 2016 Fishes of the World 5th ed.
+Elopiformes	目	カライワシとイセゴイ（ターポン）の目。ウナギ目と同じくレプトセファルス幼生の時期をもつが、ウナギ目と違い、幼生に二叉した尾びれがある。	Nelson et al. 2016 Fishes of the World 5th ed.
+Euphasmatodea	亜目	ナナフシの目の大部分を含む亜目。隣のTimematodea（北米の小さなナナフシ）と違い、体が細長い。	Bradler & Buckley 2018 Insect Biodiversity Vol. 2 p.383; Simon et al. 2019 Front Ecol Evol 7:345
+Gonorynchiformes	目	サバヒーやネズミギスなどを含む目。コイ目・ナマズ目に近縁で、前の方の背骨が少し変形しているが、隣のOtophysiのような完全なウェーバー器官はもたない。	Nelson et al. 2016 Fishes of the World 5th ed.
+Heterodontiformes	目	ネコザメ類の目。隣のテンジクザメ目などと違い、2つの背びれの前に棘があり、奥歯は貝やウニをすりつぶす臼のような形をしている。	Nelson et al. 2016 Fishes of the World 5th ed.
+Heterotardigrada	綱	トゲクマムシ・ハナクマムシなどを含むクマムシの綱（異クマムシ類）。隣の真クマムシ類（Ramazzottius・Milnesium など）と違い、頭に感覚用の毛や突起をもち、体が板で覆われる種を含む。	Guidetti & Bertolani 2005 Zootaxa 845:1; Degma et al. 2009–2024 Actual checklist of Tardigrada
+Krykomyaria	下目	タコクラゲ・ムラサキクラゲなどを含むKolpophoraeの下目。隣のサカサクラゲ科などとは、主に体のつくりと遺伝子の解析で分けられる。	Bayha et al. 2010 Integr Comp Biol 50:436
+Laurida	目	スリバチサンゴカクレムシなどを含むAscothoracidaの目で、サンゴやスナギンチャクに寄生する。隣のDendrogastridae科はヒトデなどの棘皮動物に寄生する。	Grygier 1987 Zool J Linn Soc 91:1
+Otidiformes	目	ノガンの目。草原を歩いて暮らす大型の鳥。かつてはツル目に含められたが、遺伝子の解析で別の目に分けられた。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Pelagica	亜目	オヨギヒモムシ類の亜目。隣の底生のReptantiaと違い、沖合の海中を泳いで暮らす。	Kajihara et al. 2008 Species Divers 13:245
+Phaethontiformes	目	ネッタイチョウの目。熱帯の海で暮らし、中央の尾羽がとても長い。かつてはペリカン目に含められたが、遺伝子の解析で独立した系統と分かった。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Phasmida	目	ナナフシの目。体や脚が細長く、枝や葉に擬態する。遺伝子の解析では、隣のシロアリモドキ目に最も近いとされる。	Misof et al. 2014 Science 346:763; Simon et al. 2019 Front Ecol Evol 7:345
+Scutelliformes	下目	ハスノハカシパン・コメツブウニなどの下目。とても平たい殻をもつ。隣のヨツアナカシパン類（Laganiformes）とは、殻の板の並び方で分かれる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Stomopneustoida	目	クロウニ・ツガルウニなどの目。隣の群とは、主に殻の細かなつくりと遺伝子の解析で分かれる。	Kroh & Smith 2010 J Syst Palaeontol 8:147
+Archaeognatha	目	イシノミの目。翅がなく、腹を使って跳ねる。隣のシミ目や有翅昆虫と違い、大あごが頭と1か所だけでつながる。昆虫の中で最初に分かれた系統。	Misof et al. 2014 Science 346:763
+Bucerotiformes	目	サイチョウとヤツガシラの目。隣のブッポウソウ目などとは遺伝子の解析で分かれる。ヤツガシラは扇のように開く冠羽をもつ。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Caprimulgiformes	目	ヨタカの目。夜に飛びながら虫を捕らえる。隣のアマツバメ目と違い、大きく開く口と、落ち葉に似た模様の羽をもつ。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Embioptera	目	シロアリモドキの目。隣の目と違い、前脚の跗節に糸を出す腺があり、絹のトンネルを作って暮らす。	Misof et al. 2014 Science 346:763
+Ephemeroptera	目	カゲロウの目。隣の有翅昆虫と違い、翅のある「亜成虫」になった後にもう一度脱皮して成虫になる。翅を腹の上にたたむことができない。	Misof et al. 2014 Science 346:763
+Mecoptera	目	シリアゲムシなどの目。頭が下に長く伸びたくちばしのような形になる。シリアゲムシ科の雄は腹の先がサソリの尾のように反り上がる。	Misof et al. 2014 Science 346:763
+Megaloptera	目	ヘビトンボの目。幼虫は川の中で暮らす肉食で、腹の両側にえらの役をする突起をもつ（孫太郎虫として知られる）。隣のラクダムシ目・アミメカゲロウ目と違い、幼虫が水中で暮らす。	Misof et al. 2014 Science 346:763; Winterton et al. 2018 Syst Entomol 43:330
+Neuroptera	目	ウスバカゲロウ・クサカゲロウなどの目。隣の目と違い、幼虫の大あごと小あごが組み合わさって管になり、獲物の体液を吸う（アリジゴクなど）。	Misof et al. 2014 Science 346:763; Winterton et al. 2018 Syst Entomol 43:330
+Notoptera	目	ガロアムシ類の目（ガロアムシ目）。翅がなく、寒い山地の石の下などで暮らす。隣の目とは、翅がないことや体のつくりで見分けられる。	Misof et al. 2014 Science 346:763; Wipfler et al. 2019 PNAS 116:3024
+Osteoglossiformes	目	アロワナ類などを含む目。舌に骨の歯をもつ。真骨類の中で早くに分かれた系統で、隣のウナギ類（Elopomorpha）やニシン・コイ・スズキ類（Clupeocephala）とは骨格の細かな特徴で分かれる。	Nelson et al. 2016 Fishes of the World 5th ed.; Betancur-R et al. 2017 BMC Evol Biol 17:162
+Plecoptera	目	カワゲラの目。幼虫は川の中で暮らす。隣の目と違い、多くは成虫も腹の先に1対の長い尾毛をもち、翅を腹の上に平たく重ねてたたむ。	Misof et al. 2014 Science 346:763
+Pristiophoriformes	目	ノコギリザメ類の目。のこぎりのような長い吻と、その下の1対のひげをもつ。よく似たノコギリエイ（エイの仲間）と違い、えら穴が体の横にある。	Nelson et al. 2016 Fishes of the World 5th ed.
+Psocodea	目	チャタテムシとシラミをまとめた目。シラミは、チャタテムシに近い祖先から動物の体に住むように変わったグループ。	Johnson et al. 2018 PNAS 115:12775; Misof et al. 2014 Science 346:763
+Pterocliformes	目	サケイの目。乾燥地にすむ。隣のハト目と違い、雄が腹の羽毛に水を含ませて遠くの巣まで運び、ひなに飲ませる。	日本鳥学会 2024 日本鳥類目録改訂第8版; Prum et al. 2015 Nature 526:569
+Raphidioptera	目	ラクダムシの目。隣の目と違い、前胸が首のように長く伸び、雌は長い産卵管をもつ。幼虫は樹皮の下などで暮らす。	Misof et al. 2014 Science 346:763; Winterton et al. 2018 Syst Entomol 43:330
+Siphonaptera	目	ノミの目。体が左右に平たく、翅がなく、強い後ろ脚で跳ねて動物の血を吸う。遺伝子の解析ではシリアゲムシ目にとても近い（あるいはその中に入る）とされる。	Misof et al. 2014 Science 346:763; Tihelka et al. 2020 Palaeoentomology 3:9
+Strepsiptera	目	ネジレバネの目。ハチなどの昆虫に寄生する。雄は前翅が小さな棍棒のようになり、後ろの翅で飛ぶ。雌の多くは翅も脚もなく宿主の体の中にとどまる。遺伝子の解析で、隣のコウチュウ目に最も近いと分かった。	Misof et al. 2014 Science 346:763; Niehuis et al. 2012 Curr Biol 22:1309
+Synbranchiformes	目	タウナギ類などの目。隣のキノボリウオ目と違い、うろこやひれがほとんどないウナギ形の体で、田んぼなどで口の中の粘膜を使って空気を吸う。	Nelson et al. 2016 Fishes of the World 5th ed.
+Thysanoptera	目	アザミウマの目。隣のカメムシ目などと違い、翅のふちに長い毛が房のように並ぶ。口は左右が非対称で、植物の汁などを吸う。	Misof et al. 2014 Science 346:763
+Trichoptera	目	トビケラの目。幼虫は水の中で、小石や植物片で筒状の巣を作るものが多い。隣のチョウ目に最も近く、翅が鱗粉ではなく細かい毛で覆われる。	Misof et al. 2014 Science 346:763
+Zoraptera	目	ジュズヒゲムシの目。体長数mmの小さな昆虫で、触角が数珠のように見える。多新翅類の中の位置は議論が続いている。	Misof et al. 2014 Science 346:763; Wipfler et al. 2019 PNAS 116:3024
+Zygentoma	目	シミの目。翅がない。隣のイシノミ目と違い、大あごが頭と2か所でつながり、この点で有翅昆虫に近い。	Misof et al. 2014 Science 346:763
