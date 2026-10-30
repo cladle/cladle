@@ -1958,4 +1958,4 @@ move("nudipleura", "umifukurou")
 move("tectipleura", "amefurashi", "hadakakamegai", "tamanomidorigai")
 move("stylommatophora", "misujimaimai", "namekuji", "africamaimai")
 move("systellommatophora", "ashihidanamekuji", "onchidiidae")
-META["datasetVersion"] = "0.3.17"  # 異鰓類の中を分けた（種の増減なし）
+# 出題の重み（枠・門・知名度）と種の並びは変わらないので版は上げず、今の版に入れる（10/30 から）

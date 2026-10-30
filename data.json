@@ -47,10 +47,6 @@
     "4": 0.7
    },
    "bucketWeight": "sqrt"
-  },
-  "next": {
-   "from": "2026-10-31",
-   "file": "data-0.3.17.json"
   }
  },
  "clades": [
@@ -2040,7 +2036,7 @@
   },
   {
    "id": "onchidiidae",
-   "parent": "heterobranchia",
+   "parent": "systellommatophora",
    "ja": "アワモチ科",
    "sci": "Onchidiidae",
    "rank": "科",
@@ -2510,6 +2506,71 @@
    "sci": "Cerambycidae",
    "rank": "科",
    "desc": "長い触角をもつ甲虫。幼虫は木の幹の中を食べて育つ。"
+  },
+  {
+   "id": "nudipleura",
+   "parent": "heterobranchia",
+   "ja": "Nudipleura",
+   "sci": "Nudipleura",
+   "rank": "クレード",
+   "desc": "ウミウシの多く（裸鰓目）と、ウミフクロウなどの側鰓類。殻は無いか、体の中に小さく残るだけ。"
+  },
+  {
+   "id": "nudibranchia",
+   "parent": "nudipleura",
+   "ja": "裸鰓目",
+   "sci": "Nudibranchia",
+   "rank": "目",
+   "desc": "大人になると殻をもたないウミウシの仲間。えらが体の表面にむき出しになっている。"
+  },
+  {
+   "id": "doridina",
+   "parent": "nudibranchia",
+   "ja": "Doridina",
+   "sci": "Doridina",
+   "rank": "亜目",
+   "desc": "背中の後ろに、肛門を囲む花のようなえらをもつウミウシ。アオウミウシなど。"
+  },
+  {
+   "id": "cladobranchia",
+   "parent": "nudibranchia",
+   "ja": "Cladobranchia",
+   "sci": "Cladobranchia",
+   "rank": "亜目",
+   "desc": "背中に突起（ミノ）などが並ぶウミウシ。ミノウミウシ・メリベの仲間など。"
+  },
+  {
+   "id": "tectipleura",
+   "parent": "heterobranchia",
+   "ja": "Tectipleura",
+   "sci": "Tectipleura",
+   "rank": "クレード",
+   "desc": "アメフラシ・ハダカカメガイ（クリオネ）・タマノミドリガイの仲間と、カタツムリ・ナメクジなどの有肺類を含むまとまり。",
+   "polytomy": "アメフラシ類・翼足類・Sacoglossa（タマノミドリガイなど）・Eupulmonata の関係は解析によって異なる（Sacoglossa と有肺類をまとめる Panpulmonata を認めるかなど）ため、ここでは多分岐で示す。"
+  },
+  {
+   "id": "eupulmonata",
+   "parent": "tectipleura",
+   "ja": "Eupulmonata",
+   "sci": "Eupulmonata",
+   "rank": "クレード",
+   "desc": "陸のカタツムリ・ナメクジと、海辺のアワモチの仲間などを含むまとまり。外套腔が肺としてはたらく。"
+  },
+  {
+   "id": "stylommatophora",
+   "parent": "eupulmonata",
+   "ja": "柄眼目",
+   "sci": "Stylommatophora",
+   "rank": "目",
+   "desc": "陸のカタツムリとナメクジの多く。目が長い触角の先にある。"
+  },
+  {
+   "id": "systellommatophora",
+   "parent": "eupulmonata",
+   "ja": "Systellommatophora",
+   "sci": "Systellommatophora",
+   "rank": "目",
+   "desc": "殻をもたない、ナメクジ形の貝。海辺のアワモチの仲間と、陸のアシヒダナメクジの仲間。"
   }
  ],
  "species": [
@@ -3717,13 +3778,13 @@
    "aliases": [],
    "fact": "丸まると縞模様が車輪のように見える。高級なエビで、養殖もされている。",
    "tier": 1,
+   "sciSynonyms": [
+    "Marsupenaeus japonicus"
+   ],
    "groups": [
     "エビ"
    ],
-   "gbif": 2223429,
-   "sciSynonyms": [
-    "Marsupenaeus japonicus"
-   ]
+   "gbif": 2223429
   },
   {
    "id": "mijinko",
@@ -4089,7 +4150,7 @@
   },
   {
    "id": "amefurashi",
-   "parent": "heterobranchia",
+   "parent": "tectipleura",
    "ja": "アメフラシ",
    "sci": "Aplysia kurodai",
    "jaStatus": "standard",
@@ -4100,7 +4161,7 @@
   },
   {
    "id": "misujimaimai",
-   "parent": "heterobranchia",
+   "parent": "stylommatophora",
    "ja": "ミスジマイマイ",
    "sci": "Euhadra peliomphala",
    "jaStatus": "standard",
@@ -4371,13 +4432,13 @@
    "aliases": [],
    "fact": "菊の花のような個体が並ぶ塊状のサンゴ。浅い岩場でも見られる。",
    "tier": 2,
+   "sciSynonyms": [
+    "Favia speciosa"
+   ],
    "groups": [
     "サンゴ"
    ],
-   "gbif": 8400775,
-   "sciSynonyms": [
-    "Favia speciosa"
-   ]
+   "gbif": 8400775
   },
   {
    "id": "murasakihanaginchaku",
@@ -5873,7 +5934,7 @@
   },
   {
    "id": "aoumiushi",
-   "parent": "heterobranchia",
+   "parent": "doridina",
    "ja": "アオウミウシ",
    "sci": "Hypselodoris festiva",
    "jaStatus": "standard",
@@ -5887,7 +5948,7 @@
   },
   {
    "id": "namekuji",
-   "parent": "heterobranchia",
+   "parent": "stylommatophora",
    "ja": "ナメクジ",
    "sci": "Meghimatium bilineatum",
    "jaStatus": "standard",
@@ -6371,10 +6432,10 @@
    "aliases": [],
    "fact": "桃色の宝石サンゴ。深さ100 mより深い海にすみ、珊瑚細工に使われる。",
    "tier": 3,
-   "gbif": 10381632,
    "sciSynonyms": [
     "Corallium elatius"
-   ]
+   ],
+   "gbif": 10381632
   },
   {
    "id": "bizenkurage",
@@ -6476,10 +6537,10 @@
    "aliases": [],
    "fact": "北日本の食用ウニ。コンブなどの海藻を食べる。",
    "tier": 3,
-   "gbif": 6474261,
    "sciSynonyms": [
     "Strongylocentrotus nudus"
-   ]
+   ],
+   "gbif": 6474261
   },
   {
    "id": "rappauni",
@@ -6635,10 +6696,10 @@
    "aliases": [],
    "fact": "海に下る個体もいる。春の産卵の時期には、体に赤いすじが出る。",
    "tier": 3,
-   "gbif": 11564062,
    "sciSynonyms": [
     "Tribolodon hakonensis"
-   ]
+   ],
+   "gbif": 11564062
   },
   {
    "id": "zebrafish",
@@ -6790,10 +6851,10 @@
    "aliases": [],
    "fact": "日本固有種。田の畔に泡の卵塊を産む。目は金色で、ニホンアマガエルより目のまわりの黒いすじがない。",
    "tier": 3,
-   "gbif": 10674422,
    "sciSynonyms": [
     "Rhacophorus schlegelii"
-   ]
+   ],
+   "gbif": 10674422
   },
   {
    "id": "moriaogaeru",
@@ -7230,10 +7291,10 @@
    "aliases": [],
    "fact": "世界最長のヘビ。東南アジアの森や水辺にすむ。",
    "tier": 3,
-   "gbif": 9260388,
    "sciSynonyms": [
     "Python reticulatus"
-   ]
+   ],
+   "gbif": 9260388
   },
   {
    "id": "kusagame",
@@ -7862,10 +7923,10 @@
    "aliases": [],
    "fact": "槍の穂先のような細長い胴をもつイカ。冬から春に沿岸へやって来て卵を産む。",
    "tier": 2,
-   "gbif": 6521427,
    "sciSynonyms": [
     "Loligo bleekeri"
-   ]
+   ],
+   "gbif": 6521427
   },
   {
    "id": "kensakiika",
@@ -9335,7 +9396,7 @@
   },
   {
    "id": "hadakakamegai",
-   "parent": "heterobranchia",
+   "parent": "tectipleura",
    "ja": "ハダカカメガイ",
    "sci": "Clione elegantissima",
    "jaStatus": "standard",
@@ -9347,7 +9408,7 @@
   },
   {
    "id": "africamaimai",
-   "parent": "heterobranchia",
+   "parent": "stylommatophora",
    "ja": "アフリカマイマイ",
    "sci": "Lissachatina fulica",
    "jaStatus": "standard",
@@ -11217,7 +11278,7 @@
   },
   {
    "id": "kuroshitanashiumiushi",
-   "parent": "heterobranchia",
+   "parent": "doridina",
    "ja": "クロシタナシウミウシ",
    "sci": "Dendrodoris arborescens",
    "jaStatus": "standard",
@@ -11227,7 +11288,7 @@
   },
   {
    "id": "akaeraminoumiushi",
-   "parent": "heterobranchia",
+   "parent": "cladobranchia",
    "ja": "アカエラミノウミウシ",
    "sci": "Sakuraeolis enosimensis",
    "jaStatus": "standard",
@@ -11372,7 +11433,7 @@
   },
   {
    "id": "ashihidanamekuji",
-   "parent": "heterobranchia",
+   "parent": "systellommatophora",
    "ja": "アシヒダナメクジ",
    "sci": "Laevicaulis alte",
    "jaStatus": "standard",
@@ -11425,7 +11486,7 @@
   },
   {
    "id": "umifukurou",
-   "parent": "heterobranchia",
+   "parent": "nudipleura",
    "ja": "ウミフクロウ",
    "sci": "Pleurobranchaea japonica",
    "jaStatus": "standard",
@@ -11445,7 +11506,7 @@
   },
   {
    "id": "aominoumiushi",
-   "parent": "heterobranchia",
+   "parent": "cladobranchia",
    "ja": "アオミノウミウシ",
    "sci": "Glaucus atlanticus",
    "jaStatus": "standard",
@@ -11546,7 +11607,7 @@
   },
   {
    "id": "mukademeribe",
-   "parent": "heterobranchia",
+   "parent": "cladobranchia",
    "ja": "ムカデメリベ",
    "sci": "Melibe viridis",
    "jaStatus": "standard",
@@ -11556,7 +11617,7 @@
   },
   {
    "id": "udefuritsunozayaumiushi",
-   "parent": "heterobranchia",
+   "parent": "doridina",
    "ja": "ウデフリツノザヤウミウシ",
    "sci": "Thecacera pacifica",
    "jaStatus": "standard",
@@ -11568,7 +11629,7 @@
   },
   {
    "id": "tamanomidorigai",
-   "parent": "heterobranchia",
+   "parent": "tectipleura",
    "ja": "タマノミドリガイ",
    "sci": "Edenttellina limax",
    "jaStatus": "standard",
@@ -12138,7 +12199,7 @@
   },
   {
    "id": "yamatomeribe",
-   "parent": "heterobranchia",
+   "parent": "cladobranchia",
    "ja": "ヤマトメリベ",
    "sci": "Melibe japonica",
    "jaStatus": "standard",
@@ -12158,7 +12219,7 @@
   },
   {
    "id": "kochouumiushi",
-   "parent": "heterobranchia",
+   "parent": "cladobranchia",
    "ja": "コチョウウミウシ",
    "sci": "Crosslandia viridis",
    "jaStatus": "standard",
