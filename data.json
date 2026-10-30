@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "datasetVersion": "0.3.9",
+  "datasetVersion": "0.3.16.1",
   "title": "和名版・動物系統あて 代表種データ（初版）",
   "referenceDate": "2026-10-22",
   "taxonomy": {
@@ -47,10 +47,6 @@
     "4": 0.7
    },
    "bucketWeight": "sqrt"
-  },
-  "next": {
-   "from": "2026-10-29",
-   "file": "data-0.3.16.json"
   }
  },
  "clades": [
@@ -1081,14 +1077,6 @@
    "desc": "箱形の傘をもつクラゲ。眼をもち、毒が強いものが多い。"
   },
   {
-   "id": "staurozoa",
-   "parent": "medusozoa",
-   "ja": "十文字クラゲ綱",
-   "sci": "Staurozoa",
-   "rank": "綱",
-   "desc": "海藻などに柄で付着して暮らすクラゲ。"
-  },
-  {
    "id": "hydrozoa",
    "parent": "medusozoa",
    "ja": "ヒドロ虫綱",
@@ -2045,7 +2033,7 @@
   },
   {
    "id": "onchidiidae",
-   "parent": "heterobranchia",
+   "parent": "systellommatophora",
    "ja": "アワモチ科",
    "sci": "Onchidiidae",
    "rank": "科",
@@ -2451,6 +2439,135 @@
    "verify": {
     "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
    }
+  },
+  {
+   "id": "nematomorpha",
+   "parent": "nematoida",
+   "ja": "類線形動物門",
+   "sci": "Nematomorpha",
+   "rank": "門",
+   "desc": "幼生は昆虫などに寄生し、成体は水中で暮らす。"
+  },
+  {
+   "id": "onychophora",
+   "parent": "panarthropoda",
+   "ja": "有爪動物門",
+   "sci": "Onychophora",
+   "rank": "門",
+   "desc": "カギムシ。粘液を発射して獲物を捕らえる。南半球と熱帯に分布。"
+  },
+  {
+   "id": "loricifera",
+   "parent": "scalidophora",
+   "ja": "胴甲動物門",
+   "sci": "Loricifera",
+   "rank": "門",
+   "desc": "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。"
+  },
+  {
+   "id": "micrognathozoa",
+   "parent": "gnathifera",
+   "ja": "微顎動物門",
+   "sci": "Micrognathozoa",
+   "rank": "門",
+   "desc": "2000年に記載された門。複雑なあごをもつ0.1 mmほどの淡水の動物。"
+  },
+  {
+   "id": "cycliophora",
+   "parent": "lophotrochozoa",
+   "ja": "有輪動物門",
+   "sci": "Cycliophora",
+   "rank": "門",
+   "desc": "1995年に記載された門。アカザエビ類の口器に付着してくらす。"
+  },
+  {
+   "id": "monotremata",
+   "parent": "mammalia",
+   "ja": "単孔目",
+   "sci": "Monotremata",
+   "rank": "目",
+   "desc": "卵を産む哺乳類。カモノハシとハリモグラの仲間。"
+  },
+  {
+   "id": "carabidae",
+   "parent": "coleoptera",
+   "ja": "オサムシ科",
+   "sci": "Carabidae",
+   "rank": "科",
+   "desc": "地上を歩き回る肉食の甲虫が多い。ハンミョウもこの科に含める。"
+  },
+  {
+   "id": "cerambycidae",
+   "parent": "coleoptera",
+   "ja": "カミキリムシ科",
+   "sci": "Cerambycidae",
+   "rank": "科",
+   "desc": "長い触角をもつ甲虫。幼虫は木の幹の中を食べて育つ。"
+  },
+  {
+   "id": "nudipleura",
+   "parent": "heterobranchia",
+   "ja": "Nudipleura",
+   "sci": "Nudipleura",
+   "rank": "クレード",
+   "desc": "ウミウシの多く（裸鰓目）と、ウミフクロウなどの側鰓類。殻は無いか、体の中に小さく残るだけ。"
+  },
+  {
+   "id": "nudibranchia",
+   "parent": "nudipleura",
+   "ja": "裸鰓目",
+   "sci": "Nudibranchia",
+   "rank": "目",
+   "desc": "大人になると殻をもたないウミウシの仲間。えらが体の表面にむき出しになっている。"
+  },
+  {
+   "id": "doridina",
+   "parent": "nudibranchia",
+   "ja": "Doridina",
+   "sci": "Doridina",
+   "rank": "亜目",
+   "desc": "背中の後ろに、肛門を囲む花のようなえらをもつウミウシ。アオウミウシなど。"
+  },
+  {
+   "id": "cladobranchia",
+   "parent": "nudibranchia",
+   "ja": "Cladobranchia",
+   "sci": "Cladobranchia",
+   "rank": "亜目",
+   "desc": "背中に突起（ミノ）などが並ぶウミウシ。ミノウミウシ・メリベの仲間など。"
+  },
+  {
+   "id": "tectipleura",
+   "parent": "heterobranchia",
+   "ja": "Tectipleura",
+   "sci": "Tectipleura",
+   "rank": "クレード",
+   "desc": "アメフラシ・ハダカカメガイ（クリオネ）・タマノミドリガイの仲間と、カタツムリ・ナメクジなどの有肺類を含むまとまり。",
+   "polytomy": "アメフラシ類・翼足類・Sacoglossa（タマノミドリガイなど）・Eupulmonata の関係は解析によって異なる（Sacoglossa と有肺類をまとめる Panpulmonata を認めるかなど）ため、ここでは多分岐で示す。"
+  },
+  {
+   "id": "eupulmonata",
+   "parent": "tectipleura",
+   "ja": "Eupulmonata",
+   "sci": "Eupulmonata",
+   "rank": "クレード",
+   "desc": "陸のカタツムリ・ナメクジと、海辺のアワモチの仲間などを含むまとまり。外套腔が肺としてはたらく。"
+  },
+  {
+   "id": "stylommatophora",
+   "parent": "eupulmonata",
+   "ja": "柄眼目",
+   "sci": "Stylommatophora",
+   "rank": "目",
+   "desc": "陸のカタツムリとナメクジの多く。目が長い触角の先にある。"
+  },
+  {
+   "id": "systellommatophora",
+   "parent": "eupulmonata",
+   "ja": "Systellommatophora",
+   "sci": "Systellommatophora",
+   "rank": "目",
+   "desc": "殻をもたない、ナメクジ形の貝。海辺のアワモチの仲間と、陸のアシヒダナメクジの仲間。"
   }
  ],
  "species": [
@@ -2503,7 +2620,7 @@
    "verify": {
     "sci": "日本産個体群の種同定は再検討の余地あり"
    },
-   "tier": 3,
+   "tier": 2,
    "groups": [
     "クシクラゲ"
    ],
@@ -2669,7 +2786,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "糸巻きのような五角形のヒトデ。発生学の研究材料として古くから使われる。",
-   "tier": 2,
+   "tier": 1,
    "groups": [
     "ヒトデ"
    ],
@@ -2686,7 +2803,7 @@
    "verify": {
     "ja": "標準和名と学名の対応を要確認"
    },
-   "tier": 4,
+   "tier": 2,
    "groups": [
     "クモヒトデ"
    ],
@@ -2757,7 +2874,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "動物なのにセルロースを作れる。幼生期には脊索をもつ。",
-   "tier": 2,
+   "tier": 1,
    "groups": [
     "ホヤ"
    ],
@@ -2824,7 +2941,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "尾に毒のある棘をもつ。エイ類はサメ類の姉妹群で、鰓孔が腹側に開く。",
-   "tier": 2,
+   "tier": 1,
    "groups": [
     "エイ"
    ],
@@ -3025,7 +3142,7 @@
   },
   {
    "id": "kamonohashi",
-   "parent": "mammalia",
+   "parent": "monotremata",
    "ja": "カモノハシ",
    "sci": "Ornithorhynchus anatinus",
    "jaStatus": "standard",
@@ -3658,13 +3775,13 @@
    "aliases": [],
    "fact": "丸まると縞模様が車輪のように見える。高級なエビで、養殖もされている。",
    "tier": 1,
+   "sciSynonyms": [
+    "Marsupenaeus japonicus"
+   ],
    "groups": [
     "エビ"
    ],
-   "gbif": 2223429,
-   "sciSynonyms": [
-    "Marsupenaeus japonicus"
-   ]
+   "gbif": 2223429
   },
   {
    "id": "mijinko",
@@ -4030,7 +4147,7 @@
   },
   {
    "id": "amefurashi",
-   "parent": "heterobranchia",
+   "parent": "tectipleura",
    "ja": "アメフラシ",
    "sci": "Aplysia kurodai",
    "jaStatus": "standard",
@@ -4041,7 +4158,7 @@
   },
   {
    "id": "misujimaimai",
-   "parent": "heterobranchia",
+   "parent": "stylommatophora",
    "ja": "ミスジマイマイ",
    "sci": "Euhadra peliomphala",
    "jaStatus": "standard",
@@ -4238,7 +4355,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "長いガラス質の繊維の束で深海の泥に体を立てる。束が仏具の払子（ほっす）に似る。",
-   "tier": 3,
+   "tier": 4,
    "groups": [
     "ガラス海綿"
    ],
@@ -4311,14 +4428,14 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "菊の花のような個体が並ぶ塊状のサンゴ。浅い岩場でも見られる。",
-   "tier": 3,
+   "tier": 2,
+   "sciSynonyms": [
+    "Favia speciosa"
+   ],
    "groups": [
     "サンゴ"
    ],
-   "gbif": 8400775,
-   "sciSynonyms": [
-    "Favia speciosa"
-   ]
+   "gbif": 8400775
   },
   {
    "id": "murasakihanaginchaku",
@@ -4395,23 +4512,6 @@
    "gbif": 4340380
   },
   {
-   "id": "asagaokurage",
-   "parent": "staurozoa",
-   "ja": "シラスジアサガオクラゲ",
-   "sci": "Haliclystus borealis",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "漏斗形の体を柄で海藻に付け、縁の8つの腕の先に小さな触手の房をもつ。",
-   "verify": {
-    "ja": "和名は GBIF のみ。標準和名と学名の対応を要確認"
-   },
-   "tier": 4,
-   "groups": [
-    "ジュウモンジクラゲ"
-   ],
-   "gbif": 2264664
-  },
-  {
    "id": "katsuononkanmuri",
    "parent": "hydrozoa",
    "ja": "カツオノカンムリ",
@@ -4430,7 +4530,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "成熟したクラゲが若いポリプに戻ることがあり「不老不死のクラゲ」と呼ばれる。日本近海のベニクラゲ類は別種とされる。",
-   "tier": 2,
+   "tier": 3,
    "groups": [
     "ベニクラゲ"
    ],
@@ -4477,7 +4577,7 @@
    "verify": {
     "sci": "太平洋の個体群を A. solaris として分ける提案がある"
    },
-   "tier": 1,
+   "tier": 2,
    "groups": [
     "ヒトデ"
    ],
@@ -4534,7 +4634,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "長く折れやすい毒棘をもつ。",
-   "tier": 3,
+   "tier": 2,
    "groups": [
     "ウニ"
    ],
@@ -4548,7 +4648,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "サンゴ礁の砂地にすむ黒いナマコ。砂ごと有機物を食べて海底をきれいにする。",
-   "tier": 3,
+   "tier": 2,
    "groups": [
     "ナマコ"
    ],
@@ -4579,7 +4679,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "発生学のモデル生物。2002年に脊椎動物以外の脊索動物で初めてゲノムが読まれた。その時は Ciona intestinalis とされていたが、2015年に本種として分けられた。",
-   "tier": 3,
+   "tier": 2,
    "groups": [
     "ホヤ"
    ],
@@ -5831,7 +5931,7 @@
   },
   {
    "id": "aoumiushi",
-   "parent": "heterobranchia",
+   "parent": "doridina",
    "ja": "アオウミウシ",
    "sci": "Hypselodoris festiva",
    "jaStatus": "standard",
@@ -5845,7 +5945,7 @@
   },
   {
    "id": "namekuji",
-   "parent": "heterobranchia",
+   "parent": "stylommatophora",
    "ja": "ナメクジ",
    "sci": "Meghimatium bilineatum",
    "jaStatus": "standard",
@@ -6262,7 +6362,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "地中海産。骨格が柔らかい繊維だけでできていて、昔から入浴用の海綿にされた。",
-   "tier": 3,
+   "tier": 4,
    "gbif": 8234398
   },
   {
@@ -6273,7 +6373,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "体に縦じまがある小型種。分裂して増え、世界中の港に広がった。",
-   "tier": 3,
+   "tier": 2,
    "gbif": 4283395
   },
   {
@@ -6284,7 +6384,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "サンゴ礁の大型のイソギンチャク。クマノミ類がすむ。",
-   "tier": 3,
+   "tier": 4,
    "gbif": 2257005
   },
   {
@@ -6295,7 +6395,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "1つの大きなポリプからなる、きのこの傘のような円盤形のサンゴ。固着せず海底に転がっている。",
-   "tier": 3,
+   "tier": 4,
    "gbif": 2260627
   },
   {
@@ -6306,7 +6406,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "表面に脳のような溝が走る塊状のサンゴ。",
-   "tier": 3,
+   "tier": 4,
    "gbif": 5184733
   },
   {
@@ -6329,10 +6429,10 @@
    "aliases": [],
    "fact": "桃色の宝石サンゴ。深さ100 mより深い海にすみ、珊瑚細工に使われる。",
    "tier": 3,
-   "gbif": 10381632,
    "sciSynonyms": [
     "Corallium elatius"
-   ]
+   ],
+   "gbif": 10381632
   },
   {
    "id": "bizenkurage",
@@ -6400,7 +6500,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "砂に潜り、貝などを丸のみにする。管足に吸盤がない。",
-   "tier": 3,
+   "tier": 4,
    "gbif": 5186589
   },
   {
@@ -6434,10 +6534,10 @@
    "aliases": [],
    "fact": "北日本の食用ウニ。コンブなどの海藻を食べる。",
    "tier": 3,
-   "gbif": 6474261,
    "sciSynonyms": [
     "Strongylocentrotus nudus"
-   ]
+   ],
+   "gbif": 6474261
   },
   {
    "id": "rappauni",
@@ -6491,7 +6591,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "左右に張り出した頭の両端に目がある。群れをつくることがある。",
-   "tier": 2,
+   "tier": 1,
    "gbif": 2418789
   },
   {
@@ -6579,7 +6679,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "繁殖期の雄は青や赤の婚姻色になる。",
-   "tier": 3,
+   "tier": 2,
    "sciSynonyms": [
     "Zacco platypus"
    ]
@@ -6593,10 +6693,10 @@
    "aliases": [],
    "fact": "海に下る個体もいる。春の産卵の時期には、体に赤いすじが出る。",
    "tier": 3,
-   "gbif": 11564062,
    "sciSynonyms": [
     "Tribolodon hakonensis"
-   ]
+   ],
+   "gbif": 11564062
   },
   {
    "id": "zebrafish",
@@ -6609,7 +6709,7 @@
    "verify": {
     "sci": "日本産ではないため日本産魚類全種目録の対象外。Catalog of Fishes とは未照合"
    },
-   "tier": 3,
+   "tier": 1,
    "gbif": 9797255
   },
   {
@@ -6748,10 +6848,10 @@
    "aliases": [],
    "fact": "日本固有種。田の畔に泡の卵塊を産む。目は金色で、ニホンアマガエルより目のまわりの黒いすじがない。",
    "tier": 3,
-   "gbif": 10674422,
    "sciSynonyms": [
     "Rhacophorus schlegelii"
-   ]
+   ],
+   "gbif": 10674422
   },
   {
    "id": "moriaogaeru",
@@ -6804,7 +6904,8 @@
    "jaStatus": "standard",
    "aliases": [
     "ウーパールーパー",
-    "アホロートル"
+    "アホロートル",
+    "メキシコサラマンダー"
    ],
    "fact": "幼生の姿のまま成熟する。ウーパールーパーの名で知られる。再生研究に使われ、2018年に読まれたゲノムは約320億塩基対とヒトの10倍以上ある。",
    "tier": 1,
@@ -6816,9 +6917,14 @@
    "ja": "ニシゴリラ",
    "sci": "Gorilla gorilla",
    "jaStatus": "common",
-   "aliases": [],
+   "aliases": [
+    "ニシローランドゴリラ"
+   ],
    "fact": "最大級の霊長類。",
    "tier": 1,
+   "subspeciesAliases": [
+    "ニシローランドゴリラ"
+   ],
    "gbif": 2436441
   },
   {
@@ -6906,7 +7012,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "奄美大島と徳之島だけにすむ。耳が短い原始的なウサギ。特別天然記念物。",
-   "tier": 2,
+   "tier": 4,
    "gbif": 2436950
   },
   {
@@ -6921,22 +7027,6 @@
    "fact": "飼いウサギの祖先。地下に巣穴を掘る。",
    "tier": 1,
    "gbif": 2436940
-  },
-  {
-   "id": "kitanakiusagi",
-   "parent": "lagomorpha",
-   "ja": "キタナキウサギ",
-   "sci": "Ochotona hyperborea",
-   "jaStatus": "standard",
-   "aliases": [
-    "エゾナキウサギ"
-   ],
-   "fact": "北海道の岩場にすむ。高い声で鳴く。エゾナキウサギはその亜種。",
-   "tier": 3,
-   "subspeciesAliases": [
-    "エゾナキウサギ"
-   ],
-   "gbif": 2437002
   },
   {
    "id": "koubemogura",
@@ -7093,12 +7183,17 @@
    "ja": "キリン",
    "sci": "Giraffa camelopardalis",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "アミメキリン"
+   ],
    "fact": "首の骨の数はヒトと同じ7個。",
    "verify": {
     "sci": "複数種に分ける提案がある"
    },
    "tier": 1,
+   "subspeciesAliases": [
+    "アミメキリン"
+   ],
    "gbif": 2441205
   },
   {
@@ -7193,10 +7288,10 @@
    "aliases": [],
    "fact": "世界最長のヘビ。東南アジアの森や水辺にすむ。",
    "tier": 3,
-   "gbif": 9260388,
    "sciSynonyms": [
     "Python reticulatus"
-   ]
+   ],
+   "gbif": 9260388
   },
   {
    "id": "kusagame",
@@ -7825,10 +7920,10 @@
    "aliases": [],
    "fact": "槍の穂先のような細長い胴をもつイカ。冬から春に沿岸へやって来て卵を産む。",
    "tier": 2,
-   "gbif": 6521427,
    "sciSynonyms": [
     "Loligo bleekeri"
-   ]
+   ],
+   "gbif": 6521427
   },
   {
    "id": "kensakiika",
@@ -8410,16 +8505,6 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "のこぎり状の吻をもつサメ。エイの仲間のノコギリエイとは別。",
-   "tier": 3
-  },
-  {
-   "id": "hoshizame",
-   "parent": "carcharhiniformes",
-   "ja": "ホシザメ",
-   "sci": "Mustelus manazo",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "体に白い点が並ぶ。かまぼこの原料にされる。",
    "tier": 3
   },
   {
@@ -9020,7 +9105,9 @@
    "ja": "チョウ",
    "sci": "Argulus japonicus",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "ウオジラミ"
+   ],
    "fact": "コイや金魚の体表に寄生する鰓尾類。昆虫のチョウとは無関係。",
    "tier": 4
   },
@@ -9208,7 +9295,7 @@
   },
   {
    "id": "gomadarakamikiri",
-   "parent": "coleoptera",
+   "parent": "cerambycidae",
    "ja": "ゴマダラカミキリ",
    "sci": "Anoplophora malasiaca",
    "jaStatus": "standard",
@@ -9306,7 +9393,7 @@
   },
   {
    "id": "hadakakamegai",
-   "parent": "heterobranchia",
+   "parent": "tectipleura",
    "ja": "ハダカカメガイ",
    "sci": "Clione elegantissima",
    "jaStatus": "standard",
@@ -9318,7 +9405,7 @@
   },
   {
    "id": "africamaimai",
-   "parent": "heterobranchia",
+   "parent": "stylommatophora",
    "ja": "アフリカマイマイ",
    "sci": "Lissachatina fulica",
    "jaStatus": "standard",
@@ -9429,36 +9516,6 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "ジンドウイカに似た小型のイカ。",
-   "tier": 4
-  },
-  {
-   "id": "bouzujindouika",
-   "parent": "loliolus",
-   "ja": "ボウズジンドウイカ",
-   "sci": "Loliolus affinis",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "腕が短い小型のイカ。",
-   "tier": 4
-  },
-  {
-   "id": "asiabouzujindouika",
-   "parent": "loliolus",
-   "ja": "アジアボウズジンドウイカ",
-   "sci": "Loliolus hardwickei",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "ボウズジンドウイカによく似た小型のイカ。",
-   "tier": 4
-  },
-  {
-   "id": "uijindouika",
-   "parent": "loliolus",
-   "ja": "ウイジンドウイカ",
-   "sci": "Loliolus uyii",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "小型のジンドウイカ属のイカ。",
    "tier": 4
   },
   {
@@ -9718,26 +9775,6 @@
    "tier": 4
   },
   {
-   "id": "sekitoriiwashi",
-   "parent": "otomorpha",
-   "ja": "セキトリイワシ",
-   "sci": "Rouleina squamilatera",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "深海にすむ黒っぽい魚。",
-   "tier": 4
-  },
-  {
-   "id": "nezumigisu",
-   "parent": "ostariophysi",
-   "ja": "ネズミギス",
-   "sci": "Gonorynchus abbreviatus",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "砂底にすむ細長い魚。コイやナマズと同じ骨鰾類。",
-   "tier": 4
-  },
-  {
    "id": "gigi",
    "parent": "siluriformes",
    "ja": "ギギ",
@@ -9745,7 +9782,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "西日本の川にすむ。胸びれの棘をこすって「ギーギー」と音を出す。",
-   "tier": 4
+   "tier": 3
   },
   {
    "id": "nigisu",
@@ -9845,7 +9882,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "硬いうろこでおおわれ、あごの下に発光器をもつ。",
-   "tier": 4
+   "tier": 3
   },
   {
    "id": "ittoudai",
@@ -9855,16 +9892,6 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "赤い体と大きな目をもつ。",
-   "tier": 4
-  },
-  {
-   "id": "ashiro",
-   "parent": "ophidiiformes",
-   "ja": "アシロ",
-   "sci": "Ophidion asiro",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "砂底にすむ細長い魚。",
    "tier": 4
   },
   {
@@ -10007,16 +10034,6 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "背びれの前に棘をもつ。",
-   "tier": 4
-  },
-  {
-   "id": "kikuzame",
-   "parent": "selachii",
-   "ja": "キクザメ",
-   "sci": "Echinorhinus brucus",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "体に菊の花のような大きな突起が散らばる深海のサメ。",
    "tier": 4
   },
   {
@@ -10313,7 +10330,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "関東・東北の平野部にすむ。",
-   "tier": 3
+   "tier": 1
   },
   {
    "id": "ichimonjitanago",
@@ -10336,16 +10353,6 @@
    "tier": 3
   },
   {
-   "id": "ootanago",
-   "parent": "acheilognathidae",
-   "ja": "オオタナゴ",
-   "sci": "Acheilognathus macropterus",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "大陸から入った外来のタナゴ。",
-   "tier": 4
-  },
-  {
    "id": "kanehira",
    "parent": "acheilognathidae",
    "ja": "カネヒラ",
@@ -10353,17 +10360,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "日本のタナゴでは大型。秋に産卵する。",
-   "tier": 4
-  },
-  {
-   "id": "zenitanago",
-   "parent": "acheilognathidae",
-   "ja": "ゼニタナゴ",
-   "sci": "Acheilognathus typus",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "うろこが細かい。数が大きく減っている。",
-   "tier": 4
+   "tier": 3
   },
   {
    "id": "miyakotanago",
@@ -10464,16 +10461,6 @@
    "aliases": [],
    "fact": "体が細長い小さなハゼ。海岸や河口の石のすき間にすむ。",
    "tier": 4
-  },
-  {
-   "id": "datehaze",
-   "parent": "gobiiformes",
-   "ja": "ダテハゼ",
-   "sci": "Amblyeleotris japonica",
-   "jaStatus": "standard",
-   "aliases": [],
-   "fact": "テッポウエビの仲間が掘った巣穴に同居し、ハゼが見張り役をする。",
-   "tier": 3
   },
   {
    "id": "mizukamakiri",
@@ -10881,7 +10868,7 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "モミジガイの仲間で、腕の縁に長い棘が並ぶ。砂底にすみ、フグ毒（テトロドトキシン）をもつ例が報告されている。",
-   "tier": 4
+   "tier": 3
   },
   {
    "id": "sukashikashipan",
@@ -11254,6 +11241,1835 @@
    "jaStatus": "standard",
    "aliases": [],
    "fact": "コイなどのえらにつく。2匹の幼虫が出会って体が合わさり、一生X字形につながったまま暮らす。",
+   "tier": 3
+  },
+  {
+   "id": "kumanoashitsuki",
+   "parent": "sedentaria",
+   "ja": "クマノアシツキ",
+   "sci": "Acrocirrus validus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の石の下などにすむゴカイの仲間（多毛類）。",
+   "tier": 4
+  },
+  {
+   "id": "samidorisashiba",
+   "parent": "phyllodocida",
+   "ja": "サミドリサシバ",
+   "sci": "Eulalia viridis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鮮やかな緑色をしたサシバゴカイの仲間。磯の岩の間にすむ。",
+   "tier": 4
+  },
+  {
+   "id": "sanhachiurokomushi",
+   "parent": "phyllodocida",
+   "ja": "サンハチウロコムシ",
+   "sci": "Hermilepidonotus helotypus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中がうろこのような板でおおわれるウロコムシの仲間。",
+   "tier": 4
+  },
+  {
+   "id": "kuroshitanashiumiushi",
+   "parent": "doridina",
+   "ja": "クロシタナシウミウシ",
+   "sci": "Dendrodoris arborescens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒っぽいウミウシ。名のとおり、多くの巻貝がもつ歯舌（やすり状の歯）がない。",
+   "tier": 3
+  },
+  {
+   "id": "akaeraminoumiushi",
+   "parent": "cladobranchia",
+   "ja": "アカエラミノウミウシ",
+   "sci": "Sakuraeolis enosimensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中にミノのような突起が並ぶウミウシ。内湾の岸壁などでよく見られる。",
+   "tier": 3
+  },
+  {
+   "id": "dainanginpo",
+   "parent": "perciformes",
+   "ja": "ダイナンギンポ",
+   "sci": "Dictyosoma temminckii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の岩の間にすむ細長い魚。ギンポと呼ばれるが、ギンポ目ではない。",
+   "tier": 3
+  },
+  {
+   "id": "nabeka",
+   "parent": "blenniiformes",
+   "ja": "ナベカ",
+   "sci": "Omobranchus elegans",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯や岸壁の穴にすむ小さなギンポ目の魚。体の前半が黄色っぽい。",
+   "tier": 3
+  },
+  {
+   "id": "umiichigo",
+   "parent": "octocorallia",
+   "ja": "ウミイチゴ",
+   "sci": "Eleutherobia rubra",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤いイチゴのような形をした八放サンゴの仲間。",
+   "tier": 3
+  },
+  {
+   "id": "kaginotekurage",
+   "parent": "hydrozoa",
+   "ja": "カギノテクラゲ",
+   "sci": "Gonionemus vertens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "触手の途中が鉤のように曲がる小さなクラゲ。アマモ場などにすみ、刺されると強く痛む。",
+   "tier": 3
+  },
+  {
+   "id": "kikumeishimodoki",
+   "parent": "scleractinia",
+   "ja": "キクメイシモドキ",
+   "sci": "Oulastrea crispata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小さな群体をつくるイシサンゴ。温帯の浅い海や内湾でも見られる。",
+   "tier": 4
+  },
+  {
+   "id": "sanshouuni",
+   "parent": "echinoidea",
+   "ja": "サンショウウニ",
+   "sci": "Temnopleurus toreumaticus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "内湾の砂泥底にすむ小型のウニ。",
+   "tier": 3
+  },
+  {
+   "id": "kaiyadoriumigumo",
+   "parent": "chelicerata",
+   "ja": "カイヤドリウミグモ",
+   "sci": "Nymphonella tapetis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アサリなどの二枚貝の中に寄生するウミグモ。各地で増えてアサリ漁に被害を出した。",
+   "tier": 4
+  },
+  {
+   "id": "ryuujinoomukade",
+   "parent": "chilopoda",
+   "ja": "リュウジンオオムカデ",
+   "sci": "Scolopendra alcyona",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "2021年に新種として記載された、琉球列島と台湾の大型のムカデ。水に入って泳ぎ、水辺の生き物も食べる。",
+   "tier": 4
+  },
+  {
+   "id": "sashihariari",
+   "parent": "formicidae",
+   "ja": "サシハリアリ",
+   "sci": "Paraponera clavata",
+   "jaStatus": "standard",
+   "aliases": [
+    "パラポネラ"
+   ],
+   "fact": "中南米の熱帯林にすむ大型のアリ。刺されると非常に強い痛みが続く。",
+   "verify": {
+    "ja": "和名の出典は Wikidata のみ"
+   },
+   "tier": 3
+  },
+  {
+   "id": "ootsunohiramushi",
+   "parent": "polycladida",
+   "ja": "オオツノヒラムシ",
+   "sci": "Planocera multitentaculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本の磯の石の下でよく見られる大型のヒラムシ。",
+   "tier": 4
+  },
+  {
+   "id": "minohiramushi",
+   "parent": "polycladida",
+   "ja": "ミノヒラムシ",
+   "sci": "Thysanozoon brocchii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中一面に小さな突起が生えたヒラムシ。体を波打たせて泳ぐこともできる。",
+   "tier": 4
+  },
+  {
+   "id": "chigokemushi",
+   "parent": "bryozoa",
+   "ja": "チゴケムシ",
+   "sci": "Watersipora subatra",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "港の岸壁や船底に付着し、赤黒い板状の群体をつくるコケムシ。",
+   "tier": 4
+  },
+  {
+   "id": "tagayasanminashi",
+   "parent": "caenogastropoda",
+   "ja": "タガヤサンミナシ",
+   "sci": "Conus textile",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イモガイの一種。網目模様の殻をもつ。毒のある銛のような歯舌で獲物を刺し、人も刺されると危険。",
+   "tier": 3
+  },
+  {
+   "id": "ashihidanamekuji",
+   "parent": "systellommatophora",
+   "ja": "アシヒダナメクジ",
+   "sci": "Laevicaulis alte",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "殻のない陸の貝で、足の両側にひだがある。外来種で、南西諸島などに定着している。",
+   "tier": 3
+  },
+  {
+   "id": "mimiika",
+   "parent": "decapodiformes",
+   "ja": "ミミイカ",
+   "sci": "Euprymna morsei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "耳のようなひれをもつ小さなイカ。昼は砂に潜って過ごす。",
+   "tier": 3
+  },
+  {
+   "id": "ooguchiboya",
+   "parent": "tunicata",
+   "ja": "オオグチボヤ",
+   "sci": "Megalodicopia hians",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむホヤ。大きく開いた口のような入水孔を閉じて、流れてきた小さな動物を捕らえて食べる。",
+   "tier": 3
+  },
+  {
+   "id": "harigane",
+   "parent": "nematomorpha",
+   "ja": "ハリガネムシ",
+   "sci": "Gordius aquaticus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "針金のように細長い体の寄生虫。幼生は昆虫などの体内で育ち、成体になると水の中に出てくる。",
+   "tier": 2
+  },
+  {
+   "id": "africaooyasude",
+   "parent": "diplopoda",
+   "ja": "アフリカオオヤスデ",
+   "sci": "Archispirostreptus gigas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ東部にすむ大型のヤスデ。ペットとして飼われる。",
+   "verify": {
+    "ja": "和名の出典は Wikidata のみ"
+   },
+   "tier": 3
+  },
+  {
+   "id": "umifukurou",
+   "parent": "nudipleura",
+   "ja": "ウミフクロウ",
+   "sci": "Pleurobranchaea japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "殻のないウミウシの仲間。肉食で、ほかの小動物を食べる。",
+   "tier": 4
+  },
+  {
+   "id": "gogoshimayumushi",
+   "parent": "sedentaria",
+   "ja": "ゴゴシマユムシ",
+   "sci": "Ikedosoma gogoshimense",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "瀬戸内海の興居島（ごごしま）にちなんで名づけられたユムシの仲間。干潟の泥に穴を掘ってすむ。",
+   "tier": 4
+  },
+  {
+   "id": "aominoumiushi",
+   "parent": "cladobranchia",
+   "ja": "アオミノウミウシ",
+   "sci": "Glaucus atlanticus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海面に浮かんで暮らす青いウミウシ。カツオノエボシなどを食べ、その刺胞を体にためて身を守る。英語では blue dragon（青いドラゴン）と呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "ishidatami",
+   "parent": "vetigastropoda",
+   "ja": "イシダタミ",
+   "sci": "Monodonta confusa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の岩の上でふつうに見られる巻貝。殻の表面が石畳のような模様になる。",
+   "tier": 3
+  },
+  {
+   "id": "hishigani",
+   "parent": "brachyura",
+   "ja": "ヒシガニ",
+   "sci": "Enoplolambrus validus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "甲羅がひし形をしたカニ。はさみが大きく、砂泥底にすむ。",
+   "tier": 4
+  },
+  {
+   "id": "hishikui",
+   "parent": "anseriformes",
+   "ja": "ヒシクイ",
+   "sci": "Anser fabalis",
+   "jaStatus": "standard",
+   "aliases": [
+    "オオヒシクイ"
+   ],
+   "fact": "冬に日本へ渡ってくる大型のガン。黒いくちばしに橙色の帯がある。",
+   "subspeciesAliases": [
+    "オオヒシクイ"
+   ],
+   "tier": 4,
+   "verify": {
+    "sci": "IOC 世界鳥類リストは亜種ヒシクイ（serrirostris）を別種 Anser serrirostris とし、オオヒシクイは A. fabalis に残す。ここでは日本鳥類目録改訂第8版に合わせた"
+   }
+  },
+  {
+   "id": "sunaisoginchaku",
+   "parent": "actiniaria",
+   "ja": "スナイソギンチャク",
+   "sci": "Dofleinia armata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂泥底にすむ大型のイソギンチャク。刺されると強く痛み、ひどく腫れることがある。",
+   "tier": 4
+  },
+  {
+   "id": "greenhydra",
+   "parent": "hydrozoa",
+   "ja": "グリーンヒドラ",
+   "sci": "Hydra viridissima",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "淡水にすむヒドラ。体の細胞の中に緑藻（クロレラの仲間）をすまわせていて、緑色に見える。",
+   "verify": {
+    "ja": "和名の出典は iNaturalist と教育・研究の資料"
+   },
+   "tier": 3
+  },
+  {
+   "id": "shirogaya",
+   "parent": "hydrozoa",
+   "ja": "シロガヤ",
+   "sci": "Aglaophenia whiteleggei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鳥の羽のような形の群体をつくるヒドロ虫。触れると刺されて痛む。",
+   "tier": 4
+  },
+  {
+   "id": "togarisarupa",
+   "parent": "tunicata",
+   "ja": "トガリサルパ",
+   "sci": "Salpa fusiformis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海を漂う透明な樽形のホヤの仲間（サルパ）。1匹で暮らす世代と、鎖のようにつながる世代を交互に繰り返す。",
+   "tier": 3
+  },
+  {
+   "id": "ootarumawashi",
+   "parent": "malacostraca",
+   "ja": "オオタルマワシ",
+   "sci": "Phronima sedentaria",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明なヨコエビの仲間。サルパなどの体をくり抜いて樽を作り、その中で子を育てる。",
+   "tier": 4
+  },
+  {
+   "id": "mukademeribe",
+   "parent": "cladobranchia",
+   "ja": "ムカデメリベ",
+   "sci": "Melibe viridis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "頭の大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。",
+   "tier": 4
+  },
+  {
+   "id": "udefuritsunozayaumiushi",
+   "parent": "doridina",
+   "ja": "ウデフリツノザヤウミウシ",
+   "sci": "Thecacera pacifica",
+   "jaStatus": "standard",
+   "aliases": [
+    "ピカチュウウミウシ"
+   ],
+   "fact": "黄色い体に青や橙の模様がある小さなウミウシ。その姿から「ピカチュウウミウシ」の愛称で呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "tamanomidorigai",
+   "parent": "tectipleura",
+   "ja": "タマノミドリガイ",
+   "sci": "Edenttellina limax",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "巻貝の仲間なのに、二枚貝のような2枚の殻をもつ。緑色で、海藻の上で暮らす。",
+   "verify": {
+    "ja": "和名の出典は iNaturalist のみ"
+   },
+   "tier": 4
+  },
+  {
+   "id": "gaikotsupandahoya",
+   "parent": "tunicata",
+   "ja": "ガイコツパンダホヤ",
+   "sci": "Clavelina ossipandae",
+   "jaStatus": "standard",
+   "aliases": [
+    "パンダボヤ"
+   ],
+   "fact": "沖縄の久米島で見つかり、2024年に新種として記載されたホヤ。パンダの顔のような黒い模様と骨のような白い筋があり、パンダボヤとも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "ultramanboya",
+   "parent": "tunicata",
+   "ja": "ウルトラマンボヤ",
+   "sci": "Pycnoclavella diminuta",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小さな群体をつくるホヤ。一つ一つの個体の模様がウルトラマンの顔に似ていることから呼ばれる。",
+   "verify": {
+    "ja": "和名は仮称（CoL・iNaturalist）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "sukumiringogai",
+   "parent": "caenogastropoda",
+   "ja": "スクミリンゴガイ",
+   "sci": "Pomacea canaliculata",
+   "jaStatus": "standard",
+   "aliases": [
+    "ジャンボタニシ"
+   ],
+   "fact": "南米原産の淡水の巻貝。食用に持ち込まれて野生化し、水田のイネを食べる害貝になった。ジャンボタニシとも呼ばれるが、タニシ科ではなくリンゴガイ科の貝。",
+   "tier": 2
+  },
+  {
+   "id": "monhanashako",
+   "parent": "malacostraca",
+   "ja": "モンハナシャコ",
+   "sci": "Odontodactylus scyllarus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "色鮮やかなシャコ。こん棒のような捕脚で、貝殻を割るほど強く打ちつける。",
+   "tier": 2
+  },
+  {
+   "id": "onimuchouuzumushi",
+   "parent": "xenacoelomorpha",
+   "ja": "オニムチョウウズムシ",
+   "sci": "Amphiscolops oni",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "2022年に新種として記載された小さな無腸類。背中に鬼の角のような長い突起がある。",
+   "verify": {
+    "ja": "和名の出典は記載した研究者の発表（筑波大学、2022）と iNaturalist"
+   },
+   "tier": 4
+  },
+  {
+   "id": "kingghidorahsyllis",
+   "parent": "phyllodocida",
+   "ja": "キングギドラシリス",
+   "sci": "Ramisyllis kingghidorahi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "2022年に佐渡島の個体から新種として記載されたゴカイの仲間。体の後ろが何度も枝分かれし、海綿の中で暮らす。",
+   "verify": {
+    "ja": "和名の出典は記載した研究者の発表（2022）と Wikidata"
+   },
+   "tier": 3
+  },
+  {
+   "id": "sappa",
+   "parent": "clupeiformes",
+   "ja": "サッパ",
+   "sci": "Sardinella zunasi",
+   "jaStatus": "standard",
+   "aliases": [
+    "ママカリ"
+   ],
+   "fact": "内湾にすむニシンの仲間。岡山県などでは「ママカリ」と呼ばれ、酢漬けにして食べる。",
+   "tier": 3
+  },
+  {
+   "id": "totorokagimushi",
+   "parent": "onychophora",
+   "ja": "トトロカギムシ",
+   "sci": "Eoperipatus totoro",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ベトナムで見つかり、2013年に新種として記載されたカギムシ。学名は映画『となりのトトロ』にちなむ。",
+   "verify": {
+    "ja": "学術的な和名は確認できず、報道で使われた呼び名"
+   },
+   "tier": 3
+  },
+  {
+   "id": "somewakeumikuwagata",
+   "parent": "isopoda",
+   "ja": "ソメワケウミクワガタ",
+   "sci": "Elaphognathia discolor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ウミクワガタの仲間。幼生は魚の血を吸い、成体の雄はクワガタのような大あごをもち、複数の雌を囲うハーレムをつくる。",
+   "tier": 4
+  },
+  {
+   "id": "shinkaishiwakouramushi",
+   "parent": "loricifera",
+   "ja": "シンカイシワコウラムシ",
+   "sci": "Pliciloricus hadalis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "伊豆・小笠原海溝の水深8,260 mの海底から1988年に記載された胴甲動物。日本から初めて記載された胴甲動物。",
+   "verify": {
+    "ja": "和名の出典は日本語版ウィキペディアのみ（学術的な出典は未確認）"
+   },
+   "tier": 4,
+   "groups": [
+    "コウラムシ"
+   ]
+  },
+  {
+   "id": "koagomushi",
+   "parent": "micrognathozoa",
+   "ja": "コアゴムシ",
+   "sci": "Limnognathia maerski",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "グリーンランドのディスコ島の冷たい湧き水で1994年に見つかり、2000年に記載された微小な動物。この種のために微顎動物門が設けられた。",
+   "verify": {
+    "ja": "和名の出典は GBIF（Catalogue of Life）と iNaturalist（学術的な出典は未確認）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "pandoramushi",
+   "parent": "cycliophora",
+   "ja": "パンドラムシ",
+   "sci": "Symbion pandora",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ヨーロッパアカザエビの口のまわりの毛に付着してくらす、1 mmに満たない動物。1995年に記載され、この種のために有輪動物門が設けられた。",
+   "verify": {
+    "ja": "和名の出典は日本語版ウィキペディアと大学の研究室の発信（学術的な出典は未確認）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "ooikarinamako",
+   "parent": "holothuroidea",
+   "ja": "オオイカリナマコ",
+   "sci": "Synapta maculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "サンゴ礁の砂地にすむ、ひものように細長いナマコ。長さ2 mほどになる。皮膚に錨（いかり）の形をした骨片があり、触るとくっつく。",
+   "tier": 4
+  },
+  {
+   "id": "senjunamako",
+   "parent": "holothuroidea",
+   "ja": "センジュナマコ",
+   "sci": "Scotoplanes globosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海の泥の上を、管足が変化した脚で歩くナマコ。背中に角のような突起がある。英語では sea pig（海のブタ）と呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "isokanidamashi",
+   "parent": "anomura",
+   "ja": "イソカニダマシ",
+   "sci": "Petrolisthes japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の石の下にふつうにいる、平たい小さなカニダマシ。カニに似ているが、ヤドカリやタラバガニと同じ異尾類で、長い触角をもち、歩く脚は3対しか見えない。",
+   "tier": 3
+  },
+  {
+   "id": "ojisan",
+   "parent": "syngnathiformes",
+   "ja": "オジサン",
+   "sci": "Parupeneus multifasciatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "あごの下に2本の長いひげをもつヒメジの仲間。ひげで砂の中の小動物を探して食べる。",
+   "tier": 3
+  },
+  {
+   "id": "gonzui",
+   "parent": "siluriformes",
+   "ja": "ゴンズイ",
+   "sci": "Plotosus japonicus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "群れで団子のように集まる「ゴンズイ玉」をつくるナマズの仲間。背びれと胸びれのとげに毒がある。",
+   "tier": 3
+  },
+  {
+   "id": "umazurahagi",
+   "parent": "tetraodontiformes",
+   "ja": "ウマヅラハギ",
+   "sci": "Thamnaconus modestus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "馬の顔のように長い顔をしたカワハギの仲間。食用にされる。",
+   "tier": 2
+  },
+  {
+   "id": "kongoufugu",
+   "parent": "tetraodontiformes",
+   "ja": "コンゴウフグ",
+   "sci": "Lactoria cornuta",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "目の前と尾の近くに角のような長い突起があるハコフグの仲間。",
+   "tier": 3
+  },
+  {
+   "id": "chouchinankou",
+   "parent": "lophiiformes",
+   "ja": "チョウチンアンコウ",
+   "sci": "Himantolophus sagamius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむアンコウの仲間。頭の上の突起の先が光り、これで獲物をおびき寄せる。",
+   "tier": 2
+  },
+  {
+   "id": "dangouo",
+   "parent": "perciformes",
+   "ja": "ダンゴウオ",
+   "sci": "Eumicrotremus awae",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "数cmほどの丸い小さな魚。腹びれが吸盤になっていて、岩や海藻にくっつく。",
+   "tier": 3
+  },
+  {
+   "id": "nyuudoukajika",
+   "parent": "perciformes",
+   "ja": "ニュウドウカジカ",
+   "sci": "Psychrolutes phrictus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむカジカの仲間。水から引き上げられると、ぶよぶよにたるんだ姿になる。",
+   "tier": 3
+  },
+  {
+   "id": "hekoayu",
+   "parent": "syngnathiformes",
+   "ja": "ヘコアユ",
+   "sci": "Aeoliscus strigatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "頭を下に向け、体を立てて泳ぐ細長い魚。ウニのとげの間などに群れて隠れる。",
+   "tier": 4
+  },
+  {
+   "id": "tsubameuo",
+   "parent": "acanthuriformes",
+   "ja": "ツバメウオ",
+   "sci": "Platax teira",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "平たい体の魚。幼魚のうちは背びれと尻びれがとても長い。",
+   "tier": 3
+  },
+  {
+   "id": "meganemochinouo",
+   "parent": "labriformes",
+   "ja": "メガネモチノウオ",
+   "sci": "Cheilinus undulatus",
+   "jaStatus": "standard",
+   "aliases": [
+    "ナポレオンフィッシュ"
+   ],
+   "fact": "大きなものは2 mほどになるベラの仲間。おとなは額がこぶのように盛り上がる。ナポレオンフィッシュとも呼ばれる。",
+   "tier": 2
+  },
+  {
+   "id": "nenbutsudai",
+   "parent": "gobiiformes",
+   "ja": "ネンブツダイ",
+   "sci": "Ostorhinchus semilineatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "群れで泳ぐ小さなテンジクダイの仲間。雄が卵を口の中に入れて守る。",
+   "tier": 4
+  },
+  {
+   "id": "kagokakidai",
+   "parent": "centrarchiformes",
+   "ja": "カゴカキダイ",
+   "sci": "Microcanthus strigatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黄色い体に黒い縦じまがある小さな魚。磯でよく見られる。",
+   "tier": 4
+  },
+  {
+   "id": "tsunodashi",
+   "parent": "acanthuriformes",
+   "ja": "ツノダシ",
+   "sci": "Zanclus cornutus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背びれが糸のように長く伸びる、黄・白・黒の模様の魚。サンゴ礁にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "demenigisu",
+   "parent": "euteleostei",
+   "ja": "デメニギス",
+   "sci": "Macropinna microstoma",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海魚。頭の上が透明なドームになっていて、その中に筒の形をした目がある。",
+   "tier": 3
+  },
+  {
+   "id": "donko",
+   "parent": "gobiiformes",
+   "ja": "ドンコ",
+   "sci": "Odontobutis obscurus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "川の流れのゆるい場所にすむハゼの仲間。頭が大きく、小魚やエビなどを食べる。",
+   "tier": 3
+  },
+  {
+   "id": "umiusagigai",
+   "parent": "caenogastropoda",
+   "ja": "ウミウサギガイ",
+   "sci": "Ovula ovum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "真っ白でつやのある殻をもつ巻貝。生きているときは、黒い外套膜で殻を包んでいる。",
+   "tier": 4
+  },
+  {
+   "id": "beniokinaebisu",
+   "parent": "vetigastropoda",
+   "ja": "ベニオキナエビス",
+   "sci": "Mikadotrochus hirasei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむオキナエビスの仲間。殻の口に切れこみがあり、「生きた化石」と呼ばれる巻貝の一つ。",
+   "tier": 4
+  },
+  {
+   "id": "unoashi",
+   "parent": "gastropoda",
+   "ja": "ウノアシ",
+   "sci": "Patelloida lanx",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "磯の岩につく笠形の貝。殻に太いすじが放射状に走り、縁がぎざぎざになる。",
+   "tier": 4
+  },
+  {
+   "id": "bakagai",
+   "parent": "bivalvia",
+   "ja": "バカガイ",
+   "sci": "Mactra chinensis",
+   "jaStatus": "standard",
+   "aliases": [
+    "アオヤギ"
+   ],
+   "fact": "浅い砂の海底にすむ二枚貝。むき身は「アオヤギ」と呼ばれ、すしだねなどにされる。",
+   "tier": 3
+  },
+  {
+   "id": "juumonjidako",
+   "parent": "octopodiformes",
+   "ja": "ジュウモンジダコ",
+   "sci": "Grimpoteuthis hippocrepium",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむひれのあるタコ。耳のような一対のひれを動かして泳ぐ。",
+   "tier": 4
+  },
+  {
+   "id": "mendako",
+   "parent": "octopodiformes",
+   "ja": "メンダコ",
+   "sci": "Opisthoteuthis depressa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむ平たいタコ。耳のようなひれがあり、傘を広げたような姿で海底近くを漂う。",
+   "verify": {
+    "sci": "WoRMS は Exsuperoteuthis depressa とする（GBIF・CoL は Opisthoteuthis）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "sodeika",
+   "parent": "decapodiformes",
+   "ja": "ソデイカ",
+   "sci": "Thysanoteuthis rhombus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは胴の長さが1 mほどになるイカ。胴のほぼ全長にわたるひし形のひれがある。食用にされる。",
+   "tier": 3
+  },
+  {
+   "id": "hikariboya",
+   "parent": "tunicata",
+   "ja": "ヒカリボヤ",
+   "sci": "Pyrosoma atlanticum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "たくさんの個体が集まって筒形の群体をつくり、海を漂うホヤの仲間。刺激を受けると青白く光る。",
+   "tier": 3
+  },
+  {
+   "id": "kimengani",
+   "parent": "brachyura",
+   "ja": "キメンガニ",
+   "sci": "Dorippe sinica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "甲羅のでこぼこが怒った鬼の顔のように見えるカニ。後ろの脚で貝殻などを背負って身を隠す。",
+   "tier": 4
+  },
+  {
+   "id": "bonerimushi",
+   "parent": "sedentaria",
+   "ja": "ボネリムシ",
+   "sci": "Bonellia minor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "緑色のユムシの仲間。この仲間は雄がとても小さく、雌の体の中で暮らすことで知られる。",
+   "tier": 4
+  },
+  {
+   "id": "gomafudama",
+   "parent": "caenogastropoda",
+   "ja": "ゴマフダマ",
+   "sci": "Paratectonatica tigrina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂の海底にすむタマガイの仲間。ほかの貝の殻に穴をあけて中身を食べる。殻にゴマのような斑点がある。",
+   "tier": 4
+  },
+  {
+   "id": "hitodeyadoriebi",
+   "parent": "caridea",
+   "ja": "ヒトデヤドリエビ",
+   "sci": "Zenopontonia soror",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ヒトデの体の上で暮らす小さなエビ。体の色をすみかのヒトデに似せている。",
+   "tier": 4
+  },
+  {
+   "id": "takokurage",
+   "parent": "scyphozoa",
+   "ja": "タコクラゲ",
+   "sci": "Mastigias papua",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "太い口腕をもち、タコのように見えるクラゲ。体の中に褐虫藻をすまわせ、光合成でできた栄養も利用する。",
+   "tier": 3
+  },
+  {
+   "id": "onidarumaokoze",
+   "parent": "perciformes",
+   "ja": "オニダルマオコゼ",
+   "sci": "Synanceia verrucosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "岩やサンゴにそっくりな姿でじっと待ち伏せる魚。背びれのとげに強い毒があり、踏むと命にかかわることもある。",
+   "tier": 3
+  },
+  {
+   "id": "ubazame",
+   "parent": "lamniformes",
+   "ja": "ウバザメ",
+   "sci": "Cetorhinus maximus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは10 mほどになるサメ。大きな口を開けて泳ぎ、えらでプランクトンをこしとって食べる。",
+   "tier": 2
+  },
+  {
+   "id": "shirowani",
+   "parent": "lamniformes",
+   "ja": "シロワニ",
+   "sci": "Carcharias taurus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鋭い歯が並ぶ大型のサメ。見た目はこわいが性質はおとなしく、水族館でも飼われる。",
+   "tier": 3
+  },
+  {
+   "id": "umitengu",
+   "parent": "syngnathiformes",
+   "ja": "ウミテング",
+   "sci": "Eurypegasus draconis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "平たい体を硬い骨板でおおった小さな魚。胸びれを広げ、海底を這うように動く。",
+   "tier": 4
+  },
+  {
+   "id": "mongarakawahagi",
+   "parent": "tetraodontiformes",
+   "ja": "モンガラカワハギ",
+   "sci": "Balistoides conspicillum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "腹に大きな白い水玉模様がある、派手な色のカワハギの仲間。サンゴ礁にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "toraeutsubo",
+   "parent": "anguilliformes",
+   "ja": "トラウツボ",
+   "sci": "Enchelycore pardalis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "赤みがかった体に白い斑点があるウツボ。口を閉じても曲がった歯がのぞく。",
+   "tier": 3
+  },
+  {
+   "id": "chouchouuo",
+   "parent": "acanthuriformes",
+   "ja": "チョウチョウウオ",
+   "sci": "Chaetodon auripes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黄色い体に細いしま模様がある平たい魚。磯やサンゴ礁で見られる。",
+   "tier": 2
+  },
+  {
+   "id": "honsomewakebera",
+   "parent": "labriformes",
+   "ja": "ホンソメワケベラ",
+   "sci": "Labroides dimidiatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ほかの魚の体についた寄生虫を食べて掃除する小さなベラ。鏡に映った自分を認識できるという研究がある。",
+   "tier": 3
+  },
+  {
+   "id": "onikamasu",
+   "parent": "carangiformes",
+   "ja": "オニカマス",
+   "sci": "Sphyraena barracuda",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは1.5 mを超えるカマスの仲間。英語ではバラクーダと呼ばれる。シガテラ毒をもつことがある。",
+   "tier": 3
+  },
+  {
+   "id": "yamatomeribe",
+   "parent": "cladobranchia",
+   "ja": "ヤマトメリベ",
+   "sci": "Melibe japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きな頭巾を網のように広げて、小さな甲殻類を捕らえるウミウシ。",
+   "tier": 4
+  },
+  {
+   "id": "hadakazoukurage",
+   "parent": "caenogastropoda",
+   "ja": "ハダカゾウクラゲ",
+   "sci": "Pterotrachea coronata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明な体で海を泳ぐ巻貝の仲間。殻をもたず、ひれを振って泳ぐ。",
+   "tier": 4
+  },
+  {
+   "id": "kochouumiushi",
+   "parent": "cladobranchia",
+   "ja": "コチョウウミウシ",
+   "sci": "Crosslandia viridis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海藻に似た緑色の体をもつウミウシ。体の縁がひらひらと広がる。",
+   "tier": 4
+  },
+  {
+   "id": "tsumetagai",
+   "parent": "caenogastropoda",
+   "ja": "ツメタガイ",
+   "sci": "Neverita didyma",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂浜の浅い海にすむ丸い巻貝。ほかの二枚貝の殻に穴をあけて中身を食べる。",
+   "tier": 3
+  },
+  {
+   "id": "kinchakugani",
+   "parent": "brachyura",
+   "ja": "キンチャクガニ",
+   "sci": "Lybia tessellata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "両方のはさみに小さなイソギンチャクを持ち、ポンポンのように振って身を守る小さなカニ。",
+   "tier": 3
+  },
+  {
+   "id": "tainoe",
+   "parent": "isopoda",
+   "ja": "タイノエ",
+   "sci": "Ceratothoa verrucosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マダイの口の中に寄生する等脚類。雌と雄がつがいで口の中にすみつく。",
+   "tier": 3
+  },
+  {
+   "id": "sakasakurage",
+   "parent": "scyphozoa",
+   "ja": "サカサクラゲ",
+   "sci": "Cassiopea ornata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "かさを下にして海底でひっくり返って暮らすクラゲ。体の中の褐虫藻に光を当てている。",
+   "tier": 3
+  },
+  {
+   "id": "amigasakurage",
+   "parent": "ctenophora",
+   "ja": "アミガサクラゲ",
+   "sci": "Beroe forskalii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "触手をもたないクシクラゲの仲間。大きな口でほかのクシクラゲを丸のみにする。",
+   "tier": 4
+  },
+  {
+   "id": "nichirinhitode",
+   "parent": "asteroidea",
+   "ja": "ニチリンヒトデ",
+   "sci": "Solaster paxillatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "太陽のように腕が10本前後あるヒトデ。ほかのヒトデを食べる。",
+   "tier": 4
+  },
+  {
+   "id": "yumenamako",
+   "parent": "holothuroidea",
+   "ja": "ユメナマコ",
+   "sci": "Enypniastes eximia",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "深海にすむ半透明で赤いナマコ。体のまわりのひれを動かして泳ぐことができる。",
+   "tier": 4
+  },
+  {
+   "id": "manhattanboya",
+   "parent": "tunicata",
+   "ja": "マンハッタンボヤ",
+   "sci": "Molgula manhattensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北アメリカ東岸原産の小さな丸いホヤ。船について運ばれ、日本の港にも定着している。",
+   "tier": 4
+  },
+  {
+   "id": "oosarupa",
+   "parent": "tunicata",
+   "ja": "オオサルパ",
+   "sci": "Thetys vagina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大きなものは30 cmほどになる大型のサルパ。透明な樽形の体で海を漂う。",
+   "tier": 4
+  },
+  {
+   "id": "goisagi",
+   "parent": "pelecaniformes",
+   "ja": "ゴイサギ",
+   "sci": "Nycticorax nycticorax",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "夜に水辺で魚などを捕るサギ。夜に飛びながら「クワッ」と鳴く。",
+   "tier": 3
+  },
+  {
+   "id": "harimogura",
+   "parent": "monotremata",
+   "ja": "ハリモグラ",
+   "sci": "Tachyglossus aculeatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中が針でおおわれた、卵を産む哺乳類。長い舌でアリやシロアリを食べる。",
+   "tier": 2
+  },
+  {
+   "id": "hadakadebanezumi",
+   "parent": "rodentia",
+   "ja": "ハダカデバネズミ",
+   "sci": "Heterocephalus glaber",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "地下にトンネルを掘って集団で暮らす、毛のほとんどないネズミの仲間。1匹の女王だけが子を産み、30年以上生きることもある。",
+   "tier": 2
+  },
+  {
+   "id": "minamikoarikui",
+   "parent": "xenarthra",
+   "ja": "ミナミコアリクイ",
+   "sci": "Tamandua tetradactyla",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカの森にすむ小型のアリクイ。木に登り、尾を枝に巻きつけることができる。",
+   "tier": 3
+  },
+  {
+   "id": "aiai",
+   "parent": "primates",
+   "ja": "アイアイ",
+   "sci": "Daubentonia madagascariensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マダガスカルにすむ夜行性のサル。とても細長い中指で木をたたき、中の虫の幼虫をほじり出して食べる。",
+   "tier": 2
+  },
+  {
+   "id": "tsuchibuta",
+   "parent": "afrotheria",
+   "ja": "ツチブタ",
+   "sci": "Orycteropus afer",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカにすむ、ブタのような鼻とウサギのような耳をもつ哺乳類。シロアリを食べる。1種だけで管歯目をつくる。",
+   "tier": 3
+  },
+  {
+   "id": "ogurop",
+   "parent": "rodentia",
+   "ja": "オグロプレーリードッグ",
+   "sci": "Cynomys ludovicianus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北アメリカの草原に巣穴を掘って群れで暮らすリスの仲間。犬のような声で鳴き合う。",
+   "tier": 2
+  },
+  {
+   "id": "himearumajiro",
+   "parent": "xenarthra",
+   "ja": "ヒメアルマジロ",
+   "sci": "Chlamyphorus truncatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アルゼンチンにすむ、体長10 cmほどの小さなアルマジロ。背中にピンク色のよろいがあり、地中を掘り進む。",
+   "tier": 4
+  },
+  {
+   "id": "mimisenzankou",
+   "parent": "laurasiatheria",
+   "ja": "ミミセンザンコウ",
+   "sci": "Manis pentadactyla",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体がうろこでおおわれた哺乳類。アリやシロアリを食べ、危険を感じると体を丸める。中国や台湾などにすむ。",
+   "tier": 3
+  },
+  {
+   "id": "hebikuiwashi",
+   "parent": "afroaves",
+   "ja": "ヘビクイワシ",
+   "sci": "Sagittarius serpentarius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカの草原にすむ、足の長い猛禽。地上を歩き、ヘビなどを強く蹴って捕らえる。",
+   "tier": 3
+  },
+  {
+   "id": "wanigame",
+   "parent": "testudines",
+   "ja": "ワニガメ",
+   "sci": "Macrochelys temminckii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北アメリカにすむ大型のカメ。舌の先のミミズのような突起で魚をおびき寄せる。",
+   "tier": 2
+  },
+  {
+   "id": "amefukuragaeru",
+   "parent": "anura",
+   "ja": "アメフクラガエル",
+   "sci": "Breviceps adspersus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ南部にすむ丸い体のカエル。危険を感じると体をふくらませる。",
+   "tier": 3
+  },
+  {
+   "id": "leafyseadragon",
+   "parent": "syngnathiformes",
+   "ja": "リーフィーシードラゴン",
+   "sci": "Phycodurus eques",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "海藻のような飾りが体じゅうにある、タツノオトシゴの仲間。オーストラリア南部の海にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "miideragomimushi",
+   "parent": "carabidae",
+   "ja": "ミイデラゴミムシ",
+   "sci": "Pheropsophus jessoensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "危険を感じると、おしりから100 ℃ほどの高温のガスを噴き出す甲虫。「へっぴりむし」とも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "douganebuibui",
+   "parent": "scarabaeidae",
+   "ja": "ドウガネブイブイ",
+   "sci": "Anomala cuprea",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "銅色の光沢があるコガネムシの仲間。夏の夜に灯りに集まる。",
+   "tier": 3
+  },
+  {
+   "id": "samuraiari",
+   "parent": "formicidae",
+   "ja": "サムライアリ",
+   "sci": "Polyergus samurai",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ほかのアリの巣を襲ってさなぎを奪い、育ったアリを働かせるアリ。自分では餌をとれない。",
+   "tier": 3
+  },
+  {
+   "id": "mansonjuuketsukyuuchuu",
+   "parent": "trematoda",
+   "ja": "マンソン住血吸虫",
+   "sci": "Schistosoma mansoni",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "人の血管にすむ吸虫。アフリカや南アメリカで病気を起こす。雄の体の溝に雌が収まって、つがいで暮らす。",
+   "tier": 4
+  },
+  {
+   "id": "silverarowana",
+   "parent": "teleostei",
+   "ja": "シルバーアロワナ",
+   "sci": "Osteoglossum bicirrhosum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカのアマゾン川などにすむ細長い魚。水面近くの昆虫を、水から跳び上がって捕らえる。",
+   "tier": 3
+  },
+  {
+   "id": "tsunozemi",
+   "parent": "hemiptera",
+   "ja": "ツノゼミ",
+   "sci": "Butragulus flavipes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "胸の背中側が角のような形にのびた小さな虫。セミに近いカメムシ目の仲間。",
+   "verify": {
+    "sci": "属は資料により Orthobelus とも"
+   },
+   "tier": 3
+  },
+  {
+   "id": "tamamushi",
+   "parent": "coleoptera",
+   "ja": "タマムシ",
+   "sci": "Chrysochroa fulgidissima",
+   "jaStatus": "standard",
+   "aliases": [
+    "ヤマトタマムシ"
+   ],
+   "fact": "緑色の金属光沢に赤紫のすじがある甲虫。法隆寺の玉虫厨子には、この虫の翅が飾りに使われた。",
+   "tier": 2
+  },
+  {
+   "id": "hanmyou",
+   "parent": "carabidae",
+   "ja": "ハンミョウ",
+   "sci": "Cicindela chinensis",
+   "jaStatus": "standard",
+   "aliases": [
+    "ナミハンミョウ"
+   ],
+   "fact": "赤・緑・青に輝く甲虫。人の前を飛んでは止まるので「みちおしえ」とも呼ばれる。",
+   "tier": 2
+  },
+  {
+   "id": "maimaikaburi",
+   "parent": "carabidae",
+   "ja": "マイマイカブリ",
+   "sci": "Carabus blaptoides",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "カタツムリの殻に頭を突っ込んで中身を食べる、細長い頭をした甲虫。日本固有種。",
+   "tier": 3
+  },
+  {
+   "id": "kokuwagata",
+   "parent": "lucanidae",
+   "ja": "コクワガタ",
+   "sci": "Dorcus rectus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本でいちばん身近なクワガタムシの一つ。雑木林にすむ。",
+   "tier": 2
+  },
+  {
+   "id": "koganemushi",
+   "parent": "scarabaeidae",
+   "ja": "コガネムシ",
+   "sci": "Mimela splendens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "緑色の金属光沢がある甲虫。成虫は葉を、幼虫は土の中で植物の根を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "oosenchikogane",
+   "parent": "coleoptera",
+   "ja": "オオセンチコガネ",
+   "sci": "Phelotrupes auratus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "動物のふんを食べる、金属光沢のある甲虫。地域によって赤・緑・青と色が変わる。",
+   "tier": 3
+  },
+  {
+   "id": "ruriboshikamikiri",
+   "parent": "cerambycidae",
+   "ja": "ルリボシカミキリ",
+   "sci": "Rosalia batesi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "水色の体に黒い斑点がある美しいカミキリムシ。日本固有種。",
+   "tier": 3
+  },
+  {
+   "id": "shirosujikamikiri",
+   "parent": "cerambycidae",
+   "ja": "シロスジカミキリ",
+   "sci": "Batocera lineolata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本最大級のカミキリムシ。幼虫はクヌギなどの幹の中を食べて育つ。",
+   "tier": 3
+  },
+  {
+   "id": "nijuuyahoshitentou",
+   "parent": "coccinellidae",
+   "ja": "ニジュウヤホシテントウ",
+   "sci": "Henosepilachna vigintioctopunctata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中に28個の黒い斑点があるテントウムシ。ナスやジャガイモの葉を食べる害虫。",
+   "tier": 3
+  },
+  {
+   "id": "himekurootoshibumi",
+   "parent": "coleoptera",
+   "ja": "ヒメクロオトシブミ",
+   "sci": "Apoderus erythrogaster",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "葉を巻いて「揺籃（ようらん）」をつくり、その中に卵を産む小さな甲虫。",
+   "tier": 4
+  },
+  {
+   "id": "oohiratashidemushi",
+   "parent": "coleoptera",
+   "ja": "オオヒラタシデムシ",
+   "sci": "Necrophila japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "動物の死がいに集まる平たい甲虫。死がいを分解する掃除屋。",
+   "tier": 4
+  },
+  {
+   "id": "sabikikori",
+   "parent": "coleoptera",
+   "ja": "サビキコリ",
+   "sci": "Agrypnus binodulus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "さびたような色のコメツキムシの仲間。ひっくり返すと、パチンと音をたてて跳ね起きる。",
+   "tier": 4
+  },
+  {
+   "id": "kimunekumabachi",
+   "parent": "hymenoptera",
+   "ja": "キムネクマバチ",
+   "sci": "Xylocopa appendiculata",
+   "jaStatus": "standard",
+   "aliases": [
+    "クマバチ"
+   ],
+   "fact": "胸に黄色い毛がある、丸く大きなハナバチ。おとなしく、雄には針がない。",
+   "tier": 2
+  },
+  {
+   "id": "satojigabachi",
+   "parent": "hymenoptera",
+   "ja": "サトジガバチ",
+   "sci": "Ammophila sabulosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "腰がとても細いハチ。ガの幼虫を毒針でまひさせ、巣穴に運んで子の餌にする。",
+   "tier": 4
+  },
+  {
+   "id": "namihanaabu",
+   "parent": "diptera",
+   "ja": "ナミハナアブ",
+   "sci": "Eristalis tenax",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ミツバチによく似た姿のアブ。幼虫は汚れた水の中で暮らし「オナガウジ」と呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "kiriujigaganbo",
+   "parent": "diptera",
+   "ja": "キリウジガガンボ",
+   "sci": "Tipula aino",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "長い脚をもつ大きな蚊のような虫。血は吸わない。",
+   "tier": 3
+  },
+  {
+   "id": "onbubatta",
+   "parent": "orthoptera",
+   "ja": "オンブバッタ",
+   "sci": "Atractomorpha lata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小さな雄が大きな雌の背中に乗っている姿がよく見られるバッタ。",
+   "tier": 2
+  },
+  {
+   "id": "kubikirigisu",
+   "parent": "orthoptera",
+   "ja": "クビキリギス",
+   "sci": "Euconocephalus varius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "とがった頭と赤い口をもつキリギリスの仲間。成虫のまま冬を越し、春に「ジー」と鳴く。",
+   "tier": 3
+  },
+  {
+   "id": "kutsuwamushi",
+   "parent": "orthoptera",
+   "ja": "クツワムシ",
+   "sci": "Mecopoda niponensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "「ガチャガチャ」と大きな声で鳴く、大型のキリギリスの仲間。",
+   "tier": 2
+  },
+  {
+   "id": "matsumushi",
+   "parent": "orthoptera",
+   "ja": "マツムシ",
+   "sci": "Xenogryllus marmoratus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "秋に「チンチロリン」と鳴くコオロギの仲間。",
+   "tier": 2
+  },
+  {
+   "id": "aomatsumushi",
+   "parent": "orthoptera",
+   "ja": "アオマツムシ",
+   "sci": "Truljalia hibinonis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "緑色のコオロギの仲間。木の上で「リーリー」と大きな声で鳴く外来種。",
+   "tier": 3
+  },
+  {
+   "id": "niiniizemi",
+   "parent": "cicadidae",
+   "ja": "ニイニイゼミ",
+   "sci": "Platypleura kaempferi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "木の皮のような模様の小さなセミ。梅雨明けの頃から「チー」と鳴く。抜け殻は泥をかぶっていることが多い。",
+   "tier": 2
+  },
+  {
+   "id": "kuroageha",
+   "parent": "papilionidae",
+   "ja": "クロアゲハ",
+   "sci": "Papilio protenor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒い翅をもつ大きなアゲハチョウ。幼虫はミカンなどの葉を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "tsumagurohyoumon",
+   "parent": "lepidoptera",
+   "ja": "ツマグロヒョウモン",
+   "sci": "Argynnis hyperbius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雌の前翅の先が黒いヒョウ柄のチョウ。南の地方から分布を北へ広げている。",
+   "tier": 2
+  },
+  {
+   "id": "ruritateha",
+   "parent": "lepidoptera",
+   "ja": "ルリタテハ",
+   "sci": "Kaniska canace",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒い翅に青いすじが入ったタテハチョウ。幼虫はホトトギスなどの葉を食べる。",
+   "tier": 2
+  },
+  {
+   "id": "oogomadara",
+   "parent": "lepidoptera",
+   "ja": "オオゴマダラ",
+   "sci": "Idea leuconoe",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "白と黒のまだら模様の大きなチョウ。ゆっくりと飛ぶ。さなぎは金色に輝く。",
+   "tier": 2
+  },
+  {
+   "id": "benishijimi",
+   "parent": "lepidoptera",
+   "ja": "ベニシジミ",
+   "sci": "Lycaena phlaeas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "橙色の翅に黒い斑点がある小さなチョウ。草地でふつうに見られる。",
+   "tier": 2
+  },
+  {
+   "id": "ichimonjiseseri",
+   "parent": "lepidoptera",
+   "ja": "イチモンジセセリ",
+   "sci": "Parnara guttata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "茶色の小さなチョウ。後翅に白い斑点が一列に並ぶ。幼虫はイネの葉を食べる。",
+   "tier": 3
+  },
+  {
+   "id": "oosukashiba",
+   "parent": "lepidoptera",
+   "ja": "オオスカシバ",
+   "sci": "Cephonodes hylas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "透明な翅で花の前に止まるように飛び、蜜を吸うガ。",
+   "tier": 3
+  },
+  {
+   "id": "oomizuao",
+   "parent": "lepidoptera",
+   "ja": "オオミズアオ",
+   "sci": "Actias aliena",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "うすい水色の大きな翅をもつガ。後翅の先が尾のようにのびる。",
+   "tier": 3
+  },
+  {
+   "id": "yamatoshijimi_b",
+   "parent": "lepidoptera",
+   "ja": "ヤマトシジミ",
+   "sci": "Zizeeria maha",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "道ばたのカタバミのまわりでふつうに見られる、小さな青いチョウ。貝のヤマトシジミとは別の生き物。",
+   "tier": 2
+  },
+  {
+   "id": "katabirotogehamushi",
+   "parent": "coleoptera",
+   "ja": "カタビロトゲハムシ",
+   "sci": "Dactylispa subquadrata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "体じゅうにとげが生えた小さなハムシ。トゲハムシの仲間は昔「トゲトゲ」と呼ばれ、とげのない「トゲナシトゲトゲ」、その中でとげのある「トゲアリトゲナシトゲトゲ」という呼び名も生まれた。",
+   "tier": 3
+  },
+  {
+   "id": "meerkat",
+   "parent": "feliformia",
+   "ja": "ミーアキャット",
+   "sci": "Suricata suricatta",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ南部の乾いた土地で群れをつくって暮らすマングースの仲間。見張り役が後ろ足で立って周りを警戒する。",
+   "tier": 1
+  },
+  {
+   "id": "mitsuobiarumajiro",
+   "parent": "xenarthra",
+   "ja": "ミツオビアルマジロ",
+   "sci": "Tolypeutes tricinctus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ブラジルにすむアルマジロ。危険を感じると体をボールのように丸めて身を守る。",
+   "tier": 3
+  },
+  {
+   "id": "erimakitokage",
+   "parent": "squamata",
+   "ja": "エリマキトカゲ",
+   "sci": "Chlamydosaurus kingii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリアなどにすむトカゲ。驚くと首のまわりのえりを大きく広げ、後ろ足で立って走る。",
+   "tier": 1
+  },
+  {
+   "id": "jacksonchameleon",
+   "parent": "squamata",
+   "ja": "ジャクソンカメレオン",
+   "sci": "Trioceros jacksonii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "雄の頭に3本の角があるカメレオン。東アフリカの山地にすむ。",
+   "tier": 3
+  },
+  {
+   "id": "okikurage",
+   "parent": "scyphozoa",
+   "ja": "オキクラゲ",
+   "sci": "Pelagia noctiluca",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "沖合を漂う紫がかったクラゲ。刺されると強く痛む。刺激を受けると光る。",
+   "tier": 3
+  },
+  {
+   "id": "boa",
+   "parent": "boidae",
+   "ja": "ボアコンストリクター",
+   "sci": "Boa constrictor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中南米にすむ大型のヘビ。毒はなく、獲物に巻きついて締めつけて捕らえる。",
+   "tier": 2
+  },
+  {
+   "id": "darumawashi",
+   "parent": "accipitridae",
+   "ja": "ダルマワシ",
+   "sci": "Terathopius ecaudatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカの草原にすむワシ。尾がとても短く、赤い顔をしている。",
+   "tier": 4
+  },
+  {
+   "id": "ajiazou",
+   "parent": "afrotheria",
+   "ja": "アジアゾウ",
+   "sci": "Elephas maximus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "インドや東南アジアにすむゾウ。アフリカのゾウより耳が小さい。",
+   "tier": 1
+  },
+  {
+   "id": "yotsuyubiharinezumi",
+   "parent": "eulipotyphla",
+   "ja": "ヨツユビハリネズミ",
+   "sci": "Atelerix albiventris",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカにすむハリネズミ。ペットとして飼われるハリネズミの多くはこの種がもと。",
+   "tier": 2
+  },
+  {
+   "id": "nishiindomanatee",
+   "parent": "afrotheria",
+   "ja": "ニシインドマナティー",
+   "sci": "Trichechus manatus",
+   "jaStatus": "standard",
+   "aliases": [
+    "アメリカマナティー"
+   ],
+   "fact": "アメリカ南部やカリブ海の暖かい浅い海や川にすむ、海草などを食べる哺乳類。ゾウに近い仲間。",
+   "tier": 2
+  },
+  {
+   "id": "fukuromomonga",
+   "parent": "marsupialia",
+   "ja": "フクロモモンガ",
+   "sci": "Petaurus breviceps",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリアなどにすむ有袋類。前足と後ろ足の間の膜を広げて木から木へ滑空する。",
+   "tier": 2
+  },
+  {
+   "id": "musasabi",
+   "parent": "rodentia",
+   "ja": "ムササビ",
+   "sci": "Petaurista leucogenys",
+   "jaStatus": "standard",
+   "aliases": [
+    "ホオジロムササビ"
+   ],
+   "fact": "日本の森にすむ大型のリスの仲間。夜に、前足と後ろ足の間の膜を広げて木から木へ滑空する。",
+   "tier": 1
+  },
+  {
+   "id": "alpaca",
+   "parent": "artiodactyla",
+   "ja": "アルパカ",
+   "sci": "Vicugna pacos",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカのアンデスで、毛をとるために家畜化されたラクダの仲間。",
+   "verify": {
+    "ja": "家畜のため世界哺乳類標準和名リストには無く、和名は Wikidata のみ"
+   },
+   "tier": 1
+  },
+  {
+   "id": "americawashimimizuku",
+   "parent": "strigiformes",
+   "ja": "アメリカワシミミズク",
+   "sci": "Bubo virginianus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南北アメリカに広くすむ大型のフクロウ。頭に耳のような羽角がある。",
+   "tier": 3
+  },
+  {
+   "id": "hashibirokou",
+   "parent": "pelecaniformes",
+   "ja": "ハシビロコウ",
+   "sci": "Balaeniceps rex",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカの湿地にすむ大きな鳥。木靴のような太いくちばしで、肺魚などを捕らえる。何時間もじっと動かないことで知られる。",
+   "tier": 1
+  },
+  {
+   "id": "minamiamericaottosei",
+   "parent": "pinnipedia",
+   "ja": "ミナミアメリカオットセイ",
+   "sci": "Arctocephalus australis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南アメリカの海岸にすむオットセイ。",
+   "tier": 3
+  },
+  {
+   "id": "kobitokaba",
+   "parent": "whippomorpha",
+   "ja": "コビトカバ",
+   "sci": "Choeropsis liberiensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "西アフリカの森にすむ小型のカバ。体重はカバの10分の1ほど。",
+   "tier": 2
+  },
+  {
+   "id": "kotsumekawauso",
+   "parent": "mustelidae",
+   "ja": "コツメカワウソ",
+   "sci": "Aonyx cinereus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアなどにすむ小型のカワウソ。爪が小さく、器用な前足で貝やカニを探して食べる。",
+   "tier": 1
+  },
+  {
+   "id": "chinanago",
+   "parent": "anguilliformes",
+   "ja": "チンアナゴ",
+   "sci": "Heteroconger hassi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂に穴を掘って体の後ろ半分を埋め、海中に体を伸ばして流れてくるプランクトンを食べる。群れで暮らす。",
+   "tier": 1
+  },
+  {
+   "id": "akameamagaeru",
+   "parent": "anura",
+   "ja": "アカメアマガエル",
+   "sci": "Agalychnis callidryas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中米の森にすむ、赤い目と緑の体のアマガエル。",
+   "tier": 2
+  },
+  {
+   "id": "rurikongouinko",
+   "parent": "psittaciformes",
+   "ja": "ルリコンゴウインコ",
+   "sci": "Ara ararauna",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中が青、お腹が黄色の大型のインコ。南アメリカの森にすむ。",
+   "tier": 2
+  },
+  {
+   "id": "kongouinko",
+   "parent": "psittaciformes",
+   "ja": "コンゴウインコ",
+   "sci": "Ara macao",
+   "jaStatus": "standard",
+   "aliases": [
+    "アカコンゴウインコ"
+   ],
+   "fact": "赤・黄・青の羽をもつ大型のインコ。中南米の森にすむ。",
+   "tier": 2
+  },
+  {
+   "id": "nihonusagikoumori",
+   "parent": "chiroptera",
+   "ja": "ニホンウサギコウモリ",
+   "sci": "Plecotus sacrimontis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ウサギのように長い耳をもつ日本のコウモリ。森にすみ、木のうろなどをねぐらにする。",
    "tier": 3
   }
  ]
