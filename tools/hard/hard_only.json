@@ -3474,5 +3474,17 @@
   "place": [
    "Haliotidae"
   ]
+ },
+ {
+  "ja": "ニッポンヨコエビ",
+  "sci": "Gammarus nipponensis",
+  "aliases": [],
+  "fact": "湧き水や山地の小川の落ち葉の下などにすむ淡水のヨコエビ。落ち葉を食べて分解を助ける。",
+  "tier": 3,
+  "source": "本家 0.3.18 に足した種（作者の指定、2026-11-02）。学名は GBIF・CoL・WoRMS、和名は CoL・Wikidata・iNaturalist で一致（check/picks29）",
+  "place": [
+   "Gammaridae",
+   "Amphipoda"
+  ]
  }
 ]
