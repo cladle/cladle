@@ -2587,6 +2587,14 @@
    "sci": "Anabantiformes",
    "rank": "目",
    "desc": "アジアとアフリカの淡水魚。多くはえらの上にある迷路のような器官（ラビリンス器官）で、空気を直接吸って呼吸できる。ベタ・グラミー・タイワンドジョウなど。"
+  },
+  {
+   "id": "polypteriformes",
+   "parent": "actinopterygii",
+   "ja": "ポリプテルス目",
+   "sci": "Polypteriformes",
+   "rank": "目",
+   "desc": "アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。"
   }
  ],
  "species": [
@@ -13123,6 +13131,21 @@
     "ja": "和名の出典は Wikidata のみ（学術的な出典は未確認）"
    },
    "tier": 2
+  },
+  {
+   "id": "polypterus_senegalus",
+   "parent": "polypteriformes",
+   "ja": "ポリプテルス・セネガルス",
+   "sci": "Polypterus senegalus",
+   "jaStatus": "standard",
+   "aliases": [
+    "ポリプテルス"
+   ],
+   "fact": "西〜中央アフリカの川や湖にすむ。うろこは硬いガノイン鱗で、胸びれの付け根に肉がある。観賞魚として飼われ、古代魚とも呼ばれる。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の一致のみで、学名をカタカナにした形（学術的な和名は未確認）"
+   },
+   "tier": 3
   }
  ]
 }
