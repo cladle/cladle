@@ -510,8 +510,28 @@ MOVE_INTO = {"Pinnipedia": ["Odobenidae", "Otariidae", "Phocidae"],  # 鰭脚類
              "Hexacorallia": ["Cerianthidae"],  # ハナギンチャク類は六放サンゴ類の中で最初に分かれた群（McFadden et al. 2021、WoRMS）
              "Accipitriformes": ["Sagittarius"],  # ヘビクイワシはタカ目（IOC 15.2）
              "Annelida": ["Amphinomida"],  # ウミケムシ類は Pleistoannelida の外で分かれる（Weigert et al. 2014）
-             "Luminacea": ["Astriclypeus"],  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
-             "Psittacidae": ["Psittacus", "Ara"], "Phasianidae": ["Gallus"]}  # 本家で目の直下にある鳥の属を科の下へ（Catalogue of Life）
+             "Scutelliformes": ["Astriclypeus"],  # スカシカシパンはタコノマクラ目の外で、Scutelliformes の中（Mongiardino Koch et al. 2022、WoRMS）
+             "Psittacidae": ["Psittacus", "Ara"], "Phasianidae": ["Gallus"],  # 本家で目の直下にある鳥の属を科の下へ（Catalogue of Life）
+             # 以下は 2026-11-01 の点検で見つけたもの：上の節目の直下に置かれ、本来入るはずの隣の節目の外にあった（Catalogue of Life・WoRMS で確認）
+             "Stylommatophora": ["Achatinidae", "Succineidae", "Plectopylidae", "Spiraxidae", "Discidae", "Diapheridae", "Huttonella",
+                                 "Pupilloidei", "Clausilioidei", "Limacoidei", "Helicoidei", "Punctoidea", "Arionoidea"],  # 陸の有肺類は柄眼目（WoRMS）
+             "Ellobiidae": ["Carychium"],  # ケシガイ属はオカミミガイ科（WoRMS）
+             "Euchelicerata": ["Garypidae", "Bdellidae"],  # カニムシ類・ダニ類はクモガタ類（Catalogue of Life）
+             "Thoracicalcarea": ["Capitulum"],  # カメノテは完胸類（Chan et al. 2021、Catalogue of Life・WoRMS）
+             "Clavelinidae": ["Pycnoclavella"],  # Catalogue of Life・WoRMS
+             "Osphronemidae": ["Betta"],  # 本家のベタ（Anabantiformes 直下）が目録側のキノボリウオ目と二重になるのを防ぐ（Eschmeyer's Catalog of Fishes）
+             "Metridioidea": ["Diadumene"],  # タテジマイソギンチャクの属（Rodríguez et al. 2014、Catalogue of Life）
+             "Sipuncula": ["Sipunculus"], "Echiuroidea": ["Urechis"],  # ホシムシ・ユムシの属（Catalogue of Life・WoRMS）
+             "Cyrenoidea": ["Corbicula"],  # シジミ属（Catalogue of Life・WoRMS）
+             "Diplostraca": ["Daphnia"], "Pleocyemata": ["Stenopus"], "Oegopsida": ["Architeuthis"],  # Catalogue of Life・WoRMS
+             "Heteroscleromorpha": ["Ephydatia"], "Aplanulata": ["Hydra"],  # Catalogue of Life・WoRMS
+             "Syllidae": ["Ramisyllis"], "Notocomplanidae": ["Notocomplana"],  # Catalogue of Life・WoRMS
+             "Otariidae": ["Arctocephalus"], "Erinaceidae": ["Atelerix"], "Sciuridae": ["Cynomys"], "Cricetidae": ["Mesocricetus"],  # MDD・Catalogue of Life
+             "Iguania": ["Basiliscus", "Trioceros"], "Agamidae": ["Chlamydosaurus"],  # Pyron et al. 2013、Catalogue of Life
+             "Hydroporinae": ["Morimotoa"], "Gerrinae": ["Aquarius"], "Scarabaeinae": ["Caccobius"],  # Catalogue of Life
+             "Belostomatinae": ["Diplonychus"], "Galerucinae": ["Morphosphaera"], "Smerinthinae": ["Laothoe"],  # Catalogue of Life
+             "Polyommatinae": ["Leptotes", "Nothodanis"], "Theclinae": ["Satyrium", "Sibataniozephyrus"],  # シジミチョウ科の亜科（Catalogue of Life）
+             "Nymphalinae": ["Kaniska"], "Satyrinae": ["Lasiommata", "Lopinga", "Minois", "Ninguta"]}  # タテハチョウ科の亜科（Catalogue of Life）
 for to, items in MOVE_INTO.items():
     t = [i for i, c in C.items() if c["sci"] == to and c["rank"] != "属"]
     if len(t) != 1: log["move_into"].append(["notarget", to]); continue
@@ -569,6 +589,11 @@ kids = collections.Counter(c["parent"] for c in clades if c["id"] in MC)
 for c in clades:
     if c["id"] in graft_par and kids[c["id"]]:
         c["polytomy"] = (c.get("polytomy", "") + " " + NOTE).strip()
+# ゲキムズで足した群が並んで多分岐になる節目の理由（学名: 説明）
+HARD_POLY = {"Heterobranchia": "Euthyneura（ウミウシ・アメフラシ・カタツムリなど）より先に分かれた小さな群（Valvatoidea・Architectonicidae など、lower Heterobranchia と呼ばれる）は、どの順に分かれたかが決まっていないため、ここでは並べて示す（Bouchet et al. 2017）。"}
+for c in clades:
+    if c["sci"] in HARD_POLY and c["rank"] != "属":
+        c["polytomy"] = (c.get("polytomy", "") + " " + HARD_POLY[c["sci"]]).strip()
 for s in SP:
     for k in ("main", "colsrc", "_w"): s.pop(k, None)
 # 目録側の節目（o_・f_ などの id）が本家と同じ群なら、本家の説明を引き継ぐ
@@ -578,17 +603,19 @@ for c in MC.values():
 for c in clades:
     d = _mdesc.get((c["sci"], c["rank"]), [])
     if not c.get("desc") and len(set(d)) == 1: c["desc"] = d[0]
-# ゲキムズだけの節目の説明（tools/hard/clade_desc.tsv：id, desc, 出典。本家と同じ節目は本家の説明のまま）
+# ゲキムズだけの節目の説明（tools/hard/clade_desc.tsv：sci, rank, desc, 出典。学名と階級で引く。本家と同じ節目は本家の説明のまま）
 _desc = os.path.join(os.path.dirname(os.path.abspath(__file__)), "clade_desc.tsv")
 if os.path.exists(_desc):
     import csv
-    alive_c = {c["id"]: c for c in clades}
+    _by = collections.defaultdict(list)
+    for c in clades: _by[(c["sci"], c["rank"])].append(c)
     log["hard_desc"] = []
     for r in csv.DictReader(open(_desc, encoding="utf-8"), delimiter="\t"):
-        c = alive_c.get(r["id"])
-        if not c: log["hard_desc"].append(["notfound", r["id"]]); continue
-        if r["id"] in MC: log["hard_desc"].append(["main", r["id"]]); continue
-        c["desc"] = r["desc"]; log["hard_desc"].append(["set", r["id"]])
+        cs = _by.get((r["sci"], r["rank"]))
+        if not cs: log["hard_desc"].append(["notfound", r["sci"]]); continue
+        for c in cs:
+            if c["id"] in MC or c.get("desc"): log["hard_desc"].append(["main", r["sci"]]); continue
+            c["desc"] = r["desc"]; log["hard_desc"].append(["set", r["sci"]])
 # 節目の id が前回の作り直しから変わったか（説明などを id で付けている人のため）
 _ids = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "clade_ids.json")
 _now = {c["id"]: c["sci"] for c in clades}
