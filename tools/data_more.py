@@ -1978,7 +1978,7 @@ R("beta", "anabantiformes", "ベタ", "Betta splendens",
   v={"ja": "和名の出典は Wikidata のみ（学術的な出典は未確認）"})
 _find("beta")["tier"] = 2
 # 作者の指定（2026-11-01）。学名は GBIF・CoL・WoRMS で一致（check/picks26）。和名は Wikidata と iNaturalist の一致のみで、学名をカタカナにした形だが
-# 飼育で定着した呼び名なので例外として使う（作者の判断待ち）
+# 飼育で定着した呼び名なので例外として使う（作者の判断、2026-11-01）
 C("polypteriformes", "actinopterygii", "ポリプテルス目", "Polypteriformes", "目",
   "アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。")
 R("polypterus_senegalus", "polypteriformes", "ポリプテルス・セネガルス", "Polypterus senegalus",
