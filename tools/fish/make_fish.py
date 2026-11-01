@@ -7,7 +7,7 @@
   「魚類」は側系統群なので節目にはせず、出題の範囲として使うだけにする。根は脊椎動物亜門。
 - 全種を答えに出す。目は種数の平方根に比例した確率で選び（種数の多い目ばかり出ないように、作者の判断）、目の中は全種から同じ確率で選ぶ。
   日本の魚は全種が入っているので、種数は収録数（tools/real_counts.py の fish）。目の無いシーラカンス・ハイギョは肉鰭類で一つの群にする。
-- 種・節目・知名度を変えたら版番号（FISH_VERSION）を上げる。今日の動物の選び方に入っている。
+- ふだんは tools/build_all.py から動かす。そのときの版番号は data-*.json の予約で決まる（FISH_VERSION は単独で動かしたとき用）。
 """
 import json, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
