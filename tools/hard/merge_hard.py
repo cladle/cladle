@@ -510,8 +510,27 @@ MOVE_INTO = {"Pinnipedia": ["Odobenidae", "Otariidae", "Phocidae"],  # 鰭脚類
              "Hexacorallia": ["Cerianthidae"],  # ハナギンチャク類は六放サンゴ類の中で最初に分かれた群（McFadden et al. 2021、WoRMS）
              "Accipitriformes": ["Sagittarius"],  # ヘビクイワシはタカ目（IOC 15.2）
              "Annelida": ["Amphinomida"],  # ウミケムシ類は Pleistoannelida の外で分かれる（Weigert et al. 2014）
-             "Luminacea": ["Astriclypeus"],  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
-             "Psittacidae": ["Psittacus", "Ara"], "Phasianidae": ["Gallus"]}  # 本家で目の直下にある鳥の属を科の下へ（Catalogue of Life）
+             "Scutelliformes": ["Astriclypeus"],  # スカシカシパンはタコノマクラ目の外で、Scutelliformes の中（Mongiardino Koch et al. 2022、WoRMS）
+             "Psittacidae": ["Psittacus", "Ara"], "Phasianidae": ["Gallus"],  # 本家で目の直下にある鳥の属を科の下へ（Catalogue of Life）
+             # 以下は 2026-11-01 の点検で見つけたもの：上の節目の直下に置かれ、本来入るはずの隣の節目の外にあった（Catalogue of Life・WoRMS で確認）
+             "Stylommatophora": ["Achatinidae", "Succineidae", "Plectopylidae", "Spiraxidae", "Discidae", "Diapheridae", "Huttonella",
+                                 "Pupilloidei", "Clausilioidei", "Limacoidei", "Helicoidei", "Punctoidea", "Arionoidea"],  # 陸の有肺類は柄眼目（WoRMS）
+             "Ellobiidae": ["Carychium"],  # ケシガイ属はオカミミガイ科（WoRMS）
+             "Euchelicerata": ["Garypidae", "Bdellidae"],  # カニムシ類・ダニ類はクモガタ類（Catalogue of Life）
+             "Thoracicalcarea": ["Capitulum"],  # カメノテは完胸類（Chan et al. 2021、Catalogue of Life・WoRMS）
+             "Clavelinidae": ["Pycnoclavella"],  # Catalogue of Life・WoRMS
+             "Metridioidea": ["Diadumene"],  # タテジマイソギンチャクの属（Rodríguez et al. 2014、Catalogue of Life）
+             "Sipuncula": ["Sipunculus"], "Echiuroidea": ["Urechis"],  # ホシムシ・ユムシの属（Catalogue of Life・WoRMS）
+             "Cyrenoidea": ["Corbicula"],  # シジミ属（Catalogue of Life・WoRMS）
+             "Diplostraca": ["Daphnia"], "Pleocyemata": ["Stenopus"], "Oegopsida": ["Architeuthis"],  # Catalogue of Life・WoRMS
+             "Heteroscleromorpha": ["Ephydatia"], "Aplanulata": ["Hydra"],  # Catalogue of Life・WoRMS
+             "Syllidae": ["Ramisyllis"], "Notocomplanidae": ["Notocomplana"],  # Catalogue of Life・WoRMS
+             "Otariidae": ["Arctocephalus"], "Erinaceidae": ["Atelerix"], "Sciuridae": ["Cynomys"], "Cricetidae": ["Mesocricetus"],  # MDD・Catalogue of Life
+             "Iguania": ["Basiliscus", "Trioceros"], "Agamidae": ["Chlamydosaurus"],  # Pyron et al. 2013、Catalogue of Life
+             "Hydroporinae": ["Morimotoa"], "Gerrinae": ["Aquarius"], "Scarabaeinae": ["Caccobius"],  # Catalogue of Life
+             "Belostomatinae": ["Diplonychus"], "Galerucinae": ["Morphosphaera"], "Smerinthinae": ["Laothoe"],  # Catalogue of Life
+             "Polyommatinae": ["Leptotes", "Nothodanis"], "Theclinae": ["Satyrium", "Sibataniozephyrus"],  # シジミチョウ科の亜科（Catalogue of Life）
+             "Nymphalinae": ["Kaniska"], "Satyrinae": ["Lasiommata", "Lopinga", "Minois", "Ninguta"]}  # タテハチョウ科の亜科（Catalogue of Life）
 for to, items in MOVE_INTO.items():
     t = [i for i, c in C.items() if c["sci"] == to and c["rank"] != "属"]
     if len(t) != 1: log["move_into"].append(["notarget", to]); continue
