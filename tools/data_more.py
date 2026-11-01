@@ -1379,7 +1379,7 @@ edit("culicidae", desc="蚊。血を吸うのは雌だけで、雌も血を吸�
 edit("chiroptera", desc="コウモリ。羽ばたいて飛ぶことのできる唯一の哺乳類。")
 edit("hexacorallia", desc="触手や隔膜の数が6の倍数になるものが多い。イシサンゴやイソギンチャク。")
 edit("coleoptera", desc="前翅が硬い鞘翅になった甲虫。記載された種の数が動物で最も多い目。")
-edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・有顎動物など。")
+edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・担顎動物など。")
 edit("takaashigani", fact="脚を広げると3 m以上になり、脚を広げた幅では世界最大のカニ。")
 edit("higashikirigirisu", fact="日本のキリギリスを東西2種に分ける扱いでの、東日本の種。同じ種とする見方もある。")
 
@@ -1715,7 +1715,7 @@ _find("hishikui")["verify"] = {"sci": "IOC 世界鳥類リストは亜種ヒシ�
 edit("deuterostomia", ja="新口動物", desc="後口動物とも呼ぶ。棘皮動物・半索動物（水腔動物）と脊索動物をまとめたクレード。")
 edit("protostomia", ja="旧口動物", desc="前口動物とも呼ぶ。脱皮動物とらせん卵割動物をまとめたクレード。",
      polytomy="毛顎動物は旧口動物の中の位置が定まっていない（顎口動物などと近いとする解析もある）ため、ここでは三分岐で示す。")
-edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・有顎動物など。")
+edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・担顎動物など。")
 # 足りない門を戻す（作者の指定、2026-10-27「必死に探して」）。和名は Web・GBIF・iNaturalist・Wikidata で探し直したもの。
 # 3種とも学術的な和名の出典は未確認なので verify を付ける。顎口動物・直泳動物は和名のある種が見つからない。
 C("loricifera", "scalidophora", "胴甲動物門", "Loricifera", "門", "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。")
@@ -1917,8 +1917,8 @@ _find("amimenishikihebi").setdefault("sciSynonyms", []).append("Python reticulat
 _find("yariika").setdefault("sciSynonyms", []).append("Loligo bleekeri")
 _find("hakusenshiomaneki").setdefault("sciSynonyms", []).append("Uca lactea")
 # 節目と種の説明を最新の分類に合わせる（2026-10-28）。文の直しは各版に反映し、版は上げない。
-edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（有顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
-edit("spiralia", polytomy="扁形動物・腹毛動物・有顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
+edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（担顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
+edit("spiralia", polytomy="扁形動物・腹毛動物・担顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
 edit("anguilliformes", desc="ウナギ・アナゴ・ウツボ・ハモ。幼生はレプトセファルス。")
 edit("nihonunagi", fact="マリアナ諸島西方の海で産卵し、レプトセファルス幼生として日本へ来る。")
 edit("muscicapidae", desc="ヒタキの仲間の小鳥。ツグミ科に近い。ジョウビタキ・キビタキ・オオルリなど。")
@@ -1959,3 +1959,106 @@ move("tectipleura", "amefurashi", "hadakakamegai", "tamanomidorigai")
 move("stylommatophora", "misujimaimai", "namekuji", "africamaimai")
 move("systellommatophora", "ashihidanamekuji", "onchidiidae")
 # 出題の重み（枠・門・知名度）と種の並びは変わらないので版は上げず、今の版に入れる（10/30 から）
+# 作者の指定（2026-10-31）。2026年10月に新種として記載された種。和名・学名は原記載（Yokogawa, Murakami & Nakano 2026, Zoological Science 43）と
+# 京都大学・美祢市の発表（2026-10-27）による。コムシ目（双尾類）は本家に無かったので六脚亜門の下に節目を足す。
+C("diplura", "hexapoda", "コムシ目", "Diplura", "目",
+  "目も翅もない、細長い土の中の六脚類。腹の先に2本の尾（尾角）またはハサミをもつ。昆虫綱には含めない。")
+R("akiyoshihoraananagakomushi", "diplura", "アキヨシホラアナナガコムシ", "Pacificampa dodecas",
+  "山口県秋吉台の石灰岩の洞窟にすむナガコムシの仲間。長く名前が無いままだったが、2026年に新種として記載された。体長は最大13 mm（触角と尾角を除く）で、ナガコムシ科で世界最大。")
+_find("akiyoshihoraananagakomushi")["tier"] = 4
+# 作者の指定（2026-11-01）。和名・学名は日本産爬虫両生類標準和名リスト（2026年7月2日版）による（ゲキムズの照合と同じ）
+R("taimai", "testudines", "タイマイ", "Eretmochelys imbricata",
+  "サンゴ礁にすむウミガメ。くちばしのようにとがった口で、岩のすき間の海綿を食べる。甲羅は鼈甲（べっこう）の材料にされ、数が大きく減った。")
+_find("taimai")["tier"] = 2
+# 作者の指定（2026-11-01）。学名は GBIF・CoL・WoRMS で一致（check/picks26）。日本産ではないので魚類目録には無く、和名は Wikidata のみ
+C("anabantiformes", "percomorpha", "キノボリウオ目", "Anabantiformes", "目",
+  "アジアとアフリカの淡水魚。多くはえらの上にある迷路のような器官（ラビリンス器官）で、空気を直接吸って呼吸できる。ベタ・グラミー・タイワンドジョウなど。")
+R("beta", "anabantiformes", "ベタ", "Betta splendens",
+  "タイなど東南アジアの水田や湿地にすむ淡水魚。オス同士が激しく争うので闘魚とも呼ばれる。ひれの長い品種が観賞魚として飼われる。",
+  v={"ja": "和名の出典は Wikidata のみ（学術的な出典は未確認）"})
+_find("beta")["tier"] = 2
+# 作者の指定（2026-11-01）。学名は GBIF・CoL・WoRMS で一致（check/picks26）。和名は Wikidata と iNaturalist の一致のみで、学名をカタカナにした形だが
+# 飼育で定着した呼び名なので例外として使う（作者の判断、2026-11-01）
+C("polypteriformes", "actinopterygii", "ポリプテルス目", "Polypteriformes", "目",
+  "アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。")
+R("polypterus_senegalus", "polypteriformes", "ポリプテルス・セネガルス", "Polypterus senegalus",
+  "西〜中央アフリカの川や湖にすむ。うろこは硬いガノイン鱗で、胸びれの付け根に肉がある。観賞魚として飼われ、古代魚とも呼ばれる。",
+  ["ポリプテルス"], v={"ja": "和名は Wikidata・iNaturalist の一致のみで、学名をカタカナにした形（学術的な和名は未確認）"})
+_find("polypterus_senegalus")["tier"] = 3
+# 作者の指定（2026-11-01）。学名・和名は GBIF・CoL・Wikidata・iNaturalist で一致（check/picks27）
+R("himeookuwagata", "lucanidae", "ヒメオオクワガタ", "Dorcus montivagus",
+  "日本の山地のブナ林などにすむクワガタムシ。オオクワガタに似るが小さい。生きた木の枝の皮をかじり、しみ出る樹液を吸う。")
+_find("himeookuwagata")["tier"] = 3
+META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ・タイマイ・ベタ・ポリプテルス・ヒメオオクワガタ（11/02〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
+# 作者の写真（串本のウミガメ・臨海実習のホワイトボード・水族館、2026-11-01）にあった種。ゲキムズに収録済みの種は
+# ゲキムズの照合（check/hard_inv/）のまま、新しい種は check/picks28 で照合。置き場所はゲキムズの節目をたどった本家の節目
+for _id, _p, _ja, _sci, _t, _f in [
+    ("himeumigame", "testudines", "ヒメウミガメ", "Lepidochelys olivacea", 2, "熱帯から亜熱帯の海に広くすむ小形のウミガメ。多数のメスが同じ浜にいっせいに上陸して産卵する「アリバダ」で知られる。"),
+    ("osagame", "testudines", "オサガメ", "Dermochelys coriacea", 2, "現生で最大のカメ。甲羅はかたい板でなく、革のような皮膚でおおわれる。クラゲを主に食べ、深く潜り、冷たい海まで回遊する。"),
+    ("yanagiumiera", "octocorallia", "ヤナギウミエラ", "Virgularia gustaviana", 3, "内湾の砂泥底に立って暮らすウミエラの仲間。細長い軸に小さなポリプが並び、柳の枝のように見える。"),
+    ("yoroiisoginchaku", "actiniaria", "ヨロイイソギンチャク", "Anthopleura japonica", 3, "磯の岩のすき間にすむイソギンチャク。体の表面のいぼに砂や貝殻のかけらを付け、鎧をまとったように見える。"),
+    ("midoriisoginchaku", "actiniaria", "ミドリイソギンチャク", "Anthopleura fuscoviridis", 3, "磯の岩に付くイソギンチャク。名前のとおり、緑がかった色の個体が多い。"),
+    ("sujihoshimushimodoki", "annelida", "スジホシムシモドキ", "Siphonosoma cumanense", 3, "干潟の砂泥にすむホシムシの仲間。体の表面に縦と横の筋が格子のように見える。ホシムシ類は今の分類では環形動物に含まれる。"),
+    ("isoteppouebi", "caridea", "イソテッポウエビ", "Alpheus lobidens", 3, "磯の石の下にすむテッポウエビの仲間。大きいほうのはさみを勢いよく閉じて「パチン」と音を出す。"),
+    ("oowarekara", "malacostraca", "オオワレカラ", "Caprella kroyeri", 3, "海藻などにつかまって暮らす、細長い端脚類（ワレカラ）の仲間。前の脚で小さな獲物を捕らえる。"),
+    ("hiraisogani", "brachyura", "ヒライソガニ", "Gaetice depressus", 3, "磯の石の下に多い小さなカニ。甲羅が平たく、石のすき間に入りこめる。"),
+    ("isoyokobasami", "anomura", "イソヨコバサミ", "Clibanarius virescens", 3, "磯でよく見られるヤドカリ。左右のはさみがほぼ同じ大きさで、脚の先が黄色っぽい。"),
+    ("matsubagai", "gastropoda", "マツバガイ", "Cellana nigrolineata", 3, "磯の岩に付く笠形の貝（カサガイ類）。殻に松葉のような放射状の模様がある。"),
+    ("yomegakasa", "gastropoda", "ヨメガカサ", "Cellana toreuma", 3, "磯の岩に付く平たい笠形の貝。潮が引くと岩にぴったり付いて、体が乾くのを防ぐ。"),
+    ("igai", "bivalvia", "イガイ", "Mytilus coruscus", 3, "岩礁に足糸で付く大形の二枚貝。ムラサキイガイより大きく、殻が厚い。食用にされる。"),
+    ("saruboo", "bivalvia", "サルボウガイ", "Anadara kagoshimensis", 3, "内湾の泥底にすむ二枚貝。殻に太い筋が並ぶ。血液に赤い色素（ヘモグロビン）をもつので身が赤く、赤貝の缶詰に使われる。"),
+    ("sugai", "vetigastropoda", "スガイ", "Lunella correensis", 3, "磯に多い小さな巻貝。ふたが石灰質で厚く、殻に海藻が生えていることが多い。"),
+    ("kemushihizaragai", "aculifera", "ケムシヒザラガイ", "Cryptoplax japonica", 3, "細長い体のヒザラガイの仲間。殻の板が小さく、体の大部分が毛の生えた肉の帯でおおわれる。"),
+    ("hikariumiushi", "doridina", "ヒカリウミウシ", "Plocamopherus tilesii", 3, "刺激を受けると体が青白く光るウミウシ。"),
+    ("koshidakagangara", "vetigastropoda", "コシダカガンガラ", "Tegula rustica", 3, "磯の岩の上でよく見られる巻貝。殻は黒っぽく、背が高い。"),
+    ("tamakibi", "caenogastropoda", "タマキビ", "Littorina brevicula", 3, "満潮でもほとんど水につからない高い岩の上にすむ小さな巻貝。乾燥に強い。"),
+    ("iboneshi", "caenogastropoda", "イボニシ", "Reishia clavigera", 3, "磯の岩に多い肉食の巻貝。ほかの貝などに穴をあけて食べる。船底の塗料（有機スズ）でメスにオスの生殖器ができる現象の研究で知られる。"),
+    ("himeika", "decapodiformes", "ヒメイカ", "Idiosepius paradoxus", 3, "体長2 cmほどの、世界でもっとも小さいイカの一つ。背中の粘着器官で海藻にくっついて暮らす。"),
+    ("tenagadako", "octopodiformes", "テナガダコ", "Octopus minor", 2, "干潟や内湾の泥底にすむ、腕の長いタコ。食用にされる。"),
+    ("kiiroumiushi", "doridina", "キイロウミウシ", "Doriprismatica atromarginata", 3, "体が黄色く、ふちが黒く縁取られるウミウシ。"),
+    ("mategai", "bivalvia", "マテガイ", "Solen strictus", 2, "干潟や砂浜に縦に潜ってすむ、細長い筒形の二枚貝。巣穴に塩を入れると飛び出してくる。"),
+    ("natsumeboya", "tunicata", "ナツメボヤ", "Ascidia ahodori", 3, "浅い海の岩などに付く単体のホヤ。体はなつめの実のような形をしている。"),
+    ("makuraboya", "tunicata", "マクラボヤ", "Pyura mirabilis", 4, "磯の岩に付く単体のホヤ。マボヤと同じマボヤ科。"),
+    ("kijihata", "perciformes", "キジハタ", "Epinephelus akaara", 2, "沿岸の岩礁にすむハタの仲間。体に橙色の小さな点が散らばる。関西ではアコウと呼ばれる高級魚。"),
+    ("takenokomebaru", "perciformes", "タケノコメバル", "Sebastes oblongus", 3, "沿岸の岩礁にすむメバルの仲間。体に褐色のまだら模様がある。"),
+    ("kujime", "perciformes", "クジメ", "Hexagrammos agrammus", 3, "沿岸の岩礁や藻場にすむアイナメの仲間。アイナメに似るが、側線が1本で、尾びれの後ろのふちが丸い。"),
+    ("kuromebaru", "perciformes", "クロメバル", "Sebastes ventricosus", 2, "沿岸の岩礁にすむメバル。以前はメバル1種とされていたが、2008年にアカメバル・シロメバルと3種に分けられた。"),
+    ("kusafugu", "tetraodontiformes", "クサフグ", "Takifugu alboplumbeus", 2, "沿岸でもっともふつうに見られる小形のフグ。初夏の大潮の夜、波打ち際に集まって産卵する。"),
+    ("yamatoosagani", "brachyura", "ヤマトオサガニ", "Macrophthalmus japonicus", 3, "干潟の泥にすむカニ。甲羅は横に長く、目の柄が長い。"),
+    ("tatejimafujitsubo", "thecostraca", "タテジマフジツボ", "Amphibalanus amphitrite", 3, "内湾の岩や船の底などに付くフジツボ。殻に紫色の縦じまがある。"),
+    ("kefusaisogani", "brachyura", "ケフサイソガニ", "Hemigrapsus penicillatus", 3, "磯や河口の石の下にすむカニ。オスのはさみの付け根に毛の房がある。"),
+    ("iwagaki", "bivalvia", "イワガキ", "Magallana nippona", 2, "外海に面した岩礁にすむ大形のカキ。夏が旬の食用ガキ。"),
+    ("oohebigai", "caenogastropoda", "オオヘビガイ", "Thylacodes adamsii", 3, "磯の岩に殻を固着させる巻貝。殻はヘビがとぐろを巻いたような形。粘液の網を出してえさを集める。"),
+    ("mamedako", "octopodiformes", "マメダコ", "Octopus parvus", 3, "磯や浅い海にすむ小形のタコ。"),
+    ("uminina", "caenogastropoda", "ウミニナ", "Batillaria multiformis", 3, "干潟に多い細長い巻貝。泥の表面の有機物を食べる。"),
+    ("torigai", "bivalvia", "トリガイ", "Fulvia mutica", 2, "内湾の砂泥底にすむ二枚貝。長い足が鳥の頭のように見え、すしだねにされる。"),
+    ("higanfugu", "tetraodontiformes", "ヒガンフグ", "Takifugu pardalis", 3, "沿岸の岩礁にすむフグ。春の彼岸のころによく獲れることから名が付いた。"),
+    ("ginpo", "perciformes", "ギンポ", "Pholis nebulosa", 2, "沿岸の岩礁や藻場にすむ細長い魚。天ぷらだねとして知られる。"),
+    ("idatenginpo", "blenniiformes", "イダテンギンポ", "Omobranchus punctatus", 3, "内湾の岩場やカキ殻のすき間にすむ小さなギンポの仲間。"),
+    ("iwafujitsubo", "thecostraca", "イワフジツボ", "Chthamalus challengeri", 3, "潮間帯の上のほうの岩に付く小形のフジツボ。"),
+    ("ooakafujitsubo", "thecostraca", "オオアカフジツボ", "Megabalanus volcano", 3, "外海の岩礁に付く大形のフジツボ。殻が赤い。"),
+    ("togebaneumishida", "crinoidea", "トゲバネウミシダ", "Antedon serrata", 3, "浅い海の岩の上で、羽のような腕を広げて暮らすウミシダの仲間。"),
+    ("hasunohakashipan", "echinoidea", "ハスノハカシパン", "Scaphechinus mirabilis", 3, "浅い砂底に潜ってすむ平たいウニ（カシパン類）。丸い形をハスの葉に見立てた名。"),
+    ("himehitode", "asteroidea", "ヒメヒトデ", "Henricia nipponica", 3, "磯で見られる腕の細長いヒトデ。"),
+    ("araisokokeginpo", "blenniiformes", "アライソコケギンポ", "Neoclinus okazakii", 3, "外海に面した磯の岩の穴などにすむ小さな魚。目の上に房のような皮弁がある。"),
+    ("isohaze", "gobiiformes", "イソハゼ", "Eviota abax", 3, "磯の潮だまりなどにすむ、体長3 cmほどの小さなハゼ。"),
+    ("konpeitou", "perciformes", "コンペイトウ", "Eumicrotremus asperrimus", 3, "冷たい海の底にすむダンゴウオの仲間。体に円すい形のいぼが並び、金平糖のように見える。腹びれが吸盤になっている。"),
+    ("zeburautsubo", "anguilliformes", "ゼブラウツボ", "Gymnomuraena zebra", 3, "サンゴ礁にすむウツボ。白と黒のしま模様がある。歯は臼のように丸く、カニや貝をかみ砕いて食べる。"),
+    ("sarasahata", "perciformes", "サラサハタ", "Chromileptes altivelis", 3, "サンゴ礁にすむハタの仲間。白地に黒い水玉模様があり、頭が小さく背が盛り上がる。"),
+    # どちらにも無かった種（check/picks28）
+    ("ikubihonyadokari", "anomura", "イクビホンヤドカリ", "Pagurus proximus", 3, "磯でよく見られるホンヤドカリの仲間。2000年に記載された。"),
+    ("togetsunoyadokari", "anomura", "トゲツノヤドカリ", "Diogenes edwardsii", 3, "内湾の砂泥底にすむヤドカリ。左のはさみが大きい。"),
+    ("daidaiisokaimen", "demospongiae", "ダイダイイソカイメン", "Halichondria japonica", 3, "潮間帯の岩に広がる橙色のカイメン。"),
+    ("tairagi", "bivalvia", "タイラギ", "Atrina japonica", 2, "内湾の砂泥底に、とがった殻の先を突き刺して立つ大形の二枚貝。貝柱がすしだねなどにされる。"),
+    ("iwana", "salmoniformes", "イワナ", "Salvelinus leucomaenis", 2, "山地の冷たい渓流にすむサケの仲間。地域ごとにアメマス・ニッコウイワナ・ヤマトイワナ・ゴギの亜種に分けられる。"),
+    ("tokobushi", "vetigastropoda", "トコブシ", "Haliotis diversicolor", 2, "磯の岩の下などにすむ小形のアワビの仲間。殻に並ぶ穴の数がアワビより多い。食用にされる。"),
+]:
+    R(_id, _p, _ja, _sci, _f)
+    _find(_id)["tier"] = _t
+_find("saruboo")["aliases"] = ["サルボウ"]
+_find("iwana")["aliases"] = ["アメマス", "エゾイワナ", "ニッコウイワナ", "ヤマトイワナ", "ゴギ"]
+_find("iwana")["subspeciesAliases"] = ["アメマス", "ニッコウイワナ", "ヤマトイワナ", "ゴギ"]
+_find("tokobushi")["aliases"] = ["フクトコブシ"]
+_find("tokobushi")["subspeciesAliases"] = ["フクトコブシ"]
+_find("tokobushi")["verify"] = {"ja": "WoRMS は亜種を分けない。和名トコブシは日本の亜種 aquatilis の名で、種としての和名は iNaturalist のみ"}
+META["datasetVersion"] = "0.3.18"  # 作者の写真にあった58種（11/03〜）

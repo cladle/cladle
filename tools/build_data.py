@@ -268,7 +268,7 @@ C("kinorhyncha", "scalidophora", "動吻動物門", "Kinorhyncha", "門", "体�
 S("echinoderes", "kinorhyncha", "エキノデレス・オオツカイ", "Echinoderes ohtsukai", "日本の干潟から記載されたトゲカワの一種。", ["トゲカワ"], jaStatus="provisional", v={"ja": "和名なし（学名の音写）"})
 C("loricifera", "scalidophora", "胴甲動物門", "Loricifera", "門", "1983年に記載された最も新しい門の一つ。体は0.5 mm以下。")
 S("nanaloricus", "loricifera", "ナナロリクス・ミスティクス", "Nanaloricus mysticus", "胴甲動物で最初に記載された種。", ["コウラムシ"], jaStatus="provisional", v={"ja": "和名なし（学名の音写）、日本産ではない"})
-C("nematoida", "ecdysozoa", "Nematoida", "Nematoida", "クレード", "線虫とハリガネムシ。", v={"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"})
+C("nematoida", "ecdysozoa", "糸形動物", "Nematoida", "クレード", "線虫とハリガネムシ。")
 C("nematoda", "nematoida", "線形動物門", "Nematoda", "門", "線虫。土や海、他の生物の体内などあらゆる環境にいる。")
 S("celegans", "nematoda", "シー・エレガンス", "Caenorhabditis elegans", "全細胞の系譜が分かっているモデル生物。", ["線虫", "エレガンス"], jaStatus="common", v={"ja": "標準和名ではなく通称"})
 S("kaichu", "nematoda", "ヒトカイチュウ", "Ascaris lumbricoides", "かつて日本人の多くが感染していた寄生虫。", ["カイチュウ", "回虫"])
@@ -343,7 +343,7 @@ S("hitosujishimaka", "mecopterida", "ヒトスジシマカ", "Aedes albopictus",
 C("spiralia", "protostomia", "らせん卵割動物", "Spiralia", "クレード",
   "らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・顎口動物など。",
   poly="扁形動物・腹毛動物・顎口動物類・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
-C("gnathifera", "spiralia", "有顎動物", "Gnathifera", "クレード", "咽頭に複雑な顎をもつ微小な動物のまとまり。")
+C("gnathifera", "spiralia", "担顎動物", "Gnathifera", "クレード", "咽頭に複雑な顎をもつ微小な動物のまとまり。有顎動物とも呼ぶ。")
 C("gnathostomulida", "gnathifera", "顎口動物門", "Gnathostomulida", "門", "海底の砂のすきまにすむ1 mm前後の動物。")
 S("gnathostomula", "gnathostomulida", "グナトストムラ・パラドクサ", "Gnathostomula paradoxa", "顎口動物の代表種。", jaStatus="provisional", v={"ja": "和名なし（学名の音写）、日本産ではない"})
 C("micrognathozoa", "gnathifera", "微顎動物門", "Micrognathozoa", "門", "2000年に記載。グリーンランドの泉で見つかった1種だけからなる。")
