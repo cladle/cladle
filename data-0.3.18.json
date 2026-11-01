@@ -2592,6 +2592,22 @@
    "sci": "Polypteriformes",
    "rank": "目",
    "desc": "アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。近縁のチョウザメ目などと違い、体が硬く厚いうろこ（硬鱗）でおおわれ、胸びれの付け根が肉質になっている。"
+  },
+  {
+   "id": "amphipoda",
+   "parent": "malacostraca",
+   "ja": "端脚目",
+   "sci": "Amphipoda",
+   "rank": "目",
+   "desc": "ヨコエビ・ハマトビムシ・ワレカラ・タルマワシなど。多くは体が左右に平たく、横倒しになって泳ぐことからヨコエビと呼ばれる。"
+  },
+  {
+   "id": "cumacea",
+   "parent": "malacostraca",
+   "ja": "クーマ目",
+   "sci": "Cumacea",
+   "rank": "目",
+   "desc": "頭胸部が大きくふくらみ、腹部が細長い、体長数 mmの小さな甲殻類。浅い海の砂泥底にすむ。"
   }
  ],
  "species": [
@@ -9071,7 +9087,7 @@
   },
   {
    "id": "himehamatobimushi",
-   "parent": "malacostraca",
+   "parent": "amphipoda",
    "ja": "タイヘイヨウヒメハマトビムシ",
    "sci": "Platorchestia pacifica",
    "jaStatus": "standard",
@@ -11618,7 +11634,7 @@
   },
   {
    "id": "ootarumawashi",
-   "parent": "malacostraca",
+   "parent": "amphipoda",
    "ja": "オオタルマワシ",
    "sci": "Phronima sedentaria",
    "jaStatus": "standard",
@@ -13226,7 +13242,7 @@
   },
   {
    "id": "oowarekara",
-   "parent": "malacostraca",
+   "parent": "amphipoda",
    "ja": "オオワレカラ",
    "sci": "Caprella kroyeri",
    "jaStatus": "standard",
@@ -13755,6 +13771,26 @@
    "verify": {
     "ja": "WoRMS は亜種を分けない。和名トコブシは日本の亜種 aquatilis の名で、種としての和名は iNaturalist のみ"
    }
+  },
+  {
+   "id": "nipponyokoebi",
+   "parent": "amphipoda",
+   "ja": "ニッポンヨコエビ",
+   "sci": "Gammarus nipponensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "湧き水や山地の小川の落ち葉の下などにすむ淡水のヨコエビ。落ち葉を食べて分解を助ける。",
+   "tier": 3
+  },
+  {
+   "id": "nagisakuma",
+   "parent": "cumacea",
+   "ja": "ナギサクーマ",
+   "sci": "Bodotria pulex",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "浅い海の砂底にすむクーマの仲間。ふだんは砂に潜っている。",
+   "tier": 4
   }
  ]
 }
