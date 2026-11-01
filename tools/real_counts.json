@@ -1,0 +1,908 @@
+{
+ "source": {
+  "col": "Bánki, O. et al. (2026) Catalogue of Life (Version 2026-10-14). Catalogue of Life Foundation, Amsterdam. https://doi.org/10.48580/dgzh4（CC BY 4.0）。分類群ごとの現生の記載種数（speciesExtantCount）",
+  "book": "国立科学博物館（2024）特別展「鳥 〜ゲノム解析が解き明かす新しい鳥類の系統〜」図録、図「鳥の目の種数」（文：西海功）"
+ },
+ "colKey": 316595,
+ "taxa": {
+  "Accipitriformes": {
+   "n": 265,
+   "src": "book"
+  },
+  "Actinopterygii": {
+   "n": 35767,
+   "src": "col",
+   "col": [
+    "8VR36"
+   ]
+  },
+  "Aegotheliformes": {
+   "n": 9,
+   "src": "book"
+  },
+  "Allomalorhagida": {
+   "n": 119,
+   "src": "col",
+   "col": [
+    "7Z5NY"
+   ]
+  },
+  "Amphibia": {
+   "n": 8923,
+   "src": "col",
+   "col": [
+    "PH"
+   ]
+  },
+  "Annelida": {
+   "n": 17586,
+   "src": "col",
+   "col": [
+    "NN"
+   ]
+  },
+  "Anseriformes": {
+   "n": 178,
+   "src": "book"
+  },
+  "Anthozoa": {
+   "n": 3695,
+   "src": "col",
+   "col": [
+    "7S"
+   ]
+  },
+  "Apodiformes": {
+   "n": 483,
+   "src": "book"
+  },
+  "Apterygiformes": {
+   "n": 5,
+   "src": "book"
+  },
+  "Archaeognatha": {
+   "n": 606,
+   "src": "col",
+   "col": [
+    "B6MTR"
+   ]
+  },
+  "Arthropoda": {
+   "n": 1208559,
+   "src": "col",
+   "col": [
+    "RT"
+   ]
+  },
+  "Asteroidea": {
+   "n": 2053,
+   "src": "col",
+   "col": [
+    "B8V3Q"
+   ]
+  },
+  "Aves": {
+   "n": 10868,
+   "src": "col",
+   "col": [
+    "V2"
+   ]
+  },
+  "Bivalvia": {
+   "n": 10063,
+   "src": "col",
+   "col": [
+    "7NF3C"
+   ]
+  },
+  "Blattodea": {
+   "n": 8023,
+   "src": "col",
+   "col": [
+    "KZRLZ"
+   ]
+  },
+  "Brachiopoda": {
+   "n": 413,
+   "src": "col",
+   "col": [
+    "B8V3K"
+   ]
+  },
+  "Branchiopoda": {
+   "n": 1679,
+   "src": "col",
+   "col": [
+    "8H"
+   ]
+  },
+  "Bryozoa": {
+   "n": 5442,
+   "src": "col",
+   "col": [
+    "622CG"
+   ]
+  },
+  "Bucerotiformes": {
+   "n": 77,
+   "src": "book"
+  },
+  "Calcarea": {
+   "n": 841,
+   "src": "col",
+   "col": [
+    "84JMY"
+   ]
+  },
+  "Caprimulgiformes": {
+   "n": 97,
+   "src": "book"
+  },
+  "Cariamiformes": {
+   "n": 2,
+   "src": "book"
+  },
+  "Casuariiformes": {
+   "n": 4,
+   "src": "book"
+  },
+  "Cephalopoda": {
+   "n": 869,
+   "src": "col",
+   "col": [
+    "7NF3H"
+   ]
+  },
+  "Cestoda": {
+   "n": 3114,
+   "src": "col",
+   "col": [
+    "8Z"
+   ]
+  },
+  "Chaetognatha": {
+   "n": 132,
+   "src": "col",
+   "col": [
+    "36"
+   ]
+  },
+  "Charadriiformes": {
+   "n": 391,
+   "src": "book"
+  },
+  "Chilopoda": {
+   "n": 3145,
+   "src": "col",
+   "col": [
+    "93"
+   ]
+  },
+  "Chondrichthyes": {
+   "n": 1353,
+   "src": "col",
+   "col": [
+    "8X6G5"
+   ]
+  },
+  "Chordata": {
+   "n": 79256,
+   "src": "col",
+   "col": [
+    "CH2"
+   ]
+  },
+  "Ciconiiformes": {
+   "n": 20,
+   "src": "book"
+  },
+  "Clitellata": {
+   "n": 4582,
+   "src": "col",
+   "col": [
+    "9H"
+   ]
+  },
+  "Cnidaria": {
+   "n": 14606,
+   "src": "col",
+   "col": [
+    "CN2"
+   ]
+  },
+  "Coleoptera": {
+   "n": 332013,
+   "src": "col",
+   "col": [
+    "C2L"
+   ]
+  },
+  "Coliiformes": {
+   "n": 6,
+   "src": "book"
+  },
+  "Columbiformes": {
+   "n": 352,
+   "src": "book"
+  },
+  "Coraciiformes": {
+   "n": 186,
+   "src": "book"
+  },
+  "Crinoidea": {
+   "n": 688,
+   "src": "col",
+   "col": [
+    "B8V3S"
+   ]
+  },
+  "Ctenophora": {
+   "n": 182,
+   "src": "col",
+   "col": [
+    "B8V3L"
+   ]
+  },
+  "Cubozoa": {
+   "n": 53,
+   "src": "col",
+   "col": [
+    "B8V3T"
+   ]
+  },
+  "Cuculiformes": {
+   "n": 150,
+   "src": "book"
+  },
+  "Cycliophora": {
+   "n": 2,
+   "src": "col",
+   "col": [
+    "622CL"
+   ]
+  },
+  "Cyclorhagida": {
+   "n": 241,
+   "src": "col",
+   "col": [
+    "7NF99"
+   ]
+  },
+  "Demospongiae": {
+   "n": 8154,
+   "src": "col",
+   "col": [
+    "84JN8"
+   ]
+  },
+  "Dermaptera": {
+   "n": 2094,
+   "src": "col",
+   "col": [
+    "8MP8D"
+   ]
+  },
+  "Dicyemida": {
+   "n": 122,
+   "src": "col",
+   "col": [
+    "3Z"
+   ]
+  },
+  "Diplopoda": {
+   "n": 13126,
+   "src": "col",
+   "col": [
+    "7NF3S"
+   ]
+  },
+  "Diptera": {
+   "n": 175895,
+   "src": "col",
+   "col": [
+    "D2P"
+   ]
+  },
+  "Echinodermata": {
+   "n": 7761,
+   "src": "col",
+   "col": [
+    "CHN"
+   ]
+  },
+  "Echinoidea": {
+   "n": 1017,
+   "src": "col",
+   "col": [
+    "B8V3V"
+   ]
+  },
+  "Embioptera": {
+   "n": 445,
+   "src": "col",
+   "col": [
+    "8MP8H"
+   ]
+  },
+  "Enteropneusta": {
+   "n": 113,
+   "src": "col",
+   "col": [
+    "622CY"
+   ]
+  },
+  "Entoprocta": {
+   "n": 171,
+   "src": "col",
+   "col": [
+    "BDTX4"
+   ]
+  },
+  "Ephemeroptera": {
+   "n": 3341,
+   "src": "col",
+   "col": [
+    "372"
+   ]
+  },
+  "Eurypygiformes": {
+   "n": 2,
+   "src": "book"
+  },
+  "Falconiformes": {
+   "n": 65,
+   "src": "book"
+  },
+  "Galliformes": {
+   "n": 308,
+   "src": "book"
+  },
+  "Gastropoda": {
+   "n": 76743,
+   "src": "col",
+   "col": [
+    "7NF3Y"
+   ]
+  },
+  "Gastrotricha": {
+   "n": 905,
+   "src": "col",
+   "col": [
+    "B8V3M"
+   ]
+  },
+  "Gaviiformes": {
+   "n": 5,
+   "src": "book"
+  },
+  "Gruiformes": {
+   "n": 189,
+   "src": "book"
+  },
+  "Gymnolaemata": {
+   "n": 4845,
+   "src": "col",
+   "col": [
+    "84JND"
+   ]
+  },
+  "Hemichordata": {
+   "n": 139,
+   "src": "col",
+   "col": [
+    "4R"
+   ]
+  },
+  "Hemiptera": {
+   "n": 102376,
+   "src": "col",
+   "col": [
+    "BXVWV"
+   ]
+  },
+  "Heterotardigrada": {
+   "n": 562,
+   "src": "col",
+   "col": [
+    "62254"
+   ]
+  },
+  "Hexactinellida": {
+   "n": 737,
+   "src": "col",
+   "col": [
+    "84JNH"
+   ]
+  },
+  "Holothuroidea": {
+   "n": 1837,
+   "src": "col",
+   "col": [
+    "B8V3W"
+   ]
+  },
+  "Hoplonemertea": {
+   "n": 750,
+   "src": "col",
+   "col": [
+    "84JQD"
+   ]
+  },
+  "Hydrozoa": {
+   "n": 3894,
+   "src": "col",
+   "col": [
+    "B8V3X"
+   ]
+  },
+  "Hymenoptera": {
+   "n": 130725,
+   "src": "col",
+   "col": [
+    "HYM"
+   ]
+  },
+  "Insecta": {
+   "n": 1012723,
+   "src": "col",
+   "col": [
+    "H6"
+   ]
+  },
+  "Kinorhyncha": {
+   "n": 360,
+   "src": "col",
+   "col": [
+    "B8VF5"
+   ]
+  },
+  "Lepidoptera": {
+   "n": 169647,
+   "src": "col",
+   "col": [
+    "B6L67"
+   ]
+  },
+  "Leptosomiformes": {
+   "n": 1,
+   "src": "book"
+  },
+  "Loricifera": {
+   "n": 47,
+   "src": "col",
+   "col": [
+    "B8VF6"
+   ]
+  },
+  "Malacostraca": {
+   "n": 44319,
+   "src": "col",
+   "col": [
+    "MC"
+   ]
+  },
+  "Mammalia": {
+   "n": 6368,
+   "src": "col",
+   "col": [
+    "6224G"
+   ]
+  },
+  "Mantodea": {
+   "n": 2523,
+   "src": "col",
+   "col": [
+    "3HS"
+   ]
+  },
+  "Mecoptera": {
+   "n": 868,
+   "src": "col",
+   "col": [
+    "3J4"
+   ]
+  },
+  "Megaloptera": {
+   "n": 386,
+   "src": "col",
+   "col": [
+    "3J8"
+   ]
+  },
+  "Mesitornithiformes": {
+   "n": 3,
+   "src": "book"
+  },
+  "Micrognathozoa": {
+   "n": 1,
+   "src": "col",
+   "col": [
+    "54"
+   ]
+  },
+  "Mollusca": {
+   "n": 89879,
+   "src": "col",
+   "col": [
+    "M2L"
+   ]
+  },
+  "Monopisthocotyla": {
+   "n": 4668,
+   "src": "col",
+   "col": [
+    "7NFC9"
+   ],
+   "alias": [
+    [
+     "Monopisthocotylea",
+     "subclass"
+    ]
+   ]
+  },
+  "Musophagiformes": {
+   "n": 23,
+   "src": "book"
+  },
+  "Nematoda": {
+   "n": 19667,
+   "src": "col",
+   "col": [
+    "NM"
+   ]
+  },
+  "Nematomorpha": {
+   "n": 356,
+   "src": "col",
+   "col": [
+    "5B"
+   ]
+  },
+  "Nemertea": {
+   "n": 1373,
+   "src": "col",
+   "col": [
+    "5C"
+   ]
+  },
+  "Neuroptera": {
+   "n": 5917,
+   "src": "col",
+   "col": [
+    "3ND"
+   ]
+  },
+  "Notoptera": {
+   "n": 57,
+   "src": "col",
+   "col": [
+    "V9XS7"
+   ]
+  },
+  "Nyctibiiformes": {
+   "n": 7,
+   "src": "book"
+  },
+  "Odonata": {
+   "n": 6504,
+   "src": "col",
+   "col": [
+    "B6LCL"
+   ]
+  },
+  "Onychophora": {
+   "n": 235,
+   "src": "col",
+   "col": [
+    "BV844"
+   ]
+  },
+  "Ophiuroidea": {
+   "n": 2166,
+   "src": "col",
+   "col": [
+    "B8VD4"
+   ]
+  },
+  "Opisthocomiformes": {
+   "n": 1,
+   "src": "book"
+  },
+  "Orthoptera": {
+   "n": 29996,
+   "src": "col",
+   "col": [
+    "CJBKK"
+   ]
+  },
+  "Otidiformes": {
+   "n": 26,
+   "src": "book"
+  },
+  "Palaeonemertea": {
+   "n": 119,
+   "src": "col",
+   "col": [
+    "84JTY"
+   ]
+  },
+  "Passeriformes": {
+   "n": 6719,
+   "src": "book"
+  },
+  "Pelecaniformes": {
+   "n": 120,
+   "src": "book"
+  },
+  "Phaethontiformes": {
+   "n": 3,
+   "src": "book"
+  },
+  "Phasmida": {
+   "n": 3607,
+   "src": "col",
+   "col": [
+    "8NKFG"
+   ]
+  },
+  "Phoenicopteriformes": {
+   "n": 6,
+   "src": "book"
+  },
+  "Phoronida": {
+   "n": 19,
+   "src": "col",
+   "col": [
+    "5P"
+   ]
+  },
+  "Piciformes": {
+   "n": 449,
+   "src": "book"
+  },
+  "Pilidiophora": {
+   "n": 495,
+   "src": "col",
+   "col": [
+    "84JV2"
+   ]
+  },
+  "Placozoa": {
+   "n": 4,
+   "src": "col",
+   "col": [
+    "B8V3N"
+   ]
+  },
+  "Platyhelminthes": {
+   "n": 27129,
+   "src": "col",
+   "col": [
+    "7NF2H"
+   ]
+  },
+  "Plecoptera": {
+   "n": 4280,
+   "src": "col",
+   "col": [
+    "9CHXG"
+   ]
+  },
+  "Podargiformes": {
+   "n": 16,
+   "src": "book"
+  },
+  "Podicipediformes": {
+   "n": 23,
+   "src": "book"
+  },
+  "Polyopisthocotyla": {
+   "n": 1208,
+   "src": "col",
+   "col": [
+    "7NFFD"
+   ],
+   "alias": [
+    [
+     "Polyopisthocotylea",
+     "subclass"
+    ]
+   ]
+  },
+  "Porifera": {
+   "n": 9879,
+   "src": "col",
+   "col": [
+    "B8TXQ"
+   ]
+  },
+  "Priapulida": {
+   "n": 23,
+   "src": "col",
+   "col": [
+    "B8VF9"
+   ]
+  },
+  "Procellariiformes": {
+   "n": 149,
+   "src": "book"
+  },
+  "Psittaciformes": {
+   "n": 408,
+   "src": "book"
+  },
+  "Psocodea": {
+   "n": 11902,
+   "src": "col",
+   "col": [
+    "CSYS4"
+   ]
+  },
+  "Pterocliformes": {
+   "n": 16,
+   "src": "book"
+  },
+  "Raphidioptera": {
+   "n": 253,
+   "src": "col",
+   "col": [
+    "6236X"
+   ]
+  },
+  "Rheiformes": {
+   "n": 2,
+   "src": "book"
+  },
+  "Rotifera": {
+   "n": 3797,
+   "src": "col",
+   "col": [
+    "5Y",
+    "622BD"
+   ],
+   "alias": [
+    [
+     "Rotifera",
+     "phylum"
+    ],
+    [
+     "Acanthocephala",
+     "phylum"
+    ]
+   ]
+  },
+  "Sagittoidea": {
+   "n": 132,
+   "src": "col",
+   "col": [
+    "62276"
+   ]
+  },
+  "Scaphopoda": {
+   "n": 590,
+   "src": "col",
+   "col": [
+    "7NF4V"
+   ]
+  },
+  "Scyphozoa": {
+   "n": 244,
+   "src": "col",
+   "col": [
+    "B8V42"
+   ]
+  },
+  "Siphonaptera": {
+   "n": 2215,
+   "src": "col",
+   "col": [
+    "43J"
+   ]
+  },
+  "Sphenisciformes": {
+   "n": 18,
+   "src": "book"
+  },
+  "Staurozoa": {
+   "n": 51,
+   "src": "col",
+   "col": [
+    "B8V43"
+   ]
+  },
+  "Steatornithiformes": {
+   "n": 1,
+   "src": "book"
+  },
+  "Strepsiptera": {
+   "n": 609,
+   "src": "col",
+   "col": [
+    "B8VFN"
+   ]
+  },
+  "Strigiformes": {
+   "n": 254,
+   "src": "book"
+  },
+  "Struthioniformes": {
+   "n": 2,
+   "src": "book"
+  },
+  "Suliformes": {
+   "n": 61,
+   "src": "book"
+  },
+  "Tardigrada": {
+   "n": 1458,
+   "src": "col",
+   "col": [
+    "L2QNW"
+   ]
+  },
+  "Tentaculata": {
+   "n": 149,
+   "src": "col",
+   "col": [
+    "7NF4X"
+   ]
+  },
+  "Thaliacea": {
+   "n": 80,
+   "src": "col",
+   "col": [
+    "L2QHG"
+   ]
+  },
+  "Thysanoptera": {
+   "n": 6596,
+   "src": "col",
+   "col": [
+    "622VS"
+   ]
+  },
+  "Tinamiformes": {
+   "n": 46,
+   "src": "book"
+  },
+  "Trematoda": {
+   "n": 12060,
+   "src": "col",
+   "col": [
+    "JW"
+   ]
+  },
+  "Trichoptera": {
+   "n": 11491,
+   "src": "col",
+   "col": [
+    "TR2"
+   ]
+  },
+  "Trogoniformes": {
+   "n": 46,
+   "src": "book"
+  },
+  "Xenacoelomorpha": {
+   "n": 446,
+   "src": "col",
+   "col": [
+    "7NF2K"
+   ]
+  },
+  "Zoraptera": {
+   "n": 47,
+   "src": "col",
+   "col": [
+    "8MP8V"
+   ]
+  },
+  "Zygentoma": {
+   "n": 305,
+   "src": "col",
+   "col": [
+    "4C8"
+   ]
+  }
+ }
+}

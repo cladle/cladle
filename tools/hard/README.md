@@ -36,3 +36,7 @@ python3 tools/hard/merge_hard.py <本家の最新 data-*.json> cache/hard_vert.j
 ```
 
 出力に `datasetVersion`（`hard-0.3.6` など）を付けて `data-hard-<版>.json` として置き、`data-hard.json` の `meta.next` に開始日とファイル名を書きます。切り替わったあとは中身を `data-hard.json` に写し、`data-hard-<版>.json` は消します。本家の種を足したときも、本家の新しい版を渡して作り直します。
+
+## 出題の重み（実際の種数）
+
+ゲキムズの門と綱、鳥編・昆虫編の目は、収録数ではなく実際の種数（`tools/real_counts.json`）に比例して選びます（ゲキムズの門は平方根で縮める）。新しい門・綱・目の種を足したら、作り直す前に `python3 tools/real_counts.py` を動かして数を足します（控えにある群は問い合わせません）。足し忘れると `tools/check.py` が知らせます。同じ群に種を足すだけなら何もしなくてよく、群の中の割り振りは自動で変わります。

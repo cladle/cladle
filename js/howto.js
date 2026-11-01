@@ -69,7 +69,7 @@ function fishHowto() {
 }
 function birdHowto() {
   return `<section class="hard-rule"><h2>鳥編（試作）</h2><ul>
-    <li>鳥類 ${SP.length.toLocaleString()} 種から出題します。日本鳥類目録改訂第8版に載っている種（外来種を含む）と、ふつうモードのダチョウ・ペンギンなどの外国の鳥、よく知られたハチドリ数種${D.clades.some(c => c.sci === "Opisthocomiformes") ? "、世界の鳥の 44 目がそろうように目ごとに足した外国の鳥" : ""}を入れています。推測にも全種が使え、どの種も同じ確率で出ます。</li>
+    <li>鳥類 ${SP.length.toLocaleString()} 種から出題します。日本鳥類目録改訂第8版に載っている種（外来種を含む）と、ふつうモードのダチョウ・ペンギンなどの外国の鳥、よく知られたハチドリ数種${D.clades.some(c => c.sci === "Opisthocomiformes") ? "、世界の鳥の 44 目がそろうように目ごとに足した外国の鳥" : ""}を入れています。推測にも全種が使えます。${RC() ? RC_ORDER : "どの種も同じ確率で出ます。"}</li>
     <li>系統樹の左端は鳥の祖先で、ダチョウなどの古顎類と、それ以外の新顎類に分かれます。目・科・属は日本鳥類目録に従っています。新鳥類の中の目どうしの分岐の順は、研究によって結果が割れるので決めていません。</li>
     <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
     <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
@@ -77,7 +77,7 @@ function birdHowto() {
 }
 function insectHowto() {
   return `<section class="hard-rule"><h2>昆虫編（試作）</h2><ul>
-    <li>昆虫類 ${SP.length.toLocaleString()} 種から出題します。ほとんどは環境省「種の多様性調査」の対象種（トンボ・チョウ・ガ・セミと水生カメムシ・甲虫）で、ほかにふつうモードの昆虫、論文から足したコガネムシ上科、海辺の昆虫${(D.meta.japaneseNameSources || []).some(x => x.startsWith("足した昆虫")) ? "、iNaturalist で日本の観察数が多い身近な昆虫" : ""}などを入れています。推測にも全種が使え、どの種も同じ確率で出ます。</li>
+    <li>昆虫類 ${SP.length.toLocaleString()} 種から出題します。ほとんどは環境省「種の多様性調査」の対象種（トンボ・チョウ・ガ・セミと水生カメムシ・甲虫）で、ほかにふつうモードの昆虫、論文から足したコガネムシ上科、海辺の昆虫${(D.meta.japaneseNameSources || []).some(x => x.startsWith("足した昆虫")) ? "、iNaturalist で日本の観察数が多い身近な昆虫" : ""}などを入れています。推測にも全種が使えます。${RC() ? RC_ORDER : "どの種も同じ確率で出ます。"}</li>
     <li>系統樹の左端は昆虫の祖先で、はねの無いイシノミ・シミと、はねのある昆虫（有翅昆虫亜綱）に分かれます。目・科の並びは Catalogue of Life に、目より上は昆虫の系統ゲノム解析（Misof et al. 2014）に従っています。</li>
     <li>推測は ${MAX} 回まで。種まで当てたら正解です。</li>
     <li>ヒント1はふつうモードと同じです。ヒント2は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
@@ -86,7 +86,7 @@ function insectHowto() {
 function hardHowto() {
   const s = D.meta.selection;
   return `<section class="hard-rule"><h2>ゲキムズモード（試作）</h2><ul>
-    <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物${(D.meta.counts || {}).land ? "、陸の昆虫・クモ・鳥・貝" : ""}などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。</li>
+    <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物${(D.meta.counts || {}).land ? "、陸の昆虫・クモ・鳥・貝" : ""}などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。${RC() ? "門と綱は、収録している種の数ではなく実際の種数に応じた確率で選びます（門は種数の平方根に比例させて、種数の少ない門も出るようにしています）。" : ""}</li>
     <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）です。答えの種名はまだ出ないので、続けて種まで当てると 🎯、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
     <li>推測は ${MAX} 回まで。属でクリアしたあとは、それとは別に<b>種探しが ${HUNT} 回</b>あり、その属にあと何種いるかも出ます。</li>
     <li>1回目のヒントはふつうモードと同じです。2回目は、答えへの道で今より一段先の節目を教えます。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
@@ -122,3 +122,6 @@ function demoShow(i, typing) {
 }
 function demoStop() { clearTimeout(demoTimer); demoTimer = null; }
 function demoPlay() { demoStop(); demoShow(0, !matchMedia("(prefers-reduced-motion: reduce)").matches); }
+// 出題の重みを実際の種数で決めるデータか（meta.selection.realCounts）
+const RC = () => !!D.meta.selection?.realCounts;
+const RC_ORDER = "目は、収録している種の数ではなく世界の実際の種数に比例した確率で選び（収録の多い目ばかり出ないように）、目の中ではどの種も同じ確率で出ます。";
