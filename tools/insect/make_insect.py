@@ -10,7 +10,7 @@
 """
 import json, sys
 
-INSECT_VERSION = "insect-0.1.1"
+INSECT_VERSION = "insect-0.1.2"
 src, out = sys.argv[1], sys.argv[2]
 H = json.load(open(src, encoding="utf-8"))
 C = {c["id"]: c for c in H["clades"]}
