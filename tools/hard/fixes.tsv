@@ -116,3 +116,7 @@ c64ch2	Acanthochitona achates	ヒメケハダヒザラガイ	verify			ja	和名�
 c6mhtb	Hybovalgus kamiyai	カミヤヒラタハナムグリ	verify			sci	出典の論文（Kobayashi 2024, 鰓角通信48）は台湾産の同物異名を扱っており、学名の扱いを要確認
 w384916	Halipeurus pelagicus	オオワシ	drop				ハジラミに鳥と同じ和名「オオワシ」が付いており取り違えの疑いがあるため（確かめられるまで外す）
 lplecotusauritus	Plecotus auritus	ウサギコウモリ	drop				日本の個体群はニホンウサギコウモリ P. sacrimontis として本家に入っており、それを亜種に含めた旧い扱いの重複になるため
+s716	Salvelinus leucomaenis imbrius	ゴギ	drop				イワナの亜種。亜種の決まりに合わせ、本家と同じくイワナ1種にまとめて亜種名は別名にする（2026-11-01）
+s717	Salvelinus leucomaenis japonicus	ヤマトイワナ	drop				イワナの亜種。亜種の決まりに合わせ、本家と同じくイワナ1種にまとめて亜種名は別名にする（2026-11-01）
+s718	Salvelinus leucomaenis leucomaenis	アメマス	drop				イワナの亜種。亜種の決まりに合わせ、本家と同じくイワナ1種にまとめて亜種名は別名にする（2026-11-01）
+s719	Salvelinus leucomaenis pluvius	ニッコウイワナ	drop				イワナの亜種。亜種の決まりに合わせ、本家と同じくイワナ1種にまとめて亜種名は別名にする（2026-11-01）
