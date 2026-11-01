@@ -2073,4 +2073,15 @@ _find("nipponyokoebi")["tier"] = 3
 R("nagisakuma", "cumacea", "ナギサクーマ", "Bodotria pulex",
   "浅い海の砂底にすむクーマの仲間。ふだんは砂に潜っている。")
 _find("nagisakuma")["tier"] = 4
+# 作者の指定（2026-11-02）「横並びよりも科でまとまってくれたほうがいい」「ゲキムズを参考に」。クモ目の9種を科に分ける。
+# ゲキムズ（merge_hard.py が Japan Spider Catalog から作る科の節目 f_*）と同じ id・和名・置き場所（クモ目の直下）にそろえる。説明は clade_desc_main.tsv
+for _f, _ja, _sci in [("araneidae", "コガネグモ科", "Araneidae"), ("theridiidae", "ヒメグモ科", "Theridiidae"),
+                      ("sparassidae", "アシダカグモ科", "Sparassidae"), ("salticidae", "ハエトリグモ科", "Salticidae"),
+                      ("cheiracanthiidae", "コマチグモ科", "Cheiracanthiidae")]:
+    C("f_" + _f, "araneae", _ja, _sci, "科", "")
+move("f_araneidae", "jorougumo", "nagakoganegumo", "onigumo", "koganegumo")
+move("f_theridiidae", "oohimegumo", "seakagokegumo")
+move("f_sparassidae", "ashidakagumo")
+move("f_salticidae", "adansonhaetori")
+move("f_cheiracanthiidae", "kabakikomachigumo")
 META["datasetVersion"] = "0.3.18"  # 作者の写真にあった58種、ヨコエビ・クーマ（11/03〜）
