@@ -28,6 +28,7 @@
 | `tools/clade_desc_main.tsv` | 本家の節目の説明（近縁の群との違い入り）。id・説明・出典をタブで区切る。`build_data.py` が `data_more.py` の文より優先して使う。ゲキムズ・番外編の同じ節目にも同じ文が入る |
 | `tools/hard/` | ゲキムズのデータの作り方（`tools/hard/README.md`） |
 | `tools/fish/make_fish.py` | 魚編のデータ `data-fish.json` を、ゲキムズのデータから魚だけ切り出して作る |
+| `tools/build_all.py` | 本家・ゲキムズ・各編をまとめて作り直し、今の版と予約版に入れる |
 | `tools/check.py` | 公開前の確認（送るたびに GitHub が自動で動かす） |
 | `tools/stamp.py` | 公開するときに、css/・js/ の読み込みに中身の印（`?v=…`）を付ける（GitHub が自動で動かす。手では動かさない） |
 | `docs/SCHEMA.md`, `docs/SOURCES.md` | データの形式と、名前の出典 |
@@ -45,6 +46,8 @@ JavaScript は上の表の順に読み込まれます。後のファイルは、
 ### 収録種と、種・節目の説明
 
 `data*.json` は直接直さず、`tools/data_more.py` に書き足してから `python3 tools/build_data.py data-<版>.json` で作り直します。直接直すと、次に作り直したときに元に戻ります。
+
+本家を直したら、続けて `python3 tools/build_all.py --write` を動かし、ゲキムズ・魚編・鳥編・昆虫編にも同じ直しを入れます（外部データが要るので、今のところ Claude が動かします。`tools/hard/README.md`）。
 
 - 説明文だけを直すときは版番号を上げず、`data.json`（と予約中の次の版）に同じ直しを反映する。版番号は今日の動物の選び方に入っているので、上げると並びが全部変わる。
 - 種・節目・知名度を増減するときは版番号を上げ、次の版を `data-<版>.json` として作り、`data.json` の `meta.next` に開始日とファイル名を書く（予約式の切り替え）。ページは日本時間でその日になると次の版を読む。

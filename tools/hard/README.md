@@ -32,11 +32,19 @@
 
 ## 作り直し
 
+本家・ゲキムズ・魚編・鳥編・昆虫編は、`tools/build_all.py` で1回にまとめて作り直します（中で `merge_hard.py` と各編の `make_*.py` を動かします）。本家の種や説明を直した PR でも、ゲキムズの表を直した PR でも、同じ PR の中でこれを動かします。
+
 ```
-python3 tools/hard/merge_hard.py <本家の最新 data-*.json> cache/hard_vert.json <col を展開したフォルダ> <出力.json> tools/hard/fixes.tsv <worms を展開したフォルダ> cache/land.json
+python3 tools/build_all.py            # 何が変わるかを見るだけ
+python3 tools/build_all.py --write    # data-*.json に書く
+python3 tools/build_all.py --write --new hard=hard-0.3.13@2026-11-05   # 新しい版を作って予約する
 ```
 
-出力に `datasetVersion`（`hard-0.3.6` など）を付けて `data-hard-<版>.json` として置き、`data-hard.json` の `meta.next` に開始日とファイル名を書きます。切り替わったあとは中身を `data-hard.json` に写し、`data-hard-<版>.json` は消します。本家の種を足したときも、本家の新しい版を渡して作り直します。
+- 文だけの違い（和名・説明・別名など）は、今の版にも予約中の版にも入れます。版は上げません。
+- 種・節目・知名度の違いは、まだ始まっていない予約版だけを差し替えます。予約版が無いか、もう始まっているときは止まるので、`--new` で新しい版を作ります。
+- 本家で作った節目の外に、ゲキムズの同じ群が残っていると知らせます（例：本家でクモ目の下に Araneoidea を作ったのに、ゲキムズのクモの科がクモ目の直下に並んだまま）。本家の木を変えたら、ゲキムズの群も同じように振り分けます（`merge_hard.py` の MOVE_INTO など）。
+
+切り替わったあとは中身を `data-hard.json` に写し、`data-hard-<版>.json` は消します（今まで通り）。
 
 ## 出題の重み（実際の種数）
 
