@@ -16,7 +16,7 @@ import json, os, re, sys, time, urllib.parse, urllib.request
 src, cache, out = sys.argv[1:4]
 os.makedirs(cache, exist_ok=True)
 RATE = 0.05
-# 目（学名, 和名, 世界の種数, iNaturalist で引く分類群）。種数は図「鳥の目の種数」（文：西海功）による
+# 目（学名, 和名, 世界の種数, iNaturalist で引く分類群）。種数は特別展「鳥 ～ゲノム解析が解き明かす新しい鳥類の系統～」（国立科学博物館ほか、2024）の図録の図「鳥の目の種数」（文：西海功）による
 BOOK = [("Struthioniformes", "ダチョウ目", 2, ["Struthionidae"]), ("Rheiformes", "レア目", 2, ["Rheidae"]),
         ("Apterygiformes", "キーウィ目", 5, ["Apterygidae"]), ("Casuariiformes", "ヒクイドリ目", 4, ["Casuariidae", "Dromaiidae"]),
         ("Tinamiformes", "シギダチョウ目", 46, ["Tinamidae"]), ("Anseriformes", "カモ目", 178, ["Anseriformes"]),
