@@ -1,5 +1,15 @@
 [
  {
+  "id": "diplura",
+  "ja": "コムシ目",
+  "sci": "Diplura",
+  "rank": "目",
+  "under": "Hexapoda",
+  "take": [],
+  "desc": "目も翅もない、細長い土の中の六脚類。腹の先に2本の尾（尾角）またはハサミをもつ。昆虫綱には含めない。",
+  "source": "hard-0.3.10 で足した節目をここへ移した（2026-10-31）"
+ },
+ {
   "id": "dipnoi",
   "ja": "ハイギョ類",
   "sci": "Dipnoi",
@@ -18,8 +28,8 @@
   "under": "Apodiformes",
   "take": [],
   "source": "Catalogue of Life。和名は iNaturalist・Wikidata・GBIF で一致（2026-10-28）"
-  },
-  {
+ },
+ {
   "id": "o_osteoglossiformes",
   "ja": "アロワナ目",
   "sci": "Osteoglossiformes",
@@ -39,5 +49,527 @@
   "take": [
    "Osteoglossum bicirrhosum"
   ]
+ },
+ {
+  "id": "o_struthioniformes",
+  "ja": "ダチョウ目",
+  "sci": "Struthioniformes",
+  "rank": "目",
+  "under": "Palaeognathae",
+  "take": [
+   "Struthio",
+   "Struthio camelus"
+  ],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_rheiformes",
+  "ja": "レア目",
+  "sci": "Rheiformes",
+  "rank": "目",
+  "under": "Palaeognathae",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_apterygiformes",
+  "ja": "キーウィ目",
+  "sci": "Apterygiformes",
+  "rank": "目",
+  "under": "Palaeognathae",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_casuariiformes",
+  "ja": "ヒクイドリ目",
+  "sci": "Casuariiformes",
+  "rank": "目",
+  "under": "Palaeognathae",
+  "take": [
+   "Dromaius",
+   "Dromaius novaehollandiae"
+  ],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_tinamiformes",
+  "ja": "シギダチョウ目",
+  "sci": "Tinamiformes",
+  "rank": "目",
+  "under": "Palaeognathae",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_steatornithiformes",
+  "ja": "アブラヨタカ目",
+  "sci": "Steatornithiformes",
+  "rank": "目",
+  "under": "Strisores",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_nyctibiiformes",
+  "ja": "タチヨタカ目",
+  "sci": "Nyctibiiformes",
+  "rank": "目",
+  "under": "Strisores",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_podargiformes",
+  "ja": "ガマグチヨタカ目",
+  "sci": "Podargiformes",
+  "rank": "目",
+  "under": "Strisores",
+  "take": [
+   "Podargus",
+   "Podargus strigoides"
+  ],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_aegotheliformes",
+  "ja": "ズクヨタカ目",
+  "sci": "Aegotheliformes",
+  "rank": "目",
+  "under": "Strisores",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_musophagiformes",
+  "ja": "エボシドリ目",
+  "sci": "Musophagiformes",
+  "rank": "目",
+  "under": "Neoaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_mesitornithiformes",
+  "ja": "クイナモドキ目",
+  "sci": "Mesitornithiformes",
+  "rank": "目",
+  "under": "Columbimorphae",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_phoenicopteriformes",
+  "ja": "フラミンゴ目",
+  "sci": "Phoenicopteriformes",
+  "rank": "目",
+  "under": "Mirandornithes",
+  "take": [
+   "Phoenicopterus",
+   "Phoenicopterus ruber"
+  ],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_eurypygiformes",
+  "ja": "ジャノメドリ目",
+  "sci": "Eurypygiformes",
+  "rank": "目",
+  "under": "Neoaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_sphenisciformes",
+  "ja": "ペンギン目",
+  "sci": "Sphenisciformes",
+  "rank": "目",
+  "under": "Aequornithes",
+  "take": [
+   "Aptenodytes",
+   "Aptenodytes forsteri"
+  ],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_opisthocomiformes",
+  "ja": "ツメバケイ目",
+  "sci": "Opisthocomiformes",
+  "rank": "目",
+  "under": "Neoaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_coliiformes",
+  "ja": "ネズミドリ目",
+  "sci": "Coliiformes",
+  "rank": "目",
+  "under": "Afroaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_leptosomiformes",
+  "ja": "オオブッポウソウ目",
+  "sci": "Leptosomiformes",
+  "rank": "目",
+  "under": "Afroaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_trogoniformes",
+  "ja": "キヌバネドリ目",
+  "sci": "Trogoniformes",
+  "rank": "目",
+  "under": "Afroaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "o_cariamiformes",
+  "ja": "ノガンモドキ目",
+  "sci": "Cariamiformes",
+  "rank": "目",
+  "under": "Australaves",
+  "take": [],
+  "source": "目の和名は図「鳥の目の種数」（文：西海功）による。置き場所は Prum et al. 2015・Stiller et al. 2024 の系統（2026-10-30）"
+ },
+ {
+  "id": "f_struthionidae",
+  "ja": "ダチョウ科",
+  "sci": "Struthionidae",
+  "rank": "科",
+  "under": "Struthioniformes",
+  "take": [
+   "Struthio",
+   "Struthio camelus"
+  ],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_rheidae",
+  "ja": "レア科",
+  "sci": "Rheidae",
+  "rank": "科",
+  "under": "Rheiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_apterygidae",
+  "ja": "キーウィ科",
+  "sci": "Apterygidae",
+  "rank": "科",
+  "under": "Apterygiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_casuariidae",
+  "ja": "ヒクイドリ科",
+  "sci": "Casuariidae",
+  "rank": "科",
+  "under": "Casuariiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_dromaiidae",
+  "ja": "Dromaiidae",
+  "sci": "Dromaiidae",
+  "rank": "科",
+  "under": "Casuariiformes",
+  "take": [
+   "Dromaius",
+   "Dromaius novaehollandiae"
+  ],
+  "source": "Catalogue of Life。和名が2つ以上の出典でそろわないので学名のまま（2026-10-30）"
+ },
+ {
+  "id": "f_tinamidae",
+  "ja": "シギダチョウ科",
+  "sci": "Tinamidae",
+  "rank": "科",
+  "under": "Tinamiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_steatornithidae",
+  "ja": "アブラヨタカ科",
+  "sci": "Steatornithidae",
+  "rank": "科",
+  "under": "Steatornithiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_nyctibiidae",
+  "ja": "タチヨタカ科",
+  "sci": "Nyctibiidae",
+  "rank": "科",
+  "under": "Nyctibiiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_podargidae",
+  "ja": "ガマグチヨタカ科",
+  "sci": "Podargidae",
+  "rank": "科",
+  "under": "Podargiformes",
+  "take": [
+   "Podargus",
+   "Podargus strigoides"
+  ],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_aegothelidae",
+  "ja": "ズクヨタカ科",
+  "sci": "Aegothelidae",
+  "rank": "科",
+  "under": "Aegotheliformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_musophagidae",
+  "ja": "エボシドリ科",
+  "sci": "Musophagidae",
+  "rank": "科",
+  "under": "Musophagiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_mesitornithidae",
+  "ja": "クイナモドキ科",
+  "sci": "Mesitornithidae",
+  "rank": "科",
+  "under": "Mesitornithiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_phoenicopteridae",
+  "ja": "フラミンゴ科",
+  "sci": "Phoenicopteridae",
+  "rank": "科",
+  "under": "Phoenicopteriformes",
+  "take": [
+   "Phoenicopterus",
+   "Phoenicopterus ruber"
+  ],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_eurypygidae",
+  "ja": "ジャノメドリ科",
+  "sci": "Eurypygidae",
+  "rank": "科",
+  "under": "Eurypygiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_rhynochetidae",
+  "ja": "カグー科",
+  "sci": "Rhynochetidae",
+  "rank": "科",
+  "under": "Eurypygiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_spheniscidae",
+  "ja": "ペンギン科",
+  "sci": "Spheniscidae",
+  "rank": "科",
+  "under": "Sphenisciformes",
+  "take": [
+   "Aptenodytes",
+   "Aptenodytes forsteri"
+  ],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_opisthocomidae",
+  "ja": "ツメバケイ科",
+  "sci": "Opisthocomidae",
+  "rank": "科",
+  "under": "Opisthocomiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_coliidae",
+  "ja": "ネズミドリ科",
+  "sci": "Coliidae",
+  "rank": "科",
+  "under": "Coliiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_leptosomidae",
+  "ja": "オオブッポウソウ科",
+  "sci": "Leptosomidae",
+  "rank": "科",
+  "under": "Leptosomiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_trogonidae",
+  "ja": "キヌバネドリ科",
+  "sci": "Trogonidae",
+  "rank": "科",
+  "under": "Trogoniformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_cariamidae",
+  "ja": "ノガンモドキ科",
+  "sci": "Cariamidae",
+  "rank": "科",
+  "under": "Cariamiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_megapodiidae",
+  "ja": "ツカツクリ科",
+  "sci": "Megapodiidae",
+  "rank": "科",
+  "under": "Galliformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_bucerotidae",
+  "ja": "サイチョウ科",
+  "sci": "Bucerotidae",
+  "rank": "科",
+  "under": "Bucerotiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_bucorvidae",
+  "ja": "Bucorvidae",
+  "sci": "Bucorvidae",
+  "rank": "科",
+  "under": "Bucerotiformes",
+  "take": [],
+  "source": "Catalogue of Life。和名が2つ以上の出典でそろわないので学名のまま（2026-10-30）"
+ },
+ {
+  "id": "f_ramphastidae",
+  "ja": "オオハシ科",
+  "sci": "Ramphastidae",
+  "rank": "科",
+  "under": "Piciformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_cacatuidae",
+  "ja": "オウム科",
+  "sci": "Cacatuidae",
+  "rank": "科",
+  "under": "Psittaciformes",
+  "take": [
+   "Nymphicus",
+   "Nymphicus hollandicus"
+  ],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_strigopidae",
+  "ja": "フクロウオウム科",
+  "sci": "Strigopidae",
+  "rank": "科",
+  "under": "Psittaciformes",
+  "take": [
+   "Strigops",
+   "Strigops habroptilus"
+  ],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_cardinalidae",
+  "ja": "ショウジョウコウカンチョウ科",
+  "sci": "Cardinalidae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_icteridae",
+  "ja": "ムクドリモドキ科",
+  "sci": "Icteridae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_mimidae",
+  "ja": "マネシツグミ科",
+  "sci": "Mimidae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_tyrannidae",
+  "ja": "タイランチョウ科",
+  "sci": "Tyrannidae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_cracticidae",
+  "ja": "Cracticidae",
+  "sci": "Cracticidae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名が2つ以上の出典でそろわないので学名のまま（2026-10-30）"
+ },
+ {
+  "id": "f_maluridae",
+  "ja": "オーストラリアムシクイ科",
+  "sci": "Maluridae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_vireonidae",
+  "ja": "モズモドキ科",
+  "sci": "Vireonidae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・Wikidata・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "f_rhipiduridae",
+  "ja": "オウギビタキ科",
+  "sci": "Rhipiduridae",
+  "rank": "科",
+  "under": "Passeriformes",
+  "take": [],
+  "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
  }
 ]
