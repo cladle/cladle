@@ -13287,10 +13287,12 @@
   {
    "id": "saruboo",
    "parent": "bivalvia",
-   "ja": "サルボウ",
+   "ja": "サルボウガイ",
    "sci": "Anadara kagoshimensis",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "サルボウ"
+   ],
    "fact": "内湾の泥底にすむ二枚貝。殻に太い筋が並ぶ。血液に赤い色素（ヘモグロビン）をもつので身が赤く、赤貝の缶詰に使われる。",
    "tier": 3
   },

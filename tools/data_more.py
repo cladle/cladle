@@ -2006,7 +2006,7 @@ for _id, _p, _ja, _sci, _t, _f in [
     ("matsubagai", "gastropoda", "マツバガイ", "Cellana nigrolineata", 3, "磯の岩に付く笠形の貝（カサガイ類）。殻に松葉のような放射状の模様がある。"),
     ("yomegakasa", "gastropoda", "ヨメガカサ", "Cellana toreuma", 3, "磯の岩に付く平たい笠形の貝。潮が引くと岩にぴったり付いて、体が乾くのを防ぐ。"),
     ("igai", "bivalvia", "イガイ", "Mytilus coruscus", 3, "岩礁に足糸で付く大形の二枚貝。ムラサキイガイより大きく、殻が厚い。食用にされる。"),
-    ("saruboo", "bivalvia", "サルボウ", "Anadara kagoshimensis", 3, "内湾の泥底にすむ二枚貝。殻に太い筋が並ぶ。血液に赤い色素（ヘモグロビン）をもつので身が赤く、赤貝の缶詰に使われる。"),
+    ("saruboo", "bivalvia", "サルボウガイ", "Anadara kagoshimensis", 3, "内湾の泥底にすむ二枚貝。殻に太い筋が並ぶ。血液に赤い色素（ヘモグロビン）をもつので身が赤く、赤貝の缶詰に使われる。"),
     ("sugai", "vetigastropoda", "スガイ", "Lunella correensis", 3, "磯に多い小さな巻貝。ふたが石灰質で厚く、殻に海藻が生えていることが多い。"),
     ("kemushihizaragai", "aculifera", "ケムシヒザラガイ", "Cryptoplax japonica", 3, "細長い体のヒザラガイの仲間。殻の板が小さく、体の大部分が毛の生えた肉の帯でおおわれる。"),
     ("hikariumiushi", "doridina", "ヒカリウミウシ", "Plocamopherus tilesii", 3, "刺激を受けると体が青白く光るウミウシ。"),
@@ -2055,6 +2055,7 @@ for _id, _p, _ja, _sci, _t, _f in [
 ]:
     R(_id, _p, _ja, _sci, _f)
     _find(_id)["tier"] = _t
+_find("saruboo")["aliases"] = ["サルボウ"]
 _find("iwana")["aliases"] = ["アメマス", "エゾイワナ", "ニッコウイワナ", "ヤマトイワナ", "ゴギ"]
 _find("iwana")["subspeciesAliases"] = ["アメマス", "ニッコウイワナ", "ヤマトイワナ", "ゴギ"]
 _find("tokobushi")["aliases"] = ["フクトコブシ"]
