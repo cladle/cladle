@@ -1,0 +1,258 @@
+id	desc	出典
+metazoa	多細胞で、コラーゲンを含む細胞外基質をもち、多くは胚発生で原腸を作る生物のまとまり。最も近い仲間の襟鞭毛虫類（単細胞または簡単な群体）と違い、役割の違う多くの種類の細胞が集まって一つの体を作る。	Brunet & King 2017 Dev Cell 43:124; 『動物の系統分類進化学』
+porifera	襟細胞で水流を起こし、体内の水路で濾過食する。神経や筋肉をもたない。近縁の有櫛動物やParaHoxozoaの動物と違い、決まった体の形や組織の層（上皮・神経・筋肉）がはっきりせず、口や消化管もない。海綿動物と有櫛動物のどちらが先に分かれたかは議論が続いている。	Dunn et al. 2014 Annu Rev Ecol Evol Syst 45:371; Schultz et al. 2023 Nature 618:110
+hexactinellida	ケイ酸質の六放射の骨片をもつ深海性の海綿。ガラス海綿とも呼ばれる。近縁の普通海綿綱などと違い、体の大部分が細胞の境目のない一続きの組織（合胞体）でできている。	Leys et al. 2007 Adv Mar Biol 52:1; Morrow & Cárdenas 2015 Front Zool 12:7
+demospongiae	現生海綿の大半を占めるグループ。近縁の六放海綿綱（骨片が六放射）や石灰海綿綱（炭酸カルシウムの骨片）と違い、骨片はケイ酸質で四放射以下か、骨片をもたず海綿質の繊維（スポンジン）だけで体を支える。	Morrow & Cárdenas 2015 Front Zool 12:7
+ctenophora	繊毛が板状に並んだ櫛板を打って泳ぐ。刺胞をもたず、多くは粘着細胞で獲物を捕まえる。見た目はクラゲに似るが、近縁の刺胞動物とは別の系統で、遺伝子の解析では動物の中で最も早く分かれたとする説が有力。	Schultz et al. 2023 Nature 618:110; Dunn et al. 2014 Annu Rev Ecol Evol Syst 45:371
+placozoa	数種類の細胞だけからなる、平たく薄い体の動物。決まった形も口もない。近縁の刺胞動物や左右相称動物と違い、神経も筋肉もなく、腹側の細胞で藻類などを消化する。	Srivastava et al. 2008 Nature 454:955; 『動物の系統分類進化学』
+cnidaria	刺胞という毒針の細胞小器官をもつ。ポリプとクラゲの二つの体制がある。近縁の左右相称動物と違い、体は放射相称で、口と肛門を兼ねる一つの開口しかない。	Kayal et al. 2018 BMC Evol Biol 18:68; 『動物の系統分類進化学』
+anthozoa	クラゲ世代をもたず、一生ポリプで過ごす。サンゴやイソギンチャク。近縁のクラゲ亜門と違い、ポリプの胃の中が仕切り（隔膜）でいくつもの部屋に分かれる。	Kayal et al. 2018 BMC Evol Biol 18:68; McFadden et al. 2021 Syst Biol 70:635
+hexacorallia	触手や隔膜の数が6の倍数になるものが多い。イシサンゴやイソギンチャク。姉妹群の八放サンゴ亜綱と違い、触手は羽状に枝分かれしない。	McFadden et al. 2021 Syst Biol 70:635
+medusozoa	生活史にクラゲの時期をもつ（二次的に失ったものもいる）グループ。近縁の花虫綱と違い、ポリプの胃の中に仕切りがなく、ミトコンドリアのDNAが環状でなく線状になる。	Kayal et al. 2018 BMC Evol Biol 18:68; Bridge et al. 1992 PNAS 89:8750
+myxozoa	魚などに寄生する顕微鏡サイズの刺胞動物。かつては原生生物とされていた。近縁の花虫綱やクラゲ亜門と違い、数個の細胞にまで体が小さくなり、刺胞に似た極嚢で宿主にとりつく。遺伝子の解析で刺胞動物と分かった。	Chang et al. 2015 PNAS 112:14912
+bilateria	体に前後・背腹・左右の軸をもち、三胚葉からなる動物。近縁の刺胞動物や板形動物と違い、内胚葉と外胚葉のあいだに中胚葉ができ、筋肉や多くの器官を作る。	『動物の系統分類進化学』; Dunn et al. 2014 Annu Rev Ecol Evol Syst 45:371
+xenacoelomorpha	肛門も体腔もない、単純な体の左右相称動物。珍渦虫と無腸動物などを含む。近縁の新口動物・旧口動物と違い排出器官もなく、左右相称動物の中で最も早く分かれたとする説と、新口動物に近いとする説がある。	Cannon et al. 2016 Nature 530:89; Philippe et al. 2019 Curr Biol 29:1818
+deuterostomia	後口動物とも呼ぶ。棘皮動物・半索動物（水腔動物）と脊索動物をまとめたクレード。近縁の旧口動物と見た目で分ける決め手は乏しく、喉（咽頭）に鰓裂をもつことが主な手がかりで、まとまりは主に遺伝子の解析で支えられる。	Telford et al. 2015 Proc R Soc B 282:20150240; Dunn et al. 2014 Annu Rev Ecol Evol Syst 45:371
+ambulacraria	棘皮動物と半索動物をまとめたクレード。幼生の形がよく似る。近縁の脊索動物と違い、体の中が前・中・後の3つの体腔に分かれ、ディプリュールラ型の幼生をもつ。	Telford et al. 2015 Proc R Soc B 282:20150240
+echinodermata	成体は五放射相称で、水管系と管足をもつ。海にだけすむ。近縁の半索動物と違い、皮膚の中に炭酸カルシウムの骨片があり、幼生は左右相称なのに成体は五放射に作り変わる。	『動物の系統分類進化学』; Telford et al. 2014 Proc R Soc B 281:20140479
+eleutherozoa	ウミユリ綱（ウミユリ・ウミシダ）を除く現生の棘皮動物。ヒトデ・クモヒトデの仲間と、ウニ・ナマコの仲間からなる。姉妹群のウミユリ綱と違い、口を下（海底側）に向けて暮らし、管足で動き回る。	Telford et al. 2014 Proc R Soc B 281:20140479
+echinozoa	ウニとナマコ。姉妹群のAsterozoa（ヒトデ・クモヒトデ）と違い、腕をもたず、体は丸いか細長く、管足の通る帯が口から肛門へ向かって走る。	Telford et al. 2014 Proc R Soc B 281:20140479
+hemichordata	ギボシムシとフサカツギ。咽頭に鰓裂をもつ。近縁の棘皮動物と違い、骨片も五放射の体ももたず、体は吻・襟・胴の3つに分かれる。	Telford et al. 2015 Proc R Soc B 282:20150240; 『動物の系統分類進化学』
+chordata	発生のある時期に脊索・背側神経管・鰓裂・肛門より後ろの尾をもつ。姉妹群の水腔動物（棘皮動物・半索動物）と違い、背中側を通る棒状の脊索と、その上の管状の神経をもつ。	Satoh 2016 Chordate Origins and Evolution (Academic Press); Telford et al. 2015 Proc R Soc B 282:20150240
+olfactores	尾索動物と脊椎動物をまとめたクレード。ナメクジウオより互いに近い。見た目の共通点は少なく、主に遺伝子の解析でまとまる。手がかりは、どちらも神経堤に似た細胞をもつこと。	Delsuc et al. 2006 Nature 439:965; Abitua et al. 2012 Nature 492:104
+tunicata	セルロースを含む被嚢で体を包む。幼生はオタマジャクシ形。近縁の脊椎動物と違い、成体の多くは脊索と尾を失い、岩などに固着するか海中を漂う。	Delsuc et al. 2006 Nature 439:965; Satoh 2016 Chordate Origins and Evolution
+vertebrata	脊椎骨や頭蓋をもつ。神経堤細胞が多くの構造を作る。近縁の尾索動物と違い、頭がはっきりし、目や耳などの感覚器が頭に集まる。	Satoh 2016 Chordate Origins and Evolution; 『動物の系統分類進化学』
+cyclostomata	顎をもたない現生の脊椎動物。ヌタウナギとヤツメウナギ。姉妹群の顎口類と違い、顎も対になったひれ（胸びれ・腹びれ）もなく、鼻の穴が1つだけ。	Kuraku & Kuratani 2006 Zool Sci 23:1053; Miyashita et al. 2019 PNAS 116:2146
+gnathostomata	顎をもつ脊椎動物。姉妹群の円口類と違い、上下に動く顎と、対になった胸びれ・腹びれ（四肢動物では前脚・後ろ脚）をもつ。	Brazeau & Friedman 2015 Nature 520:490
+chondrichthyes	骨格が軟骨でできている。サメ・エイ・ギンザメ。姉妹群のOsteichthyesと違い、硬い骨（硬骨）をほとんど作らず、うきぶくろも肺ももたない。	Brazeau & Friedman 2015 Nature 520:490; Nelson et al. 2016 Fishes of the World 5th ed.
+elasmobranchii	サメとエイ。鰓孔が体表に直接開く。近縁の全頭亜綱（ギンザメ類）と違い、えらぶたがなく、鰓孔が5〜7対並ぶ。上あごは頭骨と癒合しない。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; Nelson et al. 2016 Fishes of the World 5th ed.
+osteichthyes	硬い骨をもつ脊椎動物。条鰭類と肉鰭類（陸上脊椎動物を含む）からなる。和名の「硬骨魚類」は四肢動物を除いた魚だけの意味で使われることが多いので、ここでは学名のまま表記する。姉妹群の軟骨魚綱と違い、骨格が硬骨になり、うきぶくろか肺をもつ。	Brazeau & Friedman 2015 Nature 520:490
+actinopterygii	鰭が放射状の鰭条で支えられる魚。脊椎動物の種数の約半分を占める。姉妹群の肉鰭類と違い、ひれの付け根に肉質の部分や太い骨がない。	Near et al. 2012 PNAS 109:13698; Betancur-R et al. 2017 BMC Evol Biol 17:162
+teleostei	条鰭類の大部分を占めるグループ。祖先で全ゲノム重複が起きた。近縁のガー目などと違い、尾びれが上下対称に見え（正尾）、上あごの一部の骨が動いて口を前に突き出せるものが多い。	Near et al. 2012 PNAS 109:13698; Betancur-R et al. 2017 BMC Evol Biol 17:162
+clupeocephala	真骨類のうちカライワシ類・アロワナ類以外。近縁のカライワシ上目やアロワナ目と見た目で分ける決め手は乏しく、主に遺伝子の解析と、あごや尾の骨の細かなつくりでまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162
+percomorpha	棘鰭類の中心となる大きなグループ。ペルカ目（Perciformes）のほか、フグ目・ダツ目・ハゼ目・アジ目（ヒラメ・カレイ類を含む）など多くの目を含む。近縁のキンメダイ目などと見た目の共通点は乏しく、主に遺伝子の解析でまとまる。手がかりは、腹びれが胸びれのすぐ下にあり、棘1本と軟条5本でできること。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Near et al. 2013 PNAS 110:12738
+sarcopterygii	肉質の鰭をもつ魚と、その子孫である四肢動物。姉妹群の条鰭綱と違い、胸びれ・腹びれの付け根に太い骨と筋肉があり、それが四肢動物の脚のもとになった。	Clack 2012 Gaining Ground 2nd ed. (Indiana Univ Press); Brazeau & Friedman 2015 Nature 520:490
+rhipidistia	ハイギョと四肢動物をまとめたクレード。もう一つの肉鰭類であるシーラカンスより互いに近い。見た目の共通点は少なく、主に遺伝子の解析でまとまる。手がかりは、鼻の穴が口の中に通じる（内鼻孔）ことと、肺で呼吸すること。	Amemiya et al. 2013 Nature 496:311; Clack 2012 Gaining Ground
+tetrapoda	四肢をもつ（または祖先がもっていた）脊椎動物。近縁のハイギョ類と違い、ひれのかわりに指のある脚をもち、首の骨で頭を動かせる。	Clack 2012 Gaining Ground 2nd ed.
+amphibia	多くは水中で幼生期を過ごし、変態して陸に上がる。姉妹群の有羊膜類と違い、卵に羊膜がなく殻もないため水中や湿った場所に産み、皮膚がうろこにおおわれず湿っている。	Pyron & Wiens 2011 Mol Phylogenet Evol 61:543; 『動物の系統分類進化学』
+amniota	羊膜に包まれた卵（胚）で、陸上で発生できる脊椎動物。近縁の両生類と違い、幼生の時期がなく、乾いた陸上でも卵（または母親の体内）の中で育つ。	『動物の系統分類進化学』; Clack 2012 Gaining Ground
+mammalia	乳で子を育て、体毛をもつ。姉妹群のSauropsida（爬虫類・鳥類）と違い、下あごが1つの骨（歯骨）だけでできており、耳の中に3つの小骨をもつ。	Kemp 2005 The Origin and Evolution of Mammals (Oxford Univ Press)
+theria	子を産む哺乳類。有袋類と有胎盤類。姉妹群の単孔目（卵を産む）と違い、胎盤で母親の体内で子を育て、乳首から乳を与える。	Kemp 2005 The Origin and Evolution of Mammals
+placentalia	胎盤で胎児を長く育てる哺乳類。姉妹群の有袋類と違い、胎盤が発達して、子をかなり大きく育ててから産む。	Meredith et al. 2011 Science 334:521; 『動物の系統分類進化学』
+boreoeutheria	真主齧類とローラシア獣類をまとめたクレード。近縁の異節類・アフリカ獣類とは見た目の共通点がなく、遺伝子の解析でまとまる。手がかりは、北半球の大陸で多様化した群であること。	Meredith et al. 2011 Science 334:521; Murphy et al. 2001 Science 294:2348
+euarchontoglires	霊長類・齧歯類・ウサギ類など。姉妹群のローラシア獣類とは見た目の共通点がなく、遺伝子の解析でまとまる。	Meredith et al. 2011 Science 334:521; Murphy et al. 2001 Science 294:2348
+primates	ものをつかむ手と前を向いた目をもつ。近縁の齧歯類・ウサギ類（Glires）と違い、指先に平たい爪があり、門歯が伸び続けることはない。	Meredith et al. 2011 Science 334:521
+laurasiatheria	分子系統で見つかったクレード。コウモリ・食肉類・鯨偶蹄類など。姉妹群の真主齧類とは見た目の共通点がなく、遺伝子の解析でまとまる。	Meredith et al. 2011 Science 334:521; Murphy et al. 2001 Science 294:2348
+carnivora	肉を切り裂く裂肉歯をもつ。近縁の鯨偶蹄目・奇蹄目などと違い、上あごの最後の小臼歯と下あごの最初の大臼歯がはさみのようにかみ合う裂肉歯になる（失った種もいる）。	Wilson & Mittermeier 2009 Handbook of the Mammals of the World 1
+artiodactyla	偶蹄類とクジラ類。クジラはカバに最も近い。近縁の奇蹄目と違い、体重を第3指と第4指の2本で支え（クジラは脚を失った）、足首の骨（距骨）の上下両方が滑車の形になる。	Gatesy et al. 2013 Mol Phylogenet Evol 66:479; Meredith et al. 2011 Science 334:521
+cetruminantia	反芻類とクジラ・カバ類をまとめたクレード。もう一つの鯨偶蹄類であるイノシシ類・ラクダ類より互いに近い。見た目の共通点は乏しく、遺伝子の解析でまとまる。	Gatesy et al. 2013 Mol Phylogenet Evol 66:479
+sauropsida	鳥類を含む「爬虫類」の系統。鳥を除いた「爬虫類」は側系統群になる。近縁の哺乳類と違い、体をおおうのは毛でなくうろこ（鳥では羽毛）で、乳を出す腺をもたない。	Crawford et al. 2015 Mol Phylogenet Evol 83:250; 『動物の系統分類進化学』
+lepidosauria	有鱗類（トカゲ・ヘビ）とムカシトカゲ。姉妹群のArchelosauria（カメ・ワニ・鳥）と違い、皮膚全体を一続きのうろこがおおい、定期的に脱皮する。	Pyron et al. 2013 BMC Evol Biol 13:93
+squamata	トカゲとヘビ。ヘビはトカゲ類の系統の中から生じたので、ヘビを除いた「トカゲ」は側系統群になる。近縁のムカシトカゲと違い、雄が対になった交尾器（ヘミペニス）をもち、頭骨の一部が動いて口を大きく開けられる。	Pyron et al. 2013 BMC Evol Biol 13:93; Burbrink et al. 2020 Syst Biol 69:502
+archelosauria	カメ類と主竜類をまとめたクレード。カメはワニ・鳥に近いことが分子系統で示された。姉妹群の鱗竜類とは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Crawford et al. 2015 Mol Phylogenet Evol 83:250; Chiari et al. 2012 BMC Biol 10:65
+archosauria	ワニ類と鳥類（恐竜を含む）。近縁のカメ類と違い、歯があごの骨のくぼみ（歯槽）に植わり（鳥は歯を失った）、心臓が2心房2心室に完全に分かれる。	Brusatte et al. 2010 Earth-Sci Rev 101:68
+aves	羽毛と翼をもつ恐竜の子孫。近縁のワニ類と違い、歯のないくちばしをもち、前脚が翼になり、殻の硬い卵を温めて育てる。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+neognathae	古顎類以外の鳥。姉妹群の古顎類と違い、口の天井の骨（口蓋）が可動になっていて、くちばしの上側を持ち上げて動かせる。胸骨には飛ぶための筋肉がつく竜骨突起がある。	Prum et al. 2015 Nature 526:569
+galloanserae	キジ目とカモ目。姉妹群の新鳥類と見た目の共通点は乏しく、遺伝子の解析と、下あごの関節の骨の形などでまとまる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+neoaves	現生の鳥のほとんどを含む。姉妹群のキジカモ類と見た目で分ける決め手は乏しく、主に遺伝子の解析でまとまる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+aequornithes	ペンギン・コウノトリ・ペリカン・トキなど。水辺や海の鳥が多い。近縁の新鳥類のまとまりとは見た目の共通点が乏しく、遺伝子の解析でまとまる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+passeriformes	鳥類の種の半数以上を占める。近縁のインコ目（足の指が前後2本ずつ）と違い、足の指は前3本・後ろ1本で、後ろの指が太く長く、枝をしっかりつかめる。多くは発達した鳴管でさえずる。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+protostomia	前口動物とも呼ぶ。脱皮動物とらせん卵割動物をまとめたクレード。近縁の新口動物と見た目で分ける決め手は乏しく、主に遺伝子の解析でまとまる。手がかりは、神経の束が体の腹側を通ること。	Dunn et al. 2014 Annu Rev Ecol Evol Syst 45:371; Laumer et al. 2019 Proc R Soc B 286:20190831
+chaetognatha	頭部の顎毛で獲物を捕らえる矢のような形の海洋動物。近縁の脱皮動物やらせん卵割動物とは体のつくりの共通点が少なく、位置は長く分からなかった。遺伝子の解析では担顎動物に近いとする結果が出ている。	Marlétaz et al. 2019 Curr Biol 29:312; Laumer et al. 2019 Proc R Soc B 286:20190831
+ecdysozoa	成長のためにクチクラを脱ぎ捨てる（脱皮する）動物。分子系統で見つかった。近縁のらせん卵割動物と違い、体の表面に繊毛をもたない。	Aguinaldo et al. 1997 Nature 387:489; Giribet & Edgecombe 2017 Integr Comp Biol 57:455
+scalidophora	吻に棘をもつ小さな動物。エラヒキムシ・トゲカワ・コウラムシ。近縁の糸形動物や汎節足動物と違い、出し入れできる吻（陥入吻）のまわりに、棘（スカリッド）が輪のように並ぶ。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455
+priapulida	海底の泥にすむ。カンブリア紀の化石によく似た仲間がいる。近縁のトゲカワ・コウラムシと違い、体が数cm以上と大きく、体節のような区切りも甲羅もない。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455
+kinorhyncha	体節状の1 mm以下の動物。トゲカワと呼ばれる。近縁のエラヒキムシ・コウラムシと違い、胴が11の節に分かれ、それぞれが硬い板でおおわれる。	Sørensen et al. 2015 Zool Anz 258:1
+nematoida	線虫とハリガネムシ。近縁の有棘動物や汎節足動物と違い、体は細長い糸状で脚も吻の棘もなく、体壁には縦に走る筋肉しかない。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455
+panarthropoda	脚をもつ脱皮動物。近縁の有棘動物や糸形動物と違い、体の左右に対になった脚が並ぶ。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455
+tardigrada	クマムシ。乾燥すると樽状になり、極端な環境に耐える。近縁の節足動物・有爪動物と違い、体長1 mm以下で、関節のない短い脚が4対だけある。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455
+arthropoda	外骨格と関節のある脚をもつ。既知の動物種の大半を占める。近縁の有爪動物・緩歩動物と違い、硬い外骨格が節ごとに分かれ、脚にも関節がある。	Giribet & Edgecombe 2019 Curr Biol 29:R592
+chelicerata	口の前にはさみ状の鋏角をもつ。姉妹群の大顎類（多足類・甲殻類・昆虫）と違い、触角も大顎もなく、体が前体と後体の2つに分かれる。	Giribet & Edgecombe 2019 Curr Biol 29:R592
+euchelicerata	カブトガニとクモ形類。近縁のウミグモ類と違い、体が前体と後体にはっきり分かれ、後体の付属肢が書鰓・書肺などの呼吸器官になる。	Giribet & Edgecombe 2019 Curr Biol 29:R592; Ballesteros et al. 2022 Mol Biol Evol 39:msac021
+mandibulata	大顎をもつ節足動物。多足類と汎甲殻類。姉妹群の鋏角亜門と違い、食べ物をかみ砕く大顎と、頭に触角をもつ。	Giribet & Edgecombe 2019 Curr Biol 29:R592; Regier et al. 2010 Nature 463:1079
+myriapoda	ムカデやヤスデなど、多数の脚をもつ。姉妹群の汎甲殻類と違い、胴に節がたくさん並び、ほとんどの節に脚がある。陸だけにすむ。	Giribet & Edgecombe 2019 Curr Biol 29:R592
+pancrustacea	甲殻類と六脚類（昆虫など）をまとめたクレード。六脚類（昆虫など）は甲殻類の系統の中から生じたので、六脚類を除いた従来の「甲殻類」は側系統群になる。六脚類の姉妹群はムカデエビ類とする説が有力だが、まだ定まっていない。姉妹群の多足亜門とは、複眼や神経のつくりの共通点と、遺伝子の解析で分かれる。	Regier et al. 2010 Nature 463:1079; von Reumont et al. 2012 Mol Biol Evol 29:1031; Schwentner et al. 2017 Curr Biol 27:1818; Lozano-Fernandez et al. 2019 Genome Biol Evol 11:2055
+oligostraca	貝形虫やシタムシなどをまとめたクレード。近縁のMulticrustacea・Allotriocaridaとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。手がかりは、体が小さく、胴の節が少ないこと。	Regier et al. 2010 Nature 463:1079; Schwentner et al. 2017 Curr Biol 27:1818
+multicrustacea	軟甲類・カイアシ類・鞘甲類をまとめたクレード。近縁のOligostraca・Allotriocaridaとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Regier et al. 2010 Nature 463:1079; Schwentner et al. 2017 Curr Biol 27:1818
+malacostraca	エビ・カニ・ダンゴムシ・オキアミなど。近縁の鞘甲類やカイアシ類と違い、胴の節の数がほぼ決まっていて（胸8節・腹6節が基本）、腹にも脚がある。	Schwentner et al. 2017 Curr Biol 27:1818; Martin & Davis 2001 Updated Classification of the Recent Crustacea
+decapoda	エビ・カニ・ヤドカリなど。近縁の等脚目やオキアミ類などと違い、胸の脚のうち後ろの5対が歩く脚になり（十脚）、頭と胸をおおう甲羅の中にえらがある。	Wolfe et al. 2019 Proc R Soc B 286:20190079
+allotriocarida	鰓脚類・ムカデエビ類・六脚類をまとめたクレード。近縁のOligostraca・Multicrustaceaとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。昆虫に最も近い甲殻類はこの中にいる。	Schwentner et al. 2017 Curr Biol 27:1818
+branchiopoda	ミジンコやホウネンエビなど。脚に鰓がある。近縁の六脚類と違い水中で暮らし、平たい葉のような脚で水を動かして泳ぎ、えさを集める。乾燥に強い耐久卵を作るものが多い。	Schwentner et al. 2017 Curr Biol 27:1818
+hexapoda	3対の脚をもつ。昆虫とトビムシなど。近縁の鰓脚類などの甲殻類と違い、体が頭・胸・腹に分かれ、脚は胸の3節にだけある。	Misof et al. 2014 Science 346:763
+insecta	体が頭・胸・腹に分かれ、胸に3対の脚をもつ。近縁のコムシ目などと違い、口器が頭の外に出ていて（外顎）、触角の第2節に感覚器官（ジョンストン器官）がある。	Misof et al. 2014 Science 346:763
+pterygota	翅をもつ（または祖先がもっていた）昆虫。近縁のイシノミ目・シミ類（Zygentoma）と違い、胸に2対の翅があり、成虫になったあとは脱皮しない（カゲロウは例外）。	Misof et al. 2014 Science 346:763
+neoptera	翅を背中に折りたためる昆虫。近縁のトンボ目・カゲロウ目と違い、翅の付け根の小さな骨と筋肉で、翅を腹の上に重ねてたたむ。	Misof et al. 2014 Science 346:763
+polyneoptera	バッタ・ゴキブリ・カマキリなど。近縁の完全変態類と違い蛹の時期がなく、近縁の準新翅類と違い、かむ口をもつ。見た目の共通点は乏しく、まとまりは主に遺伝子の解析で支えられる。	Misof et al. 2014 Science 346:763; Wipfler et al. 2019 PNAS 116:3024
+blattodea	ゴキブリとシロアリ。シロアリは社会性のゴキブリといえる。近縁のカマキリ目と違い、前脚は獲物を捕らえる鎌にならず、多くは雑食か木などを食べる。	Inward et al. 2007 Biol Lett 3:331; Misof et al. 2014 Science 346:763
+holometabola	幼虫・蛹・成虫と完全変態する昆虫。近縁の多新翅類・準新翅類と違い、幼虫と成虫の姿がまったく違い、そのあいだに蛹の時期がある。	Misof et al. 2014 Science 346:763
+hymenoptera	ハチとアリ。完全変態類で最初に分かれた。近縁のコウチュウ目などと違い、前翅と後翅を小さな鉤でつないで一緒に動かす。雌は受精卵から、雄は未受精卵から生まれる。	Peters et al. 2017 Curr Biol 27:1013; Misof et al. 2014 Science 346:763
+coleoptera	前翅が硬い鞘翅になった甲虫。記載された種の数が動物で最も多い目。近縁のハチ目などと違い、前翅は飛ぶのに使わず、たたんだ後翅をおおうふたになる。	McKenna et al. 2019 PNAS 116:24729
+mecopterida	チョウ目・トビケラ目・ハエ目・シリアゲムシ目などを含む。近縁のコウチュウ目やアミメカゲロウ類とは見た目の共通点が乏しく、主に遺伝子の解析と幼虫・成虫の細かなつくりでまとまる。	Misof et al. 2014 Science 346:763; Peters et al. 2014 BMC Evol Biol 14:52
+spiralia	らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・担顎動物など。近縁の脱皮動物と違い、脱皮をせず、体の表面に繊毛をもつものが多い。受精卵の分割がらせん状に進む（らせん卵割）。	Laumer et al. 2019 Proc R Soc B 286:20190831; Marlétaz et al. 2019 Curr Biol 29:312
+gnathifera	咽頭に複雑な顎をもつ微小な動物のまとまり。有顎動物とも呼ぶ。近縁の扁形動物や冠輪動物と違い、咽頭の中にクチクラでできた細かな顎の部品が組み合わさっている。	Laumer et al. 2015 Curr Biol 25:2000; Marlétaz et al. 2019 Curr Biol 29:312
+rotifera	ワムシ類と、寄生性の鉤頭動物を含む。鉤頭動物は、頭部の繊毛冠を回転するように動かすワムシ類の系統の中から生じて寄生生活に適応した群なので、鉤頭動物を除いた「ワムシ類」は側系統群になる。近縁の微顎動物と違い、皮膚の内側にある板（表皮の中の層）で体を支え、体の細胞の数が一定に決まっている。	Sielaff et al. 2016 Mol Biol Evol 33:1461; Laumer et al. 2015 Curr Biol 25:2000
+acanthocephala	鉤のある吻で宿主の腸にとりつく寄生虫。口も消化管もない。ワムシ類の系統の中から生じた寄生性の単系統群で、そのため鉤頭動物を除いた「ワムシ類」は側系統群になる。鉤頭動物の姉妹群がワムシ類のどの群かは、まだ定まっていない。近縁のワムシ類（Ploima など）と違い、繊毛冠をもたず、体の表面から栄養を吸収する。	Sielaff et al. 2016 Mol Biol Evol 33:1461
+platyhelminthes	平たい体で、肛門がない。プラナリアや寄生性の吸虫・条虫。近縁の冠輪動物などと違い、体腔も血管もなく、酸素は体の表面から取り入れる。	Laumer et al. 2015 eLife 4:e05503; Egger et al. 2015 Curr Biol 25:1347
+gastrotricha	イタチムシ。腹面の繊毛で砂のすきまを滑るように動く。近縁の扁形動物と違い、口から肛門まで通る消化管をもち、体の後ろに粘着用の管がある。	Laumer et al. 2015 Curr Biol 25:2000; Marlétaz et al. 2019 Curr Biol 29:312
+dicyemida	タコやコウイカなど、海底近くで暮らす頭足類の腎臓にすむ。体は40個ほどまでの細胞だけでできている。近縁のらせん卵割動物と違い、口も消化管も神経もない。かつては動物の祖先に近いと考えられたが、遺伝子の解析でらせん卵割動物の一員と分かった。	Lu et al. 2017 Curr Biol 27:3036; Furuya & Tsuneki 2003 Zool Sci 20:519
+lophotrochozoa	触手冠をもつ動物と、トロコフォア幼生をもつ動物をまとめたクレード。近縁の扁形動物・担顎動物とは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Laumer et al. 2019 Proc R Soc B 286:20190831; Marlétaz et al. 2019 Curr Biol 29:312
+mollusca	外套膜をもち、多くは貝殻を作る。近縁の環形動物と違い、体に節がなく、歯舌というやすり状の舌で食べ物を削り取る。	Kocot et al. 2011 Nature 477:452; Smith et al. 2011 Nature 480:364
+conchifera	一枚の殻（または二枚の殻）をもつ軟体動物。姉妹群のAculifera（ヒザラガイ・カセミミズ）と違い、殻は8枚の板や小さな棘ではなく、一続きの殻になる。	Kocot et al. 2011 Nature 477:452; Smith et al. 2011 Nature 480:364
+cephalopoda	タコ・イカ・オウムガイ。腕は頭から生えている。近縁の腹足類や二枚貝と違い、足が腕と漏斗に変わり、漏斗から水を噴き出して泳ぐ。	Kocot et al. 2011 Nature 477:452; 『動物の系統分類進化学』
+gastropoda	巻貝やナメクジ。発生中に体がねじれる。近縁の二枚貝や頭足類と違い、幼生の時期に内臓が180度ねじれ（ねじれ）、殻は1枚でらせん状に巻くものが多い。	Kocot et al. 2011 Nature 477:452; 『動物の系統分類進化学』
+bivalvia	左右2枚の殻をもち、頭部が退化している。近縁の腹足類・頭足類と違い、歯舌をもたず、えらで水を濾して食べ物を集めるものが多い。	Kocot et al. 2011 Nature 477:452; Bieler et al. 2014 Invertebr Syst 28:32
+annelida	体節をもつ細長い動物。ユムシやハオリムシも含まれる。近縁の軟体動物・紐形動物と違い、体が同じつくりの節のくり返しでできていて、多くは節ごとに剛毛をもつ。	Weigert & Bleidorn 2016 Zool Lett 2:24; Struck et al. 2011 Nature 471:95
+clitellata	ミミズとヒル。生殖時に環帯ができる。近縁の定在性の多毛類と違い、体の横の突起（いぼ足）がなく、剛毛は少ないか無い。雌雄同体で、環帯から出す粘液で卵を包む繭を作る。	Weigert & Bleidorn 2016 Zool Lett 2:24; Erséus et al. 2020 Mol Phylogenet Evol 145:106727
+nemertea	ヒモムシ。体内の吻を素早く突き出して獲物を捕らえる。近縁の環形動物と違い、体に節がなく、吻は口とは別の袋（吻腔）に収まっている。	Andrade et al. 2012 Mol Biol Evol 29:3803; Kajihara et al. 2008 Species Divers 13:245
+brachiozoa	触手冠をもつ腕足動物と箒虫動物をまとめたクレード。近縁の外肛動物（コケムシ）も触手冠をもつが別の系統で、Brachiozoa は外肛動物と違い血管系をもち、群体を作らない。まとまりは主に遺伝子の解析で支えられる。	Laumer et al. 2019 Proc R Soc B 286:20190831; Kocot et al. 2017 Syst Biol 66:256
+brachiopoda	二枚貝に似た殻をもつが、殻は背と腹にある。近縁の箒虫動物と違い、2枚の殻をもち、殻の中の触手冠で餌を集める。	Laumer et al. 2019 Proc R Soc B 286:20190831; Williams et al. 2000 Treatise on Invertebrate Paleontology H
+phoronida	管の中にすみ、馬蹄形の触手冠で餌を集める。近縁の腕足動物と違い、殻をもたず、自分で作った管の中で暮らす。	Laumer et al. 2019 Proc R Soc B 286:20190831
+bryozoa	コケムシ。小さな個虫が群体を作る。Ectoprocta とも。近縁の内肛動物と違い、肛門が触手冠の外側に開き、触手冠を体の中に引き込める。	Laumer et al. 2019 Proc R Soc B 286:20190831; Waeschenbach et al. 2012 Mol Phylogenet Evol 62:718
+entoprocta	スズコケムシなど。肛門が触手冠の内側に開く。近縁の外肛動物と違い、触手冠を体の中に引き込めず、触手を内側に巻いて閉じる。	Laumer et al. 2019 Proc R Soc B 286:20190831; Nielsen 2012 Animal Evolution 3rd ed. (Oxford Univ Press)
+actiniaria	骨格をもたない単体のポリプ。近縁のイシサンゴ目と違い、炭酸カルシウムの骨格を作らず、群体にもならない。足盤で岩などにつき、少しずつ動ける。	Rodríguez et al. 2014 PLoS ONE 9:e96998; McFadden et al. 2021 Syst Biol 70:635
+scleractinia	炭酸カルシウムの骨格を作るサンゴ。サンゴ礁を作るものが多い。近縁のイソギンチャク目と違い、ポリプの下にかたい石灰質の骨格を作る。	Kitahara et al. 2016 PLoS ONE 11:e0159649; McFadden et al. 2021 Syst Biol 70:635
+octocorallia	触手が8本で、羽のように枝分かれする。宝石サンゴ・ソフトコーラル・ウミエラなど。姉妹群の六放サンゴ亜綱と違い、触手と隔膜の数がいつも8で、すべて群体を作る。	McFadden et al. 2021 Syst Biol 70:635
+scyphozoa	いわゆる大型のクラゲ。ポリプが横に分裂してクラゲを生む。近縁の箱虫綱やヒドロ虫綱と違い、ポリプがくびれて何枚もの小さなクラゲに分かれる（横分体形成）。傘の縁に縁膜がない。	Kayal et al. 2018 BMC Evol Biol 18:68; 『動物の系統分類進化学』
+cubozoa	箱形の傘をもつクラゲ。眼をもち、毒が強いものが多い。近縁の鉢虫綱と違い、ポリプは分裂せず、1つのポリプが丸ごと1匹のクラゲに変わる。	Kayal et al. 2018 BMC Evol Biol 18:68; Bentlage et al. 2010 Proc R Soc B 277:493
+hydrozoa	小さなクラゲや群体性のポリプ。淡水のヒドラも含む。近縁の鉢虫綱や箱虫綱と違い、クラゲの傘の縁に縁膜という薄い膜があり、ポリプが群体を作るものが多い。	Kayal et al. 2018 BMC Evol Biol 18:68; Cartwright & Nawrocki 2010 Integr Comp Biol 50:456
+crinoidea	口を上に向け、羽のような腕で餌をとる。柄のあるウミユリと柄のないウミシダ。姉妹群のEleutherozoa（ヒトデ・ウニなど）と違い、口と肛門が上側にあり、管足は歩くためではなく餌を運ぶために使う。	Telford et al. 2014 Proc R Soc B 281:20140479
+asteroidea	腕と中央の盤の境目がはっきりしない。胃を外に出して獲物を消化する。姉妹群のクモヒトデ綱と違い、腕の下側に溝があって管足が並び、管足で歩く。	Telford et al. 2014 Proc R Soc B 281:20140479; Linchangco et al. 2017 Mol Phylogenet Evol 115:161
+ophiuroidea	円い盤から細い腕が伸びる。棘皮動物で最も種数が多い。姉妹群のヒトデ綱と違い、腕の下に溝がなく、腕をくねらせて素早く動く。肛門がない。	O'Hara et al. 2014 Mol Phylogenet Evol 73:94; Telford et al. 2014 Proc R Soc B 281:20140479
+echinoidea	骨片が組み合わさった殻と、動かせる棘をもつ。姉妹群のナマコ綱と違い、骨片がすき間なく組み合わさって硬い殻になり、口にはアリストテレスの提灯と呼ばれるあごがある（失った群もいる）。	Kroh & Smith 2010 J Syst Palaeontol 8:147; Telford et al. 2014 Proc R Soc B 281:20140479
+holothuroidea	骨片が小さく皮膚に散らばり、体が柔らかい。姉妹群のウニ綱と違い、殻をもたず、口のまわりの触手で餌を集める。体は前後に長く、横に寝た姿勢で暮らす。	Miller et al. 2017 Mol Phylogenet Evol 111:110; Telford et al. 2014 Proc R Soc B 281:20140479
+batoidea	エイの仲間。体が平たく、鰓孔が腹側に開く。姉妹群のサメ類と違い、胸びれが頭の横に癒合して体の縁まで広がる。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; 中坊編 2013『日本産魚類検索 第三版』
+otomorpha	ニシン類と、コイ・ナマズなどの骨鰾類をまとめたクレード。姉妹群の正真骨類とは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。手がかりは、うきぶくろと内耳がつながっているものが多いこと。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Near et al. 2012 PNAS 109:13698
+ostariophysi	うきぶくろと内耳を小骨（ウェーバー器官）でつなぎ、音をよく聞く。淡水魚の多くを占める。近縁のニシン目と違い、うきぶくろの振動を背骨の一部が変わった小骨で耳に伝える。けがをすると皮膚から仲間に危険を知らせる物質を出す。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Nelson et al. 2016 Fishes of the World 5th ed.
+euteleostei	サケ・タラ・スズキの仲間など、真骨類の大部分を含むクレード。姉妹群のOtomorpha（ニシン・コイ・ナマズ）と見た目の共通点は乏しく、主に遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Near et al. 2012 PNAS 109:13698
+anura	カエル。成体は尾がなく、後ろ脚が長い。姉妹群の有尾目と違い、背骨が短く、後ろ脚で跳ぶ。幼生（オタマジャクシ）は口に角質のくちばしをもち、藻などを食べる。	Pyron & Wiens 2011 Mol Phylogenet Evol 61:543; 日本爬虫両棲類学会 2024 日本産爬虫両生類標準和名リスト
+caudata	サンショウウオとイモリ。成体にも尾がある。姉妹群の無尾目と違い、体が細長く、前脚と後ろ脚の長さがほぼ同じで、体をくねらせて歩く。	Pyron & Wiens 2011 Mol Phylogenet Evol 61:543
+xenarthra	アルマジロ・ナマケモノ・アリクイ。南米で多様化した。近縁の北方真獣類・アフリカ獣類と違い、腰の背骨に余分な関節（異節）があり、歯にエナメル質がないか、歯そのものがない。	Meredith et al. 2011 Science 334:521; Gaudin & Croft 2015 J Mammal 96:622
+afrotheria	ゾウ・ジュゴン・ハイラックスなど。分子系統で見つかったクレード。近縁の北方真獣類・異節類とは見た目の共通点がほとんどなく、遺伝子の解析でまとまる。手がかりは、アフリカで多様化したことと、背骨の数が多いこと。	Meredith et al. 2011 Science 334:521; Asher et al. 2009 Trends Ecol Evol 24:3
+glires	齧歯類とウサギ類をまとめたクレード。伸び続ける門歯をもつ。姉妹群の霊長目と違い、犬歯がなく、門歯と奥歯のあいだにすき間がある。	Meredith et al. 2011 Science 334:521
+rodentia	ネズミやリス。哺乳類で最も種数が多い目。姉妹群の兎形目と違い、上の門歯は1対だけで、前の面にだけエナメル質がある。	Meredith et al. 2011 Science 334:521; Fabre et al. 2012 BMC Evol Biol 12:88
+lagomorpha	ウサギとナキウサギ。上の門歯が前後2対ある。姉妹群の齧歯目と違い、上の大きな門歯のすぐ後ろに小さな門歯がもう1対ある。	Meredith et al. 2011 Science 334:521
+eulipotyphla	モグラ・トガリネズミ・ハリネズミ。近縁のローラシア獣類の目と違い、体が小さく、細長い鼻先と小さな目をもち、主に昆虫やミミズを食べる。	Meredith et al. 2011 Science 334:521; Springer et al. 2018 J Mammal 99:1
+chiroptera	コウモリ。羽ばたいて飛ぶことのできる唯一の哺乳類。近縁のローラシア獣類の目と違い、前脚の長い指のあいだに皮膚の膜（飛膜）を張って翼にする。	Teeling et al. 2005 Science 307:580; Meredith et al. 2011 Science 334:521
+caniformia	イヌ・クマ・イタチ・アザラシなど。姉妹群のネコ型亜目と違い、耳の骨を包む骨のふくらみ（鼓室胞）が仕切られていない。爪を引っ込められないものが多い。	Flynn et al. 2005 Syst Biol 54:317
+feliformia	ネコ・ハイエナ・マングースなど。姉妹群のイヌ型亜目と違い、耳の骨を包むふくらみ（鼓室胞）が2つの部屋に仕切られている。	Flynn et al. 2005 Syst Biol 54:317; Eizirik et al. 2010 Mol Phylogenet Evol 56:49
+ruminantia	シカ・ウシ・キリンなど。複数の部屋に分かれた胃で反芻する。近縁のクジラ・カバ類（Whippomorpha）と違い陸で暮らし、上あごの門歯がなく、角をもつものが多い。	Gatesy et al. 2013 Mol Phylogenet Evol 66:479; Chen et al. 2019 Science 364:eaav6202
+whippomorpha	カバとクジラ類をまとめたクレード。分子系統で見つかった。近縁の反芻類と違い、水の中で長い時間を過ごし、体毛や汗腺が少ない。	Gatesy et al. 2013 Mol Phylogenet Evol 66:479
+cetacea	海で暮らすようになった鯨偶蹄類。ヒゲクジラとハクジラ。近縁のカバ類と違い、後ろ脚を失い、前脚はひれになり、鼻の穴が頭の上に移った。	Gatesy et al. 2013 Mol Phylogenet Evol 66:479; Thewissen et al. 2007 Nature 450:1190
+perissodactyla	ウマ・サイ・バク。体重を主に中指で支える。近縁の鯨偶蹄目と違い、脚の中心が第3指1本で、反芻をせず、植物を盲腸などで消化する。	Meredith et al. 2011 Science 334:521; Wilson & Mittermeier 2011 Handbook of the Mammals of the World 2
+serpentes	ヘビ。トカゲ類の系統の中から生じ、脚を失った単系統群。そのため「トカゲ」は側系統群になる。ヘビの姉妹群がどのトカゲの群（オオトカゲ類・イグアナ類など）かは、まだ定まっていない。近縁のトカゲ類と違い、まぶたも外耳もなく、左右の下あごが離れて動くので大きな獲物を丸のみできる。	Burbrink et al. 2020 Syst Biol 69:502; Pyron et al. 2013 BMC Evol Biol 13:93
+testudines	背甲と腹甲からなる甲羅をもつ。姉妹群の主竜類（ワニ・鳥）と違い、肋骨と背骨が甲羅と一体になり、歯のないくちばしをもつ。	Crawford et al. 2015 Mol Phylogenet Evol 83:250
+galliformes	キジ・ウズラ・ニワトリなど。地上で暮らすものが多い。姉妹群のカモ目と違い、くちばしは短く丈夫で、足は水かきのない歩くための足。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+anseriformes	カモ・ガン・ハクチョウ。くちばしの縁に濾し取るための板がある。姉妹群のキジ目と違い、水辺で暮らすものが多く、足の指に水かきがある。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+telluraves	タカ・フクロウ・キツツキ・ハヤブサ・オウム・スズメなどをまとめたクレード。陸の鳥が多い。近縁の新鳥類のまとまりとは見た目の共通点が乏しく、遺伝子の解析でまとまる。祖先は肉食の鳥だったと考えられている。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+afroaves	タカ類・フクロウ類・キツツキ類などをまとめたクレード。姉妹群のAustralaves（ハヤブサ・オウム・スズメ）とは見た目の共通点が乏しく、遺伝子の解析でまとまる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+australaves	ハヤブサ類・オウム類・スズメ類をまとめたクレード。ハヤブサはタカよりもオウムやスズメに近い。姉妹群のAfroaves（タカ・フクロウ・キツツキなど）とは見た目の共通点が乏しく、遺伝子の解析でまとまる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+araneae	腹部の出糸突起から糸を出す。近縁のサソリ目などと違い、腹部に節がほとんどなく、細い腹柄で頭胸部とつながる。鋏角の先に毒腺の開く牙がある。	Ballesteros et al. 2022 Mol Biol Evol 39:msac021; Wheeler et al. 2017 Cladistics 33:574
+chilopoda	ムカデ類。体節ごとに1対の脚と、毒をもつ顎肢をもつ。姉妹群の倍脚綱と違い、肉食で、体の最初の脚が毒の牙（顎肢）に変わっている。	Fernández et al. 2018 Proc R Soc B 285:20172523
+diplopoda	ヤスデ類。体節ごとに2対の脚をもち、落ち葉などを食べる。姉妹群の唇脚綱と違い、毒の牙をもたず、2つの節がくっついて1節に2対の脚がある。	Fernández et al. 2018 Proc R Soc B 285:20172523
+isopoda	ダンゴムシ・ワラジムシ・フナムシ・グソクムシなど。近縁の端脚類などと違い、体が背腹に平たく、胸の脚がほぼ同じ形で7対並ぶ。腹の脚がえらになる。	Lins et al. 2017 Mol Phylogenet Evol 116:28; Martin & Davis 2001 Updated Classification of the Recent Crustacea
+anomura	ヤドカリ・タラバガニ・コシオリエビなど。近縁の短尾下目（カニ）と違い、5対目の歩脚がとても小さく、甲羅の下などに隠れている。腹部が左右非対称になるものがある。	Wolfe et al. 2019 Proc R Soc B 286:20190079; Bracken-Grissom et al. 2013 Syst Biol 62:404
+brachyura	いわゆるカニ。腹部が小さく胸の下に折りたたまれる。近縁の異尾下目と違い、5対の脚がふつうに見え、触角が短い。	Wolfe et al. 2019 Proc R Soc B 286:20190079; Tsang et al. 2014 Mol Biol Evol 31:1173
+odonata	トンボとイトトンボ。幼虫（ヤゴ）は水中で暮らす。近縁のカゲロウ目と違い、成虫は肉食で大きな複眼をもち、幼虫の下唇が伸びて獲物を捕らえる仮面になる。	Misof et al. 2014 Science 346:763; Bybee et al. 2016 Cladistics 32:589
+orthoptera	バッタ・コオロギ・キリギリス。後ろ脚が跳ぶのに適している。近縁の網翅類などと違い、後ろ脚の太ももが太く、多くは翅や脚をこすって音を出す。	Song et al. 2015 Cladistics 31:621; Misof et al. 2014 Science 346:763
+dictyoptera	ゴキブリ・シロアリ・カマキリ。近縁のバッタ目などと違い、後ろ脚は跳ぶのに適しておらず、ゴキブリとカマキリは卵を卵鞘という袋にまとめて産む。	Misof et al. 2014 Science 346:763; Wipfler et al. 2019 PNAS 116:3024
+paraneoptera	カメムシ・セミ・アザミウマ・シラミなど。近縁の多新翅類と違い、口器がものを吸うのに向いた形に変わっていて、多くは植物の汁などを吸う。	Misof et al. 2014 Science 346:763; Johnson et al. 2018 PNAS 115:12775
+hemiptera	針のような口吻で汁を吸う。半翅目とも。近縁のアザミウマ目やシラミ類（Psocodea）と違い、口器が長い針を束ねた口吻になり、使わないときは体の下に折りたたむ。	Johnson et al. 2018 PNAS 115:12775
+lepidoptera	チョウとガ。翅が鱗粉におおわれる。近縁のトビケラ目と違い、翅が毛ではなく鱗粉でおおわれ、成虫の口はゼンマイのように巻いたストロー状。	Kawahara et al. 2019 PNAS 116:22657; Misof et al. 2014 Science 346:763
+diptera	ハエ・カ・アブ。後翅が平均棍に変わり、翅は2枚。近縁のシリアゲムシ目やノミ目と違い、後翅が小さなこん棒状の平均棍になり、飛ぶときのバランスをとる。	Wiegmann et al. 2011 PNAS 108:5690; Misof et al. 2014 Science 346:763
+aculifera	多板類と無板類（溝腹類・尾腔類）をまとめたクレード。姉妹群のConchiferaと違い、一続きの殻をもたず、体の表面に石灰質の小さな棘やうろこが並ぶ（ヒザラガイはさらに8枚の殻板をもつ）。	Kocot et al. 2011 Nature 477:452; Smith et al. 2011 Nature 480:364
+coleoidea	殻が体内に退化するか失われたタコ・イカの仲間。近縁のオウムガイ類と違い、外側に殻をもたず、腕に吸盤があり、墨袋をもつ。	Strugnell et al. 2017 Mol Phylogenet Evol 106:65; Tanner et al. 2017 Proc R Soc B 284:20162818
+octopodiformes	タコとコウモリダコ。姉妹群の十腕形上目（イカ）と違い、腕は8本で、長い触腕をもたない。	Strugnell et al. 2017 Mol Phylogenet Evol 106:65
+decapodiformes	イカ類。8本の腕と2本の触腕をもつ。姉妹群の八腕形上目（タコ）と違い、獲物を捕らえる長い触腕が2本あり、体の中に殻の名残（甲や軟甲）をもつ。	Strugnell et al. 2017 Mol Phylogenet Evol 106:65; Tanner et al. 2017 Proc R Soc B 284:20162818
+vetigastropoda	サザエ・アワビ・ニシキウズなど。近縁の新生腹足類と違い、えらが羽のように両側に糸を並べた形で、殻の内側に真珠層をもつものが多い。	Cunha & Giribet 2019 Proc R Soc B 286:20182776; Bouchet et al. 2017 Malacologia 61:1
+caenogastropoda	タニシ・タカラガイ・イモガイなど巻貝の多く。近縁の古腹足類と違い、えらは片側にだけ糸が並ぶ1枚で、殻に真珠層がない。	Cunha & Giribet 2019 Proc R Soc B 286:20182776; Bouchet et al. 2017 Malacologia 61:1
+heterobranchia	ウミウシ・アメフラシ・カタツムリ・ナメクジなど。近縁の新生腹足類や古腹足類と違い、幼生の殻と大人の殻の巻く向きが逆になり、えらは本来のえらとは別の器官に置き換わったものが多い。	Kano et al. 2016 Proc R Soc B 283:20152443; Bouchet et al. 2017 Malacologia 61:1
+pleistoannelida	よく動き回る Errantia と、定住性の多毛類やミミズ・ヒルを含む Sedentaria をまとめた、環形動物の大部分を含むクレード。近縁のウミケムシ目やホシムシ類などと見た目の共通点は乏しく、主に遺伝子の解析でまとまる。	Weigert & Bleidorn 2016 Zool Lett 2:24; Struck et al. 2011 Nature 471:95
+errantia	よく動き回る多毛類。ゴカイやイソメなど。姉妹群のSedentariaと違い、体の横の突起（いぼ足）がよく発達し、出し入れできる咽頭にあごをもつものが多い。	Weigert & Bleidorn 2016 Zool Lett 2:24; Struck et al. 2011 Nature 471:95
+sedentaria	管や巣穴にとどまる多毛類と、ミミズ・ヒルの仲間。姉妹群のErrantiaと違い、いぼ足が小さいか無く、多くは管や穴の中で触手やえらを伸ばして暮らす。見た目はさまざまで、まとまりは主に遺伝子の解析で支えられる。	Weigert & Bleidorn 2016 Zool Lett 2:24; Struck et al. 2011 Nature 471:95
+hirudinea	前後に吸盤をもつ。ミミズ類（貧毛類）の系統の中から生じた単系統群なので、ヒルを除いた「貧毛類」は側系統群になる。近縁のミミズ類と違い、体の節の数が決まっていて（34節）、剛毛がない。	Tessler et al. 2018 Mol Phylogenet Evol 127:172; Erséus et al. 2020 Mol Phylogenet Evol 145:106727
+tricladida	腸が三つに分かれる。プラナリアやコウガイビル。近縁の多岐腸目（ヒラムシ）と違い、腸は前に1本・後ろに2本の三つに分かれるだけで、淡水や陸にすむものが多い。	Laumer et al. 2015 eLife 4:e05503; Egger et al. 2015 Curr Biol 25:1347
+neodermata	吸虫・条虫と、魚などの体表やえらにつく単生類をまとめた寄生性のクレード。幼生の表皮を脱ぎ捨てる。近縁のウズムシ類（三岐腸目・多岐腸目）と違い、繊毛のある表皮を捨て、宿主の消化液などに耐える新しい皮膚（新皮）で体をおおう。	Laumer et al. 2015 eLife 4:e05503; Brabec et al. 2023 Int J Parasitol 53:133
+trematoda	吸盤で宿主にとりつく寄生虫。貝を中間宿主にするものが多い。近縁の条虫綱と違い、口と腸をもち、体は節に分かれない。	Brabec et al. 2023 Int J Parasitol 53:133; Laumer et al. 2015 eLife 4:e05503
+cestoda	サナダムシの仲間。口も腸もなく、体表から栄養を吸収する。近縁の吸虫綱と違い、多くは体が節（片節）のくり返しになり、頭の吸盤や鉤で宿主の腸につく。	Brabec et al. 2023 Int J Parasitol 53:133; Caira & Jensen 2017 Planetary Biodiversity Inventory: Tapeworms
+rhabditida	線虫の多くを含む大きな目。自由生活の線虫と多くの寄生虫。線虫のほかの大きな群（Enoplea・Dorylaimia など）と違い、体の表面の感覚器（双器）が小さく、排出器官が管状になる。	Ahmed & Holovachov 2021 J Nematol 53:e2021-01; Smythe et al. 2019 Mol Phylogenet Evol 140:106587
+spirurina	動物に寄生する線虫の多くを含む。回虫・蟯虫・糸状虫など。近縁のTylenchinaと違い、口に植物を刺す針をもたず、ほとんどが脊椎動物などに寄生する。	Ahmed & Holovachov 2021 J Nematol 53:e2021-01
+tylenchina	口針で植物の細胞を吸う植物寄生線虫などを含む。近縁のSpirurinaと違い、多くは口の中に中空の針（口針）をもち、植物の根などに刺して汁を吸う。	Ahmed & Holovachov 2021 J Nematol 53:e2021-01
+marsupialia	未熟な子を産み、多くは袋で育てる哺乳類。姉妹群の有胎盤類と違い、胎盤の働きが短く、とても小さく生まれた子が乳首に吸いついて育つ。	Meredith et al. 2011 Science 334:521; Kemp 2005 The Origin and Evolution of Mammals
+pinnipedia	アザラシ・アシカ・セイウチ。海にもどった食肉類。近縁のクマ科・イタチ科などと違い、四肢がひれになり、海で餌をとり、陸や氷の上で子を産む。	Flynn et al. 2005 Syst Biol 54:317; Berta et al. 2018 Annu Rev Earth Planet Sci 46:203
+odontoceti	歯をもつクジラ。イルカやシャチ、マッコウクジラ。エコーロケーションをする。姉妹群のヒゲクジラ類と違い、鼻の穴（噴気孔）が1つで、頭の中の脂肪の塊（メロン）で音を出して獲物を探す。	McGowen et al. 2020 Syst Biol 69:479
+mysticeti	歯のかわりにヒゲ板でオキアミなどを濾しとるクジラ。姉妹群のハクジラ類と違い、噴気孔が2つあり、エコーロケーションをしない。体の大きな種が多い。	McGowen et al. 2020 Syst Biol 69:479
+palaeognathae	ダチョウ・エミュー・キーウィなど。多くは飛べない。姉妹群の新顎類と違い、口の天井の骨（口蓋）が動かない古いつくりのままで、飛べない種では胸骨に竜骨突起がない。	Prum et al. 2015 Nature 526:569; Yonezawa et al. 2017 Curr Biol 27:68
+crocodylia	ワニ・アリゲーター・ガビアル。近縁の鳥類と違い、体が硬いうろこと皮膚の骨でおおわれ、水辺で待ちぶせして獲物をとる。鳥と同じく心臓が2心房2心室。	Brusatte et al. 2010 Earth-Sci Rev 101:68; Oaks 2011 Evolution 65:3285
+scorpiones	尾の先に毒針をもつ。紫外線を当てると体が光る。近縁のクモ目と違い、大きなはさみ状の触肢をもち、後体の後半が細い尾になる。糸は出さない。	Ballesteros et al. 2022 Mol Biol Evol 39:msac021; Sharma et al. 2015 Proc R Soc B 282:20152953
+dendrobranchiata	クルマエビ・サクラエビなど。卵を抱かずに水中に放つ。近縁のPleocyemata（カニ・ヤドカリ・コエビなど）と違い、えらが細かく枝分かれした形（樹状鰓）で、卵からノープリウス幼生がかえる。	Wolfe et al. 2019 Proc R Soc B 286:20190079
+caridea	テナガエビ・ヌマエビ・タラバエビなど。雌が卵を腹に抱く。近縁のザリガニ下目などと違い、腹の2節目の殻が前後の節に重なるように大きく張り出す。	Wolfe et al. 2019 Proc R Soc B 286:20190079; De Grave et al. 2009 Raffles Bull Zool Suppl 21:1
+astacidea	ザリガニとロブスター。大きなはさみをもつ。近縁のイセエビ下目と違い、最初の3対の脚がはさみになり、特に1対目がとても大きい。	Wolfe et al. 2019 Proc R Soc B 286:20190079
+achelata	イセエビとセミエビ。はさみがない。近縁のザリガニ下目と違い、脚にはさみがなく、幼生は平たく透明なフィロソーマ幼生になる。	Wolfe et al. 2019 Proc R Soc B 286:20190079
+thecostraca	フジツボやカメノテなど。幼生は泳ぐが、成体の多くは岩などに固着する。近縁の軟甲綱やカイアシ類と違い、幼生の最後の時期にキプリス幼生という二枚貝のような殻をもつ姿になり、頭で物にくっつく。	Chan et al. 2021 Zool J Linn Soc 193:789; Schwentner et al. 2017 Curr Biol 27:1818
+polycladida	海にすむ大型の渦虫類（ヒラムシ）。腸が体の中央から多数に枝分かれする。近縁の三岐腸目と違い、腸が三つではなく放射状に多数に分かれ、ほとんどが海にすむ。	Bahia et al. 2017 Mol Phylogenet Evol 115:24; Laumer et al. 2015 eLife 4:e05503
+strisores	ヨタカ類とアマツバメ・ハチドリ類のまとまり。近縁の新鳥類のまとまりと違い、脚が小さく短い。見た目の共通点は乏しく、まとまりは主に遺伝子の解析で支えられる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+cuculiformes	カッコウ・ホトトギスなど。托卵をする種が多い。近縁の新鳥類の目と違い、足の指が前2本・後ろ2本に分かれる（対趾足）。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+columbimorphae	ハト類とサケイ類などのまとまり。近縁の新鳥類のまとまりとは見た目の共通点が乏しく、遺伝子の解析でまとまる。	Prum et al. 2015 Nature 526:569; Jarvis et al. 2014 Science 346:1320
+gruiformes	ツル類とクイナ類など。近縁の新鳥類の目と違い、脚が長いか丈夫で、湿地や草原で暮らすものが多い。見た目はさまざまで、まとまりは主に遺伝子の解析で支えられる。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+charadriiformes	チドリ・シギ・カモメ・ウミスズメなど。近縁の新鳥類の目と違い、水辺や海で暮らすものがほとんど。見た目はさまざまだが、遺伝子の解析でも一つのまとまりと確かめられている。	Prum et al. 2015 Nature 526:569; Černý & Natale 2022 Mol Phylogenet Evol 177:107620
+procellariiformes	管状の鼻孔をもつ外洋性の海鳥。近縁のペンギン目などと違い、くちばしの上に管状の鼻の穴があり、においで遠くの餌を探す。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+suliformes	カツオドリ・ウ・グンカンドリなど。近縁のペリカン目とは見た目で分けにくく、主に遺伝子の解析でまとまる。4本の足指すべてが水かきでつながる（全蹼足）。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+pelecaniformes	ペリカン・サギ・トキなど。近縁のカツオドリ目と見た目の共通点は乏しく、サギやトキが入ることは遺伝子の解析で分かった。	Prum et al. 2015 Nature 526:569; Hackett et al. 2008 Science 320:1763
+coraciiformes	カワセミ・ブッポウソウ・ハチクイなど。近縁のキツツキ目などと違い、前の3本の足指のうち2本が根もとでくっついている（合趾足）。色あざやかなものが多い。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+neuropterida	アミメカゲロウ目・ヘビトンボ目・ラクダムシ目のまとまり。近縁のコウチュウ目と違い、前翅も後翅も網目のような翅脈をもつ膜のままになる。	Misof et al. 2014 Science 346:763; Winterton et al. 2018 Syst Entomol 43:330
+phyllodocida	ゴカイ・チロリ・ウロコムシなど。よく動き回る多毛類。姉妹群のイソメ目と違い、咽頭のあごは1対か無く、触手のような頭の付属物が発達する。	Struck et al. 2011 Nature 471:95; Rouse et al. 2022 Annelida (Oxford Univ Press)
+eunicida	イソメ類。じょうぶなあごをもつ。姉妹群のサシバゴカイ目と違い、咽頭に上下何枚もの硬いあごの板が組み合わさっている。	Struck et al. 2011 Nature 471:95; Rouse et al. 2022 Annelida (Oxford Univ Press)
+sabellida	管の中にすみ、頭の触手を花のように広げて餌をとる。ハオリムシ類もここに含まれる。近縁の定在性の多毛類と違い、頭の触手が羽のように広がる冠（鰓冠）になり、水中の餌を濾し取る。	Rouse et al. 2022 Annelida (Oxford Univ Press); Weigert & Bleidorn 2016 Zool Lett 2:24
+psittaciformes	インコ・オウム類。足の指が前後2本ずつに分かれる。近縁のスズメ目と違い、上のくちばしが鉤のように曲がり、頭骨と関節で動く。足で物をつかんで食べる。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+heteroptera	前翅の付け根側が硬くなったカメムシ類。異翅亜目とも。アメンボ・タガメ・サシガメなど。近縁のセミ類や腹吻亜目と違い、前翅の前半が硬く後半が膜になり、口吻が頭の前の方から出る。	Johnson et al. 2018 PNAS 115:12775; Weirauch et al. 2019 Syst Entomol 44:1
+nepomorpha	水中で暮らすカメムシ類。前脚で獲物を捕らえるものが多い。近縁のアメンボ類（Gerromorpha）が水面で暮らすのと違い、水の中で暮らし、触角が短く目の下に隠れる。	Weirauch et al. 2019 Syst Entomol 44:1; Ye et al. 2020 Syst Entomol 45:425
+sternorrhyncha	アブラムシ・カイガラムシ・コナジラミ・キジラミなど。植物の汁を吸う小さな虫。近縁のセミ類などと違い、口吻が前脚の付け根のあいだから出るように見え、多くは体が1〜数mmと小さい。	Johnson et al. 2018 PNAS 115:12775
+strigiformes	夜行性の猛禽。顔が平たく、音で獲物の位置を知る。近縁のタカ目と違い、目が前を向いて顔が円盤状になり、羽の縁がやわらかく音を立てずに飛ぶ。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+piciformes	キツツキ・オオハシなど。足の指が前後2本ずつに分かれる。近縁のブッポウソウ目と違い、足の指が前2本・後ろ2本の対趾足で、木の幹にとまるのに向く。	Prum et al. 2015 Nature 526:569; 日本鳥学会 2024 日本鳥類目録改訂第8版
+monopisthocotyla	かつての単生綱の一部。体の後ろの固着器は1つの円盤状で、鉤をもつ。魚の体表やえらにつく。近縁のPolyopisthocotylaと違い、固着器にはさみ状の小さな器官が並ばず、主に宿主の体表の粘液や皮膚を食べる。	Brabec et al. 2023 Int J Parasitol 53:133
+polyopisthocotyla	かつての単生綱の一部。体の後ろに小さなはさみ状の固着器が多数並び、主に魚のえらにつく。近縁のMonopisthocotylaと違い、宿主の血を吸うものが多い。	Brabec et al. 2023 Int J Parasitol 53:133
+nematomorpha	幼生は昆虫などに寄生し、成体は水中で暮らす。近縁の線形動物と違い、成体は口や腸がほとんど退化して餌を食べず、体長は数十cmになることもある。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455; Schmidt-Rhaesa 2013 Handbook of Zoology Nematomorpha
+onychophora	カギムシ。粘液を発射して獲物を捕らえる。南半球と熱帯に分布。近縁の節足動物と違い、体はやわらかく、脚に関節がなく、先に爪がある。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455; Oliveira et al. 2012 Zootaxa 3586:1
+loricifera	1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。近縁のエラヒキムシ・トゲカワと違い、胴が硬い板（被甲）でつぼのように包まれる。	Giribet & Edgecombe 2017 Integr Comp Biol 57:455; Kristensen 1983 Z Zool Syst Evolutionsforsch 21:163
+micrognathozoa	2000年に記載された門。複雑なあごをもつ0.1 mmほどの淡水の動物。近縁のワムシ類と違い、頭に繊毛冠がなく、腹側の繊毛で這うように動く。	Kristensen & Funch 2000 J Morphol 246:1; Laumer et al. 2015 Curr Biol 25:2000
+cycliophora	1995年に記載された門。アカザエビ類の口器に付着してくらす。近縁の内肛動物などと違い、口のまわりに繊毛の輪をもつつぼ形の体で、体の中で次の世代の体を作り替える複雑な生活史をもつ。	Funch & Kristensen 1995 Nature 378:711; Laumer et al. 2019 Proc R Soc B 286:20190831
+monotremata	卵を産む哺乳類。カモノハシとハリモグラの仲間。姉妹群の獣亜綱と違い、卵を産み、乳首がなく皮膚からしみ出す乳をなめさせて育てる。	Kemp 2005 The Origin and Evolution of Mammals; Meredith et al. 2011 Science 334:521
+nudipleura	ウミウシの多く（裸鰓目）と、ウミフクロウなどの側鰓類。殻は無いか、体の中に小さく残るだけ。近縁のRingiculidae（マメウラシマ類、殻をもつ）と違い、外から見える殻をもたない。	Kano et al. 2016 Proc R Soc B 283:20152443; Bouchet et al. 2017 Malacologia 61:1
+nudibranchia	大人になると殻をもたないウミウシの仲間。えらが体の表面にむき出しになっている。近縁の側鰓類（ウミフクロウなど）と違い、殻を完全に失い、体の右側の外套の下にあるえらももたない。	Bouchet et al. 2017 Malacologia 61:1; Goodheart et al. 2015 BMC Evol Biol 15:154
+doridina	背中の後ろに、肛門を囲む花のようなえらをもつウミウシ。アオウミウシなど。姉妹群のCladobranchiaと違い、背中にミノのような突起をもたず、えらは肛門のまわりに集まる。	Bouchet et al. 2017 Malacologia 61:1; Hallas et al. 2017 Mol Phylogenet Evol 116:137
+cladobranchia	背中に突起（ミノ）などが並ぶウミウシ。ミノウミウシ・メリベの仲間など。姉妹群のDoridinaと違い、肛門のまわりの花のようなえらがなく、背中の突起でえらの働きをする。	Bouchet et al. 2017 Malacologia 61:1; Goodheart et al. 2015 BMC Evol Biol 15:154
+tectipleura	アメフラシ・ハダカカメガイ（クリオネ）・タマノミドリガイの仲間と、カタツムリ・ナメクジなどの有肺類を含むまとまり。近縁のRingipleura（ウミウシなど）とは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Kano et al. 2016 Proc R Soc B 283:20152443; Bouchet et al. 2017 Malacologia 61:1
+eupulmonata	陸のカタツムリ・ナメクジと、海辺のアワモチの仲間などを含むまとまり。外套腔が肺としてはたらく。近縁のアメフラシ類などと違い、えらがなく、外套腔の天井に血管が集まった肺で空気を吸う。	Kano et al. 2016 Proc R Soc B 283:20152443; Bouchet et al. 2017 Malacologia 61:1
+stylommatophora	陸のカタツムリとナメクジの多く。目が長い触角の先にある。近縁のSystellommatophora（アワモチなど）と違い、目のある長い触角を中から裏返すように引っ込められる。	Saadi & Wade 2019 Mol Phylogenet Evol 132:257; Bouchet et al. 2017 Malacologia 61:1
+systellommatophora	殻をもたない、ナメクジ形の貝。海辺のアワモチの仲間と、陸のアシヒダナメクジの仲間。近縁の柄眼目と違い、触角を裏返して引っ込めることはできず、肛門が体の後ろの端に開く。	Bouchet et al. 2017 Malacologia 61:1; Dayrat et al. 2011 Zool J Linn Soc 163:585
+lamniformes	ホオジロザメ・メガマウスザメなど。近縁のメジロザメ目と違い、目に下から閉じる膜（瞬膜）がない。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; 中坊編 2013『日本産魚類検索 第三版』
+carcharhiniformes	メジロザメ・シュモクザメ・ドチザメなど。近縁のネズミザメ目と違い、目に下から閉じる膜（瞬膜）がある。サメの中で最も種数の多い目。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; 中坊編 2013『日本産魚類検索 第三版』
+myliobatiformes	アカエイ・トビエイ・イトマキエイなど。近縁のガンギエイ目と違い、多くは尾に毒の棘をもち、子を卵ではなく体の中で育てて産む。	Naylor et al. 2012 Bull Am Mus Nat Hist 367:1; Last et al. 2016 Rays of the World (CSIRO)
+anguilliformes	ウナギ・アナゴ・ウツボ・ハモ。幼生はレプトセファルス。近縁のカライワシ目などと違い、体がとても細長く、腹びれがなく、背びれ・尻びれが尾びれとつながる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 中坊編 2013『日本産魚類検索 第三版』
+clupeiformes	イワシやニシン。群れで泳ぎ、プランクトンを食べる。近縁の骨鰾類と違い、うきぶくろが耳の骨（ウェーバー器官）ではなく、頭の中の細い管で内耳とつながる。腹の縁にとげのあるうろこ（稜鱗）が並ぶものが多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Nelson et al. 2016 Fishes of the World 5th ed.
+cypriniformes	コイ・フナ・ドジョウなど。あごに歯がなく、喉の奥の咽頭歯で噛む。姉妹群のナマズ目と違い、体がうろこでおおわれ、口を前に突き出せる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Nelson et al. 2016 Fishes of the World 5th ed.
+siluriformes	口のまわりにひげをもつ魚。姉妹群のコイ目と違い、体にうろこがなく（骨の板をもつものもいる）、あごに歯がある。胸びれ・背びれに鋭い棘をもつものが多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Nelson et al. 2016 Fishes of the World 5th ed.
+salmoniformes	サケ・マス・イトウ。背びれの後ろに脂びれがある。近縁のキュウリウオ目などと違い、祖先で全ゲノム重複がもう一度起きている。多くは川で生まれて海へ下り、また川へ戻って産卵する。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Lien et al. 2016 Nature 533:200
+osmeriformes	アユ・ワカサギ・シシャモなど。近縁のワニトカゲギス目と違い、発光器をもたず、沿岸や淡水で暮らすものが多い。サケ目と同じく脂びれをもつ。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 中坊編 2013『日本産魚類検索 第三版』
+aulopiformes	エソ類やミズウオなど。近縁のハダカイワシ目などと違い、発光器をもたず、多くは大きな口と鋭い歯をもつ肉食魚。深海にすむ種が多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Davis 2010 Zool J Linn Soc 160:1
+lampriformes	アカマンボウやリュウグウノツカイなど。近縁のタラ目などと違い、上あごが独特のしくみで大きく前に突き出る。アカマンボウは体全体を温める温血の魚として知られる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Wegner et al. 2015 Science 348:786
+gadiformes	タラ類やソコダラ類。冷たい海に多い。近縁のアカマンボウ目やギンメダイ目と違い、ひれに硬い棘がなく、背びれが2〜3つに分かれるものが多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 中坊編 2013『日本産魚類検索 第三版』
+beryciformes	キンメダイ類やイットウダイ類。近縁のスズキ系と違い、腹びれの軟条が6本以上ある（スズキ系は5本）。深い海や夜に活動するものが多く、目が大きい。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Nelson et al. 2016 Fishes of the World 5th ed.
+ophidiiformes	アシロ類やカクレウオ類。近縁のスズキ系の目と違い、体が細長く、腹びれは小さく喉の近くにあるか無く、背びれ・尻びれが尾びれとつながる。カクレウオはナマコの体内にすむ。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 中坊編 2013『日本産魚類検索 第三版』
+gobiiformes	ハゼの仲間。腹びれが吸盤状になるものが多い。近縁のスズキ系の目と違い、ハゼ類の多くは側線の管が頭にしかなく、多くは海底や川底で暮らす小魚。テンジクダイ類もこの目に入る。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Thacker 2009 Copeia 2009:93
+syngnathiformes	ヨウジウオ・タツノオトシゴ・ヘラヤガラなど。雄が卵を守る種が多い。近縁のスズキ系の目と違い、口が管のように細長く伸びたものが多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Longo et al. 2017 Mol Phylogenet Evol 113:33
+scombriformes	サバ・マグロ・タチウオなど。近縁のアジ目と見た目で分ける決め手は乏しく、主に遺伝子の解析でまとまる。外洋を速く泳ぐ肉食魚が多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Miya et al. 2013 PLoS ONE 8:e73535
+carangiformes	アジ・ブリと、ヒラメ・カレイ。カレイ類はアジ類の系統の中から生じたとされ、カレイ類を除いた「アジ類」は側系統群になる。カレイ類が単系統群か（1回か2回生じたか）はまだ議論がある。近縁のサバ目と見た目の共通点は乏しく、主に遺伝子の解析でまとまる。カレイ類は成長すると目が体の片側に寄る。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Harrington et al. 2016 BMC Evol Biol 16:224
+beloniformes	サンマ・トビウオ・ダツと、メダカ科をまとめた目。近縁のトウゴロウイワシ目・カダヤシ目と違い、喉の奥の下側の咽頭骨が左右くっついて1枚になる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Lovejoy et al. 2004 Syst Biol 53:578
+blenniiformes	イソギンポ類やスズメダイ類など。近縁のボラ目やカワスズメ目とは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。沿岸の岩場やサンゴ礁にすむ小さな魚が多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Wainwright et al. 2012 Syst Biol 61:1001
+perciformes	カサゴ・オコゼ・ホッケ・トゲウオなど。スズキはこの目ではない。近縁のホタルジャコ目・サンフィッシュ目などとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 本村 2026 日本産魚類全種目録
+centrarchiformes	メジナ・イシダイ・ブラックバスなど。近縁のペルカ目などとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 本村 2026 日本産魚類全種目録
+labriformes	ベラ類やブダイ類。近縁のニザダイ目などと違い、喉の奥の左右の咽頭骨がくっついて、硬い餌をかみ砕く強力な歯になる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Wainwright et al. 2012 Syst Biol 61:1001
+acropomatiformes	スズキ・アカムツ・ムツなど。かつてはスズキ目に入れられた魚が多い。近縁のペルカ目などとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Ghedotti et al. 2018 Mol Phylogenet Evol 124:155; Betancur-R et al. 2017 BMC Evol Biol 17:162
+acanthuriformes	ニザダイ・チョウチョウウオ・タイなどを含む。近縁のペルカ目などとは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。	Betancur-R et al. 2017 BMC Evol Biol 17:162; 本村 2026 日本産魚類全種目録
+lophiiformes	背びれの棘が釣り竿のように変化した魚。近縁のフグ目などと違い、背びれの最初の棘が頭の上の「さお」と先の「疑似餌」になり、それで獲物をおびき寄せる。	Miya et al. 2010 BMC Evol Biol 10:58; Betancur-R et al. 2017 BMC Evol Biol 17:162
+tetraodontiformes	フグ・カワハギ・マンボウなど。腹鰭や骨の一部を失ったものが多い。近縁のアンコウ目と違い、口が小さく、歯がくっついてくちばしのようになるものが多い。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Santini et al. 2013 BMC Evol Biol 13:160
+elopomorpha	カライワシ・ソトイワシ・ソコギス・ウナギなど。幼生が平たく透明なレプトセファルスになる。近縁のClupeocephalaやアロワナ目と違い、このレプトセファルス幼生の時期をもつ。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Inoue et al. 2004 Mol Phylogenet Evol 32:274
+diplura	目も翅もない、細長い土の中の六脚類。腹の先に2本の尾（尾角）またはハサミをもつ。昆虫綱には含めない。近縁の昆虫綱と違い、口器が頭の中に引っ込んでいて（内顎）、複眼も単眼もない。	Misof et al. 2014 Science 346:763
+anabantiformes	アジアとアフリカの淡水魚。多くはえらの上にある迷路のような器官（ラビリンス器官）で、空気を直接吸って呼吸できる。ベタ・グラミー・タイワンドジョウなど。近縁のタウナギ目（体が細長いウナギ形）と違い、ふつうの魚の体形をしている。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Collins et al. 2015 Mol Phylogenet Evol 84:149
+polypteriformes	アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。近縁のチョウザメ目などと違い、体が硬く厚いうろこ（硬鱗）でおおわれ、胸びれの付け根が肉質になっている。	Near et al. 2012 PNAS 109:13698; Betancur-R et al. 2017 BMC Evol Biol 17:162

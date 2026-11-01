@@ -226,7 +226,7 @@ S("savannashimauma", "perissodactyla", "サバンナシマウマ", "Equus quagga
   "縞模様は個体ごとに違う。吸血するハエを寄せつけにくくする効果があるとされる。", ["シマウマ", "ウマ"], jaStatus="common")
 
 # ---------------- 爬虫類 ----------------
-C("serpentes", "squamata", "ヘビ亜目", "Serpentes", "亜目", "ヘビ。トカゲの仲間の中から、脚を失って生まれた。")
+C("serpentes", "squamata", "ヘビ亜目", "Serpentes", "亜目", "ヘビ。トカゲ類の系統の中から生じ、脚を失った単系統群。そのため「トカゲ」は側系統群になる。ヘビの姉妹群がどのトカゲの群（オオトカゲ類・イグアナ類など）かは、まだ定まっていない。")
 C("viperidae", "serpentes", "クサリヘビ科", "Viperidae", "科", "長い毒牙を折りたたんでもつヘビ。マムシ類は目と鼻の間に赤外線を感じるピット器官をもつ。")
 move("serpentes", "aodaisho")
 S("habu", "viperidae", "ハブ", "Protobothrops flavoviridis",
@@ -445,7 +445,7 @@ S("iwamushi", "errantia", "イワムシ", "Marphysa sanguinea",
   "釣り餌にされる大型のイソメ類。", ["イソメ"], v={"sci": "日本産を別種とする研究がある"})
 S("keyarimushi", "sedentaria", "ケヤリムシ", "Sabellastarte japonica",
   "管から羽のようなえら（鰓冠）を広げ、触れるとすばやく引っ込める。", v={"ja": "標準和名と学名の対応を要確認"})
-C("hirudinea", "clitellata", "ヒル亜綱", "Hirudinea", "亜綱", "前後に吸盤をもつ。ミミズの仲間の中から生じた。")
+C("hirudinea", "clitellata", "ヒル亜綱", "Hirudinea", "亜綱", "前後に吸盤をもつ。ミミズ類（貧毛類）の系統の中から生じた単系統群なので、ヒルを除いた「貧毛類」は側系統群になる。")
 move("hirudinea", "chisuibiru")
 S("yamabiru", "hirudinea", "ヤマビル", "Haemadipsa japonica",
   "陸にすむヒル。動物の吐く二酸化炭素や体温を感じて近寄る。", ["ヒル"])
@@ -814,7 +814,7 @@ C("scombriformes", "percomorpha", "サバ目", "Scombriformes", "目", "サバ�
 move("scombriformes", "scombridae")
 M("tachiuo", "scombriformes", "タチウオ", "Trichiurus japonicus", "銀色の帯のような体で、頭を上にして立ち泳ぎする。")
 M("tobiuo", "beloniformes", "トビウオ", "Cheilopogon agoo", "大きな胸びれを広げて海面上を滑空する。", ["アゴ"])
-C("carangiformes", "percomorpha", "アジ目", "Carangiformes", "目", "アジ・ブリと、ヒラメ・カレイ。カレイ類はアジの仲間から生まれた。")
+C("carangiformes", "percomorpha", "アジ目", "Carangiformes", "目", "アジ・ブリと、ヒラメ・カレイ。カレイ類はアジ類の系統の中から生じたとされ、カレイ類を除いた「アジ類」は側系統群になる。カレイ類が単系統群か（1回か2回生じたか）はまだ議論がある。")
 move("carangiformes", "hirame")
 M("maaji", "carangiformes", "マアジ", "Trachurus japonicus", "体の側面に「ぜいご」と呼ばれる硬い鱗が並ぶ。", ["アジ"])
 M("buri", "carangiformes", "ブリ", "Seriola quinqueradiata", "成長につれて呼び名が変わる出世魚。", ["ハマチ", "イナダ", "ワラサ"])
@@ -915,7 +915,7 @@ C("culicidae", "diptera", "カ科", "Culicidae", "科", "蚊。雌だけが血�
 move("culicidae", "hitosujishimaka", "akaieka")
 M("shinahamadaraka", "culicidae", "シナハマダラカ", "Anopheles sinensis", "ハマダラカの仲間はマラリアを媒介する。止まるとき体を斜めに立てる。", ["ハマダラカ"])
 M("ushiabu", "diptera", "ウシアブ", "Tabanus trigonus", "雌は牛や人の血を吸う。")
-C("formicidae", "hymenoptera", "アリ科", "Formicidae", "科", "アリ。ハチの中から生まれた社会性昆虫。")
+C("formicidae", "hymenoptera", "アリ科", "Formicidae", "科", "アリ。ハチ目の中の、針をもつハチ類（有剣類）の系統から生じた社会性の昆虫。アリを除いた「ハチ」は側系統群になる。")
 move("formicidae", "kurooari", "argentinaari")
 M("kuroyamaari", "formicidae", "クロヤマアリ", "Formica japonica", "日本で最もよく見られるアリの一つ。")
 
@@ -1598,7 +1598,7 @@ META["datasetVersion"] = "0.3.8"  # スベスベマンジュウガニ（10/27〜
 # 和名「単後吸盤類」「多後吸盤類」は学術文献での定着を確かめていないので学名表記。照合は check/monogenea/ と check/hard_inv/。
 _find("neodermata")["desc"] = "吸虫・条虫と、魚などの体表やえらにつく単生類をまとめた寄生性のクレード。幼生の表皮を脱ぎ捨てる。"
 _find("neodermata")["polytomy"] = ("吸虫・条虫と、かつて単生綱にまとめられた2群の分かれる順は議論中。系統ゲノム解析（Brabec et al. 2023）では"
-                                   "Polyopisthocotyla が吸虫の姉妹群になり、単生綱は単系統でないとされたため、ここでは四分岐で示す。")
+                                   "Polyopisthocotyla が吸虫の姉妹群になり、単生綱は側系統群とされたため、ここでは四分岐で示す。")
 C("monopisthocotyla", "neodermata", "Monopisthocotyla", "Monopisthocotyla", "綱",
   "かつての単生綱の一部。体の後ろの固着器は1つの円盤状で、鉤をもつ。魚の体表やえらにつく。",
   v={"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"})

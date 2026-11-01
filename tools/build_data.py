@@ -229,10 +229,10 @@ S("inoshishi", "artiodactyla", "イノシシ", "Sus scrofa", "家畜のブタの
 C("cetruminantia", "artiodactyla", "Cetruminantia", "Cetruminantia", "クレード", "反芻類とクジラ・カバ類をまとめたクレード。", v={"ja": "定着した和名が確認できないため学名で表記。日本語版ウィキペディアに「鯨反芻亜目」とあるが学術文献での使用は未確認"})
 S("nihonjika", "cetruminantia", "ニホンジカ", "Cervus nippon", "胃が4つあり反芻する。雄の角は毎年生え変わる。", ["シカ"])
 S("shironagasu", "cetruminantia", "シロナガスクジラ", "Balaenoptera musculus", "地球史上最大級の動物。ヒゲ板でオキアミを濾して食べる。", ["クジラ"])
-C("sauropsida", "amniota", "Sauropsida", "Sauropsida", "クレード", "鳥類を含む「爬虫類」の系統。鳥を除いた爬虫類は単系統ではない。", v={"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"})
+C("sauropsida", "amniota", "Sauropsida", "Sauropsida", "クレード", "鳥類を含む「爬虫類」の系統。鳥を除いた「爬虫類」は側系統群になる。", v={"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"})
 C("lepidosauria", "sauropsida", "鱗竜類", "Lepidosauria", "クレード", "有鱗類（トカゲ・ヘビ）とムカシトカゲ。")
 S("mukashitokage", "lepidosauria", "ムカシトカゲ", "Sphenodon punctatus", "トカゲに似るが別の目（喙頭目）の唯一の生き残り。", ["トゥアタラ"])
-C("squamata", "lepidosauria", "有鱗目", "Squamata", "目", "トカゲとヘビ。ヘビはトカゲの中から生まれた。")
+C("squamata", "lepidosauria", "有鱗目", "Squamata", "目", "トカゲとヘビ。ヘビはトカゲ類の系統の中から生じたので、ヘビを除いた「トカゲ」は側系統群になる。")
 S("nihonyamori", "squamata", "ニホンヤモリ", "Gekko japonicus", "指の裏の微細な毛で壁や天井に張りつく。", ["ヤモリ"])
 S("aodaisho", "squamata", "アオダイショウ", "Elaphe climacophora", "日本最大級のヘビ。毒はない。", ["ヘビ"])
 C("archelosauria", "sauropsida", "Archelosauria", "Archelosauria", "クレード",
@@ -296,7 +296,7 @@ C("myriapoda", "mandibulata", "多足亜門", "Myriapoda", "亜門", "ムカデ�
 S("tobizumukade", "myriapoda", "トビズムカデ", "Scolopendra mutilans", "第1脚が変化した顎肢で毒を注入する。", ["ムカデ"], v={"sci": "S. subspinipes mutilans とする扱いもある"})
 S("yakeyasude", "myriapoda", "ヤケヤスデ", "Oxidus gracilis", "ヤスデは体節ごとに2対の脚をもつ。", ["ヤスデ"])
 C("pancrustacea", "mandibulata", "汎甲殻類", "Pancrustacea", "クレード",
-  "甲殻類と六脚類（昆虫など）をまとめたクレード。昆虫は甲殻類の中から生まれたので、甲殻類は単系統ではない。",
+  "甲殻類と六脚類（昆虫など）をまとめたクレード。六脚類（昆虫など）は甲殻類の系統の中から生じたので、六脚類を除いた従来の「甲殻類」は側系統群になる。六脚類の姉妹群はムカデエビ類とする説が有力だが、まだ定まっていない。",
   poly="貝虫類などを含む Oligostraca、Multicrustacea、Allotriocarida の関係は多分岐で示す。")
 C("oligostraca", "pancrustacea", "Oligostraca", "Oligostraca", "クレード", "貝形虫やシタムシなどをまとめたクレード。", v={"ja": "定着した和名が確認できないため学名で表記。日本語版ウィキペディアに「貧甲殻上綱」とあるが学術文献での使用は未確認"})
 S("umihotaru", "oligostraca", "ウミホタル", "Vargula hilgendorfii", "貝形虫の一種。発光物質を海中に吐き出して青く光る。")
@@ -324,12 +324,12 @@ C("polyneoptera", "neoptera", "多新翅類", "Polyneoptera", "クレード", "�
 S("tonosamabatta", "polyneoptera", "トノサマバッタ", "Locusta migratoria", "密度が高くなると体色や行動が変わる「相変異」を起こす。", ["バッタ"])
 C("blattodea", "polyneoptera", "ゴキブリ目", "Blattodea", "目", "ゴキブリとシロアリ。シロアリは社会性のゴキブリといえる。")
 S("kurogokiburi", "blattodea", "クロゴキブリ", "Periplaneta fuliginosa", "日本の家屋でよく見られる。", ["ゴキブリ"])
-S("yamatoshiroari", "blattodea", "ヤマトシロアリ", "Reticulitermes speratus", "アリではなくゴキブリの仲間。腸内微生物の力で木を消化する。", ["シロアリ"])
+S("yamatoshiroari", "blattodea", "ヤマトシロアリ", "Reticulitermes speratus", "アリではなく、ゴキブリ目の一員。シロアリはゴキブリ類の系統の中から生じたので、シロアリを除いた「ゴキブリ」は側系統群になる。腸内微生物の力で木を消化する。", ["シロアリ"])
 S("aburazemi", "neoptera", "アブラゼミ", "Graptopsaltria nigrofuscata", "半翅目（カメムシ目）。口吻で木の汁を吸う。", ["セミ"])
 C("holometabola", "neoptera", "完全変態類", "Holometabola", "クレード", "幼虫・蛹・成虫と完全変態する昆虫。")
 C("hymenoptera", "holometabola", "ハチ目", "Hymenoptera", "目", "ハチとアリ。完全変態類で最初に分かれた。")
 S("seiyomitsubachi", "hymenoptera", "セイヨウミツバチ", "Apis mellifera", "8の字ダンスで蜜源の方向と距離を伝える。", ["ミツバチ", "ハチ"])
-S("kurooari", "hymenoptera", "クロオオアリ", "Camponotus japonicus", "アリはハチから生まれたグループ。", ["アリ"])
+S("kurooari", "hymenoptera", "クロオオアリ", "Camponotus japonicus", "アリは、針をもつハチ類の系統の中から生じたグループで、アリを除いた「ハチ」は側系統群になる。", ["アリ"])
 C("coleoptera", "holometabola", "コウチュウ目", "Coleoptera", "目", "前翅が硬い鞘翅になった甲虫。動物で最も種数の多い目。")
 S("kabutomushi", "coleoptera", "カブトムシ", "Trypoxylus dichotomus", "雄の角は幼虫期に作られる。")
 S("nanahoshitentou", "coleoptera", "ナナホシテントウ", "Coccinella septempunctata", "アブラムシを食べる。", ["テントウムシ"])
@@ -350,10 +350,10 @@ C("micrognathozoa", "gnathifera", "微顎動物門", "Micrognathozoa", "門", "2
 S("limnognathia", "micrognathozoa", "リムノグナシア・マエルスキ", "Limnognathia maerski", "最も複雑な顎をもつ微小動物の一つ。", jaStatus="provisional", v={"ja": "和名なし（学名の音写）、日本産ではない"})
 # 鉤頭動物は輪形動物の内側から生じた群（Dunn ほか 2014; Sielaff ほか 2016）。輪形動物を単系統にするため、鉤頭動物を輪形動物門（広義）の中に置く
 C("rotifera", "gnathifera", "輪形動物門", "Rotifera", "門",
-  "ワムシの仲間と、寄生性の鉤頭動物を含む。頭部の繊毛冠を回転するように動かすワムシから、寄生生活に適応した鉤頭動物が生じた。",
+  "ワムシ類と、寄生性の鉤頭動物を含む。鉤頭動物は、頭部の繊毛冠を回転するように動かすワムシ類の系統の中から生じて寄生生活に適応した群なので、鉤頭動物を除いた「ワムシ類」は側系統群になる。",
   poly="ワムシのどの群（Seisonidea など）が鉤頭動物に最も近いかは議論中のため多分岐で示す。鉤頭動物を別の門として扱う分類体系もあるが、それでは輪形動物門が単系統にならないため、ここでは含める。")
 S("shiomizutsubowamushi", "rotifera", "シオミズツボワムシ", "Brachionus plicatilis", "魚の稚魚の餌として大量培養される。", ["ワムシ"])
-C("acanthocephala", "rotifera", "鉤頭動物", "Acanthocephala", "クレード", "鉤のある吻で宿主の腸にとりつく寄生虫。口も消化管もない。ワムシの仲間から生じた。")
+C("acanthocephala", "rotifera", "鉤頭動物", "Acanthocephala", "クレード", "鉤のある吻で宿主の腸にとりつく寄生虫。口も消化管もない。ワムシ類の系統の中から生じた寄生性の単系統群で、そのため鉤頭動物を除いた「ワムシ類」は側系統群になる。鉤頭動物の姉妹群がワムシ類のどの群かは、まだ定まっていない。")
 S("corynosoma", "acanthocephala", "コリノソーマ・ヴィラヌ", "Corynosoma villosum", "海獣類に寄生する鉤頭虫。", ["鉤頭虫"], jaStatus="provisional", v={"ja": "和名なし（学名の音写）", "sci": "代表種の選定を要確認"})
 C("platyhelminthes", "spiralia", "扁形動物門", "Platyhelminthes", "門", "平たい体で、肛門がない。プラナリアや寄生性の吸虫・条虫。")
 S("namiuzumushi", "platyhelminthes", "ナミウズムシ", "Dugesia japonica", "体を切っても各断片から全身が再生する。", ["プラナリア", "ウズムシ"])
@@ -391,7 +391,7 @@ S("yumushi", "annelida", "ユムシ", "Urechis unicinctus", "体節がないが�
 S("satsumahaorimushi", "annelida", "サツマハオリムシ", "Lamellibrachia satsuma", "口も消化管もなく、共生細菌から栄養を得る。", ["ハオリムシ", "チューブワーム"])
 C("clitellata", "annelida", "環帯綱", "Clitellata", "綱", "ミミズとヒル。生殖時に環帯ができる。")
 S("siebold_mimizu", "clitellata", "シーボルトミミズ", "Metaphire sieboldi", "日本最大級のミミズ。青紫色の光沢がある。", ["ミミズ"])
-S("chisuibiru", "clitellata", "チスイビル", "Hirudo nipponia", "かつて瀉血に使われた。ヒルはミミズの中から生じた。", ["ヒル"])
+S("chisuibiru", "clitellata", "チスイビル", "Hirudo nipponia", "かつて瀉血に使われた。ヒルはミミズ類（貧毛類）の系統の中から生じたので、貧毛類は側系統群になる。", ["ヒル"])
 C("nemertea", "lophotrochozoa", "紐形動物門", "Nemertea", "門", "ヒモムシ。体内の吻を素早く突き出して獲物を捕らえる。")
 S("midorihimomushi", "nemertea", "ミドリヒモムシ", "Lineus fuscoviridis", "干潟の石の下などにいる。", ["ヒモムシ"], v={"ja": "標準和名と学名の対応を要確認"})
 C("brachiozoa", "lophotrochozoa", "Brachiozoa", "Brachiozoa", "クレード", "触手冠をもつ腕足動物と箒虫動物をまとめたクレード。", v={"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"})
@@ -410,6 +410,13 @@ S("symbion", "cycliophora", "シンビオン・パンドラ", "Symbion pandora",
 # ---------------- 追加分（v0.3） ----------------
 import os
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data_more.py"), encoding="utf-8").read())
+
+# 節目の説明の書き直し（tools/clade_desc_main.tsv：id, desc, 出典）。近縁の群との違いを入れた文で、上の C() の文より優先する
+import csv as _csv
+_cd = {r["id"]: r["desc"] for r in _csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "clade_desc_main.tsv"), encoding="utf-8"), delimiter="\t")}
+for _c in clades:
+    if _c["id"] in _cd: _c["desc"] = _cd.pop(_c["id"])
+assert not _cd, f"clade_desc_main.tsv に無い節目: {sorted(_cd)}"
 
 # ---------------- 検証 ----------------
 # 補完に使わないグループ名の別名（2026-10-22 作者の決定）。

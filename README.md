@@ -25,6 +25,7 @@
 | `js/main.js` | 画面の切り替えと起動、データの読み込み |
 | `data.json`, `data-hard.json`, `data-fish.json` | 今の版の収録データ（生成物。手で直さない）。予約中の次の版があれば `data-<版>.json` も置く |
 | `tools/build_data.py`, `tools/data_more.py` | 収録データの正本。ここから `data-<版>.json` を作る |
+| `tools/clade_desc_main.tsv` | 本家の節目の説明（近縁の群との違い入り）。id・説明・出典をタブで区切る。`build_data.py` が `data_more.py` の文より優先して使う。ゲキムズ・番外編の同じ節目にも同じ文が入る |
 | `tools/hard/` | ゲキムズのデータの作り方（`tools/hard/README.md`） |
 | `tools/fish/make_fish.py` | 魚編のデータ `data-fish.json` を、ゲキムズのデータから魚だけ切り出して作る |
 | `tools/check.py` | 公開前の確認（送るたびに GitHub が自動で動かす） |
