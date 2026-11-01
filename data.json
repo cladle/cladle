@@ -49,7 +49,7 @@
    "bucketWeight": "sqrt"
   },
   "next": {
-   "from": "2026-11-01",
+   "from": "2026-11-02",
    "file": "data-0.3.17.json"
   }
  },
