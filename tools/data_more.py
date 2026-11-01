@@ -1970,4 +1970,11 @@ _find("akiyoshihoraananagakomushi")["tier"] = 4
 R("taimai", "testudines", "タイマイ", "Eretmochelys imbricata",
   "サンゴ礁にすむウミガメ。くちばしのようにとがった口で、岩のすき間の海綿を食べる。甲羅は鼈甲（べっこう）の材料にされ、数が大きく減った。")
 _find("taimai")["tier"] = 2
-META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ・タイマイ（11/02〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
+# 作者の指定（2026-11-01）。学名は GBIF・CoL・WoRMS で一致（check/picks26）。日本産ではないので魚類目録には無く、和名は Wikidata のみ
+C("anabantiformes", "percomorpha", "キノボリウオ目", "Anabantiformes", "目",
+  "アジアとアフリカの淡水魚。多くはえらの上にある迷路のような器官（ラビリンス器官）で、空気を直接吸って呼吸できる。ベタ・グラミー・タイワンドジョウなど。")
+R("beta", "anabantiformes", "ベタ", "Betta splendens",
+  "タイなど東南アジアの水田や湿地にすむ淡水魚。オス同士が激しく争うので闘魚とも呼ばれる。ひれの長い品種が観賞魚として飼われる。",
+  v={"ja": "和名の出典は Wikidata のみ（学術的な出典は未確認）"})
+_find("beta")["tier"] = 2
+META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ・タイマイ・ベタ（11/02〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
