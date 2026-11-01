@@ -107,7 +107,9 @@ def drift(main, hard):
         if x["id"] not in C or x["rank"] in ("属", "科") or not x["parent"] or x["parent"] not in C: continue
         if x["rank"] not in ("クレード", "上科", "下目", "亜目", "上目", "亜綱", "下綱"): continue
         # 親が多分岐（分かれる順を決めずに並べている）なら、親の直下に群が残るのは決めた通り
-        if x["sci"] in DRIFT_OK or C[x["parent"]].get("polytomy"): continue
+        # （merge_hard.py が足した群の置き場所に付ける決まり文句は、多分岐の理由に数えない）
+        poly = C[x["parent"]].get("polytomy", "").split("ゲキムズでは、Catalogue of Life・WoRMS から足した群のうち")[0].strip()
+        if x["sci"] in DRIFT_OK or poly: continue
         mine = {c["rank"] for c in kids.get(x["id"], []) if c["rank"] in ("科", "上科")}
         if not mine: continue
         left = [c for c in kids.get(x["parent"], []) if c["rank"] in mine and c["id"] not in MC]
