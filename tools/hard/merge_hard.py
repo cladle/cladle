@@ -589,6 +589,11 @@ kids = collections.Counter(c["parent"] for c in clades if c["id"] in MC)
 for c in clades:
     if c["id"] in graft_par and kids[c["id"]]:
         c["polytomy"] = (c.get("polytomy", "") + " " + NOTE).strip()
+# ゲキムズで足した群が並んで多分岐になる節目の理由（学名: 説明）
+HARD_POLY = {"Heterobranchia": "Euthyneura（ウミウシ・アメフラシ・カタツムリなど）より先に分かれた小さな群（Valvatoidea・Architectonicidae など、lower Heterobranchia と呼ばれる）は、どの順に分かれたかが決まっていないため、ここでは並べて示す（Bouchet et al. 2017）。"}
+for c in clades:
+    if c["sci"] in HARD_POLY and c["rank"] != "属":
+        c["polytomy"] = (c.get("polytomy", "") + " " + HARD_POLY[c["sci"]]).strip()
 for s in SP:
     for k in ("main", "colsrc", "_w"): s.pop(k, None)
 # 目録側の節目（o_・f_ などの id）が本家と同じ群なら、本家の説明を引き継ぐ
