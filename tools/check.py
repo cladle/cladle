@@ -70,6 +70,6 @@ for name, tool, files in (("魚編", "fish/make_fish.py", fish), ("鳥編", "bir
         built = json.load(open(out, encoding="utf-8"))
     latest = json.load(open(os.path.join(ROOT, files[-1]), encoding="utf-8"))
     if any(built[k] != latest[k] for k in ("clades", "species")):
-        print(f"△ {files[-1]} が {hard[-1]} から作ったものと違う（ゲキムズを作り直したら、{name}も版を上げて作り直す）")
+        print(f"△ {files[-1]} が {hard[-1]} から作ったものと違う（tools/build_all.py --write で作り直す）")
 print("○ 問題なし" if ok else "× 直すところがあります")
 sys.exit(0 if ok else 1)

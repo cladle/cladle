@@ -42,7 +42,8 @@ for s in FH:
         # 学名は本家（種で収録する方針）に合わせ、目録の表記は旧学名・別表記として残す
         if s["sci"] != h["sci"]: h["sciSynonyms"] = list(dict.fromkeys(h.get("sciSynonyms", []) + [h["sci"]])); h["sci"] = s["sci"]
         h["aliases"] = sorted(set(h["aliases"]) | set(s.get("aliases", [])) - {h["ja"]})
-        if s["ja"] != h["ja"]: h["aliases"].append(s["ja"])
+        # 和名も本家に合わせる（本家は種で収録するので、目録の亜種の和名は別名に回す。例：アメマス → イワナ）
+        if s["ja"] != h["ja"]: h["aliases"] = sorted((set(h["aliases"]) | {h["ja"]}) - {s["ja"]}); h["ja"] = s["ja"]
         h["tier"] = min(h.get("tier", 2), s.get("tier", 2)); h["main"] = s["id"]
         log["matched"].append((s["ja"], h["ja"]))
     else:
@@ -68,6 +69,10 @@ for i, c in HC.items():
         if c.get("polytomy") and not C[i].get("polytomy"): C[i]["polytomy"] = c["polytomy"]
     else:
         C[i] = dict(c)
+        # 本家にも同じ id の節目があれば（本家の種が目録側にまとまって used に入らなかった魚の綱など）、和名・階級・説明は本家のもの
+        if i in MC:
+            for k in ("ja", "sci", "rank", "desc", "verify", "jaReading"):
+                if MC[i].get(k): C[i][k] = MC[i][k]
 # 目録の親が本家だけにある場合も含めて、親が全部あるか
 for i, c in C.items():
     if c["parent"] and c["parent"] not in C: c["parent"] = MC[c["parent"]]["parent"] if c["parent"] in MC else c["parent"]
@@ -615,7 +620,8 @@ if os.path.exists(_desc):
         cs = _by.get((r["sci"], r["rank"]))
         if not cs: log["hard_desc"].append(["notfound", r["sci"]]); continue
         for c in cs:
-            if c["id"] in MC or c.get("desc"): log["hard_desc"].append(["main", r["sci"]]); continue
+            # 本家と同じ節目は本家の説明のまま。それ以外は Catalogue of Life などの説明があっても clade_desc.tsv を優先する
+            if c["id"] in MC: log["hard_desc"].append(["main", r["sci"]]); continue
             c["desc"] = r["desc"]; log["hard_desc"].append(["set", r["sci"]])
 # 節目の id が前回の作り直しから変わったか（説明などを id で付けている人のため）
 _ids = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "clade_ids.json")
