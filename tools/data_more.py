@@ -1379,7 +1379,7 @@ edit("culicidae", desc="蚊。血を吸うのは雌だけで、雌も血を吸�
 edit("chiroptera", desc="コウモリ。羽ばたいて飛ぶことのできる唯一の哺乳類。")
 edit("hexacorallia", desc="触手や隔膜の数が6の倍数になるものが多い。イシサンゴやイソギンチャク。")
 edit("coleoptera", desc="前翅が硬い鞘翅になった甲虫。記載された種の数が動物で最も多い目。")
-edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・有顎動物など。")
+edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・担顎動物など。")
 edit("takaashigani", fact="脚を広げると3 m以上になり、脚を広げた幅では世界最大のカニ。")
 edit("higashikirigirisu", fact="日本のキリギリスを東西2種に分ける扱いでの、東日本の種。同じ種とする見方もある。")
 
@@ -1715,7 +1715,7 @@ _find("hishikui")["verify"] = {"sci": "IOC 世界鳥類リストは亜種ヒシ�
 edit("deuterostomia", ja="新口動物", desc="後口動物とも呼ぶ。棘皮動物・半索動物（水腔動物）と脊索動物をまとめたクレード。")
 edit("protostomia", ja="旧口動物", desc="前口動物とも呼ぶ。脱皮動物とらせん卵割動物をまとめたクレード。",
      polytomy="毛顎動物は旧口動物の中の位置が定まっていない（顎口動物などと近いとする解析もある）ため、ここでは三分岐で示す。")
-edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・有顎動物など。")
+edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・担顎動物など。")
 # 足りない門を戻す（作者の指定、2026-10-27「必死に探して」）。和名は Web・GBIF・iNaturalist・Wikidata で探し直したもの。
 # 3種とも学術的な和名の出典は未確認なので verify を付ける。顎口動物・直泳動物は和名のある種が見つからない。
 C("loricifera", "scalidophora", "胴甲動物門", "Loricifera", "門", "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。")
@@ -1917,8 +1917,8 @@ _find("amimenishikihebi").setdefault("sciSynonyms", []).append("Python reticulat
 _find("yariika").setdefault("sciSynonyms", []).append("Loligo bleekeri")
 _find("hakusenshiomaneki").setdefault("sciSynonyms", []).append("Uca lactea")
 # 節目と種の説明を最新の分類に合わせる（2026-10-28）。文の直しは各版に反映し、版は上げない。
-edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（有顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
-edit("spiralia", polytomy="扁形動物・腹毛動物・有顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
+edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（担顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
+edit("spiralia", polytomy="扁形動物・腹毛動物・担顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
 edit("anguilliformes", desc="ウナギ・アナゴ・ウツボ・ハモ。幼生はレプトセファルス。")
 edit("nihonunagi", fact="マリアナ諸島西方の海で産卵し、レプトセファルス幼生として日本へ来る。")
 edit("muscicapidae", desc="ヒタキの仲間の小鳥。ツグミ科に近い。ジョウビタキ・キビタキ・オオルリなど。")
@@ -1959,3 +1959,34 @@ move("tectipleura", "amefurashi", "hadakakamegai", "tamanomidorigai")
 move("stylommatophora", "misujimaimai", "namekuji", "africamaimai")
 move("systellommatophora", "ashihidanamekuji", "onchidiidae")
 # 出題の重み（枠・門・知名度）と種の並びは変わらないので版は上げず、今の版に入れる（10/30 から）
+# 作者の指定（2026-10-31）。2026年10月に新種として記載された種。和名・学名は原記載（Yokogawa, Murakami & Nakano 2026, Zoological Science 43）と
+# 京都大学・美祢市の発表（2026-10-27）による。コムシ目（双尾類）は本家に無かったので六脚亜門の下に節目を足す。
+C("diplura", "hexapoda", "コムシ目", "Diplura", "目",
+  "目も翅もない、細長い土の中の六脚類。腹の先に2本の尾（尾角）またはハサミをもつ。昆虫綱には含めない。")
+R("akiyoshihoraananagakomushi", "diplura", "アキヨシホラアナナガコムシ", "Pacificampa dodecas",
+  "山口県秋吉台の石灰岩の洞窟にすむナガコムシの仲間。長く名前が無いままだったが、2026年に新種として記載された。体長は最大13 mm（触角と尾角を除く）で、ナガコムシ科で世界最大。")
+_find("akiyoshihoraananagakomushi")["tier"] = 4
+# 作者の指定（2026-11-01）。和名・学名は日本産爬虫両生類標準和名リスト（2026年7月2日版）による（ゲキムズの照合と同じ）
+R("taimai", "testudines", "タイマイ", "Eretmochelys imbricata",
+  "サンゴ礁にすむウミガメ。くちばしのようにとがった口で、岩のすき間の海綿を食べる。甲羅は鼈甲（べっこう）の材料にされ、数が大きく減った。")
+_find("taimai")["tier"] = 2
+# 作者の指定（2026-11-01）。学名は GBIF・CoL・WoRMS で一致（check/picks26）。日本産ではないので魚類目録には無く、和名は Wikidata のみ
+C("anabantiformes", "percomorpha", "キノボリウオ目", "Anabantiformes", "目",
+  "アジアとアフリカの淡水魚。多くはえらの上にある迷路のような器官（ラビリンス器官）で、空気を直接吸って呼吸できる。ベタ・グラミー・タイワンドジョウなど。")
+R("beta", "anabantiformes", "ベタ", "Betta splendens",
+  "タイなど東南アジアの水田や湿地にすむ淡水魚。オス同士が激しく争うので闘魚とも呼ばれる。ひれの長い品種が観賞魚として飼われる。",
+  v={"ja": "和名の出典は Wikidata のみ（学術的な出典は未確認）"})
+_find("beta")["tier"] = 2
+# 作者の指定（2026-11-01）。学名は GBIF・CoL・WoRMS で一致（check/picks26）。和名は Wikidata と iNaturalist の一致のみで、学名をカタカナにした形だが
+# 飼育で定着した呼び名なので例外として使う（作者の判断、2026-11-01）
+C("polypteriformes", "actinopterygii", "ポリプテルス目", "Polypteriformes", "目",
+  "アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。")
+R("polypterus_senegalus", "polypteriformes", "ポリプテルス・セネガルス", "Polypterus senegalus",
+  "西〜中央アフリカの川や湖にすむ。うろこは硬いガノイン鱗で、胸びれの付け根に肉がある。観賞魚として飼われ、古代魚とも呼ばれる。",
+  ["ポリプテルス"], v={"ja": "和名は Wikidata・iNaturalist の一致のみで、学名をカタカナにした形（学術的な和名は未確認）"})
+_find("polypterus_senegalus")["tier"] = 3
+# 作者の指定（2026-11-01）。学名・和名は GBIF・CoL・Wikidata・iNaturalist で一致（check/picks27）
+R("himeookuwagata", "lucanidae", "ヒメオオクワガタ", "Dorcus montivagus",
+  "日本の山地のブナ林などにすむクワガタムシ。オオクワガタに似るが小さい。生きた木の枝の皮をかじり、しみ出る樹液を吸う。")
+_find("himeookuwagata")["tier"] = 3
+META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ・タイマイ・ベタ・ポリプテルス・ヒメオオクワガタ（11/02〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
