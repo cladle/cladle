@@ -571,5 +571,15 @@
   "under": "Passeriformes",
   "take": [],
   "source": "Catalogue of Life。和名は GBIF・iNaturalist で一致（2026-10-30）"
+ },
+ {
+  "id": "polypteriformes",
+  "ja": "ポリプテルス目",
+  "sci": "Polypteriformes",
+  "rank": "目",
+  "under": "Actinopterygii",
+  "take": [],
+  "desc": "アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。",
+  "source": "本家 0.3.17 に足した種・節目（2026-11-01、作者の指定。和名は例外として採用）。本家の版を取り込めば本家側から入る"
  }
 ]
