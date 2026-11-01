@@ -519,6 +519,7 @@ MOVE_INTO = {"Pinnipedia": ["Odobenidae", "Otariidae", "Phocidae"],  # 鰭脚類
              "Euchelicerata": ["Garypidae", "Bdellidae"],  # カニムシ類・ダニ類はクモガタ類（Catalogue of Life）
              "Thoracicalcarea": ["Capitulum"],  # カメノテは完胸類（Chan et al. 2021、Catalogue of Life・WoRMS）
              "Clavelinidae": ["Pycnoclavella"],  # Catalogue of Life・WoRMS
+             "Osphronemidae": ["Betta"],  # 本家のベタ（Anabantiformes 直下）が目録側のキノボリウオ目と二重になるのを防ぐ（Eschmeyer's Catalog of Fishes）
              "Metridioidea": ["Diadumene"],  # タテジマイソギンチャクの属（Rodríguez et al. 2014、Catalogue of Life）
              "Sipuncula": ["Sipunculus"], "Echiuroidea": ["Urechis"],  # ホシムシ・ユムシの属（Catalogue of Life・WoRMS）
              "Cyrenoidea": ["Corbicula"],  # シジミ属（Catalogue of Life・WoRMS）

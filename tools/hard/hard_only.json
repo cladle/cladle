@@ -3280,5 +3280,113 @@
   "place": [
    "Polypteriformes"
   ]
+ },
+ {
+  "ja": "カンムリサケビドリ",
+  "sci": "Chauna torquata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Anhimidae",
+   "Anseriformes"
+  ]
+ },
+ {
+  "ja": "アカハシリュウキュウガモ",
+  "sci": "Dendrocygna autumnalis",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Anatidae",
+   "Anseriformes"
+  ]
+ },
+ {
+  "ja": "シロガオリュウキュウガモ",
+  "sci": "Dendrocygna viduata",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Anatidae",
+   "Anseriformes"
+  ]
+ },
+ {
+  "ja": "オナガテリムク",
+  "sci": "Lamprotornis caudatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Sturnidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "キガシラムクドリ",
+  "sci": "Ampeliceps coronatus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Sturnidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "モリハッカ",
+  "sci": "Acridotheres fuscus",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Sturnidae",
+   "Passeriformes"
+  ]
+ },
+ {
+  "ja": "エボシウズラ",
+  "sci": "Callipepla douglasii",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Odontophoridae",
+   "Galliformes"
+  ]
+ },
+ {
+  "ja": "チリーシギダチョウ",
+  "sci": "Nothoprocta perdicaria",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Tinamidae",
+   "Tinamiformes"
+  ]
+ },
+ {
+  "ja": "ワタリアホウドリ",
+  "sci": "Diomedea exulans",
+  "aliases": [],
+  "fact": "",
+  "tier": 4,
+  "source": "特別展「鳥」（国立科学博物館ほか、2024）の展示ラベル。学名は Catalogue of Life、和名は iNaturalist・Wikidata・GBIF とも一致（2026-11-01）",
+  "place": [
+   "Diomedeidae",
+   "Procellariiformes"
+  ]
  }
 ]
