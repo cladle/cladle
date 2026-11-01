@@ -177,6 +177,8 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     const k = T[c];
     seg.push({ x1: n.x - 2, x2: n.x + 2, y1: Math.min(n.y, k.y), y2: Math.max(n.y, k.y) }, { x1: n.x, x2: k.x, y1: k.y - 2, y2: k.y + 2 });
   }
+  // 横の枝と分かれ目の点。名前がどうしても線に重なるときも、これだけは隠さない（縦の線をまたぐのはよい）
+  const hseg = seg.filter((_, i) => i % 2), dots = Object.values(T).filter(n => n.ch.length).map(n => ({ x1: n.x - 6, x2: n.x + 6, y1: n.y - 6, y2: n.y + 6 }));
   const placed = [];
   const hits = (r, list) => list.some(q => r.x1 < q.x2 && q.x1 < r.x2 && r.y1 < q.y2 && q.y1 < r.y2);
   cand.sort((a, b) => a.prio - b.prio || b.n.d - a.n.d);
@@ -201,7 +203,7 @@ function treeHTML(target, guesses, done, fresh, width, opt = {}) {
     let sp = free(inside(withK), placed, seg) || (kinT ? null : free(inside(noK), placed, seg));
     // 現在地と根は必ず書く。収まらなければ2行目を省き、それでも無理なら葉の列へはみ出す（葉の名前には重ねない）
     if (!sp && (st || n.id === D.root))
-      sp = free(inside(noK), placed, seg) || free(inside(noK), placed) || free(shifted(), placed, seg) || free(shifted(), placed)
+      sp = free(inside(noK), placed, seg) || free(inside(noK), placed, hseg, dots) || free(shifted(), placed, hseg, dots) || free(inside(noK), placed) || free(shifted(), placed, seg) || free(shifted(), placed)
         || free(noK, placed, seg, tipBox) || free(noK, placed, tipBox) || free(noK, placed) || noK[0];
     const kin = sp && sp.kin ? kinT : "";
     if (!sp) continue;

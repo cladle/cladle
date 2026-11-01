@@ -256,3 +256,8 @@ elopomorpha	カライワシ・ソトイワシ・ソコギス・ウナギなど�
 diplura	目も翅もない、細長い土の中の六脚類。腹の先に2本の尾（尾角）またはハサミをもつ。昆虫綱には含めない。近縁の昆虫綱と違い、口器が頭の中に引っ込んでいて（内顎）、複眼も単眼もない。	Misof et al. 2014 Science 346:763
 anabantiformes	アジアとアフリカの淡水魚。多くはえらの上にある迷路のような器官（ラビリンス器官）で、空気を直接吸って呼吸できる。ベタ・グラミー・タイワンドジョウなど。近縁のタウナギ目（体が細長いウナギ形）と違い、ふつうの魚の体形をしている。	Betancur-R et al. 2017 BMC Evol Biol 17:162; Collins et al. 2015 Mol Phylogenet Evol 84:149
 polypteriformes	アフリカの淡水にすむ古いタイプの条鰭類。背中に小さな旗のようなひれが並び、肺のようなうきぶくろで空気を吸える。条鰭類の中で最初に分かれた系統。近縁のチョウザメ目などと違い、体が硬く厚いうろこ（硬鱗）でおおわれ、胸びれの付け根が肉質になっている。	Near et al. 2012 PNAS 109:13698; Betancur-R et al. 2017 BMC Evol Biol 17:162
+f_araneidae	車輪のような円い網（円網）を張るクモの代表的な科。以前は別の科（ジョロウグモ科）とされたジョロウグモの仲間も、ここではコガネグモ科に含める。近縁のヒメグモ科と違い、縦糸を放射状に張った平らな円網を作る。	Japan Spider Catalog; World Spider Catalog; Kallal et al. 2021 Cladistics 37:298
+f_theridiidae	糸を立体に張りめぐらせた不規則な網を作るクモの科。近縁のコガネグモ科と違い、円網を張らない。第4脚の先にくし状に並ぶ毛（櫛状毛）で粘り糸をすくい取り、獲物に投げかけて絡める。	World Spider Catalog; Wheeler et al. 2017 Cladistics 33:574
+f_sparassidae	脚が長く、体の平たい大形のクモの科。網を張らず、夜に歩き回って獲物を捕らえる。脚が体の横へ広がり、カニのように横向きにも素早く動ける。	World Spider Catalog; Wheeler et al. 2017 Cladistics 33:574
+f_salticidae	大きな前の目（前中眼）で獲物を見つけ、跳びかかって捕らえるクモの科。網は張らない。クモ目でいちばん種数の多い科。	World Spider Catalog; Wheeler et al. 2017 Cladistics 33:574
+f_cheiracanthiidae	夜に歩き回って獲物を捕らえるクモの科。網を張らず、葉を巻いたり折ったりして作った袋状の巣で休み、産卵する。以前はフクログモ科などに含められていた。	World Spider Catalog; Japan Spider Catalog; Wheeler et al. 2017 Cladistics 33:574
