@@ -600,7 +600,7 @@ if os.path.exists(_ids):
 json.dump(_now, open(_ids, "w"), ensure_ascii=False, indent=0)
 meta = json.loads(json.dumps(H["meta"]))
 meta.update({"datasetVersion": "hard-0.3.0", "title": "Cladle ゲキムズ（全動物）"})
-meta["selection"] = dict(M["meta"]["selection"], **{"maxGuesses": 20, "tierWeights": {"1": 1, "2": 0.6, "3": 0.3, "4": 0.1}, "clearRank": "属", "dailyEpoch": H["meta"]["selection"]["dailyEpoch"]})
+meta["selection"] = dict(M["meta"]["selection"], **{"maxGuesses": 20, "tierWeights": {"1": 1, "2": 0.6, "3": 0.3, "4": 0.03}, "clearRank": "属", "dailyEpoch": H["meta"]["selection"]["dailyEpoch"]})
 meta["selection"].pop("bucketRank", None)
 meta["counts"] = {"main": len(keep_main) + len(log["matched"]) + len(log["foreign"]), "fishherp": len(HS), "col": len(log["col_added"]),
                   "worms": len(log.get("worms_added", [])), "land": len(log.get("land_added", [])), "extra": len([x for x in log.get("hard_only", []) if x[0] == "added"])}
