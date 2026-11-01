@@ -1379,7 +1379,7 @@ edit("culicidae", desc="蚊。血を吸うのは雌だけで、雌も血を吸�
 edit("chiroptera", desc="コウモリ。羽ばたいて飛ぶことのできる唯一の哺乳類。")
 edit("hexacorallia", desc="触手や隔膜の数が6の倍数になるものが多い。イシサンゴやイソギンチャク。")
 edit("coleoptera", desc="前翅が硬い鞘翅になった甲虫。記載された種の数が動物で最も多い目。")
-edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・有顎動物など。")
+edit("spiralia", desc="らせん卵割を祖先形質とする前口動物。冠輪動物・扁形動物・担顎動物など。")
 edit("takaashigani", fact="脚を広げると3 m以上になり、脚を広げた幅では世界最大のカニ。")
 edit("higashikirigirisu", fact="日本のキリギリスを東西2種に分ける扱いでの、東日本の種。同じ種とする見方もある。")
 
@@ -1715,7 +1715,7 @@ _find("hishikui")["verify"] = {"sci": "IOC 世界鳥類リストは亜種ヒシ�
 edit("deuterostomia", ja="新口動物", desc="後口動物とも呼ぶ。棘皮動物・半索動物（水腔動物）と脊索動物をまとめたクレード。")
 edit("protostomia", ja="旧口動物", desc="前口動物とも呼ぶ。脱皮動物とらせん卵割動物をまとめたクレード。",
      polytomy="毛顎動物は旧口動物の中の位置が定まっていない（顎口動物などと近いとする解析もある）ため、ここでは三分岐で示す。")
-edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・有顎動物など。")
+edit("spiralia", desc="らせん卵割を祖先形質とする旧口動物。冠輪動物・扁形動物・担顎動物など。")
 # 足りない門を戻す（作者の指定、2026-10-27「必死に探して」）。和名は Web・GBIF・iNaturalist・Wikidata で探し直したもの。
 # 3種とも学術的な和名の出典は未確認なので verify を付ける。顎口動物・直泳動物は和名のある種が見つからない。
 C("loricifera", "scalidophora", "胴甲動物門", "Loricifera", "門", "1983年に記載された門の一つ。海底の砂や泥のすき間にすむ、体長0.5 mm以下の動物。")
@@ -1917,8 +1917,8 @@ _find("amimenishikihebi").setdefault("sciSynonyms", []).append("Python reticulat
 _find("yariika").setdefault("sciSynonyms", []).append("Loligo bleekeri")
 _find("hakusenshiomaneki").setdefault("sciSynonyms", []).append("Uca lactea")
 # 節目と種の説明を最新の分類に合わせる（2026-10-28）。文の直しは各版に反映し、版は上げない。
-edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（有顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
-edit("spiralia", polytomy="扁形動物・腹毛動物・有顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
+edit("protostomia", polytomy="毛顎動物は旧口動物の中の位置が定まっていない（担顎動物に近いとする系統ゲノム解析もある：Marlétaz et al. 2019）ため、ここでは三分岐で示す。")
+edit("spiralia", polytomy="扁形動物・腹毛動物・担顎動物・冠輪動物・二胚動物・直泳動物の関係は議論中のため多分岐で示す。")
 edit("anguilliformes", desc="ウナギ・アナゴ・ウツボ・ハモ。幼生はレプトセファルス。")
 edit("nihonunagi", fact="マリアナ諸島西方の海で産卵し、レプトセファルス幼生として日本へ来る。")
 edit("muscicapidae", desc="ヒタキの仲間の小鳥。ツグミ科に近い。ジョウビタキ・キビタキ・オオルリなど。")
