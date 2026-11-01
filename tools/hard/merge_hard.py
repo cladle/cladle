@@ -381,7 +381,7 @@ if os.path.exists(_hc):
         up = [c["id"] for c in C.values() if c["sci"] == h["under"]]
         if not up: log["hard_clades"].append(["noplace", h["sci"]]); continue
         add(h["id"], up[0], h["ja"], h["sci"], h["rank"], h.get("desc", ""))
-        for x in list(C.values()) + SP:
+        for x in list(C.values()) + SP + keep_main:  # 本家の種（属はまだ作っていない）も
             if x["parent"] == up[0] and x["sci"] in h["take"]: x["parent"] = h["id"]
         log["hard_clades"].append(["added", h["sci"], h["under"]])
 
@@ -510,7 +510,8 @@ MOVE_INTO = {"Pinnipedia": ["Odobenidae", "Otariidae", "Phocidae"],  # 鰭脚類
              "Hexacorallia": ["Cerianthidae"],  # ハナギンチャク類は六放サンゴ類の中で最初に分かれた群（McFadden et al. 2021、WoRMS）
              "Accipitriformes": ["Sagittarius"],  # ヘビクイワシはタカ目（IOC 15.2）
              "Annelida": ["Amphinomida"],  # ウミケムシ類は Pleistoannelida の外で分かれる（Weigert et al. 2014）
-             "Luminacea": ["Astriclypeus"]}  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
+             "Luminacea": ["Astriclypeus"],  # スカシカシパンはタコノマクラ目の外（Mongiardino Koch et al. 2022、WoRMS）
+             "Psittacidae": ["Psittacus", "Ara"], "Phasianidae": ["Gallus"]}  # 本家で目の直下にある鳥の属を科の下へ（Catalogue of Life）
 for to, items in MOVE_INTO.items():
     t = [i for i, c in C.items() if c["sci"] == to and c["rank"] != "属"]
     if len(t) != 1: log["move_into"].append(["notarget", to]); continue
@@ -599,7 +600,7 @@ if os.path.exists(_ids):
 json.dump(_now, open(_ids, "w"), ensure_ascii=False, indent=0)
 meta = json.loads(json.dumps(H["meta"]))
 meta.update({"datasetVersion": "hard-0.3.0", "title": "Cladle ゲキムズ（全動物）"})
-meta["selection"] = dict(M["meta"]["selection"], **{"maxGuesses": 20, "tierWeights": {"1": 1, "2": 0.6, "3": 0.3, "4": 0.1}, "clearRank": "属", "dailyEpoch": H["meta"]["selection"]["dailyEpoch"]})
+meta["selection"] = dict(M["meta"]["selection"], **{"maxGuesses": 20, "tierWeights": {"1": 1, "2": 0.6, "3": 0.3, "4": 0.03}, "clearRank": "属", "dailyEpoch": H["meta"]["selection"]["dailyEpoch"]})
 meta["selection"].pop("bucketRank", None)
 meta["counts"] = {"main": len(keep_main) + len(log["matched"]) + len(log["foreign"]), "fishherp": len(HS), "col": len(log["col_added"]),
                   "worms": len(log.get("worms_added", [])), "land": len(log.get("land_added", [])), "extra": len([x for x in log.get("hard_only", []) if x[0] == "added"])}

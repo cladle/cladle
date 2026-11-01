@@ -10,7 +10,7 @@
 """
 import json, sys
 
-BIRD_VERSION = "bird-0.1.2"
+BIRD_VERSION = "bird-0.1.3"
 src, out = sys.argv[1], sys.argv[2]
 H = json.load(open(src, encoding="utf-8"))
 C = {c["id"]: c for c in H["clades"]}
