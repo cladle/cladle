@@ -64,6 +64,34 @@ function build(data) {
   }));
   // 枠の選び方：既定は等確率。"sqrt" なら枠内の重みの合計の平方根に比例させる
   BW = BUCKETS.map(B => sel.bucketWeight === "sqrt" ? Math.sqrt(B.reduce((a, x) => a + (x.st ?? x.ids.length), 0)) : 1);
+  if (sel.realCounts) byRealCounts(sel.realCounts, tw);
+}
+// 実際の種数で群を選ぶ（meta.selection.realCounts、tools/real_counts.py が数える）
+// 収録数の多い・少ないに左右されないよう、群（ranks[0]、例：門・目）を実際の種数（top が "sqrt" ならその平方根）に比例して選び、
+// 群の中は ranks[1]（例：綱）の実際の種数に比例して選ぶ。ranks[1] の無い種・数の無い群の種は「残り」にまとめ、
+// 群の種数から中の群の種数を引いた数を重みにする。ranks[0] の節目が上に無い種は groups にある節目を群にする。最後に、選んだまとまりの中から知名度の重みで種を選ぶ
+function byRealCounts(rc, tw) {
+  const [r0, r1] = rc.ranks, n = sci => rc.n[sci], extra = rc.groups || [];
+  const top = {}, sub = {};
+  for (const c of Object.values(N)) if (c.kind === "clade" && c.rank === r1 && n(c.sci) != null) {
+    const t = path(c.id).reverse().find(id => N[id].rank === r0 || extra.includes(N[id].sci));
+    if (t) sub[t] = (sub[t] || 0) + n(c.sci);
+  }
+  for (const s of SP) {
+    if (s.answerable === false) continue;
+    const p = path(s.id).reverse(), t = p.find(id => N[id].rank === r0 || extra.includes(N[id].sci));
+    let u = r1 && p.find(id => N[id].rank === r1);
+    if (!u || n(N[u].sci) == null) u = "_rest";
+    if (!t || n(N[t].sci) == null) continue;  // 数の無い群は出さない（tools/check.py が知らせる）
+    ((top[t] ||= {})[u] ||= []).push(s.id);
+  }
+  const T = Object.keys(top);
+  BUCKETS = T.map(t => Object.entries(top[t]).map(([u, ids]) => {
+    const x = { ids, w: !r1 ? 1 : u === "_rest" ? Math.max(0, n(N[t].sci) - (sub[t] || 0)) : n(N[u].sci) };
+    x.sw = ids.map(tw); x.st = x.sw.reduce((a, b) => a + b, 0);
+    return x;
+  })).map(B => B.some(x => x.w > 0) ? B.filter(x => x.w > 0) : B.map(x => ({ ...x, w: 1 })));
+  BW = T.map(t => rc.top === "sqrt" ? Math.sqrt(n(N[t].sci)) : n(N[t].sci));
 }
 function makeKeys(s) { s.keys = [[s.ja, "ja"], [s.sci, "sci"], ...(s.sciSynonyms || []).map(a => [a, "syn"]), ...s.aliases.map(a => [a, (s.subspeciesAliases || []).includes(a) ? "subsp" : "alias"])].map(([t, k]) => ({ t, k, n: norm(t) })); }
 function path(id) { const a = []; while (id) { a.push(id); id = N[id].parent; } return a.reverse(); }

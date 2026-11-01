@@ -27,6 +27,7 @@
 | selection.buckets | 文字列[] | 出題の枠にする門の clade id。ここに無い門はまとめて「その他の門」1枠になる。枠は等確率で選ぶ |
 | selection.otherBucketLabel | 文字列 | 「その他」枠の表示名 |
 | selection.phylumWeight | `"sqrt"` \| `"equal"` | 枠の中での門の重み。sqrt＝収録種数の平方根、equal＝全門同じ |
+| selection.realCounts | オブジェクト | （ゲキムズ・鳥編・昆虫編・魚編）群を実際の種数で選ぶ。`ranks`＝群の階級（例 `["門","綱"]`、`["目"]`）、`top`＝外側の群の重み（`"linear"`＝種数そのまま、`"sqrt"`＝平方根）、`n`＝学名→現生の記載種数、`source`＝出典、`groups`＝`ranks[0]` の節目が上に無い種のための群の学名（魚編の肉鰭類）。これがあると buckets・phylumWeight・bucketWeight は使わない。数は tools/real_counts.py が数えて tools/real_counts.json に控える |
 | selection.maxGuesses | 数値 | 推測の上限（既定 20） |
 | selection.dailyEpoch | 文字列 (YYYY-MM-DD) | 「今日の動物 #1」の日付（日本時間） |
 
@@ -66,5 +67,5 @@
 
 - 補完は `ja`・`sci`・`aliases` を対象に、NFKC 正規化・カタカナ→ひらがな変換・空白と中黒の除去をしてから部分一致で探す。前方一致と和名を優先。
 - 共通祖先は `parent` をたどって求める。背骨には根から共通祖先までの全クレードを表示する。
-- 出題：`answerable` が false でない種を対象に、まず `selection.buckets` の枠（＋その他の門）を等確率で選び、枠の中で `selection.phylumWeight` に従って門を選び、門内で一様に1種を選ぶ。
+- 出題：`answerable` が false でない種を対象に、まず `selection.buckets` の枠（＋その他の門）を等確率で選び、枠の中で `selection.phylumWeight` に従って門を選び、門内で一様に1種を選ぶ。`selection.realCounts` があるときは、`ranks[0]` の群を実際の種数（`top` が sqrt ならその平方根）に比例して選び、その中で `ranks[1]` の群を実際の種数に比例して選び（`ranks[1]` の無い種と数の無い群の種は「残り」にまとめ、外側の種数から中の群の種数を引いた数を重みにする）、最後に tierWeights の重みで1種を選ぶ。収録数の多い・少ないは出題の割合に効かない。
 - 推測中は「残り何種」を表示しない（図鑑では収録数を表示）。今日の動物は「日本時間の日付＋datasetVersion」から決まる。

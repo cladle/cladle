@@ -654,7 +654,10 @@ if refsf and os.path.exists(refsf):
     ids = {x["id"] for x in SP}
     refs = [r["source"] for r in csv.DictReader(open(refsf, encoding="utf-8"), delimiter="\t") if r["id"] in ids]
     meta["japaneseNameSources"] += ["コガネムシ上科の和名（日本産昆虫目録とは未照合）：" + "／".join(dict.fromkeys(refs))]
-json.dump({"meta": meta, "clades": clades, "species": SP}, open(out, "w"), ensure_ascii=False, separators=(",", ":"))
+# 出題：門と綱は実際の種数（tools/real_counts.json）で選ぶ。門は平方根で縮めて、小さな門も出るようにする
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import real_counts
+json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": SP}, "hard", "sqrt"), open(out, "w"), ensure_ascii=False, separators=(",", ":"))
 print({k: len(v) for k, v in log.items()})
 print("clades", len(clades), "species", len(SP), "ja dup", [k for k, v in collections.Counter(s["ja"] for s in SP).items() if v > 1][:20])
 json.dump({k: v for k, v in log.items()}, open(out + ".log.json", "w"), ensure_ascii=False, indent=0)

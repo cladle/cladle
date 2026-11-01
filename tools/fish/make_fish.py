@@ -5,12 +5,15 @@
 
 - 脊椎動物のうち四肢動物を除いた種（円口類・軟骨魚類・条鰭類・シーラカンス・ハイギョ）を残す。
   「魚類」は側系統群なので節目にはせず、出題の範囲として使うだけにする。根は脊椎動物亜門。
-- 全種を答えに出し、知名度や目ごとの重みは付けずに全種から同じ確率で選ぶ（作者の判断）。
+- 全種を答えに出す。目は種数の平方根に比例した確率で選び（種数の多い目ばかり出ないように、作者の判断）、目の中は全種から同じ確率で選ぶ。
+  日本の魚は全種が入っているので、種数は収録数（tools/real_counts.py の fish）。目の無いシーラカンス・ハイギョは肉鰭類で一つの群にする。
 - 種・節目・知名度を変えたら版番号（FISH_VERSION）を上げる。今日の動物の選び方に入っている。
 """
-import json, sys
+import json, os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import real_counts
 
-FISH_VERSION = "fish-0.1.2"
+FISH_VERSION = "fish-0.1.3"
 src, out = sys.argv[1], sys.argv[2]
 H = json.load(open(src, encoding="utf-8"))
 C = {c["id"]: c for c in H["clades"]}
@@ -52,9 +55,8 @@ meta.update({
     "counts": {"species": len(species)},
     "selection": {
         "maxGuesses": 20, "dailyEpoch": "2026-10-28",
-        # 枠を一つ（脊椎動物亜門）にして、重みを付けずに全種から一様に選ぶ
-        "bucketRank": "亜門", "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1},
+        "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1},
     },
 })
-json.dump({"meta": meta, "clades": clades, "species": species}, open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "fish", "sqrt"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(f"{out}: 節目 {len(clades)}・種 {len(species)}")
