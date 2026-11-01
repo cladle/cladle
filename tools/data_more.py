@@ -2061,4 +2061,16 @@ _find("iwana")["subspeciesAliases"] = ["アメマス", "ニッコウイワナ", 
 _find("tokobushi")["aliases"] = ["フクトコブシ"]
 _find("tokobushi")["subspeciesAliases"] = ["フクトコブシ"]
 _find("tokobushi")["verify"] = {"ja": "WoRMS は亜種を分けない。和名トコブシは日本の亜種 aquatilis の名で、種としての和名は iNaturalist のみ"}
-META["datasetVersion"] = "0.3.18"  # 作者の写真にあった58種（11/03〜）
+# 作者の指定（2026-11-02）「ヨコエビとクーマをいれる」。節目の端脚目・クーマ目を足し、既存の端脚類3種を端脚目へ移す。照合は check/picks29
+C("amphipoda", "malacostraca", "端脚目", "Amphipoda", "目",
+  "ヨコエビ・ハマトビムシ・ワレカラ・タルマワシなど。多くは体が左右に平たく、横倒しになって泳ぐことからヨコエビと呼ばれる。")
+C("cumacea", "malacostraca", "クーマ目", "Cumacea", "目",
+  "頭胸部が大きくふくらみ、腹部が細長い、体長数 mmの小さな甲殻類。浅い海の砂泥底にすむ。")
+move("amphipoda", "himehamatobimushi", "ootarumawashi", "oowarekara")
+R("nipponyokoebi", "amphipoda", "ニッポンヨコエビ", "Gammarus nipponensis",
+  "湧き水や山地の小川の落ち葉の下などにすむ淡水のヨコエビ。落ち葉を食べて分解を助ける。")
+_find("nipponyokoebi")["tier"] = 3
+R("nagisakuma", "cumacea", "ナギサクーマ", "Bodotria pulex",
+  "浅い海の砂底にすむクーマの仲間。ふだんは砂に潜っている。")
+_find("nagisakuma")["tier"] = 4
+META["datasetVersion"] = "0.3.18"  # 作者の写真にあった58種、ヨコエビ・クーマ（11/03〜）
