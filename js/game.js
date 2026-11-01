@@ -122,9 +122,9 @@ const clearN = () => G.gAt || G.guesses.length;  // クリアした回数（ゲ�
 // ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
 // ヒント2: 正解への経路で、今わかっている節目より1段深い節目を教える
 function candidates() {
-  const k = deepest(), out = [];
+  const k = deepest(), out = [], ex = G.h2 && G.reveal ? hintExamples(G.reveal) : [];
   for (const s of SP) {
-    if (s.answerable === false || G.guesses.includes(s.id) || !path(s.id).includes(k)) continue;
+    if (s.answerable === false || G.guesses.includes(s.id) || !path(s.id).includes(k) || ex.includes(s.id)) continue;
     if (G.guesses.every(g => lca(g, s.id) === lca(g, G.target))) out.push(s.id);
   }
   return out;
@@ -139,6 +139,12 @@ function useHint(n) {
     G.h2 = true;
   }
   save(); render();
+}
+// ヒント2で開いた節目が学名だけのとき、その中の和名のある種を例に出す（答え以外で、よく知られた種から2つまで。推測の有無で変わらないよう固定）
+function hintExamples(id) {
+  if (!/^[A-Za-z]/.test(N[id].ja)) return [];
+  return SP.filter(s => s.id !== G.target && path(s.id).includes(id))
+    .sort((a, b) => (a.tier || 9) - (b.tier || 9) || a.ja.localeCompare(b.ja, "ja")).slice(0, 2).map(s => s.id);
 }
 // ゲキムズのヒント2（属を開かないとき）：和名の文字数と、ほかの種とも共通する終わり方（「…ウロコムシ」など）
 function jaClue(id) {
