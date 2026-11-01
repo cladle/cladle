@@ -2610,63 +2610,40 @@
    "desc": "頭胸部が大きくふくらみ、腹部が細長い、体長数 mmの小さな甲殻類。浅い海の砂泥底にすむ。"
   },
   {
-   "id": "araneoidea",
+   "id": "f_araneidae",
    "parent": "araneae",
-   "ja": "Araneoidea",
-   "sci": "Araneoidea",
-   "rank": "上科",
-   "desc": "コガネグモ科・ヒメグモ科・サラグモ科などをまとめた上科。多くが網を張って獲物を待ち、粘り気のある球（粘球）が並ぶ糸を網に使う。RTA clade の仲間（ハエトリグモ・アシダカグモなど）と違い、網で獲物を捕らえるものが大半で、触肢の脛節に突起（RTA）がない。",
-   "verify": {
-    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記。日本語版ウィキペディアに「コガネグモ上科」とあるが学術文献での使用は未確認"
-   }
-  },
-  {
-   "id": "rtaclade",
-   "parent": "araneae",
-   "ja": "RTA clade",
-   "sci": "RTA clade",
-   "rank": "クレード",
-   "desc": "雄の触肢の脛節（すねの節）の外側に突起（retrolateral tibial apophysis、RTA）をもつクモをまとめたクレード。ハエトリグモ・アシダカグモ・コマチグモ・コモリグモなど、網を張らずに歩き回って獲物を捕らえるものが多い。Araneoidea の仲間と違い、粘球の付いた糸の網を使わない。",
-   "polytomy": "科どうしの関係は解析によって異なるため多分岐で示す。",
-   "verify": {
-    "ja": "定着した和名が確認できないため英語の呼び名で表記"
-   }
-  },
-  {
-   "id": "araneidae",
-   "parent": "araneoidea",
    "ja": "コガネグモ科",
    "sci": "Araneidae",
    "rank": "科",
    "desc": "車輪のような円い網（円網）を張るクモの代表的な科。以前は別の科（ジョロウグモ科）とされたジョロウグモの仲間も、ここではコガネグモ科に含める。近縁のヒメグモ科と違い、縦糸を放射状に張った平らな円網を作る。"
   },
   {
-   "id": "theridiidae",
-   "parent": "araneoidea",
+   "id": "f_theridiidae",
+   "parent": "araneae",
    "ja": "ヒメグモ科",
    "sci": "Theridiidae",
    "rank": "科",
    "desc": "糸を立体に張りめぐらせた不規則な網を作るクモの科。近縁のコガネグモ科と違い、円網を張らない。第4脚の先にくし状に並ぶ毛（櫛状毛）で粘り糸をすくい取り、獲物に投げかけて絡める。"
   },
   {
-   "id": "sparassidae",
-   "parent": "rtaclade",
+   "id": "f_sparassidae",
+   "parent": "araneae",
    "ja": "アシダカグモ科",
    "sci": "Sparassidae",
    "rank": "科",
    "desc": "脚が長く、体の平たい大形のクモの科。網を張らず、夜に歩き回って獲物を捕らえる。脚が体の横へ広がり、カニのように横向きにも素早く動ける。"
   },
   {
-   "id": "salticidae",
-   "parent": "rtaclade",
+   "id": "f_salticidae",
+   "parent": "araneae",
    "ja": "ハエトリグモ科",
    "sci": "Salticidae",
    "rank": "科",
    "desc": "大きな前の目（前中眼）で獲物を見つけ、跳びかかって捕らえるクモの科。網は張らない。クモ目でいちばん種数の多い科。"
   },
   {
-   "id": "cheiracanthiidae",
-   "parent": "rtaclade",
+   "id": "f_cheiracanthiidae",
+   "parent": "araneae",
    "ja": "コマチグモ科",
    "sci": "Cheiracanthiidae",
    "rank": "科",
@@ -3710,7 +3687,7 @@
   },
   {
    "id": "jorougumo",
-   "parent": "araneidae",
+   "parent": "f_araneidae",
    "ja": "ジョロウグモ",
    "sci": "Trichonephila clavata",
    "jaStatus": "standard",
@@ -5449,7 +5426,7 @@
   },
   {
    "id": "ashidakagumo",
-   "parent": "sparassidae",
+   "parent": "f_sparassidae",
    "ja": "アシダカグモ",
    "sci": "Heteropoda venatoria",
    "jaStatus": "standard",
@@ -5463,7 +5440,7 @@
   },
   {
    "id": "adansonhaetori",
-   "parent": "salticidae",
+   "parent": "f_salticidae",
    "ja": "アダンソンハエトリ",
    "sci": "Hasarius adansoni",
    "jaStatus": "standard",
@@ -7530,7 +7507,7 @@
   },
   {
    "id": "nagakoganegumo",
-   "parent": "araneidae",
+   "parent": "f_araneidae",
    "ja": "ナガコガネグモ",
    "sci": "Argiope bruennichi",
    "jaStatus": "standard",
@@ -7541,7 +7518,7 @@
   },
   {
    "id": "oohimegumo",
-   "parent": "theridiidae",
+   "parent": "f_theridiidae",
    "ja": "オオヒメグモ",
    "sci": "Parasteatoda tepidariorum",
    "jaStatus": "standard",
@@ -7552,7 +7529,7 @@
   },
   {
    "id": "seakagokegumo",
-   "parent": "theridiidae",
+   "parent": "f_theridiidae",
    "ja": "セアカゴケグモ",
    "sci": "Latrodectus hasselti",
    "jaStatus": "standard",
@@ -8952,7 +8929,7 @@
   },
   {
    "id": "onigumo",
-   "parent": "araneidae",
+   "parent": "f_araneidae",
    "ja": "オニグモ",
    "sci": "Araneus ventricosus",
    "jaStatus": "standard",
@@ -8962,7 +8939,7 @@
   },
   {
    "id": "koganegumo",
-   "parent": "araneidae",
+   "parent": "f_araneidae",
    "ja": "コガネグモ",
    "sci": "Argiope amoena",
    "jaStatus": "standard",
@@ -8972,7 +8949,7 @@
   },
   {
    "id": "kabakikomachigumo",
-   "parent": "cheiracanthiidae",
+   "parent": "f_cheiracanthiidae",
    "ja": "カバキコマチグモ",
    "sci": "Cheiracanthium japonicum",
    "jaStatus": "standard",
