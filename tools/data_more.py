@@ -2073,4 +2073,19 @@ _find("nipponyokoebi")["tier"] = 3
 R("nagisakuma", "cumacea", "ナギサクーマ", "Bodotria pulex",
   "浅い海の砂底にすむクーマの仲間。ふだんは砂に潜っている。")
 _find("nagisakuma")["tier"] = 4
+# 作者の指定（2026-11-02）「横並びよりも科でまとまってくれたほうがいい」。クモ目の9種を科と、その上の2つのまとまりに分ける。
+# 科と和名は Japan Spider Catalog（2026-10-24 生成の種リスト）、上の2つは Wheeler et al. 2017・Fernández et al. 2018 による。説明は clade_desc_main.tsv
+_RTA_V = {"ja": "定着した和名が確認できないため英語の呼び名で表記"}
+C("araneoidea", "araneae", "Araneoidea", "Araneoidea", "上科", "", v={"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記。日本語版ウィキペディアに「コガネグモ上科」とあるが学術文献での使用は未確認"})
+C("rtaclade", "araneae", "RTA clade", "RTA clade", "クレード", "", poly="科どうしの関係は解析によって異なるため多分岐で示す。", v=_RTA_V)
+C("araneidae", "araneoidea", "コガネグモ科", "Araneidae", "科", "")
+C("theridiidae", "araneoidea", "ヒメグモ科", "Theridiidae", "科", "")
+C("sparassidae", "rtaclade", "アシダカグモ科", "Sparassidae", "科", "")
+C("salticidae", "rtaclade", "ハエトリグモ科", "Salticidae", "科", "")
+C("cheiracanthiidae", "rtaclade", "コマチグモ科", "Cheiracanthiidae", "科", "")
+move("araneidae", "jorougumo", "nagakoganegumo", "onigumo", "koganegumo")
+move("theridiidae", "oohimegumo", "seakagokegumo")
+move("sparassidae", "ashidakagumo")
+move("salticidae", "adansonhaetori")
+move("cheiracanthiidae", "kabakikomachigumo")
 META["datasetVersion"] = "0.3.18"  # 作者の写真にあった58種、ヨコエビ・クーマ（11/03〜）
