@@ -27,7 +27,11 @@ MODES = {
     "hard": {"file": "data-hard.json", "ranks": ["門", "綱"]},
     "bird": {"file": "data-bird.json", "ranks": ["目"]},
     "insect": {"file": "data-insect.json", "ranks": ["目"]},
+    # 魚編は日本産魚類全種目録の全種が入っているので、収録数がそのまま日本の種数。問い合わせずにデータから数える。
+    # 目の無いシーラカンス・ハイギョは肉鰭類（groups）を一つの群にする
+    "fish": {"file": "data-fish.json", "ranks": ["目"], "self": True, "groups": ["Sarcopterygii"]},
 }
+FISH_SOURCE = "本村浩之（2026）日本産魚類全種目録 Online ver. 42 に載る種（魚編は全種を収録しているので、収録数を種数とした）"
 # ゲームの節目の学名 → Catalogue of Life で足し合わせる分類群（学名, 階級）。理由も書く
 ALIAS = {
     # ゲームでは鉤頭動物を輪形動物の中に置く（Sielaff et al. 2016 ほか）。Catalogue of Life では別の門
@@ -73,13 +77,15 @@ def selection(mode, top="linear"):
     """データの meta.selection.realCounts に入れる中身（make_bird.py・make_insect.py・merge_hard.py が使う）。
     数は、そのモードの階級の群の分だけ入れる"""
     R = json.load(open(OUT, encoding="utf-8"))
+    if MODES[mode].get("self"):
+        return {"ranks": MODES[mode]["ranks"], "groups": MODES[mode]["groups"], "top": top, "n": {}, "source": [FISH_SOURCE]}
     return {"ranks": MODES[mode]["ranks"], "top": top, "n": {k: v["n"] for k, v in R["taxa"].items()},
             "source": [R["source"][x] for x in sorted({v["src"] for v in R["taxa"].values()})]}
 
 def trim(data):
     """realCounts の数を、データにある群の分だけに減らす"""
     rc = data["meta"]["selection"]["realCounts"]
-    have = {c["sci"] for c in data["clades"] if c.get("rank") in rc["ranks"]}
+    have = {c["sci"] for c in data["clades"] if c.get("rank") in rc["ranks"] or c["sci"] in rc.get("groups", [])}
     rc["n"] = {k: v for k, v in rc["n"].items() if k in have}
     rc["source"] = [x for x in rc["source"] if x != BOOK_SOURCE or any(k.endswith("formes") for k in rc["n"])]
     return data
@@ -88,18 +94,30 @@ def apply(data, mode, top="linear"):
     """データの出題の重みを実際の種数に切り替える（収録数で枠や門を重みづける古い設定は消す）"""
     sel = data["meta"]["selection"]
     for k in ("buckets", "otherBucketLabel", "phylumWeight", "bucketWeight", "bucketRank"): sel.pop(k, None)
-    sel["realCounts"] = selection(mode, top)
+    sel["realCounts"] = rc = selection(mode, top)
+    if MODES[mode].get("self"):
+        C = {c["id"]: c for c in data["clades"]}
+        for sp in data["species"]:
+            if sp.get("answerable") is False: continue
+            g = group(C, sp["parent"], rc)
+            if g: rc["n"][g["sci"]] = rc["n"].get(g["sci"], 0) + 1
+        rc["n"] = dict(sorted(rc["n"].items()))
+        return data
     return trim(data)
+
+def group(C, p, rc, r=None):
+    """種の親 p から上へたどって、階級 r（省略時は外側の群の階級）の節目か、groups にある節目を返す"""
+    r = r or rc["ranks"][0]; extra = rc.get("groups", []) if r == rc["ranks"][0] else []
+    while p:
+        if C[p].get("rank") == r or C[p]["sci"] in extra: return C[p]
+        p = C[p]["parent"]
 
 def probs(data):
     """js/core.js の byRealCounts と同じ計算で、種ごとの出題確率を返す（確認用）。数の無い群は missing に入れる"""
     sel = data["meta"]["selection"]; rc = sel["realCounts"]; r0, r1 = (rc["ranks"] + [None])[:2]
     TW = sel.get("tierWeights") or {"2": .9, "3": .8, "4": .7}
     C = {c["id"]: c for c in data["clades"]}
-    def up(p, r):
-        while p:
-            if C[p].get("rank") == r: return C[p]
-            p = C[p]["parent"]
+    up = lambda p, r: group(C, p, rc, r)
     n = rc["n"]; sub, top, missing = {}, {}, set()
     for c in data["clades"]:
         if r1 and c.get("rank") == r1 and c["sci"] in n:
@@ -129,6 +147,7 @@ def wanted():
     """各モードのデータ（今の版と予約中の版）から、数える群の学名と階級を拾う"""
     need = {}
     for mode in MODES.values():
+        if mode.get("self"): continue
         f = mode["file"]
         while f:
             d = json.load(open(os.path.join(ROOT, f), encoding="utf-8"))

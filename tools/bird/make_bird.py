@@ -5,8 +5,8 @@
 
 - 鳥綱の種をすべて残す。根は鳥綱。目・科・属の並びと和名は日本鳥類目録改訂第8版に合わせてある
   （ゲキムズ側の tools/hard/bird_taxa.json）。外国の鳥も和名があれば入れる（作者の判断）。
-- 全種を答えに出す。目は実際の種数（tools/real_counts.json）に比例した確率で選び、目の中は全種から同じ確率で選ぶ
-  （収録数の多い目ばかり出ないように。目を足したら tools/real_counts.py を動かす）。
+- 全種を答えに出す。目は実際の種数（tools/real_counts.json）の平方根に比例した確率で選び、目の中は全種から同じ確率で選ぶ
+  （収録数に左右されず、種数の多い目ばかりにもならないように。目を足したら tools/real_counts.py を動かす）。
 - 種・節目・知名度を変えたら版番号（BIRD_VERSION）を上げる。今日の動物の選び方に入っている。
 """
 import json, os, sys
@@ -54,5 +54,5 @@ meta.update({
         "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1},
     },
 })
-json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "bird"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "bird", "sqrt"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(f"{out}: 節目 {len(clades)}・種 {len(species)}")

@@ -5,8 +5,8 @@
 
 - 昆虫綱の種をすべて残す。根は昆虫綱。目・科の並びは Catalogue of Life、和名は環境省（1997）種の多様性調査の
   対象種一覧ほか（ゲキムズ側の tools/hard/insect_taxa.json）。科の中の亜科も Catalogue of Life に従う。種はゲキムズにある昆虫（環境省の一覧の種に、身近な種と学名が合わずに落ちていた種を足したもの、tools/hard/insect_extra.json）。
-- 全種を答えに出す。目は実際の種数（tools/real_counts.json）に比例した確率で選び、目の中は全種から同じ確率で選ぶ
-  （収録数の多い目ばかり出ないように。目を足したら tools/real_counts.py を動かす）。
+- 全種を答えに出す。目は実際の種数（tools/real_counts.json）の平方根に比例した確率で選び、目の中は全種から同じ確率で選ぶ
+  （収録数に左右されず、種数の多い目ばかりにもならないように。目を足したら tools/real_counts.py を動かす）。
 - 種・節目・知名度を変えたら版番号（INSECT_VERSION）を上げる。今日の動物の選び方に入っている。
 """
 import json, os, sys
@@ -53,5 +53,5 @@ meta.update({
         "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1},
     },
 })
-json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "insect"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "insect", "sqrt"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(f"{out}: 節目 {len(clades)}・種 {len(species)}")

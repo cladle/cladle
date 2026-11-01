@@ -27,7 +27,7 @@
 | selection.buckets | 文字列[] | 出題の枠にする門の clade id。ここに無い門はまとめて「その他の門」1枠になる。枠は等確率で選ぶ |
 | selection.otherBucketLabel | 文字列 | 「その他」枠の表示名 |
 | selection.phylumWeight | `"sqrt"` \| `"equal"` | 枠の中での門の重み。sqrt＝収録種数の平方根、equal＝全門同じ |
-| selection.realCounts | オブジェクト | （ゲキムズ・鳥編・昆虫編）群を実際の種数で選ぶ。`ranks`＝群の階級（例 `["門","綱"]`、`["目"]`）、`top`＝外側の群の重み（`"linear"`＝種数そのまま、`"sqrt"`＝平方根）、`n`＝学名→現生の記載種数、`source`＝出典。これがあると buckets・phylumWeight・bucketWeight は使わない。数は tools/real_counts.py が数えて tools/real_counts.json に控える |
+| selection.realCounts | オブジェクト | （ゲキムズ・鳥編・昆虫編・魚編）群を実際の種数で選ぶ。`ranks`＝群の階級（例 `["門","綱"]`、`["目"]`）、`top`＝外側の群の重み（`"linear"`＝種数そのまま、`"sqrt"`＝平方根）、`n`＝学名→現生の記載種数、`source`＝出典、`groups`＝`ranks[0]` の節目が上に無い種のための群の学名（魚編の肉鰭類）。これがあると buckets・phylumWeight・bucketWeight は使わない。数は tools/real_counts.py が数えて tools/real_counts.json に控える |
 | selection.maxGuesses | 数値 | 推測の上限（既定 20） |
 | selection.dailyEpoch | 文字列 (YYYY-MM-DD) | 「今日の動物 #1」の日付（日本時間） |
 

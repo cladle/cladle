@@ -49,7 +49,7 @@ if built["meta"]["datasetVersion"] != latest["meta"]["datasetVersion"]:
     print(f"△ 版番号：build_data.py は {built['meta']['datasetVersion']}、{main[-1]} は {latest['meta']['datasetVersion']}（新しい版を作ったら予約を足す）")
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import real_counts
-for files in (hard, bird, insect):
+for files in (hard, bird, insect, fish):
     for f in files:
         d = json.load(open(os.path.join(ROOT, f), encoding="utf-8"))
         if "realCounts" not in d["meta"].get("selection", {}): continue
@@ -57,12 +57,11 @@ for files in (hard, bird, insect):
         if missing:
             ok = False; print(f"× {f}：実際の種数が無い群がある（tools/real_counts.py を動かして作り直す）:", "、".join(sorted(missing)))
         if f == files[-1]:
-            rk = d["meta"]["selection"]["realCounts"]["ranks"][0]
+            rc = d["meta"]["selection"]["realCounts"]; rk = rc["ranks"][0]
             C = {c["id"]: c for c in d["clades"]}; S = {s["id"]: s for s in d["species"]}; share = {}
             for i, p in P.items():
-                x = S[i]["parent"]
-                while x and C[x].get("rank") != rk: x = C[x]["parent"]
-                share[C[x]["ja"]] = share.get(C[x]["ja"], 0) + p
+                g = real_counts.group(C, S[i]["parent"], rc)["ja"]
+                share[g] = share.get(g, 0) + p
             print(f"{f} の出題の割合（{rk}、上位5）:", "・".join(f"{k} {v:.0%}" for k, v in sorted(share.items(), key=lambda x: -x[1])[:5]))
 for name, tool, files in (("魚編", "fish/make_fish.py", fish), ("鳥編", "bird/make_bird.py", bird), ("昆虫編", "insect/make_insect.py", insect)):
     with tempfile.TemporaryDirectory() as d:
