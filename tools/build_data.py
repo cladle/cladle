@@ -411,6 +411,13 @@ S("symbion", "cycliophora", "シンビオン・パンドラ", "Symbion pandora",
 import os
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data_more.py"), encoding="utf-8").read())
 
+# 節目の説明の書き直し（tools/clade_desc_main.tsv：id, desc, 出典）。近縁の群との違いを入れた文で、上の C() の文より優先する
+import csv as _csv
+_cd = {r["id"]: r["desc"] for r in _csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "clade_desc_main.tsv"), encoding="utf-8"), delimiter="\t")}
+for _c in clades:
+    if _c["id"] in _cd: _c["desc"] = _cd.pop(_c["id"])
+assert not _cd, f"clade_desc_main.tsv に無い節目: {sorted(_cd)}"
+
 # ---------------- 検証 ----------------
 # 補完に使わないグループ名の別名（2026-10-22 作者の決定）。
 # 例外（2026-10-24 作者）：通称でしか知られないことが多いサナダムシ・プラナリアと、魚介類の流通名は通称として aliases に残す（data_more.py 末尾）。
