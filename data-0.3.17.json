@@ -13146,6 +13146,16 @@
     "ja": "和名は Wikidata・iNaturalist の一致のみで、学名をカタカナにした形（学術的な和名は未確認）"
    },
    "tier": 3
+  },
+  {
+   "id": "himeookuwagata",
+   "parent": "lucanidae",
+   "ja": "ヒメオオクワガタ",
+   "sci": "Dorcus montivagus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本の山地のブナ林などにすむクワガタムシ。オオクワガタに似るが小さい。生きた木の枝の皮をかじり、しみ出る樹液を吸う。",
+   "tier": 3
   }
  ]
 }

@@ -1985,4 +1985,8 @@ R("polypterus_senegalus", "polypteriformes", "ポリプテルス・セネガル�
   "西〜中央アフリカの川や湖にすむ。うろこは硬いガノイン鱗で、胸びれの付け根に肉がある。観賞魚として飼われ、古代魚とも呼ばれる。",
   ["ポリプテルス"], v={"ja": "和名は Wikidata・iNaturalist の一致のみで、学名をカタカナにした形（学術的な和名は未確認）"})
 _find("polypterus_senegalus")["tier"] = 3
-META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ・タイマイ・ベタ・ポリプテルス（11/02〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
+# 作者の指定（2026-11-01）。学名・和名は GBIF・CoL・Wikidata・iNaturalist で一致（check/picks27）
+R("himeookuwagata", "lucanidae", "ヒメオオクワガタ", "Dorcus montivagus",
+  "日本の山地のブナ林などにすむクワガタムシ。オオクワガタに似るが小さい。生きた木の枝の皮をかじり、しみ出る樹液を吸う。")
+_find("himeookuwagata")["tier"] = 3
+META["datasetVersion"] = "0.3.17"  # アキヨシホラアナナガコムシ・タイマイ・ベタ・ポリプテルス・ヒメオオクワガタ（11/02〜）。10/31 に予定していた 0.3.17 は公開前にやめたので番号を使い直す
