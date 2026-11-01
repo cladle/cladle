@@ -413,7 +413,8 @@ if os.path.exists(_ho):
         else: log["hard_only"].append(["noplace", h["ja"], h["sci"]]); continue
         sid = "h" + re.sub(r"[^a-z0-9]", "", h["sci"].lower())
         SP.append({"id": sid, "parent": par, "ja": h["ja"], "sci": h["sci"], "jaStatus": "standard", "aliases": h.get("aliases", []),
-                   "fact": h.get("fact", ""), "tier": h.get("tier", 4), **({"verify": h["verify"]} if h.get("verify") else {})})
+                   "fact": h.get("fact", ""), "tier": h.get("tier", 4), **({"verify": h["verify"]} if h.get("verify") else {}),
+                   **({"subspeciesAliases": h["subspeciesAliases"]} if h.get("subspeciesAliases") else {})})
         byja_all[h["ja"]] = SP[-1]
         log["hard_only"].append(["added", h["ja"], C[par]["sci"], C[C[par]["parent"]]["sci"]])
 
