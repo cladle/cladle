@@ -226,7 +226,7 @@ S("savannashimauma", "perissodactyla", "サバンナシマウマ", "Equus quagga
   "縞模様は個体ごとに違う。吸血するハエを寄せつけにくくする効果があるとされる。", ["シマウマ", "ウマ"], jaStatus="common")
 
 # ---------------- 爬虫類 ----------------
-C("serpentes", "squamata", "ヘビ亜目", "Serpentes", "亜目", "ヘビ。トカゲの仲間の中から、脚を失って生まれた。")
+C("serpentes", "squamata", "ヘビ亜目", "Serpentes", "亜目", "ヘビ。トカゲ類の系統の中から枝分かれし、脚を失った群。最も近いトカゲの群（オオトカゲ類・イグアナ類など）はまだ定まっていない。")
 C("viperidae", "serpentes", "クサリヘビ科", "Viperidae", "科", "長い毒牙を折りたたんでもつヘビ。マムシ類は目と鼻の間に赤外線を感じるピット器官をもつ。")
 move("serpentes", "aodaisho")
 S("habu", "viperidae", "ハブ", "Protobothrops flavoviridis",
@@ -445,7 +445,7 @@ S("iwamushi", "errantia", "イワムシ", "Marphysa sanguinea",
   "釣り餌にされる大型のイソメ類。", ["イソメ"], v={"sci": "日本産を別種とする研究がある"})
 S("keyarimushi", "sedentaria", "ケヤリムシ", "Sabellastarte japonica",
   "管から羽のようなえら（鰓冠）を広げ、触れるとすばやく引っ込める。", v={"ja": "標準和名と学名の対応を要確認"})
-C("hirudinea", "clitellata", "ヒル亜綱", "Hirudinea", "亜綱", "前後に吸盤をもつ。ミミズの仲間の中から生じた。")
+C("hirudinea", "clitellata", "ヒル亜綱", "Hirudinea", "亜綱", "前後に吸盤をもつ。ミミズ類（貧毛類）の系統の中から枝分かれした群なので、ヒルを除いた「ミミズ類」は単系統群にならない。")
 move("hirudinea", "chisuibiru")
 S("yamabiru", "hirudinea", "ヤマビル", "Haemadipsa japonica",
   "陸にすむヒル。動物の吐く二酸化炭素や体温を感じて近寄る。", ["ヒル"])
@@ -814,7 +814,7 @@ C("scombriformes", "percomorpha", "サバ目", "Scombriformes", "目", "サバ�
 move("scombriformes", "scombridae")
 M("tachiuo", "scombriformes", "タチウオ", "Trichiurus japonicus", "銀色の帯のような体で、頭を上にして立ち泳ぎする。")
 M("tobiuo", "beloniformes", "トビウオ", "Cheilopogon agoo", "大きな胸びれを広げて海面上を滑空する。", ["アゴ"])
-C("carangiformes", "percomorpha", "アジ目", "Carangiformes", "目", "アジ・ブリと、ヒラメ・カレイ。カレイ類はアジの仲間から生まれた。")
+C("carangiformes", "percomorpha", "アジ目", "Carangiformes", "目", "アジ・ブリと、ヒラメ・カレイ。カレイ類はアジ類の系統の中から枝分かれした群とされる（1回か2回かはまだ議論がある）。")
 move("carangiformes", "hirame")
 M("maaji", "carangiformes", "マアジ", "Trachurus japonicus", "体の側面に「ぜいご」と呼ばれる硬い鱗が並ぶ。", ["アジ"])
 M("buri", "carangiformes", "ブリ", "Seriola quinqueradiata", "成長につれて呼び名が変わる出世魚。", ["ハマチ", "イナダ", "ワラサ"])
@@ -915,7 +915,7 @@ C("culicidae", "diptera", "カ科", "Culicidae", "科", "蚊。雌だけが血�
 move("culicidae", "hitosujishimaka", "akaieka")
 M("shinahamadaraka", "culicidae", "シナハマダラカ", "Anopheles sinensis", "ハマダラカの仲間はマラリアを媒介する。止まるとき体を斜めに立てる。", ["ハマダラカ"])
 M("ushiabu", "diptera", "ウシアブ", "Tabanus trigonus", "雌は牛や人の血を吸う。")
-C("formicidae", "hymenoptera", "アリ科", "Formicidae", "科", "アリ。ハチの中から生まれた社会性昆虫。")
+C("formicidae", "hymenoptera", "アリ科", "Formicidae", "科", "アリ。ハチ目の中の、針をもつハチ類（有剣類）の系統から枝分かれした社会性の昆虫。")
 move("formicidae", "kurooari", "argentinaari")
 M("kuroyamaari", "formicidae", "クロヤマアリ", "Formica japonica", "日本で最もよく見られるアリの一つ。")
 

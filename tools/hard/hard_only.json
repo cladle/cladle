@@ -3388,5 +3388,91 @@
    "Diomedeidae",
    "Procellariiformes"
   ]
+ },
+ {
+  "ja": "イクビホンヤドカリ",
+  "sci": "Pagurus proximus",
+  "aliases": [],
+  "fact": "磯でよく見られるホンヤドカリの仲間。2000年に記載された。",
+  "tier": 3,
+  "source": "本家 0.3.18 に足した種（作者の写真にあった種、2026-11-01）。照合は check/picks28",
+  "place": [
+   "Paguridae"
+  ]
+ },
+ {
+  "ja": "トゲツノヤドカリ",
+  "sci": "Diogenes edwardsii",
+  "aliases": [],
+  "fact": "内湾の砂泥底にすむヤドカリ。左のはさみが大きい。",
+  "tier": 3,
+  "source": "本家 0.3.18 に足した種（作者の写真にあった種、2026-11-01）。照合は check/picks28",
+  "place": [
+   "Diogenidae"
+  ]
+ },
+ {
+  "ja": "ダイダイイソカイメン",
+  "sci": "Halichondria japonica",
+  "aliases": [],
+  "fact": "潮間帯の岩に広がる橙色のカイメン。",
+  "tier": 3,
+  "source": "本家 0.3.18 に足した種（作者の写真にあった種、2026-11-01）。照合は check/picks28",
+  "place": [
+   "Halichondriidae"
+  ]
+ },
+ {
+  "ja": "タイラギ",
+  "sci": "Atrina japonica",
+  "aliases": [],
+  "fact": "内湾の砂泥底に、とがった殻の先を突き刺して立つ大形の二枚貝。貝柱がすしだねなどにされる。",
+  "tier": 2,
+  "source": "本家 0.3.18 に足した種（作者の写真にあった種、2026-11-01）。照合は check/picks28",
+  "place": [
+   "Pinnidae"
+  ]
+ },
+ {
+  "ja": "イワナ",
+  "sci": "Salvelinus leucomaenis",
+  "aliases": [
+   "アメマス",
+   "エゾイワナ",
+   "ニッコウイワナ",
+   "ヤマトイワナ",
+   "ゴギ"
+  ],
+  "fact": "山地の冷たい渓流にすむサケの仲間。地域ごとにアメマス・ニッコウイワナ・ヤマトイワナ・ゴギの亜種に分けられる。",
+  "tier": 2,
+  "subspeciesAliases": [
+   "アメマス",
+   "ニッコウイワナ",
+   "ヤマトイワナ",
+   "ゴギ"
+  ],
+  "source": "本家 0.3.18 に足した種（作者の写真にあった種、2026-11-01）。照合は check/picks28",
+  "place": [
+   "Salmonidae"
+  ]
+ },
+ {
+  "ja": "トコブシ",
+  "sci": "Haliotis diversicolor",
+  "aliases": [
+   "フクトコブシ"
+  ],
+  "fact": "磯の岩の下などにすむ小形のアワビの仲間。殻に並ぶ穴の数がアワビより多い。食用にされる。",
+  "tier": 2,
+  "verify": {
+   "ja": "WoRMS は亜種を分けない。和名トコブシは日本の亜種 aquatilis の名で、種としての和名は iNaturalist のみ"
+  },
+  "subspeciesAliases": [
+   "フクトコブシ"
+  ],
+  "source": "本家 0.3.18 に足した種（作者の写真にあった種、2026-11-01）。照合は check/picks28",
+  "place": [
+   "Haliotidae"
+  ]
  }
 ]
