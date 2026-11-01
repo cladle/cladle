@@ -62,7 +62,7 @@ function birdAboutHTML() {
     <li>誤りに気づいたら ${a("https://github.com/cladle/cladle/issues", "GitHub の Issues")} へお寄せください。</li></ul></section>
   <section><h2>出典</h2><ul>
     <li>日本鳥学会（2024）日本鳥類目録改訂第8版．掲載鳥類リスト ver.1（2024-10-08公開）．${a("https://ornithology.jp/checklist.html", "日本鳥学会")}（リストを加工して使用）</li>
-    ${world ? "<li>目の和名と世界の種数：国立科学博物館ほか（2024）特別展「鳥 ～ゲノム解析が解き明かす新しい鳥類の系統～」図録．図「鳥の目の種数」（文：西海功）</li>" : ""}
+    ${world ? "<li>目の和名・世界の種数と、目の説明の一部：国立科学博物館ほか（2024）特別展「鳥 ～ゲノム解析が解き明かす新しい鳥類の系統～」（図録の図「鳥の目の種数」〔文：西海功〕と展示の解説パネル）</li>" : ""}
     <li>鳥類の目より上の系統：Jarvis et al. (2014) Science 346:1320–1331 ／ Prum et al. (2015) Nature 526:569–573 ／ Stiller et al. (2024) Nature 629:851–860</li>
     <li>ふつうモードの種と節目の出典は、ふつうモードのデータ欄を見てください。</li></ul></section>
   <section><h2>ライセンス・注記</h2><ul>
