@@ -1,0 +1,49 @@
+{
+ "schemaVersion": 1,
+ "title": "和名版・動物系統あて 代表種データ（初版）",
+ "referenceDate": "2026-10-22",
+ "taxonomy": {
+  "backbone": "NCBI Taxonomy / Open Tree of Life の構成を参考に手作業で編集",
+  "nomenclature": "学名は GBIF Backbone Taxonomy・Catalogue of Life・WoRMS で照合（2026-10-22）。日本産の魚類は本村浩之（2026）日本産魚類全種目録 Online ver. 42 に合わせた（2026-10-23）。種の範囲（種か亜種か）は分類群ごとの世界の種リストに合わせた（2026-10-24）：哺乳類 Mammal Diversity Database 2.1、鳥類 IOC World Bird List 15.2、爬虫類 The Reptile Database 2026-06。",
+  "phylogenyNotes": "主要分岐は分子系統（系統ゲノム解析）に基づく。動物の根元、ParaHoxozoa内、左右相称動物の根元、毛顎動物、二胚動物・直泳動物などの位置は議論中のため多分岐で表現。",
+  "nonMonophyleticGroupsExcluded": [
+   "魚類",
+   "爬虫類（鳥類を除く）",
+   "甲殻類",
+   "無脊椎動物",
+   "原索動物"
+  ]
+ },
+ "japaneseNameSources": [
+  "本村浩之（2026）日本産魚類全種目録 Online ver. 42（魚類）",
+  "日本鳥学会 日本鳥類目録改訂第8版 和名・学名リスト（2023-09-30公開版）（鳥類）",
+  "川田ほか（2021）世界哺乳類標準和名リスト2021年度版. https://www.mammalogy.jp/list/index.html（哺乳類）",
+  "日本爬虫両棲類学会（2026）日本産爬虫両生類標準和名リスト（2026年7月2日版）. https://herpetology.jp/wamei/ (2026年10月23日アクセス)（爬虫両生類）",
+  "GBIF・Wikidata・iNaturalist の日本語名（2つ以上の一致で採用、上のリストに無い種）"
+ ],
+ "status": "試作版。魚類・鳥類・哺乳類・爬虫両生類の和名は各学会等の標準和名リストと照合済み（2026-10-23）。昆虫や海の無脊椎動物は標準和名リストとの突き合わせが未実施。種の和名が無い動物は収録しない。verify が付いた項目は要確認。説明文（一言説明）は出典を個別に確かめたものではなく、誤りを含む可能性がある。",
+ "licenseNotes": "外部の情報源のデータは丸ごと同梱していない（名前は照合結果を個別に記載）。",
+ "selection": {
+  "maxGuesses": 15,
+  "dailyEpoch": "2026-10-21",
+  "buckets": [
+   "chordata",
+   "arthropoda",
+   "mollusca",
+   "annelida",
+   "cnidaria",
+   "echinodermata",
+   "platyhelminthes",
+   "nematoda"
+  ],
+  "otherBucketLabel": "その他の門",
+  "phylumWeight": "sqrt",
+  "tierWeights": {
+   "1": 1,
+   "2": 0.9,
+   "3": 0.8,
+   "4": 0.7
+  },
+  "bucketWeight": "sqrt"
+ }
+}

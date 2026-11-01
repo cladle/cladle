@@ -23,12 +23,12 @@
 | `js/texts.js` | データ欄の文章 |
 | `js/howto.js` | 遊び方の文章と、例題の再生 |
 | `js/main.js` | 画面の切り替えと起動、データの読み込み |
-| `data.json`, `data-hard.json`, `data-fish.json` | 今の版の収録データ（生成物。手で直さない）。予約中の次の版があれば `data-<版>.json` も置く |
-| `tools/build_data.py`, `tools/data_more.py` | 収録データの正本。ここから `data-<版>.json` を作る |
-| `tools/clade_desc_main.tsv` | 本家の節目の説明（近縁の群との違い入り）。id・説明・出典をタブで区切る。`build_data.py` が `data_more.py` の文より優先して使う。ゲキムズ・番外編の同じ節目にも同じ文が入る |
-| `tools/hard/` | ゲキムズのデータの作り方（`tools/hard/README.md`） |
-| `tools/fish/make_fish.py` | 魚編のデータ `data-fish.json` を、ゲキムズのデータから魚だけ切り出して作る |
-| `tools/build_all.py` | 本家・ゲキムズ・各編をまとめて作り直し、今の版と予約版に入れる |
+| `data.json`, `data-hard.json`, `data-fish.json`, `data-bird.json`, `data-insect.json` | 今の版の収録データ（生成物。手で直さない）。予約中の次の版があれば `data-<版>.json` も置く |
+| `tools/ledger/` | **収録データの正本（全種の台帳）**。ゲキムズに入る全種・全節目と、そのうち本家に出すものの印（`tools/ledger/README.md`） |
+| `tools/build_all.py` | 台帳から、本家・ゲキムズ・魚編・鳥編・昆虫編をまとめて作り直し、今の版と予約版に入れる |
+| `tools/fish/`, `tools/bird/`, `tools/insect/` | ゲキムズのデータから魚・鳥・昆虫だけを切り出す（`build_all.py` が使う） |
+| `tools/real_counts.py`, `tools/real_counts.json` | 出題の重みに使う実際の種数 |
+| `tools/archive/` | 台帳を作る前の作り方（本家の `data_more.py`、ゲキムズの `hard/merge_hard.py` など）。今は使わない。履歴と、外部データから種をまとめて足すときの参考 |
 | `tools/check.py` | 公開前の確認（送るたびに GitHub が自動で動かす） |
 | `tools/stamp.py` | 公開するときに、css/・js/ の読み込みに中身の印（`?v=…`）を付ける（GitHub が自動で動かす。手では動かさない） |
 | `docs/SCHEMA.md`, `docs/SOURCES.md` | データの形式と、名前の出典 |
@@ -45,12 +45,11 @@ JavaScript は上の表の順に読み込まれます。後のファイルは、
 
 ### 収録種と、種・節目の説明
 
-`data*.json` は直接直さず、`tools/data_more.py` に書き足してから `python3 tools/build_data.py data-<版>.json` で作り直します。直接直すと、次に作り直したときに元に戻ります。
+`data*.json` は直接直さず、台帳（`tools/ledger/species.jsonl`・`clades.jsonl`）を直してから `python3 tools/build_all.py --write` で作り直します。台帳の1行が1つの種か節目です。直し方は `tools/ledger/README.md` にあります。
 
-本家を直したら、続けて `python3 tools/build_all.py --write` を動かし、ゲキムズ・魚編・鳥編・昆虫編にも同じ直しを入れます（外部データが要るので、今のところ Claude が動かします。`tools/hard/README.md`）。
-
-- 説明文だけを直すときは版番号を上げず、`data.json`（と予約中の次の版）に同じ直しを反映する。版番号は今日の動物の選び方に入っているので、上げると並びが全部変わる。
-- 種・節目・知名度を増減するときは版番号を上げ、次の版を `data-<版>.json` として作り、`data.json` の `meta.next` に開始日とファイル名を書く（予約式の切り替え）。ページは日本時間でその日になると次の版を読む。
+- 本家・ゲキムズ・魚編・鳥編・昆虫編は同じ台帳から作るので、1か所直せば全部のモードに届く。
+- 説明文や和名だけの直しは、今の版にも予約中の版にも入る。版番号は上げない（版番号は今日の動物の選び方に入っているので、上げると並びが全部変わる）。
+- 種・節目・知名度を増減すると、まだ始まっていない予約版だけが差し替わる。予約版がもう始まっていれば止まるので、`--new main=0.3.19@2026-11-05` のように新しい版と始まる日を渡す（`data.json` などの最後の版の `meta.next` に書かれる。ページは日本時間でその日になると次の版を読む）。
 - 切り替わったあとは、次の版の中身を `data.json` に写し、`data-<版>.json` は消す。置くのはいつも「今の版」と「予約している次の版」の2つだけ。古い版は GitHub の履歴で見られる。
 
-送るたびに `tools/check.py` が動き、予約のファイルがそろっているか、`data_more.py` と最新のデータが食い違っていないかを確かめます。結果はリポジトリの「Actions」タブで見られます。
+送るたびに `tools/check.py` が動き、予約のファイルがそろっているか、台帳と data-*.json が食い違っていないかを確かめます。結果はリポジトリの「Actions」タブで見られます。

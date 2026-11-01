@@ -4,10 +4,10 @@
   python3 tools/bird/make_bird.py data-hard.json data-bird.json
 
 - 鳥綱の種をすべて残す。根は鳥綱。目・科・属の並びと和名は日本鳥類目録改訂第8版に合わせてある
-  （ゲキムズ側の tools/hard/bird_taxa.json）。外国の鳥も和名があれば入れる（作者の判断）。
+  （ゲキムズ側の tools/archive/hard/bird_taxa.json）。外国の鳥も和名があれば入れる（作者の判断）。
 - 全種を答えに出す。目は実際の種数（tools/real_counts.json）の平方根に比例した確率で選び、目の中は全種から同じ確率で選ぶ
   （収録数に左右されず、種数の多い目ばかりにもならないように。目を足したら tools/real_counts.py を動かす）。
-- 種・節目・知名度を変えたら版番号（BIRD_VERSION）を上げる。今日の動物の選び方に入っている。
+- ふだんは tools/build_all.py から動かす。そのときの版番号は data-*.json の予約で決まる（BIRD_VERSION は単独で動かしたとき用）。
 """
 import json, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))

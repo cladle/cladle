@@ -41,7 +41,7 @@ ALIAS = {
     "Polyopisthocotyla": [["Polyopisthocotylea", "subclass"]],
 }
 # 鳥の目は、ゲームの目（日本鳥類目録改訂第8版＋世界の44目）に合わせて、Catalogue of Life ではなく
-# 国立科学博物館 特別展「鳥」（2024）図録の図「鳥の目の種数」（文：西海功）の数を使う（tools/hard/bird_extra.py の BOOK と同じ）
+# 国立科学博物館 特別展「鳥」（2024）図録の図「鳥の目の種数」（文：西海功）の数を使う（tools/archive/hard/bird_extra.py の BOOK と同じ）
 BOOK_SOURCE = "国立科学博物館（2024）特別展「鳥 〜ゲノム解析が解き明かす新しい鳥類の系統〜」図録、図「鳥の目の種数」（文：西海功）"
 
 def bird_book():

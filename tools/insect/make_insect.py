@@ -4,10 +4,10 @@
   python3 tools/insect/make_insect.py data-hard.json data-insect.json
 
 - 昆虫綱の種をすべて残す。根は昆虫綱。目・科の並びは Catalogue of Life、和名は環境省（1997）種の多様性調査の
-  対象種一覧ほか（ゲキムズ側の tools/hard/insect_taxa.json）。科の中の亜科も Catalogue of Life に従う。種はゲキムズにある昆虫（環境省の一覧の種に、身近な種と学名が合わずに落ちていた種を足したもの、tools/hard/insect_extra.json）。
+  対象種一覧ほか（ゲキムズ側の tools/archive/hard/insect_taxa.json）。科の中の亜科も Catalogue of Life に従う。種はゲキムズにある昆虫（環境省の一覧の種に、身近な種と学名が合わずに落ちていた種を足したもの、tools/archive/hard/insect_extra.json）。
 - 全種を答えに出す。目は実際の種数（tools/real_counts.json）の平方根に比例した確率で選び、目の中は全種から同じ確率で選ぶ
   （収録数に左右されず、種数の多い目ばかりにもならないように。目を足したら tools/real_counts.py を動かす）。
-- 種・節目・知名度を変えたら版番号（INSECT_VERSION）を上げる。今日の動物の選び方に入っている。
+- ふだんは tools/build_all.py から動かす。そのときの版番号は data-*.json の予約で決まる（INSECT_VERSION は単独で動かしたとき用）。
 """
 import json, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
