@@ -45,7 +45,7 @@ JavaScript は上の表の順に読み込まれます。後のファイルは、
 
 ### 収録種と、種・節目の説明
 
-`data*.json` は直接直さず、台帳（`tools/ledger/species.jsonl`・`clades.jsonl`）を直してから `python3 tools/build_all.py --write` で作り直します。台帳の1行が1つの種か節目です。直し方は `tools/ledger/README.md` にあります。
+`data*.json` は直接直さず、台帳（`tools/ledger/species.jsonl`・`clades.jsonl`）を直してから `python3 tools/build_all.py --write` で作り直します。github.dev で台帳を直してコミットしたときは、GitHub が自動でこれを動かし、data ファイルの直しをコミットします。台帳の1行が1つの種か節目です。直し方は `tools/ledger/README.md` にあります。
 
 - 本家・ゲキムズ・魚編・鳥編・昆虫編は同じ台帳から作るので、1か所直せば全部のモードに届く。
 - 説明文や和名だけの直しは、今の版にも予約中の版にも入る。版番号は上げない（版番号は今日の動物の選び方に入っているので、上げると並びが全部変わる）。

@@ -37,8 +37,11 @@ KEY = {"本家": "main", "ゲキムズ": "hard", "魚編": "fish", "鳥編": "bi
 
 def load(f): return json.load(open(os.path.join(ROOT, f), encoding="utf-8"))
 def save(f, d, indent):
-    with open(os.path.join(ROOT, f), "w", encoding="utf-8") as o:
+    p = os.path.join(ROOT, f)
+    nl = os.path.exists(p) and open(p, "rb").read()[-1:] == b"\n"  # 終わりの改行は今のファイルに合わせる
+    with open(p, "w", encoding="utf-8") as o:
         json.dump(d, o, ensure_ascii=False, indent=indent, separators=None if indent else (",", ":"))
+        if nl: o.write("\n")
 
 def chain(first):
     """[(ファイル, 始まる日 or None)]。最初のファイルは今の版（始まっている）"""
@@ -124,6 +127,9 @@ def main_():
         k, v = x.split("=", 1); ver, _, day = v.partition("@"); new[k] = (ver, day)
     today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date().isoformat()
     L = ledger.load()
+    filled = ledger.fill(L)
+    if filled:
+        print("台帳の空いている欄を埋める:\n  " + "\n  ".join(filled))
     bad = ledger.check(L)
     if bad: sys.exit("× 台帳に直すところがある:\n  " + "\n  ".join(bad))
     built = {"main": ledger.build_main(L), "hard": ledger.build_hard(L)}
@@ -188,6 +194,10 @@ def main_():
         print("\n△ 本家の節目の外に、同じ階級の群が残っている（台帳でその群もその節目の下に入れるか確かめる。入れないなら build_all.py の DRIFT_OK に理由を書く）:")
         for p_, x, n, ex in found: print(f"   {p_} の下の {x}：{p_} の直下に {n} 群（{ex} …）")
 
+    if filled and a.write and ok:
+        ledger.save(L); print("台帳（tools/ledger/）に書いた")
+    elif filled and a.check:
+        print("× 台帳に空いている欄がある。python3 tools/build_all.py --write で埋める"); ok = False
     if a.write and ok and writes:
         indents = {f: i for name, first, i in MODES for f, _ in chain(first)}
         for f, d in writes.items():
