@@ -13831,6 +13831,16 @@
    "aliases": [],
    "fact": "浅い海の砂底にすむクーマの仲間。ふだんは砂に潜っている。",
    "tier": 4
+  },
+  {
+   "id": "s1051",
+   "parent": "lampriformes",
+   "ja": "アカナマダ",
+   "sci": "Lophotus capellei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "危険を感じると、総排泄腔に開く墨袋から黒い墨を出す。",
+   "tier": 3
   }
  ]
 }
