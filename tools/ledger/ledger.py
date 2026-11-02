@@ -71,6 +71,11 @@ def fill(L):
         if s.get("main") is True or (isinstance(s.get("main"), dict) and "order" not in s["main"]):
             m = s["main"] if isinstance(s["main"], dict) else {}
             last += 1; m["order"] = last; s["main"] = m; done.append(f"{name}：本家の並びの {last} 番にした")
+    lastc = max([c["main"]["order"] for c in L["clades"] if isinstance(c.get("main"), dict) and "order" in c["main"]] + [-1])
+    for c in L["clades"]:
+        if c.get("main") is True or (isinstance(c.get("main"), dict) and "order" not in c["main"]):
+            m = c["main"] if isinstance(c["main"], dict) else {}
+            lastc += 1; m["order"] = lastc; c["main"] = m; done.append(f"節目 {c['ja']}：本家に出す（並びの {lastc} 番）")
     return done
 
 def check(L):
@@ -83,10 +88,12 @@ def check(L):
     if len(roots) != 1: bad.append("根が1つでない: " + ", ".join(roots))
     for c in L["clades"]:
         if c["parent"] and c["parent"] not in C: bad.append(f"節目 {c['id']} の親 {c['parent']} が無い")
-    ids, has = set(), set()
+    ids, has, scis = set(), set(), {}
     for s in L["species"]:
         if not s.get("id") or not s.get("ja") or not s.get("sci"): bad.append(f"種の行に id・ja・sci のどれかが無い: {s}"); continue
         if s["id"] in ids or s["id"] in C: bad.append("種の id が重なっている: " + s["id"])
+        if s["sci"] in scis: bad.append(f"同じ学名の種が2つある: {s['sci']}（{scis[s['sci']]}・{s['id']}）")
+        scis[s["sci"]] = s["id"]
         ids.add(s["id"])
         if s.get("parent") not in C: bad.append(f"種 {s.get('id')}（{s.get('ja')}）の親 {s.get('parent')} が無い"); continue
         p = s["parent"]
