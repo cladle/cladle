@@ -1,5 +1,5 @@
 {"id": "s1", "parent": "g_eptatretus", "ja": "クロヌタウナギ", "sci": "Eptatretus atami", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2", "parent": "g_eptatretus", "ja": "ヌタウナギ", "sci": "Eptatretus burgeri", "jaStatus": "standard", "aliases": [], "fact": "大量の粘液を出して身を守る。韓国料理などで食用にされる。", "tier": 2, "gbif": 2498609, "main": {"order": 22, "id": "nutaunagi"}}
+{"id": "s2", "parent": "g_eptatretus", "ja": "ヌタウナギ", "sci": "Eptatretus burgeri", "jaStatus": "standard", "aliases": [], "fact": "大量の粘液を出して身を守る。（自動書き出しのテスト）韓国料理などで食用にされる。", "tier": 2, "gbif": 2498609, "main": {"order": 22, "id": "nutaunagi"}}
 {"id": "s3", "parent": "g_eptatretus", "ja": "ムラサキヌタウナギ", "sci": "Eptatretus okinoseanus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s4", "parent": "g_eptatretus", "ja": "キタクロヌタウナギ", "sci": "Eptatretus walkeri", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s5", "parent": "g_myxine", "ja": "ホソヌタウナギ", "sci": "Myxine garmani", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
