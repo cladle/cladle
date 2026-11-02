@@ -9,6 +9,7 @@
 
 本家に出す種・節目には "main" が付く:
   "main": {"order": 本家での並び, "id": 本家での id（台帳の id と違うときだけ）, ほかの欄: 本家だけの値}
+  書き足すときは "main": true でよい（fill() が並びの最後にする）
   本家の木は、台帳の木から "main" の付いた節目だけを残したもの（間の節目はたたむ）。
   "main" の中の欄（tier・polytomy など）は本家だけ違う値。null はその欄を本家では消す。
 """
@@ -44,6 +45,34 @@ def save(L, d=HERE):
         with open(os.path.join(d, f"meta-{k}.json"), "w", encoding="utf-8") as f:
             json.dump(L["meta-" + k], f, ensure_ascii=False, indent=1); f.write("\n")
 
+def fill(L):
+    """書き足した行の空いている欄を埋める。埋めたことのリストを返す（何も無ければ空）
+    - 種の parent が無い：学名の属名と同じ学名の属の節目を探して入れる
+    - 種の id が無い：学名から作る（h＋学名の英字だけ、例 hanguillajaponica）
+    - jaStatus・aliases・fact・tier が無い："standard"・[]・""・3
+    - "main": true（本家にも出す）：本家の並びの最後（order）にする"""
+    import re
+    done = []
+    genus = {c["sci"]: c["id"] for c in L["clades"] if c["rank"] == "属"}
+    ids = {x["id"] for x in L["species"] + L["clades"] if x.get("id")}
+    last = max([x["main"]["order"] for x in L["species"] if isinstance(x.get("main"), dict) and "order" in x["main"]] + [-1])
+    for s in L["species"]:
+        name = s.get("ja") or s.get("sci") or "?"
+        if not s.get("parent") and s.get("sci"):
+            g = genus.get(s["sci"].split()[0])
+            if g: s["parent"] = g; done.append(f"{name}：属 {g} に入れた")
+            else: done.append(f"{name}：属 {s['sci'].split()[0]} が台帳に無い。clades.jsonl に属の行（parent は科の id）を足す")
+        if not s.get("id") and s.get("sci"):
+            i = "h" + re.sub(r"[^a-z]", "", s["sci"].lower())
+            while i in ids: i += "x"
+            s["id"] = i; ids.add(i); done.append(f"{name}：id を {i} にした")
+        for k, v in (("jaStatus", "standard"), ("aliases", []), ("fact", ""), ("tier", 3)):
+            if k not in s: s[k] = v
+        if s.get("main") is True or (isinstance(s.get("main"), dict) and "order" not in s["main"]):
+            m = s["main"] if isinstance(s["main"], dict) else {}
+            last += 1; m["order"] = last; s["main"] = m; done.append(f"{name}：本家の並びの {last} 番にした")
+    return done
+
 def check(L):
     """id の重なり・親の無い節目・種の無い節目などを確かめる。問題のリストを返す"""
     bad, C = [], {}
@@ -56,9 +85,10 @@ def check(L):
         if c["parent"] and c["parent"] not in C: bad.append(f"節目 {c['id']} の親 {c['parent']} が無い")
     ids, has = set(), set()
     for s in L["species"]:
+        if not s.get("id") or not s.get("ja") or not s.get("sci"): bad.append(f"種の行に id・ja・sci のどれかが無い: {s}"); continue
         if s["id"] in ids or s["id"] in C: bad.append("種の id が重なっている: " + s["id"])
         ids.add(s["id"])
-        if s["parent"] not in C: bad.append(f"種 {s['id']} の親 {s['parent']} が無い"); continue
+        if s.get("parent") not in C: bad.append(f"種 {s.get('id')}（{s.get('ja')}）の親 {s.get('parent')} が無い"); continue
         p = s["parent"]
         while p and p not in has: has.add(p); p = C[p]["parent"]
     empty = [c["id"] for c in L["clades"] if c["id"] not in has]
