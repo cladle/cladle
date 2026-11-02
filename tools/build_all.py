@@ -37,8 +37,11 @@ KEY = {"本家": "main", "ゲキムズ": "hard", "魚編": "fish", "鳥編": "bi
 
 def load(f): return json.load(open(os.path.join(ROOT, f), encoding="utf-8"))
 def save(f, d, indent):
-    with open(os.path.join(ROOT, f), "w", encoding="utf-8") as o:
+    p = os.path.join(ROOT, f)
+    nl = os.path.exists(p) and open(p, "rb").read()[-1:] == b"\n"  # 終わりの改行は今のファイルに合わせる
+    with open(p, "w", encoding="utf-8") as o:
         json.dump(d, o, ensure_ascii=False, indent=indent, separators=None if indent else (",", ":"))
+        if nl: o.write("\n")
 
 def chain(first):
     """[(ファイル, 始まる日 or None)]。最初のファイルは今の版（始まっている）"""
