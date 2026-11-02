@@ -1,8 +1,14 @@
-# GitHub に送るたびに、データとプログラムに壊れたところがないかを確かめる
+# GitHub に送るたびに、データとプログラムに壊れたところがないかを確かめる。
+# 台帳（tools/ledger/）を直して送ったときは、先に data-*.json を書き出して、同じブランチにコミットする。
+# （github.dev では Python を動かせないので、書き出しをここで代わりに行う）
 name: check
 on:
   push:
   pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -11,6 +17,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: 台帳から data-*.json を書き出す（送ったときだけ）
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # 新しい版を作る必要があるとき（もう始まった版の種や木を変えたとき）は書かずに止まり、次の確認が × で知らせる
+          python3 tools/build_all.py --write || true
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -am "台帳から data-*.json を書き出す（自動）"
+            git push
+            # このコミットでは自動の確認が動かないので、確認と（main なら）公開ページの作り直しを呼ぶ
+            gh workflow run check.yml --ref "$GITHUB_REF_NAME"
+            if [ "$GITHUB_REF_NAME" = main ]; then gh workflow run pages.yml --ref main; fi
+          fi
       - name: データの確認
         run: python3 tools/check.py
       - name: JavaScript の文法の確認
