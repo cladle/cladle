@@ -1045,7 +1045,7 @@
 {"id": "s1048", "parent": "g_metavelifer", "ja": "ヒメクサアジ", "sci": "Metavelifer multiradiatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s1049", "parent": "g_velifer", "ja": "クサアジ", "sci": "Velifer hypselopterus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s1050", "parent": "g_eumecichthys", "ja": "テングノタチ", "sci": "Eumecichthys fiski", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s1051", "parent": "g_lophotus", "ja": "アカナマダ", "sci": "Lophotus capellei", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
+{"id": "s1051", "parent": "g_lophotus", "ja": "アカナマダ", "sci": "Lophotus capellei", "jaStatus": "standard", "aliases": [], "fact": "危険を感じると、総排泄腔に開く墨袋から黒い墨を出す。", "tier": 3, "main": {"order": 943}}
 {"id": "s1052", "parent": "g_desmodema", "ja": "オキフリソデウオ", "sci": "Desmodema lorum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s1053", "parent": "g_desmodema", "ja": "フリソデウオ", "sci": "Desmodema polystictum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s1054", "parent": "g_trachipterus", "ja": "サケガシラ", "sci": "Trachipterus ishikawae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
