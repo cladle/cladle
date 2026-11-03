@@ -47,7 +47,11 @@
    },
    "bucketWeight": "sqrt"
   },
-  "datasetVersion": "0.3.18"
+  "datasetVersion": "0.3.18",
+  "next": {
+   "from": "2026-11-04",
+   "file": "data-0.3.19.json"
+  }
  },
  "clades": [
   {
@@ -994,20 +998,19 @@
    "desc": "ヒモムシ。体内の吻を素早く突き出して獲物を捕らえる。近縁の環形動物と違い、体に節がなく、吻は口とは別の袋（吻腔）に収まっている。"
   },
   {
-   "id": "lophophorata",
+   "id": "brachiozoa",
    "parent": "lophotrochozoa",
-   "ja": "Lophophorata",
-   "sci": "Lophophorata",
+   "ja": "Brachiozoa",
+   "sci": "Brachiozoa",
    "rank": "クレード",
-   "desc": "腕足動物・箒虫動物・外肛動物（コケムシ）をまとめたクレード。どれも口のまわりに触手が並んだ、餌を集める器官（触手冠）をもつ。系統ゲノム解析で一つのまとまりとして支持され、触手冠が共通の祖先から受け継がれたものであることが裏付けられた。冠輪動物の祖先がもっていたらせん卵割やトロコフォア幼生は、この群では失われたと考えられている。",
-   "polytomy": "箒虫動物と外肛動物を姉妹群とする解析（Laumer et al. 2019）と、腕足動物と箒虫動物をまとめる説（Brachiozoa）があり、ここでは三分岐で示す。",
+   "desc": "触手冠をもつ腕足動物と箒虫動物をまとめたクレード。近縁の外肛動物（コケムシ）も触手冠をもつが別の系統で、Brachiozoa は外肛動物と違い血管系をもち、群体を作らない。まとまりは主に遺伝子の解析で支えられる。",
    "verify": {
-    "ja": "「触手冠動物」の和名を学術文献で確かめられていないため学名で表記"
+    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
    }
   },
   {
    "id": "brachiopoda",
-   "parent": "lophophorata",
+   "parent": "brachiozoa",
    "ja": "腕足動物門",
    "sci": "Brachiopoda",
    "rank": "門",
@@ -1015,7 +1018,7 @@
   },
   {
    "id": "phoronida",
-   "parent": "lophophorata",
+   "parent": "brachiozoa",
    "ja": "箒虫動物門",
    "sci": "Phoronida",
    "rank": "門",
@@ -1023,7 +1026,7 @@
   },
   {
    "id": "bryozoa",
-   "parent": "lophophorata",
+   "parent": "lophotrochozoa",
    "ja": "外肛動物門",
    "sci": "Bryozoa",
    "rank": "門",
@@ -13832,6 +13835,16 @@
    "aliases": [],
    "fact": "浅い海の砂底にすむクーマの仲間。ふだんは砂に潜っている。",
    "tier": 4
+  },
+  {
+   "id": "s1051",
+   "parent": "lampriformes",
+   "ja": "アカナマダ",
+   "sci": "Lophotus capellei",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "危険を感じると、総排泄腔に開く墨袋から黒い墨を出す。",
+   "tier": 3
   }
  ]
 }
