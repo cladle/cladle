@@ -2638,7 +2638,7 @@
 {"id": "f_eunicidae", "parent": "eunicida", "ja": "Eunicidae", "sci": "Eunicidae", "rank": "科", "desc": ""}
 {"id": "g_eunice_eunicidae", "parent": "f_eunicidae", "ja": "Eunice", "sci": "Eunice", "rank": "属", "desc": ""}
 {"id": "t_metophiurida", "parent": "ophiuroidea", "ja": "Metophiurida", "sci": "Metophiurida", "rank": "下綱", "desc": "現生のクモヒトデをすべて含む下綱。化石だけが知られる古い群と区別するための名前で、クモヒトデ綱の中に、比べられるほかの現生の群は無い。"}
-{"id": "t_ophintegrida", "parent": "t_metophiurida", "ja": "Ophintegrida", "sci": "Ophintegrida", "rank": "上目", "desc": "ニホンクモヒトデ・トゲクモヒトデなどを含むクモヒトデの上目。姉妹群のEuryophiuridaとの見た目の共通点は無く、遺伝子の解析でまとまる。"}
+{"id": "t_ophintegrida", "parent": "t_metophiurida", "ja": "Ophintegrida", "sci": "Ophintegrida", "rank": "上目", "desc": "ニホンクモヒトデ・トゲクモヒトデなどを含むクモヒトデの上目。姉妹群のEuryophiuridaとの見た目の共通点は無く、遺伝子の解析でまとまる。", "main": {"order": 306}}
 {"id": "t_amphilepidida", "parent": "t_ophintegrida", "ja": "Amphilepidida", "sci": "Amphilepidida", "rank": "目", "desc": "ニホンクモヒトデ・アミメクモヒトデなどを含む目。浅い海の種が多い。近縁の目とは主に遺伝子の解析で分かれる。"}
 {"id": "t_gnathophiurina", "parent": "t_amphilepidida", "ja": "Gnathophiurina", "sci": "Gnathophiurina", "rank": "亜目", "desc": "トゲクモヒトデ・ウデナガクモヒトデなどを含む亜目。近縁の亜目とは主に遺伝子の解析で分かれる。"}
 {"id": "t_ophiactoidea", "parent": "t_gnathophiurina", "ja": "Ophiactoidea", "sci": "Ophiactoidea", "rank": "上科", "desc": ""}

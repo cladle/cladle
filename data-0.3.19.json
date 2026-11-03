@@ -2649,6 +2649,14 @@
    "sci": "Cheiracanthiidae",
    "rank": "科",
    "desc": "夜に歩き回って獲物を捕らえるクモの科。網を張らず、葉を巻いたり折ったりして作った袋状の巣で休み、産卵する。以前はフクログモ科などに含められていた。"
+  },
+  {
+   "id": "t_ophintegrida",
+   "parent": "ophiuroidea",
+   "ja": "Ophintegrida",
+   "sci": "Ophintegrida",
+   "rank": "上目",
+   "desc": "ニホンクモヒトデ・トゲクモヒトデなどを含むクモヒトデの上目。姉妹群のEuryophiuridaとの見た目の共通点は無く、遺伝子の解析でまとまる。"
   }
  ],
  "species": [
@@ -2875,7 +2883,7 @@
   },
   {
    "id": "nihonkumohitode",
-   "parent": "ophiuroidea",
+   "parent": "t_ophintegrida",
    "ja": "ニホンクモヒトデ",
    "sci": "Ophioplocus japonicus",
    "jaStatus": "standard",
@@ -13842,6 +13850,19 @@
    "aliases": [],
    "fact": "危険を感じると、総排泄腔に開く墨袋から黒い墨を出す。",
    "tier": 3
+  },
+  {
+   "id": "udefurikumohitode",
+   "parent": "t_ophintegrida",
+   "ja": "ウデフリクモヒトデ",
+   "sci": "Ophiocoma scolopendrina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "サンゴ礁の潮だまりで、岩の隙間から腕を出して振り動かし、餌を集める。",
+   "tier": 3,
+   "groups": [
+    "クモヒトデ"
+   ]
   }
  ]
 }
