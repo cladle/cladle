@@ -5868,7 +5868,7 @@
 {"id": "c6jwxm", "parent": "g_gammaropsis_photidae", "ja": "ウデナガソコエビ", "sci": "Gammaropsis nantis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c36y36", "parent": "g_distolasterias_asteriidae", "ja": "ウデナガヒトデ", "sci": "Distolasterias stichantha", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6lpy8", "parent": "g_henricia_echinasteridae", "ja": "ウデナガヒメヒトデ", "sci": "Henricia pacifica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c74p8g", "parent": "g_ophiocoma_ophiocomidae", "ja": "ウデフリクモヒトデ", "sci": "Ophiocoma scolopendrina", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c74p8g", "parent": "g_ophiocoma_ophiocomidae", "ja": "ウデフリクモヒトデ", "sci": "Ophiocoma scolopendrina", "jaStatus": "standard", "aliases": [], "fact": "サンゴ礁の潮だまりで、岩の隙間から腕を出して振り動かし、餌を集める。", "tier": 4, "groups": ["クモヒトデ"], "main": {"order": 944, "id": "udefurikumohitode", "tier": 3}}
 {"id": "cd4l5", "parent": "g_amphioplus_amphiuridae", "ja": "ウデボソスナクモヒトデ", "sci": "Amphioplus rhadinobrachius", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6vjsh", "parent": "g_pilodius_xanthidae", "ja": "ウデワオウギガニ", "sci": "Pilodius granulatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cths7", "parent": "g_chama_chamidae", "ja": "ウナバラキクザル", "sci": "Chama pacifica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
