@@ -19,7 +19,7 @@ const FISH = () => LEVEL === "fish";
 const BIRD = () => LEVEL === "bird";
 const INSECT = () => LEVEL === "insect";
 const BIG = () => LEVEL !== "normal";  // 種の多いデータ（補完の件数、ヒント2の出し方、図鑑の属・科の表示）
-const HINT1 = 10, HINT2 = 13;  // この回数の推測のあとにヒントが押せる
+let HINT1 = 10, HINT2 = 13;  // この回数の推測のあとにヒントが押せる（data の meta.selection.hintAfter で変えられる）
 const HUNT = 8;  // ゲキムズ：属でクリアしたあとの種探しの回数（残り回数とは別）
 const limit = () => G.gAt ? G.gAt + HUNT : MAX;
 
@@ -34,6 +34,7 @@ function norm(s) {
 
 function build(data) {
   D = data; MAX = data.meta.selection?.maxGuesses || 15;
+  [HINT1, HINT2] = data.meta.selection?.hintAfter || [10, 13];
   for (const c of data.clades) N[c.id] = { ...c, kind: "clade", kids: [] };
   for (const s of data.species) { N[s.id] = { ...s, kind: "species", kids: [] }; SP.push(N[s.id]); }
   for (const n of Object.values(N)) if (n.parent) N[n.parent].kids.push(n.id);
