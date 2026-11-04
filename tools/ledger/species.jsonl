@@ -21058,3 +21058,4 @@
 {"id": "hiniageoffrensis", "parent": "g_inia_iniidae", "ja": "アマゾンカワイルカ", "sci": "Inia geoffrensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "hberardiusbairdii", "parent": "g_berardius_ziphiidae", "ja": "ツチクジラ", "sci": "Berardius bairdii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "hziphiuscavirostris", "parent": "g_ziphius_ziphiidae", "ja": "アカボウクジラ", "sci": "Ziphius cavirostris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
+{"id": "hpangasianodongigas", "parent": "g_pangasianodon", "ja": "メコンオオナマズ", "sci": "Pangasianodon gigas", "jaStatus": "common", "aliases": [], "fact": "メコン川流域にすむ世界最大級の淡水魚。野生の数が減り、絶滅寸前とされる。", "verify": {"ja": "標準和名リストの対象外。Wikidata と GBIF（Catalogue of Life）の和名", "sci": "日本産ではないため日本産魚類全種目録の対象外。GBIF・Catalogue of Life で受理名を確認"}, "tier": 3, "gbif": 2340710, "main": {"tier": 3, "order": 949}}
