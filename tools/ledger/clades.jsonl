@@ -707,6 +707,8 @@
 {"id": "g_ictalurus", "parent": "f_ictaluridae", "ja": "Ictalurus", "sci": "Ictalurus", "rank": "属", "desc": ""}
 {"id": "f_ariidae", "parent": "o_siluriformes", "ja": "ハマギギ科", "sci": "Ariidae", "rank": "科", "desc": ""}
 {"id": "g_arius", "parent": "f_ariidae", "ja": "Arius", "sci": "Arius", "rank": "属", "desc": ""}
+{"id": "f_pangasiidae", "parent": "o_siluriformes", "ja": "Pangasiidae", "sci": "Pangasiidae", "rank": "科", "desc": ""}
+{"id": "g_pangasianodon", "parent": "f_pangasiidae", "ja": "Pangasianodon", "sci": "Pangasianodon", "rank": "属", "desc": ""}
 {"id": "g_netuma", "parent": "f_ariidae", "ja": "Netuma", "sci": "Netuma", "rank": "属", "desc": ""}
 {"id": "g_plicofollis", "parent": "f_ariidae", "ja": "Plicofollis", "sci": "Plicofollis", "rank": "属", "desc": ""}
 {"id": "o_argentiniformes", "parent": "euteleostei", "ja": "ニギス目", "sci": "Argentiniformes", "rank": "目", "desc": "ニギス・デメニギス・ソコイワシなどを含む目。大きな目をもつ種が多い。近縁のサケ目とは見た目で分けにくく、主に骨格の細かな特徴と遺伝子の解析でまとまる。"}

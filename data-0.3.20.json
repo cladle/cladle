@@ -13905,6 +13905,21 @@
    "aliases": [],
    "fact": "北アメリカ原産の外来魚で、特定外来生物に指定されている。",
    "tier": 2
+  },
+  {
+   "id": "hpangasianodongigas",
+   "parent": "siluriformes",
+   "ja": "メコンオオナマズ",
+   "sci": "Pangasianodon gigas",
+   "jaStatus": "common",
+   "aliases": [],
+   "fact": "メコン川流域にすむ世界最大級の淡水魚。野生の数が減り、絶滅寸前とされる。",
+   "verify": {
+    "ja": "標準和名リストの対象外。Wikidata と GBIF（Catalogue of Life）の和名",
+    "sci": "日本産ではないため日本産魚類全種目録の対象外。GBIF・Catalogue of Life で受理名を確認"
+   },
+   "tier": 3,
+   "gbif": 2340710
   }
  ]
 }
