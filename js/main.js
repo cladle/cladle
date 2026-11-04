@@ -75,9 +75,9 @@ async function setLevel(lv) {
   catch (e) { flash(`${LV_NAME[lv] || "ふつうモード"}のデータを読み込めませんでした（${e.message}）`, true); off(false); return; }
   off(false);
   if (lv !== "normal") track("level-" + lv);  // 切り替える前に送る（切り替えた先の印が付かないように）
-  BUILT[LEVEL] = { D, N, SP, BUCKETS, BW, MAX };
+  BUILT[LEVEL] = { D, N, SP, BUCKETS, BW, MAX, HINT1, HINT2 };
   LEVEL = lv; store.set("dk-level", lv);
-  if (BUILT[lv]) ({ D, N, SP, BUCKETS, BW, MAX } = BUILT[lv]);
+  if (BUILT[lv]) ({ D, N, SP, BUCKETS, BW, MAX, HINT1, HINT2 } = BUILT[lv]);
   else { N = {}; SP = []; build(DATA[lv]); }
   applyLevel();
   STATS = { days: {} }; mergeStats(store.get(KEY("dk-stats")));
