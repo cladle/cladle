@@ -18,15 +18,15 @@ function act(b) {
 function hintsHTML() {
   if (G.done) return "";
   const n = G.guesses.length, out = [];
-  if (mode === "shared" && !n) out.push(`<p class="hint">📮 共有された動物です。解き終わると、共有した人の回数が見られます。</p>`);
+  if (mode === "shared" && !n) out.push(`<p class="hint">共有された動物です。解き終わると、共有した人の回数が見られます。</p>`);
   if (G.gAt) { const k = SP.filter(s => s.parent === N[G.target].parent && !G.guesses.includes(s.id)).length;
-    out.push(`<p class="hint">✅ ${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探し ${HUNT} 回のうちに種まで当てると 🎯。</p>`); }
+    out.push(`<p class="hint">${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探しは ${HUNT} 回です。</p>`); }
   // 学名だけの節目には、近い和名の門・綱・目を添える（例：「Xxxoidea」（腹足綱の中の上科））
   const nm = id => `「${esc(N[id].ja)}」${kinLabel(id) ? `（${esc(kinLabel(id))}）` : ""}`;
-  if (G.h1) { const c = candidates().length; out.push(`<p class="hint">💡 ${nm(deepest())}の中に、候補はあと <b>${c}</b> 種です。</p>`); }
+  if (G.h1) { const c = candidates().length; out.push(`<p class="hint">ヒント1　${nm(deepest())}の中に、候補はあと <b>${c}</b> 種です。</p>`); }
   const ex = G.h2 && G.reveal ? hintExamples(G.reveal) : [];
   const exT = ex.length ? `この仲間には ${ex.map(id => esc(N[id].ja)).join(" や ")} がいます（${ex.length > 1 ? "どちらも" : ""}答えではありません）。` : "";
-  if (G.h2) out.push(G.reveal ? `<p class="hint">💡 答えの動物は${nm(G.reveal)}の仲間です。${exT}</p>` : BIG() ? `<p class="hint">💡 ${esc(jaClue(G.target))}</p>` : `<p class="hint">💡 答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
+  if (G.h2) out.push(G.reveal ? `<p class="hint">ヒント2　答えの動物は${nm(G.reveal)}の仲間です。${exT}</p>` : BIG() ? `<p class="hint">ヒント2　${esc(jaClue(G.target))}</p>` : `<p class="hint">ヒント2　答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
   return out.join("");
 }
 function flash(t, err) { const f = $("#flash"); f.textContent = t; f.className = "flash" + (err ? " err" : ""); f.hidden = false; }
@@ -248,23 +248,42 @@ function cladeBtn(n) {
   const p = n.polytomy ? `<span class="poly">多分岐</span>` : "";
   return `<button class="clade" data-id="${n.id}"><span class="ja">${esc(n.ja)}</span><span class="sci">${esc(n.sci)}</span>${n.rank ? `<span class="rank">${esc(n.rank)}</span>` : ""}${p}${v}</button>`;
 }
+// 何回目で当てたか（結果の欄と共有文で使う）。絵文字は使わず文字で書く
+function recordText() {
+  if (!G.won) return G.gaveUp ? "降参" : "当てられず";
+  if (HARD()) return G.gAt ? (exactWin() ? `属は${G.gAt}回目、種まで${G.guesses.length}回目` : `${G.gAt}回目で属まで正解`) : `${G.guesses.length}回目で種まで正解`;
+  return `${clearN()}回目で正解`;
+}
+const hintCount = () => (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
+// 分類：答えのすぐ上の、階級のある門・綱・目・科から下の2つ
+function rankLine(t) {
+  const r = path(t.parent).filter(x => ["門", "綱", "目", "科"].includes(N[x].rank)).slice(-2);
+  return r.map(x => esc(N[x].ja)).join(" ");
+}
+// 名前は途中で行を変えない（入りきらなければ名前ごと次の行へ）
+const nb = s => `<span class="nb">${s}</span>`;
 function resultHTML() {
-  const t = N[G.target];
-  const head = G.won ? (exactWin() ? `正解！ ${esc(t.ja)}` : `属まで正解！ 答えは ${esc(t.ja)} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${esc(t.ja)} でした`;
-  const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `<section class="result${G.won ? " won" : ""}"><h2>${head}</h2>
-    <div class="sci">${esc(t.sci)} ${t.verify ? `<span class="badge-v">要確認</span>` : ""}</div>
-    ${namesHTML(t)}
-    ${t.fact ? `<p class="fact">${esc(t.fact)}</p>` : ""}
-    <div class="lookup">調べる：${lookupLinks(t)}</div>
-    <div class="score"><span><b>${G.won ? clearN() : "×"}</b> / ${MAX} 回</span>${hints ? `<span>💡 ヒント ${hints} 回</span>` : ""}${G.won && HARD() ? `<span>${G.gAt ? `✅ 属は ${G.gAt} 回` : ""}${G.gAt && exactWin() ? "・" : ""}${exactWin() ? (G.gAt ? `🎯 種探し ${G.guesses.length - G.gAt} 回` : "🎯 種までぴったり") : ""}</span>` : ""}${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
-    <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="btn ghost xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
+  const t = N[G.target], name = nb(esc(t.ja));
+  const head = G.won ? (exactWin() ? `正解！ ${name}` : `属まで正解！ 答えは ${name} でした`) : `${G.gaveUp ? "降参。 " : ""}答えは ${name} でした`;
+  const hints = hintCount();
+  const ja = t.aliases.filter(a => /[ぁ-んァ-ヶ一-龠]/.test(a)), other = t.aliases.filter(a => !ja.includes(a) && !(t.sciSynonyms || []).includes(a));
+  const rows = [["和名", `${esc(t.ja)}${ja.length ? `<span class="also">（別名：${esc(ja.join("、"))}）</span>` : ""}`],
+    ["学名", `<i class="sci">${esc(t.sci)}</i>${t.verify ? ` <span class="badge-v">要確認</span>` : ""}`],
+    t.sciSynonyms?.length && ["旧学名", `<i class="sci">${t.sciSynonyms.map(esc).join("、")}</i>`],
+    other.length && ["検索語", esc(other.join("、"))],
+    rankLine(t) && ["分類", rankLine(t)],
+    t.fact && ["説明", esc(t.fact)]].filter(Boolean);
+  return `<section class="result${G.won ? " won" : ""}"><div class="label"><h2>${head}</h2>
+    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl></div>
+    <div class="score"><b>${G.won ? clearN() : "×"}/${MAX}</b><span>${recordText()}${hints ? `、ヒント${hints}回` : ""}</span>${mode === "shared" ? `<span class="from">共有した人：${sharedFrom(G.from)}</span>` : ""}</div>
+    <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     ${mode === "daily" ? "" : `<p class="hint">共有したリンクから、相手も同じ動物で遊べます。</p>`}
-    <pre class="share" id="shareText">${esc(shareText())}</pre>
-    <div class="fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
+    <pre class="share" id="shareText" hidden>${esc(shareText())}</pre>
+    <div class="blk lookup"><span class="eyebrow">調べる</span><div>${lookupLinks(t)}</div></div>
     ${kinHTML(t)}
-    <div class="row"><button class="btn ghost" id="toZukan">図鑑でこの動物を見る</button>
-    ${mode === "free" ? `<button class="btn ghost" id="again">次の問題</button>` : `<button class="btn ghost" id="goFree">フリープレイへ</button>`}</div>
+    <div class="blk fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
+    <div class="ends"><button class="btn ghost" id="toZukan">図鑑で見る</button>
+    ${mode === "free" ? `<button class="btn" id="again">次の問題</button>` : `<button class="btn" id="goFree">フリープレイへ</button>`}</div>
     ${mode === "daily" ? statsHTML() : ""}</section>`;
 }
 // 近い仲間：正解のすぐ上で、ほかの収録種がいる節目を紹介する
@@ -276,10 +295,10 @@ function kinHTML(t) {
   walk(a);
   const others = all.filter(id => id !== t.id), MAXK = all.length <= 16 ? 16 : 12;
   const name = /^[ぁ-んァ-ヶー一-龠]/.test(n.ja) ? n.ja : `${n.ja}（${n.rank}）`;
-  return `<div class="sub"><span class="eyebrow">近い仲間</span>
-    <h3><span>${esc(n.ja)}</span><span class="sci" style="font-weight:400;color:var(--muted);font-size:.85rem">${esc(n.sci)}</span><span class="rank">${esc(n.rank)}</span></h3>
+  return `<div class="blk sub"><span class="eyebrow">近い仲間</span>
+    <h3><span>${esc(n.ja)}</span><span class="sci">${esc(n.sci)}</span><span class="rank">${esc(n.rank)}</span></h3>
     <p>${esc(n.desc)}</p>
-    <p style="font-size:.85rem;color:var(--muted)">${esc(name)}には、ほかに次の動物が収録されています。</p>
+    <p class="kin-n">${esc(name)}には、ほかに次の動物が収録されています。</p>
     <div class="kin">${others.slice(0, MAXK).map(id => `<button class="twig${G.guesses.includes(id) ? " me" : ""}" data-id="${id}">${esc(N[id].ja)}</button>`).join("")}</div>
     ${others.length > MAXK ? `<button class="kin-more" data-zk="${a}">ほか ${others.length - MAXK} 種を図鑑で見る</button>` : ""}</div>`;
 }
@@ -291,17 +310,18 @@ function lookupLinks(t) {
     ["画像検索", `https://www.google.com/search?tbm=isch&q=${q(t.ja + " " + t.sci)}`]]
     .filter(Boolean).map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${l}</a>`).join("");
 }
+// 共有文で当てた回の印（ほかの回は色の四角）
+const HIT_MARK = "⭐";
 function shareText() {
   const td = N[G.target].depth;
   const marks = G.guesses.map(g => {
-    if (g === G.target) return "🎯";
-    if (sameClear(g, G.target)) return "✅";
+    if (g === G.target) return HIT_MARK;
     const r = N[lca(g, G.target)].depth / (td - 1);
     return r >= 1 ? "🟩" : r >= .66 ? "🟧" : r >= .33 ? "🟨" : "⬜";
   });
   const title = "Cladle" + (BIG() ? " " + LV_NAME[LEVEL] : "") + (mode === "daily" ? ` #${dailyNo(G.day)}` : mode === "shared" ? "（共有された問題）" : "（フリー）");
   const lines = [];
   for (let i = 0; i < marks.length; i += 10) lines.push(marks.slice(i, i + 10).join(""));
-  const hints = (G.h1 ? 1 : 0) + (G.h2 ? 1 : 0);
-  return `${title}  ${G.won ? clearN() : "×"}/${MAX}${HARD() && exactWin() ? `  🎯${G.gAt ? G.guesses.length - G.gAt : ""}` : ""}${hints ? `  💡×${hints}` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (BIG() ? "#" + LEVEL : "") : ""}${playLine()}`;
+  const hints = hintCount();
+  return `${title}  ${recordText()}${hints ? `（ヒント${hints}回）` : ""}\n${lines.join("\n")}${mode === "daily" ? "\nhttps://cladle.github.io/cladle/?from=share" + (BIG() ? "#" + LEVEL : "") : ""}${playLine()}`;
 }

@@ -89,7 +89,7 @@ function guess(id) {
   else {
     const gained = N[L].depth > N[before].depth;
     // ゲキムズ：属が当たったらクリア（種名は伏せたまま。続けて種を当てるか、答えを見るかを選べる）
-    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。ここから種探し ${HUNT} 回で種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
+    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。ここから種探しが ${HUNT} 回あります。終えるときは「答えを見る」。`); G.fresh = L; }
     else flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
     if (G.gAt !== G.guesses.length) G.fresh = gained ? L : null;
     if (G.guesses.length >= limit()) { G.done = true; if (G.gAt) { G.won = true; G.exact = false; } }
@@ -161,10 +161,10 @@ function maskFact(id) {
 // 途中のボタンは1列にまとめる：ヒント（押すたびに次の段階）と、降参（フリーは1回目の推測までは別の問題）
 // 降参・別の問題は押し間違いで消えないよう、2回押して決める
 function actionsHTML() {
-  if (G.done) return mode === "free" ? `<button class="btn" data-act="next">次の問題</button>` : "";
+  if (G.done) return "";  // 次の問題へは結果の欄の一番下から
   const n = G.guesses.length;
-  const hint = !G.h1 && n >= HINT1 ? `<button class="btn ghost hintbtn" data-hint="1">💡 ヒント</button>`
-    : G.h1 && !G.h2 && n >= HINT2 ? `<button class="btn ghost hintbtn" data-hint="2">💡 もう1つヒント</button>` : "";
+  const hint = !G.h1 && n >= HINT1 ? `<button class="btn ghost hintbtn" data-hint="1">ヒント</button>`
+    : G.h1 && !G.h2 && n >= HINT2 ? `<button class="btn ghost hintbtn" data-hint="2">もう1つヒント</button>` : "";
   return hint + (G.gAt ? `<button class="btn ghost" data-act="reveal">答えを見る</button>`
     : n ? `<button class="btn ghost" data-act="giveup">降参する</button>`
     : mode === "free" ? `<button class="btn ghost" data-act="reset">別の問題にする</button>` : "");
