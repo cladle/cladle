@@ -634,11 +634,11 @@
 {"id": "s634", "parent": "g_gnathopogon", "ja": "ホンモロコ", "sci": "Gnathopogon caerulescens", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s635", "parent": "g_gnathopogon", "ja": "タモロコ", "sci": "Gnathopogon elongatus elongatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s636", "parent": "g_gnathopogon", "ja": "スワモロコ", "sci": "Gnathopogon elongatus suwae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "s637", "parent": "g_hemibarbus", "ja": "ニゴイ", "sci": "Hemibarbus barbus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s637", "parent": "g_hemibarbus", "ja": "ニゴイ", "sci": "Hemibarbus barbus", "jaStatus": "standard", "aliases": [], "fact": "名はコイに似ることから。口ひげは1対で、2対あるコイと見分けられる。", "tier": 2, "main": {"order": 945, "tier": 3}}
 {"id": "s638", "parent": "g_hemibarbus", "ja": "コウライニゴイ", "sci": "Hemibarbus labeo", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s639", "parent": "g_hemibarbus", "ja": "ズナガニゴイ", "sci": "Hemibarbus longirostris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s640", "parent": "g_pseudogobio", "ja": "ナガレカマツカ", "sci": "Pseudogobio agathonectris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s641", "parent": "g_pseudogobio", "ja": "カマツカ", "sci": "Pseudogobio esocinus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s641", "parent": "g_pseudogobio", "ja": "カマツカ", "sci": "Pseudogobio esocinus", "jaStatus": "standard", "aliases": [], "fact": "川の砂底にすみ、驚くと砂に潜って身を隠す。", "tier": 1, "main": {"order": 946, "tier": 3}}
 {"id": "s642", "parent": "g_pseudogobio", "ja": "スナゴカマツカ", "sci": "Pseudogobio polystictus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s643", "parent": "g_pseudorasbora", "ja": "モツゴ", "sci": "Pseudorasbora parva", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s644", "parent": "g_pseudorasbora", "ja": "ウシモツゴ", "sci": "Pseudorasbora pugnax", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -663,7 +663,7 @@
 {"id": "s663", "parent": "g_pterygoplichthys", "ja": "マダラロリカリア", "sci": "Pterygoplichthys disjunctivus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s664", "parent": "g_clarias", "ja": "ヒレナマズ", "sci": "Clarias fuscus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s665", "parent": "g_silurus", "ja": "ナマズ", "sci": "Silurus asotus", "jaStatus": "standard", "aliases": ["マナマズ"], "fact": "口ひげで餌を探す。コイと同じ骨鰾類。", "tier": 1, "gbif": 2337594, "main": {"order": 150, "id": "namazu"}}
-{"id": "s666", "parent": "g_silurus", "ja": "ビワコオオナマズ", "sci": "Silurus biwaensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "s666", "parent": "g_silurus", "ja": "ビワコオオナマズ", "sci": "Silurus biwaensis", "jaStatus": "standard", "aliases": [], "fact": "琵琶湖・淀川水系だけにすむ固有種で、日本最大のナマズ。", "tier": 4, "main": {"tier": 3, "order": 947}}
 {"id": "s667", "parent": "g_silurus", "ja": "イワトコナマズ", "sci": "Silurus lithophilus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s668", "parent": "g_silurus", "ja": "タニガワナマズ", "sci": "Silurus tomodai", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s669", "parent": "g_plotosus", "ja": "ゴンズイ", "sci": "Plotosus japonicus", "jaStatus": "standard", "aliases": [], "fact": "群れで団子のように集まる「ゴンズイ玉」をつくるナマズの仲間。背びれと胸びれのとげに毒がある。", "tier": 1, "main": {"order": 756, "id": "gonzui", "tier": 3}}
@@ -2335,7 +2335,7 @@
 {"id": "s2338", "parent": "g_monopterus", "ja": "タウナギ", "sci": "Monopterus albus", "jaStatus": "standard", "aliases": [], "fact": "ウナギに似た細長い淡水魚。空気呼吸ができる。", "tier": 3, "main": {"order": 575, "id": "taunagi", "tier": 4}}
 {"id": "s2339", "parent": "g_macropodus", "ja": "チョウセンブナ", "sci": "Macropodus ocellatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2340", "parent": "g_macropodus", "ja": "タイワンキンギョ", "sci": "Macropodus opercularis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2341", "parent": "g_channa", "ja": "カムルチー", "sci": "Channa argus", "jaStatus": "standard", "aliases": [], "fact": "空気呼吸ができる外来の淡水魚。ライギョとも呼ばれる。", "tier": 2, "main": {"order": 576, "id": "kamuruchi", "tier": 3}}
+{"id": "s2341", "parent": "g_channa", "ja": "カムルチー", "sci": "Channa argus", "jaStatus": "standard", "aliases": ["ライギョ"], "fact": "空気呼吸ができる外来の淡水魚。ライギョとも呼ばれる。", "tier": 2, "main": {"order": 576, "id": "kamuruchi", "tier": 3}}
 {"id": "s2342", "parent": "g_channa", "ja": "コウタイ", "sci": "Channa asiatica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s2343", "parent": "g_channa", "ja": "タイワンドジョウ", "sci": "Channa maculata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2344", "parent": "g_lates", "ja": "アカメ", "sci": "Lates japonicus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
@@ -3793,7 +3793,7 @@
 {"id": "s3796", "parent": "g_lepomis", "ja": "ブルーギル", "sci": "Lepomis macrochirus macrochirus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s3797", "parent": "g_lepomis", "ja": "ロングイヤーサンフィッシュ", "sci": "Lepomis megalotis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s3798", "parent": "g_micropterus", "ja": "コクチバス", "sci": "Micropterus dolomieu dolomieu", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s3799", "parent": "g_micropterus", "ja": "オオクチバス", "sci": "Micropterus nigricans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s3799", "parent": "g_micropterus", "ja": "オオクチバス", "sci": "Micropterus nigricans", "jaStatus": "standard", "aliases": [], "fact": "北アメリカ原産の外来魚で、特定外来生物に指定されている。", "tier": 1, "main": {"tier": 2, "order": 948}}
 {"id": "s3800", "parent": "g_coreoperca", "ja": "コウライオヤニラミ", "sci": "Coreoperca herzi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s3801", "parent": "g_coreoperca", "ja": "オヤニラミ", "sci": "Coreoperca kawamebari", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s3802", "parent": "g_coreoperca", "ja": "ナンエツオヤニラミ", "sci": "Coreoperca whiteheadi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
