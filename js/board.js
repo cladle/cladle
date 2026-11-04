@@ -294,11 +294,10 @@ function kinHTML(t) {
   const walk = id => N[id].kind === "species" ? all.push(id) : N[id].kids.forEach(walk);
   walk(a);
   const others = all.filter(id => id !== t.id), MAXK = all.length <= 16 ? 16 : 12;
-  const name = /^[ぁ-んァ-ヶー一-龠]/.test(n.ja) ? n.ja : `${n.ja}（${n.rank}）`;
   return `<div class="blk sub"><span class="eyebrow">近い仲間</span>
     <h3><span>${esc(n.ja)}</span><span class="sci">${esc(n.sci)}</span><span class="rank">${esc(n.rank)}</span></h3>
     <p>${esc(n.desc)}</p>
-    <p class="kin-n">${esc(name)}には、ほかに次の動物が収録されています。</p>
+    <p class="kin-n">ほかの収録種</p>
     <div class="kin">${others.slice(0, MAXK).map(id => `<button class="twig${G.guesses.includes(id) ? " me" : ""}" data-id="${id}">${esc(N[id].ja)}</button>`).join("")}</div>
     ${others.length > MAXK ? `<button class="kin-more" data-zk="${a}">ほか ${others.length - MAXK} 種を図鑑で見る</button>` : ""}</div>`;
 }
