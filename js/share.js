@@ -15,6 +15,6 @@ function playLine() {
 }
 function sharedFrom(c) {
   if (!c.w) return c.g ? "降参" : "当てられず";
-  return `${c.n} 回${c.x != null ? `（🎯${c.x ? `種探し ${c.x} 回` : "種まで"}）` : ""}${c.h ? `・💡${c.h}` : ""}`;
+  return `${c.n} 回${c.x != null ? `（${c.x ? `種探し ${c.x} 回` : "種までぴったり"}）` : ""}${c.h ? `・ヒント${c.h}回` : ""}`;
 }
 function openShared(code) { setView("free"); newGame("shared", code); }
