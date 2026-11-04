@@ -264,7 +264,7 @@ function rankLine(t) {
 const nb = s => `<span class="nb">${s}</span>`;
 function resultHTML() {
   const t = N[G.target], name = nb(esc(t.ja));
-  const head = G.won ? (exactWin() ? `正解！ ${name}` : `属まで正解！ 答えは ${name} でした`) : `${G.gaveUp ? "降参。" : ""}答えは ${name} でした`;
+  const head = G.won ? (exactWin() ? `正解！ ${name}` : `属まで正解！ 答えは ${name} でした`) : `${G.gaveUp ? "降参。 " : ""}答えは ${name} でした`;
   const hints = hintCount();
   const ja = t.aliases.filter(a => /[ぁ-んァ-ヶ一-龠]/.test(a)), other = t.aliases.filter(a => !ja.includes(a) && !(t.sciSynonyms || []).includes(a));
   const rows = [["和名", `${esc(t.ja)}${ja.length ? `<span class="also">（別名：${esc(ja.join("、"))}）</span>` : ""}`],
