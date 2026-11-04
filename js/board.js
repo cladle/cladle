@@ -279,7 +279,7 @@ function resultHTML() {
     <div class="share-row"><button class="btn share-btn" id="copy">結果を共有</button><a class="xpost" id="xpost" href="https://x.com/intent/tweet?text=${encodeURIComponent(shareText())}" target="_blank" rel="noopener">Xでポスト</a></div>
     ${mode === "daily" ? "" : `<p class="hint">共有したリンクから、相手も同じ動物で遊べます。</p>`}
     <pre class="share" id="shareText" hidden>${esc(shareText())}</pre>
-    <div class="blk lookup"><span class="eyebrow">調べる</span><div>${lookupLinks(t)}</div></div>
+    <div class="blk lookup"><div>${lookupLinks(t)}</div></div>
     ${kinHTML(t)}
     <div class="blk fullpath"><div>${path(t.parent).map(x => `<button class="clade-mini" data-id="${x}">${esc(N[x].ja)}</button>`).join(`<span class="sep">›</span>`)}<span class="sep">›</span><b>${esc(t.ja)}</b></div></div>
     <div class="ends"><button class="btn ghost" id="toZukan">図鑑で見る</button>
@@ -294,11 +294,10 @@ function kinHTML(t) {
   const walk = id => N[id].kind === "species" ? all.push(id) : N[id].kids.forEach(walk);
   walk(a);
   const others = all.filter(id => id !== t.id), MAXK = all.length <= 16 ? 16 : 12;
-  const name = /^[ぁ-んァ-ヶー一-龠]/.test(n.ja) ? n.ja : `${n.ja}（${n.rank}）`;
-  return `<div class="blk sub"><span class="eyebrow">近い仲間</span>
+  return `<div class="blk sub">
     <h3><span>${esc(n.ja)}</span><span class="sci">${esc(n.sci)}</span><span class="rank">${esc(n.rank)}</span></h3>
     <p>${esc(n.desc)}</p>
-    <p class="kin-n">${esc(name)}には、ほかに次の動物が収録されています。</p>
+    <p class="kin-n">ほかの収録種</p>
     <div class="kin">${others.slice(0, MAXK).map(id => `<button class="twig${G.guesses.includes(id) ? " me" : ""}" data-id="${id}">${esc(N[id].ja)}</button>`).join("")}</div>
     ${others.length > MAXK ? `<button class="kin-more" data-zk="${a}">ほか ${others.length - MAXK} 種を図鑑で見る</button>` : ""}</div>`;
 }
