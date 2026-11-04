@@ -23,7 +23,14 @@ function hintsHTML() {
     out.push(`<p class="hint">${G.gAt} 回目で同じ属を当ててクリアしました。この属には、まだ推測していない種があと <b>${k}</b> 種います。種探しは ${HUNT} 回です。</p>`); }
   // 学名だけの節目には、近い和名の門・綱・目を添える（例：「Xxxoidea」（腹足綱の中の上科））
   const nm = id => `「${esc(N[id].ja)}」${kinLabel(id) ? `（${esc(kinLabel(id))}）` : ""}`;
-  if (G.h1) { const c = candidates().length; out.push(`<p class="hint">ヒント1　${nm(deepest())}の中に、候補はあと <b>${c}</b> 種です。</p>`); }
+  if (G.h1) {
+    // 枝の名前：和名があれば和名、学名だけなら学名に階級を添える（例：Picus（属））。多いときは先頭から6つまで
+    const h = hint1Groups(), lab = id => /^[A-Za-z]/.test(N[id].ja) ? `<i>${esc(N[id].ja)}</i>（${N[id].rank === "クレード" ? "まとまり" : esc(N[id].rank)}）` : esc(N[id].ja);
+    const names = h.clades.slice(0, 6).map(lab).concat(h.clades.length > 6 ? [`ほか ${h.clades.length - 6} 群`] : []).join("・");
+    const sp = h.sp ? `${names ? "か、直下の" : ""}まだ推測していない ${h.sp} 種` : "";
+    const many = h.clades.length + (h.sp ? 1 : 0) > 1 || h.sp > 1;
+    out.push(`<p class="hint">ヒント1　答えは${nm(h.k)}の中の、${names}${sp}${many ? "のどれか" : ""}です。灰色の枝にはいません。</p>`);
+  }
   const ex = G.h2 && G.reveal ? hintExamples(G.reveal) : [];
   const exT = ex.length ? `この仲間には ${ex.map(id => esc(N[id].ja)).join(" や ")} がいます（${ex.length > 1 ? "どちらも" : ""}答えではありません）。` : "";
   if (G.h2) out.push(G.reveal ? `<p class="hint">ヒント2　答えの動物は${nm(G.reveal)}の仲間です。${exT}</p>` : BIG() ? `<p class="hint">ヒント2　${esc(jaClue(G.target))}</p>` : `<p class="hint">ヒント2　答えの動物の豆知識：${esc(maskFact(G.target))}</p>`);
