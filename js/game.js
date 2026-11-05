@@ -119,7 +119,7 @@ function sameClear(a, b) { const r = D.meta.selection?.clearRank; return !!r && 
 const exactWin = () => G.won && G.exact !== false;
 const clearN = () => G.gAt || G.guesses.length;  // クリアした回数（ゲキムズは属が当たった回）
 // ---- ヒント（推測回数は減らない）----
-// ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
+// ヒント1: どの推測とも矛盾しない未推測の種（候補）が残っている枝の名前を出し、外れた枝を灰色にする
 // ヒント2: 正解への経路で、今わかっている節目より1段深い節目を教える
 function candidates() {
   const k = deepest(), out = [], ex = G.h2 && G.reveal ? hintExamples(G.reveal) : [];
@@ -128,6 +128,13 @@ function candidates() {
     if (G.guesses.every(g => lca(g, s.id) === lca(g, G.target))) out.push(s.id);
   }
   return out;
+}
+// ヒント1の文：今わかっている節目の1段下で、候補が残っている枝（種の名前は出さず、数だけにする）
+function hint1Groups() {
+  const k = deepest(), left = new Set();
+  for (const id of candidates()) { const p = path(id); left.add(p[p.indexOf(k) + 1]); }
+  const ids = N[k].kids.filter(id => left.has(id));
+  return { k, clades: ids.filter(id => N[id].kind !== "species"), sp: ids.filter(id => N[id].kind === "species").length };
 }
 function useHint(n) {
   if (G.done) return;
