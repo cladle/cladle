@@ -634,11 +634,11 @@
 {"id": "s634", "parent": "g_gnathopogon", "ja": "ホンモロコ", "sci": "Gnathopogon caerulescens", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s635", "parent": "g_gnathopogon", "ja": "タモロコ", "sci": "Gnathopogon elongatus elongatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s636", "parent": "g_gnathopogon", "ja": "スワモロコ", "sci": "Gnathopogon elongatus suwae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "s637", "parent": "g_hemibarbus", "ja": "ニゴイ", "sci": "Hemibarbus barbus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s637", "parent": "g_hemibarbus", "ja": "ニゴイ", "sci": "Hemibarbus barbus", "jaStatus": "standard", "aliases": [], "fact": "名はコイに似ることから。口ひげは1対で、2対あるコイと見分けられる。", "tier": 2, "main": {"order": 945, "tier": 3}}
 {"id": "s638", "parent": "g_hemibarbus", "ja": "コウライニゴイ", "sci": "Hemibarbus labeo", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s639", "parent": "g_hemibarbus", "ja": "ズナガニゴイ", "sci": "Hemibarbus longirostris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s640", "parent": "g_pseudogobio", "ja": "ナガレカマツカ", "sci": "Pseudogobio agathonectris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s641", "parent": "g_pseudogobio", "ja": "カマツカ", "sci": "Pseudogobio esocinus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s641", "parent": "g_pseudogobio", "ja": "カマツカ", "sci": "Pseudogobio esocinus", "jaStatus": "standard", "aliases": [], "fact": "川の砂底にすみ、驚くと砂に潜って身を隠す。", "tier": 1, "main": {"order": 946, "tier": 3}}
 {"id": "s642", "parent": "g_pseudogobio", "ja": "スナゴカマツカ", "sci": "Pseudogobio polystictus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s643", "parent": "g_pseudorasbora", "ja": "モツゴ", "sci": "Pseudorasbora parva", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s644", "parent": "g_pseudorasbora", "ja": "ウシモツゴ", "sci": "Pseudorasbora pugnax", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -663,7 +663,7 @@
 {"id": "s663", "parent": "g_pterygoplichthys", "ja": "マダラロリカリア", "sci": "Pterygoplichthys disjunctivus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s664", "parent": "g_clarias", "ja": "ヒレナマズ", "sci": "Clarias fuscus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s665", "parent": "g_silurus", "ja": "ナマズ", "sci": "Silurus asotus", "jaStatus": "standard", "aliases": ["マナマズ"], "fact": "口ひげで餌を探す。コイと同じ骨鰾類。", "tier": 1, "gbif": 2337594, "main": {"order": 150, "id": "namazu"}}
-{"id": "s666", "parent": "g_silurus", "ja": "ビワコオオナマズ", "sci": "Silurus biwaensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "s666", "parent": "g_silurus", "ja": "ビワコオオナマズ", "sci": "Silurus biwaensis", "jaStatus": "standard", "aliases": [], "fact": "琵琶湖・淀川水系だけにすむ固有種で、日本最大のナマズ。", "tier": 4, "main": {"tier": 3, "order": 947}}
 {"id": "s667", "parent": "g_silurus", "ja": "イワトコナマズ", "sci": "Silurus lithophilus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s668", "parent": "g_silurus", "ja": "タニガワナマズ", "sci": "Silurus tomodai", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s669", "parent": "g_plotosus", "ja": "ゴンズイ", "sci": "Plotosus japonicus", "jaStatus": "standard", "aliases": [], "fact": "群れで団子のように集まる「ゴンズイ玉」をつくるナマズの仲間。背びれと胸びれのとげに毒がある。", "tier": 1, "main": {"order": 756, "id": "gonzui", "tier": 3}}
@@ -2335,7 +2335,7 @@
 {"id": "s2338", "parent": "g_monopterus", "ja": "タウナギ", "sci": "Monopterus albus", "jaStatus": "standard", "aliases": [], "fact": "ウナギに似た細長い淡水魚。空気呼吸ができる。", "tier": 3, "main": {"order": 575, "id": "taunagi", "tier": 4}}
 {"id": "s2339", "parent": "g_macropodus", "ja": "チョウセンブナ", "sci": "Macropodus ocellatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2340", "parent": "g_macropodus", "ja": "タイワンキンギョ", "sci": "Macropodus opercularis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2341", "parent": "g_channa", "ja": "カムルチー", "sci": "Channa argus", "jaStatus": "standard", "aliases": [], "fact": "空気呼吸ができる外来の淡水魚。ライギョとも呼ばれる。", "tier": 2, "main": {"order": 576, "id": "kamuruchi", "tier": 3}}
+{"id": "s2341", "parent": "g_channa", "ja": "カムルチー", "sci": "Channa argus", "jaStatus": "standard", "aliases": ["ライギョ"], "fact": "空気呼吸ができる外来の淡水魚。ライギョとも呼ばれる。", "tier": 2, "main": {"order": 576, "id": "kamuruchi", "tier": 3}}
 {"id": "s2342", "parent": "g_channa", "ja": "コウタイ", "sci": "Channa asiatica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s2343", "parent": "g_channa", "ja": "タイワンドジョウ", "sci": "Channa maculata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2344", "parent": "g_lates", "ja": "アカメ", "sci": "Lates japonicus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
@@ -3793,7 +3793,7 @@
 {"id": "s3796", "parent": "g_lepomis", "ja": "ブルーギル", "sci": "Lepomis macrochirus macrochirus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s3797", "parent": "g_lepomis", "ja": "ロングイヤーサンフィッシュ", "sci": "Lepomis megalotis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s3798", "parent": "g_micropterus", "ja": "コクチバス", "sci": "Micropterus dolomieu dolomieu", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s3799", "parent": "g_micropterus", "ja": "オオクチバス", "sci": "Micropterus nigricans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s3799", "parent": "g_micropterus", "ja": "オオクチバス", "sci": "Micropterus nigricans", "jaStatus": "standard", "aliases": [], "fact": "北アメリカ原産の外来魚で、特定外来生物に指定されている。", "tier": 1, "main": {"tier": 2, "order": 948}}
 {"id": "s3800", "parent": "g_coreoperca", "ja": "コウライオヤニラミ", "sci": "Coreoperca herzi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s3801", "parent": "g_coreoperca", "ja": "オヤニラミ", "sci": "Coreoperca kawamebari", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s3802", "parent": "g_coreoperca", "ja": "ナンエツオヤニラミ", "sci": "Coreoperca whiteheadi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -4958,18 +4958,18 @@
 {"id": "s4961", "parent": "g_takydromus", "ja": "ニホンカナヘビ", "sci": "Takydromus tachydromoides", "jaStatus": "standard", "aliases": [], "fact": "日本固有種。尾が体の2倍以上長い。", "tier": 2, "main": {"order": 434, "id": "nihonkanahebi"}}
 {"id": "s4962", "parent": "g_takydromus", "ja": "ミヤコカナヘビ", "sci": "Takydromus toyamai", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4963", "parent": "g_zootoca", "ja": "コモチカナヘビ", "sci": "Zootoca vivipara", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s4964", "parent": "g_indotyphlops", "ja": "ブラーミニメクラヘビ", "sci": "Indotyphlops braminus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s4964", "parent": "g_indotyphlops", "ja": "ブラーミニメクラヘビ", "sci": "Indotyphlops braminus", "jaStatus": "standard", "aliases": [], "fact": "体長15 cmほどの、ミミズのような細いヘビ。目は小さく退化している。メスだけで子を残す。植木鉢の土にまぎれて世界中に広がった。", "tier": 2, "main": {"order": 954, "tier": 3}}
 {"id": "s4965", "parent": "g_pareas", "ja": "イワサキセダカヘビ", "sci": "Pareas iwasakii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4966", "parent": "g_achalinus", "ja": "アマミタカチホヘビ", "sci": "Achalinus werneri", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4967", "parent": "g_achalinus", "ja": "タイワンタカチホヘビ", "sci": "Achalinus formosanus", "jaStatus": "standard", "aliases": ["ヤエヤマタカチホヘビ"], "fact": "", "tier": 2}
-{"id": "s4968", "parent": "g_achalinus", "ja": "タカチホヘビ", "sci": "Achalinus spinalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s4968", "parent": "g_achalinus", "ja": "タカチホヘビ", "sci": "Achalinus spinalis", "jaStatus": "standard", "aliases": [], "fact": "森林の落ち葉の下や土の中にすむ小形のヘビ。うろこに虹色の光沢がある。夜に活動し、ミミズを食べる。", "tier": 2, "main": {"order": 950, "tier": 3}}
 {"id": "s4969", "parent": "g_cyclophiops", "ja": "サキシマアオヘビ", "sci": "Cyclophiops herminae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4970", "parent": "g_cyclophiops", "ja": "リュウキュウアオヘビ", "sci": "Cyclophiops semicarinatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s4971", "parent": "g_lycodon", "ja": "アカマタ", "sci": "Lycodon semicarinatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s4971", "parent": "g_lycodon", "ja": "アカマタ", "sci": "Lycodon semicarinatus", "jaStatus": "standard", "aliases": [], "fact": "奄美・沖縄諸島にすむ、赤と黒の帯模様のヘビ。毒はないが気が荒く、ハブを含むほかのヘビやカエルなどを食べる。", "tier": 2, "main": {"order": 955, "tier": 3}}
 {"id": "s4972", "parent": "g_lycodon", "ja": "アカマダラ", "sci": "Lycodon rufozonatus", "jaStatus": "standard", "aliases": ["サキシママダラ"], "fact": "", "tier": 2}
 {"id": "s4973", "parent": "g_lycodon", "ja": "サキシマバイカダ", "sci": "Lycodon multifasciatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s4974", "parent": "g_lycodon", "ja": "シロマダラ", "sci": "Lycodon orientalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s4975", "parent": "g_euprepiophis", "ja": "ジムグリ", "sci": "Euprepiophis conspicillatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s4974", "parent": "g_lycodon", "ja": "シロマダラ", "sci": "Lycodon orientalis", "jaStatus": "standard", "aliases": [], "fact": "白と黒褐色の帯模様がある小形のヘビ。夜に活動し、トカゲなどを食べる。", "tier": 2, "main": {"order": 951, "tier": 3}}
+{"id": "s4975", "parent": "g_euprepiophis", "ja": "ジムグリ", "sci": "Euprepiophis conspicillatus", "jaStatus": "standard", "aliases": [], "fact": "森林の地面や土の中で暮らすヘビ。ネズミの巣穴に潜って獲物を捕らえる。子どもは赤っぽい地に黒い模様が目立つ。", "tier": 2, "main": {"order": 952, "tier": 3}}
 {"id": "s4976", "parent": "g_elaphe", "ja": "アオダイショウ", "sci": "Elaphe climacophora", "jaStatus": "standard", "aliases": [], "fact": "日本最大級のヘビ。毒はない。", "tier": 1, "gbif": 2458390, "groups": ["ヘビ"], "main": {"order": 54, "id": "aodaisho"}}
 {"id": "s4977", "parent": "g_elaphe", "ja": "シマヘビ", "sci": "Elaphe quadrivirgata", "jaStatus": "standard", "aliases": [], "fact": "体に4本の縦じまがある。黒化型はカラスヘビと呼ばれる。", "tier": 2, "gbif": 2458480, "main": {"order": 335, "id": "shimahebi"}}
 {"id": "s4978", "parent": "g_elaphe", "ja": "スジオナメラ", "sci": "Elaphe taeniura", "jaStatus": "standard", "aliases": ["サキシマスジオ", "タイワンスジオ"], "fact": "", "tier": 2}
@@ -4978,7 +4978,7 @@
 {"id": "s4981", "parent": "g_calamaria", "ja": "ミヤコヒメヘビ", "sci": "Calamaria pfefferi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4982", "parent": "g_opisthotropis", "ja": "キクザトサワヘビ", "sci": "Opisthotropis kikuzatoi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4983", "parent": "g_hebius", "ja": "ガラスヒバァ", "sci": "Hebius pryeri", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s4984", "parent": "g_hebius", "ja": "ヒバカリ", "sci": "Hebius vibakari", "jaStatus": "standard", "aliases": ["ダンジョヒバカリ"], "fact": "", "tier": 2}
+{"id": "s4984", "parent": "g_hebius", "ja": "ヒバカリ", "sci": "Hebius vibakari", "jaStatus": "standard", "aliases": ["ダンジョヒバカリ"], "fact": "水辺に多い小形のヘビ。カエルや小魚を食べる。かまれたら命はその日ばかりという俗説から名が付いたが、毒はない。", "tier": 2, "main": {"order": 953, "tier": 3}, "subspeciesAliases": ["ダンジョヒバカリ"]}
 {"id": "s4985", "parent": "g_hebius", "ja": "ミヤコヒバァ", "sci": "Hebius concelarus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4986", "parent": "g_hebius", "ja": "ヤエヤマヒバァ", "sci": "Hebius ishigakiensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4987", "parent": "g_rhabdophis", "ja": "ヤマカガシ", "sci": "Rhabdophis tigrinus", "jaStatus": "standard", "aliases": [], "fact": "奥歯に毒牙をもつ。首の腺にはヒキガエルから取り込んだ毒をためる。", "tier": 2, "gbif": 2452268, "main": {"order": 336, "id": "yamakagashi"}}
@@ -4994,13 +4994,13 @@
 {"id": "s4997", "parent": "g_laticauda", "ja": "エラブウミヘビ", "sci": "Laticauda semifasciata", "jaStatus": "standard", "aliases": [], "fact": "海で暮らすが、産卵は陸の岩の隙間で行う。", "tier": 2, "gbif": 5222129, "main": {"order": 337, "id": "erabuumihebi", "tier": 3}}
 {"id": "s4998", "parent": "g_laticauda", "ja": "ヒロオウミヘビ", "sci": "Laticauda laticaudata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4999", "parent": "g_emydocephalus", "ja": "イイジマウミヘビ", "sci": "Emydocephalus ijimae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s5000", "parent": "g_protobothrops", "ja": "サキシマハブ", "sci": "Protobothrops elegans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s5000", "parent": "g_protobothrops", "ja": "サキシマハブ", "sci": "Protobothrops elegans", "jaStatus": "standard", "aliases": [], "fact": "八重山諸島にすむハブの仲間。ハブより小さく、毒も弱い。", "tier": 2, "main": {"order": 956, "tier": 3}}
 {"id": "s5001", "parent": "g_protobothrops", "ja": "タイワンハブ", "sci": "Protobothrops mucrosquamatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s5002", "parent": "g_protobothrops", "ja": "トカラハブ", "sci": "Protobothrops tokarensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s5002", "parent": "g_protobothrops", "ja": "トカラハブ", "sci": "Protobothrops tokarensis", "jaStatus": "standard", "aliases": [], "fact": "トカラ列島の宝島と小宝島だけにすむハブの仲間。ハブより小さい。", "tier": 2, "main": {"order": 957, "tier": 4}}
 {"id": "s5003", "parent": "g_protobothrops", "ja": "ハブ", "sci": "Protobothrops flavoviridis", "jaStatus": "standard", "aliases": [], "fact": "南西諸島にすむ毒ヘビ。夜に活動する。", "tier": 1, "gbif": 2444178, "groups": ["ヘビ"], "main": {"order": 177, "id": "habu"}}
 {"id": "s5004", "parent": "g_gloydius", "ja": "ツシママムシ", "sci": "Gloydius tsushimaensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s5005", "parent": "g_gloydius", "ja": "ニホンマムシ", "sci": "Gloydius blomhoffii", "jaStatus": "standard", "aliases": ["マムシ"], "fact": "卵ではなく子ヘビを産む。", "tier": 1, "gbif": 8963116, "groups": ["ヘビ"], "main": {"order": 178, "id": "nihonmamushi"}}
-{"id": "s5006", "parent": "g_ovophis", "ja": "ヒメハブ", "sci": "Ovophis okinavensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s5006", "parent": "g_ovophis", "ja": "ヒメハブ", "sci": "Ovophis okinavensis", "jaStatus": "standard", "aliases": [], "fact": "奄美・沖縄諸島にすむ、太く短い体のクサリヘビ。動きが遅く、カエルなどを食べる。毒はハブより弱い。", "tier": 2, "main": {"order": 958, "tier": 3}}
 {"id": "coelacanth", "parent": "g_latimeria_sarcopterygii", "ja": "シーラカンス", "sci": "Latimeria chalumnae", "jaStatus": "standard", "aliases": ["ラティメリア"], "fact": "1938年に南アフリカ沖で生きた個体が見つかった。2013年にゲノムが読まれ、遺伝子の変化がほかの脊椎動物より遅いことが分かった。", "tier": 1, "gbif": 2441273, "main": {"order": 35}}
 {"id": "australiahaigyo", "parent": "g_neoceratodus_dipnoi", "ja": "オーストラリアハイギョ", "sci": "Neoceratodus forsteri", "jaStatus": "standard", "aliases": [], "fact": "鰓に加えて肺で呼吸できる。四肢動物に最も近い現生の魚類の一つ。2021年に読まれたゲノムは約430億塩基対で、ヒトの約14倍ある。", "tier": 2, "gbif": 2441266, "groups": ["ハイギョ"], "main": {"order": 36}}
 {"id": "mukashitokage", "parent": "g_sphenodon_lepidosauria", "ja": "ムカシトカゲ", "sci": "Sphenodon punctatus", "jaStatus": "standard", "aliases": ["トゥアタラ"], "fact": "トカゲに似るが別の目（喙頭目）の唯一の生き残り。", "tier": 2, "gbif": 5227650, "main": {"order": 52}}
@@ -21058,3 +21058,4 @@
 {"id": "hiniageoffrensis", "parent": "g_inia_iniidae", "ja": "アマゾンカワイルカ", "sci": "Inia geoffrensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "hberardiusbairdii", "parent": "g_berardius_ziphiidae", "ja": "ツチクジラ", "sci": "Berardius bairdii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "hziphiuscavirostris", "parent": "g_ziphius_ziphiidae", "ja": "アカボウクジラ", "sci": "Ziphius cavirostris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
+{"id": "hpangasianodongigas", "parent": "g_pangasianodon", "ja": "メコンオオナマズ", "sci": "Pangasianodon gigas", "jaStatus": "common", "aliases": [], "fact": "メコン川流域にすむ世界最大級の淡水魚。野生の数が減り、絶滅寸前とされる。", "verify": {"ja": "標準和名リストの対象外。Wikidata と GBIF（Catalogue of Life）の和名", "sci": "日本産ではないため日本産魚類全種目録の対象外。GBIF・Catalogue of Life で受理名を確認"}, "tier": 3, "gbif": 2340710, "main": {"tier": 3, "order": 949}}

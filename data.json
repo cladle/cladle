@@ -9934,7 +9934,9 @@
    "ja": "カムルチー",
    "sci": "Channa argus",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "ライギョ"
+   ],
    "fact": "空気呼吸ができる外来の淡水魚。ライギョとも呼ばれる。",
    "tier": 3
   },

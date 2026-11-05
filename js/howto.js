@@ -5,39 +5,39 @@
 const DEMOS = { normal: { target: "Trypoxylus dichotomus", guesses: ["Homo sapiens", "Octopus sinensis", "Chionoecetes opilio", "Pieris rapae", "Trypoxylus dichotomus"],
   // 各段階で「次に何を入れるか」の考え方
   think: [
-    "💭 まずは遠い動物で、大きく分けよう。",
-    "💭 ヒトの仲間ではない。反対側の枝のタコはどうだ？",
-    "💭 タコでもない。種の多い節足動物、カニはどうだ？",
-    "💭 カニでもない。同じ汎甲殻類の昆虫、チョウは？",
-    "💭 さなぎになる昆虫まで来た。甲虫のカブトムシだ！",
-    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
+    "まずは遠い動物で、大きく分けよう。",
+    "ヒトの仲間ではない。反対側の枝のタコはどうだ？",
+    "タコでもない。種の多い節足動物、カニはどうだ？",
+    "カニでもない。同じ汎甲殻類の昆虫、チョウは？",
+    "さなぎになる昆虫まで来た。甲虫のカブトムシだ！",
+    "遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
   fish: { target: "Sebastiscus marmoratus", guesses: ["Carcharodon carcharias", "Sardinops melanostictus", "Trachurus japonicus", "Pagrus major", "Chelidonichthys spinosus", "Sebastiscus marmoratus"],
   think: [
-    "💭 まずは遠い魚で、大きく分けよう。サメはどうだ？",
-    "💭 サメの仲間ではない。硬い骨の魚、イワシはどうだ？",
-    "💭 イワシとも別の枝。ひれにとげのある魚、アジは？",
-    "💭 スズキ系まで絞れた。タイの仲間、マダイは？",
-    "💭 マダイと同じ Eupercaria の中。ホウボウはどうだ？",
-    "💭 ペルカ目まで来た。同じ目で、岩場にすむカサゴだ！",
-    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
+    "まずは遠い魚で、大きく分けよう。サメはどうだ？",
+    "サメの仲間ではない。硬い骨の魚、イワシはどうだ？",
+    "イワシとも別の枝。ひれにとげのある魚、アジは？",
+    "スズキ系まで絞れた。タイの仲間、マダイは？",
+    "マダイと同じ Eupercaria の中。ホウボウはどうだ？",
+    "ペルカ目まで来た。同じ目で、岩場にすむカサゴだ！",
+    "遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
   bird: { target: "Zosterops japonicus", guesses: ["Struthio camelus", "Anas platyrhynchos", "Larus crassirostris", "Astur gentilis", "Corvus macrorhynchos", "Zosterops japonicus"],
   think: [
-    "💭 まずは遠い鳥で、大きく分けよう。飛べないダチョウはどうだ？",
-    "💭 ダチョウの仲間ではない。新顎類の中の、カモはどうだ？",
-    "💭 カモの仲間でもない。新鳥類の中の、ウミネコは？",
-    "💭 カモメとも別の枝。タカやスズメの仲間、オオタカはどうだ？",
-    "💭 Telluraves まで来た。種の多いスズメ目の、カラスは？",
-    "💭 スズメ目の中。小さくて目のまわりが白い、メジロだ！",
-    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
+    "まずは遠い鳥で、大きく分けよう。飛べないダチョウはどうだ？",
+    "ダチョウの仲間ではない。新顎類の中の、カモはどうだ？",
+    "カモの仲間でもない。新鳥類の中の、ウミネコは？",
+    "カモメとも別の枝。タカやスズメの仲間、オオタカはどうだ？",
+    "Telluraves まで来た。種の多いスズメ目の、カラスは？",
+    "スズメ目の中。小さくて目のまわりが白い、メジロだ！",
+    "遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] },
   insect: { target: "Coccinella septempunctata", guesses: ["Lepisma saccharinum", "Orthetrum albistylum", "Locusta migratoria", "Pieris rapae", "Trypoxylus dichotomus", "Coccinella septempunctata"],
   think: [
-    "💭 まずは遠い虫で、大きく分けよう。はねの無いセイヨウシミはどうだ？",
-    "💭 はねのある昆虫（有翅昆虫亜綱）の中。シオカラトンボは？",
-    "💭 トンボとも別の枝。新翅類の中の、トノサマバッタは？",
-    "💭 バッタとも別。完全変態類の中の、モンシロチョウはどうだ？",
-    "💭 チョウとも別の枝。種の多いコウチュウ目の、カブトムシは？",
-    "💭 多食亜目まで来た。赤くて星が七つ、ナナホシテントウだ！",
-    "💭 遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] } };
+    "まずは遠い虫で、大きく分けよう。はねの無いセイヨウシミはどうだ？",
+    "はねのある昆虫（有翅昆虫亜綱）の中。シオカラトンボは？",
+    "トンボとも別の枝。新翅類の中の、トノサマバッタは？",
+    "バッタとも別。完全変態類の中の、モンシロチョウはどうだ？",
+    "チョウとも別の枝。種の多いコウチュウ目の、カブトムシは？",
+    "多食亜目まで来た。赤くて星が七つ、ナナホシテントウだ！",
+    "遠くで分けて、緑の点の中で別の枝を選ぶのがコツ。"] } };
 let DEMO = null;
 function demoData() {
   const d = DEMOS[LEVEL] || DEMOS.normal, id = sci => SP.find(s => s.sci === sci)?.id;
@@ -87,7 +87,7 @@ function hardHowto() {
   const s = D.meta.selection;
   return `<section class="hard-rule"><h2>ゲキムズモード（試作）</h2><ul>
     <li>ふつうモードの動物に、日本の魚類・爬虫類・両生類と海の無脊椎動物${(D.meta.counts || {}).land ? "、陸の昆虫・クモ・鳥・貝" : ""}などを加えた ${SP.length.toLocaleString()} 種から出題します。推測にも全種が使えます。${RC() ? "門と綱は、収録している種の数ではなく実際の種数に応じた確率で選びます（門は種数の平方根に比例させて、種数の少ない門も出るようにしています）。" : ""}</li>
-    <li>答えと<b>同じ属</b>の種を入れたらクリア（✅）です。答えの種名はまだ出ないので、続けて種まで当てると 🎯、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
+    <li>答えと<b>同じ属</b>の種を入れたらクリアです。答えの種名はまだ出ないので、続けて種まで当てるのに挑戦でき、終えるときは「答えを見る」を押します。成績は属を当てた回数で記録し、種まで当てた回数も残します。</li>
     <li>推測は ${MAX} 回まで。属でクリアしたあとは、それとは別に<b>種探しが ${HUNT} 回</b>あり、その属にあと何種いるかも出ます。</li>
     <li>1回目のヒントはふつうモードと同じです。2回目は、答えへの道で今より一段先の節目を教えます。学名だけの節目なら、その中の和名のある種も2つまで例に出します。一段先が属のときは属を開かず、代わりに和名の手がかり（文字数と終わり方）を出します。</li>
     <li>和名のない属や科は学名で表示します。</li></ul></section>`;
@@ -115,7 +115,7 @@ function demoShow(i, typing) {
     const word = N[next].ja.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
     let k = 0; typed.textContent = "";
     const step = () => { if (view !== "howto") return; typed.textContent = word.slice(0, ++k); if (k < word.length) demoTimer = setTimeout(step, 110); else demoTimer = setTimeout(() => demoShow(demoI + 1, true), 700); };
-    // 説明と💭を読み終えられるだけ待ってから次を打ち始める（1文字およそ0.08秒）
+    // 説明と考え方を読み終えられるだけ待ってから次を打ち始める（1文字およそ0.08秒）
     // 1手目は遊び方をすぐ見せるため、説明を待たずに打ち始める
     demoTimer = setTimeout(step, !demoI ? 700 : Math.max(2400, treeHTML.animEnd * 1000 + 1200, 1000 + (cap.length + (DEMO.think[demoI] || "").length) * 80));
   } else typed.textContent = next ? "" : "";

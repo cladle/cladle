@@ -57,7 +57,7 @@ async function copyShare() {
   const t = shareText(), b = $("#copy");
   if (navigator.share && matchMedia("(pointer: coarse)").matches) { try { await navigator.share({ text: t }); track(mode + "-share"); return; } catch (e) { if (e.name === "AbortError") return; } }
   try { await navigator.clipboard.writeText(t); track(mode + "-share"); b.textContent = "コピーしました"; setTimeout(() => b.textContent = "結果を共有", 2000); }
-  catch (e) { const r = document.createRange(); r.selectNodeContents($("#shareText")); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
+  catch (e) { const p = $("#shareText"); p.hidden = false; const r = document.createRange(); r.selectNodeContents(p); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "選択しました（長押しでコピー）"; }
 }
 
 // ゲキムズのデータ（約20,000種）は大きいので、ボタンに触れた時点や、前にゲキムズで遊んだ人には空いた時間に先に読んでおく
@@ -90,7 +90,7 @@ function applyLevel() {
   $("#level").hidden = BIG() && !h;  // 番外編で遊んでいる間はゲキムズのボタンを隠す（戻るのは説明の「ふつうモードに戻る」から）
   document.documentElement.classList.toggle("hard", h); document.documentElement.classList.toggle("fish", FISH()); document.documentElement.classList.toggle("bird", BIRD()); document.documentElement.classList.toggle("insect", INSECT());
   $("#levelNote").hidden = !BIG();
-  if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、種まで当てれば 🎯。`;
+  if (h) $("#levelNote").innerHTML = `<b>ゲキムズ（試作）</b>：${SP.length.toLocaleString()} 種の動物から出題。同じ属でクリア、そのあと種まで当てられるかに挑戦できます。`;
   if (FISH()) $("#levelNote").innerHTML = `<b>魚編（試作）</b>：魚類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   if (BIRD()) $("#levelNote").innerHTML = `<b>鳥編（試作）</b>：鳥類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
   if (INSECT()) $("#levelNote").innerHTML = `<b>昆虫編（試作）</b>：昆虫類 ${SP.length.toLocaleString()} 種から出題。種まで当てれば正解。<button class="back" id="backNormal">ふつうモードに戻る</button>`;
@@ -130,3 +130,18 @@ loadData().then(async data => {
 }).catch(err => {
   $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });
+
+// ---- 文と文の間のスペース ----
+// 「。」「！」「？」のあとに続きの文があるときは半角スペースを入れて読みやすくする（作者の判断、全モード共通）。
+// 元のデータの文は変えず、画面に出た文字にだけ入れる。入力欄・共有文の見本・スクリプトには触らない
+const SENT_GAP = /([。！？])(?=[^\s。！？」』）)\]、，,.])/g;
+function addSentenceGaps(root) {
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: n =>
+    n.parentElement?.closest("script, style, pre, textarea, input") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  for (let n; (n = w.nextNode());) { SENT_GAP.lastIndex = 0; if (SENT_GAP.test(n.data)) n.data = n.data.replace(SENT_GAP, "$1 "); }
+}
+addSentenceGaps(document.body);
+new MutationObserver(ms => { for (const m of ms) {
+  if (m.type === "characterData") addSentenceGaps(m.target.parentNode || document.body);
+  else m.addedNodes.forEach(n => addSentenceGaps(n.nodeType === 3 ? n.parentNode || document.body : n));
+} }).observe(document.body, { childList: true, subtree: true, characterData: true });
