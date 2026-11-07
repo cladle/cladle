@@ -47,7 +47,11 @@
    },
    "bucketWeight": "sqrt"
   },
-  "datasetVersion": "0.3.21"
+  "datasetVersion": "0.3.21",
+  "next": {
+   "from": "2026-11-08",
+   "file": "data-0.3.22.json"
+  }
  },
  "clades": [
   {
