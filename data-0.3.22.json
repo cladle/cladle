@@ -2676,7 +2676,7 @@
    "ja": "Colubroidea",
    "sci": "Colubroidea",
    "rank": "上科",
-   "desc": "",
+   "desc": "タカチホヘビ科・セダカヘビ科・クサリヘビ科・ナミヘビ科・コブラ科などをまとめた群。Acrochordidae が姉妹群とされるが、タカチホヘビ科が Acrochordidae と姉妹群になってこの群が単系統群にならない、という解析もある。この範囲を Colubroides と呼び、Colubroidea はナミヘビ科に近い群だけに使う研究もある。",
    "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"
   },
   {
@@ -2685,7 +2685,7 @@
    "ja": "ヤモリ科",
    "sci": "Gekkonidae",
    "rank": "科",
-   "desc": ""
+   "desc": "Gekkota の中の科。以前はトカゲモドキ類なども含めて広くヤモリ科としていたが、遺伝子の解析でトカゲモドキ科・Sphaerodactylidae・Phyllodactylidae がそれぞれ別のまとまりになったので、今のヤモリ科はその一部にあたる。"
   },
   {
    "id": "f_agamidae",
@@ -2693,7 +2693,7 @@
    "ja": "アガマ科",
    "sci": "Agamidae",
    "rank": "科",
-   "desc": ""
+   "desc": "カメレオン科と姉妹群で、あわせて Acrodonta と呼ばれる。アガマ科が単系統群であることは遺伝子の解析で強く支持されている。"
   },
   {
    "id": "f_iguanidae",
@@ -2701,7 +2701,7 @@
    "ja": "イグアナ科",
    "sci": "Iguanidae",
    "rank": "科",
-   "desc": ""
+   "desc": "Iguania のうち、主に南北アメリカにすむ科をまとめた Pleurodonta に入る科の一つ。Pleurodonta の中の科どうしの関係は、研究によって大きく異なり、まだ定まっていない。"
   },
   {
    "id": "f_corytophanidae",
@@ -2709,7 +2709,7 @@
    "ja": "Corytophanidae",
    "sci": "Corytophanidae",
    "rank": "科",
-   "desc": ""
+   "desc": "バシリスクなどの科。Pleurodonta に入る。一番近い科がアノール類の Dactyloidae か、Crotaphytidae かは、解析によって異なる。"
   },
   {
    "id": "f_chamaeleonidae",
@@ -2717,7 +2717,7 @@
    "ja": "Chamaeleonidae",
    "sci": "Chamaeleonidae",
    "rank": "科",
-   "desc": ""
+   "desc": "カメレオンの科。アガマ科と姉妹群で、あわせて Acrodonta と呼ばれる。"
   },
   {
    "id": "f_scincidae",
@@ -2725,7 +2725,7 @@
    "ja": "トカゲ科",
    "sci": "Scincidae",
    "rank": "科",
-   "desc": ""
+   "desc": "トカゲ類で最も種の多い科。Xantusiidae・Gerrhosauridae・Cordylidae とともに Scincoidea をつくる。"
   },
   {
    "id": "f_lacertidae",
@@ -2733,7 +2733,7 @@
    "ja": "カナヘビ科",
    "sci": "Lacertidae",
    "rank": "科",
-   "desc": ""
+   "desc": "ユーラシアとアフリカ（旧世界）のトカゲの科。遺伝子の解析では、ミミズトカゲ類（Amphisbaenia）と姉妹群になる。"
   },
   {
    "id": "f_typhlopidae",
@@ -2741,7 +2741,7 @@
    "ja": "メクラヘビ科",
    "sci": "Typhlopidae",
    "rank": "科",
-   "desc": ""
+   "desc": "「メクラヘビ類」（Scolecophidia）と呼ばれてきたヘビの一群。Xenotyphlopidae と姉妹群で、Gerrhopilidae・Leptotyphlopidae とまとまり、ヘビの中で早くに分かれた系統とされる。昔のメクラヘビ類全体は単系統群ではない。"
   },
   {
    "id": "f_xenodermidae",
@@ -2749,7 +2749,7 @@
    "ja": "タカチホヘビ科",
    "sci": "Xenodermidae",
    "rank": "科",
-   "desc": ""
+   "desc": "Colubroidea の中で最初に分かれた科とされる。ただし Acrochordidae と姉妹群とする解析もあり、位置はまだ定まっていない。"
   },
   {
    "id": "f_colubridae",
@@ -2757,7 +2757,7 @@
    "ja": "ナミヘビ科",
    "sci": "Colubridae",
    "rank": "科",
-   "desc": ""
+   "desc": "ナミヘビ亜科・ユウダ亜科・ヒメヘビ亜科などを含む科。コブラ科などとまとまり、クサリヘビ科はその外側で分かれる。亜科をそれぞれ独立した科として扱う研究もある。"
   },
   {
    "id": "f_elapidae",
@@ -2765,7 +2765,7 @@
    "ja": "コブラ科",
    "sci": "Elapidae",
    "rank": "科",
-   "desc": ""
+   "desc": "キングコブラやウミヘビ類を含む科。Lamprophiidae と姉妹群になり、ナミヘビ科とは別の系統である。"
   },
   {
    "id": "f_pythonidae",
@@ -2773,7 +2773,7 @@
    "ja": "Pythonidae",
    "sci": "Pythonidae",
    "rank": "科",
-   "desc": ""
+   "desc": "ニシキヘビの科。ボア科とは別の科で、Loxocemidae と姉妹群になり、さらに Xenopeltidae とまとまる。アミメニシキヘビは、遺伝子の解析で Python 属から外れ、オーストラリアなどのニシキヘビ類に近いことが分かった。"
   },
   {
    "id": "f_varanidae",
@@ -2781,7 +2781,7 @@
    "ja": "Varanidae",
    "sci": "Varanidae",
    "rank": "科",
-   "desc": ""
+   "desc": "オオトカゲ類の科。Lanthanotidae と姉妹群で、その外側で Shinisauridae が分かれ、これらは Anguimorpha に入る。Anguimorpha は Iguania やヘビとともに Toxicofera をつくる。"
   }
  ],
  "species": [
