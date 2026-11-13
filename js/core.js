@@ -70,17 +70,19 @@ function build(data) {
 // 実際の種数で群を選ぶ（meta.selection.realCounts、tools/real_counts.py が数える）
 // 収録数の多い・少ないに左右されないよう、群（ranks[0]、例：門・目）を実際の種数（top が "sqrt" ならその平方根）に比例して選び、
 // 群の中は ranks[1]（例：綱）の実際の種数に比例して選ぶ。ranks[1] の無い種・数の無い群の種は「残り」にまとめ、
-// 群の種数から中の群の種数を引いた数を重みにする。ranks[0] の節目が上に無い種は groups にある節目を群にする。最後に、選んだまとまりの中から知名度の重みで種を選ぶ
+// 群の種数から中の群の種数を引いた数を重みにする。groups にある節目の中の種は、その節目を群にする。最後に、選んだまとまりの中から知名度の重みで種を選ぶ
 function byRealCounts(rc, tw) {
   const [r0, r1] = rc.ranks, n = sci => rc.n[sci], extra = rc.groups || [];
+  // groups にある節目の中の種は、その下に ranks[0] の節目があっても groups の節目を群にする（魚編の肉鰭類）
+  const grp = up => up.find(id => extra.includes(N[id].sci)) || up.find(id => N[id].rank === r0);
   const top = {}, sub = {};
   for (const c of Object.values(N)) if (c.kind === "clade" && c.rank === r1 && n(c.sci) != null) {
-    const t = path(c.id).reverse().find(id => N[id].rank === r0 || extra.includes(N[id].sci));
+    const t = grp(path(c.id).reverse());
     if (t) sub[t] = (sub[t] || 0) + n(c.sci);
   }
   for (const s of SP) {
     if (s.answerable === false) continue;
-    const p = path(s.id).reverse(), t = p.find(id => N[id].rank === r0 || extra.includes(N[id].sci));
+    const p = path(s.id).reverse(), t = grp(p);
     let u = r1 && p.find(id => N[id].rank === r1);
     if (!u || n(N[u].sci) == null) u = "_rest";
     if (!t || n(N[t].sci) == null) continue;  // 数の無い群は出さない（tools/check.py が知らせる）

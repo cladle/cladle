@@ -28,7 +28,7 @@ MODES = {
     "bird": {"file": "data-bird.json", "ranks": ["目"]},
     "insect": {"file": "data-insect.json", "ranks": ["目"]},
     # 魚編は日本産魚類全種目録の全種が入っているので、収録数がそのまま日本の種数。問い合わせずにデータから数える。
-    # 目の無いシーラカンス・ハイギョは肉鰭類（groups）を一つの群にする
+    # シーラカンス・ハイギョは肉鰭類（groups）で一つの群にする（シーラカンス目・ケラトドゥス目の下でも）
     "fish": {"file": "data-fish.json", "ranks": ["目"], "self": True, "groups": ["Sarcopterygii"]},
 }
 FISH_SOURCE = "本村浩之（2026）日本産魚類全種目録 Online ver. 42 に載る種（魚編は全種を収録しているので、収録数を種数とした）"
@@ -108,9 +108,12 @@ def apply(data, mode, top="linear"):
 def group(C, p, rc, r=None):
     """種の親 p から上へたどって、階級 r（省略時は外側の群の階級）の節目か、groups にある節目を返す"""
     r = r or rc["ranks"][0]; extra = rc.get("groups", []) if r == rc["ranks"][0] else []
-    while p:
-        if C[p].get("rank") == r or C[p]["sci"] in extra: return C[p]
-        p = C[p]["parent"]
+    hit, q = None, p
+    while q:  # groups にある節目の中なら、その下に目があっても groups の節目を群にする
+        if C[q]["sci"] in extra: return C[q]
+        if hit is None and C[q].get("rank") == r: hit = C[q]
+        q = C[q]["parent"]
+    return hit
 
 def probs(data):
     """js/core.js の byRealCounts と同じ計算で、種ごとの出題確率を返す（確認用）。数の無い群は missing に入れる"""
