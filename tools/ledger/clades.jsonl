@@ -31,7 +31,7 @@
 {"id": "actinopterygii", "parent": "osteichthyes", "ja": "条鰭綱", "sci": "Actinopterygii", "rank": "綱", "desc": "鰭が放射状の鰭条で支えられる魚。脊椎動物の種数の約半分を占める。姉妹群の肉鰭類と違い、ひれの付け根に肉質の部分や太い骨がない。", "main": {"order": 30}}
 {"id": "teleostei", "parent": "neopterygii", "ja": "真骨類", "sci": "Teleostei", "rank": "クレード", "desc": "条鰭類の大部分を占めるグループ。祖先で全ゲノム重複が起きた。近縁のガー目などと違い、尾びれが上下対称に見え（正尾）、上あごの一部の骨が動いて口を前に突き出せるものが多い。", "main": {"order": 31}}
 {"id": "clupeocephala", "parent": "teleostei", "ja": "Clupeocephala", "sci": "Clupeocephala", "rank": "クレード", "desc": "真骨類のうちカライワシ類・アロワナ類以外。近縁のカライワシ上目やアロワナ目と見た目で分ける決め手は乏しく、主に遺伝子の解析と、あごや尾の骨の細かなつくりでまとまる。", "verify": {"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"}, "main": {"order": 32}}
-{"id": "percomorpha", "parent": "acanthopterygii", "ja": "スズキ系", "sci": "Percomorpha", "rank": "クレード", "desc": "棘鰭類の中心となる大きなグループ。ペルカ目（Perciformes）のほか、フグ目・ダツ目・ハゼ目・アジ目（ヒラメ・カレイ類を含む）など多くの目を含む。近縁のキンメダイ目などと見た目の共通点は乏しく、主に遺伝子の解析でまとまる。手がかりは、腹びれが胸びれのすぐ下にあり、棘1本と軟条5本でできること。", "polytomy": "スズキ系の中は、ここでは目・科の節目だけを置いて多分岐で示す。", "main": {"order": 33}}
+{"id": "percomorpha", "parent": "acanthopterygii", "ja": "Percomorpha", "sci": "Percomorpha", "rank": "クレード", "desc": "棘鰭類の中心となる大きなグループ。ペルカ目（Perciformes）のほか、フグ目・ダツ目・ハゼ目・アジ目（ヒラメ・カレイ類を含む）など多くの目を含む。近縁のキンメダイ目などと見た目の共通点は乏しく、主に遺伝子の解析でまとまる。手がかりは、腹びれが胸びれのすぐ下にあり、棘1本と軟条5本でできること。", "polytomy": "Percomorphaの中は、ここでは目・科の節目だけを置いて多分岐で示す。", "main": {"order": 33}, "verify": {"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"}}
 {"id": "sarcopterygii", "parent": "osteichthyes", "ja": "肉鰭類", "sci": "Sarcopterygii", "rank": "クレード", "desc": "肉質の鰭をもつ魚と、その子孫である四肢動物。姉妹群の条鰭綱と違い、胸びれ・腹びれの付け根に太い骨と筋肉があり、それが四肢動物の脚のもとになった。", "main": {"order": 34}}
 {"id": "rhipidistia", "parent": "sarcopterygii", "ja": "Rhipidistia", "sci": "Rhipidistia", "rank": "クレード", "desc": "ハイギョと四肢動物をまとめたクレード。もう一つの肉鰭類であるシーラカンスより互いに近い。見た目の共通点は少なく、主に遺伝子の解析でまとまる。手がかりは、鼻の穴が口の中に通じる（内鼻孔）ことと、肺で呼吸すること。", "verify": {"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"}, "main": {"order": 35}}
 {"id": "tetrapoda", "parent": "rhipidistia", "ja": "四肢動物", "sci": "Tetrapoda", "rank": "クレード", "desc": "四肢をもつ（または祖先がもっていた）脊椎動物。近縁のハイギョ類と違い、ひれのかわりに指のある脚をもち、首の骨で頭を動かせる。", "main": {"order": 36}}
@@ -126,7 +126,7 @@
 {"id": "batoidea", "parent": "elasmobranchii", "ja": "エイ類", "sci": "Batoidea", "rank": "クレード", "desc": "エイの仲間。体が平たく、鰓孔が腹側に開く。姉妹群のサメ類と違い、胸びれが頭の横に癒合して体の縁まで広がる。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。", "verify": {"ja": "階級なしのクレードとして使用"}, "main": {"order": 125, "polytomy": null}}
 {"id": "otomorpha", "parent": "clupeocephala", "ja": "Otomorpha", "sci": "Otomorpha", "rank": "クレード", "desc": "ニシン類と、コイ・ナマズなどの骨鰾類をまとめたクレード。姉妹群の正真骨類とは見た目の共通点が乏しく、主に遺伝子の解析でまとまる。手がかりは、うきぶくろと内耳がつながっているものが多いこと。", "verify": {"ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"}, "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。", "main": {"order": 126, "polytomy": null}}
 {"id": "ostariophysi", "parent": "otomorpha", "ja": "骨鰾類", "sci": "Ostariophysi", "rank": "上目", "desc": "うきぶくろと内耳を小骨（ウェーバー器官）でつなぎ、音をよく聞く。淡水魚の多くを占める。近縁のニシン目と違い、うきぶくろの振動を背骨の一部が変わった小骨で耳に伝える。けがをすると皮膚から仲間に危険を知らせる物質を出す。", "main": {"order": 128}}
-{"id": "euteleostei", "parent": "clupeocephala", "ja": "正真骨類", "sci": "Euteleostei", "rank": "クレード", "desc": "サケ・タラ・スズキの仲間など、真骨類の大部分を含むクレード。姉妹群のOtomorpha（ニシン・コイ・ナマズ）と見た目の共通点は乏しく、主に遺伝子の解析でまとまる。", "polytomy": "サケ目・キュウリウオ目・タラ目とスズキ系の関係は、ここでは多分岐で示す。", "main": {"order": 129}}
+{"id": "euteleostei", "parent": "clupeocephala", "ja": "正真骨類", "sci": "Euteleostei", "rank": "クレード", "desc": "サケ・タラ・スズキの仲間など、真骨類の大部分を含むクレード。姉妹群のOtomorpha（ニシン・コイ・ナマズ）と見た目の共通点は乏しく、主に遺伝子の解析でまとまる。", "polytomy": "サケ目・キュウリウオ目・タラ目とPercomorphaの関係は、ここでは多分岐で示す。", "main": {"order": 129}}
 {"id": "anura", "parent": "amphibia", "ja": "無尾目", "sci": "Anura", "rank": "目", "desc": "カエル。成体は尾がなく、後ろ脚が長い。姉妹群の有尾目と違い、背骨が短く、後ろ脚で跳ぶ。幼生（オタマジャクシ）は口に角質のくちばしをもち、藻などを食べる。", "main": {"order": 133}}
 {"id": "caudata", "parent": "amphibia", "ja": "有尾目", "sci": "Caudata", "rank": "目", "desc": "サンショウウオとイモリ。成体にも尾がある。姉妹群の無尾目と違い、体が細長く、前脚と後ろ脚の長さがほぼ同じで、体をくねらせて歩く。", "main": {"order": 134}}
 {"id": "xenarthra", "parent": "placentalia", "ja": "異節類", "sci": "Xenarthra", "rank": "クレード", "desc": "アルマジロ・ナマケモノ・アリクイ。南米で多様化した。近縁の北方真獣類・アフリカ獣類と違い、腰の背骨に余分な関節（異節）があり、歯にエナメル質がないか、歯そのものがない。", "main": {"order": 135}}
@@ -281,12 +281,12 @@
 {"id": "neoteleostei", "parent": "euteleostei", "ja": "Neoteleostei", "sci": "Neoteleostei", "rank": "クレード", "desc": "ヒメ目・ハダカイワシ目・棘鰭類などをまとめたクレード。サケ目・ニギス目・キュウリウオ目と違い、鰓弓を後ろへ引く筋肉（背側牽引筋）をもつ。"}
 {"id": "eurypterygii", "parent": "neoteleostei", "ja": "Eurypterygii", "sci": "Eurypterygii", "rank": "クレード", "desc": "ヒメ目と、ハダカイワシ目・棘鰭類をまとめたクレード。姉妹群のシャチブリ目とは見た目ではっきり分けられず、主に骨格の細かな特徴と遺伝子の解析でまとまる。"}
 {"id": "ctenosquamata", "parent": "eurypterygii", "ja": "Ctenosquamata", "sci": "Ctenosquamata", "rank": "クレード", "desc": "ハダカイワシ目と棘鰭類をまとめたクレード。名前は櫛鱗（ふちに細かいとげのある鱗）に由来するが、姉妹群のヒメ目との違いは主に骨格の細かな特徴と遺伝子の解析による。"}
-{"id": "acanthomorpha", "parent": "ctenosquamata", "ja": "Acanthomorpha", "sci": "Acanthomorpha", "rank": "クレード", "desc": "タラ目・マトウダイ目・スズキ系などをまとめたクレード。姉妹群のハダカイワシ目と違い、背びれ・しりびれ・腹びれの前のほうに節のない硬い棘（とげ）をもつ（タラ目などでは失われた）。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
-{"id": "acanthopterygii", "parent": "acanthomorpha", "ja": "Acanthopterygii", "sci": "Acanthopterygii", "rank": "クレード", "desc": "キンメダイ目・ヒウチダイ目とスズキ系をまとめたクレード。近縁のタラ目・アカマンボウ目・マトウダイ目などとは見た目の共通点で分けにくく、主に遺伝子の解析でまとまる。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
-{"id": "anabantaria", "parent": "percomorpha", "ja": "Anabantaria", "sci": "Anabantaria", "rank": "クレード", "desc": "タウナギ目とキノボリウオ目をまとめたクレード。近縁のスズキ系の群とは遺伝子の解析で分かれ、空気を吸って呼吸できる種が多い。"}
-{"id": "ovalentaria", "parent": "percomorpha", "ja": "Ovalentaria", "sci": "Ovalentaria", "rank": "クレード", "desc": "スズキ系の中のクレードで、ボラ目・ギンポ目・ダツ目・カワスズメ目などをまとめる。遺伝子の解析でまとまった群だが、粘着性の糸のついた卵を産む種が多く、名前もそれに由来する。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
+{"id": "acanthomorpha", "parent": "ctenosquamata", "ja": "Acanthomorpha", "sci": "Acanthomorpha", "rank": "クレード", "desc": "タラ目・マトウダイ目・Percomorphaなどをまとめたクレード。姉妹群のハダカイワシ目と違い、背びれ・しりびれ・腹びれの前のほうに節のない硬い棘（とげ）をもつ（タラ目などでは失われた）。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
+{"id": "acanthopterygii", "parent": "acanthomorpha", "ja": "Acanthopterygii", "sci": "Acanthopterygii", "rank": "クレード", "desc": "キンメダイ目・ヒウチダイ目とPercomorphaをまとめたクレード。近縁のタラ目・アカマンボウ目・マトウダイ目などとは見た目の共通点で分けにくく、主に遺伝子の解析でまとまる。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
+{"id": "anabantaria", "parent": "percomorpha", "ja": "Anabantaria", "sci": "Anabantaria", "rank": "クレード", "desc": "タウナギ目とキノボリウオ目をまとめたクレード。近縁のPercomorphaの群とは遺伝子の解析で分かれ、空気を吸って呼吸できる種が多い。"}
+{"id": "ovalentaria", "parent": "percomorpha", "ja": "Ovalentaria", "sci": "Ovalentaria", "rank": "クレード", "desc": "Percomorphaの中のクレードで、ボラ目・ギンポ目・ダツ目・カワスズメ目などをまとめる。遺伝子の解析でまとまった群だが、粘着性の糸のついた卵を産む種が多く、名前もそれに由来する。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
 {"id": "atherinomorpha", "parent": "ovalentaria", "ja": "Atherinomorpha", "sci": "Atherinomorpha", "rank": "クレード", "desc": "トウゴロウイワシ目・ダツ目・カダヤシ目をまとめたクレード。サンマ・トビウオ・メダカ・グッピーなどを含む。上あごの骨のつくりなどでまとまり、近縁のボラ目やギンポ目とは遺伝子の解析でも分かれる。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
-{"id": "eupercaria", "parent": "percomorpha", "ja": "Eupercaria", "sci": "Eupercaria", "rank": "クレード", "desc": "スズキ系の中の大きなクレードで、ペルカ目（カサゴ・アイナメなどを含む）・ベラ目・ニザダイ目・フグ目・アンコウ目などをまとめる。近縁のハゼ目・アジ目などとの見た目の共通点は無く、遺伝子の解析でまとまる。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
+{"id": "eupercaria", "parent": "percomorpha", "ja": "Eupercaria", "sci": "Eupercaria", "rank": "クレード", "desc": "Percomorphaの中の大きなクレードで、ペルカ目（カサゴ・アイナメなどを含む）・ベラ目・ニザダイ目・フグ目・アンコウ目などをまとめる。近縁のハゼ目・アジ目などとの見た目の共通点は無く、遺伝子の解析でまとまる。", "polytomy": "この中の分かれる順は研究によって結果が分かれるため、ここでは決めずに並べています。"}
 {"id": "durocryptodira", "parent": "testudines", "ja": "Durocryptodira", "sci": "Durocryptodira", "rank": "クレード", "desc": "ウミガメ・イシガメ・リクガメなどをまとめたカメのクレード。近縁のスッポン科やカミツキガメ科とは遺伝子の解析で分かれる。"}
 {"id": "chelonioidea", "parent": "durocryptodira", "ja": "Chelonioidea", "sci": "Chelonioidea", "rank": "上科", "desc": ""}
 {"id": "testudinoidea", "parent": "durocryptodira", "ja": "Testudinoidea", "sci": "Testudinoidea", "rank": "上科", "desc": ""}
@@ -978,7 +978,7 @@
 {"id": "g_hoplostethus", "parent": "f_trachichthyidae", "ja": "Hoplostethus", "sci": "Hoplostethus", "rank": "属", "desc": ""}
 {"id": "f_anoplogastridae", "parent": "o_trachichthyiformes", "ja": "オニキンメ科", "sci": "Anoplogastridae", "rank": "科", "desc": ""}
 {"id": "g_anoplogaster", "parent": "f_anoplogastridae", "ja": "Anoplogaster", "sci": "Anoplogaster", "rank": "属", "desc": ""}
-{"id": "o_beryciformes", "parent": "acanthopterygii", "ja": "キンメダイ目", "sci": "Beryciformes", "rank": "目", "desc": "キンメダイ類やイットウダイ類。近縁のスズキ系と違い、腹びれの軟条が6本以上ある（スズキ系は5本）。深い海や夜に活動するものが多く、目が大きい。", "main": {"order": 248, "id": "beryciformes"}}
+{"id": "o_beryciformes", "parent": "acanthopterygii", "ja": "キンメダイ目", "sci": "Beryciformes", "rank": "目", "desc": "キンメダイ類やイットウダイ類。近縁のPercomorphaと違い、腹びれの軟条が6本以上ある（Percomorphaは5本）。深い海や夜に活動するものが多く、目が大きい。", "main": {"order": 248, "id": "beryciformes"}}
 {"id": "f_holocentridae", "parent": "o_beryciformes", "ja": "イットウダイ科", "sci": "Holocentridae", "rank": "科", "desc": "", "main": {"order": 505}}
 {"id": "g_myripristis", "parent": "f_holocentridae", "ja": "Myripristis", "sci": "Myripristis", "rank": "属", "desc": ""}
 {"id": "g_neoniphon", "parent": "f_holocentridae", "ja": "Neoniphon", "sci": "Neoniphon", "rank": "属", "desc": ""}
@@ -1010,7 +1010,7 @@
 {"id": "g_gyrinomimus", "parent": "f_cetomimidae", "ja": "Gyrinomimus", "sci": "Gyrinomimus", "rank": "属", "desc": ""}
 {"id": "g_gyrinomius", "parent": "f_cetomimidae", "ja": "Gyrinomius", "sci": "Gyrinomius", "rank": "属", "desc": ""}
 {"id": "g_vitiaziella", "parent": "f_cetomimidae", "ja": "Vitiaziella", "sci": "Vitiaziella", "rank": "属", "desc": ""}
-{"id": "o_ophidiiformes", "parent": "percomorpha", "ja": "アシロ目", "sci": "Ophidiiformes", "rank": "目", "desc": "アシロ類やカクレウオ類。近縁のスズキ系の目と違い、体が細長く、腹びれは小さく喉の近くにあるか無く、背びれ・尻びれが尾びれとつながる。カクレウオはナマコの体内にすむ。", "main": {"order": 249, "id": "ophidiiformes"}}
+{"id": "o_ophidiiformes", "parent": "percomorpha", "ja": "アシロ目", "sci": "Ophidiiformes", "rank": "目", "desc": "アシロ類やカクレウオ類。近縁のPercomorphaの目と違い、体が細長く、腹びれは小さく喉の近くにあるか無く、背びれ・尻びれが尾びれとつながる。カクレウオはナマコの体内にすむ。", "main": {"order": 249, "id": "ophidiiformes"}}
 {"id": "f_acanthonidae", "parent": "o_ophidiiformes", "ja": "ハナトゲアシロ科", "sci": "Acanthonidae", "rank": "科", "desc": ""}
 {"id": "g_acanthonus", "parent": "f_acanthonidae", "ja": "Acanthonus", "sci": "Acanthonus", "rank": "属", "desc": ""}
 {"id": "g_xyelacyba", "parent": "f_acanthonidae", "ja": "Xyelacyba", "sci": "Xyelacyba", "rank": "属", "desc": ""}
@@ -1066,7 +1066,7 @@
 {"id": "g_alionematichthys", "parent": "f_dinematichthyidae", "ja": "Alionematichthys", "sci": "Alionematichthys", "rank": "属", "desc": ""}
 {"id": "g_diancistrus", "parent": "f_dinematichthyidae", "ja": "Diancistrus", "sci": "Diancistrus", "rank": "属", "desc": ""}
 {"id": "g_dinematichthys", "parent": "f_dinematichthyidae", "ja": "Dinematichthys", "sci": "Dinematichthys", "rank": "属", "desc": ""}
-{"id": "o_gobiiformes", "parent": "percomorpha", "ja": "ハゼ目", "sci": "Gobiiformes", "rank": "目", "desc": "ハゼの仲間。腹びれが吸盤状になるものが多い。近縁のスズキ系の目と違い、ハゼ類の多くは側線の管が頭にしかなく、多くは海底や川底で暮らす小魚。テンジクダイ類もこの目に入る。", "main": {"order": 215, "id": "gobiiformes"}}
+{"id": "o_gobiiformes", "parent": "percomorpha", "ja": "ハゼ目", "sci": "Gobiiformes", "rank": "目", "desc": "ハゼの仲間。腹びれが吸盤状になるものが多い。近縁のPercomorphaの目と違い、ハゼ類の多くは側線の管が頭にしかなく、多くは海底や川底で暮らす小魚。テンジクダイ類もこの目に入る。", "main": {"order": 215, "id": "gobiiformes"}}
 {"id": "f_apogonidae", "parent": "o_gobiiformes", "ja": "テンジクダイ科", "sci": "Apogonidae", "rank": "科", "desc": "", "main": {"order": 508}}
 {"id": "g_amioides", "parent": "f_apogonidae", "ja": "Amioides", "sci": "Amioides", "rank": "属", "desc": ""}
 {"id": "g_apogon", "parent": "f_apogonidae", "ja": "Apogon", "sci": "Apogon", "rank": "属", "desc": ""}
@@ -1246,7 +1246,7 @@
 {"id": "g_oxymetopon", "parent": "sf_ptereleotrinae", "ja": "Oxymetopon", "sci": "Oxymetopon", "rank": "属", "desc": ""}
 {"id": "g_parioglossus", "parent": "sf_ptereleotrinae", "ja": "Parioglossus", "sci": "Parioglossus", "rank": "属", "desc": ""}
 {"id": "g_ptereleotris", "parent": "sf_ptereleotrinae", "ja": "Ptereleotris", "sci": "Ptereleotris", "rank": "属", "desc": ""}
-{"id": "o_syngnathiformes", "parent": "percomorpha", "ja": "ヨウジウオ目", "sci": "Syngnathiformes", "rank": "目", "desc": "ヨウジウオ・タツノオトシゴ・ヘラヤガラなど。雄が卵を守る種が多い。近縁のスズキ系の目と違い、口が管のように細長く伸びたものが多い。", "main": {"order": 250, "id": "syngnathiformes"}}
+{"id": "o_syngnathiformes", "parent": "percomorpha", "ja": "ヨウジウオ目", "sci": "Syngnathiformes", "rank": "目", "desc": "ヨウジウオ・タツノオトシゴ・ヘラヤガラなど。雄が卵を守る種が多い。近縁のPercomorphaの目と違い、口が管のように細長く伸びたものが多い。", "main": {"order": 250, "id": "syngnathiformes"}}
 {"id": "f_pegasidae", "parent": "o_syngnathiformes", "ja": "ウミテング科", "sci": "Pegasidae", "rank": "科", "desc": "", "main": {"order": 511}}
 {"id": "g_eurypegasus", "parent": "f_pegasidae", "ja": "Eurypegasus", "sci": "Eurypegasus", "rank": "属", "desc": ""}
 {"id": "g_pegasus", "parent": "f_pegasidae", "ja": "Pegasus", "sci": "Pegasus", "rank": "属", "desc": ""}
