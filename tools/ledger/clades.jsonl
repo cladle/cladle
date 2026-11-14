@@ -2463,8 +2463,9 @@
 {"id": "g_diploderma", "parent": "f_agamidae", "ja": "キノボリトカゲ属", "sci": "Diploderma", "rank": "属", "desc": ""}
 {"id": "f_iguanidae", "parent": "iguania", "ja": "イグアナ科", "sci": "Iguanidae", "rank": "科", "desc": "Iguania のうち、主に南北アメリカにすむ科をまとめた Pleurodonta に入る科の一つ。Pleurodonta の中の科どうしの関係は、研究によって大きく異なり、まだ定まっていない。", "main": {"order": 311}}
 {"id": "f_corytophanidae", "parent": "iguania", "ja": "Corytophanidae", "sci": "Corytophanidae", "rank": "科", "desc": "バシリスクなどの科。Pleurodonta に入る。一番近い科がアノール類の Dactyloidae か、Crotaphytidae かは、解析によって異なる。", "main": {"order": 312}}
+{"id": "f_dactyloidae", "parent": "iguania", "ja": "Dactyloidae", "sci": "Dactyloidae", "rank": "科", "desc": "アノール類の科。Pleurodonta に入る。以前は Polychrus とまとめて Polychrotidae とされていたが、今は別の科として扱われる。一番近い科が Corytophanidae か Polychrotidae かは、解析によって異なる。"}
 {"id": "f_chamaeleonidae", "parent": "iguania", "ja": "Chamaeleonidae", "sci": "Chamaeleonidae", "rank": "科", "desc": "カメレオンの科。アガマ科と姉妹群で、あわせて Acrodonta と呼ばれる。", "main": {"order": 313}}
-{"id": "g_anolis", "parent": "f_iguanidae", "ja": "アノールトカゲ属", "sci": "Anolis", "rank": "属", "desc": ""}
+{"id": "g_anolis", "parent": "f_dactyloidae", "ja": "アノールトカゲ属", "sci": "Anolis", "rank": "属", "desc": ""}
 {"id": "g_iguana", "parent": "f_iguanidae", "ja": "イグアナ属", "sci": "Iguana", "rank": "属", "desc": ""}
 {"id": "f_scincidae", "parent": "squamata", "ja": "トカゲ科", "sci": "Scincidae", "rank": "科", "desc": "トカゲ類で最も種の多い科。Xantusiidae・Gerrhosauridae・Cordylidae とともに Scincoidea をつくる。", "main": {"order": 314}}
 {"id": "g_cryptoblepharus", "parent": "f_scincidae", "ja": "オガサワラトカゲ属", "sci": "Cryptoblepharus", "rank": "属", "desc": ""}
