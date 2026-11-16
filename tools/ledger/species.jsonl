@@ -16827,7 +16827,7 @@
 {"id": "lsamiacynthia", "parent": "g_samia_saturniidae", "ja": "シンジュサン", "sci": "Samia cynthia", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lantheraeapernyi", "parent": "g_antheraea_saturniidae", "ja": "サクサン", "sci": "Antheraea pernyi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lcaligusorientalis", "parent": "g_caligus_podoplea", "ja": "クスサン", "sci": "Caligus orientalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4, "sciSynonyms": ["Caligula japonica"]}
-{"id": "lrhodiniafugax", "parent": "g_rhodinia_saturniidae", "ja": "ウスタビガ", "sci": "Rhodinia fugax", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "lrhodiniafugax", "parent": "g_rhodinia_saturniidae", "ja": "ウスタビガ", "sci": "Rhodinia fugax", "jaStatus": "standard", "aliases": [], "fact": "黄緑色の袋のような繭を枝に吊るし、繭は「ヤマカマス」とも呼ばれる。", "tier": 4, "main": {"tier": 3, "order": 959}}
 {"id": "lrhodiniajankowskii", "parent": "g_rhodinia_saturniidae", "ja": "クロウスタビガ", "sci": "Rhodinia jankowskii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lloepasakaei", "parent": "g_loepa_saturniidae", "ja": "ハグルマヤママユ", "sci": "Loepa sakaei", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lactiasgnoma", "parent": "g_actias_saturniidae", "ja": "オナガミズアオ", "sci": "Actias gnoma", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
