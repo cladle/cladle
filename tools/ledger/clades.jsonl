@@ -275,7 +275,7 @@
 {"id": "holocephali", "parent": "chondrichthyes", "ja": "全頭亜綱", "sci": "Holocephali", "rank": "亜綱", "desc": "ギンザメ類からなる軟骨魚類の亜綱。近縁のサメ・エイ類（板鰓亜綱）と違い、上あごが頭骨と一体になり、えら穴は皮膚のふたで覆われて1対だけに見える。"}
 {"id": "galeomorphii", "parent": "selachii", "ja": "Galeomorphii", "sci": "Galeomorphii", "rank": "クレード", "desc": "ネコザメ目・テンジクザメ目・ネズミザメ目・メジロザメ目をまとめたサメのクレード。近縁のツノザメ類（Squalomorphii）と違い、しりびれをもつ。"}
 {"id": "squalomorphii", "parent": "selachii", "ja": "Squalomorphii", "sci": "Squalomorphii", "rank": "クレード", "desc": "カグラザメ目・ツノザメ目・カスザメ目・ノコギリザメ目などをまとめたサメのクレード。姉妹群のGaleomorphiiと違い、しりびれをもたない。"}
-{"id": "neopterygii", "parent": "actinopterygii", "ja": "Neopterygii", "sci": "Neopterygii", "rank": "クレード", "desc": "ガー類と真骨類をまとめたクレード。先に分かれたチョウザメ目と違い、背びれ・しりびれの鰭条（ひれのすじ）が、それを支える骨と同じ数になる。"}
+{"id": "neopterygii", "parent": "actinopterygii", "ja": "Neopterygii", "sci": "Neopterygii", "rank": "クレード", "desc": "ガー類と真骨類をまとめたクレード。先に分かれたチョウザメ目と違い、背びれ・しりびれの鰭条（ひれのすじ）が、それを支える骨と同じ数になる。", "main": {"order": 1137}}
 {"id": "otophysi", "parent": "ostariophysi", "ja": "Otophysi", "sci": "Otophysi", "rank": "クレード", "desc": "コイ目・ナマズ目などをまとめたクレード。姉妹群のネズミギス目と違い、うきぶくろと内耳をつなぐ小骨の列（ウェーバー器官）が完成しており、音をよく聞きとれる。"}
 {"id": "stomiatii", "parent": "euteleostei", "ja": "Stomiatii", "sci": "Stomiatii", "rank": "クレード", "desc": "キュウリウオ目（ワカサギ・アユなど）とワニトカゲギス目をまとめたクレード。近縁のサケ目・ニギス目とは見た目で分けにくく、主に遺伝子の解析でまとまる。"}
 {"id": "neoteleostei", "parent": "euteleostei", "ja": "Neoteleostei", "sci": "Neoteleostei", "rank": "クレード", "desc": "ヒメ目・ハダカイワシ目・棘鰭類などをまとめたクレード。サケ目・ニギス目・キュウリウオ目と違い、鰓弓を後ろへ引く筋肉（背側牽引筋）をもつ。"}
@@ -483,8 +483,8 @@
 {"id": "o_acipenseriformes", "parent": "actinopterygii", "ja": "チョウザメ目", "sci": "Acipenseriformes", "rank": "目", "desc": "チョウザメ類の目。近縁のNeopterygiiと違い、骨格の多くが軟骨のままで、体の側面に硬い板状の鱗（骨板）が並ぶ。卵はキャビアになる。", "main": {"order": 334}}
 {"id": "f_acipenseridae", "parent": "o_acipenseriformes", "ja": "チョウザメ科", "sci": "Acipenseridae", "rank": "科", "desc": "", "main": {"order": 466}}
 {"id": "g_sinosturio", "parent": "f_acipenseridae", "ja": "Sinosturio", "sci": "Sinosturio", "rank": "属", "desc": ""}
-{"id": "o_lepisosteiformes", "parent": "neopterygii", "ja": "ガー目", "sci": "Lepisosteiformes", "rank": "目", "desc": "ガー類の目。北米などの淡水に住み、日本では外来種として見つかる。姉妹群の真骨類と違い、硬いエナメル質の鱗（硬鱗）で体が覆われる。"}
-{"id": "f_lepisosteidae", "parent": "o_lepisosteiformes", "ja": "ガー科", "sci": "Lepisosteidae", "rank": "科", "desc": ""}
+{"id": "o_lepisosteiformes", "parent": "neopterygii", "ja": "ガー目", "sci": "Lepisosteiformes", "rank": "目", "desc": "ガー類の目。北米などの淡水に住み、日本では外来種として見つかる。姉妹群の真骨類と違い、硬いエナメル質の鱗（硬鱗）で体が覆われる。", "main": {"order": 1138}}
+{"id": "f_lepisosteidae", "parent": "o_lepisosteiformes", "ja": "ガー科", "sci": "Lepisosteidae", "rank": "科", "desc": "", "main": {"order": 1139}}
 {"id": "g_atractosteus", "parent": "f_lepisosteidae", "ja": "Atractosteus", "sci": "Atractosteus", "rank": "属", "desc": ""}
 {"id": "g_lepisosteus", "parent": "f_lepisosteidae", "ja": "Lepisosteus", "sci": "Lepisosteus", "rank": "属", "desc": ""}
 {"id": "o_elopiformes", "parent": "elopomorpha", "ja": "カライワシ目", "sci": "Elopiformes", "rank": "目", "desc": "カライワシとイセゴイ（ターポン）の目。ウナギ目と同じくレプトセファルス幼生の時期をもつが、ウナギ目と違い、幼生に二叉した尾びれがある。", "main": {"order": 335}}
@@ -1465,7 +1465,7 @@
 {"id": "g_mene", "parent": "f_menidae", "ja": "Mene", "sci": "Mene", "rank": "属", "desc": ""}
 {"id": "f_xiphiidae", "parent": "o_carangiformes", "ja": "メカジキ科", "sci": "Xiphiidae", "rank": "科", "desc": ""}
 {"id": "g_xiphias", "parent": "f_xiphiidae", "ja": "Xiphias", "sci": "Xiphias", "rank": "属", "desc": ""}
-{"id": "f_istiophoridae", "parent": "o_carangiformes", "ja": "マカジキ科", "sci": "Istiophoridae", "rank": "科", "desc": ""}
+{"id": "f_istiophoridae", "parent": "o_carangiformes", "ja": "マカジキ科", "sci": "Istiophoridae", "rank": "科", "desc": "", "main": {"order": 1140}}
 {"id": "g_istiompax", "parent": "f_istiophoridae", "ja": "Istiompax", "sci": "Istiompax", "rank": "属", "desc": ""}
 {"id": "g_istiophorus", "parent": "f_istiophoridae", "ja": "Istiophorus", "sci": "Istiophorus", "rank": "属", "desc": ""}
 {"id": "g_kajikia", "parent": "f_istiophoridae", "ja": "Kajikia", "sci": "Kajikia", "rank": "属", "desc": ""}
@@ -1500,13 +1500,13 @@
 {"id": "g_trachurus", "parent": "f_carangidae", "ja": "Trachurus", "sci": "Trachurus", "rank": "属", "desc": ""}
 {"id": "g_turrum", "parent": "f_carangidae", "ja": "Turrum", "sci": "Turrum", "rank": "属", "desc": ""}
 {"id": "g_uraspis", "parent": "f_carangidae", "ja": "Uraspis", "sci": "Uraspis", "rank": "属", "desc": ""}
-{"id": "f_echeneidae", "parent": "o_carangiformes", "ja": "コバンザメ科", "sci": "Echeneidae", "rank": "科", "desc": ""}
+{"id": "f_echeneidae", "parent": "o_carangiformes", "ja": "コバンザメ科", "sci": "Echeneidae", "rank": "科", "desc": "", "main": {"order": 1141}}
 {"id": "g_echeneis", "parent": "f_echeneidae", "ja": "Echeneis", "sci": "Echeneis", "rank": "属", "desc": ""}
 {"id": "g_phtheirichthys", "parent": "f_echeneidae", "ja": "Phtheirichthys", "sci": "Phtheirichthys", "rank": "属", "desc": ""}
 {"id": "g_remora", "parent": "f_echeneidae", "ja": "Remora", "sci": "Remora", "rank": "属", "desc": ""}
 {"id": "f_rachycentridae", "parent": "o_carangiformes", "ja": "スギ科", "sci": "Rachycentridae", "rank": "科", "desc": ""}
 {"id": "g_rachycentron", "parent": "f_rachycentridae", "ja": "Rachycentron", "sci": "Rachycentron", "rank": "属", "desc": ""}
-{"id": "f_coryphaenidae", "parent": "o_carangiformes", "ja": "シイラ科", "sci": "Coryphaenidae", "rank": "科", "desc": ""}
+{"id": "f_coryphaenidae", "parent": "o_carangiformes", "ja": "シイラ科", "sci": "Coryphaenidae", "rank": "科", "desc": "", "main": {"order": 1142}}
 {"id": "g_coryphaena", "parent": "f_coryphaenidae", "ja": "Coryphaena", "sci": "Coryphaena", "rank": "属", "desc": ""}
 {"id": "o_atheriniformes", "parent": "atherinomorpha", "ja": "トウゴロウイワシ目", "sci": "Atheriniformes", "rank": "目", "desc": "トウゴロウイワシ・ギンイソイワシ・ナミノハナなどを含む目。体の側面に銀色の帯が走る種が多い。近縁のダツ目と違い、背びれが2つに分かれる。", "main": {"order": 346}}
 {"id": "f_atherinomoridae", "parent": "o_atheriniformes", "ja": "トウゴロウイワシ科", "sci": "Atherinomoridae", "rank": "科", "desc": "", "main": {"order": 523}}
@@ -3507,7 +3507,7 @@
 {"id": "f_rhopalonematidae", "parent": "t_trachylinae", "ja": "Rhopalonematidae", "sci": "Rhopalonematidae", "rank": "科", "desc": ""}
 {"id": "g_rhopalonema_rhopalonematidae", "parent": "f_rhopalonematidae", "ja": "Rhopalonema", "sci": "Rhopalonema", "rank": "属", "desc": ""}
 {"id": "g_homalocantha_muricidae", "parent": "f_muricidae", "ja": "Homalocantha", "sci": "Homalocantha", "rank": "属", "desc": ""}
-{"id": "f_cancridae", "parent": "brachyura", "ja": "Cancridae", "sci": "Cancridae", "rank": "科", "desc": ""}
+{"id": "f_cancridae", "parent": "brachyura", "ja": "Cancridae", "sci": "Cancridae", "rank": "科", "desc": "", "main": {"order": 1143}}
 {"id": "g_anatolikos_cancridae", "parent": "f_cancridae", "ja": "Anatolikos", "sci": "Anatolikos", "rank": "属", "desc": ""}
 {"id": "g_serratina_tellinidae", "parent": "f_tellinidae", "ja": "Serratina", "sci": "Serratina", "rank": "属", "desc": ""}
 {"id": "t_apodida", "parent": "holothuroidea", "ja": "Apodida", "sci": "Apodida", "rank": "目", "desc": "イカリナマコ・クルマナマコなどの目（無足目）。姉妹群のActinopodaと違い、管足をもたず、皮膚の中に錨や車輪の形の小さな骨片がある。", "main": {"order": 386}}
@@ -3779,7 +3779,7 @@
 {"id": "g_subulophora_triphoridae", "parent": "f_triphoridae", "ja": "Subulophora", "sci": "Subulophora", "rank": "属", "desc": ""}
 {"id": "g_euspira_naticidae", "parent": "f_naticidae", "ja": "Euspira", "sci": "Euspira", "rank": "属", "desc": ""}
 {"id": "g_clanculus_trochidae", "parent": "f_trochidae", "ja": "Clanculus", "sci": "Clanculus", "rank": "属", "desc": ""}
-{"id": "f_babyloniidae", "parent": "t_neogastropoda", "ja": "Babyloniidae", "sci": "Babyloniidae", "rank": "科", "desc": ""}
+{"id": "f_babyloniidae", "parent": "t_neogastropoda", "ja": "Babyloniidae", "sci": "Babyloniidae", "rank": "科", "desc": "", "main": {"order": 1144}}
 {"id": "g_babylonia_babyloniidae", "parent": "f_babyloniidae", "ja": "Babylonia", "sci": "Babylonia", "rank": "属", "desc": ""}
 {"id": "g_paludinellassiminea_assimineidae", "parent": "f_assimineidae", "ja": "Paludinellassiminea", "sci": "Paludinellassiminea", "rank": "属", "desc": ""}
 {"id": "g_labarrus_scarabaeidae", "parent": "sf_aphodiinae", "ja": "Labarrus", "sci": "Labarrus", "rank": "属", "desc": ""}
@@ -8502,7 +8502,7 @@
 {"id": "g_pandalosia_zebinidae", "parent": "f_zebinidae", "ja": "Pandalosia", "sci": "Pandalosia", "rank": "属", "desc": ""}
 {"id": "t_zygoptera", "parent": "odonata", "ja": "Zygoptera", "sci": "Zygoptera", "rank": "亜目", "desc": "イトトンボ・カワトンボなどの亜目（均翅亜目）。近縁のトンボ・ヤンマ類と違い、前後の翅がほぼ同じ形で、多くは止まるときに翅を背中の上で閉じる。左右の複眼が離れている。"}
 {"id": "t_coenagrionoidea", "parent": "t_zygoptera", "ja": "Coenagrionoidea", "sci": "Coenagrionoidea", "rank": "上科", "desc": ""}
-{"id": "f_coenagrionidae", "parent": "t_coenagrionoidea", "ja": "イトトンボ科", "sci": "Coenagrionidae", "rank": "科", "desc": ""}
+{"id": "f_coenagrionidae", "parent": "t_coenagrionoidea", "ja": "イトトンボ科", "sci": "Coenagrionidae", "rank": "科", "desc": "", "main": {"order": 1145}}
 {"id": "g_mortonagrion_coenagrionidae", "parent": "f_coenagrionidae", "ja": "Mortonagrion", "sci": "Mortonagrion", "rank": "属", "desc": ""}
 {"id": "g_caminella_geodiidae", "parent": "f_geodiidae", "ja": "Caminella", "sci": "Caminella", "rank": "属", "desc": ""}
 {"id": "g_mytilisepta_mytilidae", "parent": "f_mytilidae", "ja": "Mytilisepta", "sci": "Mytilisepta", "rank": "属", "desc": ""}
@@ -8633,7 +8633,7 @@
 {"id": "g_annulaturris_turridae", "parent": "f_turridae", "ja": "Annulaturris", "sci": "Annulaturris", "rank": "属", "desc": ""}
 {"id": "g_linopyrga_pyramidellidae", "parent": "f_pyramidellidae", "ja": "Linopyrga", "sci": "Linopyrga", "rank": "属", "desc": ""}
 {"id": "g_prionalpheus_alpheidae", "parent": "f_alpheidae", "ja": "Prionalpheus", "sci": "Prionalpheus", "rank": "属", "desc": ""}
-{"id": "f_ligiidae", "parent": "t_oniscidea", "ja": "Ligiidae", "sci": "Ligiidae", "rank": "科", "desc": ""}
+{"id": "f_ligiidae", "parent": "t_oniscidea", "ja": "Ligiidae", "sci": "Ligiidae", "rank": "科", "desc": "", "main": {"order": 1146}}
 {"id": "g_lamarcka_arcidae", "parent": "f_arcidae", "ja": "Lamarcka", "sci": "Lamarcka", "rank": "属", "desc": ""}
 {"id": "g_pyrgoma_pyrgomatidae", "parent": "f_pyrgomatidae", "ja": "Pyrgoma", "sci": "Pyrgoma", "rank": "属", "desc": ""}
 {"id": "g_glyphepithema_naticidae", "parent": "f_naticidae", "ja": "Glyphepithema", "sci": "Glyphepithema", "rank": "属", "desc": ""}
@@ -10805,7 +10805,7 @@
 {"id": "t_tettigoniidea", "parent": "t_ensifera", "ja": "キリギリス下目", "sci": "Tettigoniidea", "rank": "下目", "desc": "キリギリス・ツユムシ・カマドウマなどの下目。近縁のコオロギ類と違い、足先の節（跗節）が4節で、雌の産卵管は刀のように平たいものが多い。"}
 {"id": "f_tettigoniidae", "parent": "t_tettigoniidea", "ja": "キリギリス科", "sci": "Tettigoniidae", "rank": "科", "desc": "", "main": {"order": 868}}
 {"id": "g_conocephalus_tettigoniidae", "parent": "sf_conocephalinae", "ja": "Conocephalus", "sci": "Conocephalus", "rank": "属", "desc": ""}
-{"id": "f_curculionidae", "parent": "t_curculionoidea", "ja": "ゾウムシ科", "sci": "Curculionidae", "rank": "科", "desc": ""}
+{"id": "f_curculionidae", "parent": "t_curculionoidea", "ja": "ゾウムシ科", "sci": "Curculionidae", "rank": "科", "desc": "", "main": {"order": 1136}}
 {"id": "g_eugnathus_curculionidae", "parent": "f_curculionidae", "ja": "Eugnathus", "sci": "Eugnathus", "rank": "属", "desc": ""}
 {"id": "g_protaetia_scarabaeidae", "parent": "sf_cetoniinae", "ja": "Protaetia", "sci": "Protaetia", "rank": "属", "desc": ""}
 {"id": "g_palpita_crambidae", "parent": "sf_spilomelinae", "ja": "Palpita", "sci": "Palpita", "rank": "属", "desc": ""}
@@ -12098,3 +12098,39 @@
 {"id": "f_convolutidae", "parent": "o_acoela", "ja": "Convolutidae", "sci": "Convolutidae", "rank": "科", "desc": "", "main": {"order": 1082}}
 {"id": "f_camaenidae", "parent": "t_helicoidei", "ja": "Camaenidae", "sci": "Camaenidae", "rank": "科", "desc": "", "main": {"order": 1083}}
 {"id": "g_ambigolimax_limacidae", "parent": "f_limacidae", "ja": "Ambigolimax", "sci": "Ambigolimax", "rank": "属", "desc": ""}
+{"id": "o_esociformes", "parent": "euteleostei", "ja": "カワカマス目", "sci": "Esociformes", "rank": "目", "desc": "北半球の寒い地域の淡水にすむ。背びれとしりびれが体の後ろの方にあり、水草の間などで待ち伏せして獲物を襲う。カワカマス科とウンブラ科を含む。サケ目に近いとされるが、サケ目と違って脂びれをもたない。", "main": {"order": 1125}}
+{"id": "f_esocidae", "parent": "o_esociformes", "ja": "カワカマス科", "sci": "Esocidae", "rank": "科", "desc": "", "main": {"order": 1126}}
+{"id": "g_esox", "parent": "f_esocidae", "ja": "Esox", "sci": "Esox", "rank": "属", "desc": ""}
+{"id": "o_characiformes", "parent": "otophysi", "ja": "カラシン目", "sci": "Characiformes", "rank": "目", "desc": "南米とアフリカの淡水にすむ。多くは背びれの後ろに脂びれをもつ。コイ目・ナマズ目と同じく、うきぶくろと内耳を小さな骨（ウェーバー器官）でつなぐ骨鰾類の仲間。あごに歯のないコイ目と違い、多くはあごに歯が発達する。ネオンテトラやピラニアを含む。", "main": {"order": 1127}}
+{"id": "f_characidae", "parent": "o_characiformes", "ja": "カラシン科", "sci": "Characidae", "rank": "科", "desc": "", "main": {"order": 1128}}
+{"id": "g_paracheirodon", "parent": "f_characidae", "ja": "Paracheirodon", "sci": "Paracheirodon", "rank": "属", "desc": ""}
+{"id": "f_serrasalmidae", "parent": "o_characiformes", "ja": "Serrasalmidae", "sci": "Serrasalmidae", "rank": "科", "desc": "", "main": {"order": 1129}}
+{"id": "g_pygocentrus", "parent": "f_serrasalmidae", "ja": "Pygocentrus", "sci": "Pygocentrus", "rank": "属", "desc": ""}
+{"id": "f_bryconidae", "parent": "o_characiformes", "ja": "Bryconidae", "sci": "Bryconidae", "rank": "科", "desc": "", "main": {"order": 1130}}
+{"id": "g_salminus", "parent": "f_bryconidae", "ja": "Salminus", "sci": "Salminus", "rank": "属", "desc": ""}
+{"id": "f_percidae", "parent": "o_perciformes", "ja": "Percidae", "sci": "Percidae", "rank": "科", "desc": "", "main": {"order": 1131}}
+{"id": "g_perca", "parent": "f_percidae", "ja": "Perca", "sci": "Perca", "rank": "属", "desc": ""}
+{"id": "g_chelydra", "parent": "f_chelydridae", "ja": "Chelydra", "sci": "Chelydra", "rank": "属", "desc": ""}
+{"id": "g_garra", "parent": "f_cyprinidae", "ja": "Garra", "sci": "Garra", "rank": "属", "desc": ""}
+{"id": "g_pterophyllum", "parent": "f_cichlidae", "ja": "Pterophyllum", "sci": "Pterophyllum", "rank": "属", "desc": ""}
+{"id": "f_arapaimidae", "parent": "o_osteoglossiformes", "ja": "Arapaimidae", "sci": "Arapaimidae", "rank": "科", "desc": "", "main": {"order": 1132}}
+{"id": "g_arapaima", "parent": "f_arapaimidae", "ja": "Arapaima", "sci": "Arapaima", "rank": "属", "desc": ""}
+{"id": "g_morpho", "parent": "sf_satyrinae", "ja": "Morpho", "sci": "Morpho", "rank": "属", "desc": ""}
+{"id": "g_trogonoptera", "parent": "papilionidae", "ja": "Trogonoptera", "sci": "Trogonoptera", "rank": "属", "desc": ""}
+{"id": "g_ornithoptera", "parent": "papilionidae", "ja": "Ornithoptera", "sci": "Ornithoptera", "rank": "属", "desc": ""}
+{"id": "f_uraniidae", "parent": "t_geometroidea", "ja": "ツバメガ科", "sci": "Uraniidae", "rank": "科", "desc": "", "main": {"order": 1133}}
+{"id": "g_chrysiridia", "parent": "f_uraniidae", "ja": "Chrysiridia", "sci": "Chrysiridia", "rank": "属", "desc": ""}
+{"id": "f_hymenopodidae", "parent": "t_mantodea", "ja": "ハナカマキリ科", "sci": "Hymenopodidae", "rank": "科", "desc": "", "main": {"order": 1134}}
+{"id": "g_hymenopus", "parent": "f_hymenopodidae", "ja": "Hymenopus", "sci": "Hymenopus", "rank": "属", "desc": ""}
+{"id": "g_catacanthus", "parent": "f_pentatomidae", "ja": "Catacanthus", "sci": "Catacanthus", "rank": "属", "desc": ""}
+{"id": "g_mormolyce", "parent": "carabidae", "ja": "Mormolyce", "sci": "Mormolyce", "rank": "属", "desc": ""}
+{"id": "g_eupholus", "parent": "f_curculionidae", "ja": "Eupholus", "sci": "Eupholus", "rank": "属", "desc": ""}
+{"id": "g_scarabaeus", "parent": "sf_scarabaeinae", "ja": "Scarabaeus", "sci": "Scarabaeus", "rank": "属", "desc": ""}
+{"id": "g_goliathus", "parent": "sf_cetoniinae", "ja": "Goliathus", "sci": "Goliathus", "rank": "属", "desc": ""}
+{"id": "g_phalacrognathus", "parent": "lucanidae", "ja": "Phalacrognathus", "sci": "Phalacrognathus", "rank": "属", "desc": ""}
+{"id": "g_cyclommatus", "parent": "sf_lucaninae", "ja": "Cyclommatus", "sci": "Cyclommatus", "rank": "属", "desc": ""}
+{"id": "g_allotopus", "parent": "sf_lucaninae", "ja": "Allotopus", "sci": "Allotopus", "rank": "属", "desc": ""}
+{"id": "g_chalcosoma", "parent": "sf_dynastinae", "ja": "Chalcosoma", "sci": "Chalcosoma", "rank": "属", "desc": ""}
+{"id": "g_megasoma", "parent": "sf_dynastinae", "ja": "Megasoma", "sci": "Megasoma", "rank": "属", "desc": ""}
+{"id": "f_phylliidae", "parent": "t_euphasmatodea", "ja": "コノハムシ科", "sci": "Phylliidae", "rank": "科", "desc": "", "main": {"order": 1135}}
+{"id": "g_pulchriphyllium", "parent": "f_phylliidae", "ja": "Pulchriphyllium", "sci": "Pulchriphyllium", "rank": "属", "desc": ""}

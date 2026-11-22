@@ -241,7 +241,7 @@
 {"id": "s241", "parent": "g_sinosturio", "ja": "チョウザメ", "sci": "Sinosturio medirostris", "jaStatus": "standard", "aliases": ["Acipenser medirostris"], "fact": "チョウザメは軟質類で、硬い鱗が体に並ぶ古いタイプの条鰭類。チョウザメの仲間の卵の塩漬けがキャビアになる。", "tier": 1, "sciSynonyms": ["Acipenser medirostris", "Acipenser mikadoi"], "main": {"order": 27, "id": "mikadochozame"}}
 {"id": "s242", "parent": "g_sinosturio", "ja": "アムールチョウザメ", "sci": "Sinosturio schrenckii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s243", "parent": "g_sinosturio", "ja": "カラチョウザメ", "sci": "Sinosturio sinensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s244", "parent": "g_atractosteus", "ja": "”アリゲーターガー”", "sci": "Atractosteus spatula", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
+{"id": "s244", "parent": "g_atractosteus", "ja": "”アリゲーターガー”", "sci": "Atractosteus spatula", "jaStatus": "standard", "aliases": [], "fact": "北米南部の川にすむ大型魚。硬いガノイン鱗に覆われ、うきぶくろで空気呼吸もできる。日本では特定外来生物。", "verify": {"ja": "日本産魚類全種目録では標準和名がない扱い（引用符付き）。一般に使われる呼び名"}, "tier": 3, "main": {"order": 1035, "tier": 2, "ja": "アリゲーターガー"}}
 {"id": "s245", "parent": "g_atractosteus", "ja": "”トロピカルガー”", "sci": "Atractosteus tropicus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s246", "parent": "g_lepisosteus", "ja": "”スポッテッドガー”", "sci": "Lepisosteus oculatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s247", "parent": "g_lepisosteus", "ja": "”ロングノーズガー”", "sci": "Lepisosteus osseus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -350,7 +350,7 @@
 {"id": "s350", "parent": "g_gymnothorax", "ja": "オキノシマウツボ", "sci": "Gymnothorax ypsilon", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s351", "parent": "g_gymnothorax", "ja": "ヒレオビウツボ", "sci": "Gymnothorax zonipectis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s352", "parent": "g_pseudechidna", "ja": "モヨウタケウツボ", "sci": "Pseudechidna brummeri", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "s353", "parent": "g_rhinomuraena", "ja": "ハナヒゲウツボ", "sci": "Rhinomuraena quaesita", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
+{"id": "s353", "parent": "g_rhinomuraena", "ja": "ハナヒゲウツボ", "sci": "Rhinomuraena quaesita", "jaStatus": "standard", "aliases": [], "fact": "鼻先にひらひらした鼻管をもつウツボ。成長につれて体色が黒、青、黄色と変わる。", "tier": 3, "main": {"order": 1037}}
 {"id": "s354", "parent": "g_scuticaria", "ja": "キカイウツボ", "sci": "Scuticaria okinawae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s355", "parent": "g_scuticaria", "ja": "モヨウキカイウツボ", "sci": "Scuticaria tigrina", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s356", "parent": "g_strophidon", "ja": "オナガウツボ", "sci": "Strophidon sathete", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -588,14 +588,14 @@
 {"id": "s588", "parent": "g_lefua", "ja": "レイホクナガレホトケドジョウ", "sci": "Lefua nishimurai", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s589", "parent": "g_lefua", "ja": "トウカイナガレホトケドジョウ", "sci": "Lefua tokaiensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s590", "parent": "g_lefua", "ja": "ナガレホトケドジョウ", "sci": "Lefua torrentis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s591", "parent": "g_carassius", "ja": "キンギョ", "sci": "Carassius auratus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "s591", "parent": "g_carassius", "ja": "キンギョ", "sci": "Carassius auratus", "jaStatus": "standard", "aliases": ["デメキン", "ランチュウ"], "fact": "中国でフナから作り出された観賞魚。デメキン・ランチュウなどは品種で、種としては同じ。", "tier": 4, "main": {"order": 1032, "tier": 1}}
 {"id": "s592", "parent": "g_carassius", "ja": "オオキンブナ", "sci": "Carassius buergeri buergeri", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s593", "parent": "g_carassius", "ja": "ニゴロブナ", "sci": "Carassius buergeri grandoculis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s594", "parent": "g_carassius", "ja": "ナガブナ", "sci": "Carassius buergeri subsp. 1", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s595", "parent": "g_carassius", "ja": "キンブナ", "sci": "Carassius buergeri subsp. 2", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s596", "parent": "g_carassius", "ja": "ゲンゴロウブナ", "sci": "Carassius cuvieri", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s597", "parent": "g_carassius", "ja": "ギンブナ", "sci": "Carassius sp.", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
-{"id": "s598", "parent": "g_cyprinus", "ja": "コイ", "sci": "Cyprinus carpio", "jaStatus": "standard", "aliases": [], "fact": "喉の奥にある咽頭歯で餌をすりつぶす。", "tier": 1, "gbif": 4286975, "main": {"order": 30, "id": "koi"}}
+{"id": "s597", "parent": "g_carassius", "ja": "ギンブナ", "sci": "Carassius sp.", "jaStatus": "standard", "aliases": [], "fact": "日本各地の川や池にすむ。多くは雌だけで、ほかのフナなどの精子の刺激で卵が発生する（雌性発生）。", "verify": {"sci": "ギンブナには正式な学名が付いていない（Carassius sp.）"}, "tier": 1, "main": {"order": 1031}}
+{"id": "s598", "parent": "g_cyprinus", "ja": "コイ", "sci": "Cyprinus carpio", "jaStatus": "standard", "aliases": ["ニシキゴイ"], "fact": "喉の奥にある咽頭歯で餌をすりつぶす。", "tier": 1, "gbif": 4286975, "main": {"order": 30, "id": "koi"}}
 {"id": "s599", "parent": "g_aphyocypris", "ja": "ヒナモロコ", "sci": "Aphyocypris chinensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s600", "parent": "g_aphyocypris", "ja": "キクチヒナモロコ", "sci": "Aphyocypris kikuchii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s601", "parent": "g_ctenopharyngodon", "ja": "ソウギョ", "sci": "Ctenopharyngodon idella", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -707,7 +707,7 @@
 {"id": "s707", "parent": "g_oncorhynchus", "ja": "サクラマス", "sci": "Oncorhynchus masou", "jaStatus": "standard", "aliases": ["ヤマメ"], "fact": "川に残って一生を過ごすものがヤマメ。", "tier": 1, "sciSynonyms": ["Oncorhynchus masou masou"], "main": {"order": 448, "id": "sakuramasu", "tier": 2, "sciSynonyms": null}}
 {"id": "s708", "parent": "g_oncorhynchus", "ja": "ニジマス", "sci": "Oncorhynchus mykiss", "jaStatus": "standard", "aliases": [], "fact": "北米原産。海に下るものはスチールヘッドと呼ばれる。", "tier": 1, "main": {"order": 447, "id": "nijimasu"}}
 {"id": "s709", "parent": "g_oncorhynchus", "ja": "ベニザケ", "sci": "Oncorhynchus nerka", "jaStatus": "standard", "aliases": ["ヒメマス"], "fact": "", "tier": 4}
-{"id": "s710", "parent": "g_oncorhynchus", "ja": "マスノスケ", "sci": "Oncorhynchus tshawytscha", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "s710", "parent": "g_oncorhynchus", "ja": "マスノスケ", "sci": "Oncorhynchus tshawytscha", "jaStatus": "standard", "aliases": ["キングサーモン"], "fact": "太平洋で最も大きくなるサケの仲間。キングサーモンとも呼ばれる。", "tier": 4, "main": {"order": 1033, "tier": 2}}
 {"id": "s711", "parent": "g_parahucho", "ja": "イトウ", "sci": "Parahucho perryi", "jaStatus": "standard", "aliases": [], "fact": "日本最大級の淡水魚。北海道にすむ。", "tier": 2, "main": {"order": 449, "id": "itou"}}
 {"id": "s712", "parent": "g_salmo", "ja": "ブラウントラウト", "sci": "Salmo trutta", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s713", "parent": "g_salvelinus", "ja": "オショロコマ", "sci": "Salvelinus curilus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -2501,7 +2501,7 @@
 {"id": "s2504", "parent": "g_istiompax", "ja": "シロカジキ", "sci": "Istiompax indica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s2505", "parent": "g_istiophorus", "ja": "バショウカジキ", "sci": "Istiophorus platypterus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2506", "parent": "g_kajikia", "ja": "マカジキ", "sci": "Kajikia audax", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2507", "parent": "g_makaira", "ja": "クロカジキ", "sci": "Makaira nigricans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
+{"id": "s2507", "parent": "g_makaira", "ja": "クロカジキ", "sci": "Makaira nigricans", "jaStatus": "standard", "aliases": [], "fact": "外洋を速く泳ぐ大型魚。上あごが槍のように長く伸びる。", "tier": 3, "main": {"order": 1038, "tier": 2}}
 {"id": "s2508", "parent": "g_tetrapturus", "ja": "フウライカジキ", "sci": "Tetrapturus angustirostris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2509", "parent": "g_alectis", "ja": "イトヒキアジ", "sci": "Alectis ciliaris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2510", "parent": "g_alepes", "ja": "クロボシヒラアジ", "sci": "Alepes djedaba", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -2515,7 +2515,7 @@
 {"id": "s2518", "parent": "g_carangichthys", "ja": "イトヒラアジ", "sci": "Carangichthys dinema", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2519", "parent": "g_carangichthys", "ja": "テンジクアジ", "sci": "Carangichthys oblongus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2520", "parent": "g_caranx", "ja": "イトウオニヒラアジ", "sci": "Caranx heberi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2521", "parent": "g_caranx", "ja": "ロウニンアジ", "sci": "Caranx ignobilis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s2521", "parent": "g_caranx", "ja": "ロウニンアジ", "sci": "Caranx ignobilis", "jaStatus": "standard", "aliases": [], "fact": "熱帯の浅い海にすむ大型のアジ。全長1.5mを超えることもあり、釣りの対象として人気がある。", "tier": 1, "main": {"order": 1039, "tier": 2}}
 {"id": "s2522", "parent": "g_caranx", "ja": "カッポレ", "sci": "Caranx lugubris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s2523", "parent": "g_caranx", "ja": "カスミアジ", "sci": "Caranx melampygus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2524", "parent": "g_caranx", "ja": "オニヒラアジ", "sci": "Caranx papuensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
@@ -2566,7 +2566,7 @@
 {"id": "s2569", "parent": "g_turrum", "ja": "アンダマンアジ", "sci": "Turrum gymnostethus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2570", "parent": "g_uraspis", "ja": "オキアジ", "sci": "Uraspis helvola", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2571", "parent": "g_uraspis", "ja": "インドオキアジ", "sci": "Uraspis uraspis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
-{"id": "s2572", "parent": "g_echeneis", "ja": "コバンザメ", "sci": "Echeneis naucrates", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s2572", "parent": "g_echeneis", "ja": "コバンザメ", "sci": "Echeneis naucrates", "jaStatus": "standard", "aliases": [], "fact": "頭の上の吸盤（形の変わった背びれ）で、サメやウミガメなどにくっつく。サメの仲間ではない。", "tier": 1, "main": {"order": 1041}}
 {"id": "s2573", "parent": "g_phtheirichthys", "ja": "スジコバン", "sci": "Phtheirichthys lineatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s2574", "parent": "g_remora", "ja": "シロコバン", "sci": "Remora albescens", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2575", "parent": "g_remora", "ja": "オオコバン", "sci": "Remora australis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -2575,7 +2575,7 @@
 {"id": "s2578", "parent": "g_remora", "ja": "ナガコバン", "sci": "Remora remora", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s2579", "parent": "g_rachycentron", "ja": "スギ", "sci": "Rachycentron canadum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s2580", "parent": "g_coryphaena", "ja": "エビスシイラ", "sci": "Coryphaena equiselis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2581", "parent": "g_coryphaena", "ja": "シイラ", "sci": "Coryphaena hippurus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s2581", "parent": "g_coryphaena", "ja": "シイラ", "sci": "Coryphaena hippurus", "jaStatus": "standard", "aliases": [], "fact": "外洋の表層を泳ぐ。流れ藻などの漂流物の下に集まる。雄は成長すると額が張り出す。", "tier": 1, "main": {"order": 1040, "tier": 2}}
 {"id": "s2582", "parent": "g_atherinomorus", "ja": "ヤクシマイワシ", "sci": "Atherinomorus lacunosus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s2583", "parent": "g_atherinomorus", "ja": "ホソオビヤクシマイワシ", "sci": "Atherinomorus pinguis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2584", "parent": "g_doboatherina", "ja": "トウゴロウイワシ", "sci": "Doboatherina bleekeri", "jaStatus": "standard", "aliases": [], "fact": "沿岸を群れで泳ぐ小魚。イワシとは別の目。", "tier": 1, "main": {"order": 577, "id": "tougorouiwashi", "tier": 4}}
@@ -2641,7 +2641,7 @@
 {"id": "s2644", "parent": "g_oryzias", "ja": "ミナミメダカ", "sci": "Oryzias latipes", "jaStatus": "standard", "aliases": ["メダカ"], "fact": "日本のメダカは2種に分けられ、本種は本州の日本海側北部（キタノメダカの分布域）を除く本州から琉球列島にかけて分布する。北日本集団がキタノメダカとして新種記載されたのを受けて、2013年にミナミメダカの和名が提唱された。", "tier": 1, "gbif": 2368377, "main": {"order": 31, "id": "minamimedaka"}}
 {"id": "s2645", "parent": "g_oryzias", "ja": "キタノメダカ", "sci": "Oryzias sakaizumii", "jaStatus": "standard", "aliases": [], "fact": "本州の日本海側（青森県から兵庫県）に分布するメダカ。ミナミメダカとは遺伝的に大きく異なり、ひれの形や体の模様でも区別できることから、2011年に別種として記載された。種小名はメダカの研究者の酒泉満にちなむ。", "tier": 3, "gbif": 7193255, "main": {"order": 291, "id": "kitanomedaka"}}
 {"id": "s2646", "parent": "g_gambusia", "ja": "カダヤシ", "sci": "Gambusia affinis", "jaStatus": "standard", "aliases": [], "fact": "子を産む外来の小魚。蚊の幼虫を食べる。", "tier": 1, "main": {"order": 578, "id": "kadayashi", "tier": 3}}
-{"id": "s2647", "parent": "g_poecilia", "ja": "グッピー", "sci": "Poecilia reticulata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s2647", "parent": "g_poecilia", "ja": "グッピー", "sci": "Poecilia reticulata", "jaStatus": "standard", "aliases": [], "fact": "南米北部原産。雌の体内で卵がかえって子を産む（卵胎生）。雄はひれの色が派手。", "tier": 2, "main": {"order": 1034}}
 {"id": "s2648", "parent": "g_poecilia", "ja": "エンドラーズグッピー", "sci": "Poecilia wingei", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s2649", "parent": "g_poecilia", "ja": "ホタテモーリー", "sci": "Poecilia latipinna", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s2650", "parent": "g_poecilia", "ja": "スリコギモーリー", "sci": "Poecilia mexicana", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -2769,7 +2769,7 @@
 {"id": "s2772", "parent": "g_stegastes", "ja": "ルリホシスズメダイ", "sci": "Stegastes lacrymatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s2773", "parent": "g_stegastes", "ja": "クロソラスズメダイ", "sci": "Stegastes nigricans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2774", "parent": "g_stegastes", "ja": "ハナナガスズメダイ", "sci": "Stegastes punctatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
-{"id": "s2775", "parent": "g_amphiprion", "ja": "クマノミ", "sci": "Amphiprion clarkii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s2775", "parent": "g_amphiprion", "ja": "クマノミ", "sci": "Amphiprion clarkii", "jaStatus": "standard", "aliases": [], "fact": "イソギンチャクと共生する。群れで一番大きな個体が雌で、雌がいなくなると雄が雌に性転換する。", "tier": 1, "main": {"order": 1036}}
 {"id": "s2776", "parent": "g_amphiprion", "ja": "ハマクマノミ", "sci": "Amphiprion frenatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s2777", "parent": "g_amphiprion", "ja": "カクレクマノミ", "sci": "Amphiprion ocellaris", "jaStatus": "standard", "aliases": [], "fact": "イソギンチャクの刺胞に刺されずにすむ。群れでいちばん大きな個体が雌で、雌がいなくなると次に大きな雄が雌に性転換する。", "tier": 1, "gbif": 5212106, "groups": ["クマノミ"], "main": {"order": 159, "id": "kakurekumanomi"}}
 {"id": "s2778", "parent": "g_amphiprion", "ja": "ハナビラクマノミ", "sci": "Amphiprion perideraion", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
@@ -3790,7 +3790,7 @@
 {"id": "s3793", "parent": "g_oplegnathus", "ja": "イシガキダイ", "sci": "Oplegnathus punctatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
 {"id": "s3794", "parent": "g_microcanthus", "ja": "カゴカキダイ", "sci": "Microcanthus strigatus", "jaStatus": "standard", "aliases": [], "fact": "黄色い体に黒い縦じまがある小さな魚。磯でよく見られる。", "tier": 1, "main": {"order": 766, "id": "kagokakidai", "tier": 4}}
 {"id": "s3795", "parent": "g_lepomis", "ja": "パンプキンシードサンフィッシュ", "sci": "Lepomis gibbosus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "s3796", "parent": "g_lepomis", "ja": "ブルーギル", "sci": "Lepomis macrochirus macrochirus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 1}
+{"id": "s3796", "parent": "g_lepomis", "ja": "ブルーギル", "sci": "Lepomis macrochirus macrochirus", "jaStatus": "standard", "aliases": [], "fact": "北米原産。1960年に日本に持ち込まれ、各地の池や湖に広がった特定外来生物。", "verify": {"sci": "日本産魚類全種目録では亜種 L. macrochirus macrochirus として載る。本家では種として扱う"}, "tier": 1, "main": {"order": 1042, "sci": "Lepomis macrochirus"}}
 {"id": "s3797", "parent": "g_lepomis", "ja": "ロングイヤーサンフィッシュ", "sci": "Lepomis megalotis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "s3798", "parent": "g_micropterus", "ja": "コクチバス", "sci": "Micropterus dolomieu dolomieu", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "s3799", "parent": "g_micropterus", "ja": "オオクチバス", "sci": "Micropterus nigricans", "jaStatus": "standard", "aliases": [], "fact": "北アメリカ原産の外来魚で、特定外来生物に指定されている。", "tier": 1, "main": {"tier": 2, "order": 948}}
@@ -12713,7 +12713,7 @@
 {"id": "c3jrj7", "parent": "g_harmothoe_polynoidae", "ja": "ハンモンウロコムシ", "sci": "Harmothoe spinifera", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6n74h", "parent": "g_ihlea_salpidae", "ja": "ハンモンサルパ", "sci": "Ihlea punctata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6qplg", "parent": "g_lunulicardia_cardiidae", "ja": "ハートガイ", "sci": "Lunulicardia hemicardium", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c67yqj", "parent": "g_babylonia_babyloniidae", "ja": "バイ", "sci": "Babylonia japonica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c67yqj", "parent": "g_babylonia_babyloniidae", "ja": "バイ", "sci": "Babylonia japonica", "jaStatus": "standard", "aliases": [], "fact": "砂の海底にすむ巻貝。死んだ魚などを食べる。食用。貝殻は「ばいごま」（ベーゴマ）の元になった。", "tier": 4, "main": {"order": 1049, "tier": 3}}
 {"id": "c567qp", "parent": "g_thelenota_stichopodidae", "ja": "バイカナマコ", "sci": "Thelenota ananas", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c8g43h", "parent": "g_athrypsometra_antedonidae", "ja": "バイゴマヒメウミシダ", "sci": "Athrypsometra mira", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c47tym", "parent": "g_nothria_onuphidae", "ja": "バクストンイソメ", "sci": "Nothria paxtonae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -14458,7 +14458,7 @@
 {"id": "w514355", "parent": "g_prionalpheus_alpheidae", "ja": "フドウノテッポウエビ", "sci": "Prionalpheus sulu", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w367509", "parent": "g_clibanarius_diogenidae", "ja": "フドウヨコバサミ", "sci": "Clibanarius inaequalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w1831133", "parent": "g_dolomena_strombidae", "ja": "フドロガイ", "sci": "Dolomena robusta", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "w955994", "parent": "g_ligia_oniscidea", "ja": "フナムシ", "sci": "Ligia exotica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "w955994", "parent": "g_ligia_oniscidea", "ja": "フナムシ", "sci": "Ligia exotica", "jaStatus": "standard", "aliases": [], "fact": "岩の多い海岸を素早く走り回る、ワラジムシの仲間。えらで呼吸するが、水の中に長くはいられない。", "tier": 4, "main": {"order": 1048, "tier": 2}}
 {"id": "w1548265", "parent": "g_lamarcka_arcidae", "ja": "フネガイ", "sci": "Lamarcka avellana", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w743706", "parent": "g_leodice_eunicidae", "ja": "フメンイソメ", "sci": "Leodice aequabilis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w117892", "parent": "g_salacia_sertulariidae", "ja": "フランスヒトヒラウミシバ", "sci": "Salacia desmoides", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -14514,7 +14514,7 @@
 {"id": "w1306674", "parent": "g_breviturma_ophiocomidae", "ja": "ホウシャクモヒトデ", "sci": "Breviturma pica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w517291", "parent": "g_phakellia_bubaridae", "ja": "ホウシャハナビラカイメン", "sci": "Phakellia radiata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w530178", "parent": "g_mesothuria_mesothuriidae", "ja": "ホクテンクマサカナマコ", "sci": "Mesothuria deani", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "w440388", "parent": "g_metacarcinus_cancridae", "ja": "ホクヨウイチョウガニ", "sci": "Metacarcinus magister", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "w440388", "parent": "g_metacarcinus_cancridae", "ja": "ホクヨウイチョウガニ", "sci": "Metacarcinus magister", "jaStatus": "standard", "aliases": ["ダンジネスクラブ"], "fact": "北米の太平洋岸で食用に獲られるカニ。ダンジネスクラブとも呼ばれる。", "tier": 4, "main": {"order": 1050, "tier": 3}}
 {"id": "w851422", "parent": "g_tritonia_tritoniidae", "ja": "ホクヨウウミウシ", "sci": "Tritonia tetraquetra", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w392001", "parent": "g_eumunida_eumunididae", "ja": "ホクロツノコシオリエビ", "sci": "Eumunida funambulus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w1586038", "parent": "g_turrancilla_ancillariidae", "ja": "ホザキリュウグウボタル", "sci": "Turrancilla apicalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -16411,7 +16411,7 @@
 {"id": "laciagrionmigratum", "parent": "g_aciagrion_coenagrionidae", "ja": "ホソミイトトンボ", "sci": "Aciagrion migratum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lceriagrionmelanurum", "parent": "g_ceriagrion_coenagrionidae", "ja": "キイトトンボ", "sci": "Ceriagrion melanurum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lceriagrionnipponicum", "parent": "g_ceriagrion_coenagrionidae", "ja": "ベニイトトンボ", "sci": "Ceriagrion nipponicum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "lischnuraasiatica", "parent": "g_ischnura_coenagrionidae", "ja": "アジアイトトンボ", "sci": "Ischnura asiatica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "lischnuraasiatica", "parent": "g_ischnura_coenagrionidae", "ja": "アジアイトトンボ", "sci": "Ischnura asiatica", "jaStatus": "standard", "aliases": [], "fact": "池や田んぼに多い小型のイトトンボ。雄は胸が緑色で、腹の先が青い。", "tier": 4, "main": {"order": 1047, "tier": 3}}
 {"id": "lischnurasenegalensis", "parent": "g_ischnura_coenagrionidae", "ja": "アオモンイトトンボ", "sci": "Ischnura senegalensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lischnuraelegans", "parent": "g_ischnura_coenagrionidae", "ja": "マンシュウイトトンボ", "sci": "Ischnura elegans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lischnuraaurora", "parent": "g_ischnura_coenagrionidae", "ja": "キバライトトンボ", "sci": "Ischnura aurora", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -16598,7 +16598,7 @@
 {"id": "lpapiliopolytes", "parent": "g_papilio_papilionidae", "ja": "シロオビアゲハ", "sci": "Papilio polytes", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lpapiliomacilentus", "parent": "g_papilio_papilionidae", "ja": "オナガアゲハ", "sci": "Papilio macilentus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lpapiliorumanzovia", "parent": "g_papilio_papilionidae", "ja": "アカネアゲハ", "sci": "Papilio rumanzovia", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "lpapiliobianor", "parent": "g_papilio_papilionidae", "ja": "カラスアゲハ", "sci": "Papilio bianor", "jaStatus": "standard", "aliases": [], "fact": "", "verify": {"ja": "環境省の対象種一覧の表記。iNaturalist では「ヤエヤマカラスアゲハ」"}, "tier": 4}
+{"id": "lpapiliobianor", "parent": "g_papilio_papilionidae", "ja": "カラスアゲハ", "sci": "Papilio bianor", "jaStatus": "standard", "aliases": [], "fact": "黒い翅に青緑の鱗粉が輝くアゲハ。幼虫はカラスザンショウなどミカン科の葉を食べる。", "verify": {"ja": "環境省の対象種一覧の表記。iNaturalist では「ヤエヤマカラスアゲハ」"}, "tier": 4, "main": {"order": 1043, "tier": 2}}
 {"id": "lpapiliomaackii", "parent": "g_papilio_papilionidae", "ja": "ミヤマカラスアゲハ", "sci": "Papilio maackii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lleptideaamurensis", "parent": "g_leptidea_pieridae", "ja": "ヒメシロチョウ", "sci": "Leptidea amurensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "lleptideamorsei", "parent": "g_leptidea_pieridae", "ja": "エゾヒメシロチョウ", "sci": "Leptidea morsei", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -16690,7 +16690,7 @@
 {"id": "ltirumalahamata", "parent": "g_tirumala_nymphalidae", "ja": "ミナミコモンマダラ", "sci": "Tirumala hamata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "ltirumalalimniace", "parent": "g_tirumala_nymphalidae", "ja": "ウスコモンマダラ", "sci": "Tirumala limniace", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "ltirumalaishmoides", "parent": "g_tirumala_nymphalidae", "ja": "ニセミナミコモンマダラ", "sci": "Tirumala ishmoides", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "ldanausplexippus", "parent": "g_danaus_nymphalidae", "ja": "オオカバマダラ", "sci": "Danaus plexippus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "ldanausplexippus", "parent": "g_danaus_nymphalidae", "ja": "オオカバマダラ", "sci": "Danaus plexippus", "jaStatus": "standard", "aliases": [], "fact": "北米で秋に数千kmを渡り、メキシコの山地で集団で冬を越す。幼虫が食べるトウワタの毒を体にためる。", "tier": 4, "main": {"order": 1044, "tier": 3}}
 {"id": "leuploeaeunice", "parent": "g_euploea_nymphalidae", "ja": "マルバネルリマダラ", "sci": "Euploea eunice", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "leuploeatulliolus", "parent": "g_euploea_nymphalidae", "ja": "マサキルリマダラ", "sci": "Euploea tulliolus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "leuploeasylvester", "parent": "g_euploea_nymphalidae", "ja": "ルリマダラ", "sci": "Euploea sylvester", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -19623,7 +19623,7 @@
 {"id": "igerrisgracilicornis", "parent": "g_gerris_gerridae", "ja": "コセアカアメンボ", "sci": "Gerris gracilicornis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "igerrisinsularis", "parent": "g_gerris_gerridae", "ja": "ヤスマツアメンボ", "sci": "Gerris insularis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "igerrisyezoensis", "parent": "g_gerris_gerridae", "ja": "エゾコセアカアメンボ", "sci": "Gerris yezoensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "iattacusatlas", "parent": "g_attacus_saturniidae", "ja": "ヨナグニサン", "sci": "Attacus atlas", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "iattacusatlas", "parent": "g_attacus_saturniidae", "ja": "ヨナグニサン", "sci": "Attacus atlas", "jaStatus": "standard", "aliases": [], "fact": "翅を広げると20cmを超える世界最大級のガ。日本では与那国島・石垣島・西表島にすむ。成虫は口が退化していて何も食べない。", "tier": 4, "main": {"order": 1045, "tier": 3}}
 {"id": "isphinxmorio", "parent": "g_sphinx_sphingidae", "ja": "マツクロスズメ", "sci": "Sphinx morio", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "isphinxcrassistriga", "parent": "g_sphinx_sphingidae", "ja": "オビグロスズメ", "sci": "Sphinx crassistriga", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "iambulyxsericeipennis", "parent": "g_ambulyx_sphingidae", "ja": "アジアホソバスズメ", "sci": "Ambulyx sericeipennis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -19692,7 +19692,7 @@
 {"id": "itenoderaangustipennis", "parent": "g_tenodera_mantidae", "ja": "チョウセンカマキリ", "sci": "Tenodera angustipennis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "ixylocopatranquebarorum", "parent": "g_xylocopa_apidae", "ja": "タイワンタケクマバチ", "sci": "Xylocopa tranquebarorum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "iriptortuspedestris", "parent": "g_riptortus_alydidae", "ja": "ホソヘリカメムシ", "sci": "Riptortus pedestris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "ioxyayezoensis", "parent": "g_oxya_acrididae", "ja": "コバネイナゴ", "sci": "Oxya yezoensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "ioxyayezoensis", "parent": "g_oxya_acrididae", "ja": "コバネイナゴ", "sci": "Oxya yezoensis", "jaStatus": "standard", "aliases": [], "fact": "田んぼなどの草地に多いイナゴ。佃煮などにして食べられる。", "tier": 4, "main": {"order": 1046, "tier": 2}}
 {"id": "itettigoniaorientalis", "parent": "g_tettigonia_tettigoniidae", "ja": "ヤブキリ", "sci": "Tettigonia orientalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "iacanthocorissordidus", "parent": "g_acanthocoris_coreidae", "ja": "ホオズキカメムシ", "sci": "Acanthocoris sordidus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "iorthetrumjaponicum", "parent": "g_orthetrum_libellulidae", "ja": "シオヤトンボ", "sci": "Orthetrum japonicum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -21061,3 +21061,30 @@
 {"id": "hpangasianodongigas", "parent": "g_pangasianodon", "ja": "メコンオオナマズ", "sci": "Pangasianodon gigas", "jaStatus": "common", "aliases": [], "fact": "メコン川流域にすむ世界最大級の淡水魚。野生の数が減り、絶滅寸前とされる。", "verify": {"ja": "標準和名リストの対象外。Wikidata と GBIF（Catalogue of Life）の和名", "sci": "日本産ではないため日本産魚類全種目録の対象外。GBIF・Catalogue of Life で受理名を確認"}, "tier": 3, "gbif": 2340710, "main": {"tier": 3, "order": 949}}
 {"id": "hambigolimaxvalentianus", "parent": "g_ambigolimax_limacidae", "ja": "チャコウラナメクジ", "sci": "Ambigolimax valentianus", "jaStatus": "standard", "aliases": [], "fact": "ヨーロッパ原産の外来のナメクジ。背中の前の方に甲羅のような外套膜があり、町の家の周りでふつうに見られる。", "tier": 2, "main": {"order": 1027}, "sciSynonyms": ["Lehmannia valentiana"]}
 {"id": "hlottiagigantea", "parent": "g_lottia_lottiidae", "ja": "ナスビカサガイ", "sci": "Lottia gigantea", "jaStatus": "standard", "aliases": [], "fact": "北米の太平洋岸にすむ大型のカサガイ。岩の上に縄張りをもち、近づくほかの生き物を殻で押しのける。", "verify": {"ja": "和名は Catalogue of Life（BISMaL 由来）だけで確認"}, "tier": 4, "main": {"order": 1030}}
+{"id": "hchelydraserpentina", "parent": "g_chelydra", "ja": "カミツキガメ", "sci": "Chelydra serpentina", "jaStatus": "standard", "aliases": [], "fact": "北米〜中米原産。長い首を伸ばして強くかみつく。千葉県の印旛沼周辺などに定着した特定外来生物。", "tier": 2, "main": {"order": 1051}}
+{"id": "hpercaflavescens", "parent": "g_perca", "ja": "イエローパーチ", "sci": "Perca flavescens", "jaStatus": "standard", "aliases": [], "fact": "北米の湖や川にすむ。黄色っぽい体に黒い縦じまがある。北米では釣りや食用の対象。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）。英名の片仮名"}, "tier": 3, "main": {"order": 1052}}
+{"id": "hesoxlucius", "parent": "g_esox", "ja": "ノーザンパイク", "sci": "Esox lucius", "jaStatus": "standard", "aliases": [], "fact": "北半球の寒い地域の川や湖にすむ肉食魚。細長い体で、待ち伏せして魚などを襲う。", "verify": {"ja": "和名は Wikidata・iNaturalist の一致のみ。英名の片仮名"}, "tier": 3, "main": {"order": 1053}}
+{"id": "hgarrarufa", "parent": "g_garra", "ja": "ドクターフィッシュ", "sci": "Garra rufa", "jaStatus": "standard", "aliases": [], "fact": "西アジアの川にすむコイ科の魚。人の古い角質をついばむので、足湯の「フィッシュセラピー」に使われる。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1054}}
+{"id": "hpterophyllumscalare", "parent": "g_pterophyllum", "ja": "エンゼルフィッシュ", "sci": "Pterophyllum scalare", "jaStatus": "standard", "aliases": [], "fact": "南米アマゾン川流域原産。上下に長く伸びたひれをもち、観賞魚として広く飼われる。", "verify": {"ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）。Wikidataは「スカラレ・エンゼル」"}, "tier": 2, "main": {"order": 1055}}
+{"id": "hparacheirodoninnesi", "parent": "g_paracheirodon", "ja": "ネオンテトラ", "sci": "Paracheirodon innesi", "jaStatus": "standard", "aliases": [], "fact": "南米アマゾン川上流原産の小さな魚。体の横に青く光る線と赤い帯がある、代表的な観賞魚。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1056}}
+{"id": "hpygocentrusnattereri", "parent": "g_pygocentrus", "ja": "ピラニア・ナッテリー", "sci": "Pygocentrus nattereri", "jaStatus": "standard", "aliases": [], "fact": "南米の川にすむピラニアの一種。鋭い歯をもち、群れでいることが多い。", "verify": {"ja": "和名は Wikidata のみで、学名をカタカナにした形（学術的な和名は未確認）"}, "tier": 2, "main": {"order": 1057}}
+{"id": "hsalminusbrasiliensis", "parent": "g_salminus", "ja": "ドラド", "sci": "Salminus brasiliensis", "jaStatus": "standard", "aliases": [], "fact": "南米の大きな川にすむ、金色の大型肉食魚。釣りの対象として人気がある。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1058}}
+{"id": "harapaimagigas", "parent": "g_arapaima", "ja": "ピラルク", "sci": "Arapaima gigas", "jaStatus": "standard", "aliases": ["ピラルクー"], "fact": "南米アマゾン川流域にすむ、世界最大級の淡水魚。うきぶくろで空気呼吸をするため、ときどき水面に上がってくる。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）（ピラルクー）", "sci": "Arapaima 属は複数種に分ける扱いがある"}, "tier": 2, "main": {"order": 1059}}
+{"id": "hpolypterusendlicherii", "parent": "g_polypterus_polypteriformes", "ja": "ポリプテルス・エンドリケリー", "sci": "Polypterus endlicherii", "jaStatus": "standard", "aliases": [], "fact": "西〜中央アフリカの川や湖にすむ大型のポリプテルス。体に黒っぽい帯がある。観賞魚として飼われる。", "verify": {"ja": "和名は iNaturalist のみで、学名をカタカナにした形（学術的な和名は未確認）"}, "tier": 3, "main": {"order": 1060}}
+{"id": "hmorphomenelaus", "parent": "g_morpho", "ja": "メネラウスモルフォ", "sci": "Morpho menelaus", "jaStatus": "standard", "aliases": [], "fact": "中南米の森にすむ。翅の青い輝きは色素ではなく、鱗粉の細かいつくりによる構造色。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1061}}
+{"id": "htrogonopterabrookiana", "parent": "g_trogonoptera", "ja": "アカエリトリバネアゲハ", "sci": "Trogonoptera brookiana", "jaStatus": "standard", "aliases": [], "fact": "マレー半島・ボルネオ島・スマトラ島にすむ。黒い翅に緑の帯があり、首元が赤い。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1062}}
+{"id": "hornithopteraalexandrae", "parent": "g_ornithoptera", "ja": "アレキサンドラトリバネアゲハ", "sci": "Ornithoptera alexandrae", "jaStatus": "standard", "aliases": ["アレクサンドラトリバネアゲハ"], "fact": "ニューギニア島の一部だけにすむ、世界最大のチョウ。雌は翅を広げると25cmを超える。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）（アレクサンドラトリバネアゲハ）"}, "tier": 3, "main": {"order": 1063}}
+{"id": "hchrysiridiarhipheus", "parent": "g_chrysiridia", "ja": "ニシキオオツバメガ", "sci": "Chrysiridia rhipheus", "jaStatus": "standard", "aliases": [], "fact": "マダガスカルにすむ、昼に飛ぶガ。虹色の翅は構造色で、チョウとよく間違えられる。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1064}}
+{"id": "hhymenopuscoronatus", "parent": "g_hymenopus", "ja": "ハナカマキリ", "sci": "Hymenopus coronatus", "jaStatus": "standard", "aliases": [], "fact": "東南アジアにすむ。花びらのような脚と体の色で花にまぎれ、寄ってきた虫を捕らえる。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1065}}
+{"id": "hcatacanthusincarnatus", "parent": "g_catacanthus", "ja": "ジンメンカメムシ", "sci": "Catacanthus incarnatus", "jaStatus": "standard", "aliases": [], "fact": "東南アジアにすむ。背中の模様が人の顔のように見える。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1066}}
+{"id": "hmormolycephyllodes", "parent": "g_mormolyce", "ja": "バイオリンムシ", "sci": "Mormolyce phyllodes", "jaStatus": "standard", "aliases": [], "fact": "東南アジアの森にすむオサムシの仲間。薄く広がった上翅で、体がバイオリンのような形に見える。", "verify": {"ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1067}}
+{"id": "heupholusschoenherri", "parent": "g_eupholus", "ja": "ショーエンヘルホウセキゾウムシ", "sci": "Eupholus schoenherri", "jaStatus": "standard", "aliases": [], "fact": "ニューギニア島にすむ。青緑の金属光沢のある体に、黒い帯がある。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 4, "main": {"order": 1068}}
+{"id": "hscarabaeussacer", "parent": "g_scarabaeus", "ja": "ヒジリタマオシコガネ", "sci": "Scarabaeus sacer", "jaStatus": "standard", "aliases": [], "fact": "地中海沿岸などにすむ。動物のふんを丸めて転がす。古代エジプトでは太陽の神の象徴とされた。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1069}}
+{"id": "hgoliathusgoliatus", "parent": "g_goliathus", "ja": "ゴライアスオオツノハナムグリ", "sci": "Goliathus goliatus", "jaStatus": "standard", "aliases": [], "fact": "アフリカ中部・西部の森にすむ。世界で最も重い甲虫の一つ。", "verify": {"ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1070}}
+{"id": "hphalacrognathusmuelleri", "parent": "g_phalacrognathus", "ja": "ニジイロクワガタ", "sci": "Phalacrognathus muelleri", "jaStatus": "standard", "aliases": [], "fact": "オーストラリア北東部とニューギニア島にすむ。体に虹色の金属光沢がある。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1071}}
+{"id": "hcyclommatusmetallifer", "parent": "g_cyclommatus", "ja": "メタリフェルホソアカクワガタ", "sci": "Cyclommatus metallifer", "jaStatus": "standard", "aliases": [], "fact": "インドネシアのスラウェシ島などにすむ。雄は体に比べてとても長い大あごをもつ。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1072}}
+{"id": "hallotopusrosenbergi", "parent": "g_allotopus", "ja": "オウゴンオニクワガタ", "sci": "Allotopus rosenbergi", "jaStatus": "standard", "aliases": [], "fact": "インドネシアのジャワ島にすむ。体に金色の光沢がある。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 3, "main": {"order": 1073}}
+{"id": "hprosopocoilusgirafa", "parent": "g_prosopocoilus_lucanidae", "ja": "ギラファノコギリクワガタ", "sci": "Prosopocoilus girafa", "jaStatus": "standard", "aliases": [], "fact": "東南アジアからインドにかけてすむ。雄の大あごが長く、世界最長のクワガタとして知られる。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1074}}
+{"id": "hchalcosomachiron", "parent": "g_chalcosoma", "ja": "コーカサスオオカブト", "sci": "Chalcosoma chiron", "jaStatus": "standard", "aliases": [], "fact": "東南アジアにすむ、アジア最大のカブトムシ。雄は3本の長い角をもつ。", "verify": {"ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"}, "tier": 2, "main": {"order": 1075}}
+{"id": "hmegasomaelephas", "parent": "g_megasoma", "ja": "ゾウカブト", "sci": "Megasoma elephas", "jaStatus": "standard", "aliases": ["エレファスゾウカブト"], "fact": "中南米にすむ大型のカブトムシ。体が細かい毛で覆われる。", "verify": {"ja": "和名は iNaturalist の日本語名（Wikidataは「エレファスゾウカブト」）"}, "tier": 3, "main": {"order": 1076}}
+{"id": "hpulchriphylliumgiganteum", "parent": "g_pulchriphyllium", "ja": "オオコノハムシ", "sci": "Pulchriphyllium giganteum", "jaStatus": "standard", "aliases": [], "fact": "マレー半島などにすむ。体も脚も木の葉そっくりの形と色をしている。", "verify": {"ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）", "sci": "以前は Phyllium 属とされていた"}, "tier": 3, "main": {"order": 1077}}

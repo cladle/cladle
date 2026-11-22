@@ -326,7 +326,7 @@
   },
   {
    "id": "teleostei",
-   "parent": "actinopterygii",
+   "parent": "neopterygii",
    "ja": "真骨類",
    "sci": "Teleostei",
    "rank": "クレード",
@@ -9216,6 +9216,182 @@
    "sci": "Polyclinidae",
    "rank": "科",
    "desc": ""
+  },
+  {
+   "id": "o_esociformes",
+   "parent": "euteleostei",
+   "ja": "カワカマス目",
+   "sci": "Esociformes",
+   "rank": "目",
+   "desc": "北半球の寒い地域の淡水にすむ。背びれとしりびれが体の後ろの方にあり、水草の間などで待ち伏せして獲物を襲う。カワカマス科とウンブラ科を含む。サケ目に近いとされるが、サケ目と違って脂びれをもたない。"
+  },
+  {
+   "id": "f_esocidae",
+   "parent": "o_esociformes",
+   "ja": "カワカマス科",
+   "sci": "Esocidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "o_characiformes",
+   "parent": "ostariophysi",
+   "ja": "カラシン目",
+   "sci": "Characiformes",
+   "rank": "目",
+   "desc": "南米とアフリカの淡水にすむ。多くは背びれの後ろに脂びれをもつ。コイ目・ナマズ目と同じく、うきぶくろと内耳を小さな骨（ウェーバー器官）でつなぐ骨鰾類の仲間。あごに歯のないコイ目と違い、多くはあごに歯が発達する。ネオンテトラやピラニアを含む。"
+  },
+  {
+   "id": "f_characidae",
+   "parent": "o_characiformes",
+   "ja": "カラシン科",
+   "sci": "Characidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_serrasalmidae",
+   "parent": "o_characiformes",
+   "ja": "Serrasalmidae",
+   "sci": "Serrasalmidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_bryconidae",
+   "parent": "o_characiformes",
+   "ja": "Bryconidae",
+   "sci": "Bryconidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_percidae",
+   "parent": "perciformes",
+   "ja": "Percidae",
+   "sci": "Percidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_arapaimidae",
+   "parent": "o_osteoglossiformes",
+   "ja": "Arapaimidae",
+   "sci": "Arapaimidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_uraniidae",
+   "parent": "lepidoptera",
+   "ja": "ツバメガ科",
+   "sci": "Uraniidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_hymenopodidae",
+   "parent": "t_mantodea",
+   "ja": "ハナカマキリ科",
+   "sci": "Hymenopodidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_phylliidae",
+   "parent": "t_phasmida",
+   "ja": "コノハムシ科",
+   "sci": "Phylliidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_curculionidae",
+   "parent": "coleoptera",
+   "ja": "ゾウムシ科",
+   "sci": "Curculionidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "neopterygii",
+   "parent": "actinopterygii",
+   "ja": "Neopterygii",
+   "sci": "Neopterygii",
+   "rank": "クレード",
+   "desc": "ガー類と真骨類をまとめたクレード。先に分かれたチョウザメ目と違い、背びれ・しりびれの鰭条（ひれのすじ）が、それを支える骨と同じ数になる。"
+  },
+  {
+   "id": "o_lepisosteiformes",
+   "parent": "neopterygii",
+   "ja": "ガー目",
+   "sci": "Lepisosteiformes",
+   "rank": "目",
+   "desc": "ガー類の目。北米などの淡水に住み、日本では外来種として見つかる。姉妹群の真骨類と違い、硬いエナメル質の鱗（硬鱗）で体が覆われる。"
+  },
+  {
+   "id": "f_lepisosteidae",
+   "parent": "o_lepisosteiformes",
+   "ja": "ガー科",
+   "sci": "Lepisosteidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_istiophoridae",
+   "parent": "carangiformes",
+   "ja": "マカジキ科",
+   "sci": "Istiophoridae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_echeneidae",
+   "parent": "carangiformes",
+   "ja": "コバンザメ科",
+   "sci": "Echeneidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_coryphaenidae",
+   "parent": "carangiformes",
+   "ja": "シイラ科",
+   "sci": "Coryphaenidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_cancridae",
+   "parent": "brachyura",
+   "ja": "Cancridae",
+   "sci": "Cancridae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_babyloniidae",
+   "parent": "t_neogastropoda",
+   "ja": "Babyloniidae",
+   "sci": "Babyloniidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_coenagrionidae",
+   "parent": "odonata",
+   "ja": "イトトンボ科",
+   "sci": "Coenagrionidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_ligiidae",
+   "parent": "isopoda",
+   "ja": "Ligiidae",
+   "sci": "Ligiidae",
+   "rank": "科",
+   "desc": ""
   }
  ],
  "species": [
@@ -9658,7 +9834,9 @@
    "ja": "コイ",
    "sci": "Cyprinus carpio",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "ニシキゴイ"
+   ],
    "fact": "喉の奥にある咽頭歯で餌をすりつぶす。",
    "tier": 1,
    "gbif": 4286975
@@ -21308,6 +21486,581 @@
     "ja": "和名は Catalogue of Life（BISMaL 由来）だけで確認"
    },
    "tier": 4
+  },
+  {
+   "id": "s597",
+   "parent": "f_cyprinidae",
+   "ja": "ギンブナ",
+   "sci": "Carassius sp.",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "日本各地の川や池にすむ。多くは雌だけで、ほかのフナなどの精子の刺激で卵が発生する（雌性発生）。",
+   "verify": {
+    "sci": "ギンブナには正式な学名が付いていない（Carassius sp.）"
+   },
+   "tier": 1
+  },
+  {
+   "id": "s591",
+   "parent": "f_cyprinidae",
+   "ja": "キンギョ",
+   "sci": "Carassius auratus",
+   "jaStatus": "standard",
+   "aliases": [
+    "デメキン",
+    "ランチュウ"
+   ],
+   "fact": "中国でフナから作り出された観賞魚。デメキン・ランチュウなどは品種で、種としては同じ。",
+   "tier": 1
+  },
+  {
+   "id": "s710",
+   "parent": "f_salmonidae",
+   "ja": "マスノスケ",
+   "sci": "Oncorhynchus tshawytscha",
+   "jaStatus": "standard",
+   "aliases": [
+    "キングサーモン"
+   ],
+   "fact": "太平洋で最も大きくなるサケの仲間。キングサーモンとも呼ばれる。",
+   "tier": 2
+  },
+  {
+   "id": "s2647",
+   "parent": "f_poeciliidae",
+   "ja": "グッピー",
+   "sci": "Poecilia reticulata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南米北部原産。雌の体内で卵がかえって子を産む（卵胎生）。雄はひれの色が派手。",
+   "tier": 2
+  },
+  {
+   "id": "s244",
+   "parent": "f_lepisosteidae",
+   "ja": "アリゲーターガー",
+   "sci": "Atractosteus spatula",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米南部の川にすむ大型魚。硬いガノイン鱗に覆われ、うきぶくろで空気呼吸もできる。日本では特定外来生物。",
+   "verify": {
+    "ja": "日本産魚類全種目録では標準和名がない扱い（引用符付き）。一般に使われる呼び名"
+   },
+   "tier": 2
+  },
+  {
+   "id": "s2775",
+   "parent": "f_pomacentridae",
+   "ja": "クマノミ",
+   "sci": "Amphiprion clarkii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イソギンチャクと共生する。群れで一番大きな個体が雌で、雌がいなくなると雄が雌に性転換する。",
+   "tier": 1
+  },
+  {
+   "id": "s353",
+   "parent": "f_muraenidae",
+   "ja": "ハナヒゲウツボ",
+   "sci": "Rhinomuraena quaesita",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "鼻先にひらひらした鼻管をもつウツボ。成長につれて体色が黒、青、黄色と変わる。",
+   "tier": 3
+  },
+  {
+   "id": "s2507",
+   "parent": "f_istiophoridae",
+   "ja": "クロカジキ",
+   "sci": "Makaira nigricans",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "外洋を速く泳ぐ大型魚。上あごが槍のように長く伸びる。",
+   "tier": 2
+  },
+  {
+   "id": "s2521",
+   "parent": "f_carangidae",
+   "ja": "ロウニンアジ",
+   "sci": "Caranx ignobilis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "熱帯の浅い海にすむ大型のアジ。全長1.5mを超えることもあり、釣りの対象として人気がある。",
+   "tier": 2
+  },
+  {
+   "id": "s2581",
+   "parent": "f_coryphaenidae",
+   "ja": "シイラ",
+   "sci": "Coryphaena hippurus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "外洋の表層を泳ぐ。流れ藻などの漂流物の下に集まる。雄は成長すると額が張り出す。",
+   "tier": 2
+  },
+  {
+   "id": "s2572",
+   "parent": "f_echeneidae",
+   "ja": "コバンザメ",
+   "sci": "Echeneis naucrates",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "頭の上の吸盤（形の変わった背びれ）で、サメやウミガメなどにくっつく。サメの仲間ではない。",
+   "tier": 1
+  },
+  {
+   "id": "s3796",
+   "parent": "f_centrarchidae",
+   "ja": "ブルーギル",
+   "sci": "Lepomis macrochirus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米原産。1960年に日本に持ち込まれ、各地の池や湖に広がった特定外来生物。",
+   "verify": {
+    "sci": "日本産魚類全種目録では亜種 L. macrochirus macrochirus として載る。本家では種として扱う"
+   },
+   "tier": 1
+  },
+  {
+   "id": "lpapiliobianor",
+   "parent": "papilionidae",
+   "ja": "カラスアゲハ",
+   "sci": "Papilio bianor",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒い翅に青緑の鱗粉が輝くアゲハ。幼虫はカラスザンショウなどミカン科の葉を食べる。",
+   "verify": {
+    "ja": "環境省の対象種一覧の表記。iNaturalist では「ヤエヤマカラスアゲハ」"
+   },
+   "tier": 2
+  },
+  {
+   "id": "ldanausplexippus",
+   "parent": "f_nymphalidae",
+   "ja": "オオカバマダラ",
+   "sci": "Danaus plexippus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米で秋に数千kmを渡り、メキシコの山地で集団で冬を越す。幼虫が食べるトウワタの毒を体にためる。",
+   "tier": 3
+  },
+  {
+   "id": "iattacusatlas",
+   "parent": "f_saturniidae",
+   "ja": "ヨナグニサン",
+   "sci": "Attacus atlas",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "翅を広げると20cmを超える世界最大級のガ。日本では与那国島・石垣島・西表島にすむ。成虫は口が退化していて何も食べない。",
+   "tier": 3
+  },
+  {
+   "id": "ioxyayezoensis",
+   "parent": "f_acrididae",
+   "ja": "コバネイナゴ",
+   "sci": "Oxya yezoensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "田んぼなどの草地に多いイナゴ。佃煮などにして食べられる。",
+   "tier": 2
+  },
+  {
+   "id": "lischnuraasiatica",
+   "parent": "f_coenagrionidae",
+   "ja": "アジアイトトンボ",
+   "sci": "Ischnura asiatica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "池や田んぼに多い小型のイトトンボ。雄は胸が緑色で、腹の先が青い。",
+   "tier": 3
+  },
+  {
+   "id": "w955994",
+   "parent": "f_ligiidae",
+   "ja": "フナムシ",
+   "sci": "Ligia exotica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "岩の多い海岸を素早く走り回る、ワラジムシの仲間。えらで呼吸するが、水の中に長くはいられない。",
+   "tier": 2
+  },
+  {
+   "id": "c67yqj",
+   "parent": "f_babyloniidae",
+   "ja": "バイ",
+   "sci": "Babylonia japonica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂の海底にすむ巻貝。死んだ魚などを食べる。食用。貝殻は「ばいごま」（ベーゴマ）の元になった。",
+   "tier": 3
+  },
+  {
+   "id": "w440388",
+   "parent": "f_cancridae",
+   "ja": "ホクヨウイチョウガニ",
+   "sci": "Metacarcinus magister",
+   "jaStatus": "standard",
+   "aliases": [
+    "ダンジネスクラブ"
+   ],
+   "fact": "北米の太平洋岸で食用に獲られるカニ。ダンジネスクラブとも呼ばれる。",
+   "tier": 3
+  },
+  {
+   "id": "hchelydraserpentina",
+   "parent": "f_chelydridae",
+   "ja": "カミツキガメ",
+   "sci": "Chelydra serpentina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米〜中米原産。長い首を伸ばして強くかみつく。千葉県の印旛沼周辺などに定着した特定外来生物。",
+   "tier": 2
+  },
+  {
+   "id": "hpercaflavescens",
+   "parent": "f_percidae",
+   "ja": "イエローパーチ",
+   "sci": "Perca flavescens",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米の湖や川にすむ。黄色っぽい体に黒い縦じまがある。北米では釣りや食用の対象。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）。英名の片仮名"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hesoxlucius",
+   "parent": "f_esocidae",
+   "ja": "ノーザンパイク",
+   "sci": "Esox lucius",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北半球の寒い地域の川や湖にすむ肉食魚。細長い体で、待ち伏せして魚などを襲う。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の一致のみ。英名の片仮名"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hgarrarufa",
+   "parent": "f_cyprinidae",
+   "ja": "ドクターフィッシュ",
+   "sci": "Garra rufa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "西アジアの川にすむコイ科の魚。人の古い角質をついばむので、足湯の「フィッシュセラピー」に使われる。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hpterophyllumscalare",
+   "parent": "f_cichlidae",
+   "ja": "エンゼルフィッシュ",
+   "sci": "Pterophyllum scalare",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南米アマゾン川流域原産。上下に長く伸びたひれをもち、観賞魚として広く飼われる。",
+   "verify": {
+    "ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）。Wikidataは「スカラレ・エンゼル」"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hparacheirodoninnesi",
+   "parent": "f_characidae",
+   "ja": "ネオンテトラ",
+   "sci": "Paracheirodon innesi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南米アマゾン川上流原産の小さな魚。体の横に青く光る線と赤い帯がある、代表的な観賞魚。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hpygocentrusnattereri",
+   "parent": "f_serrasalmidae",
+   "ja": "ピラニア・ナッテリー",
+   "sci": "Pygocentrus nattereri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南米の川にすむピラニアの一種。鋭い歯をもち、群れでいることが多い。",
+   "verify": {
+    "ja": "和名は Wikidata のみで、学名をカタカナにした形（学術的な和名は未確認）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hsalminusbrasiliensis",
+   "parent": "f_bryconidae",
+   "ja": "ドラド",
+   "sci": "Salminus brasiliensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南米の大きな川にすむ、金色の大型肉食魚。釣りの対象として人気がある。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "harapaimagigas",
+   "parent": "f_arapaimidae",
+   "ja": "ピラルク",
+   "sci": "Arapaima gigas",
+   "jaStatus": "standard",
+   "aliases": [
+    "ピラルクー"
+   ],
+   "fact": "南米アマゾン川流域にすむ、世界最大級の淡水魚。うきぶくろで空気呼吸をするため、ときどき水面に上がってくる。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）（ピラルクー）",
+    "sci": "Arapaima 属は複数種に分ける扱いがある"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hpolypterusendlicherii",
+   "parent": "f_polypteridae",
+   "ja": "ポリプテルス・エンドリケリー",
+   "sci": "Polypterus endlicherii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "西〜中央アフリカの川や湖にすむ大型のポリプテルス。体に黒っぽい帯がある。観賞魚として飼われる。",
+   "verify": {
+    "ja": "和名は iNaturalist のみで、学名をカタカナにした形（学術的な和名は未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hmorphomenelaus",
+   "parent": "f_nymphalidae",
+   "ja": "メネラウスモルフォ",
+   "sci": "Morpho menelaus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "中南米の森にすむ。翅の青い輝きは色素ではなく、鱗粉の細かいつくりによる構造色。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "htrogonopterabrookiana",
+   "parent": "papilionidae",
+   "ja": "アカエリトリバネアゲハ",
+   "sci": "Trogonoptera brookiana",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マレー半島・ボルネオ島・スマトラ島にすむ。黒い翅に緑の帯があり、首元が赤い。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hornithopteraalexandrae",
+   "parent": "papilionidae",
+   "ja": "アレキサンドラトリバネアゲハ",
+   "sci": "Ornithoptera alexandrae",
+   "jaStatus": "standard",
+   "aliases": [
+    "アレクサンドラトリバネアゲハ"
+   ],
+   "fact": "ニューギニア島の一部だけにすむ、世界最大のチョウ。雌は翅を広げると25cmを超える。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）（アレクサンドラトリバネアゲハ）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hchrysiridiarhipheus",
+   "parent": "f_uraniidae",
+   "ja": "ニシキオオツバメガ",
+   "sci": "Chrysiridia rhipheus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マダガスカルにすむ、昼に飛ぶガ。虹色の翅は構造色で、チョウとよく間違えられる。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hhymenopuscoronatus",
+   "parent": "f_hymenopodidae",
+   "ja": "ハナカマキリ",
+   "sci": "Hymenopus coronatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアにすむ。花びらのような脚と体の色で花にまぎれ、寄ってきた虫を捕らえる。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hcatacanthusincarnatus",
+   "parent": "f_pentatomidae",
+   "ja": "ジンメンカメムシ",
+   "sci": "Catacanthus incarnatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアにすむ。背中の模様が人の顔のように見える。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hmormolycephyllodes",
+   "parent": "carabidae",
+   "ja": "バイオリンムシ",
+   "sci": "Mormolyce phyllodes",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアの森にすむオサムシの仲間。薄く広がった上翅で、体がバイオリンのような形に見える。",
+   "verify": {
+    "ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "heupholusschoenherri",
+   "parent": "f_curculionidae",
+   "ja": "ショーエンヘルホウセキゾウムシ",
+   "sci": "Eupholus schoenherri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ニューギニア島にすむ。青緑の金属光沢のある体に、黒い帯がある。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "hscarabaeussacer",
+   "parent": "scarabaeidae",
+   "ja": "ヒジリタマオシコガネ",
+   "sci": "Scarabaeus sacer",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "地中海沿岸などにすむ。動物のふんを丸めて転がす。古代エジプトでは太陽の神の象徴とされた。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hgoliathusgoliatus",
+   "parent": "scarabaeidae",
+   "ja": "ゴライアスオオツノハナムグリ",
+   "sci": "Goliathus goliatus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ中部・西部の森にすむ。世界で最も重い甲虫の一つ。",
+   "verify": {
+    "ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hphalacrognathusmuelleri",
+   "parent": "lucanidae",
+   "ja": "ニジイロクワガタ",
+   "sci": "Phalacrognathus muelleri",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "オーストラリア北東部とニューギニア島にすむ。体に虹色の金属光沢がある。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hcyclommatusmetallifer",
+   "parent": "lucanidae",
+   "ja": "メタリフェルホソアカクワガタ",
+   "sci": "Cyclommatus metallifer",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "インドネシアのスラウェシ島などにすむ。雄は体に比べてとても長い大あごをもつ。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hallotopusrosenbergi",
+   "parent": "lucanidae",
+   "ja": "オウゴンオニクワガタ",
+   "sci": "Allotopus rosenbergi",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "インドネシアのジャワ島にすむ。体に金色の光沢がある。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hprosopocoilusgirafa",
+   "parent": "lucanidae",
+   "ja": "ギラファノコギリクワガタ",
+   "sci": "Prosopocoilus girafa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアからインドにかけてすむ。雄の大あごが長く、世界最長のクワガタとして知られる。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hchalcosomachiron",
+   "parent": "scarabaeidae",
+   "ja": "コーカサスオオカブト",
+   "sci": "Chalcosoma chiron",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "東南アジアにすむ、アジア最大のカブトムシ。雄は3本の長い角をもつ。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名のみで確認（標準和名リストなし）"
+   },
+   "tier": 2
+  },
+  {
+   "id": "hmegasomaelephas",
+   "parent": "scarabaeidae",
+   "ja": "ゾウカブト",
+   "sci": "Megasoma elephas",
+   "jaStatus": "standard",
+   "aliases": [
+    "エレファスゾウカブト"
+   ],
+   "fact": "中南米にすむ大型のカブトムシ。体が細かい毛で覆われる。",
+   "verify": {
+    "ja": "和名は iNaturalist の日本語名（Wikidataは「エレファスゾウカブト」）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hpulchriphylliumgiganteum",
+   "parent": "f_phylliidae",
+   "ja": "オオコノハムシ",
+   "sci": "Pulchriphyllium giganteum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "マレー半島などにすむ。体も脚も木の葉そっくりの形と色をしている。",
+   "verify": {
+    "ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）",
+    "sci": "以前は Phyllium 属とされていた"
+   },
+   "tier": 3
   }
  ]
 }

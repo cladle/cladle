@@ -3094,7 +3094,9 @@
    "ja": "コイ",
    "sci": "Cyprinus carpio",
    "jaStatus": "standard",
-   "aliases": [],
+   "aliases": [
+    "ニシキゴイ"
+   ],
    "fact": "喉の奥にある咽頭歯で餌をすりつぶす。",
    "tier": 1,
    "gbif": 4286975
