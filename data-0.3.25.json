@@ -8843,7 +8843,7 @@
   },
   {
    "id": "f_dugesiidae",
-   "parent": "tricladida",
+   "parent": "t_geoplanoidea",
    "ja": "Dugesiidae",
    "sci": "Dugesiidae",
    "rank": "科",
@@ -8851,7 +8851,7 @@
   },
   {
    "id": "f_geoplanidae",
-   "parent": "tricladida",
+   "parent": "t_geoplanoidea",
    "ja": "Geoplanidae",
    "sci": "Geoplanidae",
    "rank": "科",
@@ -9392,6 +9392,56 @@
    "sci": "Ligiidae",
    "rank": "科",
    "desc": ""
+  },
+  {
+   "id": "t_planarioidea",
+   "parent": "tricladida",
+   "ja": "Planarioidea",
+   "sci": "Planarioidea",
+   "rank": "上科",
+   "desc": "淡水にすむウズムシのうち、Planariidae（ミヤマウズムシ・カズメウズムシなど）と Dendrocoelidae（イズミオオウズムシなど）をまとめた上科。姉妹群の Geoplanoidea と違い、陸に上がった仲間を含まない。トランスクリプトームにもとづく系統解析でも一つのまとまりになった（Vila-Farré et al. 2023、doi:10.1038/s41559-023-02221-7）。",
+   "verify": {
+    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
+   }
+  },
+  {
+   "id": "t_geoplanoidea",
+   "parent": "tricladida",
+   "ja": "Geoplanoidea",
+   "sci": "Geoplanoidea",
+   "rank": "上科",
+   "desc": "ナミウズムシなどの淡水のウズムシ（Dugesiidae）と、コウガイビルなどの陸生のウズムシ（Geoplanidae）を含む上科。姉妹群の Planarioidea と違い、陸に進出した系統を含む。陸生のウズムシは、淡水のウズムシと同じこのまとまりの中に入る（Vila-Farré et al. 2023、doi:10.1038/s41559-023-02221-7）。",
+   "verify": {
+    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
+   }
+  },
+  {
+   "id": "f_planariidae",
+   "parent": "t_planarioidea",
+   "ja": "Planariidae",
+   "sci": "Planariidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "f_dendrocoelidae",
+   "parent": "t_planarioidea",
+   "ja": "Dendrocoelidae",
+   "sci": "Dendrocoelidae",
+   "rank": "科",
+   "desc": ""
+  },
+  {
+   "id": "rhabdocoela",
+   "parent": "platyhelminthes",
+   "ja": "Rhabdocoela",
+   "sci": "Rhabdocoela",
+   "rank": "目",
+   "desc": "体長数mm以下の小さな自由生活の扁形動物で、約1500種が知られ、多くは海の砂のすき間にすむ（Laumer et al. 2015、doi:10.7554/eLife.05503）。近縁の三岐腸目と違い、腸は枝分かれしない。淡水にすむ仲間の多くは、海から淡水へ一度進出した系統から多様化した（Van Steenkiste et al. 2013、doi:10.1371/journal.pone.0059917）。",
+   "verify": {
+    "ja": "日本語の学術文献で定着した和名を確認できないため学名で表記"
+   },
+   "polytomy": "Rhabditophora の中での位置（Proseriata などとの分かれる順）は解析によって変わり、議論中（Laumer et al. 2015）。従来の科（Typhloplanidae など）の多くは単系統でないとされるため、ここでは科を置かずに属を目の直下に置く（Van Steenkiste et al. 2013）。"
   }
  ],
  "species": [
@@ -22412,6 +22462,89 @@
     "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
    },
    "tier": 3
+  },
+  {
+   "id": "hphagocatavivida",
+   "parent": "f_planariidae",
+   "ja": "ミヤマウズムシ",
+   "sci": "Phagocata vivida",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "山地の冷たい渓流や湧き水にすむ淡水のウズムシ。",
+   "tier": 3
+  },
+  {
+   "id": "hphagocatakawakatsui",
+   "parent": "f_planariidae",
+   "ja": "コガタウズムシ",
+   "sci": "Phagocata kawakatsui",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ミヤマウズムシと同じ Phagocata 属の、小型の淡水のウズムシ。",
+   "tier": 4
+  },
+  {
+   "id": "hseidliaauriculata",
+   "parent": "f_planariidae",
+   "ja": "カズメウズムシ",
+   "sci": "Seidlia auriculata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "頭の縁に沿って小さな眼がたくさん並ぶ淡水のウズムシ。和名の「カズメ」は「数目」で、眼の多さにちなむ。",
+   "tier": 4
+  },
+  {
+   "id": "hbdellocephalabrunnea",
+   "parent": "f_dendrocoelidae",
+   "ja": "イズミオオウズムシ",
+   "sci": "Bdellocephala brunnea",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "湧き水や流れの緩い川にすむ、大型の淡水のウズムシ。",
+   "tier": 4
+  },
+  {
+   "id": "hdugesiaryukyuensis",
+   "parent": "f_dugesiidae",
+   "ja": "リュウキュウナミウズムシ",
+   "sci": "Dugesia ryukyuensis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南西諸島などにすむ、ナミウズムシに近い種。無性生殖をする個体を有性生殖へ切り替える「有性化」の研究に使われる。",
+   "verify": {
+    "ja": "和名は弘前大学のプレスリリース（2023）で確認。CoL・GBIF・Wikidata・iNatには和名なし"
+   },
+   "tier": 4
+  },
+  {
+   "id": "hbipaliumfuscatum",
+   "parent": "f_geoplanidae",
+   "ja": "クロイロコウガイビル",
+   "sci": "Bipalium fuscatum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "黒褐色の体をもつコウガイビル。人家の庭や畑など身近な場所でよく見られる。",
+   "tier": 3
+  },
+  {
+   "id": "hplatydemusmanokwari",
+   "parent": "f_geoplanidae",
+   "ja": "ニューギニアヤリガタリクウズムシ",
+   "sci": "Platydemus manokwari",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "カタツムリなどを食べる陸生のウズムシ。各地の島に持ち込まれ、固有のカタツムリを減らす外来種として問題になっている。",
+   "tier": 3
+  },
+  {
+   "id": "hmesostomalingua",
+   "parent": "rhabdocoela",
+   "ja": "タンボヒメウズムシ",
+   "sci": "Mesostoma lingua",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "田んぼや水たまりにすむ小さなウズムシ。プラナリア（三岐腸目）とは別の目に属する。",
+   "tier": 4
   }
  ]
 }
