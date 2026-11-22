@@ -20614,6 +20614,16 @@
    "aliases": [],
    "fact": "小さな個体が薄い被嚢の中に散らばって並び、岩や貝殻の表面に薄く広がる群体をつくるホヤ。",
    "tier": 4
+  },
+  {
+   "id": "c69zbm",
+   "parent": "demospongiae",
+   "ja": "ジンゾウナンコツカイメン",
+   "sci": "Chondrosia reniformis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "骨片をもたず、コラーゲンの繊維がぎっしり詰まった、軟骨のように硬い体をもつ海綿。学名の reniformis は「腎臓の形の」という意味。",
+   "tier": 4
   }
  ]
 }

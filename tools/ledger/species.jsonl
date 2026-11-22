@@ -10704,7 +10704,7 @@
 {"id": "c36tdd", "parent": "g_discodermia_theonellidae", "ja": "ジョウガシマイシカイメン", "sci": "Discodermia jogashima", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c45hbl", "parent": "g_myxodoryx_hymedesmiidae", "ja": "ジョウガシマカイメン", "sci": "Myxodoryx jogashimensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6gsk6", "parent": "g_eubranchopsis_eubranchidae", "ja": "ジョオウミノウミウシ", "sci": "Eubranchopsis virginalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c69zbm", "parent": "g_chondrosia_chondrosiidae", "ja": "ジンゾウナンコツカイメン", "sci": "Chondrosia reniformis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c69zbm", "parent": "g_chondrosia_chondrosiidae", "ja": "ジンゾウナンコツカイメン", "sci": "Chondrosia reniformis", "jaStatus": "standard", "aliases": [], "fact": "骨片をもたず、コラーゲンの繊維がぎっしり詰まった、軟骨のように硬い体をもつ海綿。学名の reniformis は「腎臓の形の」という意味。", "tier": 4, "main": {"tier": 4, "order": 963}}
 {"id": "c43qyk", "parent": "g_mitrella_columbellidae", "ja": "スイシマツムシ", "sci": "Mitrella mindorensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c47hc2", "parent": "g_nipponoscaphander_scaphandridae", "ja": "スイフガイ", "sci": "Nipponoscaphander japonicus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "ccbyk", "parent": "g_alviniconcha_paskentanidae", "ja": "スイヨウアルビンガイ", "sci": "Alviniconcha adamantis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
