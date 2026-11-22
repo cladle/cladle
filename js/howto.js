@@ -41,7 +41,7 @@ function demoData() {
 }
 let demoI = 0, demoTimer = null, demoPrevI = -1, demoEdges = null;
 function howtoHTML() {
-  return (HARD() ? hardHowto() : FISH() ? fishHowto() : BIRD() ? birdHowto() : INSECT() ? insectHowto() : "") + `<section><h2>遊び方は3つだけ</h2><ol class="steps">
+  return (HARD() ? hardHowto() : FISH() ? fishHowto() : BIRD() ? birdHowto() : INSECT() ? insectHowto() : "") + `<section><h2>遊び方</h2><ol class="steps">
     <li><b>動物を入れる</b><span>答えの動物との共通の祖先がわかり、系統樹に枝が増えます。</span></li>
     <li><b>緑の点の中を探す</b><span>答えの動物は緑の点より先にいます。その中の、まだ試していない仲間を入れます。</span></li>
     <li><b>${MAX} 回以内に当てる</b><span>${HINT1} 回目と ${HINT2} 回目のあとにヒントが使えます。</span></li></ol>
