@@ -9497,7 +9497,7 @@
 {"id": "c34qrp", "parent": "g_dendronephthya_nephtheidae", "ja": "クリトゲトサカ", "sci": "Dendronephthya castanea", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c358l6", "parent": "g_diala_dialidae", "ja": "クリフハマツボ", "sci": "Diala albugo", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c5bbkd", "parent": "g_vexillum_costellariidae", "ja": "クリフミノムシ", "sci": "Vexillum vulpecula", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c4rqt9", "parent": "g_reishia_muricidae", "ja": "クリフレイシ", "sci": "Reishia luteostoma", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c4rqt9", "parent": "g_reishia_muricidae", "ja": "クリフレイシ", "sci": "Reishia luteostoma", "jaStatus": "standard", "aliases": [], "fact": "岩礁の潮間帯にすむ巻貝で、殻の口の内側が黄色っぽい。WoRMSではレイシガイ（Reishia bronni）もこの種に含める。", "tier": 4, "main": {"order": 1028}}
 {"id": "c5xlgs", "parent": "g_cerithium_cerithiidae", "ja": "クリムシカニモリ", "sci": "Cerithium nesioticum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c7gcnf", "parent": "g_zebina_zebinidae", "ja": "クリムシチョウジガイ", "sci": "Zebina tridentata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c42krf", "parent": "g_mexichromis_chromodorididae", "ja": "クリヤイロウミウシ", "sci": "Mexichromis mariei", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -11388,7 +11388,7 @@
 {"id": "c4rjfz", "parent": "g_rapana_muricidae", "ja": "チリメンボラ", "sci": "Rapana bezoar", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cqjj7", "parent": "g_canarium_strombidae", "ja": "チリメンムカシタモト", "sci": "Canarium erythrinum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c3zw34", "parent": "g_meropesta_mactridae", "ja": "チリメンユキガイ", "sci": "Meropesta sinojaponica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c3vvnh", "parent": "g_loimia_terebellidae", "ja": "チンチロフサゴカイ", "sci": "Loimia verrucosa", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c3vvnh", "parent": "g_loimia_terebellidae", "ja": "チンチロフサゴカイ", "sci": "Loimia verrucosa", "jaStatus": "standard", "aliases": [], "fact": "砂泥の中に管をつくってすみ、頭から伸ばした多数の細長い触手で海底の餌を集めるフサゴカイの仲間。", "tier": 4, "main": {"order": 1029}}
 {"id": "c4xmjs", "parent": "g_sinum_naticidae", "ja": "ツガイ", "sci": "Sinum incisum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c3ghmz", "parent": "g_glyptocidaris_glyptocidaridae", "ja": "ツガルウニ", "sci": "Glyptocidaris crenularis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c5wxbb", "parent": "g_caprella_caprellidae", "ja": "ツガルワレカラ", "sci": "Caprella tsugarensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -21060,3 +21060,4 @@
 {"id": "hziphiuscavirostris", "parent": "g_ziphius_ziphiidae", "ja": "アカボウクジラ", "sci": "Ziphius cavirostris", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 3}
 {"id": "hpangasianodongigas", "parent": "g_pangasianodon", "ja": "メコンオオナマズ", "sci": "Pangasianodon gigas", "jaStatus": "common", "aliases": [], "fact": "メコン川流域にすむ世界最大級の淡水魚。野生の数が減り、絶滅寸前とされる。", "verify": {"ja": "標準和名リストの対象外。Wikidata と GBIF（Catalogue of Life）の和名", "sci": "日本産ではないため日本産魚類全種目録の対象外。GBIF・Catalogue of Life で受理名を確認"}, "tier": 3, "gbif": 2340710, "main": {"tier": 3, "order": 949}}
 {"id": "hambigolimaxvalentianus", "parent": "g_ambigolimax_limacidae", "ja": "チャコウラナメクジ", "sci": "Ambigolimax valentianus", "jaStatus": "standard", "aliases": [], "fact": "ヨーロッパ原産の外来のナメクジ。背中の前の方に甲羅のような外套膜があり、町の家の周りでふつうに見られる。", "tier": 2, "main": {"order": 1027}, "sciSynonyms": ["Lehmannia valentiana"]}
+{"id": "hlottiagigantea", "parent": "g_lottia_lottiidae", "ja": "ナスビカサガイ", "sci": "Lottia gigantea", "jaStatus": "standard", "aliases": [], "fact": "北米の太平洋岸にすむ大型のカサガイ。岩の上に縄張りをもち、近づくほかの生き物を殻で押しのける。", "verify": {"ja": "和名は Catalogue of Life（BISMaL 由来）だけで確認"}, "tier": 4, "main": {"order": 1030}}

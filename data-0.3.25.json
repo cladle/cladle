@@ -21275,6 +21275,39 @@
    "sciSynonyms": [
     "Lehmannia valentiana"
    ]
+  },
+  {
+   "id": "c4rqt9",
+   "parent": "f_muricidae",
+   "ja": "クリフレイシ",
+   "sci": "Reishia luteostoma",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "岩礁の潮間帯にすむ巻貝で、殻の口の内側が黄色っぽい。WoRMSではレイシガイ（Reishia bronni）もこの種に含める。",
+   "tier": 4
+  },
+  {
+   "id": "c3vvnh",
+   "parent": "o_terebellida",
+   "ja": "チンチロフサゴカイ",
+   "sci": "Loimia verrucosa",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂泥の中に管をつくってすみ、頭から伸ばした多数の細長い触手で海底の餌を集めるフサゴカイの仲間。",
+   "tier": 4
+  },
+  {
+   "id": "hlottiagigantea",
+   "parent": "f_lottiidae",
+   "ja": "ナスビカサガイ",
+   "sci": "Lottia gigantea",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米の太平洋岸にすむ大型のカサガイ。岩の上に縄張りをもち、近づくほかの生き物を殻で押しのける。",
+   "verify": {
+    "ja": "和名は Catalogue of Life（BISMaL 由来）だけで確認"
+   },
+   "tier": 4
   }
  ]
 }
