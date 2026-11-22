@@ -5536,7 +5536,7 @@
 {"id": "c43czs", "parent": "g_millepora_milleporidae", "ja": "イタアナサンゴモドキ", "sci": "Millepora platyphylla", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cxxvp", "parent": "g_conus_conidae", "ja": "イタチイモ", "sci": "Conus mustelinus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6td83", "parent": "g_ostrea_ostreidae", "ja": "イタボガキ", "sci": "Ostrea denselamellosa", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "cmpnz", "parent": "g_botrylloides_styelidae", "ja": "イタボヤ", "sci": "Botrylloides violaceus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "cmpnz", "parent": "g_botrylloides_styelidae", "ja": "イタボヤ", "sci": "Botrylloides violaceus", "jaStatus": "standard", "aliases": [], "fact": "小さな個体が並んで板のように広がる群体をつくるホヤ。港の岸壁やロープにふつうに付く。北西太平洋原産で、北米やヨーロッパにも運ばれて広がった。", "tier": 4, "main": {"tier": 3, "order": 960}}
 {"id": "c75w6p", "parent": "g_pecten_pectinidae", "ja": "イタヤガイ", "sci": "Pecten albicans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c3cfcy", "parent": "g_eunice_eunicidae", "ja": "イチエライソメ", "sci": "Eunice unibranchiata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cthpp", "parent": "g_chama_chamidae", "ja": "イチゴキクザル", "sci": "Chama cerinorhodon", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -7025,7 +7025,7 @@
 {"id": "c6dvb4", "parent": "g_echinolampas_echinolampadidae", "ja": "マンジュウウニ", "sci": "Echinolampas sternopetala", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c4kxx3", "parent": "g_polinices_naticidae", "ja": "マンジュウガイ", "sci": "Polinices albumen", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c6c2nt", "parent": "g_culcita_oreasteridae", "ja": "マンジュウヒトデ", "sci": "Culcita novaeguineae", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "cfp2c", "parent": "g_aplidium_polyclinidae", "ja": "マンジュウボヤ", "sci": "Aplidium pliciferum", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "cfp2c", "parent": "g_aplidium_polyclinidae", "ja": "マンジュウボヤ", "sci": "Aplidium pliciferum", "jaStatus": "standard", "aliases": [], "fact": "小さな個体がたくさん共通の被嚢に埋まって群体をつくるホヤ。この科（Polyclinidae）の個体は、体が胸部・腹部・後腹部の3つに分かれる。", "tier": 4, "main": {"order": 961}}
 {"id": "cj996", "parent": "g_atergatopsis_xanthidae", "ja": "マンジュウモドキ", "sci": "Atergatopsis signata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cbc5w", "parent": "g_aidanosagitta_sagittidae", "ja": "マントヤムシ", "sci": "Aidanosagitta crassa", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c33h8y", "parent": "g_cypraecassis_cassidae", "ja": "マンボウガイ", "sci": "Cypraecassis rufa", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -9903,7 +9903,7 @@
 {"id": "c5dblj", "parent": "g_zygophylax_zygophylacidae", "ja": "コバネキセルガヤ", "sci": "Zygophylax stechowi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c67vf2", "parent": "g_astyris_columbellidae", "ja": "コバマツムシ", "sci": "Astyris kobai", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cvv7b", "parent": "g_clavelina_clavelinidae", "ja": "コバルトツツボヤ", "sci": "Clavelina coerulea", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c53r5l", "parent": "g_symplegma_styelidae", "ja": "コバンイタボヤ", "sci": "Symplegma reptans", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c53r5l", "parent": "g_symplegma_styelidae", "ja": "コバンイタボヤ", "sci": "Symplegma reptans", "jaStatus": "standard", "aliases": [], "fact": "小さな個体が薄い被嚢の中に散らばって並び、岩や貝殻の表面に薄く広がる群体をつくるホヤ。", "tier": 4, "main": {"order": 962}}
 {"id": "c67tyx", "parent": "g_asteronotus_discodorididae", "ja": "コバンウミウシ", "sci": "Asteronotus cespitosus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cp3n3", "parent": "g_bythotiara_bythotiaridae", "ja": "コバンクラゲ", "sci": "Bythotiara depressa", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c39f79", "parent": "g_emarginella_fissurellidae", "ja": "コバンスソキレ", "sci": "Emarginella eximia", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
