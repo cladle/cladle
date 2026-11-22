@@ -19059,7 +19059,7 @@
    "sci": "Neverita didyma",
    "jaStatus": "standard",
    "aliases": [],
-   "fact": "砂浜の浅い海にすむ丸い巻貝。ほかの二枚貝の殻に穴をあけて中身を食べる。",
+   "fact": "砂浜の浅い海にすむ丸い巻貝。ほかの二枚貝の殻に穴をあけて中身を食べる。卵は砂と粘液で固めた茶わんのような形の卵塊にまとめて産み、「砂茶わん」と呼ばれる。",
    "tier": 3
   },
   {
@@ -22061,6 +22061,31 @@
     "sci": "以前は Phyllium 属とされていた"
    },
    "tier": 3
+  },
+  {
+   "id": "hhapalogasterdentata",
+   "parent": "f_lithodidae",
+   "ja": "ヒラトゲガニ",
+   "sci": "Hapalogaster dentata",
+   "jaStatus": "standard",
+   "aliases": [
+    "イボトゲガニ"
+   ],
+   "fact": "カニのような形だが、タラバガニと同じくヤドカリの仲間（異尾下目）。平たい体の甲や脚に毛やとげが生え、岩礁の石の下にすむ。",
+   "verify": {
+    "ja": "Catalogue of Life（BISMaL 由来）では「イボトゲガニ／ヒラトゲガニ」と2つの名を併記"
+   },
+   "tier": 4
+  },
+  {
+   "id": "harminapapillata",
+   "parent": "cladobranchia",
+   "ja": "ニュウトウタテジマウミウシ",
+   "sci": "Armina papillata",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "背中に縦じまと乳頭のような小さな突起が並ぶウミウシ。この仲間は砂地にすみ、ウミエラなどの刺胞動物を食べる。",
+   "tier": 4
   }
  ]
 }
