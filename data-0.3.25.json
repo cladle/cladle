@@ -22240,6 +22240,178 @@
     "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
    },
    "tier": 4
+  },
+  {
+   "id": "c3msj5",
+   "parent": "nemertea",
+   "ja": "イイジマヒモムシ",
+   "sci": "Hubrechtella ijimai",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "紐形動物（ヒモムシ）の仲間。種小名は日本の動物学者・飯島魁にちなむ。",
+   "tier": 4
+  },
+  {
+   "id": "c3mz7s",
+   "parent": "heterobranchia",
+   "ja": "ミスガイ",
+   "sci": "Hydatina physis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "薄く丸い殻に細い黒線の模様がある巻貝。殻から大きな体を広げて砂の上を這う。",
+   "tier": 4
+  },
+  {
+   "id": "c73p3p",
+   "parent": "f_trochidae",
+   "ja": "オキナワイシダタミ",
+   "sci": "Monodonta labio",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "潮間帯の岩の上にすむ巻貝。殻の表面に石畳のような粒の列が並ぶ。",
+   "tier": 4
+  },
+  {
+   "id": "cj6ps",
+   "parent": "f_branchiostomatidae",
+   "ja": "オナガナメクジウオ",
+   "sci": "Asymmetron lucayanum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ナメクジウオの仲間（頭索動物）。生殖巣が体の右側にだけ並ぶ点で、ナメクジウオ属と見分けられる。",
+   "tier": 4
+  },
+  {
+   "id": "c4db5x",
+   "parent": "chaetognatha",
+   "ja": "キタヤムシ",
+   "sci": "Parasagitta elegans",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北の海に多いヤムシ（毛顎動物）。体の横のひれで素早く動き、小さなプランクトンを捕らえる。",
+   "tier": 3
+  },
+  {
+   "id": "clltn",
+   "parent": "f_beroidae",
+   "ja": "シンカイウリクラゲ",
+   "sci": "Beroe abyssicola",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "触手のないウリクラゲの仲間（有櫛動物）。口を大きく開けて、ほかのクシクラゲを丸のみにする。",
+   "tier": 4
+  },
+  {
+   "id": "c75djh",
+   "parent": "annelida",
+   "ja": "チマキゴカイ",
+   "sci": "Owenia fusiformis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "砂粒や貝殻のかけらを貼り合わせた細い管にすむゴカイ。",
+   "tier": 4
+  },
+  {
+   "id": "c8nf8",
+   "parent": "t_siphonophorae",
+   "ja": "ハコクラゲモドキ",
+   "sci": "Abylopsis tetragona",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "クダクラゲの仲間。役割の違う多くの個体がつながって、1つの群体として泳ぐ。",
+   "tier": 4
+  },
+  {
+   "id": "c472yn",
+   "parent": "phyllodocida",
+   "ja": "ハヤテシロガネゴカイ",
+   "sci": "Nephtys caeca",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "シロガネゴカイの仲間。砂の中を素早く潜り、小さな動物を捕らえて食べる。",
+   "tier": 4
+  },
+  {
+   "id": "w111802",
+   "parent": "f_barentsiidae",
+   "ja": "ヒメスズコケムシ",
+   "sci": "Barentsia gracilis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "内肛動物（スズコケムシの仲間）。細い柄の先に触手の冠をもつ小さな個体が、群体をつくる。",
+   "tier": 4
+  },
+  {
+   "id": "w128547",
+   "parent": "f_phoronidae",
+   "ja": "ホウキムシ",
+   "sci": "Phoronis australis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "箒虫動物。管の中にすみ、馬蹄形の触手冠で水中の餌をこしとる。ハナギンチャクの管の中に入り込んで暮らすことが多い。",
+   "tier": 3
+  },
+  {
+   "id": "w1297885",
+   "parent": "f_eunicidae",
+   "ja": "モミアゲムシ",
+   "sci": "Paucibranchia bellii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イソメの仲間の多毛類（環形動物）。",
+   "tier": 4
+  },
+  {
+   "id": "hspongillalacustris",
+   "parent": "f_spongillidae",
+   "ja": "ヌマカイメン",
+   "sci": "Spongilla lacustris",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "湖や川の石や木の枝につく淡水の海綿。冬を越すときは、芽球という小さな粒を作って休眠する。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hcraspedacustasowerbii",
+   "parent": "f_olindiidae",
+   "ja": "マミズクラゲ",
+   "sci": "Craspedacusta sowerbii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "池や湖などの淡水にすむ小さなクラゲ。年によって突然たくさん現れることがある。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hhypsibiusdujardini",
+   "parent": "o_parachela",
+   "ja": "ドゥジャルダンヤマクマムシ",
+   "sci": "Hypsibius dujardini",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "実験室で飼いやすいクマムシで、発生や乾燥への強さを調べる研究に使われる。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "hlimuluspolyphemus",
+   "parent": "f_limulidae",
+   "ja": "アメリカカブトガニ",
+   "sci": "Limulus polyphemus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米の大西洋岸にすむカブトガニ。青い血液の成分から、細菌の毒素を調べる検査薬が作られる。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
   }
  ]
 }

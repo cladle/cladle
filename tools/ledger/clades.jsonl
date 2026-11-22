@@ -12139,3 +12139,8 @@
 {"id": "g_petromyzon", "parent": "f_petromyzontidae", "ja": "Petromyzon", "sci": "Petromyzon", "rank": "属", "desc": ""}
 {"id": "g_pleurodeles", "parent": "f_salamandridae", "ja": "Pleurodeles", "sci": "Pleurodeles", "rank": "属", "desc": ""}
 {"id": "g_tribolium_tenebrionidae", "parent": "f_tenebrionidae", "ja": "Tribolium", "sci": "Tribolium", "rank": "属", "desc": ""}
+{"id": "g_spongilla", "parent": "f_spongillidae", "ja": "Spongilla", "sci": "Spongilla", "rank": "属", "desc": ""}
+{"id": "g_craspedacusta", "parent": "f_olindiidae", "ja": "Craspedacusta", "sci": "Craspedacusta", "rank": "属", "desc": ""}
+{"id": "f_hypsibiidae", "parent": "o_parachela", "ja": "Hypsibiidae", "sci": "Hypsibiidae", "rank": "科", "desc": ""}
+{"id": "g_hypsibius", "parent": "f_hypsibiidae", "ja": "Hypsibius", "sci": "Hypsibius", "rank": "属", "desc": ""}
+{"id": "g_limulus", "parent": "f_limulidae", "ja": "Limulus", "sci": "Limulus", "rank": "属", "desc": ""}
