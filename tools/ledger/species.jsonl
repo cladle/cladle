@@ -4841,7 +4841,7 @@
 {"id": "s4844", "parent": "g_echinotriton", "ja": "オキナワイボイモリ", "sci": "Echinotriton andersoni", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4845", "parent": "g_cynops", "ja": "アカハライモリ", "sci": "Cynops pyrrhogaster", "jaStatus": "standard", "aliases": ["イモリ", "ニホンイモリ"], "fact": "失った手足や目のレンズまで再生できる。", "tier": 1, "gbif": 2431862, "main": {"order": 39, "id": "akaharaimori"}}
 {"id": "s4846", "parent": "g_cynops", "ja": "シリケンイモリ", "sci": "Cynops ensicauda", "jaStatus": "standard", "aliases": ["アマミシリケンイモリ", "オキナワシリケンイモリ"], "fact": "奄美・沖縄のイモリ。尾が剣のように平たい。", "tier": 2, "gbif": 2431863, "subspeciesAliases": ["アマミシリケンイモリ", "オキナワシリケンイモリ"], "main": {"order": 305, "id": "shirikenimori", "tier": 3}}
-{"id": "s4847", "parent": "g_xenopus", "ja": "アフリカツメガエル", "sci": "Xenopus laevis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
+{"id": "s4847", "parent": "g_xenopus", "ja": "アフリカツメガエル", "sci": "Xenopus laevis", "jaStatus": "standard", "aliases": [], "fact": "アフリカ南部原産のカエル。卵が大きく胚の操作がしやすいので、発生生物学の研究に古くから使われてきた。", "tier": 2, "main": {"order": 1080}}
 {"id": "s4848", "parent": "g_rhinella", "ja": "オオヒキガエル", "sci": "Rhinella marina", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
 {"id": "s4849", "parent": "g_bufo", "ja": "アジアヒキガエル", "sci": "Bufo gargarizans", "jaStatus": "standard", "aliases": ["ミヤコヒキガエル"], "fact": "", "tier": 2}
 {"id": "s4850", "parent": "g_bufo", "ja": "アズマヒキガエル", "sci": "Bufo formosus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 2}
@@ -5518,7 +5518,7 @@
 {"id": "c8jf7", "parent": "g_abarenicola_arenicolidae", "ja": "イソタマシキゴカイ", "sci": "Abarenicola pacifica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c65yml", "parent": "g_amathina_amathinidae", "ja": "イソチドリ", "sci": "Amathina tricarinata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cx7k3", "parent": "g_colomastix_colomastigidae", "ja": "イソツツヨコエビ", "sci": "Colomastix littoralis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c4jt63", "parent": "g_platynereis_nereididae", "ja": "イソツルヒゲゴカイ", "sci": "Platynereis dumerilii", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c4jt63", "parent": "g_platynereis_nereididae", "ja": "イソツルヒゲゴカイ", "sci": "Platynereis dumerilii", "jaStatus": "standard", "aliases": [], "fact": "ゴカイの仲間。飼育して世代を重ねられるので、発生や体の進化を調べるモデル動物として使われる。", "tier": 4, "main": {"order": 1081}}
 {"id": "c6lzcq", "parent": "g_holothuria_holothuriidae", "ja": "イソナマコ", "sci": "Holothuria pardalis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c3qlwl", "parent": "g_japeuthria_buccinidae", "ja": "イソニナ", "sci": "Japeuthria ferrea", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c67vh5", "parent": "g_atactodea_mesodesmatidae", "ja": "イソハマグリ", "sci": "Atactodea striata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -10022,7 +10022,7 @@
 {"id": "c57fxj", "parent": "g_tornatina_tornatinidae", "ja": "コヤスツララガイ", "sci": "Tornatina koyasensis", "jaStatus": "standard", "aliases": [], "fact": "", "verify": {"sci": "学名が WoRMS（2026-10-24参照）に見つからない（Catalogue of Life にはある）"}, "tier": 4}
 {"id": "c73n5c", "parent": "g_modeeria_tiarannidae", "ja": "コヤネヒメコップ", "sci": "Modeeria rotunda", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c3f863", "parent": "g_gammaropsis_photidae", "ja": "コユビソコエビ", "sci": "Gammaropsis longipropodi", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c9nyr", "parent": "g_acropora_acroporidae", "ja": "コユビミドリイシ", "sci": "Acropora digitifera", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c9nyr", "parent": "g_acropora_acroporidae", "ja": "コユビミドリイシ", "sci": "Acropora digitifera", "jaStatus": "standard", "aliases": [], "fact": "沖縄などのサンゴ礁に多いミドリイシ。全ゲノムが読まれ、サンゴが環境の変化にどう応じるかの研究に使われる。", "tier": 4, "main": {"order": 1082, "tier": 3}}
 {"id": "c6x237", "parent": "g_pugettia_epialtidae", "ja": "コヨツハモガニ", "sci": "Pugettia pellucens", "jaStatus": "standard", "aliases": ["コヨツバモガニ"], "fact": "", "tier": 4}
 {"id": "c5d4cm", "parent": "g_zeuxo_tanaididae", "ja": "コラレルタナイス", "sci": "Zeuxo coralensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "czxbf", "parent": "g_cryptodromia_dromiidae", "ja": "コロナカイカムリ", "sci": "Cryptodromia coronata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -11610,7 +11610,7 @@
 {"id": "c63zrq", "parent": "g_abludomelita_melitidae", "ja": "テブクロメリタヨコエビ", "sci": "Abludomelita unamoena", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c9sw4", "parent": "g_actinauge_hormathiidae", "ja": "テマリイソギンチャク", "sci": "Actinauge bocki", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c779xw", "parent": "g_philine_philinidae", "ja": "テマリキセワタ", "sci": "Philine striolata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "c783s7", "parent": "g_pleurobrachia_cydippidae", "ja": "テマリクラゲ", "sci": "Pleurobrachia rhodopis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "c783s7", "parent": "g_pleurobrachia_cydippidae", "ja": "テマリクラゲ", "sci": "Pleurobrachia rhodopis", "jaStatus": "standard", "aliases": [], "fact": "丸い体から2本の長い触手を伸ばす有櫛動物（クシクラゲ）。櫛板を打って泳ぐ。", "tier": 4, "main": {"order": 1083, "tier": 3}}
 {"id": "c45ty7", "parent": "g_naticarius_naticidae", "ja": "テマリダマ", "sci": "Naticarius insecta", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "cc5l4", "parent": "g_alora_epitoniidae", "ja": "テラマチイトカケ", "sci": "Alora annulata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "c4q75n", "parent": "g_pterygia_mitridae", "ja": "テラマチイモフデ", "sci": "Pterygia sinensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -14325,7 +14325,7 @@
 {"id": "w760110", "parent": "g_globiscala_epitoniidae", "ja": "フクロイトカケ", "sci": "Globiscala globosa", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w289378", "parent": "g_alatina_alatinidae", "ja": "フクロクジュクラゲ", "sci": "Alatina alata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w759944", "parent": "g_megasyllis_syllidae", "ja": "フクロシリス", "sci": "Megasyllis inflata", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
-{"id": "w117368", "parent": "g_clytia_campanulariidae", "ja": "フサウミコップ", "sci": "Clytia hemisphaerica", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
+{"id": "w117368", "parent": "g_clytia_campanulariidae", "ja": "フサウミコップ", "sci": "Clytia hemisphaerica", "jaStatus": "standard", "aliases": [], "fact": "ポリプとクラゲの両方の時期をもつヒドロ虫の仲間。全ゲノムが読まれ、刺胞動物の生活環の研究に使われる。", "tier": 4, "main": {"order": 1084}}
 {"id": "w210122", "parent": "g_petrolisthes_porcellanidae", "ja": "フサゲカニダマシ", "sci": "Petrolisthes tomentosus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w367687", "parent": "g_diogenes_diogenidae", "ja": "フサゲツノヤドカリ", "sci": "Diogenes penicillatus", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
 {"id": "w284414", "parent": "g_rhizocaulus_campanulariidae", "ja": "フサコップガヤ", "sci": "Rhizocaulus chinensis", "jaStatus": "standard", "aliases": [], "fact": "", "tier": 4}
@@ -21090,3 +21090,11 @@
 {"id": "hpulchriphylliumgiganteum", "parent": "g_pulchriphyllium", "ja": "オオコノハムシ", "sci": "Pulchriphyllium giganteum", "jaStatus": "standard", "aliases": [], "fact": "マレー半島などにすむ。体も脚も木の葉そっくりの形と色をしている。", "verify": {"ja": "和名は iNaturalist の日本語名のみで確認（標準和名リストなし）", "sci": "以前は Phyllium 属とされていた"}, "tier": 3, "main": {"order": 1077}}
 {"id": "hhapalogasterdentata", "parent": "g_hapalogaster_lithodidae", "ja": "ヒラトゲガニ", "sci": "Hapalogaster dentata", "jaStatus": "standard", "aliases": ["イボトゲガニ"], "fact": "カニのような形だが、タラバガニと同じくヤドカリの仲間（異尾下目）。平たい体の甲や脚に毛やとげが生え、岩礁の石の下にすむ。", "verify": {"ja": "Catalogue of Life（BISMaL 由来）では「イボトゲガニ／ヒラトゲガニ」と2つの名を併記"}, "tier": 4, "main": {"order": 1078}}
 {"id": "harminapapillata", "parent": "g_armina_arminidae", "ja": "ニュウトウタテジマウミウシ", "sci": "Armina papillata", "jaStatus": "standard", "aliases": [], "fact": "背中に縦じまと乳頭のような小さな突起が並ぶウミウシ。この仲間は砂地にすみ、ウミエラなどの刺胞動物を食べる。", "tier": 4, "main": {"order": 1079}}
+{"id": "hxenopustropicalis", "parent": "g_xenopus", "ja": "ネッタイツメガエル", "sci": "Xenopus tropicalis", "jaStatus": "standard", "aliases": [], "fact": "西アフリカ原産のツメガエル。世代時間が4～6か月と短く、遺伝学の研究に使われる。", "verify": {"ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"}, "tier": 4, "main": {"order": 1085}}
+{"id": "hpleurodeleswaltl", "parent": "g_pleurodeles", "ja": "イベリアトゲイモリ", "sci": "Pleurodeles waltl", "jaStatus": "standard", "aliases": [], "fact": "イベリア半島などにすむイモリ。世代時間が短く、体の再生を調べる研究のモデルとして使われる。", "verify": {"ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"}, "tier": 3, "main": {"order": 1086}}
+{"id": "hbombyxmandarina", "parent": "g_bombyx_lepidoptera", "ja": "クワコ", "sci": "Bombyx mandarina", "jaStatus": "standard", "aliases": [], "fact": "桑の葉を食べる野生のガで、カイコの祖先にあたる種と考えられている。", "verify": {"ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"}, "tier": 3, "main": {"order": 1087}}
+{"id": "htriboliumcastaneum", "parent": "g_tribolium_tenebrionidae", "ja": "コクヌストモドキ", "sci": "Tribolium castaneum", "jaStatus": "standard", "aliases": [], "fact": "小麦粉などを食べる小さな甲虫で、貯蔵穀物の害虫。飼いやすく、遺伝学のモデル昆虫として使われる。", "verify": {"ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"}, "tier": 3, "main": {"order": 1088}}
+{"id": "hpetromyzonmarinus", "parent": "g_petromyzon", "ja": "ウミヤツメ", "sci": "Petromyzon marinus", "jaStatus": "standard", "aliases": [], "fact": "大西洋にすむヤツメウナギ。あごのない脊椎動物の代表としてゲノムが読まれ、脊椎動物の進化の研究に使われる。日本にはいない。", "verify": {"ja": "和名は Wikidata の日本語名だけで確認（iNaturalist・標準和名リストでは未確認）"}, "tier": 3, "main": {"order": 1089}}
+{"id": "hcallorhinchusmilii", "parent": "g_callorhinchus", "ja": "ゾウギンザメ", "sci": "Callorhinchus milii", "jaStatus": "standard", "aliases": [], "fact": "南半球の海にすむギンザメの仲間。鼻先が象の鼻のように伸びる。軟骨魚類の代表としてゲノムが読まれた。", "verify": {"ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"}, "tier": 3, "main": {"order": 1090}}
+{"id": "hstrongylocentrotuspurpuratus", "parent": "g_strongylocentrotus_strongylocentrotidae", "ja": "アメリカムラサキウニ", "sci": "Strongylocentrotus purpuratus", "jaStatus": "standard", "aliases": [], "fact": "北米太平洋岸の岩礁にすむウニ。発生生物学の研究に使われ、ウニで最初に全ゲノムが読まれた。", "verify": {"ja": "和名は Wikidata の日本語名だけで確認（iNaturalist・標準和名リストでは未確認）"}, "tier": 4, "main": {"order": 1091}}
+{"id": "haplysiacalifornica", "parent": "g_aplysia_aplysiidae", "ja": "ジャンボアメフラシ", "sci": "Aplysia californica", "jaStatus": "standard", "aliases": [], "fact": "北米太平洋岸にすむ大型のアメフラシ。神経細胞が大きく、学習や記憶のしくみを調べる研究に使われてきた。", "verify": {"ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"}, "tier": 4, "main": {"order": 1092}}

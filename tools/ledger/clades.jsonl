@@ -12134,3 +12134,8 @@
 {"id": "g_megasoma", "parent": "sf_dynastinae", "ja": "Megasoma", "sci": "Megasoma", "rank": "属", "desc": ""}
 {"id": "f_phylliidae", "parent": "t_euphasmatodea", "ja": "コノハムシ科", "sci": "Phylliidae", "rank": "科", "desc": "", "main": {"order": 1135}}
 {"id": "g_pulchriphyllium", "parent": "f_phylliidae", "ja": "Pulchriphyllium", "sci": "Pulchriphyllium", "rank": "属", "desc": ""}
+{"id": "f_callorhinchidae", "parent": "o_chimaeriformes", "ja": "Callorhinchidae", "sci": "Callorhinchidae", "rank": "科", "desc": ""}
+{"id": "g_callorhinchus", "parent": "f_callorhinchidae", "ja": "Callorhinchus", "sci": "Callorhinchus", "rank": "属", "desc": ""}
+{"id": "g_petromyzon", "parent": "f_petromyzontidae", "ja": "Petromyzon", "sci": "Petromyzon", "rank": "属", "desc": ""}
+{"id": "g_pleurodeles", "parent": "f_salamandridae", "ja": "Pleurodeles", "sci": "Pleurodeles", "rank": "属", "desc": ""}
+{"id": "g_tribolium_tenebrionidae", "parent": "f_tenebrionidae", "ja": "Tribolium", "sci": "Tribolium", "rank": "属", "desc": ""}

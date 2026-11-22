@@ -22086,6 +22086,160 @@
    "aliases": [],
    "fact": "背中に縦じまと乳頭のような小さな突起が並ぶウミウシ。この仲間は砂地にすみ、ウミエラなどの刺胞動物を食べる。",
    "tier": 4
+  },
+  {
+   "id": "s4847",
+   "parent": "anura",
+   "ja": "アフリカツメガエル",
+   "sci": "Xenopus laevis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "アフリカ南部原産のカエル。卵が大きく胚の操作がしやすいので、発生生物学の研究に古くから使われてきた。",
+   "tier": 2
+  },
+  {
+   "id": "c4jt63",
+   "parent": "nereididae",
+   "ja": "イソツルヒゲゴカイ",
+   "sci": "Platynereis dumerilii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ゴカイの仲間。飼育して世代を重ねられるので、発生や体の進化を調べるモデル動物として使われる。",
+   "tier": 4
+  },
+  {
+   "id": "c9nyr",
+   "parent": "f_acroporidae",
+   "ja": "コユビミドリイシ",
+   "sci": "Acropora digitifera",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "沖縄などのサンゴ礁に多いミドリイシ。全ゲノムが読まれ、サンゴが環境の変化にどう応じるかの研究に使われる。",
+   "tier": 3
+  },
+  {
+   "id": "c783s7",
+   "parent": "f_cydippidae",
+   "ja": "テマリクラゲ",
+   "sci": "Pleurobrachia rhodopis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "丸い体から2本の長い触手を伸ばす有櫛動物（クシクラゲ）。櫛板を打って泳ぐ。",
+   "tier": 3
+  },
+  {
+   "id": "w117368",
+   "parent": "t_leptothecata",
+   "ja": "フサウミコップ",
+   "sci": "Clytia hemisphaerica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "ポリプとクラゲの両方の時期をもつヒドロ虫の仲間。全ゲノムが読まれ、刺胞動物の生活環の研究に使われる。",
+   "tier": 4
+  },
+  {
+   "id": "hxenopustropicalis",
+   "parent": "anura",
+   "ja": "ネッタイツメガエル",
+   "sci": "Xenopus tropicalis",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "西アフリカ原産のツメガエル。世代時間が4～6か月と短く、遺伝学の研究に使われる。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "hpleurodeleswaltl",
+   "parent": "f_salamandridae",
+   "ja": "イベリアトゲイモリ",
+   "sci": "Pleurodeles waltl",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "イベリア半島などにすむイモリ。世代時間が短く、体の再生を調べる研究のモデルとして使われる。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hbombyxmandarina",
+   "parent": "f_bombycidae",
+   "ja": "クワコ",
+   "sci": "Bombyx mandarina",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "桑の葉を食べる野生のガで、カイコの祖先にあたる種と考えられている。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "htriboliumcastaneum",
+   "parent": "coleoptera",
+   "ja": "コクヌストモドキ",
+   "sci": "Tribolium castaneum",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "小麦粉などを食べる小さな甲虫で、貯蔵穀物の害虫。飼いやすく、遺伝学のモデル昆虫として使われる。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hpetromyzonmarinus",
+   "parent": "f_petromyzontidae",
+   "ja": "ウミヤツメ",
+   "sci": "Petromyzon marinus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "大西洋にすむヤツメウナギ。あごのない脊椎動物の代表としてゲノムが読まれ、脊椎動物の進化の研究に使われる。日本にはいない。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名だけで確認（iNaturalist・標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hcallorhinchusmilii",
+   "parent": "o_chimaeriformes",
+   "ja": "ゾウギンザメ",
+   "sci": "Callorhinchus milii",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "南半球の海にすむギンザメの仲間。鼻先が象の鼻のように伸びる。軟骨魚類の代表としてゲノムが読まれた。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 3
+  },
+  {
+   "id": "hstrongylocentrotuspurpuratus",
+   "parent": "f_strongylocentrotidae",
+   "ja": "アメリカムラサキウニ",
+   "sci": "Strongylocentrotus purpuratus",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米太平洋岸の岩礁にすむウニ。発生生物学の研究に使われ、ウニで最初に全ゲノムが読まれた。",
+   "verify": {
+    "ja": "和名は Wikidata の日本語名だけで確認（iNaturalist・標準和名リストでは未確認）"
+   },
+   "tier": 4
+  },
+  {
+   "id": "haplysiacalifornica",
+   "parent": "f_aplysiidae",
+   "ja": "ジャンボアメフラシ",
+   "sci": "Aplysia californica",
+   "jaStatus": "standard",
+   "aliases": [],
+   "fact": "北米太平洋岸にすむ大型のアメフラシ。神経細胞が大きく、学習や記憶のしくみを調べる研究に使われてきた。",
+   "verify": {
+    "ja": "和名は Wikidata・iNaturalist の日本語名による（標準和名リストでは未確認）"
+   },
+   "tier": 4
   }
  ]
 }
