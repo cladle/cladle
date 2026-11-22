@@ -12097,3 +12097,4 @@
 {"id": "f_meloidogynidae", "parent": "tylenchina", "ja": "Meloidogynidae", "sci": "Meloidogynidae", "rank": "科", "desc": "", "main": {"order": 1081}}
 {"id": "f_convolutidae", "parent": "o_acoela", "ja": "Convolutidae", "sci": "Convolutidae", "rank": "科", "desc": "", "main": {"order": 1082}}
 {"id": "f_camaenidae", "parent": "t_helicoidei", "ja": "Camaenidae", "sci": "Camaenidae", "rank": "科", "desc": "", "main": {"order": 1083}}
+{"id": "g_ambigolimax_limacidae", "parent": "f_limacidae", "ja": "Ambigolimax", "sci": "Ambigolimax", "rank": "属", "desc": ""}
