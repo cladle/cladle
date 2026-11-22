@@ -89,7 +89,7 @@ function guess(id) {
   else {
     const gained = N[L].depth > N[before].depth;
     // ゲキムズ：属が当たったらクリア（種名は伏せたまま。続けて種を当てるか、答えを見るかを選べる）
-    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。ここから種探し ${HUNT} 回で種まで当てると 🎯。終えるときは「答えを見る」。`); G.fresh = L; }
+    if (!G.gAt && sameClear(id, G.target)) { G.gAt = G.guesses.length; track(mode + "-genus"); flash(`同じ属です！ ${G.gAt} 回でクリア。ここから種探しが ${HUNT} 回あります。終えるときは「答えを見る」。`); G.fresh = L; }
     else flash(`${N[id].ja} と答えの動物の共通祖先は「${N[L].ja}」。` + (gained ? "系統が絞れました。" : "新しい手がかりはありません。"), !gained);
     if (G.gAt !== G.guesses.length) G.fresh = gained ? L : null;
     if (G.guesses.length >= limit()) { G.done = true; if (G.gAt) { G.won = true; G.exact = false; } }
@@ -119,7 +119,7 @@ function sameClear(a, b) { const r = D.meta.selection?.clearRank; return !!r && 
 const exactWin = () => G.won && G.exact !== false;
 const clearN = () => G.gAt || G.guesses.length;  // クリアした回数（ゲキムズは属が当たった回）
 // ---- ヒント（推測回数は減らない）----
-// ヒント1: 今わかっている節目の中で、どの推測とも矛盾しない未推測の種の数。外れた枝を灰色にする
+// ヒント1: どの推測とも矛盾しない未推測の種（候補）が残っている枝の名前を出し、外れた枝を灰色にする
 // ヒント2: 正解への経路で、今わかっている節目より1段深い節目を教える
 function candidates() {
   const k = deepest(), out = [], ex = G.h2 && G.reveal ? hintExamples(G.reveal) : [];
@@ -128,6 +128,13 @@ function candidates() {
     if (G.guesses.every(g => lca(g, s.id) === lca(g, G.target))) out.push(s.id);
   }
   return out;
+}
+// ヒント1の文：今わかっている節目の1段下で、候補が残っている枝（種の名前は出さず、数だけにする）
+function hint1Groups() {
+  const k = deepest(), left = new Set();
+  for (const id of candidates()) { const p = path(id); left.add(p[p.indexOf(k) + 1]); }
+  const ids = N[k].kids.filter(id => left.has(id));
+  return { k, clades: ids.filter(id => N[id].kind !== "species"), sp: ids.filter(id => N[id].kind === "species").length };
 }
 function useHint(n) {
   if (G.done) return;
@@ -161,10 +168,10 @@ function maskFact(id) {
 // 途中のボタンは1列にまとめる：ヒント（押すたびに次の段階）と、降参（フリーは1回目の推測までは別の問題）
 // 降参・別の問題は押し間違いで消えないよう、2回押して決める
 function actionsHTML() {
-  if (G.done) return mode === "free" ? `<button class="btn" data-act="next">次の問題</button>` : "";
+  if (G.done) return "";  // 次の問題へは結果の欄の一番下から
   const n = G.guesses.length;
-  const hint = !G.h1 && n >= HINT1 ? `<button class="btn ghost hintbtn" data-hint="1">💡 ヒント</button>`
-    : G.h1 && !G.h2 && n >= HINT2 ? `<button class="btn ghost hintbtn" data-hint="2">💡 もう1つヒント</button>` : "";
+  const hint = !G.h1 && n >= HINT1 ? `<button class="btn ghost hintbtn" data-hint="1">ヒント</button>`
+    : G.h1 && !G.h2 && n >= HINT2 ? `<button class="btn ghost hintbtn" data-hint="2">もう1つヒント</button>` : "";
   return hint + (G.gAt ? `<button class="btn ghost" data-act="reveal">答えを見る</button>`
     : n ? `<button class="btn ghost" data-act="giveup">降参する</button>`
     : mode === "free" ? `<button class="btn ghost" data-act="reset">別の問題にする</button>` : "");

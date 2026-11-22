@@ -105,10 +105,10 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .hint { font-size: .8rem; color: var(--muted); margin: 6px 2px 0 }
 .flash { margin: 10px 0 0; padding: 8px 12px; border-radius: 8px; background: var(--accent-soft); font-size: .9rem }
 .flash.err { background: var(--hot-soft) }
-.lookup { font-size: .85rem; color: var(--muted); margin: 6px 0 10px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center }
-.lookup a { display: inline-flex; align-items: center; gap: 4px; min-height: 34px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-size: .8rem }
-.lookup a::after { content: "↗"; color: var(--muted); font-size: .75rem }
-.lookup a:hover { border-color: var(--accent); color: var(--accent) }
+/* 調べるのリンク（詳細シート・図鑑・結果の欄）：リンクどうしの間をあけて、くっついて一つに見えないようにする */
+.lookup { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; font-size: .9rem; margin: 6px 0 10px }
+.result .lookup { display: grid; gap: 6px; margin: 0 }
+.lookup a { color: var(--accent); padding: 4px 0; text-underline-offset: 3px }
 .stats { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line) }
 .stats .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; margin: 8px 0 12px }
 .stats .nums div { font-size: .8rem; color: var(--muted) }
@@ -175,23 +175,39 @@ nav button[aria-selected="true"] { background: var(--ink); color: var(--bg); bor
 .twig .n { font-family: var(--f-mono); font-size: .7rem; color: var(--muted); margin-right: 5px }
 .empty { color: var(--muted); font-size: .9rem; margin-top: 18px; padding: 14px; border: 1px dashed var(--line); border-radius: 10px }
 
-.result { margin-top: 18px; padding: 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); display: grid; gap: 10px }
-.result h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; margin: 0; text-wrap: balance }
-.result { scroll-margin-top: calc(var(--hdr, 96px) + 8px) }
-.result .score { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: -2px 0 0; color: var(--muted); font-size: .85rem }
+/* 結果：答えの所だけ角の立った線の枠（標本ラベル風）、その下は枠なしで線で区切る */
+.result { margin-top: 18px; display: grid; gap: 12px; scroll-margin-top: calc(var(--hdr, 96px) + 8px) }
+.result .label { background: var(--surface); border: 1px solid var(--ink); padding: 12px 14px; display: grid; gap: 10px }
+.result h2 { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; line-height: 1.45; margin: 0; text-wrap: balance }
+.nb { display: inline-block }
+.result dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; padding-top: 8px; border-top: 1px solid var(--line); font-size: .9rem }
+.result dt { color: var(--muted); font-size: .85rem }
+.result dd { margin: 0; min-width: 0 }
+.result dd .sci { font-family: var(--f-sci); color: var(--muted) }
+.result dd .also { color: var(--muted); font-size: .85rem }
+.result .score { display: flex; align-items: baseline; gap: 4px 10px; flex-wrap: wrap; color: var(--muted); font-size: .85rem }
 .result .score .from { flex-basis: 100% }
 .result .score b { font-family: var(--f-mono); font-size: 1.6rem; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums }
 .result.won .score b { color: var(--accent) }
-.btn.share-btn { width: 100%; min-height: 48px; font-size: 1rem; background: var(--accent); color: var(--surface) }
-.share-row { display: flex; gap: 8px }
-.share-row .xpost { flex: none; display: inline-flex; align-items: center; min-height: 48px; text-decoration: none; white-space: nowrap }
-.result .sub { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line) }
+.btn.share-btn { flex: 1; min-height: 48px; font-size: 1rem; background: var(--accent); color: var(--surface); border-radius: 4px }
+.share-row { display: flex; gap: 16px; align-items: center }
+.share-row .xpost { flex: none; color: var(--accent); white-space: nowrap; padding: 12px 0 }
+.result .hint { margin: -4px 2px 0 }
+.result .blk { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line); font-size: .9rem }
+.result .lookup > div { display: flex; flex-wrap: wrap; gap: 4px 16px }
 .result .sub h3 { margin: 0; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline }
-.result .sub p { margin: 0; font-size: .9rem }
-.result .kin { display: flex; flex-wrap: wrap; gap: 6px }
-.result .kin .twig.me { border-color: var(--accent); color: var(--accent); font-weight: 700 }
-.result .kin-more { background: none; border: 0; padding: 4px 0; color: var(--accent); cursor: pointer; font: inherit; font-size: .85rem; text-decoration: underline; text-underline-offset: 3px }
-.think { margin: 0; font-size: .85rem; padding: 8px 10px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0 }
+.result .sub h3 .sci { font-weight: 400; color: var(--muted); font-size: .85rem }
+.result .sub p { margin: 0 }
+.result .sub .kin-n { font-size: .85rem; color: var(--muted) }
+.result .kin { display: flex; flex-wrap: wrap; gap: 2px 0; line-height: 1.9 }
+.result .kin .twig { border: 0; border-radius: 0; background: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; text-underline-offset: 3px }
+.result .kin .twig:not(:last-child)::after { content: "、"; color: var(--ink); display: inline-block; text-decoration: none }
+.result .kin .twig.me { font-weight: 700 }
+.result .kin-more { background: none; border: 0; padding: 4px 0; color: var(--accent); cursor: pointer; font: inherit; font-size: .85rem; text-decoration: underline; text-underline-offset: 3px; justify-self: start }
+.result .ends { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px }
+.result .ends .btn { border-radius: 4px; min-height: 44px }
+.result .stats { margin-top: 4px }
+.think { margin: 0; font-size: .85rem; color: var(--muted) }
 .think:empty { display: none }
 .steps { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; counter-reset: st }
 .steps li { display: grid; grid-template-columns: 2em 1fr; gap: 0 10px; counter-increment: st }

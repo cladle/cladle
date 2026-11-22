@@ -50,7 +50,7 @@ meta.update({
     "counts": {"species": len(species)},
     "selection": {
         "maxGuesses": 20, "dailyEpoch": "2026-10-28",
-        "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1},
+        "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1}, "hintAfter": [7, 11],
     },
 })
 json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "insect", "sqrt"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

@@ -6,7 +6,7 @@
 - 脊椎動物のうち四肢動物を除いた種（円口類・軟骨魚類・条鰭類・シーラカンス・ハイギョ）を残す。
   「魚類」は側系統群なので節目にはせず、出題の範囲として使うだけにする。根は脊椎動物亜門。
 - 全種を答えに出す。目は種数の平方根に比例した確率で選び（種数の多い目ばかり出ないように、作者の判断）、目の中は全種から同じ確率で選ぶ。
-  日本の魚は全種が入っているので、種数は収録数（tools/real_counts.py の fish）。目の無いシーラカンス・ハイギョは肉鰭類で一つの群にする。
+  日本の魚は全種が入っているので、種数は収録数（tools/real_counts.py の fish）。シーラカンス・ハイギョは肉鰭類で一つの群にする。
 - ふだんは tools/build_all.py から動かす。そのときの版番号は data-*.json の予約で決まる（FISH_VERSION は単独で動かしたとき用）。
 """
 import json, os, sys
@@ -55,7 +55,7 @@ meta.update({
     "counts": {"species": len(species)},
     "selection": {
         "maxGuesses": 20, "dailyEpoch": "2026-10-28",
-        "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1},
+        "tierWeights": {"1": 1, "2": 1, "3": 1, "4": 1}, "hintAfter": [7, 11],
     },
 })
 json.dump(real_counts.apply({"meta": meta, "clades": clades, "species": species}, "fish", "sqrt"), open(out, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
