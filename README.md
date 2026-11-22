@@ -23,7 +23,7 @@
 | `js/texts.js` | データ欄の文章 |
 | `js/howto.js` | 遊び方の文章と、例題の再生 |
 | `js/main.js` | 画面の切り替えと起動、データの読み込み |
-| `data.json`, `data-hard.json`, `data-fish.json`, `data-bird.json`, `data-insect.json` | 今の版の収録データ（生成物。手で直さない）。予約中の次の版があれば `data-<版>.json` も置く |
+| `data/` | 収録データ（生成物。手で直さない）。`data.json`, `data-hard.json`, `data-fish.json`, `data-bird.json`, `data-insect.json` が今の版で、予約中の次の版があれば `data-<版>.json` も置く |
 | `tools/ledger/` | **収録データの正本（全種の台帳）**。ゲキムズに入る全種・全節目と、そのうち本家に出すものの印（`tools/ledger/README.md`） |
 | `tools/build_all.py` | 台帳から、本家・ゲキムズ・魚編・鳥編・昆虫編をまとめて作り直し、今の版と予約版に入れる |
 | `tools/fish/`, `tools/bird/`, `tools/insect/` | ゲキムズのデータから魚・鳥・昆虫だけを切り出す（`build_all.py` が使う） |
@@ -45,11 +45,11 @@ JavaScript は上の表の順に読み込まれます。後のファイルは、
 
 ### 収録種と、種・節目の説明
 
-`data*.json` は直接直さず、台帳（`tools/ledger/species.jsonl`・`clades.jsonl`）を直してから `python3 tools/build_all.py --write` で作り直します。github.dev で台帳を直してコミットしたときは、GitHub が自動でこれを動かし、data ファイルの直しをコミットします。台帳の1行が1つの種か節目です。直し方は `tools/ledger/README.md` にあります。
+`data/` の `data*.json` は直接直さず、台帳（`tools/ledger/species.jsonl`・`clades.jsonl`）を直してから `python3 tools/build_all.py --write` で作り直します。github.dev で台帳を直してコミットしたときは、GitHub が自動でこれを動かし、data ファイルの直しをコミットします。台帳の1行が1つの種か節目です。直し方は `tools/ledger/README.md` にあります。
 
 - 本家・ゲキムズ・魚編・鳥編・昆虫編は同じ台帳から作るので、1か所直せば全部のモードに届く。
 - 説明文や和名だけの直しは、今の版にも予約中の版にも入る。版番号は上げない（版番号は今日の動物の選び方に入っているので、上げると並びが全部変わる）。
-- 種・節目・知名度を増減すると、まだ始まっていない予約版だけが差し替わる。予約版がもう始まっていれば止まるので、`--new main=0.3.19@2026-11-05` のように新しい版と始まる日を渡す（`data.json` などの最後の版の `meta.next` に書かれる。ページは日本時間でその日になると次の版を読む）。
-- 切り替わったあとは、次の版の中身を `data.json` に写し、`data-<版>.json` は消す。置くのはいつも「今の版」と「予約している次の版」の2つだけ。古い版は GitHub の履歴で見られる。
+- 種・節目・知名度を増減すると、まだ始まっていない予約版だけが差し替わる。予約版がもう始まっていれば止まるので、`--new main=0.3.19@2026-11-05` のように新しい版と始まる日を渡す（`data/data.json` などの最後の版の `meta.next` に書かれる。ページは日本時間でその日になると次の版を読む）。
+- 切り替わったあとは、次の版の中身を `data.json` に写し、`data-<版>.json` は消す。これは `build_all.py --write` が自動で行う（GitHub に送ったときに動く書き出しでも行われる）。置くのはいつも「今の版」と「予約している次の版」の2つだけ。古い版は GitHub の履歴で見られる。
 
-送るたびに `tools/check.py` が動き、予約のファイルがそろっているか、台帳と data-*.json が食い違っていないかを確かめます。結果はリポジトリの「Actions」タブで見られます。
+送るたびに `tools/check.py` が動き、予約のファイルがそろっているか、台帳と data-*.json が食い違っていないか、どの予約にもつながっていない古いファイルが残っていないかを確かめます。結果はリポジトリの「Actions」タブで見られます。

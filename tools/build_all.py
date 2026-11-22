@@ -2,7 +2,7 @@
 """全種の台帳（tools/ledger/）から、本家・ゲキムズ・魚編・鳥編・昆虫編のデータを1回でまとめて作り直す。
 
   python3 tools/build_all.py            確かめるだけ（どのファイルがどう変わるかを表示し、何も書かない）
-  python3 tools/build_all.py --write    data-*.json に書き込む
+  python3 tools/build_all.py --write    data/ の data-*.json に書き込む
 
 台帳（tools/ledger/species.jsonl・clades.jsonl）を直したら、同じ PR の中でこれを動かす。
 GitHub に送るたびに tools/check.py がこれを「確かめるだけ」で動かし、書き忘れを知らせる。
@@ -10,6 +10,7 @@ GitHub に送るたびに tools/check.py がこれを「確かめるだけ」で
 流れ:
 1. 台帳から本家とゲキムズを作る（tools/ledger/ledger.py）
 2. tools/fish/make_fish.py・tools/bird/make_bird.py・tools/insect/make_insect.py でゲキムズから各編を切り出す
+0. もう始まった予約版があれば、その中身を最初のファイル（data/data.json など）に写して消す（--write のときだけ）
 3. モードごとに、出来たものを「今の版」と「予約中の版」に入れる
    - 文だけの違い（和名・説明・別名など。出題の選び方に関わらないもの）：今の版にも予約中の版にも入れる。版は上げない
    - 種・節目・知名度などの違い（今日の動物の並びが変わるもの）：まだ始まっていない予約版だけを差し替える。
@@ -17,12 +18,13 @@ GitHub に送るたびに tools/check.py がこれを「確かめるだけ」で
 4. 本家の木とゲキムズの木がずれていないかを確かめる（本家の節目の外に、同じ階級の群が残っていないか）
 
   python3 tools/build_all.py --write --new hard=hard-0.3.13@2026-11-05
-      ゲキムズの新しい版 data-hard-0.3.13.json を作り、2026-11-05 から始まるように今の最後の版の meta.next に書く。
+      ゲキムズの新しい版 data/data-hard-0.3.13.json を作り、2026-11-05 から始まるように今の最後の版の meta.next に書く。
       本家は --new main=0.3.19@2026-11-05（data-0.3.19.json）、各編は --new fish=fish-0.1.4@2026-11-05 のように渡す。
 """
 import argparse, datetime, json, os, subprocess, sys, tempfile
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+DATA = os.path.join(ROOT, "data")  # data-*.json の置き場所（meta.next.file はこのフォルダの中のファイル名）
 T = os.path.join(ROOT, "tools")
 sys.path.insert(0, os.path.join(T, "ledger"))
 import ledger
@@ -35,9 +37,9 @@ MODES = [  # 名前, 最初のファイル, 書き方（本家は1行ずつ字�
     ("魚編", "data-fish.json", None), ("鳥編", "data-bird.json", None), ("昆虫編", "data-insect.json", None)]
 KEY = {"本家": "main", "ゲキムズ": "hard", "魚編": "fish", "鳥編": "bird", "昆虫編": "insect"}
 
-def load(f): return json.load(open(os.path.join(ROOT, f), encoding="utf-8"))
+def load(f): return json.load(open(os.path.join(DATA, f), encoding="utf-8"))
 def save(f, d, indent):
-    p = os.path.join(ROOT, f)
+    p = os.path.join(DATA, f)
     nl = os.path.exists(p) and open(p, "rb").read()[-1:] == b"\n"  # 終わりの改行は今のファイルに合わせる
     with open(p, "w", encoding="utf-8") as o:
         json.dump(d, o, ensure_ascii=False, indent=indent, separators=None if indent else (",", ":"))
@@ -51,6 +53,18 @@ def chain(first):
         nx = d["meta"].get("next") or {}
         f, start = nx.get("file"), nx.get("from")
     return out
+
+def collapse(first, today, write):
+    """もう始まった予約版を、最初のファイル（data.json など）に写して消す。
+    置くのはいつも「今の版」と「予約している次の版」の2つだけにする（古い版は GitHub の履歴で見られる）。
+    写すのはファイルの中身そのまま（meta.next も一緒に移る）なので、今日の動物の並びは変わらない。"""
+    done = []
+    while True:
+        ch = chain(first)
+        if len(ch) < 2 or ch[1][1] > today: return done
+        done.append(ch[1][0])
+        if not write: return done
+        os.replace(os.path.join(DATA, ch[1][0]), os.path.join(DATA, first))
 
 def shape(d):
     """今日の動物の並びを決めるもの：種の並び・親・知名度、節目の親・階級・学名、出題の設定"""
@@ -126,6 +140,12 @@ def main_():
     for x in a.new:
         k, v = x.split("=", 1); ver, _, day = v.partition("@"); new[k] = (ver, day)
     today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date().isoformat()
+    for name, first, _ in MODES:
+        gone = collapse(first, today, a.write)
+        if gone and a.write:
+            print(f"・{name}：始まった版（{'・'.join(gone)}）を {first} に写して消した")
+        elif gone:
+            print(f"・{name}：{gone[0]} はもう始まっている。次に --write で書き出すとき {first} に写して消す")
     L = ledger.load()
     filled = ledger.fill(L)
     if filled:
@@ -203,7 +223,7 @@ def main_():
         for f, d in writes.items():
             save(f, d, indents.get(f, 1 if f[5:6].isdigit() else None))
         print(f"\n{len(writes)} 個のファイルに書いた:", "、".join(sorted(writes)))
-    elif a.write:
+    elif a.write and not ok:
         print("\n× のところを直すまで書かない")
     elif writes:
         print("\n（確かめただけ。書き込むには --write）")

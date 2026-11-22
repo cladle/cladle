@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""魚編のデータ（data-fish.json）を、ゲキムズのデータから切り出して作る。
+"""魚編のデータ（data/data-fish.json）を、ゲキムズのデータから切り出して作る。
 
-  python3 tools/fish/make_fish.py data-hard.json data-fish.json
+  python3 tools/fish/make_fish.py data/data-hard.json data/data-fish.json
 
 - 脊椎動物のうち四肢動物を除いた種（円口類・軟骨魚類・条鰭類・シーラカンス・ハイギョ）を残す。
   「魚類」は側系統群なので節目にはせず、出題の範囲として使うだけにする。根は脊椎動物亜門。

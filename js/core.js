@@ -8,10 +8,10 @@ const store = {
 };
 
 let D, N = {}, SP = [], BUCKETS = [], BW = [], MAX = 15;
-// ゲキムズ・魚編・鳥編・昆虫編：別のデータ（data-hard.json・data-fish.json・data-bird.json・data-insect.json）に切り替える。成績・途中の問題はモードごとに別に保存する
+// ゲキムズ・魚編・鳥編・昆虫編：別のデータ（data/ の data-hard.json・data-fish.json・data-bird.json・data-insect.json）に切り替える。成績・途中の問題はモードごとに別に保存する
 let LEVEL = "normal";
 const DATA = {};
-const LV_FILE = { normal: "data.json", hard: "data-hard.json", fish: "data-fish.json", bird: "data-bird.json", insect: "data-insect.json" };
+const LV_FILE = { normal: "data/data.json", hard: "data/data-hard.json", fish: "data/data-fish.json", bird: "data/data-bird.json", insect: "data/data-insect.json" };
 const LV_NAME = { normal: "", hard: "ゲキムズ", fish: "魚編", bird: "鳥編", insect: "昆虫編" };
 const KEY = k => LEVEL === "normal" ? k : k.replace("dk-", `dk-${LEVEL}-`);
 const HARD = () => LEVEL === "hard";

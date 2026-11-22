@@ -1,6 +1,6 @@
 # data.json スキーマ（v1）
 
-ゲーム本体 `index.html` は同じフォルダの `data.json` だけを読みます。このファイルを差し替えれば、出題する種や系統樹を入れ替えられます。
+ゲーム本体 `index.html` は `data/data.json` だけを読みます（ゲキムズ・魚編・鳥編・昆虫編は同じフォルダの `data-hard.json` などを読みます）。このファイルを差し替えれば、出題する種や系統樹を入れ替えられます。
 `data.json` などは、全種の台帳 `tools/ledger/` から `tools/build_all.py` で生成します（正本は台帳。2026-11-02 までは `tools/archive/build_data.py`・`data_more.py`）。生成時に親の存在・ID重複・空のクレード・グループ名の別名を検査します。台帳の形は `tools/ledger/README.md`。
 
 ## 全体
