@@ -153,7 +153,7 @@ def wanted():
         if mode.get("self"): continue
         f = mode["file"]
         while f:
-            d = json.load(open(os.path.join(ROOT, f), encoding="utf-8"))
+            d = json.load(open(os.path.join(ROOT, "data", f), encoding="utf-8"))
             for c in d["clades"]:
                 if c.get("rank") in mode["ranks"]: need[c["sci"]] = RANK_EN[c["rank"]]
             f = (d["meta"].get("next") or {}).get("file")
@@ -184,7 +184,7 @@ def main():
 
 if __name__ == "__main__":
     if "--attach" in sys.argv:
-        # 例：python3 tools/real_counts.py --attach data-hard-0.3.11.json hard sqrt（作り直さずに出題の重みだけ入れ替える）
+        # 例：python3 tools/real_counts.py --attach data/data-hard-0.3.11.json hard sqrt（作り直さずに出題の重みだけ入れ替える）
         i = sys.argv.index("--attach"); f, mode, top = sys.argv[i + 1:i + 4]
         d = json.load(open(f, encoding="utf-8"))
         json.dump(apply(d, mode, top), open(f, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

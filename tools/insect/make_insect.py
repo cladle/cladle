@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""昆虫編のデータ（data-insect.json）を、ゲキムズのデータから切り出して作る。
+"""昆虫編のデータ（data/data-insect.json）を、ゲキムズのデータから切り出して作る。
 
-  python3 tools/insect/make_insect.py data-hard.json data-insect.json
+  python3 tools/insect/make_insect.py data/data-hard.json data/data-insect.json
 
 - 昆虫綱の種をすべて残す。根は昆虫綱。目・科の並びは Catalogue of Life、和名は環境省（1997）種の多様性調査の
   対象種一覧ほか（ゲキムズ側の tools/archive/hard/insect_taxa.json）。科の中の亜科も Catalogue of Life に従う。種はゲキムズにある昆虫（環境省の一覧の種に、身近な種と学名が合わずに落ちていた種を足したもの、tools/archive/hard/insect_extra.json）。

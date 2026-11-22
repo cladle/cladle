@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""鳥編のデータ（data-bird.json）を、ゲキムズのデータから切り出して作る。
+"""鳥編のデータ（data/data-bird.json）を、ゲキムズのデータから切り出して作る。
 
-  python3 tools/bird/make_bird.py data-hard.json data-bird.json
+  python3 tools/bird/make_bird.py data/data-hard.json data/data-bird.json
 
 - 鳥綱の種をすべて残す。根は鳥綱。目・科・属の並びと和名は日本鳥類目録改訂第8版に合わせてある
   （ゲキムズ側の tools/archive/hard/bird_taxa.json）。外国の鳥も和名があれば入れる（作者の判断）。

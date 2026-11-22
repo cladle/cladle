@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """公開前の確認。GitHub に送るたびに自動で動く（.github/workflows/check.yml）。手元では  python3 tools/check.py
 
-1. data.json・data-hard.json・data-fish.json・data-bird.json・data-insect.json から meta.next をたどり、予約されている版のファイルが全部あるか
+1. data/ の data.json・data-hard.json・data-fish.json・data-bird.json・data-insect.json から meta.next をたどり、予約されている版のファイルが全部あるか。
+   どの予約にもつながっていない data-*.json（消し忘れた古い版など）が無いか
 2. 全種の台帳（tools/ledger/）から tools/build_all.py で作ったものが、今の版・予約中の版と同じか
    （違うときは、data-*.json を手で直したか、台帳を直したのに  python3 tools/build_all.py --write  を動かしていない）
 3. 出題の重みを実際の種数で決めるデータ（meta.selection.realCounts）に、種数の無い群（目・門・綱）が無いか
@@ -9,13 +10,14 @@
 """
 import json, os, subprocess, sys, tempfile
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+DATA = os.path.join(ROOT, "data")
 ok = True
 
 def chain(first):
     files, f = [], first
     while f:
         assert f not in files, "予約がループしている: " + f
-        p = os.path.join(ROOT, f)
+        p = os.path.join(DATA, f)
         if not os.path.exists(p):
             print("× 予約されたファイルがない:", f); return files, False
         files.append(f)
@@ -32,6 +34,9 @@ print("ゲキムズの予約:", " → ".join(hard))
 print("魚編の予約:", " → ".join(fish))
 print("鳥編の予約:", " → ".join(bird))
 print("昆虫編の予約:", " → ".join(insect))
+stray = sorted(set(f for f in os.listdir(DATA) if f.endswith(".json")) - set(main + hard + fish + bird + insect))
+if stray:
+    ok = False; print("× data/ に、どの予約にもつながっていないファイルがある（古い版なら消す）:", "、".join(stray))
 
 r = subprocess.run([sys.executable, os.path.join(ROOT, "tools", "build_all.py"), "--check"], capture_output=True, text=True)
 print(r.stdout.strip()); print(r.stderr.strip()) if r.returncode and r.stderr else None
@@ -40,7 +45,7 @@ sys.path.insert(0, os.path.join(ROOT, "tools"))
 import real_counts
 for files in (hard, bird, insect, fish):
     for f in files:
-        d = json.load(open(os.path.join(ROOT, f), encoding="utf-8"))
+        d = json.load(open(os.path.join(DATA, f), encoding="utf-8"))
         if "realCounts" not in d["meta"].get("selection", {}): continue
         P, missing = real_counts.probs(d)
         if missing:

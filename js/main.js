@@ -64,7 +64,7 @@ async function copyShare() {
 let hardP = null;
 function prefetchHard() {
   if (DATA.hard || hardP) return hardP;
-  return hardP = loadData("data-hard.json").then(d => DATA.hard = d, e => { hardP = null; throw e; });
+  return hardP = loadData(LV_FILE.hard).then(d => DATA.hard = d, e => { hardP = null; throw e; });
 }
 // 一度組み立てた系統樹はモードごとに取っておき、切り替え直したときは組み立て直さない
 const BUILT = {};
@@ -97,15 +97,16 @@ function applyLevel() {
   $("#doc").innerHTML = aboutHTML();
   $("#howtoDoc").innerHTML = howtoHTML();
 }
-// 予約：data.json の meta.next = { from: "YYYY-MM-DD", file } があれば、その日からは次の版のファイルを使う
+// 予約：data/data.json の meta.next = { from: "YYYY-MM-DD", file } があれば、その日からは次の版のファイルを使う
+// （file は今読んだファイルと同じフォルダの中の名前）
 // （前もって置いておけば、日付が変わった時点でそろって切り替わる）
 const due = data => data.meta.next && data.meta.next.from <= todayJST();
-async function loadData(f = "data.json") {
+async function loadData(f = LV_FILE.normal) {
   let data;
   for (let i = 0; i < 30; i++) {
     const r = await fetch(f, { cache: "no-cache" });  // 毎回サーバーに「変わった？」と聞く（変わっていなければ取っておいたものを使う）
     if (!r.ok) { if (data) break; throw new Error(r.status); }  // 予約の先のファイルが無い（古い data.json がキャッシュに残っていたときなど）は今の版のまま
-    data = await r.json(); if (!due(data)) break; f = data.meta.next.file;
+    data = await r.json(); if (!due(data)) break; f = new URL(data.meta.next.file, r.url).href;
   }
   return data;
 }
@@ -128,7 +129,7 @@ loadData().then(async data => {
   else setView(["free", "zukan", "about", "howto", "extra"].includes(h) ? h : "daily");
   addEventListener("hashchange", () => { const m = location.hash.match(/^#(?:(hard|fish|bird|insect)\/)?p=(.+)$/); if (m && (m[1] || "normal") === LEVEL) openShared(m[2]); });
 }).catch(err => {
-  $("#board").innerHTML = `<p class="empty">データ（data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じフォルダに data.json を置き、ページを再読み込みしてください。</p>`;
+  $("#board").innerHTML = `<p class="empty">データ（data/data.json）を読み込めませんでした（${esc(err.message)}）。index.html と同じ場所の data フォルダに data.json を置き、ページを再読み込みしてください。</p>`;
 });
 
 // ---- 文と文の間のスペース ----
