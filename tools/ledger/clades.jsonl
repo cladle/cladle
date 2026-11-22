@@ -11964,7 +11964,8 @@
 {"id": "o_corallimorpharia", "parent": "hexacorallia", "ja": "Corallimorpharia", "sci": "Corallimorpharia", "rank": "目", "desc": ""}
 {"id": "o_ceriantharia", "parent": "hexacorallia", "ja": "Ceriantharia", "sci": "Ceriantharia", "rank": "目", "desc": "", "main": {"order": 1100}}
 {"id": "o_amphidiscosida", "parent": "hexactinellida", "ja": "Amphidiscosida", "sci": "Amphidiscosida", "rank": "目", "desc": "", "main": {"order": 1101}}
-{"id": "o_poduromorpha", "parent": "hexapoda", "ja": "Poduromorpha", "sci": "Poduromorpha", "rank": "目", "desc": "", "main": {"order": 986}}
+{"id": "collembola", "parent": "hexapoda", "ja": "Collembola", "sci": "Collembola", "rank": "クレード", "desc": "", "main": {"order": 1152}}
+{"id": "o_poduromorpha", "parent": "collembola", "ja": "Poduromorpha", "sci": "Poduromorpha", "rank": "目", "desc": "", "main": {"order": 986}}
 {"id": "o_lyssacinosida", "parent": "t_hexasterophora", "ja": "Lyssacinosida", "sci": "Lyssacinosida", "rank": "目", "desc": "", "main": {"order": 1102}}
 {"id": "o_arhynchobdellida", "parent": "hirudinea", "ja": "Arhynchobdellida", "sci": "Arhynchobdellida", "rank": "目", "desc": "", "main": {"order": 987}}
 {"id": "o_anthoathecata", "parent": "t_hydroidolina", "ja": "Anthoathecata", "sci": "Anthoathecata", "rank": "目", "desc": "", "main": {"order": 988}}
@@ -12072,7 +12073,8 @@
 {"id": "f_stenopodidae", "parent": "t_pleocyemata", "ja": "Stenopodidae", "sci": "Stenopodidae", "rank": "科", "desc": "", "main": {"order": 1056}}
 {"id": "f_diplozoidae", "parent": "o_mazocraeidea", "ja": "Diplozoidae", "sci": "Diplozoidae", "rank": "科", "desc": "", "main": {"order": 1057}}
 {"id": "f_polypteridae", "parent": "polypteriformes", "ja": "Polypteridae", "sci": "Polypteridae", "rank": "科", "desc": "", "main": {"order": 1058}}
-{"id": "f_rhabditidae", "parent": "rhabditida", "ja": "Rhabditidae", "sci": "Rhabditidae", "rank": "科", "desc": "", "main": {"order": 1059}}
+{"id": "rhabditina", "parent": "rhabditida", "ja": "Rhabditina", "sci": "Rhabditina", "rank": "亜目", "desc": "", "main": {"order": 1153}}
+{"id": "f_rhabditidae", "parent": "rhabditina", "ja": "Rhabditidae", "sci": "Rhabditidae", "rank": "科", "desc": "", "main": {"order": 1059}}
 {"id": "f_latimeriidae", "parent": "o_coelacanthiformes", "ja": "Latimeriidae", "sci": "Latimeriidae", "rank": "科", "desc": "", "main": {"order": 1060}}
 {"id": "f_hormuridae", "parent": "scorpiones", "ja": "Hormuridae", "sci": "Hormuridae", "rank": "科", "desc": "", "main": {"order": 1061}}
 {"id": "f_scorpionidae", "parent": "scorpiones", "ja": "Scorpionidae", "sci": "Scorpionidae", "rank": "科", "desc": "", "main": {"order": 1062}}
@@ -12154,3 +12156,23 @@
 {"id": "f_hypsibiidae", "parent": "o_parachela", "ja": "Hypsibiidae", "sci": "Hypsibiidae", "rank": "科", "desc": ""}
 {"id": "g_hypsibius", "parent": "f_hypsibiidae", "ja": "Hypsibius", "sci": "Hypsibius", "rank": "属", "desc": ""}
 {"id": "g_limulus", "parent": "f_limulidae", "ja": "Limulus", "sci": "Limulus", "rank": "属", "desc": ""}
+{"id": "f_stomolophidae", "parent": "t_dactyliophorae", "ja": "Stomolophidae", "sci": "Stomolophidae", "rank": "科", "desc": ""}
+{"id": "g_stomolophus", "parent": "f_stomolophidae", "ja": "Stomolophus", "sci": "Stomolophus", "rank": "属", "desc": ""}
+{"id": "o_bothrioplanida", "parent": "t_rhabditophora", "ja": "Bothrioplanida", "sci": "Bothrioplanida", "rank": "目", "desc": ""}
+{"id": "f_bothrioplanidae", "parent": "o_bothrioplanida", "ja": "Bothrioplanidae", "sci": "Bothrioplanidae", "rank": "科", "desc": ""}
+{"id": "g_bothrioplana", "parent": "f_bothrioplanidae", "ja": "Bothrioplana", "sci": "Bothrioplana", "rank": "属", "desc": ""}
+{"id": "g_schmidtea", "parent": "f_dugesiidae", "ja": "Schmidtea", "sci": "Schmidtea", "rank": "属", "desc": ""}
+{"id": "o_polyxenida", "parent": "diplopoda", "ja": "Polyxenida", "sci": "Polyxenida", "rank": "目", "desc": ""}
+{"id": "f_polyxenidae", "parent": "o_polyxenida", "ja": "Polyxenidae", "sci": "Polyxenidae", "rank": "科", "desc": ""}
+{"id": "g_eudigraphis", "parent": "f_polyxenidae", "ja": "Eudigraphis", "sci": "Eudigraphis", "rank": "属", "desc": ""}
+{"id": "o_entomobryomorpha", "parent": "collembola", "ja": "Entomobryomorpha", "sci": "Entomobryomorpha", "rank": "目", "desc": ""}
+{"id": "f_isotomidae", "parent": "o_entomobryomorpha", "ja": "Isotomidae", "sci": "Isotomidae", "rank": "科", "desc": ""}
+{"id": "g_folsomia", "parent": "f_isotomidae", "ja": "Folsomia", "sci": "Folsomia", "rank": "属", "desc": ""}
+{"id": "o_oligacanthorhynchida", "parent": "acanthocephala", "ja": "Oligacanthorhynchida", "sci": "Oligacanthorhynchida", "rank": "目", "desc": ""}
+{"id": "f_oligacanthorhynchidae", "parent": "o_oligacanthorhynchida", "ja": "Oligacanthorhynchidae", "sci": "Oligacanthorhynchidae", "rank": "科", "desc": ""}
+{"id": "g_macracanthorhynchus", "parent": "f_oligacanthorhynchidae", "ja": "Macracanthorhynchus", "sci": "Macracanthorhynchus", "rank": "属", "desc": ""}
+{"id": "f_trichostrongylidae", "parent": "rhabditina", "ja": "Trichostrongylidae", "sci": "Trichostrongylidae", "rank": "科", "desc": ""}
+{"id": "g_haemonchus", "parent": "f_trichostrongylidae", "ja": "Haemonchus", "sci": "Haemonchus", "rank": "属", "desc": ""}
+{"id": "g_loa", "parent": "f_onchocercidae", "ja": "Loa", "sci": "Loa", "rank": "属", "desc": ""}
+{"id": "f_trichuridae", "parent": "o_trichinellida", "ja": "Trichuridae", "sci": "Trichuridae", "rank": "科", "desc": ""}
+{"id": "g_trichuris", "parent": "f_trichuridae", "ja": "Trichuris", "sci": "Trichuris", "rank": "属", "desc": ""}
